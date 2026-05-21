@@ -48,6 +48,11 @@ font-size:13px;font-weight:600;transition:all .15s}
 .lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
 .lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
 .lang-switch a.cur{background:var(--blue);color:#fff}
+.shot{margin:14px 0 2px;border:1px solid var(--app-border);border-radius:10px;overflow:hidden;background:var(--app-base)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:9px 14px;font-size:12.5px;color:var(--text-sub);background:var(--app-surface);border-top:1px solid var(--app-border)}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--app-border);background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
 .breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
 .breadcrumbs .sep{margin:0 8px}
@@ -222,6 +227,31 @@ LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/"}
 
 
+# YouTube video IDs per platform (one tutorial video each, language-agnostic).
+VIDEOS = {
+    "bongacams": "QJPwJHVbYio", "cam4": "40F6C_cvXyQ", "camplace": "1smUXVUzyAo",
+    "camsoda": "mCUrXWoTYXM", "chaturbate": "ynClBb7wbg0", "flirt4free": "1fX20UU6w6Q",
+    "imlive": "qMWOaNZMGgc", "lovense": "JK7xSVCqjsA", "mfc-alerts": "Ps5--obPRvw",
+    "multistream-cams": "MWLSQKDQCY0", "onlyfans": "pNw0yJ-bGXQ", "soulcams": "iyzOi9tKOJ4",
+    "streamate": "tEFVec3b-MU", "streamray": "i0CN1q-yLK4", "stripchat": "i_Nbv2wAKTg",
+    "virtwish": "mJGi9-Ffp74", "vxlive": "7A0wuhtqkAw", "xlovecam": "myrur7zCHak",
+    "xmodels": "v-QUSgra5v8",
+}
+VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en vídeo"}
+SHOT_EXTS = ("png", "jpg", "jpeg", "webp")
+
+
+def shot_for(slug, n, depth, caption):
+    """Return a figure block if a screenshot file exists for this step, else ''.
+    Convention: shots/<slug>-<n>.<ext> — e.g. shots/onlyfans-3.png for step 3."""
+    for ext in SHOT_EXTS:
+        if (ROOT / "shots" / f"{slug}-{n}.{ext}").exists():
+            return (f'<figure class="shot"><img src="{depth}shots/{slug}-{n}.{ext}" '
+                    f'alt="{e(caption)}" loading="lazy">'
+                    f'<figcaption>{e(caption)}</figcaption></figure>')
+    return ""
+
+
 def lang_switch(cur, depth, slug=None):
     """Language switcher. slug set -> platform pages; slug None -> hub pages."""
     items = []
@@ -252,8 +282,18 @@ def render(p, lang, all_platforms):
     steps = build_steps(p, lang)
     steps_html = "".join(
         f'<div class="step"><div class="step-num">{i+1}</div><div class="step-body">'
-        f'<div class="step-h">{e(s[0])}</div><p class="step-p">{s[1]}</p></div></div>'
+        f'<div class="step-h">{e(s[0])}</div><p class="step-p">{s[1]}</p>'
+        f'{shot_for(p["slug"], i+1, depth, s[0])}</div></div>'
         for i, s in enumerate(steps))
+
+    vid = VIDEOS.get(p["slug"])
+    video_section = ""
+    if vid:
+        video_section = (
+            f'<section class="section"><h2 class="sec-h">{VIDEO_H[lang]}</h2>'
+            f'<div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/{vid}" '
+            f'title="{e(_strip(d["h1html"]))}" loading="lazy" '
+            f'allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>')
 
     tips_html = "".join(
         f'<div class="tip-card"><h3>{e(t[0])}</h3><p>{t[1]}</p></div>'
@@ -335,6 +375,7 @@ def render(p, lang, all_platforms):
   <h2 class="sec-h">{u['steps_h']}</h2>
   <div class="steps">{steps_html}</div>
 </section>
+{video_section}
 <section class="section">
   <h2 class="sec-h">{u['tips_h']}</h2>
   <div class="tips-grid">{tips_html}</div>

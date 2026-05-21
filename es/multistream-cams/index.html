@@ -146,6 +146,11 @@ font-size:13px;font-weight:600;transition:all .15s}
 .lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
 .lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
 .lang-switch a.cur{background:var(--blue);color:#fff}
+.shot{margin:14px 0 2px;border:1px solid var(--app-border);border-radius:10px;overflow:hidden;background:var(--app-base)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:9px 14px;font-size:12.5px;color:var(--text-sub);background:var(--app-surface);border-top:1px solid var(--app-border)}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--app-border);background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
 .breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
 .breadcrumbs .sep{margin:0 8px}
@@ -247,6 +252,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <h2 class="sec-h">Paso a paso</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Instala SplitCam</div><p class="step-p">SplitCam es software de streaming gratuito para Windows y macOS con multiemisión integrada. Descárgalo e instálalo — sin marca de agua ni registro.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Configura tu cámara y escena</div><p class="step-p">Abre SplitCam, añade tu webcam y monta la escena con superposiciones y filtros. Una escena alimenta todos los destinos.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Consigue una clave RTMP de cada sitio cam</div><p class="step-p">En cada plataforma cam, activa la emisión externa / RTMP y copia su <strong>URL de servidor</strong> y su <strong>clave de stream</strong>. Repite para cada sitio.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Añade cada destino en SplitCam</div><p class="step-p">Abre <strong>Ajustes de stream</strong> y añade cada sitio cam como destino RTMP personalizado — pega su URL y clave. Marca todos los que quieras emitir.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Pulsa Go Live una vez</div><p class="step-p">Pulsa <strong>Go Live</strong>. SplitCam envía tu stream a todos los sitios cam seleccionados a la vez, peer-to-peer, desde una sola codificación — sin coste extra.</p></div></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Guía en vídeo</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/MWLSQKDQCY0" title="Cómo emitir en varios sitios cam a la vez" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section">
   <h2 class="sec-h">Consejos</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Cuida tu subida</h3><p>La multiemisión multiplica la carga de subida. Cada destino consume su propio bitrate — asegúrate de que tu conexión soporta el total.</p></div><div class="tip-card"><h3>Conexión por cable</h3><p>Ethernet es más estable que el Wi-Fi. Un fotograma perdido en directo es una propina perdida — mantén la conexión sólida.</p></div><div class="tip-card"><h3>Revisa las reglas</h3><p>Algunos sitios cam restringen emitir a la vez en otro lado — confírmalo antes de multiemitir.</p></div><div class="tip-card"><h3>Monitor de estado</h3><p>SplitCam muestra el estado por destino — quita un sitio si tu subida no da abasto.</p></div></div>
