@@ -69,6 +69,14 @@ margin-bottom:18px;max-width:760px;position:relative;z-index:1}
 .sub{font-size:18px;color:var(--text-sub);max-width:660px;line-height:1.55;
 margin-bottom:26px;position:relative;z-index:1}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.hero-inner{display:grid;grid-template-columns:1fr 270px;gap:36px;align-items:center;position:relative;z-index:1}
+.collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.collab-badge{font-weight:800;font-size:18px;color:#fff;padding:11px 18px;border-radius:11px;letter-spacing:-.3px;line-height:1.2;max-width:100%;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.collab-x{font-size:17px;color:var(--text-dim);font-weight:700;line-height:1}
+.collab-sc{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:11px;background:rgba(255,255,255,.05);border:1px solid var(--app-border)}
+.collab-sc img{display:block;width:26px;height:26px}
+.collab-sc span{font-size:18px;font-weight:700;letter-spacing:.3px}
+.collab-label{margin-top:3px;font-size:11px;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
 .section{padding:40px 40px;max-width:900px;margin:0 auto}
 .sec-h{font-size:30px;font-weight:700;letter-spacing:-.9px;line-height:1.15;margin-bottom:16px}
 .sec-p{font-size:16px;color:var(--text-sub);line-height:1.7;margin-bottom:26px;max-width:680px}
@@ -121,7 +129,9 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .breadcrumbs{padding:80px 20px 0}.hero,.section{padding-left:20px;padding-right:20px}
 .cta-block{padding:44px 20px}.tips-grid,.related-grid{grid-template-columns:1fr}
 .step{flex-direction:column;gap:10px}footer{padding:30px 20px}
-.footer-inner{flex-direction:column;text-align:center}}
+.footer-inner{flex-direction:column;text-align:center}
+.hero-inner{grid-template-columns:1fr;gap:24px}
+.collab{max-width:300px}}
 """
 
 # ---------------------------------------------------------------- UI strings per language
@@ -238,6 +248,18 @@ VIDEOS = {
     "xmodels": "v-QUSgra5v8",
 }
 VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en vídeo"}
+COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración"}
+
+# Brand-ish accent colour per platform — used for the hero collab badge.
+BRAND = {
+    "chaturbate": "#f5871f", "cam4": "#ff5a3c", "bongacams": "#e6325f",
+    "stripchat": "#e8a200", "onlyfans": "#00aff0", "camplace": "#6d5bd0",
+    "camsoda": "#16b8be", "streamate": "#3f7fd6", "streamray": "#b03636",
+    "xlovecam": "#d6307a", "soulcams": "#8455d6", "imlive": "#e0644a",
+    "vxlive": "#e5006d", "virtwish": "#7b56e0", "xmodels": "#c44d96",
+    "flirt4free": "#d63d6a", "mfc-alerts": "#1e9e57", "lovense": "#00b3b6",
+    "multistream-cams": "#2878fc",
+}
 SHOT_EXTS = ("png", "jpg", "jpeg", "webp")
 
 
@@ -286,6 +308,7 @@ def render(p, lang, all_platforms):
         f'{shot_for(p["slug"], i+1, depth, s[0])}</div></div>'
         for i, s in enumerate(steps))
 
+    brand = BRAND.get(p["slug"], "#2878fc")
     vid = VIDEOS.get(p["slug"])
     video_section = ""
     if vid:
@@ -358,11 +381,21 @@ def render(p, lang, all_platforms):
 </div>
 <section class="hero">
   <div class="hero-glow"></div>
-  <span class="eyebrow">{e(name)}</span>
-  <h1 class="h1">{d['h1html']}</h1>
-  <p class="sub">{d['intro']}</p>
-  <div class="hero-cta">
-    <a href="#steps" class="btn-primary btn-lg">{u['skip']} ↓</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">{e(name)}</span>
+      <h1 class="h1">{d['h1html']}</h1>
+      <p class="sub">{d['intro']}</p>
+      <div class="hero-cta">
+        <a href="#steps" class="btn-primary btn-lg">{u['skip']} ↓</a>
+      </div>
+    </div>
+    <div class="collab" aria-hidden="true">
+      <div class="collab-badge" style="background:{brand}">{e(name)}</div>
+      <div class="collab-x">&times;</div>
+      <div class="collab-sc"><img src="{depth}assets/splitcam.png" alt="SplitCam" width="26" height="26"><span>splitcam</span></div>
+      <div class="collab-label">{COLLAB_LABEL[lang]}</div>
+    </div>
   </div>
 </section>
 <div class="section">
