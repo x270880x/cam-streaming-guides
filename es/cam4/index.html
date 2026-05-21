@@ -76,6 +76,14 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "¿CAM4 admite oficialmente OBS / codificadores externos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí — CAM4 tiene una guía oficial de OBS en su sitio de soporte y recomienda la opción External Encoder. SplitCam usa la misma ruta RTMP."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "¿Puedo geo-bloquear mi emisión de CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -92,18 +100,10 @@
     },
     {
      "@type": "Question",
-     "name": "¿SplitCam es gratis para CAM4?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Sí — gratis, sin marca de agua, sin límites."
-     }
-    },
-    {
-     "@type": "Question",
      "name": "¿Qué bitrate para CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "3.500–6.000 Kbps a 1080p; comprueba tu subida primero."
+      "text": "Más bajo que en otros sitios — el ingest de CAM4 limita el vídeo a unos 3.000 Kbps a 30 fps con fotograma clave de 1 segundo. La guía OBS oficial de CAM4 trae una tabla por test de velocidad; no pases de ~3.000."
      }
     }
    ]
@@ -255,11 +255,11 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <section class="section">
   <h2 class="sec-h">Consejos</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Ajusta tus geo-restricciones</h3><p>CAM4 permite ocultar tu emisión en países y regiones concretas — configúralo en CAM4 antes de emitir si lo necesitas.</p></div><div class="tip-card"><h3>Vigila el slider verde</h3><p>El setup de CAM4 muestra un slider verde en Stream Settings de SplitCam cuando la clave se acepta — rojo significa revisarla.</p></div><div class="tip-card"><h3>Conexión por cable</h3><p>Ethernet es más fiable que el Wi-Fi para un directo largo — un fotograma perdido es una propina perdida. Lleva un cable al PC de streaming.</p></div><div class="tip-card"><h3>Haz una prueba privada primero</h3><p>Una emisión de prueba corta verifica cámara, audio, encuadre y superposiciones antes de abrir la sala.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Ajusta tus geo-restricciones</h3><p>CAM4 permite ocultar tu emisión en países y regiones concretas — configúralo en CAM4 antes de emitir si lo necesitas.</p></div><div class="tip-card"><h3>Vigila el slider verde</h3><p>El setup de CAM4 muestra un slider verde en Stream Settings de SplitCam cuando la clave se acepta — rojo significa revisarla.</p></div><div class="tip-card"><h3>Bitrate más bajo de lo normal</h3><p>El ingest de CAM4 limita el bitrate de vídeo a unos 3.000 Kbps — más bajo que la mayoría de sitios cam. No subas más.</p></div><div class="tip-card"><h3>Conexión por cable</h3><p>Ethernet es más fiable que el Wi-Fi para un directo largo — un fotograma perdido es una propina perdida. Lleva un cable al PC de streaming.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Preguntas frecuentes</h2>
-  <div class="faq-list"><details class="faq-item"><summary>¿Puedo geo-bloquear mi emisión de CAM4?</summary><p>Sí — CAM4 tiene geo-restricción integrada para ocultar tu emisión en ciertos países. Se ajusta en CAM4.</p></details><details class="faq-item"><summary>¿Dónde está la clave de stream de CAM4?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para CAM4?</summary><p>Sí — gratis, sin marca de agua, sin límites.</p></details><details class="faq-item"><summary>¿Qué bitrate para CAM4?</summary><p>3.500–6.000 Kbps a 1080p; comprueba tu subida primero.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>¿CAM4 admite oficialmente OBS / codificadores externos?</summary><p>Sí — CAM4 tiene una guía oficial de OBS en su sitio de soporte y recomienda la opción External Encoder. SplitCam usa la misma ruta RTMP.</p></details><details class="faq-item"><summary>¿Puedo geo-bloquear mi emisión de CAM4?</summary><p>Sí — CAM4 tiene geo-restricción integrada para ocultar tu emisión en ciertos países. Se ajusta en CAM4.</p></details><details class="faq-item"><summary>¿Dónde está la clave de stream de CAM4?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>¿Qué bitrate para CAM4?</summary><p>Más bajo que en otros sitios — el ingest de CAM4 limita el vídeo a unos 3.000 Kbps a 30 fps con fotograma clave de 1 segundo. La guía OBS oficial de CAM4 trae una tabla por test de velocidad; no pases de ~3.000.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guías de otras plataformas</h3>
