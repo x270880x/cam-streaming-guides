@@ -348,13 +348,13 @@ def render(p, lang, all_platforms):
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
         for q, a in d["faq"])
 
-    canon = f'https://NEWDOMAIN.com/{u["path"]}{p["slug"]}/'
+    canon = f'https://camstreamguide.com/{u["path"]}{p["slug"]}/'
     schema = {
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": u["crumb_home"],
-                 "item": f'https://NEWDOMAIN.com/{u["path"]}'},
+                 "item": f'https://camstreamguide.com/{u["path"]}'},
                 {"@type": "ListItem", "position": 2, "name": name, "item": canon}]},
             {"@type": "HowTo", "name": _strip(d["h1html"]), "description": d["desc"],
              "totalTime": "PT5M",
@@ -387,7 +387,7 @@ def render(p, lang, all_platforms):
 <meta property="og:title" content="{e(d['title'])}">
 <meta property="og:description" content="{e(d['desc'])}">
 <meta property="og:site_name" content="{SITE_NAME}">
-<meta property="og:image" content="https://NEWDOMAIN.com/assets/splitcam.png">
+<meta property="og:image" content="https://camstreamguide.com/assets/splitcam.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{e(d['title'])}">
 <meta name="twitter:description" content="{e(d['desc'])}">

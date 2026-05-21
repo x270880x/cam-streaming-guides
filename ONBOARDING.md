@@ -47,13 +47,15 @@ full meta (OG + Twitter cards).
 ## Reference docs in this repo
 - `INVENTORY.md` — the 73 source adult pages on splitcam.com (with Ahrefs weights).
 - `REDIRECTS.md` — the `.htaccess` 301 map, old splitcam.com URL → new domain
-  (uses `NEWDOMAIN.com` as a placeholder).
+  (uses `camstreamguide.com` as a placeholder).
 
 ## Pending before launch
-1. Register a neutral adult domain (not brand-associated). Then replace `NEWDOMAIN.com`
-   everywhere (canonical, og:url, schema, REDIRECTS.md).
-2. Connect the domain to hosting/Pages; remove `noindex`.
-3. Apply the `.htaccess` 301 block on splitcam.com **after** the new site is live.
+1. ~~Register a neutral domain~~ — **done: `camstreamguide.com`**. Placeholder `NEWDOMAIN.com`
+   has been replaced everywhere (canonical, og:url, schema in `build.py`, `REDIRECTS.md`).
+2. Connect `camstreamguide.com` to hosting/Pages; then remove `noindex` (in `build.py`,
+   two `<meta name="robots">` lines) and rebuild.
+3. Apply the `.htaccess` 301 block from `REDIRECTS.md` on splitcam.com **after** the new
+   site is live on `camstreamguide.com` — never 301 to URLs that 404.
 4. Optional: official platform logos → `logos/`, screenshots → `shots/`, Android SplitCam
    Remote link.
 
