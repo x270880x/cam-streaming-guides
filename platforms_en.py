@@ -46,6 +46,9 @@ PLATFORMS_EN = [
             ("Lots of headroom", "Chaturbate's own RTMP ingest accepts up to 4K, 60 fps and a "
              "very high bitrate ceiling — quality is limited by your upload, not the platform. "
              "Use a 2-second keyframe interval."),
+            ("Low latency by design", "Chaturbate delivers your stream over low-latency HLS — "
+             "roughly 2–4 seconds glass-to-glass — so viewer tips and reactions stay in step "
+             "with what you do on cam."),
             _T_ETH, _T_TEST,
         ],
         "faq": [
@@ -94,6 +97,10 @@ PLATFORMS_EN = [
              "countries and regions — set this on CAM4's side before going live if you need it."),
             ("Watch for the green slider", "CAM4's setup shows a green slider in SplitCam Stream "
              "Settings when the key is accepted — red means re-check the key."),
+            ("Use CAM4's official encoder preset", "CAM4's OBS Guide specifies CBR, a 1-second "
+             "keyframe interval and the x264 veryfast/superfast preset with tune=zerolatency and "
+             "B-frames at 0 — and recommends enabling \"dynamically change bitrate\". Run the "
+             "connection test at speedtest.xcdnpro.com first."),
             _T_ETH, _T_TEST,
         ],
         "faq": [
@@ -368,6 +375,10 @@ PLATFORMS_EN = [
             ("What resolution does CamSoda support?", "Up to 1920×1080 at 30 fps, roughly "
              "6,000 Kbps maximum on its RTMP ingest."),
             ("Is SplitCam free for CamSoda?", "Yes — free, no watermark, no time limit."),
+            ("What audio and encoder settings does CamSoda use?", "CamSoda's ingest takes AAC "
+             "audio up to 160 Kbps and H.264 video with a tune=zerolatency preset. CamSoda is "
+             "also a built-in service in OBS, so it behaves as a standard RTMP target in "
+             "SplitCam."),
         ],
     },
     {
@@ -400,6 +411,10 @@ PLATFORMS_EN = [
              "Streamate in its Add Channel list, so just select it and paste the key."),
             ("Close the SM Connect pop-up", "After Start Show, Streamate opens a window — close "
              "it; you only needed it to reveal the streaming key."),
+            ("Lock the resolution to 1080p", "SM Connect's Video Resolution field can jump to "
+             "1440, which isn't actually delivered and quietly drops your quality — set it to "
+             "1080p by hand. A bitrate that falls on a still shot is normal: Streamate's feed "
+             "is adaptive."),
             _T_ETH, _T_TEST,
         ],
         "faq": [
@@ -483,6 +498,9 @@ PLATFORMS_EN = [
              "key — you need both in SplitCam, not just one."),
             ("Multilingual audience", "XLoveCam is European and multilingual — a clear text "
              "overlay with your language helps viewers find you."),
+            ("Pick the closest server", "XLoveCam runs regional RTMP servers — Europe (including "
+             "Russia), North America (including Canada), South America and Asia. Choose the one "
+             "nearest you to cut latency and dropped frames."),
             _T_ETH, _T_TEST,
         ],
         "faq": [
@@ -524,6 +542,8 @@ PLATFORMS_EN = [
              "key in the same OBS window — grab both in one go."),
             ("Go Online first", "The OBS settings only appear after you click Go Online on "
              "SoulCams — do that before looking for the encoder details."),
+            ("Block regions you don't want", "SoulCams supports model-side country blocking — "
+             "choose which countries can't see your broadcast before you click Go Online."),
             _T_ETH, _T_TEST,
         ],
         "faq": [
@@ -642,6 +662,9 @@ PLATFORMS_EN = [
             ("Do I go live in SplitCam or VXLive?", "Both — press Go Live in SplitCam first, "
              "then GO ONLINE in VXLive."),
             ("Is SplitCam free for VXLive?", "Yes — free, no watermark, no time limit."),
+            ("Why does VXModels recommend SplitCam?", "VXModels' official help article "
+             "recommends SplitCam specifically to clear up webcam image artifacts and "
+             "pixelation and to stabilise the connection — not just as a generic encoder."),
         ],
     },
     {
@@ -827,6 +850,9 @@ PLATFORMS_EN = [
              "register on mfcalerts.com first if you don't have one."),
             ("Send a test tip before going live", "Use Settings → Send test tip to confirm the "
              "overlay works — don't discover it's broken mid-show."),
+            ("Alerts stuck? Refresh the cache", "If the alert effects stop appearing, "
+             "right-click the MFC Alerts Browser layer and choose \"Refresh cache of current "
+             "page\" — that clears a stale overlay."),
             _T_ETH,
         ],
         "faq": [
@@ -888,6 +914,10 @@ PLATFORMS_EN = [
              "charge fully before going live."),
             ("Test the token reaction", "Send a small test tip to confirm the toy reacts before "
              "the room is public."),
+            ("Mind the version requirements", "The Lovense SplitCam Toolset needs SplitCam "
+             "10.4.5 or newer. The Lovense Cam Extension officially covers Chaturbate, "
+             "Stripchat, BongaCams, MyFreeCams and CamSoda — for any other site, use Lovense's "
+             "Generic URL integration instead."),
         ],
         "faq": [
             ("Does Lovense officially support SplitCam?", "Yes — Lovense documents an official "
