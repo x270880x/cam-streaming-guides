@@ -198,45 +198,73 @@ PLATFORMS_ES = [
     },
     {
         "slug": "onlyfans", "name": "OnlyFans",
-        "title": "Cómo emitir en directo en OnlyFans con SplitCam — OBS Key",
-        "desc": "Emite en directo en OnlyFans con SplitCam gratis. Encuentra la OBS Key en "
-                "Settings → Other, enrútala por SplitCam para escenas y superposiciones.",
-        "kw": "cómo emitir en directo en onlyfans, onlyfans obs key, onlyfans directo, "
-              "onlyfans software de emisión",
+        "title": "Cómo emitir en directo en OnlyFans con SplitCam — autorización o clave",
+        "desc": "Emite en directo en OnlyFans con SplitCam gratis. Conecta por autorización "
+                "(inicia sesión una vez y la clave se sincroniza sola) o pega la OBS Key a "
+                "mano — escenas, superposiciones, sin marca de agua.",
+        "kw": "cómo emitir en directo en onlyfans, onlyfans autorización splitcam, "
+              "onlyfans obs key, onlyfans software de emisión",
         "h1html": 'Cómo emitir en directo en <span class="accent">OnlyFans</span> con SplitCam',
         "h1short": "Directo en OnlyFans",
-        "card": "Configuración de OBS Key para directos de OnlyFans.",
-        "intro": "El directo de OnlyFans es para tus suscriptores, y la plataforma expone una "
-                 "sola <strong style='color:var(--text)'>OBS Key</strong> — sin URL de "
-                 "servidor. <strong style='color:var(--text)'>SplitCam</strong> gratis "
-                 "convierte esa clave en una producción real: escenas con varias cámaras, "
-                 "superposiciones y filtros.",
+        "card": "Autoriza una vez o pega la clave — directo en OnlyFans.",
+        "intro": "El directo de OnlyFans es para tus suscriptores. SplitCam conecta de "
+                 "<strong style='color:var(--text)'>dos formas</strong> — inicia sesión una vez "
+                 "con tu cuenta de OnlyFans y SplitCam obtiene la clave de stream y la mantiene "
+                 "sincronizada automáticamente, o pega la OBS Key a mano. En ambos casos emites "
+                 "con escenas de varias cámaras, superposiciones y filtros.",
         "quick": "Emite en directo en OnlyFans con SplitCam: instala SplitCam, monta tu escena, "
-                 "en OnlyFans abre <em>Profile → Settings → Other</em>, copia la OBS Key, pégala "
-                 "en SplitCam, Go Live."
-                 "<ol><li>Instala SplitCam.</li><li>Añade cámara y escena.</li>"
-                 "<li>Copia tu OBS Key de OnlyFans.</li><li>Pégala en SplitCam.</li>"
-                 "<li>Pulsa Go Live.</li></ol>",
-        "key_how": "En OnlyFans, ve a <strong>Profile</strong> → <strong>Settings</strong> → la "
-                   "sección <strong>Other</strong>. Copia el valor del campo <strong>OBS "
-                   "Key</strong>. OnlyFans solo da esta clave — no hay URL de servidor aparte, "
-                   "deja el campo de servidor de SplitCam por defecto.",
+                 "abre Stream Settings &rarr; Add Channel &rarr; OnlyFans y elige "
+                 "<em>Autorización</em> — inicia sesión con tu cuenta de OnlyFans y SplitCam "
+                 "obtiene la clave automáticamente — luego pulsa Go Live. Con la cuenta "
+                 "conectada puedes cambiar los ajustes de OnlyFans dentro de SplitCam, sin "
+                 "abrir el sitio de OnlyFans.",
+        "steps": [
+            ("Descarga e instala SplitCam",
+             "SplitCam es software de streaming gratuito para Windows y macOS — sin registro, "
+             "sin tarjeta, sin marca de agua. Es el codificador que envía tu vídeo a OnlyFans."),
+            ("Configura tu cámara y escena",
+             "Abre SplitCam y añade tu webcam. Monta la escena que verán los espectadores — "
+             "superposiciones, texto, una segunda cámara, filtros de belleza o un fondo con "
+             "IA, aplicados en directo."),
+            ("Conecta OnlyFans por autorización",
+             "En SplitCam abre <strong>Stream Settings</strong> &rarr; <strong>Add "
+             "Channel</strong> &rarr; <strong>OnlyFans</strong> y elige el método "
+             "<strong>Autorización</strong>. Inicia sesión con tu email y contraseña de "
+             "OnlyFans — SplitCam conecta directamente con tu cuenta, sin tener que buscar una "
+             "clave en el sitio de OnlyFans."),
+            ("La clave y los ajustes se sincronizan solos",
+             "Una vez autorizado, SplitCam obtiene tu clave de stream de OnlyFans y mantiene la "
+             "conexión activa — la clave y los ajustes del directo de OnlyFans quedan "
+             "sincronizados durante toda la emisión, sin copiar nada a mano. Esos ajustes de "
+             "OnlyFans los gestionas dentro de SplitCam."),
+            ("Pulsa Go Live — y ajusta sobre la marcha",
+             "Pulsa <strong>Go Live</strong>. Como tu cuenta está conectada, puedes cambiar los "
+             "ajustes del directo de OnlyFans desde SplitCam <strong>durante la emisión o "
+             "después</strong> — sin abrir el sitio de OnlyFans."),
+        ],
         "tips": [
-            ("Solo OBS Key, sin URL de servidor", "A diferencia de la mayoría de sitios cam, "
-             "OnlyFans expone solo una OBS Key en Settings → Other — no busques una URL."),
-            ("Mantén el bitrate bajo", "El ingest de OnlyFans limita el vídeo a unos 2.500 Kbps "
-             "— mucho más estricto que el resto. Apunta a 720p–1080p a ~2.000–2.500."),
-            ("Marca el stream para los clips", "Añade tu handle y objetivos como "
-             "superposiciones — los clips de un directo de OnlyFans siguen reconocibles."),
+            ("Autorización vs Stream Key", "Dos formas de conectar: "
+             "<strong>Autorización</strong> (inicias sesión una vez, la clave se obtiene y se "
+             "mantiene sincronizada — lo más fácil) o <strong>Stream Key</strong> (copia la OBS "
+             "Key en OnlyFans → Profile → Settings → Other y pégala). La autorización no "
+             "requiere copiar nada a mano."),
+            ("Cambia ajustes sin salir de SplitCam", "Con autorización la cuenta sigue "
+             "conectada, así que puedes ajustar los parámetros del directo de OnlyFans dentro "
+             "de SplitCam a mitad de emisión o después — sin pasar por el sitio de OnlyFans."),
+            ("Mantén el bitrate bajo", "El ingest RTMP de OnlyFans limita el vídeo a unos "
+             "2.500 Kbps — más estricto que la mayoría. Apunta a 720p–1080p a ~2.000–2.500."),
             _T_ETH,
         ],
         "faq": [
-            ("¿Dónde está la OBS Key de OnlyFans?", "Profile → Settings → la sección Other — el "
-             "campo se llama OBS Key."),
-            ("¿OnlyFans admite oficialmente OBS / codificadores externos?", "Oficialmente no — "
-             "la ayuda de OnlyFans solo documenta el directo integrado del navegador/app y no "
-             "publica una guía de OBS. El campo OBS Key existe y enruta al ingest RTMP de "
-             "OnlyFans, así que SplitCam funciona en la práctica, pero considéralo no oficial."),
+            ("¿Cómo conecto OnlyFans con SplitCam?", "De dos formas. "
+             "<strong>Autorización</strong> — Stream Settings → Add Channel → OnlyFans → inicia "
+             "sesión con tu cuenta de OnlyFans y SplitCam obtiene la clave automáticamente. O "
+             "<strong>Stream Key</strong> — copia la OBS Key en OnlyFans → Profile → Settings → "
+             "Other y pégala."),
+            ("¿Puedo cambiar los ajustes del directo de OnlyFans sin abrir el sitio?", "Sí — "
+             "con el método Autorización SplitCam sigue conectado a tu cuenta de OnlyFans, así "
+             "que la clave y los ajustes se sincronizan solos. Puedes cambiarlos dentro de "
+             "SplitCam durante la emisión o después, sin visitar onlyfans.com."),
             ("¿Qué bitrate para OnlyFans?", "Mantenlo modesto — el ingest RTMP de OnlyFans "
              "limita el vídeo a unos 2.500 Kbps, mucho más estricto que otras plataformas cam. "
              "Apunta a 720p–1080p a ~2.000–2.500 Kbps."),

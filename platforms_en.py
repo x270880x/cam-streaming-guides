@@ -203,42 +203,70 @@ PLATFORMS_EN = [
     },
     {
         "slug": "onlyfans", "name": "OnlyFans",
-        "title": "How to Go Live on OnlyFans with SplitCam — OBS Key Setup",
-        "desc": "Go live on OnlyFans with free SplitCam. Find the OBS Key under Settings → "
-                "Other, route it through SplitCam for multi-camera scenes and overlays.",
-        "kw": "how to go live on onlyfans, onlyfans obs key, onlyfans live stream, "
-              "onlyfans streaming software, onlyfans rtmp",
+        "title": "How to Go Live on OnlyFans with SplitCam — Authorization or Stream Key",
+        "desc": "Go live on OnlyFans with free SplitCam. Connect by Authorization (log in once "
+                "and the stream key syncs automatically) or paste the OBS Key by hand — scenes, "
+                "overlays, no watermark.",
+        "kw": "how to go live on onlyfans, onlyfans authorization splitcam, onlyfans obs key, "
+              "onlyfans live stream, onlyfans streaming software",
         "h1html": 'How to go live on <span class="accent">OnlyFans</span> with SplitCam',
         "h1short": "Go live on OnlyFans",
-        "card": "OBS Key setup for OnlyFans live streams.",
-        "intro": "OnlyFans live streaming runs for your subscribers, and the platform exposes a "
-                 "single <strong style='color:var(--text)'>OBS Key</strong> — no separate server "
-                 "URL. Free <strong style='color:var(--text)'>SplitCam</strong> turns that key "
-                 "into a real production: multi-camera scenes, overlays and filters.",
-        "quick": "Go live on OnlyFans with SplitCam: install SplitCam, build your scene, on "
-                 "OnlyFans open <em>Profile → Settings → Other</em>, copy the OBS Key, paste it "
-                 "into SplitCam, Go Live."
-                 "<ol><li>Install SplitCam.</li><li>Add camera + scene.</li>"
-                 "<li>Copy your OnlyFans OBS Key.</li><li>Paste it into SplitCam.</li>"
-                 "<li>Go Live.</li></ol>",
-        "key_how": "On OnlyFans, go to <strong>Profile</strong> → <strong>Settings</strong> → the "
-                   "<strong>Other</strong> section. Copy the value in the <strong>OBS Key</strong> "
-                   "field. OnlyFans gives only this key — there is no separate RTMP server URL to "
-                   "copy, so leave the SplitCam server field as its default if no URL is needed.",
+        "card": "Authorize once or paste the key — go live on OnlyFans.",
+        "intro": "OnlyFans live streaming runs for your subscribers. SplitCam connects in "
+                 "<strong style='color:var(--text)'>two ways</strong> — sign in once with your "
+                 "OnlyFans login and SplitCam fetches and keeps the stream key synced "
+                 "automatically, or paste the OBS Key by hand. Either way you stream with "
+                 "multi-camera scenes, overlays and filters.",
+        "quick": "Go live on OnlyFans with SplitCam: install SplitCam, build your scene, open "
+                 "Stream Settings &rarr; Add Channel &rarr; OnlyFans and choose "
+                 "<em>Authorization</em> — sign in with your OnlyFans login and SplitCam pulls "
+                 "your stream key automatically — then click Go Live. With the account "
+                 "connected you can change the OnlyFans stream settings inside SplitCam, "
+                 "without opening the OnlyFans site.",
+        "steps": [
+            ("Download and install SplitCam",
+             "SplitCam is free live-streaming software for Windows and macOS — no signup, no "
+             "card, no watermark. It is the encoder that sends your video to OnlyFans."),
+            ("Set up your camera and scene",
+             "Open SplitCam and add your webcam. Build the scene viewers will see — overlays, "
+             "text, a second camera, beauty filters or an AI background, applied live."),
+            ("Connect OnlyFans by Authorization",
+             "In SplitCam open <strong>Stream Settings</strong> &rarr; <strong>Add "
+             "Channel</strong> &rarr; <strong>OnlyFans</strong>, and choose the "
+             "<strong>Authorization</strong> method. Sign in with your OnlyFans email and "
+             "password — SplitCam connects straight to your account, so you don't have to find "
+             "a key on the OnlyFans website."),
+            ("Key and settings sync automatically",
+             "Once authorized, SplitCam retrieves your OnlyFans stream key and keeps the "
+             "connection live — the key and the OnlyFans live-stream settings stay synced "
+             "throughout, with nothing to copy by hand. You can manage those OnlyFans settings "
+             "right inside SplitCam."),
+            ("Go Live — and adjust on the fly",
+             "Click <strong>Go Live</strong>. Because your account is connected, you can change "
+             "the OnlyFans stream settings from inside SplitCam <strong>during the stream or "
+             "after it</strong> — without opening the OnlyFans site."),
+        ],
         "tips": [
-            ("Only an OBS Key, no server URL", "Unlike most cam sites, OnlyFans exposes just an "
-             "OBS Key under Settings → Other — don't go hunting for a server URL."),
-            ("Brand the stream for clips", "Add your handle and goals as overlays — clips of an "
-             "OnlyFans live stream stay recognisable when reshared."),
-            _T_ETH, _T_TEST,
+            ("Authorization vs Stream Key", "Two ways to connect: <strong>Authorization</strong> "
+             "(sign in once, the key is fetched and kept synced — easiest) or <strong>Stream "
+             "Key</strong> (copy the OBS Key from OnlyFans → Profile → Settings → Other and "
+             "paste it). Authorization needs no manual copying."),
+            ("Change settings without leaving SplitCam", "With Authorization the account stays "
+             "connected, so you can adjust the OnlyFans stream settings inside SplitCam mid-"
+             "stream or afterwards — no trip to the OnlyFans website."),
+            ("Keep the bitrate modest", "OnlyFans' RTMP ingest caps the video bitrate around "
+             "2,500 Kbps — stricter than most cam sites. Aim for 720p–1080p at ~2,000–2,500."),
+            _T_ETH,
         ],
         "faq": [
-            ("Where is the OnlyFans OBS Key?", "Profile → Settings → the Other section — the "
-             "field is labelled OBS Key."),
-            ("Does OnlyFans officially support OBS / external encoders?", "Not officially — "
-             "OnlyFans' help only documents the built-in browser/app Live feature and publishes "
-             "no OBS setup guide. The OBS Key field exists and routes to OnlyFans' RTMP ingest, "
-             "so SplitCam works in practice, but treat it as unofficial."),
+            ("How do I connect OnlyFans to SplitCam?", "Two ways. <strong>Authorization</strong> "
+             "— Stream Settings → Add Channel → OnlyFans → sign in with your OnlyFans login, and "
+             "SplitCam fetches the stream key automatically. Or <strong>Stream Key</strong> — "
+             "copy the OBS Key from OnlyFans → Profile → Settings → Other and paste it in."),
+            ("Can I change OnlyFans stream settings without opening the site?", "Yes — with the "
+             "Authorization method SplitCam stays connected to your OnlyFans account, so the "
+             "key and settings sync automatically. You can change them inside SplitCam during "
+             "the stream or after it, without visiting onlyfans.com."),
             ("What bitrate for OnlyFans?", "Keep it modest — OnlyFans' RTMP ingest caps the "
              "video bitrate around 2,500 Kbps, much stricter than most cam platforms. Aim for "
              "720p–1080p at roughly 2,000–2,500 Kbps."),
