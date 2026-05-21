@@ -110,6 +110,9 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item[open] summary::after{content:"\\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.hub-grid .related-card{padding:20px 22px}
+.hub-grid .related-card h4{font-size:16.5px}
 .related-card{padding:16px 18px;background:var(--app-panel);border:1px solid var(--app-border);
 border-radius:11px;transition:all .16s}
 .related-card:hover{border-color:var(--blue);transform:translateY(-2px)}
@@ -127,7 +130,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .footer-links{display:flex;gap:22px;flex-wrap:wrap}
 @media(max-width:900px){nav{padding:0 20px}.nav-links{display:none}
 .breadcrumbs{padding:80px 20px 0}.hero,.section{padding-left:20px;padding-right:20px}
-.cta-block{padding:44px 20px}.tips-grid,.related-grid{grid-template-columns:1fr}
+.cta-block{padding:44px 20px}.tips-grid,.related-grid,.hub-grid{grid-template-columns:1fr}
 .step{flex-direction:column;gap:10px}footer{padding:30px 20px}
 .footer-inner{flex-direction:column;text-align:center}
 .hero-inner{grid-template-columns:1fr;gap:24px}
@@ -470,9 +473,13 @@ def render_hub(platforms, lang):
     hb = HUB[lang]
     hub_depth = "../" if u["path"] else ""
     avail = [p for p in platforms if lang in p]
+    # hub display order: these first, then the rest in natural order
+    first = ["multistream-cams", "camsoda", "lovense", "onlyfans", "mfc-alerts"]
+    ordered = ([p for s in first for p in avail if p["slug"] == s]
+               + [p for p in avail if p["slug"] not in first])
     cards = "".join(
         f'<a class="related-card" href="{p["slug"]}/"><h4>{e(p[lang]["h1short"])}</h4>'
-        f'<p>{e(p[lang]["card"])}</p></a>' for p in avail)
+        f'<p>{e(p[lang]["card"])}</p></a>' for p in ordered)
     return f"""<!DOCTYPE html>
 <html lang="{u['lang']}">
 <head>
@@ -500,7 +507,7 @@ def render_hub(platforms, lang):
 </section>
 <section class="section">
   <h2 class="sec-h">{e(hb['pick'])}</h2>
-  <div class="related-grid">{cards}</div>
+  <div class="hub-grid">{cards}</div>
 </section>
 <footer>
   <div class="footer-inner">
