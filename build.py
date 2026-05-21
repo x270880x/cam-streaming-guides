@@ -371,11 +371,11 @@ def render(p, lang, all_platforms):
     <div class="qa-text">{d['quick']}</div>
   </div>
 </div>
+{video_section}
 <section class="section" id="steps">
   <h2 class="sec-h">{u['steps_h']}</h2>
   <div class="steps">{steps_html}</div>
 </section>
-{video_section}
 <section class="section">
   <h2 class="sec-h">{u['tips_h']}</h2>
   <div class="tips-grid">{tips_html}</div>
