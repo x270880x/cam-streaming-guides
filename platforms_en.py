@@ -43,20 +43,24 @@ PLATFORMS_EN = [
         "tips": [
             ("Your token is the key", "Chaturbate uses your broadcast token in place of a "
              "generic stream key. Treat it like a password — reset it if it ever leaks."),
-            ("Use SplitCam's recommended preset", "Chaturbate's guide points at a recommended "
-             "preset — SplitCam's auto settings match it, so you rarely need to tune manually."),
+            ("Lots of headroom", "Chaturbate's own RTMP ingest accepts up to 4K, 60 fps and a "
+             "very high bitrate ceiling — quality is limited by your upload, not the platform. "
+             "Use a 2-second keyframe interval."),
             _T_ETH, _T_TEST,
         ],
         "faq": [
-            ("Does Chaturbate allow OBS / external encoders?", "Yes — Chaturbate exposes RTMP/OBS "
-             "broadcast info and a token under Broadcast Yourself, so SplitCam works as the "
-             "encoder."),
+            ("Does Chaturbate allow OBS / external encoders?", "Yes — Chaturbate officially "
+             "supports external encoders and has its own \"How do I set up OBS?\" support "
+             "article. Activate it with \"Use External Encoder to Broadcast\" in your broadcast "
+             "settings."),
             ("Where is my Chaturbate stream key?", "Broadcast Yourself → My Broadcast → View "
              "RTMP/OBS broadcast information and stream key. The key is your broadcast token."),
-            ("Is SplitCam free for Chaturbate?", "Yes — 100% free, no watermark on the stream, "
-             "no time limit."),
-            ("What bitrate for Chaturbate?", "3,500–6,000 Kbps at 1080p. Run SplitCam's speed "
-             "test to confirm your upload first."),
+            ("What resolution and fps does Chaturbate support?", "Chaturbate's RTMP ingest "
+             "accepts up to 3840×2160 (4K) and 60 fps with a 2-second keyframe interval — far "
+             "more headroom than most cam platforms."),
+            ("What bitrate for Chaturbate?", "3,500–6,000 Kbps at 1080p is plenty. Chaturbate's "
+             "ceiling is very high, so your upload speed is the real limit — run SplitCam's "
+             "speed test first."),
         ],
     },
     {
@@ -93,12 +97,16 @@ PLATFORMS_EN = [
             _T_ETH, _T_TEST,
         ],
         "faq": [
+            ("Does CAM4 officially support OBS / external encoders?", "Yes — CAM4 has an "
+             "official OBS Guide on its support site and recommends the External Encoder option "
+             "for the best experience. SplitCam uses the same RTMP path."),
             ("Can I geo-block my CAM4 broadcast?", "Yes — CAM4 has built-in geo-restriction to "
              "hide your broadcast in certain countries. It's set on CAM4, not in SplitCam."),
             ("Where is the CAM4 stream key?", "Broadcast → Broadcast & Earn Money → Start "
              "Broadcast → External Encoder → Get Stream Key."),
-            ("Is SplitCam free for CAM4?", "Yes — free, no watermark, no time limit."),
-            ("What bitrate for CAM4?", "3,500–6,000 Kbps at 1080p; test your upload first."),
+            ("What bitrate for CAM4?", "Lower than most cam sites — CAM4's ingest caps the "
+             "video bitrate around 3,000 Kbps at 30 fps with a 1-second keyframe interval. "
+             "CAM4's official OBS Guide has a speed-test-based table; don't push past ~3,000."),
         ],
     },
     {
@@ -137,10 +145,13 @@ PLATFORMS_EN = [
             ("Why is the External Encoder button missing on BongaCams?", "External encoding is "
              "not enabled by default for every account — contact BongaCams support to activate "
              "it, then the button appears in Broadcast settings."),
-            ("Does BongaCams support OBS-style streaming?", "Yes — via the External Encoder "
-             "option, so SplitCam works once it's enabled."),
+            ("Do I need to verify my account on BongaCams?", "Yes — broadcasting requires being "
+             "18+ with a valid government ID for age verification, and account approval before "
+             "you can go live."),
+            ("What bitrate for BongaCams?", "BongaCams' RTMP ingest caps the video bitrate "
+             "around 6,000 Kbps with a 2-second keyframe interval — 3,500–6,000 at 1080p is the "
+             "sweet spot; test your upload first."),
             ("Is SplitCam free for BongaCams?", "Yes — free, no watermark, no limits."),
-            ("What bitrate for BongaCams?", "3,500–6,000 Kbps at 1080p; test upload first."),
         ],
     },
     {
@@ -167,20 +178,27 @@ PLATFORMS_EN = [
                    "<strong>Show external software settings for the stream</strong>. Copy the "
                    "stream key — Stripchat shows it as a token. Keep it private.",
         "tips": [
+            ("Match the site resolution exactly", "Stripchat's FAQ warns that the resolution in "
+             "your software must exactly match the resolution set on the site, or the video "
+             "pixelates. Set both the same."),
+            ("Mind the 2 Mbps floor", "Stripchat states 2 Mbps upload is the minimum — and is "
+             "explicitly not enough for OBS-style streaming or simultaneous multi-platform "
+             "streaming. Aim well above it."),
             ("The key is a token", "Stripchat's stream key is a token — copy it exactly and "
              "never share it; reset it if it leaks."),
-            ("Match your resolution", "Stripchat recommends webcam and stream resolution match — "
-             "e.g. both at 1280×720."),
-            _T_ETH, _T_TEST,
+            _T_ETH,
         ],
         "faq": [
-            ("How do I switch Stripchat to external software?", "In your broadcast view choose "
-             "Switch to external software, then open the external software settings to reveal "
-             "the stream key."),
-            ("Does Stripchat allow OBS / SplitCam?", "Yes — the external-software mode accepts "
-             "any RTMP encoder, SplitCam included."),
+            ("Does Stripchat recommend OBS / external software?", "Yes — Stripchat's own FAQ "
+             "advises using external broadcast software like OBS \"to achieve better video and "
+             "audio quality.\" SplitCam works the same way."),
+            ("How do I switch Stripchat to external software?", "In the Broadcast Center choose "
+             "Switch to External Broadcast Software (OBS), then open the external software "
+             "settings to reveal the stream key (token)."),
+            ("What bitrate for Stripchat?", "Its RTMP ingest accepts up to ~6,000 Kbps with a "
+             "2-second keyframe interval. 3,500–6,000 at 1080p is ideal — but you need well "
+             "above the 2 Mbps minimum, especially with OBS-style streaming."),
             ("Is SplitCam free for Stripchat?", "Yes — free, no watermark, no time limit."),
-            ("What bitrate for Stripchat?", "3,500–6,000 Kbps at 1080p; test upload first."),
         ],
     },
     {
@@ -217,10 +235,14 @@ PLATFORMS_EN = [
         "faq": [
             ("Where is the OnlyFans OBS Key?", "Profile → Settings → the Other section — the "
              "field is labelled OBS Key."),
-            ("Does OnlyFans support streaming software?", "Yes — OnlyFans live streaming accepts "
-             "an OBS-style key, so SplitCam works as the encoder."),
+            ("Does OnlyFans officially support OBS / external encoders?", "Not officially — "
+             "OnlyFans' help only documents the built-in browser/app Live feature and publishes "
+             "no OBS setup guide. The OBS Key field exists and routes to OnlyFans' RTMP ingest, "
+             "so SplitCam works in practice, but treat it as unofficial."),
+            ("What bitrate for OnlyFans?", "Keep it modest — OnlyFans' RTMP ingest caps the "
+             "video bitrate around 2,500 Kbps, much stricter than most cam platforms. Aim for "
+             "720p–1080p at roughly 2,000–2,500 Kbps."),
             ("Is SplitCam free for OnlyFans live streams?", "Yes — free, no watermark, no limit."),
-            ("What bitrate for OnlyFans?", "3,500–6,000 Kbps at 1080p; run the speed test first."),
         ],
     },
     {
@@ -233,33 +255,41 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">CamPlace</span> with SplitCam',
         "h1short": "Stream on CamPlace",
         "card": "External encoder setup for CamPlace broadcasts.",
-        "intro": "CamPlace is a cam-streaming platform. Routing your broadcast through free "
-                 "<strong style='color:var(--text)'>SplitCam</strong> adds multi-camera scenes, "
-                 "overlays, filters and AI background that a basic browser camera can't manage.",
+        "intro": "CamPlace is a cam-streaming platform. It has no public OBS help article, so "
+                 "the <strong style='color:var(--text)'>video guide above</strong> is the "
+                 "reference — free <strong style='color:var(--text)'>SplitCam</strong> connects "
+                 "via standard RTMP and adds scenes, overlays and AI background a basic camera "
+                 "can't.",
         "quick": "Broadcast on CamPlace with SplitCam: install SplitCam, build your scene, "
                  "enable external/RTMP broadcasting in CamPlace, copy the server URL and stream "
-                 "key, paste them into SplitCam, Go Live. The video guide above walks it through."
+                 "key, paste them into SplitCam, Go Live. Follow the video guide above for the "
+                 "current path."
                  "<ol><li>Install SplitCam.</li><li>Add camera + scene.</li>"
                  "<li>Get the CamPlace RTMP key.</li><li>Paste it into SplitCam.</li>"
                  "<li>Go Live.</li></ol>",
         "key_how": "Log in to CamPlace and open your broadcast settings. Switch to the external "
                    "encoder / RTMP / OBS option to reveal the <strong>server URL</strong> and "
-                   "<strong>stream key</strong>, and copy both. The video guide above shows the "
-                   "exact path on CamPlace's current interface.",
+                   "<strong>stream key</strong>, and copy both. CamPlace publishes no official "
+                   "OBS documentation, so the <strong>video guide above</strong> is the most "
+                   "reliable walkthrough of the current interface.",
         "tips": [
-            ("Follow the video guide", "CamPlace's interface changes over time — the video guide "
-             "above shows the current path to the encoder settings."),
+            ("No official OBS guide — use the video", "CamPlace has no public help-center "
+             "article on external encoders; the video guide above is the reference for the "
+             "current path."),
+            ("Standard RTMP works", "Even without docs, CamPlace accepts a standard RTMP server "
+             "URL and key — SplitCam connects as a normal custom RTMP destination."),
             ("Layer your overlays in SplitCam", "Tip goals, your name and socials as scene "
              "layers — CamPlace's basic camera can't add them."),
-            _T_ETH, _T_TEST,
+            _T_ETH,
         ],
         "faq": [
-            ("Does CamPlace support external encoders?", "Yes — CamPlace accepts an RTMP stream "
-             "key, so SplitCam works as the encoder."),
+            ("Does CamPlace have an official OBS guide?", "No public help-center article on "
+             "external encoders was found. CamPlace does accept a standard RTMP URL and key, so "
+             "SplitCam works — follow the video guide above for the current path."),
+            ("Does CamPlace support external encoders?", "Yes — it accepts a standard RTMP "
+             "stream key, so SplitCam connects as a custom RTMP destination."),
             ("Is SplitCam free for CamPlace?", "Yes — free, no watermark, no time limit."),
             ("What bitrate for CamPlace?", "3,500–6,000 Kbps at 1080p; test your upload first."),
-            ("Can I use two cameras on CamPlace?", "Yes — add multiple cameras as scene sources "
-             "in SplitCam and switch with hotkeys."),
         ],
     },
     {
@@ -272,34 +302,41 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">CamSoda</span> with SplitCam',
         "h1short": "Stream on CamSoda",
         "card": "External encoder setup for CamSoda broadcasts.",
-        "intro": "CamSoda is a US cam platform known for novel, interactive show formats. Free "
-                 "<strong style='color:var(--text)'>SplitCam</strong> works as its encoder — "
-                 "scenes, overlays, filters and hardware encoding for a cleaner, more produced "
-                 "broadcast than the basic camera.",
-        "quick": "Broadcast on CamSoda with SplitCam: install SplitCam, build your scene, enable "
-                 "the OBS / external encoder in CamSoda, copy the server URL and stream key, "
-                 "paste them into SplitCam, Go Live. Watch the video guide above for the exact "
-                 "path."
+        "intro": "CamSoda is a US cam platform known for novel, interactive show formats. It "
+                 "officially supports OBS-style broadcasting — there's a "
+                 "<strong style='color:var(--text)'>Use OBS Broadcaster</strong> button on the "
+                 "Go Live page and an official OBS guide on the CamSoda wiki. Free "
+                 "<strong style='color:var(--text)'>SplitCam</strong> works the same way.",
+        "quick": "Broadcast on CamSoda with SplitCam: install SplitCam, build your scene, click "
+                 "Use OBS Broadcaster on CamSoda's Go Live page, copy the server URL and stream "
+                 "key, paste them into SplitCam, Go Live."
                  "<ol><li>Install SplitCam.</li><li>Add camera + scene.</li>"
-                 "<li>Get the CamSoda RTMP key.</li><li>Paste it into SplitCam.</li>"
-                 "<li>Go Live.</li></ol>",
-        "key_how": "Sign in to CamSoda and open your broadcast settings. Choose the <strong>OBS / "
-                   "external encoder</strong> option to get the RTMP server URL and stream key, "
-                   "and copy both. The video guide above shows CamSoda's exact menu path.",
+                 "<li>Click Use OBS Broadcaster on CamSoda.</li>"
+                 "<li>Paste server URL + key into SplitCam.</li><li>Go Live.</li></ol>",
+        "key_how": "On CamSoda's <strong>Go Live</strong> page, click <strong>Use OBS "
+                   "Broadcaster</strong>. CamSoda shows the RTMP server URL and stream key — "
+                   "copy both. Pick the regional server (North America, Europe, Asia, etc.) "
+                   "nearest to you. CamSoda's own wiki has a full OBS guide if you need the "
+                   "detail.",
         "tips": [
-            ("Watch the video guide", "CamSoda's broadcast UI is best followed visually — the "
-             "video guide above shows the current encoder path."),
-            ("Produce, don't just point a camera", "CamSoda rewards distinctive shows — use "
-             "SplitCam scenes and overlays to make yours stand out."),
-            _T_ETH, _T_TEST,
+            ("Get verified to receive tips", "On CamSoda anyone can broadcast, but you must "
+             "complete CamSoda's verification application before you can receive tips."),
+            ("Pick the nearest regional server", "CamSoda offers regional ingest servers — "
+             "choosing the closest one (NA / Europe / Asia / South America / Oceania) reduces "
+             "lag and dropped frames."),
+            ("Cap at 1080p / 30 fps", "CamSoda's ingest tops out around 1080p, 30 fps and "
+             "~6,000 Kbps — no need to push higher."),
+            _T_ETH,
         ],
         "faq": [
-            ("Does CamSoda support external encoders?", "Yes — CamSoda accepts an RTMP/OBS "
-             "stream, so SplitCam works as the encoder."),
+            ("Does CamSoda support OBS / external encoders?", "Yes — officially. There's a Use "
+             "OBS Broadcaster button on the Go Live page and an OBS guide on the CamSoda wiki, "
+             "so SplitCam works."),
+            ("Do I need to verify on CamSoda?", "To broadcast, no. To receive tips, yes — "
+             "CamSoda requires you to complete its verification application first."),
+            ("What resolution does CamSoda support?", "Up to 1920×1080 at 30 fps, roughly "
+             "6,000 Kbps maximum on its RTMP ingest."),
             ("Is SplitCam free for CamSoda?", "Yes — free, no watermark, no time limit."),
-            ("What bitrate for CamSoda?", "3,500–6,000 Kbps at 1080p; test your upload first."),
-            ("Can I multistream CamSoda with other sites?", "Yes — SplitCam can broadcast to "
-             "several cam sites from one encode."),
         ],
     },
     {
@@ -536,33 +573,44 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">VXLive</span> with SplitCam',
         "h1short": "Stream on VXLive",
         "card": "External encoder setup for VXLive broadcasts.",
-        "intro": "VXLive is a German-market cam platform. Free "
-                 "<strong style='color:var(--text)'>SplitCam</strong> works as its encoder — "
-                 "multi-camera scenes, overlays, filters and hardware encoding for a cleaner "
-                 "broadcast than the basic camera.",
-        "quick": "Broadcast on VXLive with SplitCam: install SplitCam, build your scene, enable "
-                 "the external encoder in VXLive, copy the server URL and stream key, paste them "
-                 "into SplitCam, Go Live. The video guide above shows the path."
+        "intro": "VXLive (VXModels / VISIT-X) is a German-market cam platform — and one of the "
+                 "few that <strong style='color:var(--text)'>officially supports SplitCam by "
+                 "name</strong>. VXModels has a dedicated help article on connecting "
+                 "<strong style='color:var(--text)'>SplitCam</strong> to VXLive, and SplitCam "
+                 "ships VISIT-X as a ready-made channel preset.",
+        "quick": "Broadcast on VXLive with SplitCam: install SplitCam, build your scene, in "
+                 "VXLive choose \"Stream with third-party software\", copy the server URL and "
+                 "key, in SplitCam pick the VISIT-X preset and paste them, Go Live in SplitCam, "
+                 "then GO ONLINE in VXLive."
                  "<ol><li>Install SplitCam.</li><li>Add camera + scene.</li>"
-                 "<li>Get the VXLive RTMP key.</li><li>Paste it into SplitCam.</li>"
-                 "<li>Go Live.</li></ol>",
-        "key_how": "Sign in to VXLive and open your broadcast settings. Choose the <strong>"
-                   "external encoder / RTMP</strong> option to get the server URL and stream "
-                   "key, and copy both. The video guide above shows VXLive's exact path.",
+                 "<li>Get the VXLive server URL + key.</li>"
+                 "<li>Pick the VISIT-X preset in SplitCam, paste.</li>"
+                 "<li>Go Live, then GO ONLINE in VXLive.</li></ol>",
+        "key_how": "In VXLive, choose <strong>Stream with third-party software</strong> and "
+                   "select the option for <strong>OBS, SplitCam or XSplit</strong>. VXLive "
+                   "supplies a <strong>server URL</strong> and a <strong>stream key</strong>. In "
+                   "SplitCam, select <strong>VISIT-X</strong> as the streaming platform, paste "
+                   "both, press <strong>Go Live</strong> in SplitCam, then <strong>GO "
+                   "ONLINE</strong> in VXLive.",
         "tips": [
+            ("VISIT-X is a built-in preset", "You don't enter a raw RTMP URL — SplitCam has "
+             "VISIT-X in its platform list, so select it and just paste the server URL and key."),
+            ("Two-step go-live", "On VXLive you press Go Live in SplitCam first, then GO ONLINE "
+             "in VXLive — both, in that order."),
             ("German-market platform", "VXLive's audience is largely German-speaking — a German "
-             "text overlay or title can help you connect with viewers."),
-            ("Follow the video guide", "VXLive's broadcast UI is best followed visually — the "
-             "video above shows the current encoder path."),
-            _T_ETH, _T_TEST,
+             "text overlay or title helps you connect with viewers."),
+            _T_ETH,
         ],
         "faq": [
-            ("Does VXLive support external encoders?", "Yes — VXLive accepts an RTMP/OBS stream, "
-             "so SplitCam works as the encoder."),
+            ("Does VXLive officially support SplitCam?", "Yes — VXModels (VXLive) has a "
+             "dedicated official help article on setting up SplitCam, and lists SplitCam "
+             "alongside OBS and XSplit as supported broadcasting software."),
+            ("How do I connect SplitCam to VXLive?", "In VXLive choose \"Stream with "
+             "third-party software\", then in SplitCam select the VISIT-X preset and paste the "
+             "server URL and stream key VXLive gives you."),
+            ("Do I go live in SplitCam or VXLive?", "Both — press Go Live in SplitCam first, "
+             "then GO ONLINE in VXLive."),
             ("Is SplitCam free for VXLive?", "Yes — free, no watermark, no time limit."),
-            ("What bitrate for VXLive?", "3,500–6,000 Kbps at 1080p; test your upload first."),
-            ("Can I multistream VXLive?", "Yes — SplitCam can broadcast to several cam sites at "
-             "once from one encode."),
         ],
     },
     {
@@ -616,34 +664,39 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">XModels</span> with SplitCam',
         "h1short": "Stream on XModels",
         "card": "External encoder setup for XModels broadcasts.",
-        "intro": "XModels is a cam-streaming platform. Through free "
-                 "<strong style='color:var(--text)'>SplitCam</strong> you broadcast with "
-                 "multi-camera scenes, overlays, filters and AI background instead of a single "
-                 "plain camera.",
-        "quick": "Broadcast on XModels with SplitCam: install SplitCam, build your scene, enable "
-                 "the external encoder in XModels, copy the server URL and stream key, paste "
-                 "them into SplitCam, Go Live. See the video guide above for the path."
+        "intro": "XModels is a cam-streaming platform with an in-product "
+                 "<strong style='color:var(--text)'>external-encoder option</strong> in the "
+                 "model account settings. Free <strong style='color:var(--text)'>SplitCam</strong> "
+                 "broadcasts to it with multi-camera scenes, overlays and filters instead of a "
+                 "single plain camera.",
+        "quick": "Broadcast on XModels with SplitCam: install SplitCam, build your scene, in "
+                 "your XModels model account enable the external-encoder option, copy the "
+                 "server URL and stream key, paste them into SplitCam, Go Live."
                  "<ol><li>Install SplitCam.</li><li>Add camera + scene.</li>"
-                 "<li>Get the XModels RTMP key.</li><li>Paste it into SplitCam.</li>"
-                 "<li>Go Live.</li></ol>",
-        "key_how": "Log in to XModels and open your broadcast settings. Switch to the "
-                   "<strong>external encoder / RTMP</strong> option to reveal the server URL and "
-                   "stream key, and copy both. The video guide above walks through XModels' "
-                   "current path.",
+                 "<li>Enable the external encoder in XModels account settings.</li>"
+                 "<li>Paste server URL + key into SplitCam.</li><li>Go Live.</li></ol>",
+        "key_how": "In your XModels <strong>model account settings</strong>, enable the "
+                   "<strong>broadcast-from-external-encoder</strong> option. XModels supplies a "
+                   "<strong>stream key</strong> — copy it into SplitCam. If the option or path "
+                   "isn't where you expect, XModels support runs through in-site FAQ chat and "
+                   "<strong>info@xmodels.com</strong>; the video guide above also shows it.",
         "tips": [
-            ("Follow the video guide", "The video above shows the current path to XModels' "
-             "encoder settings — interfaces shift over time."),
+            ("It's in the account settings", "XModels puts the external-encoder option inside "
+             "the model account settings, not a separate broadcast screen."),
+            ("Support is chat + email", "XModels has no large public help center — its FAQ chat "
+             "on-site and info@xmodels.com are the official support routes."),
             ("Layer overlays in SplitCam", "Tip goals, your name and socials as scene layers — "
              "XModels' basic camera can't add them."),
-            _T_ETH, _T_TEST,
+            _T_ETH,
         ],
         "faq": [
-            ("Does XModels support external encoders?", "Yes — XModels accepts an RTMP/OBS "
-             "stream, so SplitCam works as the encoder."),
+            ("Does XModels support external encoders?", "Yes — the model account settings "
+             "include a broadcast-from-external-encoder option that supplies a stream key, so "
+             "SplitCam works."),
+            ("Where do I get help with XModels?", "XModels support is via its in-site FAQ chat "
+             "and email at info@xmodels.com — there is no large public help center."),
             ("Is SplitCam free for XModels?", "Yes — free, no watermark, no time limit."),
             ("What bitrate for XModels?", "3,500–6,000 Kbps at 1080p; test your upload first."),
-            ("Can I use two cameras on XModels?", "Yes — add multiple cameras as scene sources "
-             "in SplitCam."),
         ],
     },
     {
@@ -657,33 +710,42 @@ PLATFORMS_EN = [
         "h1short": "Stream on Flirt4Free",
         "card": "External encoder setup for Flirt4Free broadcasts.",
         "intro": "Flirt4Free is one of the longest-running cam platforms, online since the "
-                 "1990s. Free <strong style='color:var(--text)'>SplitCam</strong> works as its "
-                 "encoder — scenes, overlays and filters for a polished, modern-looking "
-                 "broadcast.",
+                 "1990s. It officially supports external broadcasting through an "
+                 "<strong style='color:var(--text)'>External Broadcast Form</strong> — free "
+                 "<strong style='color:var(--text)'>SplitCam</strong> sends the stream while the "
+                 "form sets your resolution and bitrate.",
         "quick": "Broadcast on Flirt4Free with SplitCam: install SplitCam, build your scene, "
-                 "enable the external encoder in the Flirt4Free model area, copy the server URL "
-                 "and stream key, paste them into SplitCam, Go Live. The video guide above shows "
-                 "the path."
+                 "open Flirt4Free's External Broadcast Form, copy the RTMP URL and Stream Name "
+                 "and set resolution/bitrate, paste them into SplitCam, Go Live."
                  "<ol><li>Install SplitCam.</li><li>Add camera + scene.</li>"
-                 "<li>Get the Flirt4Free RTMP key.</li><li>Paste it into SplitCam.</li>"
+                 "<li>Open Flirt4Free's External Broadcast Form.</li>"
+                 "<li>Paste the RTMP URL + Stream Name into SplitCam.</li>"
                  "<li>Go Live.</li></ol>",
-        "key_how": "Log in to the Flirt4Free model area and open your broadcast settings. Choose "
-                   "the <strong>external encoder / RTMP</strong> option to get the server URL and "
-                   "stream key, and copy both. The video guide above shows the exact steps.",
+        "key_how": "In the Flirt4Free model area, open the <strong>External Broadcast Form</strong>. "
+                   "Unlike most cam sites, Flirt4Free gives you an <strong>RTMP URL</strong> and "
+                   "a <strong>Stream Name</strong> (not a \"key\"), plus resolution and bitrate "
+                   "fields you fill in on the form itself. Copy the URL and Stream Name into "
+                   "SplitCam's server and key fields.",
         "tips": [
+            ("It's a Stream Name, not a key", "Flirt4Free labels the credential a Stream Name. "
+             "Paste it into SplitCam's stream-key field — it serves the same role."),
+            ("Set resolution/bitrate on the form", "Flirt4Free's External Broadcast Form has "
+             "its own resolution and bitrate fields — match them to your SplitCam settings so "
+             "the picture isn't rescaled."),
             ("An established platform", "Flirt4Free has run since the 1990s — its model tools "
-             "are mature; the external-encoder option is in the model broadcast settings."),
-            ("Follow the video guide", "The video above shows Flirt4Free's current encoder "
-             "path."),
-            _T_ETH, _T_TEST,
+             "are mature and the External Broadcast Form is a documented part of them."),
+            _T_ETH,
         ],
         "faq": [
-            ("Does Flirt4Free support external encoders?", "Yes — Flirt4Free accepts an RTMP/OBS "
-             "stream, so SplitCam works as the encoder."),
+            ("Does Flirt4Free support external encoders?", "Yes — officially, through its "
+             "External Broadcast Form, which provides an RTMP URL and Stream Name. SplitCam "
+             "works as the encoder."),
+            ("Where do I get the Flirt4Free RTMP details?", "From the External Broadcast Form "
+             "in the model area — it shows the RTMP URL, the Stream Name and resolution/bitrate "
+             "fields."),
             ("Is SplitCam free for Flirt4Free?", "Yes — free, no watermark, no time limit."),
-            ("What bitrate for Flirt4Free?", "3,500–6,000 Kbps at 1080p; test upload first."),
-            ("Can I multistream Flirt4Free?", "Yes — SplitCam can broadcast to several cam sites "
-             "at once."),
+            ("What bitrate for Flirt4Free?", "3,500–6,000 Kbps at 1080p — set the same value in "
+             "the External Broadcast Form and in SplitCam."),
         ],
     },
     {
@@ -758,7 +820,10 @@ PLATFORMS_EN = [
         "card": "Connect a Lovense interactive toy to your cam stream.",
         "intro": "Run your cam stream through free <strong style='color:var(--text)'>SplitCam</strong> "
                  "and pair a <strong style='color:var(--text)'>Lovense</strong> interactive toy "
-                 "so it reacts to tokens — with the connection status visible on screen.",
+                 "so it reacts to tokens. Lovense officially documents a dedicated "
+                 "<strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>, and "
+                 "SplitCam ships an official Lovense plugin — the integration is supported on "
+                 "both sides.",
         "quick": "To add a Lovense toy to your stream: install SplitCam and Lovense software, "
                  "pair the toy, link Lovense to your cam platform, add the Lovense status as a "
                  "Browser layer in SplitCam, then broadcast as usual."
@@ -783,21 +848,25 @@ PLATFORMS_EN = [
              "SplitCam, and click <strong>Go Live</strong>. The toy reacts to tips in real time."),
         ],
         "tips": [
+            ("Use the official Lovense SplitCam Toolset", "Lovense publishes a SplitCam-specific "
+             "toolset with its own install guide — it adds the toy-activity and tip-alert "
+             "overlay built for SplitCam."),
+            ("Update the Lovense Cam Extension", "The toolset needs a recent Lovense Cam "
+             "Extension (30.1.4 or newer) — update it before going live."),
             ("Keep the toy charged", "A mid-show battery death kills the interactive part — "
              "charge fully before going live."),
             ("Test the token reaction", "Send a small test tip to confirm the toy reacts before "
              "the room is public."),
-            ("Show the overlay", "A visible Lovense status overlay tells viewers tipping does "
-             "something — it drives more tips."),
-            ("Stable Bluetooth", "Keep the toy near the PC / Bluetooth adapter to avoid dropouts."),
         ],
         "faq": [
-            ("Is SplitCam free for this?", "Yes — SplitCam is free with no watermark. The "
-             "Lovense software is also free."),
+            ("Does Lovense officially support SplitCam?", "Yes — Lovense documents an official "
+             "\"Lovense SplitCam Toolset\" with its own install guide, and SplitCam ships an "
+             "official Lovense plugin. The integration is supported on both sides."),
             ("Does the toy connect to SplitCam directly?", "No — the toy pairs with the Lovense "
              "app; SplitCam displays the Lovense overlay and broadcasts your camera."),
-            ("Which cam sites support Lovense?", "Most major cam platforms integrate with "
-             "Lovense for token-reactive toys — check the Lovense app for the current list."),
+            ("Which cam sites support Lovense?", "Lovense's Cam Extension officially supports "
+             "Chaturbate, Stripchat, BongaCams, MyFreeCams and CamSoda, with varying support "
+             "for others — check the Lovense app for the current list."),
             ("Can I show recent tips on screen?", "Yes — add the Lovense widget URL as a Browser "
              "layer in SplitCam."),
         ],

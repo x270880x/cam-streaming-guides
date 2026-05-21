@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Get your CamPlace stream key",
-     "text": "Log in to CamPlace and open your broadcast settings. Switch to the external encoder / RTMP / OBS option to reveal the server URL and stream key, and copy both. The video guide above shows the exact path on CamPlace's current interface."
+     "text": "Log in to CamPlace and open your broadcast settings. Switch to the external encoder / RTMP / OBS option to reveal the server URL and stream key, and copy both. CamPlace publishes no official OBS documentation, so the video guide above is the most reliable walkthrough of the current interface."
     },
     {
      "@type": "HowToStep",
@@ -76,10 +76,18 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Does CamPlace have an official OBS guide?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No public help-center article on external encoders was found. CamPlace does accept a standard RTMP URL and key, so SplitCam works — follow the video guide above for the current path."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Does CamPlace support external encoders?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes — CamPlace accepts an RTMP stream key, so SplitCam works as the encoder."
+      "text": "Yes — it accepts a standard RTMP stream key, so SplitCam connects as a custom RTMP destination."
      }
     },
     {
@@ -96,14 +104,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "3,500–6,000 Kbps at 1080p; test your upload first."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Can I use two cameras on CamPlace?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes — add multiple cameras as scene sources in SplitCam and switch with hotkeys."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">CamPlace</span>
   <h1 class="h1">How to stream on <span class="accent">CamPlace</span> with SplitCam</h1>
-  <p class="sub">CamPlace is a cam-streaming platform. Routing your broadcast through free <strong style='color:var(--text)'>SplitCam</strong> adds multi-camera scenes, overlays, filters and AI background that a basic browser camera can't manage.</p>
+  <p class="sub">CamPlace is a cam-streaming platform. It has no public OBS help article, so the <strong style='color:var(--text)'>video guide above</strong> is the reference — free <strong style='color:var(--text)'>SplitCam</strong> connects via standard RTMP and adds scenes, overlays and AI background a basic camera can't.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">Skip to steps ↓</a>
   </div>
@@ -245,21 +245,21 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Quick answer</div>
-    <div class="qa-text">Broadcast on CamPlace with SplitCam: install SplitCam, build your scene, enable external/RTMP broadcasting in CamPlace, copy the server URL and stream key, paste them into SplitCam, Go Live. The video guide above walks it through.<ol><li>Install SplitCam.</li><li>Add camera + scene.</li><li>Get the CamPlace RTMP key.</li><li>Paste it into SplitCam.</li><li>Go Live.</li></ol></div>
+    <div class="qa-text">Broadcast on CamPlace with SplitCam: install SplitCam, build your scene, enable external/RTMP broadcasting in CamPlace, copy the server URL and stream key, paste them into SplitCam, Go Live. Follow the video guide above for the current path.<ol><li>Install SplitCam.</li><li>Add camera + scene.</li><li>Get the CamPlace RTMP key.</li><li>Paste it into SplitCam.</li><li>Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Video guide</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/1smUXVUzyAo" title="How to stream on CamPlace with SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Step-by-step</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download and install SplitCam</div><p class="step-p">SplitCam is free live-streaming software for Windows and macOS. Download it and run the installer — no signup, no card, no watermark, no time limit. It is the encoder that sends your video to CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Set up your camera and scene</div><p class="step-p">Open SplitCam and add your webcam. Build your scene the way you want viewers to see it — add overlays, text, a second camera or your phone, beauty filters or an AI background. Everything is applied live before the stream leaves your PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Get your CamPlace stream key</div><p class="step-p">Log in to CamPlace and open your broadcast settings. Switch to the external encoder / RTMP / OBS option to reveal the <strong>server URL</strong> and <strong>stream key</strong>, and copy both. The video guide above shows the exact path on CamPlace's current interface.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Connect SplitCam to CamPlace</div><p class="step-p">In SplitCam open <strong>Stream Settings</strong>, paste the CamPlace server URL and stream key into the custom RTMP fields. Set the bitrate to 3,500–6,000&nbsp;Kbps for 1080p, 2,000–4,000&nbsp;Kbps for 720p, and run the built-in speed test first.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Click Go Live</div><p class="step-p">Press <strong>Go Live</strong> in SplitCam, then start the broadcast on CamPlace. Within ~10 seconds your camera feed is live. Subsequent streams are one click — open SplitCam, Go Live.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download and install SplitCam</div><p class="step-p">SplitCam is free live-streaming software for Windows and macOS. Download it and run the installer — no signup, no card, no watermark, no time limit. It is the encoder that sends your video to CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Set up your camera and scene</div><p class="step-p">Open SplitCam and add your webcam. Build your scene the way you want viewers to see it — add overlays, text, a second camera or your phone, beauty filters or an AI background. Everything is applied live before the stream leaves your PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Get your CamPlace stream key</div><p class="step-p">Log in to CamPlace and open your broadcast settings. Switch to the external encoder / RTMP / OBS option to reveal the <strong>server URL</strong> and <strong>stream key</strong>, and copy both. CamPlace publishes no official OBS documentation, so the <strong>video guide above</strong> is the most reliable walkthrough of the current interface.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Connect SplitCam to CamPlace</div><p class="step-p">In SplitCam open <strong>Stream Settings</strong>, paste the CamPlace server URL and stream key into the custom RTMP fields. Set the bitrate to 3,500–6,000&nbsp;Kbps for 1080p, 2,000–4,000&nbsp;Kbps for 720p, and run the built-in speed test first.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Click Go Live</div><p class="step-p">Press <strong>Go Live</strong> in SplitCam, then start the broadcast on CamPlace. Within ~10 seconds your camera feed is live. Subsequent streams are one click — open SplitCam, Go Live.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Pro tips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Follow the video guide</h3><p>CamPlace's interface changes over time — the video guide above shows the current path to the encoder settings.</p></div><div class="tip-card"><h3>Layer your overlays in SplitCam</h3><p>Tip goals, your name and socials as scene layers — CamPlace's basic camera can't add them.</p></div><div class="tip-card"><h3>Use a wired connection</h3><p>Ethernet beats Wi-Fi for a long live show — a dropped frame is a dropped tip. Run a cable to the streaming PC.</p></div><div class="tip-card"><h3>Run a private test first</h3><p>Do a short test broadcast to check camera, audio, framing and overlays before you open the room publicly.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>No official OBS guide — use the video</h3><p>CamPlace has no public help-center article on external encoders; the video guide above is the reference for the current path.</p></div><div class="tip-card"><h3>Standard RTMP works</h3><p>Even without docs, CamPlace accepts a standard RTMP server URL and key — SplitCam connects as a normal custom RTMP destination.</p></div><div class="tip-card"><h3>Layer your overlays in SplitCam</h3><p>Tip goals, your name and socials as scene layers — CamPlace's basic camera can't add them.</p></div><div class="tip-card"><h3>Use a wired connection</h3><p>Ethernet beats Wi-Fi for a long live show — a dropped frame is a dropped tip. Run a cable to the streaming PC.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Does CamPlace support external encoders?</summary><p>Yes — CamPlace accepts an RTMP stream key, so SplitCam works as the encoder.</p></details><details class="faq-item"><summary>Is SplitCam free for CamPlace?</summary><p>Yes — free, no watermark, no time limit.</p></details><details class="faq-item"><summary>What bitrate for CamPlace?</summary><p>3,500–6,000 Kbps at 1080p; test your upload first.</p></details><details class="faq-item"><summary>Can I use two cameras on CamPlace?</summary><p>Yes — add multiple cameras as scene sources in SplitCam and switch with hotkeys.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Does CamPlace have an official OBS guide?</summary><p>No public help-center article on external encoders was found. CamPlace does accept a standard RTMP URL and key, so SplitCam works — follow the video guide above for the current path.</p></details><details class="faq-item"><summary>Does CamPlace support external encoders?</summary><p>Yes — it accepts a standard RTMP stream key, so SplitCam connects as a custom RTMP destination.</p></details><details class="faq-item"><summary>Is SplitCam free for CamPlace?</summary><p>Yes — free, no watermark, no time limit.</p></details><details class="faq-item"><summary>What bitrate for CamPlace?</summary><p>3,500–6,000 Kbps at 1080p; test your upload first.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Other platform guides</h3>
