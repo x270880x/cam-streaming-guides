@@ -365,6 +365,10 @@ def render(p, lang, all_platforms):
                 {"@type": "Question", "name": q,
                  "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
                 for q, a in d["faq"]]},
+            {"@type": "SoftwareApplication", "name": "SplitCam",
+             "applicationCategory": "MultimediaApplication",
+             "operatingSystem": "Windows, macOS",
+             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
         ],
     }
 
@@ -379,8 +383,14 @@ def render(p, lang, all_platforms):
 <link rel="canonical" href="{canon}">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
+<meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(d['title'])}">
 <meta property="og:description" content="{e(d['desc'])}">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:image" content="https://NEWDOMAIN.com/assets/splitcam.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{e(d['title'])}">
+<meta name="twitter:description" content="{e(d['desc'])}">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=1)}
