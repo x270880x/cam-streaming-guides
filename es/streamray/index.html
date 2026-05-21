@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cómo emitir en StreamRay con SplitCam — guía gratuita</title>
-<meta name="description" content="Guía paso a paso para emitir en StreamRay con SplitCam gratis — codificador RTMP externo, escenas, superposiciones, sin marca de agua.">
-<meta name="keywords" content="cómo emitir en streamray, streamray software de emisión, streamray rtmp, streamray obs">
+<title>Cómo emitir en StreamRay con SplitCam — URL desde el chat</title>
+<meta name="description" content="Emite en StreamRay con SplitCam gratis. StreamRay publica la URL del stream en la ventana de chat y no usa clave — SplitCam maneja ese flujo.">
+<meta name="keywords" content="cómo emitir en streamray, streamray obs broadcaster, streamray cam, streamray rtmp">
 <link rel="canonical" href="https://NEWDOMAIN.com/es/streamray/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cómo emitir en StreamRay con SplitCam — guía gratuita">
-<meta property="og:description" content="Guía paso a paso para emitir en StreamRay con SplitCam gratis — codificador RTMP externo, escenas, superposiciones, sin marca de agua.">
+<meta property="og:title" content="Cómo emitir en StreamRay con SplitCam — URL desde el chat">
+<meta property="og:description" content="Emite en StreamRay con SplitCam gratis. StreamRay publica la URL del stream en la ventana de chat y no usa clave — SplitCam maneja ese flujo.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Cómo emitir en StreamRay con SplitCam",
-   "description": "Guía paso a paso para emitir en StreamRay con SplitCam gratis — codificador RTMP externo, escenas, superposiciones, sin marca de agua.",
+   "description": "Emite en StreamRay con SplitCam gratis. StreamRay publica la URL del stream en la ventana de chat y no usa clave — SplitCam maneja ese flujo.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Consigue tu clave de stream de StreamRay",
-     "text": "Inicia sesión en StreamRay y abre los ajustes de emisión. Cambia el método a codificador externo / OBS / RTMP. StreamRay mostrará una URL de servidor y una clave de stream — copia ambas. Mantén la clave en privado."
+     "text": "En StreamRay, pulsa Broadcast Now dos veces, abre el menú Other, elige OBS Broadcaster y Save and Close. StreamRay publica entonces tu URL del stream en la ventana de chat — cópiala de ahí. Deja el campo de clave de SplitCam vacío; StreamRay autentica por URL."
     },
     {
      "@type": "HowToStep",
@@ -76,34 +76,34 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "¿Dónde está la URL del stream de StreamRay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tras activar OBS Broadcaster, StreamRay publica la URL en la ventana de chat — cópiala del chat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Por qué StreamRay no tiene clave de stream?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "StreamRay autentica solo por URL — deja el campo de clave de SplitCam vacío."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "¿SplitCam es gratis para StreamRay?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sí — 100% gratis, sin marca de agua en tu emisión, sin límite de tiempo."
+      "text": "Sí — gratis, sin marca de agua, sin límite."
      }
     },
     {
      "@type": "Question",
-     "name": "¿Por qué usar SplitCam y no el emisor del navegador de StreamRay?",
+     "name": "¿Qué bitrate para StreamRay?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "El emisor del navegador es una sola cámara sin superposiciones. SplitCam añade escenas con varias cámaras, superposiciones de texto, filtros y codificación por hardware."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "¿Qué bitrate usar para StreamRay?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "3.500–6.000 Kbps para 1080p, 2.000–4.000 para 720p. Comprueba tu subida con el test de velocidad de SplitCam primero."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "¿Puedo emitir en StreamRay y otros sitios a la vez?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Sí — la multiemisión de SplitCam envía un stream a varios sitios cam a la vez."
+      "text": "3.500–6.000 Kbps a 1080p; comprueba tu subida."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">StreamRay</span>
   <h1 class="h1">Cómo emitir en <span class="accent">StreamRay</span> con SplitCam</h1>
-  <p class="sub">El <strong style='color:var(--text)'>SplitCam</strong> gratuito funciona como tu codificador para StreamRay — escenas con varias cámaras, superposiciones, filtros y fondo con IA que el emisor básico no tiene. Sin marca de agua.</p>
+  <p class="sub">StreamRay tiene un setup de codificador externo inusual — te entrega la URL del stream dentro de la <strong style='color:var(--text)'>ventana de chat</strong> y no usa clave aparte. <strong style='color:var(--text)'>SplitCam</strong> gratis maneja bien ese flujo de solo-URL.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">Ir a los pasos ↓</a>
   </div>
@@ -245,25 +245,25 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Respuesta rápida</div>
-    <div class="qa-text">Para emitir en StreamRay con SplitCam: instala SplitCam, monta tu escena, activa la emisión externa (RTMP) en StreamRay, copia la URL del servidor y la clave de stream, pégalas en SplitCam y pulsa Go Live.<ol><li>Instala SplitCam.</li><li>Añade cámara y escena.</li><li>Consigue la clave RTMP de StreamRay.</li><li>Pégala en SplitCam.</li><li>Pulsa Go Live.</li></ol></div>
+    <div class="qa-text">Emite en StreamRay con SplitCam: instala SplitCam, monta tu escena, en StreamRay activa el OBS Broadcaster, copia la URL del stream desde la ventana de chat, pégala en SplitCam (deja el campo de clave vacío), Go Live.<ol><li>Instala SplitCam.</li><li>Añade cámara y escena.</li><li>Copia la URL de StreamRay desde el chat.</li><li>Pega la URL en SplitCam.</li><li>Pulsa Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Guía en vídeo</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/i0CN1q-yLK4" title="Cómo emitir en StreamRay con SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Paso a paso</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarga e instala SplitCam</div><p class="step-p">SplitCam es un software de streaming gratuito para Windows y macOS. Descárgalo y ejecuta el instalador — sin registro, sin marca de agua, sin límite de tiempo. SplitCam es el codificador que envía tu vídeo a StreamRay.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Configura tu cámara y escena</div><p class="step-p">Abre SplitCam y añade tu webcam. Monta la escena como quieras — superposiciones, texto, una segunda cámara o tu teléfono, filtros de belleza o un fondo con IA. Todo se aplica en directo antes de enviar el stream.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Consigue tu clave de stream de StreamRay</div><p class="step-p">Inicia sesión en StreamRay y abre los ajustes de emisión. Cambia el método a <strong>codificador externo / OBS / RTMP</strong>. StreamRay mostrará una <strong>URL de servidor</strong> y una <strong>clave de stream</strong> — copia ambas. Mantén la clave en privado.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conecta SplitCam a StreamRay</div><p class="step-p">En SplitCam abre <strong>Ajustes de stream</strong>, pega la URL del servidor y la clave de StreamRay en los campos RTMP personalizados. Bitrate: 3.500–6.000&nbsp;Kbps para 1080p. Ejecuta primero el test de velocidad.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Pulsa Go Live</div><p class="step-p">Pulsa <strong>Go Live</strong> en SplitCam y luego inicia la emisión en StreamRay. En unos ~10 segundos tu cámara está en directo.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarga e instala SplitCam</div><p class="step-p">SplitCam es un software de streaming gratuito para Windows y macOS. Descárgalo y ejecuta el instalador — sin registro, sin marca de agua, sin límite de tiempo. SplitCam es el codificador que envía tu vídeo a StreamRay.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Configura tu cámara y escena</div><p class="step-p">Abre SplitCam y añade tu webcam. Monta la escena como quieras — superposiciones, texto, una segunda cámara o tu teléfono, filtros de belleza o un fondo con IA. Todo se aplica en directo antes de enviar el stream.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Consigue tu clave de stream de StreamRay</div><p class="step-p">En StreamRay, pulsa <strong>Broadcast Now</strong> dos veces, abre el menú <strong>Other</strong>, elige <strong>OBS Broadcaster</strong> y <strong>Save and Close</strong>. StreamRay publica entonces tu <strong>URL del stream en la ventana de chat</strong> — cópiala de ahí. Deja el campo de clave de SplitCam <strong>vacío</strong>; StreamRay autentica por URL.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conecta SplitCam a StreamRay</div><p class="step-p">En SplitCam abre <strong>Ajustes de stream</strong>, pega la URL del servidor y la clave de StreamRay en los campos RTMP personalizados. Bitrate: 3.500–6.000&nbsp;Kbps para 1080p. Ejecuta primero el test de velocidad.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Pulsa Go Live</div><p class="step-p">Pulsa <strong>Go Live</strong> en SplitCam y luego inicia la emisión en StreamRay. En unos ~10 segundos tu cámara está en directo.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Consejos</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Conexión por cable</h3><p>Ethernet es más estable que el Wi-Fi. Un fotograma perdido en directo es una propina perdida — mantén la conexión sólida.</p></div><div class="tip-card"><h3>Superposiciones en SplitCam</h3><p>Añade texto de objetivos, tus redes y un logo como capas de escena. El emisor del navegador no puede; SplitCam sí.</p></div><div class="tip-card"><h3>Haz una prueba privada</h3><p>Una emisión de prueba corta verifica cámara, audio y encuadre antes de abrir la sala.</p></div><div class="tip-card"><h3>Codificación por hardware</h3><p>SplitCam detecta NVENC / QuickSync / AMF — la codificación corre en la GPU y el equipo no se ralentiza.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>La URL está en el chat</h3><p>StreamRay no muestra la URL en un cuadro de ajustes — la publica en la ventana de chat de tu emisión. Cópiala de ahí.</p></div><div class="tip-card"><h3>Deja la clave vacía</h3><p>StreamRay no usa clave aparte — solo la URL. No rellenes el campo de clave en SplitCam.</p></div><div class="tip-card"><h3>Conexión por cable</h3><p>Ethernet es más fiable que el Wi-Fi para un directo largo — un fotograma perdido es una propina perdida. Lleva un cable al PC de streaming.</p></div><div class="tip-card"><h3>Haz una prueba privada primero</h3><p>Una emisión de prueba corta verifica cámara, audio, encuadre y superposiciones antes de abrir la sala.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Preguntas frecuentes</h2>
-  <div class="faq-list"><details class="faq-item"><summary>¿SplitCam es gratis para StreamRay?</summary><p>Sí — 100% gratis, sin marca de agua en tu emisión, sin límite de tiempo.</p></details><details class="faq-item"><summary>¿Por qué usar SplitCam y no el emisor del navegador de StreamRay?</summary><p>El emisor del navegador es una sola cámara sin superposiciones. SplitCam añade escenas con varias cámaras, superposiciones de texto, filtros y codificación por hardware.</p></details><details class="faq-item"><summary>¿Qué bitrate usar para StreamRay?</summary><p>3.500–6.000 Kbps para 1080p, 2.000–4.000 para 720p. Comprueba tu subida con el test de velocidad de SplitCam primero.</p></details><details class="faq-item"><summary>¿Puedo emitir en StreamRay y otros sitios a la vez?</summary><p>Sí — la multiemisión de SplitCam envía un stream a varios sitios cam a la vez.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>¿Dónde está la URL del stream de StreamRay?</summary><p>Tras activar OBS Broadcaster, StreamRay publica la URL en la ventana de chat — cópiala del chat.</p></details><details class="faq-item"><summary>¿Por qué StreamRay no tiene clave de stream?</summary><p>StreamRay autentica solo por URL — deja el campo de clave de SplitCam vacío.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para StreamRay?</summary><p>Sí — gratis, sin marca de agua, sin límite.</p></details><details class="faq-item"><summary>¿Qué bitrate para StreamRay?</summary><p>3.500–6.000 Kbps a 1080p; comprueba tu subida.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guías de otras plataformas</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Emitir en Chaturbate</h4><p>Configuración del codificador externo para Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Emitir en CAM4</h4><p>Configuración del codificador externo para CAM4.</p></a><a class="related-card" href="../bongacams/"><h4>Emitir en BongaCams</h4><p>Configuración del codificador externo para BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Emitir en Chaturbate</h4><p>Configuración por token y codificador externo de Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Emitir en CAM4</h4><p>External Encoder de CAM4 con geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Emitir en BongaCams</h4><p>External Encoder de BongaCams.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>¿Listo para emitir?</h2>

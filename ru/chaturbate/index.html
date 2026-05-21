@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как вести трансляцию на Chaturbate через SplitCam — бесплатный гайд</title>
-<meta name="description" content="Пошаговый гайд: вещание на Chaturbate через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.">
-<meta name="keywords" content="как вести трансляцию на chaturbate, chaturbate вещание, chaturbate rtmp, chaturbate obs, программа для трансляции chaturbate">
+<title>Как вести трансляцию на Chaturbate через SplitCam — токен и RTMP</title>
+<meta name="description" content="Вещание на Chaturbate через бесплатный SplitCam. Возьмите broadcast-токен в Broadcast Yourself, направьте внешний кодировщик через SplitCam — сцены, накладки, без водяного знака.">
+<meta name="keywords" content="как вести трансляцию на chaturbate, chaturbate broadcast token, chaturbate rtmp obs, chaturbate внешний кодировщик">
 <link rel="canonical" href="https://NEWDOMAIN.com/ru/chaturbate/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Как вести трансляцию на Chaturbate через SplitCam — бесплатный гайд">
-<meta property="og:description" content="Пошаговый гайд: вещание на Chaturbate через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.">
+<meta property="og:title" content="Как вести трансляцию на Chaturbate через SplitCam — токен и RTMP">
+<meta property="og:description" content="Вещание на Chaturbate через бесплатный SplitCam. Возьмите broadcast-токен в Broadcast Yourself, направьте внешний кодировщик через SplitCam — сцены, накладки, без водяного знака.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Как вести трансляцию на Chaturbate через SplitCam",
-   "description": "Пошаговый гайд: вещание на Chaturbate через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.",
+   "description": "Вещание на Chaturbate через бесплатный SplitCam. Возьмите broadcast-токен в Broadcast Yourself, направьте внешний кодировщик через SplitCam — сцены, накладки, без водяного знака.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции Chaturbate",
-     "text": "Войдите в аккаунт на Chaturbate и откройте настройки вещания. Переключите способ вещания на внешний кодировщик / OBS / RTMP. Chaturbate покажет URL сервера и ключ трансляции — скопируйте оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату."
+     "text": "На Chaturbate нажмите Broadcast Yourself — откроется страница My Broadcast, затем View RTMP/OBS broadcast information and stream key. Ключ показан как ваш broadcast-токен — скопируйте его. Работает как пароль, публично не выкладывайте."
     },
     {
      "@type": "HowToStep",
@@ -76,18 +76,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "SplitCam бесплатен для Chaturbate?",
+     "name": "Chaturbate разрешает OBS / внешние кодировщики?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. Все функции открыты с первой установки."
+      "text": "Да — Chaturbate выдаёт RTMP/OBS данные и токен в Broadcast Yourself, SplitCam работает как кодировщик."
      }
     },
     {
      "@type": "Question",
-     "name": "Зачем SplitCam вместо встроенного вещателя Chaturbate?",
+     "name": "Где ключ трансляции Chaturbate?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование."
+      "text": "Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Ключ — это broadcast-токен."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SplitCam бесплатен для Chaturbate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — полностью бесплатно, без водяного знака, без ограничения по времени."
      }
     },
     {
@@ -95,15 +103,7 @@
      "name": "Какой битрейт для Chaturbate?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным тестом скорости SplitCam."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно вещать на Chaturbate и другие сайты одновременно?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. Смотрите гайд по мультитрансляции."
+      "text": "3500–6000 Кбит/с для 1080p. Сначала проверьте аплоад тестом скорости SplitCam."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">Chaturbate</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">Chaturbate</span> через SplitCam</h1>
-  <p class="sub">Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает как кодировщик для Chaturbate — сцены с несколькими камерами, накладки, фильтры и AI-фон, которых нет у встроенного вещателя. Без водяного знака и регистрации.</p>
+  <p class="sub">Chaturbate — одна из крупнейших кам-платформ с токен-экономикой. Её браузерный вещатель — одна простая камера; маршрут через <strong style='color:var(--text)'>внешний кодировщик</strong> с бесплатным <strong style='color:var(--text)'>SplitCam</strong> открывает сцены с несколькими камерами, накладки и фильтры на том же токен-потоке.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,25 +245,25 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Чтобы вести трансляцию на Chaturbate через SplitCam: установите SplitCam, соберите сцену, включите внешнее (RTMP) вещание на Chaturbate, скопируйте URL сервера и ключ трансляции, вставьте их в SplitCam и нажмите Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ Chaturbate.</li><li>Вставьте его в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на Chaturbate через SplitCam: установите SplitCam, соберите сцену, откройте <em>Broadcast Yourself → My Broadcast</em>, скопируйте broadcast-токен, вставьте в SplitCam, нажмите Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Скопируйте broadcast-токен Chaturbate.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/ynClBb7wbg0" title="Как вести трансляцию на Chaturbate через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на Chaturbate.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции Chaturbate</div><p class="step-p">Войдите в аккаунт на Chaturbate и откройте настройки вещания. Переключите способ вещания на <strong>внешний кодировщик / OBS / RTMP</strong>. Chaturbate покажет <strong>URL сервера</strong> и <strong>ключ трансляции</strong> — скопируйте оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к Chaturbate</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ Chaturbate в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на Chaturbate. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на Chaturbate.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции Chaturbate</div><p class="step-p">На Chaturbate нажмите <strong>Broadcast Yourself</strong> — откроется страница <strong>My Broadcast</strong>, затем <strong>View RTMP/OBS broadcast information and stream key</strong>. Ключ показан как ваш <strong>broadcast-токен</strong> — скопируйте его. Работает как пароль, публично не выкладывайте.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к Chaturbate</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ Chaturbate в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на Chaturbate. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet стабильнее Wi-Fi. Обрыв кадра в эфире — это потерянный токен. Держите соединение надёжным.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Добавьте текст целей, ваши соцсети и логотип как слои сцены — браузерный вещатель так не умеет, SplitCam умеет.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук и кадрирование до открытия комнаты.</p></div><div class="tip-card"><h3>Аппаратное кодирование</h3><p>SplitCam сам выбирает NVENC / QuickSync / AMF — кодирование идёт на GPU, компьютер не тормозит.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Токен — это ключ</h3><p>Chaturbate использует broadcast-токен вместо обычного ключа трансляции. Берегите как пароль, сбросьте если утёк.</p></div><div class="tip-card"><h3>Рекомендованный пресет SplitCam</h3><p>Гайд Chaturbate указывает на рекомендованный пресет — авто-настройки SplitCam ему соответствуют, вручную крутить почти не надо.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>SplitCam бесплатен для Chaturbate?</summary><p>Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. Все функции открыты с первой установки.</p></details><details class="faq-item"><summary>Зачем SplitCam вместо встроенного вещателя Chaturbate?</summary><p>Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование.</p></details><details class="faq-item"><summary>Какой битрейт для Chaturbate?</summary><p>3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным тестом скорости SplitCam.</p></details><details class="faq-item"><summary>Можно вещать на Chaturbate и другие сайты одновременно?</summary><p>Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. Смотрите гайд по мультитрансляции.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Chaturbate разрешает OBS / внешние кодировщики?</summary><p>Да — Chaturbate выдаёт RTMP/OBS данные и токен в Broadcast Yourself, SplitCam работает как кодировщик.</p></details><details class="faq-item"><summary>Где ключ трансляции Chaturbate?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Ключ — это broadcast-токен.</p></details><details class="faq-item"><summary>SplitCam бесплатен для Chaturbate?</summary><p>Да — полностью бесплатно, без водяного знака, без ограничения по времени.</p></details><details class="faq-item"><summary>Какой битрейт для Chaturbate?</summary><p>3500–6000 Кбит/с для 1080p. Сначала проверьте аплоад тестом скорости SplitCam.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
-  <div class="related-grid"><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>Настройка внешнего кодировщика для CAM4.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>Настройка внешнего кодировщика для BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Трансляция на Stripchat</h4><p>Настройка внешнего кодировщика для Stripchat.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>External Encoder CAM4 + гео-настройки.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>External Encoder BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Трансляция на Stripchat</h4><p>Настройка внешнего софта для Stripchat.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Готовы выйти в эфир?</h2>

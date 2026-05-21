@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как вести трансляцию на XLoveCam через SplitCam — бесплатный гайд</title>
-<meta name="description" content="Пошаговый гайд: вещание на XLoveCam через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.">
-<meta name="keywords" content="как вести трансляцию на xlovecam, xlovecam вещание, xlovecam rtmp, xlovecam obs, программа для трансляции xlovecam">
+<title>Как вести трансляцию на XLoveCam через SplitCam — RTMP-ссылка и ключ</title>
+<meta name="description" content="Вещание на XLoveCam через бесплатный SplitCam. RTMP-ссылка и ключ в My Account → settings, сцены и накладки. Без водяного знака.">
+<meta name="keywords" content="как вести трансляцию на xlovecam, xlovecam rtmp, xlovecam ключ, x love cam">
 <link rel="canonical" href="https://NEWDOMAIN.com/ru/xlovecam/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Как вести трансляцию на XLoveCam через SplitCam — бесплатный гайд">
-<meta property="og:description" content="Пошаговый гайд: вещание на XLoveCam через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.">
+<meta property="og:title" content="Как вести трансляцию на XLoveCam через SplitCam — RTMP-ссылка и ключ">
+<meta property="og:description" content="Вещание на XLoveCam через бесплатный SplitCam. RTMP-ссылка и ключ в My Account → settings, сцены и накладки. Без водяного знака.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Как вести трансляцию на XLoveCam через SplitCam",
-   "description": "Пошаговый гайд: вещание на XLoveCam через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.",
+   "description": "Вещание на XLoveCam через бесплатный SplitCam. RTMP-ссылка и ключ в My Account → settings, сцены и накладки. Без водяного знака.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции XLoveCam",
-     "text": "Войдите в аккаунт на XLoveCam и откройте настройки вещания. Переключите способ вещания на внешний кодировщик / OBS / RTMP. XLoveCam покажет URL сервера и ключ трансляции — скопируйте оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату."
+     "text": "На XLoveCam откройте My Account → settings. В настройках есть и RTMP-ссылка, и ключ трансляции — скопируйте оба в поля URL сервера и ключа SplitCam, затем нажмите Start your show на XLoveCam."
     },
     {
      "@type": "HowToStep",
@@ -76,18 +76,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "SplitCam бесплатен для XLoveCam?",
+     "name": "Где RTMP-данные XLoveCam?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. Все функции открыты с первой установки."
+      "text": "My Account → settings — показаны и RTMP-ссылка, и ключ."
      }
     },
     {
      "@type": "Question",
-     "name": "Зачем SplitCam вместо встроенного вещателя XLoveCam?",
+     "name": "XLoveCam поддерживает внешние кодировщики?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование."
+      "text": "Да — даёт RTMP-ссылку и ключ, так что SplitCam работает."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SplitCam бесплатен для XLoveCam?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — бесплатно, без водяного знака, без лимита."
      }
     },
     {
@@ -95,15 +103,7 @@
      "name": "Какой битрейт для XLoveCam?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным тестом скорости SplitCam."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно вещать на XLoveCam и другие сайты одновременно?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. Смотрите гайд по мультитрансляции."
+      "text": "3500–6000 Кбит/с для 1080p; проверьте аплоад."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">XLoveCam</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">XLoveCam</span> через SplitCam</h1>
-  <p class="sub">Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает как кодировщик для XLoveCam — сцены с несколькими камерами, накладки, фильтры и AI-фон, которых нет у встроенного вещателя. Без водяного знака и регистрации.</p>
+  <p class="sub">XLoveCam — европейская многоязычная кам-платформа. В настройках аккаунта есть и <strong style='color:var(--text)'>RTMP-ссылка</strong>, и <strong style='color:var(--text)'>ключ трансляции</strong> — бесплатный <strong style='color:var(--text)'>SplitCam</strong> берёт оба и вещает со сценами и накладками.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,25 +245,25 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Чтобы вести трансляцию на XLoveCam через SplitCam: установите SplitCam, соберите сцену, включите внешнее (RTMP) вещание на XLoveCam, скопируйте URL сервера и ключ трансляции, вставьте их в SplitCam и нажмите Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ XLoveCam.</li><li>Вставьте его в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на XLoveCam через SplitCam: установите SplitCam, соберите сцену, на XLoveCam откройте <em>My Account → settings</em>, скопируйте RTMP-ссылку и ключ, вставьте оба в SplitCam, начните шоу.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Скопируйте RTMP-ссылку и ключ XLoveCam.</li><li>Вставьте оба в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/myrur7zCHak" title="Как вести трансляцию на XLoveCam через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на XLoveCam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции XLoveCam</div><p class="step-p">Войдите в аккаунт на XLoveCam и откройте настройки вещания. Переключите способ вещания на <strong>внешний кодировщик / OBS / RTMP</strong>. XLoveCam покажет <strong>URL сервера</strong> и <strong>ключ трансляции</strong> — скопируйте оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к XLoveCam</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ XLoveCam в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на XLoveCam. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на XLoveCam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции XLoveCam</div><p class="step-p">На XLoveCam откройте <strong>My Account</strong> → <strong>settings</strong>. В настройках есть и <strong>RTMP-ссылка</strong>, и <strong>ключ трансляции</strong> — скопируйте оба в поля URL сервера и ключа SplitCam, затем нажмите <strong>Start your show</strong> на XLoveCam.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к XLoveCam</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ XLoveCam в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на XLoveCam. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet стабильнее Wi-Fi. Обрыв кадра в эфире — это потерянный токен. Держите соединение надёжным.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Добавьте текст целей, ваши соцсети и логотип как слои сцены — браузерный вещатель так не умеет, SplitCam умеет.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук и кадрирование до открытия комнаты.</p></div><div class="tip-card"><h3>Аппаратное кодирование</h3><p>SplitCam сам выбирает NVENC / QuickSync / AMF — кодирование идёт на GPU, компьютер не тормозит.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Копируйте и ссылку, и ключ</h3><p>XLoveCam даёт RTMP-ссылку И отдельный ключ — нужны оба в SplitCam, не только что-то одно.</p></div><div class="tip-card"><h3>Многоязычная аудитория</h3><p>XLoveCam европейская и многоязычная — понятная текстовая накладка на вашем языке помогает зрителям вас найти.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>SplitCam бесплатен для XLoveCam?</summary><p>Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. Все функции открыты с первой установки.</p></details><details class="faq-item"><summary>Зачем SplitCam вместо встроенного вещателя XLoveCam?</summary><p>Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование.</p></details><details class="faq-item"><summary>Какой битрейт для XLoveCam?</summary><p>3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным тестом скорости SplitCam.</p></details><details class="faq-item"><summary>Можно вещать на XLoveCam и другие сайты одновременно?</summary><p>Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. Смотрите гайд по мультитрансляции.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Где RTMP-данные XLoveCam?</summary><p>My Account → settings — показаны и RTMP-ссылка, и ключ.</p></details><details class="faq-item"><summary>XLoveCam поддерживает внешние кодировщики?</summary><p>Да — даёт RTMP-ссылку и ключ, так что SplitCam работает.</p></details><details class="faq-item"><summary>SplitCam бесплатен для XLoveCam?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для XLoveCam?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка внешнего кодировщика для Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>Настройка внешнего кодировщика для CAM4.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>Настройка внешнего кодировщика для BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка через токен и внешний кодировщик Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>External Encoder CAM4 + гео-настройки.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>External Encoder BongaCams.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Готовы выйти в эфир?</h2>

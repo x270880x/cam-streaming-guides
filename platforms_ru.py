@@ -1,140 +1,743 @@
 # -*- coding: utf-8 -*-
-"""Russian content for cam-streaming-guides. One dict per platform."""
+"""Russian content for cam-streaming-guides. Genuinely per-platform (not templated)."""
 
-# common Russian fragments reused across platforms
-_TIPS = {
-    "eth": ("Проводное подключение", "Ethernet стабильнее Wi-Fi. Обрыв кадра в эфире — это "
-            "потерянный токен. Держите соединение надёжным."),
-    "ovl": ("Накладки в SplitCam", "Добавьте текст целей, ваши соцсети и логотип как слои сцены — "
-            "браузерный вещатель так не умеет, SplitCam умеет."),
-    "test": ("Сначала приватный тест", "Короткая тестовая трансляция проверит камеру, звук и "
-             "кадрирование до открытия комнаты."),
-    "hw": ("Аппаратное кодирование", "SplitCam сам выбирает NVENC / QuickSync / AMF — кодирование "
-           "идёт на GPU, компьютер не тормозит."),
-    "health": ("Следите за монитором", "Строка состояния SplitCam показывает дропы кадров и "
-               "нагрузку. Красное — снизьте битрейт."),
-    "ai": ("AI-фон", "Зелёный экран не нужен — SplitCam убирает или размывает фон для чистой "
-           "картинки."),
-}
-
-
-def _p(slug, name, gen, desc_extra="", quick_verb="вести трансляцию на"):
-    """Build a standard cam-platform RU dict. gen = genitive/accusative platform name."""
-    return {
-        "slug": slug, "name": name,
-        "title": f"Как вести трансляцию на {gen} через SplitCam — бесплатный гайд",
-        "desc": f"Пошаговый гайд: вещание на {gen} через бесплатный SplitCam — внешний RTMP-"
-                f"кодировщик, сцены, накладки, без водяного знака. {desc_extra}".strip(),
-        "kw": f"как вести трансляцию на {name.lower()}, {name.lower()} вещание, "
-              f"{name.lower()} rtmp, {name.lower()} obs, программа для трансляции {name.lower()}",
-        "h1html": f'Как вести трансляцию на <span class="accent">{name}</span> через SplitCam',
-        "h1short": f"Трансляция на {name}",
-        "card": f"Настройка внешнего кодировщика для {gen}.",
-        "intro": f"Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает как "
-                 f"кодировщик для {gen} — сцены с несколькими камерами, накладки, фильтры и "
-                 f"AI-фон, которых нет у встроенного вещателя. Без водяного знака и регистрации.",
-        "quick": f"Чтобы {quick_verb} {gen} через SplitCam: установите SplitCam, соберите сцену, "
-                 f"включите внешнее (RTMP) вещание на {gen}, скопируйте URL сервера и ключ "
-                 f"трансляции, вставьте их в SplitCam и нажмите Go Live."
-                 f"<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
-                 f"<li>Получите RTMP-ключ {gen}.</li><li>Вставьте его в SplitCam.</li>"
-                 f"<li>Нажмите Go Live.</li></ol>",
-        "key_how": f"Войдите в аккаунт на {gen} и откройте настройки вещания. Переключите способ "
-                   f"вещания на <strong>внешний кодировщик / OBS / RTMP</strong>. {name} покажет "
-                   f"<strong>URL сервера</strong> и <strong>ключ трансляции</strong> — скопируйте "
-                   f"оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату.",
-        "tips": [_TIPS["eth"], _TIPS["ovl"], _TIPS["test"], _TIPS["hw"]],
-        "faq": [
-            (f"SplitCam бесплатен для {gen}?",
-             "Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. "
-             "Все функции открыты с первой установки."),
-            (f"Зачем SplitCam вместо встроенного вещателя {gen}?",
-             "Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими "
-             "камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование."),
-            (f"Какой битрейт для {gen}?",
-             "3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным "
-             "тестом скорости SplitCam."),
-            (f"Можно вещать на {name} и другие сайты одновременно?",
-             "Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. "
-             "Смотрите гайд по мультитрансляции."),
-        ],
-    }
-
+_T_ETH = ("Проводное подключение", "Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это "
+          "потерянный токен. Протяните кабель к стрим-ПК.")
+_T_TEST = ("Сначала приватный тест", "Короткая тестовая трансляция проверит камеру, звук, "
+           "кадрирование и накладки до открытия комнаты.")
 
 PLATFORMS_RU = [
-    _p("chaturbate", "Chaturbate", "Chaturbate"),
-    _p("cam4", "CAM4", "CAM4"),
-    _p("bongacams", "BongaCams", "BongaCams"),
-    _p("stripchat", "Stripchat", "Stripchat"),
-    {**_p("onlyfans", "OnlyFans", "OnlyFans", quick_verb="выйти в эфир на"),
-     "title": "Как выйти в эфир на OnlyFans через SplitCam — бесплатный гайд",
-     "h1html": 'Как выйти в эфир на <span class="accent">OnlyFans</span> через SplitCam',
-     "h1short": "Эфир на OnlyFans",
-     "intro": "Используйте бесплатный <strong style='color:var(--text)'>SplitCam</strong> для "
-              "прямого эфира на OnlyFans — сцены с несколькими камерами, накладки и фильтры, "
-              "которых нет у встроенной камеры. Без водяного знака.",
-     "key_how": "На OnlyFans запустите новый прямой эфир и откройте <strong>настройки "
-                "трансляции</strong>. Выберите вещание через внешнюю программу — OnlyFans покажет "
-                "<strong>URL RTMP-сервера</strong> и <strong>ключ трансляции</strong>. Скопируйте "
-                "оба в SplitCam, ключ держите в секрете."},
-    _p("camplace", "CamPlace", "CamPlace"),
-    _p("camsoda", "CamSoda", "CamSoda"),
-    _p("streamate", "Streamate", "Streamate"),
-    _p("streamray", "StreamRay", "StreamRay"),
-    _p("xlovecam", "XLoveCam", "XLoveCam"),
-    _p("soulcams", "SoulCams", "SoulCams"),
-    _p("imlive", "ImLive", "ImLive"),
-    _p("vxlive", "VXLive", "VXLive"),
-    _p("virtwish", "Virtwish", "Virtwish"),
-    _p("xmodels", "XModels", "XModels"),
-    _p("flirt4free", "Flirt4Free", "Flirt4Free"),
     {
-        "slug": "mfc-alerts", "name": "MyFreeCams",
-        "title": "Как вести трансляцию на MyFreeCams и показывать алерты — SplitCam",
-        "desc": "Вещание на MyFreeCams через бесплатный SplitCam с показом алертов о токенах "
-                "как накладки. Пошагово, без водяного знака.",
-        "kw": "как вести трансляцию на myfreecams, mfc алерты, mfc вещание, myfreecams obs, "
-              "программа для трансляции myfreecams",
-        "h1html": 'Трансляция на <span class="accent">MyFreeCams</span> + алерты',
-        "h1short": "Трансляция на MyFreeCams",
-        "card": "Вещание на MyFreeCams и показ алертов о токенах.",
-        "intro": "Бесплатный <strong style='color:var(--text)'>SplitCam</strong> — кодировщик для "
-                 "MyFreeCams, и он умеет показывать <strong style='color:var(--text)'>алерты о "
-                 "токенах</strong> как накладку через Browser Source. Без водяного знака.",
-        "quick": "Чтобы вещать на MyFreeCams с алертами: установите SplitCam, соберите сцену, "
-                 "добавьте страницу алертов MFC как Browser Source, получите RTMP-ключ MyFreeCams, "
-                 "вставьте его в SplitCam, нажмите Go Live."
+        "slug": "chaturbate", "name": "Chaturbate",
+        "title": "Как вести трансляцию на Chaturbate через SplitCam — токен и RTMP",
+        "desc": "Вещание на Chaturbate через бесплатный SplitCam. Возьмите broadcast-токен в "
+                "Broadcast Yourself, направьте внешний кодировщик через SplitCam — сцены, "
+                "накладки, без водяного знака.",
+        "kw": "как вести трансляцию на chaturbate, chaturbate broadcast token, chaturbate rtmp obs, "
+              "chaturbate внешний кодировщик",
+        "h1html": 'Как вести трансляцию на <span class="accent">Chaturbate</span> через SplitCam',
+        "h1short": "Трансляция на Chaturbate",
+        "card": "Настройка через токен и внешний кодировщик Chaturbate.",
+        "intro": "Chaturbate — одна из крупнейших кам-платформ с токен-экономикой. Её браузерный "
+                 "вещатель — одна простая камера; маршрут через "
+                 "<strong style='color:var(--text)'>внешний кодировщик</strong> с бесплатным "
+                 "<strong style='color:var(--text)'>SplitCam</strong> открывает сцены с "
+                 "несколькими камерами, накладки и фильтры на том же токен-потоке.",
+        "quick": "Вещание на Chaturbate через SplitCam: установите SplitCam, соберите сцену, "
+                 "откройте <em>Broadcast Yourself → My Broadcast</em>, скопируйте broadcast-токен, "
+                 "вставьте в SplitCam, нажмите Go Live."
                  "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
-                 "<li>Добавьте алерты MFC как Browser Source.</li><li>Вставьте RTMP-ключ MFC.</li>"
+                 "<li>Скопируйте broadcast-токен Chaturbate.</li><li>Вставьте в SplitCam.</li>"
                  "<li>Нажмите Go Live.</li></ol>",
-        "key_how": "Войдите в MyFreeCams и откройте настройки вещания. Выберите <strong>внешний "
-                   "кодировщик / RTMP</strong>, чтобы получить <strong>URL сервера</strong> и "
-                   "<strong>ключ трансляции</strong>. Для показа алертов добавьте страницу "
-                   "виджета алертов MFC как слой <strong>Browser Source</strong> в SplitCam — "
-                   "уведомления о токенах будут всплывать прямо в эфире.",
+        "key_how": "На Chaturbate нажмите <strong>Broadcast Yourself</strong> — откроется "
+                   "страница <strong>My Broadcast</strong>, затем <strong>View RTMP/OBS broadcast "
+                   "information and stream key</strong>. Ключ показан как ваш "
+                   "<strong>broadcast-токен</strong> — скопируйте его. Работает как пароль, "
+                   "публично не выкладывайте.",
         "tips": [
-            ("Browser Source для алертов", "Направьте Browser Source в SplitCam на URL виджета "
-             "алертов MFC — уведомления о токенах появятся в эфире автоматически."),
-            _TIPS["eth"],
-            ("Расположите алерты", "Поставьте накладку алертов так, чтобы её было видно, но она "
-             "не перекрывала камеру."),
-            ("Тестовый токен", "Отправьте небольшой тестовый токен, чтобы проверить накладку "
-             "алертов до открытия комнаты."),
+            ("Токен — это ключ", "Chaturbate использует broadcast-токен вместо обычного ключа "
+             "трансляции. Берегите как пароль, сбросьте если утёк."),
+            ("Рекомендованный пресет SplitCam", "Гайд Chaturbate указывает на рекомендованный "
+             "пресет — авто-настройки SplitCam ему соответствуют, вручную крутить почти не надо."),
+            _T_ETH, _T_TEST,
         ],
         "faq": [
-            ("SplitCam бесплатен для MyFreeCams?", "Да — бесплатно, без водяного знака, без "
-             "ограничений."),
-            ("Как работают алерты MFC в SplitCam?", "Добавьте страницу алертов MFC как слой "
-             "Browser Source — SplitCam рендерит её поверх камеры в реальном времени."),
-            ("MyFreeCams поддерживает внешние кодировщики?", "Да — MyFreeCams принимает RTMP, "
-             "поэтому SplitCam работает как кодировщик."),
-            ("Какой битрейт для MyFreeCams?", "3500–6000 Кбит/с для 1080p; сначала проверьте "
-             "аплоад."),
+            ("Chaturbate разрешает OBS / внешние кодировщики?", "Да — Chaturbate выдаёт RTMP/OBS "
+             "данные и токен в Broadcast Yourself, SplitCam работает как кодировщик."),
+            ("Где ключ трансляции Chaturbate?", "Broadcast Yourself → My Broadcast → View "
+             "RTMP/OBS broadcast information and stream key. Ключ — это broadcast-токен."),
+            ("SplitCam бесплатен для Chaturbate?", "Да — полностью бесплатно, без водяного знака, "
+             "без ограничения по времени."),
+            ("Какой битрейт для Chaturbate?", "3500–6000 Кбит/с для 1080p. Сначала проверьте "
+             "аплоад тестом скорости SplitCam."),
+        ],
+    },
+    {
+        "slug": "cam4", "name": "CAM4",
+        "title": "Как вести трансляцию на CAM4 через SplitCam — внешний кодировщик",
+        "desc": "Вещание на CAM4 через бесплатный SplitCam. Откройте Broadcast & Earn Money, "
+                "External Encoder, Get Stream Key, гео-настройки — сцены и накладки.",
+        "kw": "как вести трансляцию на cam4, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+        "h1html": 'Как вести трансляцию на <span class="accent">CAM4</span> через SplitCam',
+        "h1short": "Трансляция на CAM4",
+        "card": "External Encoder CAM4 + гео-настройки.",
+        "intro": "CAM4 — глобальная кам-платформа со встроенными гео-настройками: можно скрыть "
+                 "эфир в выбранных странах. Маршрут через бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> как внешний кодировщик "
+                 "даёт переключение сцен и накладки, которых нет у базового вещателя.",
+        "quick": "Вещание на CAM4 через SplitCam: установите SplitCam, соберите сцену, на CAM4 "
+                 "откройте <em>Broadcast &amp; Earn Money → Start Broadcast → External "
+                 "Encoder</em>, Get Stream Key, вставьте в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите ключ CAM4.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "На CAM4 нажмите <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn "
+                   "Money</strong> → <strong>Start Broadcast</strong>, затем "
+                   "<strong>External Encoder</strong> сверху. Заполните дату рождения, пол и "
+                   "страну, нажмите <strong>Get Stream Key</strong> и скопируйте ключ. Зелёный "
+                   "слайдер в Stream Settings SplitCam подтверждает подключение.",
+        "tips": [
+            ("Настройте гео-ограничения", "CAM4 позволяет скрыть эфир в конкретных странах и "
+             "регионах — задайте это на стороне CAM4 до выхода в эфир, если нужно."),
+            ("Следите за зелёным слайдером", "При настройке CAM4 в Stream Settings SplitCam "
+             "появляется зелёный слайдер при принятом ключе — красный значит проверьте ключ."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Можно ли гео-блокировать эфир на CAM4?", "Да — у CAM4 есть встроенное гео-"
+             "ограничение, чтобы скрыть эфир в некоторых странах. Настраивается на CAM4."),
+            ("Где ключ трансляции CAM4?", "Broadcast → Broadcast & Earn Money → Start Broadcast "
+             "→ External Encoder → Get Stream Key."),
+            ("SplitCam бесплатен для CAM4?", "Да — бесплатно, без водяного знака, без лимитов."),
+            ("Какой битрейт для CAM4?", "3500–6000 Кбит/с для 1080p; сначала проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "bongacams", "name": "BongaCams",
+        "title": "Как вести трансляцию на BongaCams через SplitCam — внешний кодировщик",
+        "desc": "Вещание на BongaCams через бесплатный SplitCam. Broadcast settings → Select "
+                "Encoder → External Encoder. Если кнопки нет — её включает поддержка.",
+        "kw": "как вести трансляцию на bongacams, bongacams external encoder, bongacams rtmp obs",
+        "h1html": 'Как вести трансляцию на <span class="accent">BongaCams</span> через SplitCam',
+        "h1short": "Трансляция на BongaCams",
+        "card": "External Encoder BongaCams.",
+        "intro": "BongaCams — глобальная кам-платформа. Вещание через внешний кодировщик там "
+                 "включено не всегда по умолчанию — после включения бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> ведёт эфир со сценами, "
+                 "накладками и AI-фоном.",
+        "quick": "Вещание на BongaCams через SplitCam: установите SplitCam, соберите сцену, на "
+                 "BongaCams откройте <em>Options → Broadcast settings → Select Encoder → External "
+                 "Encoder</em>, скопируйте URL и ключ, вставьте в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите URL и ключ BongaCams.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "На BongaCams откройте <strong>Options</strong> → <strong>Broadcast "
+                   "settings</strong> → <strong>Select Encoder</strong> → <strong>External "
+                   "Encoder</strong> и скопируйте показанные URL сервера и ключ. "
+                   "<strong>Если кнопки External Encoder нет</strong> — напишите в поддержку "
+                   "BongaCams и попросите включить внешнее кодирование для вашего аккаунта.",
+        "tips": [
+            ("Нет кнопки External Encoder? Поддержка", "BongaCams гейтит внешнее кодирование — "
+             "если опции нет в Broadcast settings, её включает поддержка."),
+            ("Совпадение разрешения", "BongaCams рекомендует, чтобы разрешение веб-камеры и "
+             "трансляции совпадали — например, оба 1280×720."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Почему нет кнопки External Encoder на BongaCams?", "Внешнее кодирование включено "
+             "не для каждого аккаунта — напишите в поддержку BongaCams, и кнопка появится в "
+             "Broadcast settings."),
+            ("BongaCams поддерживает вещание через OBS?", "Да — через опцию External Encoder, "
+             "так что SplitCam работает после включения."),
+            ("SplitCam бесплатен для BongaCams?", "Да — бесплатно, без водяного знака, без "
+             "лимитов."),
+            ("Какой битрейт для BongaCams?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "stripchat", "name": "Stripchat",
+        "title": "Как вести трансляцию на Stripchat через SplitCam — внешний софт",
+        "desc": "Вещание на Stripchat через бесплатный SplitCam. Switch to external software, "
+                "скопируйте ключ-токен, ведите сцены и накладки. Без водяного знака.",
+        "kw": "как вести трансляцию на stripchat, stripchat external software, stripchat ключ, "
+              "stripchat rtmp obs",
+        "h1html": 'Как вести трансляцию на <span class="accent">Stripchat</span> через SplitCam',
+        "h1short": "Трансляция на Stripchat",
+        "card": "Настройка внешнего софта для Stripchat.",
+        "intro": "Stripchat — крупная кам-платформа с упором на интерактив. Режим <em>external "
+                 "software</em> выдаёт ключ-токен — передайте его бесплатному "
+                 "<strong style='color:var(--text)'>SplitCam</strong>, чтобы вещать со сценами, "
+                 "накладками и фильтрами вместо одной плоской камеры.",
+        "quick": "Вещание на Stripchat через SplitCam: установите SplitCam, соберите сцену, на "
+                 "Stripchat выберите <em>Switch to external software</em>, скопируйте ключ, "
+                 "вставьте в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите ключ Stripchat.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "На Stripchat выберите <strong>Switch to external software</strong>, затем "
+                   "откройте <strong>Show external software settings for the stream</strong>. "
+                   "Скопируйте ключ трансляции — Stripchat показывает его как токен. Держите в "
+                   "секрете.",
+        "tips": [
+            ("Ключ — это токен", "Ключ трансляции Stripchat это токен — копируйте точно, не "
+             "делитесь, сбросьте при утечке."),
+            ("Совпадение разрешения", "Stripchat рекомендует совпадение разрешения веб-камеры и "
+             "трансляции — например, оба 1280×720."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Как переключить Stripchat на внешний софт?", "В окне трансляции выберите Switch to "
+             "external software, затем откройте настройки внешнего софта — там будет ключ."),
+            ("Stripchat разрешает OBS / SplitCam?", "Да — режим external software принимает "
+             "любой RTMP-кодировщик, включая SplitCam."),
+            ("SplitCam бесплатен для Stripchat?", "Да — бесплатно, без водяного знака, без "
+             "лимитов."),
+            ("Какой битрейт для Stripchat?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "onlyfans", "name": "OnlyFans",
+        "title": "Как выйти в эфир на OnlyFans через SplitCam — настройка OBS Key",
+        "desc": "Прямой эфир на OnlyFans через бесплатный SplitCam. Найдите OBS Key в Settings → "
+                "Other, направьте через SplitCam — сцены с камерами и накладки.",
+        "kw": "как выйти в эфир на onlyfans, onlyfans obs key, onlyfans прямой эфир, "
+              "onlyfans программа трансляции",
+        "h1html": 'Как выйти в эфир на <span class="accent">OnlyFans</span> через SplitCam',
+        "h1short": "Эфир на OnlyFans",
+        "card": "Настройка OBS Key для эфиров OnlyFans.",
+        "intro": "Прямой эфир OnlyFans идёт для ваших подписчиков, и платформа выдаёт один "
+                 "<strong style='color:var(--text)'>OBS Key</strong> — без отдельного URL "
+                 "сервера. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> "
+                 "превращает этот ключ в полноценное производство: сцены с камерами, накладки, "
+                 "фильтры.",
+        "quick": "Эфир на OnlyFans через SplitCam: установите SplitCam, соберите сцену, на "
+                 "OnlyFans откройте <em>Profile → Settings → Other</em>, скопируйте OBS Key, "
+                 "вставьте в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Скопируйте OBS Key OnlyFans.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "На OnlyFans откройте <strong>Profile</strong> → <strong>Settings</strong> → "
+                   "раздел <strong>Other</strong>. Скопируйте значение из поля "
+                   "<strong>OBS Key</strong>. OnlyFans выдаёт только этот ключ — отдельного URL "
+                   "сервера нет, поле сервера в SplitCam можно оставить по умолчанию.",
+        "tips": [
+            ("Только OBS Key, без URL сервера", "В отличие от большинства кам-сайтов, OnlyFans "
+             "выдаёт лишь OBS Key в Settings → Other — не ищите URL сервера."),
+            ("Брендируйте для клипов", "Добавьте свой ник и цели накладками — клипы эфира "
+             "OnlyFans остаются узнаваемыми при репостах."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Где OBS Key на OnlyFans?", "Profile → Settings → раздел Other — поле называется "
+             "OBS Key."),
+            ("OnlyFans поддерживает программы трансляции?", "Да — прямой эфир OnlyFans принимает "
+             "OBS-ключ, так что SplitCam работает как кодировщик."),
+            ("SplitCam бесплатен для эфиров OnlyFans?", "Да — бесплатно, без водяного знака, "
+             "без лимита."),
+            ("Какой битрейт для OnlyFans?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "camplace", "name": "CamPlace",
+        "title": "Как вести трансляцию на CamPlace через SplitCam — гайд",
+        "desc": "Вещание на CamPlace через бесплатный SplitCam — внешний кодировщик, сцены с "
+                "камерами, накладки и фильтры. Пошагово, без водяного знака.",
+        "kw": "как вести трансляцию на camplace, camplace программа трансляции, camplace rtmp",
+        "h1html": 'Как вести трансляцию на <span class="accent">CamPlace</span> через SplitCam',
+        "h1short": "Трансляция на CamPlace",
+        "card": "Настройка внешнего кодировщика для CamPlace.",
+        "intro": "CamPlace — кам-платформа. Маршрут эфира через бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> добавляет сцены с "
+                 "несколькими камерами, накладки, фильтры и AI-фон, которых нет у базовой "
+                 "браузерной камеры.",
+        "quick": "Вещание на CamPlace через SplitCam: установите SplitCam, соберите сцену, "
+                 "включите внешнее/RTMP-вещание в CamPlace, скопируйте URL сервера и ключ, "
+                 "вставьте в SplitCam, Go Live. Видео-гайд выше показывает путь."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите RTMP-ключ CamPlace.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "Войдите в CamPlace и откройте настройки вещания. Переключитесь на внешний "
+                   "кодировщик / RTMP / OBS, чтобы увидеть <strong>URL сервера</strong> и "
+                   "<strong>ключ трансляции</strong>, скопируйте оба. Видео-гайд выше показывает "
+                   "точный путь в текущем интерфейсе CamPlace.",
+        "tips": [
+            ("Смотрите видео-гайд", "Интерфейс CamPlace со временем меняется — видео-гайд выше "
+             "показывает актуальный путь к настройкам кодировщика."),
+            ("Накладки в SplitCam", "Цели по токенам, ник и соцсети как слои сцены — базовая "
+             "камера CamPlace так не умеет."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("CamPlace поддерживает внешние кодировщики?", "Да — CamPlace принимает RTMP-ключ, "
+             "так что SplitCam работает как кодировщик."),
+            ("SplitCam бесплатен для CamPlace?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для CamPlace?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+            ("Можно две камеры на CamPlace?", "Да — добавьте несколько камер источниками сцены "
+             "в SplitCam и переключайтесь хоткеями."),
+        ],
+    },
+    {
+        "slug": "camsoda", "name": "CamSoda",
+        "title": "Как вести трансляцию на CamSoda через SplitCam — гайд",
+        "desc": "Вещание на CamSoda через бесплатный SplitCam — внешний кодировщик, сцены, "
+                "накладки и фильтры. С видео-гайдом, без водяного знака.",
+        "kw": "как вести трансляцию на camsoda, camsoda live, camsoda программа трансляции, "
+              "camsoda rtmp obs",
+        "h1html": 'Как вести трансляцию на <span class="accent">CamSoda</span> через SplitCam',
+        "h1short": "Трансляция на CamSoda",
+        "card": "Настройка внешнего кодировщика для CamSoda.",
+        "intro": "CamSoda — американская кам-платформа, известная необычными интерактивными "
+                 "форматами шоу. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> "
+                 "работает как её кодировщик — сцены, накладки, фильтры и аппаратное кодирование "
+                 "для более чистого, продуманного эфира.",
+        "quick": "Вещание на CamSoda через SplitCam: установите SplitCam, соберите сцену, "
+                 "включите OBS / внешний кодировщик в CamSoda, скопируйте URL сервера и ключ, "
+                 "вставьте в SplitCam, Go Live. Видео-гайд выше показывает путь."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите RTMP-ключ CamSoda.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "Войдите в CamSoda и откройте настройки вещания. Выберите опцию <strong>OBS / "
+                   "внешний кодировщик</strong>, чтобы получить URL RTMP-сервера и ключ, "
+                   "скопируйте оба. Видео-гайд выше показывает точный путь меню CamSoda.",
+        "tips": [
+            ("Смотрите видео-гайд", "Интерфейс вещания CamSoda удобнее освоить визуально — "
+             "видео-гайд выше показывает актуальный путь к кодировщику."),
+            ("Делайте шоу, а не просто камеру", "CamSoda поощряет необычные шоу — используйте "
+             "сцены и накладки SplitCam, чтобы выделиться."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("CamSoda поддерживает внешние кодировщики?", "Да — CamSoda принимает RTMP/OBS-поток, "
+             "так что SplitCam работает как кодировщик."),
+            ("SplitCam бесплатен для CamSoda?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для CamSoda?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+            ("Можно ли мультитранслировать CamSoda?", "Да — SplitCam вещает на несколько кам-"
+             "сайтов из одного кодирования."),
+        ],
+    },
+    {
+        "slug": "streamate", "name": "Streamate",
+        "title": "Как вести трансляцию на Streamate через SplitCam — встроенный канал",
+        "desc": "Вещание на Streamate через бесплатный SplitCam. Streamate — встроенный канал в "
+                "SplitCam: SM Connect, скопируйте ключ, Add Channel → Streamate.",
+        "kw": "как вести трансляцию на streamate, streamate sm connect, streamate rtmp, "
+              "streamate программа трансляции",
+        "h1html": 'Как вести трансляцию на <span class="accent">Streamate</span> через SplitCam',
+        "h1short": "Трансляция на Streamate",
+        "card": "Streamate — встроенный канал SplitCam, быстрая настройка.",
+        "intro": "Streamate — устоявшаяся кам-платформа, и это одна из площадок, "
+                 "<strong style='color:var(--text)'>предустановленных в SplitCam</strong> в "
+                 "списке каналов — настройка быстрее ручного ввода RTMP: выбрал Streamate, "
+                 "вставил ключ, готово.",
+        "quick": "Вещание на Streamate через SplitCam: установите SplitCam, соберите сцену, на "
+                 "Streamate через <em>SM Connect → Start Show</em> скопируйте ключ, затем в "
+                 "SplitCam откройте <em>Stream Settings → Add Channel → Streamate</em> и вставьте."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите ключ Streamate через SM Connect.</li>"
+                 "<li>Add Channel → Streamate в SplitCam.</li><li>Нажмите Go Live.</li></ol>",
+        "key_how": "На Streamate откройте <strong>SM Connect</strong>, примите условия, нажмите "
+                   "<strong>Start Show</strong> слева и закройте открывшееся окно — затем "
+                   "скопируйте ключ трансляции. В SplitCam откройте <strong>Stream "
+                   "Settings</strong> → <strong>Add Channel</strong>, выберите "
+                   "<strong>Streamate</strong> из списка и вставьте ключ. Зелёный слайдер "
+                   "подтверждает подключение.",
+        "tips": [
+            ("Streamate — встроенный канал", "Ручной RTMP-URL не нужен — Streamate есть в списке "
+             "Add Channel SplitCam, просто выберите его и вставьте ключ."),
+            ("Закройте окно SM Connect", "После Start Show Streamate открывает окно — закройте "
+             "его; оно нужно было только чтобы показать ключ."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Streamate встроен в SplitCam?", "Да — Streamate есть в списке Add Channel SplitCam, "
+             "вы выбираете его вместо ручного ввода RTMP-URL."),
+            ("Где ключ трансляции Streamate?", "SM Connect → принять условия → Start Show → "
+             "закрыть окно → скопировать ключ."),
+            ("SplitCam бесплатен для Streamate?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для Streamate?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "streamray", "name": "StreamRay",
+        "title": "Как вести трансляцию на StreamRay через SplitCam — URL из чата",
+        "desc": "Вещание на StreamRay через бесплатный SplitCam. StreamRay даёт URL потока в окне "
+                "чата и не использует ключ — SplitCam справляется с этим.",
+        "kw": "как вести трансляцию на streamray, streamray obs broadcaster, streamray cam, "
+              "streamray rtmp",
+        "h1html": 'Как вести трансляцию на <span class="accent">StreamRay</span> через SplitCam',
+        "h1short": "Трансляция на StreamRay",
+        "card": "Настройка StreamRay — URL берётся из чата.",
+        "intro": "У StreamRay необычная настройка внешнего кодировщика — он выдаёт URL потока "
+                 "<strong style='color:var(--text)'>прямо в окне чата</strong> трансляции и не "
+                 "использует отдельный ключ. Бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> справляется с таким "
+                 "режимом «только URL».",
+        "quick": "Вещание на StreamRay через SplitCam: установите SplitCam, соберите сцену, на "
+                 "StreamRay включите OBS Broadcaster, скопируйте URL потока из окна чата, "
+                 "вставьте в SplitCam (поле ключа оставьте пустым), Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Скопируйте URL StreamRay из чата.</li>"
+                 "<li>Вставьте URL в SplitCam.</li><li>Нажмите Go Live.</li></ol>",
+        "key_how": "На StreamRay дважды нажмите <strong>Broadcast Now</strong>, откройте меню "
+                   "<strong>Other</strong>, выберите <strong>OBS Broadcaster</strong> и "
+                   "<strong>Save and Close</strong>. После этого StreamRay выкладывает "
+                   "<strong>URL потока в окно чата</strong> — скопируйте его оттуда. Поле ключа "
+                   "в SplitCam оставьте <strong>пустым</strong>; StreamRay авторизует по URL.",
+        "tips": [
+            ("URL — в чате", "StreamRay не показывает URL потока в окне настроек — он выкладывает "
+             "его в окно чата трансляции. Копируйте оттуда."),
+            ("Поле ключа оставьте пустым", "StreamRay не использует отдельный ключ — только URL. "
+             "Не заполняйте поле ключа в SplitCam."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Где URL потока StreamRay?", "После включения OBS Broadcaster StreamRay выкладывает "
+             "URL потока в окно чата — копируйте из чата."),
+            ("Почему у StreamRay нет ключа трансляции?", "StreamRay авторизует только по URL — "
+             "поле ключа в SplitCam оставьте пустым."),
+            ("SplitCam бесплатен для StreamRay?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для StreamRay?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "xlovecam", "name": "XLoveCam",
+        "title": "Как вести трансляцию на XLoveCam через SplitCam — RTMP-ссылка и ключ",
+        "desc": "Вещание на XLoveCam через бесплатный SplitCam. RTMP-ссылка и ключ в My Account "
+                "→ settings, сцены и накладки. Без водяного знака.",
+        "kw": "как вести трансляцию на xlovecam, xlovecam rtmp, xlovecam ключ, x love cam",
+        "h1html": 'Как вести трансляцию на <span class="accent">XLoveCam</span> через SplitCam',
+        "h1short": "Трансляция на XLoveCam",
+        "card": "RTMP-ссылка и ключ для XLoveCam.",
+        "intro": "XLoveCam — европейская многоязычная кам-платформа. В настройках аккаунта есть "
+                 "и <strong style='color:var(--text)'>RTMP-ссылка</strong>, и "
+                 "<strong style='color:var(--text)'>ключ трансляции</strong> — бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> берёт оба и вещает со "
+                 "сценами и накладками.",
+        "quick": "Вещание на XLoveCam через SplitCam: установите SplitCam, соберите сцену, на "
+                 "XLoveCam откройте <em>My Account → settings</em>, скопируйте RTMP-ссылку и "
+                 "ключ, вставьте оба в SplitCam, начните шоу."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Скопируйте RTMP-ссылку и ключ XLoveCam.</li><li>Вставьте оба в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "На XLoveCam откройте <strong>My Account</strong> → <strong>settings</strong>. "
+                   "В настройках есть и <strong>RTMP-ссылка</strong>, и <strong>ключ "
+                   "трансляции</strong> — скопируйте оба в поля URL сервера и ключа SplitCam, "
+                   "затем нажмите <strong>Start your show</strong> на XLoveCam.",
+        "tips": [
+            ("Копируйте и ссылку, и ключ", "XLoveCam даёт RTMP-ссылку И отдельный ключ — нужны "
+             "оба в SplitCam, не только что-то одно."),
+            ("Многоязычная аудитория", "XLoveCam европейская и многоязычная — понятная текстовая "
+             "накладка на вашем языке помогает зрителям вас найти."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Где RTMP-данные XLoveCam?", "My Account → settings — показаны и RTMP-ссылка, и ключ."),
+            ("XLoveCam поддерживает внешние кодировщики?", "Да — даёт RTMP-ссылку и ключ, так что "
+             "SplitCam работает."),
+            ("SplitCam бесплатен для XLoveCam?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для XLoveCam?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "soulcams", "name": "SoulCams",
+        "title": "Как вести трансляцию на SoulCams через SplitCam — настройки OBS",
+        "desc": "Вещание на SoulCams через бесплатный SplitCam. Go Online → Settings → OBS "
+                "показывает RTMP-сервер и ключ вместе. Сцены, накладки.",
+        "kw": "как вести трансляцию на soulcams, soulcams obs, soul cams, soulcams rtmp",
+        "h1html": 'Как вести трансляцию на <span class="accent">SoulCams</span> через SplitCam',
+        "h1short": "Трансляция на SoulCams",
+        "card": "Настройка SoulCams через OBS-настройки.",
+        "intro": "SoulCams — кам-платформа, чьи OBS-настройки показывают "
+                 "<strong style='color:var(--text)'>RTMP-сервер и ключ вместе</strong> в одном "
+                 "окне. Вставьте оба в бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong>, чтобы вещать со сценами "
+                 "и накладками.",
+        "quick": "Вещание на SoulCams через SplitCam: установите SplitCam, соберите сцену, на "
+                 "SoulCams нажмите Go Online → Settings → OBS, скопируйте сервер и ключ, "
+                 "вставьте оба в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Откройте SoulCams Settings → OBS.</li>"
+                 "<li>Вставьте сервер и ключ в SplitCam.</li><li>Нажмите Go Live.</li></ol>",
+        "key_how": "На SoulCams войдите и нажмите <strong>Go Online</strong>, затем откройте "
+                   "<strong>Settings</strong> → <strong>OBS</strong>. Окно OBS показывает "
+                   "<strong>RTMP-сервер</strong> и <strong>ключ</strong> вместе — скопируйте оба "
+                   "в SplitCam.",
+        "tips": [
+            ("Сервер и ключ рядом", "SoulCams показывает RTMP-сервер и ключ в одном окне OBS — "
+             "берите оба сразу."),
+            ("Сначала Go Online", "Настройки OBS появляются только после нажатия Go Online на "
+             "SoulCams — сделайте это до поиска данных кодировщика."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Где OBS-настройки SoulCams?", "Войдите, нажмите Go Online, затем Settings → OBS — "
+             "RTMP-сервер и ключ показаны вместе."),
+            ("SoulCams поддерживает внешние кодировщики?", "Да — его OBS-настройки дают "
+             "RTMP-сервер и ключ, так что SplitCam работает."),
+            ("SplitCam бесплатен для SoulCams?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для SoulCams?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "imlive", "name": "ImLive",
+        "title": "Как использовать SplitCam на ImLive — виртуальная камера",
+        "desc": "ImLive использует веб-камеру напрямую — без RTMP. Подключите SplitCam как "
+                "виртуальную камеру, чтобы сцены, накладки и фильтры были в видеочате ImLive.",
+        "kw": "как вести трансляцию на imlive, imlive splitcam, imlive виртуальная камера, "
+              "imlive веб-камера",
+        "h1html": 'Как использовать <span class="accent">ImLive</span> со SplitCam',
+        "h1short": "SplitCam на ImLive",
+        "card": "Виртуальная камера для ImLive — RTMP не нужен.",
+        "intro": "ImLive использует веб-камеру напрямую в браузере — "
+                 "<strong style='color:var(--text)'>RTMP и ключа трансляции нет</strong>. "
+                 "Бесплатный <strong style='color:var(--text)'>SplitCam</strong> подключается "
+                 "как <strong style='color:var(--text)'>виртуальная камера</strong>: соберите "
+                 "сцену в SplitCam, затем выберите SplitCam камерой в ImLive.",
+        "quick": "SplitCam на ImLive: установите SplitCam, соберите сцену с медиа-слоями, "
+                 "откройте ImLive и начните видеочат, в настройках ImLive выберите SplitCam "
+                 "камерой и микрофоном."
+                 "<ol><li>Установите SplitCam.</li><li>Соберите сцену в SplitCam.</li>"
+                 "<li>Начните видеочат на ImLive.</li>"
+                 "<li>Выберите SplitCam камерой ImLive.</li><li>Начните чат.</li></ol>",
+        "steps": [
+            ("Установите SplitCam",
+             "SplitCam — бесплатная программа для Windows и macOS. Установите её — без водяного "
+             "знака и регистрации. На ImLive она работает как <strong>виртуальная "
+             "камера</strong>, а не RTMP-кодировщик."),
+            ("Соберите сцену в SplitCam",
+             "Откройте SplitCam и через <strong>Media Layers +</strong> добавьте веб-камеру и "
+             "любые накладки, текст, фильтры или AI-фон. Эта собранная сцена и будет камерой "
+             "для ImLive."),
+            ("Начните видеочат на ImLive",
+             "Зайдите на сайт ImLive, нажмите <strong>Start Video Chat</strong>, затем откройте "
+             "<strong>Go To Settings</strong> для доступа к настройкам камеры и микрофона."),
+            ("Выберите SplitCam камерой",
+             "В настройках ImLive выберите <strong>SplitCam</strong> и как веб-камеру, и как "
+             "микрофон. ImLive покажет вашу полную сцену SplitCam вместо обычной камеры."),
+            ("Начните Free Live Chat",
+             "Нажмите <strong>Free Live Chat</strong> на ImLive, чтобы выйти в эфир. Чтобы "
+             "поменять вид по ходу — редактируйте сцену в SplitCam, ImLive обновится сразу."),
+        ],
+        "tips": [
+            ("Ключ трансляции не нужен", "У ImLive нет RTMP — не ищите URL сервера или ключ. "
+             "SplitCam просто выбирается устройством камеры."),
+            ("SplitCam и микрофоном", "Выберите SplitCam и микрофоном тоже — чтобы ваш аудиомикс "
+             "и шумоподавление шли в эфир."),
+            ("Соберите сцену до эфира", "ImLive показывает то, что выдаёт SplitCam — расставьте "
+             "слои до начала чата."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("ImLive использует RTMP или ключ?", "Нет — ImLive использует веб-камеру напрямую. "
+             "SplitCam подключается как виртуальная камера, копировать ключ не нужно."),
+            ("Как выбрать SplitCam на ImLive?", "Start Video Chat → Go To Settings → выберите "
+             "SplitCam веб-камерой и микрофоном."),
+            ("SplitCam бесплатен для ImLive?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Можно ли накладки на ImLive?", "Да — соберите их в сцене SplitCam; ImLive покажет "
+             "собранный результат."),
+        ],
+    },
+    {
+        "slug": "vxlive", "name": "VXLive",
+        "title": "Как вести трансляцию на VXLive через SplitCam — гайд",
+        "desc": "Вещание на VXLive через бесплатный SplitCam — внешний кодировщик, сцены, "
+                "накладки и фильтры. С видео-гайдом, без водяного знака.",
+        "kw": "как вести трансляцию на vxlive, vxlive программа трансляции, vxlive rtmp",
+        "h1html": 'Как вести трансляцию на <span class="accent">VXLive</span> через SplitCam',
+        "h1short": "Трансляция на VXLive",
+        "card": "Настройка внешнего кодировщика для VXLive.",
+        "intro": "VXLive — кам-платформа немецкого рынка. Бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> работает как её "
+                 "кодировщик — сцены с камерами, накладки, фильтры и аппаратное кодирование для "
+                 "более чистого эфира.",
+        "quick": "Вещание на VXLive через SplitCam: установите SplitCam, соберите сцену, "
+                 "включите внешний кодировщик в VXLive, скопируйте URL сервера и ключ, вставьте "
+                 "в SplitCam, Go Live. Видео-гайд выше показывает путь."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите RTMP-ключ VXLive.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "Войдите в VXLive и откройте настройки вещания. Выберите опцию "
+                   "<strong>внешний кодировщик / RTMP</strong>, чтобы получить URL сервера и "
+                   "ключ, скопируйте оба. Видео-гайд выше показывает точный путь VXLive.",
+        "tips": [
+            ("Платформа немецкого рынка", "Аудитория VXLive в основном немецкоязычная — "
+             "немецкая текстовая накладка или заголовок помогут вам сблизиться со зрителями."),
+            ("Смотрите видео-гайд", "Интерфейс вещания VXLive удобнее освоить визуально — видео "
+             "выше показывает актуальный путь к кодировщику."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("VXLive поддерживает внешние кодировщики?", "Да — VXLive принимает RTMP/OBS-поток, "
+             "так что SplitCam работает как кодировщик."),
+            ("SplitCam бесплатен для VXLive?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для VXLive?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+            ("Можно ли мультитранслировать VXLive?", "Да — SplitCam вещает на несколько кам-"
+             "сайтов сразу из одного кодирования."),
+        ],
+    },
+    {
+        "slug": "virtwish", "name": "VirtWish",
+        "title": "Как вести трансляцию на VirtWish через SplitCam — URL потока и ключ",
+        "desc": "Вещание на VirtWish через бесплатный SplitCam. Profile → Start Broadcast → "
+                "раздел OBS даёт URL потока и ключ. Сцены, накладки, без водяного знака.",
+        "kw": "как вести трансляцию на virtwish, virtwish программа трансляции, virtwish rtmp, "
+              "virtwish obs",
+        "h1html": 'Как вести трансляцию на <span class="accent">VirtWish</span> через SplitCam',
+        "h1short": "Трансляция на VirtWish",
+        "card": "URL потока и ключ для VirtWish.",
+        "intro": "VirtWish — интерактивная кам-платформа. Её настройки вещания дают "
+                 "<strong style='color:var(--text)'>URL потока и отдельный ключ</strong> в "
+                 "разделе OBS — бесплатный <strong style='color:var(--text)'>SplitCam</strong> "
+                 "берёт оба и ведёт шоу со сценами и накладками.",
+        "quick": "Вещание на VirtWish через SplitCam: установите SplitCam, соберите сцену, на "
+                 "VirtWish откройте <em>Profile → Start Broadcast</em> до раздела OBS, "
+                 "скопируйте ссылку и ключ, вставьте оба в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите URL и ключ VirtWish.</li><li>Вставьте оба в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "На VirtWish нажмите иконку справа вверху → <strong>Profile</strong> → "
+                   "<strong>Start Broadcast</strong>, затем <strong>Start Broadcast</strong> "
+                   "ещё раз, чтобы дойти до раздела OBS. <strong>Скопируйте ссылку из первой "
+                   "строки</strong> в поле Stream URL SplitCam, а <strong>Stream Key</strong> "
+                   "скопируйте отдельно в поле ключа.",
+        "tips": [
+            ("Ссылка — в первой строке", "Раздел OBS VirtWish помещает URL потока в первую "
+             "строку — скопируйте её в Stream URL SplitCam, затем ключ отдельно."),
+            ("Start Broadcast дважды", "Start Broadcast на VirtWish нажимается дважды, чтобы "
+             "дойти до раздела OBS — это нормально, не сбой."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Где RTMP-данные VirtWish?", "Иконка справа вверху → Profile → Start Broadcast "
+             "дважды → раздел OBS показывает ссылку и ключ."),
+            ("VirtWish поддерживает внешние кодировщики?", "Да — его раздел OBS даёт URL потока "
+             "и ключ, так что SplitCam работает."),
+            ("SplitCam бесплатен для VirtWish?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для VirtWish?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+        ],
+    },
+    {
+        "slug": "xmodels", "name": "XModels",
+        "title": "Как вести трансляцию на XModels через SplitCam — гайд",
+        "desc": "Вещание на XModels через бесплатный SplitCam — внешний кодировщик, сцены, "
+                "накладки и фильтры. С видео-гайдом, без водяного знака.",
+        "kw": "как вести трансляцию на xmodels, xmodels программа трансляции, xmodels rtmp",
+        "h1html": 'Как вести трансляцию на <span class="accent">XModels</span> через SplitCam',
+        "h1short": "Трансляция на XModels",
+        "card": "Настройка внешнего кодировщика для XModels.",
+        "intro": "XModels — кам-платформа. Через бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> вы вещаете со сценами с "
+                 "несколькими камерами, накладками, фильтрами и AI-фоном вместо одной плоской "
+                 "камеры.",
+        "quick": "Вещание на XModels через SplitCam: установите SplitCam, соберите сцену, "
+                 "включите внешний кодировщик в XModels, скопируйте URL сервера и ключ, вставьте "
+                 "в SplitCam, Go Live. Смотрите видео-гайд выше."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите RTMP-ключ XModels.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "Войдите в XModels и откройте настройки вещания. Переключитесь на опцию "
+                   "<strong>внешний кодировщик / RTMP</strong>, чтобы увидеть URL сервера и "
+                   "ключ, скопируйте оба. Видео-гайд выше проходит текущий путь XModels.",
+        "tips": [
+            ("Смотрите видео-гайд", "Видео выше показывает актуальный путь к настройкам "
+             "кодировщика XModels — интерфейсы со временем меняются."),
+            ("Накладки в SplitCam", "Цели по токенам, ник и соцсети как слои сцены — базовая "
+             "камера XModels так не умеет."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("XModels поддерживает внешние кодировщики?", "Да — XModels принимает RTMP/OBS-поток, "
+             "так что SplitCam работает как кодировщик."),
+            ("SplitCam бесплатен для XModels?", "Да — бесплатно, без водяного знака, без лимита."),
+            ("Какой битрейт для XModels?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+            ("Можно две камеры на XModels?", "Да — добавьте несколько камер источниками сцены "
+             "в SplitCam."),
+        ],
+    },
+    {
+        "slug": "flirt4free", "name": "Flirt4Free",
+        "title": "Как вести трансляцию на Flirt4Free через SplitCam — гайд",
+        "desc": "Вещание на Flirt4Free через бесплатный SplitCam — внешний кодировщик, сцены, "
+                "накладки и фильтры. С видео-гайдом, без водяного знака.",
+        "kw": "как вести трансляцию на flirt4free, flirt4free программа трансляции, flirt4free rtmp",
+        "h1html": 'Как вести трансляцию на <span class="accent">Flirt4Free</span> через SplitCam',
+        "h1short": "Трансляция на Flirt4Free",
+        "card": "Настройка внешнего кодировщика для Flirt4Free.",
+        "intro": "Flirt4Free — одна из старейших кам-платформ, в сети с 1990-х. Бесплатный "
+                 "<strong style='color:var(--text)'>SplitCam</strong> работает как её "
+                 "кодировщик — сцены, накладки и фильтры для отполированного, современного "
+                 "эфира.",
+        "quick": "Вещание на Flirt4Free через SplitCam: установите SplitCam, соберите сцену, "
+                 "включите внешний кодировщик в модельной зоне Flirt4Free, скопируйте URL "
+                 "сервера и ключ, вставьте в SplitCam, Go Live. Видео-гайд выше показывает путь."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
+                 "<li>Получите RTMP-ключ Flirt4Free.</li><li>Вставьте в SplitCam.</li>"
+                 "<li>Нажмите Go Live.</li></ol>",
+        "key_how": "Войдите в модельную зону Flirt4Free и откройте настройки вещания. Выберите "
+                   "опцию <strong>внешний кодировщик / RTMP</strong>, чтобы получить URL сервера "
+                   "и ключ, скопируйте оба. Видео-гайд выше показывает точные шаги.",
+        "tips": [
+            ("Устоявшаяся платформа", "Flirt4Free работает с 1990-х — модельные инструменты "
+             "зрелые; опция внешнего кодировщика в настройках вещания модели."),
+            ("Смотрите видео-гайд", "Видео выше показывает актуальный путь к кодировщику "
+             "Flirt4Free."),
+            _T_ETH, _T_TEST,
+        ],
+        "faq": [
+            ("Flirt4Free поддерживает внешние кодировщики?", "Да — Flirt4Free принимает "
+             "RTMP/OBS-поток, так что SplitCam работает как кодировщик."),
+            ("SplitCam бесплатен для Flirt4Free?", "Да — бесплатно, без водяного знака, без "
+             "лимита."),
+            ("Какой битрейт для Flirt4Free?", "3500–6000 Кбит/с для 1080p; проверьте аплоад."),
+            ("Можно ли мультитранслировать Flirt4Free?", "Да — SplitCam вещает на несколько "
+             "кам-сайтов сразу."),
+        ],
+    },
+    {
+        "slug": "mfc-alerts", "name": "MFC Alerts",
+        "title": "Как добавить MFC Alerts на трансляцию через SplitCam",
+        "desc": "Показывайте анимированные алерты о токенах на трансляции MyFreeCams. Добавьте "
+                "ваш URL с mfcalerts.com слоем Browser в SplitCam — выше веб-камеры.",
+        "kw": "mfc alerts, как добавить mfc alerts, myfreecams алерты токенов, mfcalerts splitcam",
+        "h1html": 'Как добавить <span class="accent">MFC Alerts</span> на трансляцию',
+        "h1short": "Добавить MFC Alerts",
+        "card": "Анимированные алерты о токенах на трансляции MyFreeCams.",
+        "intro": "MFC Alerts показывает анимированные эффекты на вашей трансляции MyFreeCams "
+                 "когда зритель присылает токены. Работает как "
+                 "<strong style='color:var(--text)'>слой Browser</strong> внутри бесплатного "
+                 "<strong style='color:var(--text)'>SplitCam</strong> — настроил один раз, и "
+                 "токены вызывают реакции на экране вживую.",
+        "quick": "Добавить MFC Alerts через SplitCam: установите SplitCam, добавьте веб-камеру, "
+                 "откройте вкладку Browser и загрузите mfcalerts.com, скопируйте ваш URL "
+                 "алертов, добавьте слоем Browser выше веб-камеры, проверьте тестовым токеном."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте веб-камеру.</li>"
+                 "<li>Возьмите URL на mfcalerts.com.</li>"
+                 "<li>Добавьте его слоем Browser выше камеры.</li>"
+                 "<li>Отправьте тестовый токен.</li></ol>",
+        "steps": [
+            ("Установите SplitCam и добавьте веб-камеру",
+             "Установите бесплатный SplitCam для Windows или macOS, затем добавьте "
+             "<strong>веб-камеру</strong> источником. MFC Alerts ляжет слоем поверх этой камеры."),
+            ("Откройте вкладку Browser и зайдите на mfcalerts.com",
+             "В SplitCam откройте вкладку <strong>Browser</strong> и зайдите на "
+             "<strong>www.mfcalerts.com</strong>. Войдите или зарегистрируйтесь, если аккаунта "
+             "на mfcalerts.com ещё нет."),
+            ("Скопируйте ваш URL алертов",
+             "На mfcalerts.com нажмите <strong>Copy to clipboard</strong>, чтобы скопировать "
+             "ваш персональный URL алертов — это страница, которая рисует анимации токенов."),
+            ("Добавьте URL слоем Browser — выше веб-камеры",
+             "Вставьте URL в окно Browser SplitCam и нажмите <strong>Add</strong>. Затем "
+             "переставьте список источников так, чтобы <strong>MFC Alerts был выше веб-"
+             "камеры</strong> (меню из 3 точек → Move Up). Если ниже камеры — эффекты не видны."),
+            ("Проверьте тестовым токеном",
+             "Откройте <strong>Settings → Send test tip</strong> и убедитесь, что эффект "
+             "появляется поверх камеры. Затем вещайте на MyFreeCams как обычно — реальные "
+             "токены теперь вызывают анимации."),
+        ],
+        "tips": [
+            ("MFC Alerts должен быть выше камеры", "Самая частая ошибка: если слой MFC Alerts "
+             "ниже веб-камеры в списке источников, эффекты скрыты. Поднимите его выше."),
+            ("Нужен аккаунт на mfcalerts.com", "URL алертов персональный — сначала "
+             "зарегистрируйтесь на mfcalerts.com, если аккаунта нет."),
+            ("Тестовый токен до эфира", "Через Settings → Send test tip проверьте, что накладка "
+             "работает — не узнавайте о поломке посреди шоу."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Что такое MFC Alerts?", "Система уведомлений для MyFreeCams, показывающая видео-"
+             "эффекты на трансляции при отправке токенов — добавляется накладкой Browser в "
+             "SplitCam."),
+            ("Почему мои MFC Alerts не видны?", "Почти всегда порядок слоёв — слой Browser с "
+             "MFC Alerts должен быть выше веб-камеры в списке источников SplitCam."),
+            ("Нужен ли аккаунт для MFC Alerts?", "Да — зарегистрируйтесь на mfcalerts.com, чтобы "
+             "получить персональный URL алертов."),
+            ("SplitCam для этого бесплатен?", "Да — SplitCam бесплатен, без водяного знака, без "
+             "лимитов."),
         ],
     },
     {
         "slug": "lovense", "name": "Lovense",
-        "title": "Как подключить игрушку Lovense к трансляции — SplitCam",
+        "title": "Как подключить игрушку Lovense к трансляции через SplitCam",
         "desc": "Подключите интерактивную игрушку Lovense к кам-трансляции и покажите её статус "
                 "на экране через бесплатный SplitCam. Пошагово, без водяного знака.",
         "kw": "как подключить lovense к трансляции, lovense кам, lovense splitcam, "
@@ -148,31 +751,31 @@ PLATFORMS_RU = [
                  "токены — со статусом подключения прямо на экране.",
         "quick": "Чтобы подключить Lovense к трансляции: установите SplitCam и софт Lovense, "
                  "подключите игрушку, привяжите Lovense к кам-платформе, добавьте статус Lovense "
-                 "как Browser Source в SplitCam и вещайте как обычно."
+                 "как слой Browser в SplitCam и вещайте как обычно."
                  "<ol><li>Установите SplitCam.</li><li>Установите и подключите софт Lovense.</li>"
                  "<li>Привяжите Lovense к кам-сайту.</li>"
                  "<li>Добавьте накладку Lovense в SplitCam.</li><li>Нажмите Go Live.</li></ol>",
         "steps": [
             ("Установите SplitCam",
-             "SplitCam — бесплатная программа для трансляций на Windows и macOS, она отправляет "
-             "видео на кам-платформу. Скачайте и установите; без водяного знака."),
+             "SplitCam — бесплатная программа для трансляций на Windows и macOS, кодировщик, "
+             "который отправляет видео на кам-платформу. Установите её; без водяного знака."),
             ("Установите и подключите софт Lovense",
              "Установите официальное приложение Lovense Connect / Lovense Stream. Включите "
-             "игрушку и подключите её по Bluetooth — приложение покажет её как подключённую."),
+             "игрушку и подключите по Bluetooth — приложение покажет её подключённой."),
             ("Привяжите Lovense к кам-платформе",
              "В приложении Lovense подключите аккаунт кам-сайта, чтобы игрушка реагировала на "
              "токены и чаевые зрителей. Lovense поддерживает большинство крупных кам-платформ."),
             ("Добавьте накладку Lovense в SplitCam",
-             "Lovense даёт URL виджета / накладки. Добавьте его как слой "
-             "<strong>Browser Source</strong> в сцену SplitCam — зрители увидят статус игрушки и "
+             "Lovense даёт URL виджета / накладки. Добавьте его слоем "
+             "<strong>Browser</strong> в сцену SplitCam — зрители увидят статус игрушки и "
              "недавние чаевые на экране."),
             ("Соберите сцену и выходите в эфир",
              "Добавьте камеру и другие накладки, вставьте RTMP-ключ кам-платформы в SplitCam и "
              "нажмите <strong>Go Live</strong>. Игрушка реагирует на токены в реальном времени."),
         ],
         "tips": [
-            ("Заряжайте игрушку", "Севшая в середине эфира батарея убивает интерактив — "
-             "заряжайте полностью перед эфиром."),
+            ("Заряжайте игрушку", "Севшая посреди эфира батарея убивает интерактив — заряжайте "
+             "полностью перед эфиром."),
             ("Проверьте реакцию", "Отправьте небольшой тестовый токен, чтобы убедиться, что "
              "игрушка реагирует, до открытия комнаты."),
             ("Покажите накладку", "Видимый статус Lovense показывает зрителям, что чаевые "
@@ -184,48 +787,48 @@ PLATFORMS_RU = [
             ("SplitCam для этого бесплатен?", "Да — SplitCam бесплатен, без водяного знака. Софт "
              "Lovense тоже бесплатный."),
             ("Игрушка подключается прямо к SplitCam?", "Нет — игрушка подключается к приложению "
-             "Lovense; SplitCam лишь показывает накладку Lovense и вещает камеру."),
+             "Lovense; SplitCam показывает накладку Lovense и вещает камеру."),
             ("Какие кам-сайты поддерживают Lovense?", "Большинство крупных кам-платформ "
-             "интегрированы с Lovense — актуальный список смотрите в приложении Lovense."),
+             "интегрированы с Lovense — актуальный список в приложении Lovense."),
             ("Можно показывать недавние чаевые на экране?", "Да — добавьте URL виджета Lovense "
-             "как Browser Source в SplitCam."),
+             "слоем Browser в SplitCam."),
         ],
     },
     {
         "slug": "multistream-cams", "name": "Несколько кам-сайтов",
-        "title": "Как вещать на несколько кам-сайтов одновременно — SplitCam",
-        "desc": "Трансляция на BongaCams, Chaturbate, CAM4, Stripchat и другие одновременно через "
-                "бесплатную мультитрансляцию SplitCam. Пошагово, без водяного знака.",
+        "title": "Как вещать на несколько кам-сайтов одновременно через SplitCam",
+        "desc": "Трансляция на MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat и другие "
+                "одновременно через бесплатную мультитрансляцию SplitCam. Без водяного знака.",
         "kw": "вещание на несколько кам-сайтов, мультитрансляция кам, трансляция на chaturbate и "
-              "bongacams одновременно, программа мультитрансляции кам",
+              "bongacams одновременно",
         "h1html": 'Как вещать на <span class="accent">несколько кам-сайтов</span> одновременно',
         "h1short": "Мультитрансляция кам",
         "card": "Вещание на несколько кам-сайтов одновременно.",
-        "intro": "Бесплатный <strong style='color:var(--text)'>SplitCam</strong> может вещать один "
-                 "поток на <strong style='color:var(--text)'>несколько кам-сайтов "
-                 "одновременно</strong> — BongaCams, Chaturbate, CAM4, Stripchat и другие. Без "
-                 "водяного знака.",
-        "quick": "Чтобы вещать на несколько кам-сайтов сразу: установите SplitCam, соберите сцену, "
-                 "получите URL RTMP-сервера и ключ от каждого кам-сайта, добавьте их все в "
-                 "настройках мультитрансляции SplitCam, нажмите Go Live один раз."
+        "intro": "Бесплатный <strong style='color:var(--text)'>SplitCam</strong> может вещать "
+                 "один поток на <strong style='color:var(--text)'>несколько кам-сайтов "
+                 "одновременно</strong> — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat и "
+                 "другие. Без водяного знака, в один клик.",
+        "quick": "Чтобы вещать на несколько кам-сайтов сразу: установите SplitCam, соберите "
+                 "сцену, получите URL RTMP-сервера и ключ от каждого кам-сайта, добавьте их все "
+                 "в настройках мультитрансляции SplitCam, нажмите Go Live один раз."
                  "<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li>"
                  "<li>Получите RTMP-ключ от каждого кам-сайта.</li>"
-                 "<li>Добавьте все ключи в мультитрансляцию SplitCam.</li>"
+                 "<li>Добавьте все ключи в мультитрансляцию.</li>"
                  "<li>Нажмите Go Live один раз.</li></ol>",
         "steps": [
             ("Установите SplitCam",
              "SplitCam — бесплатная программа для трансляций на Windows и macOS со встроенной "
-             "мультитрансляцией. Скачайте и установите — без водяного знака и регистрации."),
+             "мультитрансляцией. Установите — без водяного знака и регистрации."),
             ("Настройте камеру и сцену",
              "Откройте SplitCam, добавьте веб-камеру и соберите сцену с накладками и фильтрами. "
              "Одна сцена идёт на все площадки."),
             ("Получите RTMP-ключ от каждого кам-сайта",
              "На каждой кам-платформе включите внешнее / RTMP-вещание и скопируйте её "
-             "<strong>URL сервера</strong> и <strong>ключ трансляции</strong>. Повторите для "
-             "каждого сайта, на который хотите вещать."),
+             "<strong>URL сервера</strong> и <strong>ключ</strong>. Повторите для каждого "
+             "сайта — точные пути в отдельных гайдах по платформам."),
             ("Добавьте все площадки в SplitCam",
-             "Откройте <strong>Настройки трансляции</strong> и добавьте каждый кам-сайт как "
-             "пользовательскую RTMP-площадку — вставьте URL сервера и ключ. Отметьте все нужные."),
+             "Откройте <strong>Stream Settings</strong> и добавьте каждый кам-сайт "
+             "пользовательской RTMP-площадкой — вставьте URL сервера и ключ. Отметьте нужные."),
             ("Нажмите Go Live один раз",
              "Нажмите <strong>Go Live</strong>. SplitCam отправит поток на все выбранные кам-"
              "сайты одновременно, peer-to-peer, из одного кодирования — без доплат."),
@@ -233,21 +836,21 @@ PLATFORMS_RU = [
         "tips": [
             ("Следите за аплоадом", "Мультитрансляция умножает нагрузку на исходящий канал. "
              "Каждой площадке нужен свой битрейт — убедитесь, что канал тянет сумму."),
-            _TIPS["eth"],
             ("Проверьте правила площадок", "Некоторые кам-сайты запрещают одновременное вещание "
              "в другом месте — уточните до мультитрансляции."),
+            _T_ETH,
             ("Монитор состояния", "SplitCam показывает статус по каждой площадке — отключите "
              "сайт, если аплоад не тянет."),
         ],
         "faq": [
             ("Мультитрансляция в SplitCam бесплатна?", "Да — мультитрансляция встроена и "
              "бесплатна, без платы за площадку и без водяного знака."),
-            ("На сколько кам-сайтов можно вещать сразу?", "Насколько хватает исходящего канала — "
-             "каждая площадка потребляет свой битрейт."),
+            ("На сколько кам-сайтов можно вещать сразу?", "Насколько хватает исходящего "
+             "канала — каждая площадка потребляет свой битрейт."),
             ("Используется ли облачный ретранслятор?", "Нет — SplitCam отправляет потоки "
              "peer-to-peer напрямую с вашего ПК на сервер каждой платформы."),
-            ("Мультитрансляция замедлит ПК?", "Кодирование делается один раз и переиспользуется; "
-             "аппаратное кодирование держит нагрузку на CPU низкой. Ограничение — ширина канала."),
+            ("Мультитрансляция замедлит ПК?", "Кодирование делается один раз и "
+             "переиспользуется; аппаратное кодирование держит нагрузку на CPU низкой."),
         ],
     },
 ]

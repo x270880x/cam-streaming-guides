@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как вести трансляцию на CAM4 через SplitCam — бесплатный гайд</title>
-<meta name="description" content="Пошаговый гайд: вещание на CAM4 через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.">
-<meta name="keywords" content="как вести трансляцию на cam4, cam4 вещание, cam4 rtmp, cam4 obs, программа для трансляции cam4">
+<title>Как вести трансляцию на CAM4 через SplitCam — внешний кодировщик</title>
+<meta name="description" content="Вещание на CAM4 через бесплатный SplitCam. Откройте Broadcast &amp; Earn Money, External Encoder, Get Stream Key, гео-настройки — сцены и накладки.">
+<meta name="keywords" content="как вести трансляцию на cam4, cam4 external encoder, cam4 stream key, cam4 rtmp obs">
 <link rel="canonical" href="https://NEWDOMAIN.com/ru/cam4/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Как вести трансляцию на CAM4 через SplitCam — бесплатный гайд">
-<meta property="og:description" content="Пошаговый гайд: вещание на CAM4 через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.">
+<meta property="og:title" content="Как вести трансляцию на CAM4 через SplitCam — внешний кодировщик">
+<meta property="og:description" content="Вещание на CAM4 через бесплатный SplitCam. Откройте Broadcast &amp; Earn Money, External Encoder, Get Stream Key, гео-настройки — сцены и накладки.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Как вести трансляцию на CAM4 через SplitCam",
-   "description": "Пошаговый гайд: вещание на CAM4 через бесплатный SplitCam — внешний RTMP-кодировщик, сцены, накладки, без водяного знака.",
+   "description": "Вещание на CAM4 через бесплатный SplitCam. Откройте Broadcast & Earn Money, External Encoder, Get Stream Key, гео-настройки — сцены и накладки.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции CAM4",
-     "text": "Войдите в аккаунт на CAM4 и откройте настройки вещания. Переключите способ вещания на внешний кодировщик / OBS / RTMP. CAM4 покажет URL сервера и ключ трансляции — скопируйте оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату."
+     "text": "На CAM4 нажмите Broadcast → Broadcast & Earn Money → Start Broadcast, затем External Encoder сверху. Заполните дату рождения, пол и страну, нажмите Get Stream Key и скопируйте ключ. Зелёный слайдер в Stream Settings SplitCam подтверждает подключение."
     },
     {
      "@type": "HowToStep",
@@ -76,18 +76,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "SplitCam бесплатен для CAM4?",
+     "name": "Можно ли гео-блокировать эфир на CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. Все функции открыты с первой установки."
+      "text": "Да — у CAM4 есть встроенное гео-ограничение, чтобы скрыть эфир в некоторых странах. Настраивается на CAM4."
      }
     },
     {
      "@type": "Question",
-     "name": "Зачем SplitCam вместо встроенного вещателя CAM4?",
+     "name": "Где ключ трансляции CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование."
+      "text": "Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SplitCam бесплатен для CAM4?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — бесплатно, без водяного знака, без лимитов."
      }
     },
     {
@@ -95,15 +103,7 @@
      "name": "Какой битрейт для CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным тестом скорости SplitCam."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно вещать на CAM4 и другие сайты одновременно?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. Смотрите гайд по мультитрансляции."
+      "text": "3500–6000 Кбит/с для 1080p; сначала проверьте аплоад."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">CAM4</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">CAM4</span> через SplitCam</h1>
-  <p class="sub">Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает как кодировщик для CAM4 — сцены с несколькими камерами, накладки, фильтры и AI-фон, которых нет у встроенного вещателя. Без водяного знака и регистрации.</p>
+  <p class="sub">CAM4 — глобальная кам-платформа со встроенными гео-настройками: можно скрыть эфир в выбранных странах. Маршрут через бесплатный <strong style='color:var(--text)'>SplitCam</strong> как внешний кодировщик даёт переключение сцен и накладки, которых нет у базового вещателя.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,25 +245,25 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Чтобы вести трансляцию на CAM4 через SplitCam: установите SplitCam, соберите сцену, включите внешнее (RTMP) вещание на CAM4, скопируйте URL сервера и ключ трансляции, вставьте их в SplitCam и нажмите Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ CAM4.</li><li>Вставьте его в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на CAM4 через SplitCam: установите SplitCam, соберите сцену, на CAM4 откройте <em>Broadcast &amp; Earn Money → Start Broadcast → External Encoder</em>, Get Stream Key, вставьте в SplitCam, Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите ключ CAM4.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/40F6C_cvXyQ" title="Как вести трансляцию на CAM4 через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CAM4.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CAM4</div><p class="step-p">Войдите в аккаунт на CAM4 и откройте настройки вещания. Переключите способ вещания на <strong>внешний кодировщик / OBS / RTMP</strong>. CAM4 покажет <strong>URL сервера</strong> и <strong>ключ трансляции</strong> — скопируйте оба. Ключ держите в секрете: с ним кто угодно сможет вещать в вашу комнату.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к CAM4</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ CAM4 в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на CAM4. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CAM4.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CAM4</div><p class="step-p">На CAM4 нажмите <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn Money</strong> → <strong>Start Broadcast</strong>, затем <strong>External Encoder</strong> сверху. Заполните дату рождения, пол и страну, нажмите <strong>Get Stream Key</strong> и скопируйте ключ. Зелёный слайдер в Stream Settings SplitCam подтверждает подключение.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к CAM4</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ CAM4 в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на CAM4. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet стабильнее Wi-Fi. Обрыв кадра в эфире — это потерянный токен. Держите соединение надёжным.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Добавьте текст целей, ваши соцсети и логотип как слои сцены — браузерный вещатель так не умеет, SplitCam умеет.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук и кадрирование до открытия комнаты.</p></div><div class="tip-card"><h3>Аппаратное кодирование</h3><p>SplitCam сам выбирает NVENC / QuickSync / AMF — кодирование идёт на GPU, компьютер не тормозит.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Настройте гео-ограничения</h3><p>CAM4 позволяет скрыть эфир в конкретных странах и регионах — задайте это на стороне CAM4 до выхода в эфир, если нужно.</p></div><div class="tip-card"><h3>Следите за зелёным слайдером</h3><p>При настройке CAM4 в Stream Settings SplitCam появляется зелёный слайдер при принятом ключе — красный значит проверьте ключ.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>SplitCam бесплатен для CAM4?</summary><p>Да — полностью бесплатно, без водяного знака на эфире, без ограничения по времени. Все функции открыты с первой установки.</p></details><details class="faq-item"><summary>Зачем SplitCam вместо встроенного вещателя CAM4?</summary><p>Встроенный вещатель — одна камера без накладок. SplitCam даёт сцены с несколькими камерами, текстовые накладки, фильтры, AI-фон и аппаратное кодирование.</p></details><details class="faq-item"><summary>Какой битрейт для CAM4?</summary><p>3500–6000 Кбит/с для 1080p, 2000–4000 для 720p. Сначала проверьте аплоад встроенным тестом скорости SplitCam.</p></details><details class="faq-item"><summary>Можно вещать на CAM4 и другие сайты одновременно?</summary><p>Да — мультитрансляция SplitCam отправляет один поток на несколько кам-сайтов сразу. Смотрите гайд по мультитрансляции.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Можно ли гео-блокировать эфир на CAM4?</summary><p>Да — у CAM4 есть встроенное гео-ограничение, чтобы скрыть эфир в некоторых странах. Настраивается на CAM4.</p></details><details class="faq-item"><summary>Где ключ трансляции CAM4?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CAM4?</summary><p>Да — бесплатно, без водяного знака, без лимитов.</p></details><details class="faq-item"><summary>Какой битрейт для CAM4?</summary><p>3500–6000 Кбит/с для 1080p; сначала проверьте аплоад.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка внешнего кодировщика для Chaturbate.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>Настройка внешнего кодировщика для BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Трансляция на Stripchat</h4><p>Настройка внешнего кодировщика для Stripchat.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка через токен и внешний кодировщик Chaturbate.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>External Encoder BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Трансляция на Stripchat</h4><p>Настройка внешнего софта для Stripchat.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Готовы выйти в эфир?</h2>
