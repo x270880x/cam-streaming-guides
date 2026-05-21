@@ -38,6 +38,10 @@ border-radius:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:6
 background:transparent;color:var(--text);border:1px solid var(--app-border2);
 font-size:13px;font-weight:600;transition:all .15s}
 .btn-lg{padding:13px 24px;font-size:14px;border-radius:10px}
+.lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
+.lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
+.lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+.lang-switch a.cur{background:var(--blue);color:#fff}
 .breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
 .breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
 .breadcrumbs .sep{margin:0 8px}
@@ -113,7 +117,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <nav>
   <a class="nav-logo" href="./"><span class="dot"></span>Streaming Guides</a>
   <ul class="nav-links"><li><a href="./">All guides</a></li></ul>
-  <a href="https://splitcam.com/download" class="btn-primary" target="_blank" rel="nofollow noopener">⬇ Download SplitCam</a>
+  <div class="lang-switch"><a href="./" class="cur">EN</a><a href="ru/">RU</a><a href="es/">ES</a></div>
 </nav>
 <section class="hero" style="padding-top:96px">
   <div class="hero-glow"></div>

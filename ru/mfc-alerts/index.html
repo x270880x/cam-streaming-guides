@@ -142,6 +142,10 @@ border-radius:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:6
 background:transparent;color:var(--text);border:1px solid var(--app-border2);
 font-size:13px;font-weight:600;transition:all .15s}
 .btn-lg{padding:13px 24px;font-size:14px;border-radius:10px}
+.lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
+.lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
+.lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+.lang-switch a.cur{background:var(--blue);color:#fff}
 .breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
 .breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
 .breadcrumbs .sep{margin:0 8px}
@@ -219,7 +223,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Все гайды</a></li>
   </ul>
-  <a href="https://splitcam.com/download" class="btn-primary" target="_blank" rel="nofollow noopener">⬇ Скачать SplitCam</a>
+  <div class="lang-switch"><a href="../../mfc-alerts/">EN</a><a href="../../ru/mfc-alerts/" class="cur">RU</a><a href="../../es/mfc-alerts/">ES</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Гайды</a><span class="sep">/</span><span>MyFreeCams</span>
@@ -230,8 +234,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <h1 class="h1">Трансляция на <span class="accent">MyFreeCams</span> + алерты</h1>
   <p class="sub">Бесплатный <strong style='color:var(--text)'>SplitCam</strong> — кодировщик для MyFreeCams, и он умеет показывать <strong style='color:var(--text)'>алерты о токенах</strong> как накладку через Browser Source. Без водяного знака.</p>
   <div class="hero-cta">
-    <a href="https://splitcam.com/download" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ Скачать SplitCam</a>
-    <a href="#steps" class="btn-ghost btn-lg">К шагам ↓</a>
+    <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
 </section>
 <div class="section">

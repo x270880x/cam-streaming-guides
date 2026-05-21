@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Spanish content for cam-streaming-guides. Only platforms that had ES originals."""
+"""Spanish content for cam-streaming-guides. One dict per platform (all 19)."""
 
 _TIPS_ES = {
     "eth": ("Conexión por cable", "Ethernet es más estable que el Wi-Fi. Un fotograma perdido en "
@@ -13,39 +13,39 @@ _TIPS_ES = {
 }
 
 
-def _p(slug, name, gen):
+def _p(slug, name):
     return {
         "slug": slug, "name": name,
-        "title": f"Cómo emitir en {gen} con SplitCam — guía gratuita",
-        "desc": f"Guía paso a paso para emitir en {gen} con SplitCam gratis — codificador RTMP "
+        "title": f"Cómo emitir en {name} con SplitCam — guía gratuita",
+        "desc": f"Guía paso a paso para emitir en {name} con SplitCam gratis — codificador RTMP "
                 f"externo, escenas, superposiciones, sin marca de agua.",
         "kw": f"cómo emitir en {name.lower()}, {name.lower()} software de emisión, "
               f"{name.lower()} rtmp, {name.lower()} obs",
         "h1html": f'Cómo emitir en <span class="accent">{name}</span> con SplitCam',
         "h1short": f"Emitir en {name}",
-        "card": f"Configuración del codificador externo para {gen}.",
+        "card": f"Configuración del codificador externo para {name}.",
         "intro": f"El <strong style='color:var(--text)'>SplitCam</strong> gratuito funciona como "
-                 f"tu codificador para {gen} — escenas con varias cámaras, superposiciones, "
+                 f"tu codificador para {name} — escenas con varias cámaras, superposiciones, "
                  f"filtros y fondo con IA que el emisor básico no tiene. Sin marca de agua.",
-        "quick": f"Para emitir en {gen} con SplitCam: instala SplitCam, monta tu escena, activa "
-                 f"la emisión externa (RTMP) en {gen}, copia la URL del servidor y la clave de "
+        "quick": f"Para emitir en {name} con SplitCam: instala SplitCam, monta tu escena, activa "
+                 f"la emisión externa (RTMP) en {name}, copia la URL del servidor y la clave de "
                  f"stream, pégalas en SplitCam y pulsa Go Live."
                  f"<ol><li>Instala SplitCam.</li><li>Añade cámara y escena.</li>"
-                 f"<li>Consigue la clave RTMP de {gen}.</li><li>Pégala en SplitCam.</li>"
+                 f"<li>Consigue la clave RTMP de {name}.</li><li>Pégala en SplitCam.</li>"
                  f"<li>Pulsa Go Live.</li></ol>",
-        "key_how": f"Inicia sesión en {gen} y abre los ajustes de emisión. Cambia el método a "
+        "key_how": f"Inicia sesión en {name} y abre los ajustes de emisión. Cambia el método a "
                    f"<strong>codificador externo / OBS / RTMP</strong>. {name} mostrará una "
                    f"<strong>URL de servidor</strong> y una <strong>clave de stream</strong> — "
                    f"copia ambas. Mantén la clave en privado.",
         "tips": [_TIPS_ES["eth"], _TIPS_ES["ovl"], _TIPS_ES["test"], _TIPS_ES["hw"]],
         "faq": [
-            (f"¿SplitCam es gratis para {gen}?",
+            (f"¿SplitCam es gratis para {name}?",
              "Sí — 100% gratis, sin marca de agua en tu emisión, sin límite de tiempo."),
-            (f"¿Por qué usar SplitCam y no el emisor del navegador de {gen}?",
+            (f"¿Por qué usar SplitCam y no el emisor del navegador de {name}?",
              "El emisor del navegador es una sola cámara sin superposiciones. SplitCam añade "
              "escenas con varias cámaras, superposiciones de texto, filtros y codificación por "
              "hardware."),
-            (f"¿Qué bitrate usar para {gen}?",
+            (f"¿Qué bitrate usar para {name}?",
              "3.500–6.000 Kbps para 1080p, 2.000–4.000 para 720p. Comprueba tu subida con el test "
              "de velocidad de SplitCam primero."),
             (f"¿Puedo emitir en {name} y otros sitios a la vez?",
@@ -55,8 +55,32 @@ def _p(slug, name, gen):
 
 
 PLATFORMS_ES = [
-    _p("chaturbate", "Chaturbate", "Chaturbate"),
-    _p("cam4", "CAM4", "CAM4"),
+    _p("chaturbate", "Chaturbate"),
+    _p("cam4", "CAM4"),
+    _p("bongacams", "BongaCams"),
+    _p("stripchat", "Stripchat"),
+    {**_p("onlyfans", "OnlyFans"),
+     "title": "Cómo emitir en directo en OnlyFans con SplitCam — guía gratuita",
+     "h1html": 'Cómo emitir en directo en <span class="accent">OnlyFans</span> con SplitCam',
+     "h1short": "Directo en OnlyFans",
+     "intro": "Usa el <strong style='color:var(--text)'>SplitCam</strong> gratuito para tu "
+              "directo de OnlyFans — escenas con varias cámaras, superposiciones y filtros que la "
+              "cámara básica de la app no tiene. Sin marca de agua.",
+     "key_how": "En OnlyFans, inicia un nuevo directo y abre los <strong>ajustes de "
+                "streaming</strong>. Elige emitir con software externo — OnlyFans mostrará una "
+                "<strong>URL de servidor RTMP</strong> y una <strong>clave de stream</strong>. "
+                "Copia ambas en SplitCam y mantén la clave en privado."},
+    _p("camplace", "CamPlace"),
+    _p("camsoda", "CamSoda"),
+    _p("streamate", "Streamate"),
+    _p("streamray", "StreamRay"),
+    _p("xlovecam", "XLoveCam"),
+    _p("soulcams", "SoulCams"),
+    _p("imlive", "ImLive"),
+    _p("vxlive", "VXLive"),
+    _p("virtwish", "Virtwish"),
+    _p("xmodels", "XModels"),
+    _p("flirt4free", "Flirt4Free"),
     {
         "slug": "mfc-alerts", "name": "MyFreeCams",
         "title": "Cómo emitir en MyFreeCams y añadir alertas con SplitCam",
@@ -158,6 +182,63 @@ PLATFORMS_ES = [
              "integran con Lovense — consulta la lista actual en la app de Lovense."),
             ("¿Puedo mostrar propinas recientes en pantalla?", "Sí — añade la URL del widget de "
              "Lovense como Browser Source en SplitCam."),
+        ],
+    },
+    {
+        "slug": "multistream-cams", "name": "Varios sitios cam",
+        "title": "Cómo emitir en varios sitios cam a la vez con SplitCam",
+        "desc": "Emite en BongaCams, Chaturbate, CAM4, Stripchat y más al mismo tiempo con la "
+                "multiemisión gratuita de SplitCam. Paso a paso, sin marca de agua.",
+        "kw": "emitir en varios sitios cam, multiemisión cam, emitir en chaturbate y bongacams a "
+              "la vez, software de multiemisión cam",
+        "h1html": 'Cómo emitir en <span class="accent">varios sitios cam</span> a la vez',
+        "h1short": "Multiemisión cam",
+        "card": "Emite en varios sitios cam simultáneamente.",
+        "intro": "El <strong style='color:var(--text)'>SplitCam</strong> gratuito puede emitir un "
+                 "solo stream a <strong style='color:var(--text)'>varios sitios cam a la "
+                 "vez</strong> — BongaCams, Chaturbate, CAM4, Stripchat y más. Sin marca de agua.",
+        "quick": "Para emitir en varios sitios cam a la vez: instala SplitCam, monta tu escena, "
+                 "consigue la URL del servidor RTMP y la clave de cada sitio cam, añádelas todas "
+                 "en los ajustes de multiemisión de SplitCam y pulsa Go Live una vez."
+                 "<ol><li>Instala SplitCam.</li><li>Añade cámara y escena.</li>"
+                 "<li>Consigue una clave RTMP de cada sitio cam.</li>"
+                 "<li>Añade todas las claves en la multiemisión de SplitCam.</li>"
+                 "<li>Pulsa Go Live una vez.</li></ol>",
+        "steps": [
+            ("Instala SplitCam",
+             "SplitCam es software de streaming gratuito para Windows y macOS con multiemisión "
+             "integrada. Descárgalo e instálalo — sin marca de agua ni registro."),
+            ("Configura tu cámara y escena",
+             "Abre SplitCam, añade tu webcam y monta la escena con superposiciones y filtros. Una "
+             "escena alimenta todos los destinos."),
+            ("Consigue una clave RTMP de cada sitio cam",
+             "En cada plataforma cam, activa la emisión externa / RTMP y copia su <strong>URL de "
+             "servidor</strong> y su <strong>clave de stream</strong>. Repite para cada sitio."),
+            ("Añade cada destino en SplitCam",
+             "Abre <strong>Ajustes de stream</strong> y añade cada sitio cam como destino RTMP "
+             "personalizado — pega su URL y clave. Marca todos los que quieras emitir."),
+            ("Pulsa Go Live una vez",
+             "Pulsa <strong>Go Live</strong>. SplitCam envía tu stream a todos los sitios cam "
+             "seleccionados a la vez, peer-to-peer, desde una sola codificación — sin coste extra."),
+        ],
+        "tips": [
+            ("Cuida tu subida", "La multiemisión multiplica la carga de subida. Cada destino "
+             "consume su propio bitrate — asegúrate de que tu conexión soporta el total."),
+            _TIPS_ES["eth"],
+            ("Revisa las reglas", "Algunos sitios cam restringen emitir a la vez en otro lado — "
+             "confírmalo antes de multiemitir."),
+            ("Monitor de estado", "SplitCam muestra el estado por destino — quita un sitio si tu "
+             "subida no da abasto."),
+        ],
+        "faq": [
+            ("¿La multiemisión es gratis en SplitCam?", "Sí — la multiemisión está integrada y es "
+             "gratis, sin coste por destino ni marca de agua."),
+            ("¿A cuántos sitios cam puedo emitir a la vez?", "A tantos como soporte tu ancho de "
+             "banda de subida — cada destino consume su propio bitrate."),
+            ("¿Usa un relé en la nube?", "No — SplitCam envía los streams peer-to-peer "
+             "directamente desde tu PC al servidor de cada plataforma."),
+            ("¿La multiemisión ralentiza mi PC?", "La codificación se hace una vez y se "
+             "reutiliza; la codificación por hardware mantiene baja la carga de CPU."),
         ],
     },
 ]

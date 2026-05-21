@@ -44,6 +44,10 @@ border-radius:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:6
 background:transparent;color:var(--text);border:1px solid var(--app-border2);
 font-size:13px;font-weight:600;transition:all .15s}
 .btn-lg{padding:13px 24px;font-size:14px;border-radius:10px}
+.lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
+.lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
+.lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+.lang-switch a.cur{background:var(--blue);color:#fff}
 .breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
 .breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
 .breadcrumbs .sep{margin:0 8px}
@@ -214,6 +218,23 @@ def build_steps(p, lang):
     return out
 
 
+LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES"}
+LANG_PATH = {"en": "", "ru": "ru/", "es": "es/"}
+
+
+def lang_switch(cur, depth, slug=None):
+    """Language switcher. slug set -> platform pages; slug None -> hub pages."""
+    items = []
+    for L in ("en", "ru", "es"):
+        if slug:
+            href = f"{depth}{LANG_PATH[L]}{slug}/"
+        else:
+            href = f"{depth}{LANG_PATH[L]}" or "./"
+        cls = ' class="cur"' if L == cur else ""
+        items.append(f'<a href="{href}"{cls}>{LANG_LABEL[L]}</a>')
+    return '<div class="lang-switch">' + "".join(items) + "</div>"
+
+
 def render(p, lang, all_platforms):
     """Render one platform guide page."""
     u = UI[lang]
@@ -290,7 +311,7 @@ def render(p, lang, all_platforms):
   <ul class="nav-links">
     <li><a href="{home}">{u['home']}</a></li>
   </ul>
-  <a href="{e(DOWNLOAD_URL)}" class="btn-primary" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
+  {lang_switch(lang, depth, p['slug'])}
 </nav>
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(name)}</span>
@@ -301,8 +322,7 @@ def render(p, lang, all_platforms):
   <h1 class="h1">{d['h1html']}</h1>
   <p class="sub">{d['intro']}</p>
   <div class="hero-cta">
-    <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
-    <a href="#steps" class="btn-ghost btn-lg">{u['skip']} ↓</a>
+    <a href="#steps" class="btn-primary btn-lg">{u['skip']} ↓</a>
   </div>
 </section>
 <div class="section">
@@ -374,6 +394,7 @@ HUB = {
 def render_hub(platforms, lang):
     u = UI[lang]
     hb = HUB[lang]
+    hub_depth = "../" if u["path"] else ""
     avail = [p for p in platforms if lang in p]
     cards = "".join(
         f'<a class="related-card" href="{p["slug"]}/"><h4>{e(p[lang]["h1short"])}</h4>'
@@ -396,7 +417,7 @@ def render_hub(platforms, lang):
 <nav>
   <a class="nav-logo" href="./"><span class="dot"></span>{SITE_NAME}</a>
   <ul class="nav-links"><li><a href="./">{u['home']}</a></li></ul>
-  <a href="{e(DOWNLOAD_URL)}" class="btn-primary" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
+  {lang_switch(lang, hub_depth)}
 </nav>
 <section class="hero" style="padding-top:96px">
   <div class="hero-glow"></div>
