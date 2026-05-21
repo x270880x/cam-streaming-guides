@@ -230,21 +230,24 @@ PLATFORMS_EN = [
             ("Set up your camera and scene",
              "Open SplitCam and add your webcam. Build the scene viewers will see — overlays, "
              "text, a second camera, beauty filters or an AI background, applied live."),
-            ("Connect OnlyFans by Authorization",
+            ("Connect — Method 1: Authorization (recommended)",
              "In SplitCam open <strong>Stream Settings</strong> &rarr; <strong>Add "
-             "Channel</strong> &rarr; <strong>OnlyFans</strong>, and choose the "
-             "<strong>Authorization</strong> method. Sign in with your OnlyFans email and "
-             "password — SplitCam connects straight to your account, so you don't have to find "
-             "a key on the OnlyFans website."),
-            ("Key and settings sync automatically",
-             "Once authorized, SplitCam retrieves your OnlyFans stream key and keeps the "
-             "connection live — the key and the OnlyFans live-stream settings stay synced "
-             "throughout, with nothing to copy by hand. You can manage those OnlyFans settings "
-             "right inside SplitCam."),
-            ("Go Live — and adjust on the fly",
-             "Click <strong>Go Live</strong>. Because your account is connected, you can change "
-             "the OnlyFans stream settings from inside SplitCam <strong>during the stream or "
-             "after it</strong> — without opening the OnlyFans site."),
+             "Channel</strong> &rarr; <strong>OnlyFans</strong> and choose "
+             "<strong>Authorization</strong>. Sign in with your OnlyFans email and password. "
+             "SplitCam connects to your account, fetches the stream key automatically and "
+             "keeps it synced — and lets you manage the OnlyFans stream settings inside "
+             "SplitCam, changing them during or after the stream without opening the OnlyFans "
+             "site."),
+            ("Connect — Method 2: Stream Key (manual)",
+             "Prefer not to sign in? Use the key instead. On OnlyFans go to "
+             "<strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; the "
+             "<strong>Other</strong> section and copy the <strong>OBS Key</strong>. In "
+             "SplitCam, Add Channel &rarr; OnlyFans, paste it into the stream-key field. This "
+             "key is static — to change settings later you go back to the OnlyFans site."),
+            ("Go Live",
+             "Whichever method you used, click <strong>Go Live</strong> in SplitCam. With "
+             "Method 1 you can keep adjusting the OnlyFans settings from SplitCam on the fly; "
+             "with Method 2 the key stays exactly as you set it."),
         ],
         "tips": [
             ("Authorization vs Stream Key", "Two ways to connect: <strong>Authorization</strong> "
