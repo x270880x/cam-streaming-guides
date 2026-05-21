@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как вести трансляцию на VXLive через SplitCam — гайд</title>
-<meta name="description" content="Вещание на VXLive через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.">
-<meta name="keywords" content="как вести трансляцию на vxlive, vxlive программа трансляции, vxlive rtmp">
+<title>Как вести трансляцию на VXLive через SplitCam — официальная поддержка</title>
+<meta name="description" content="VXLive (VXModels) официально поддерживает SplitCam: есть статья помощи и пресет VISIT-X. Stream with third-party software, сервер + ключ.">
+<meta name="keywords" content="как вести трансляцию на vxlive, vxlive splitcam, vxmodels splitcam, visit-x splitcam">
 <link rel="canonical" href="https://NEWDOMAIN.com/ru/vxlive/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Как вести трансляцию на VXLive через SplitCam — гайд">
-<meta property="og:description" content="Вещание на VXLive через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.">
+<meta property="og:title" content="Как вести трансляцию на VXLive через SplitCam — официальная поддержка">
+<meta property="og:description" content="VXLive (VXModels) официально поддерживает SplitCam: есть статья помощи и пресет VISIT-X. Stream with third-party software, сервер + ключ.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Как вести трансляцию на VXLive через SplitCam",
-   "description": "Вещание на VXLive через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.",
+   "description": "VXLive (VXModels) официально поддерживает SplitCam: есть статья помощи и пресет VISIT-X. Stream with third-party software, сервер + ключ.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции VXLive",
-     "text": "Войдите в VXLive и откройте настройки вещания. Выберите опцию внешний кодировщик / RTMP, чтобы получить URL сервера и ключ, скопируйте оба. Видео-гайд выше показывает точный путь VXLive."
+     "text": "В VXLive выберите Stream with third-party software и опцию для OBS, SplitCam или XSplit. VXLive выдаёт URL сервера и ключ трансляции. В SplitCam выберите VISIT-X как платформу, вставьте оба, нажмите Go Live в SplitCam, затем GO ONLINE в VXLive."
     },
     {
      "@type": "HowToStep",
@@ -76,10 +76,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "VXLive поддерживает внешние кодировщики?",
+     "name": "VXLive официально поддерживает SplitCam?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — VXLive принимает RTMP/OBS-поток, так что SplitCam работает как кодировщик."
+      "text": "Да — у VXModels (VXLive) есть отдельная официальная статья помощи по настройке SplitCam, и SplitCam указан наряду с OBS и XSplit как поддерживаемая программа вещания."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Как подключить SplitCam к VXLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "В VXLive выберите «Stream with third-party software», затем в SplitCam выберите пресет VISIT-X и вставьте URL сервера и ключ от VXLive."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Где жать «в эфир» — в SplitCam или VXLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "В обоих — сначала Go Live в SplitCam, затем GO ONLINE в VXLive."
      }
     },
     {
@@ -88,22 +104,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Да — бесплатно, без водяного знака, без лимита."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Какой битрейт для VXLive?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p; проверьте аплоад."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно ли мультитранслировать VXLive?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — SplitCam вещает на несколько кам-сайтов сразу из одного кодирования."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">VXLive</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">VXLive</span> через SplitCam</h1>
-  <p class="sub">VXLive — кам-платформа немецкого рынка. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает как её кодировщик — сцены с камерами, накладки, фильтры и аппаратное кодирование для более чистого эфира.</p>
+  <p class="sub">VXLive (VXModels / VISIT-X) — кам-платформа немецкого рынка и одна из немногих, кто <strong style='color:var(--text)'>официально поддерживает SplitCam по имени</strong>. У VXModels есть отдельная статья помощи по подключению <strong style='color:var(--text)'>SplitCam</strong> к VXLive, а в SplitCam есть готовый пресет канала VISIT-X.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,21 +245,21 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Вещание на VXLive через SplitCam: установите SplitCam, соберите сцену, включите внешний кодировщик в VXLive, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live. Видео-гайд выше показывает путь.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ VXLive.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на VXLive через SplitCam: установите SplitCam, соберите сцену, в VXLive выберите «Stream with third-party software», скопируйте URL сервера и ключ, в SplitCam выберите пресет VISIT-X и вставьте их, Go Live в SplitCam, затем GO ONLINE в VXLive.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите URL сервера и ключ VXLive.</li><li>Выберите пресет VISIT-X в SplitCam, вставьте.</li><li>Go Live, затем GO ONLINE в VXLive.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/7A0wuhtqkAw" title="Как вести трансляцию на VXLive через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на VXLive.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции VXLive</div><p class="step-p">Войдите в VXLive и откройте настройки вещания. Выберите опцию <strong>внешний кодировщик / RTMP</strong>, чтобы получить URL сервера и ключ, скопируйте оба. Видео-гайд выше показывает точный путь VXLive.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к VXLive</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ VXLive в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на VXLive. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на VXLive.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции VXLive</div><p class="step-p">В VXLive выберите <strong>Stream with third-party software</strong> и опцию для <strong>OBS, SplitCam или XSplit</strong>. VXLive выдаёт <strong>URL сервера</strong> и <strong>ключ трансляции</strong>. В SplitCam выберите <strong>VISIT-X</strong> как платформу, вставьте оба, нажмите <strong>Go Live</strong> в SplitCam, затем <strong>GO ONLINE</strong> в VXLive.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к VXLive</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ VXLive в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на VXLive. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Платформа немецкого рынка</h3><p>Аудитория VXLive в основном немецкоязычная — немецкая текстовая накладка или заголовок помогут вам сблизиться со зрителями.</p></div><div class="tip-card"><h3>Смотрите видео-гайд</h3><p>Интерфейс вещания VXLive удобнее освоить визуально — видео выше показывает актуальный путь к кодировщику.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>VISIT-X — встроенный пресет</h3><p>Сырой RTMP-URL вводить не надо — VISIT-X есть в списке платформ SplitCam, выберите его и просто вставьте URL сервера и ключ.</p></div><div class="tip-card"><h3>Выход в эфир в два шага</h3><p>На VXLive сначала жмёте Go Live в SplitCam, затем GO ONLINE в VXLive — оба, именно в таком порядке.</p></div><div class="tip-card"><h3>Платформа немецкого рынка</h3><p>Аудитория VXLive в основном немецкоязычная — немецкая текстовая накладка или заголовок помогут сблизиться со зрителями.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>VXLive поддерживает внешние кодировщики?</summary><p>Да — VXLive принимает RTMP/OBS-поток, так что SplitCam работает как кодировщик.</p></details><details class="faq-item"><summary>SplitCam бесплатен для VXLive?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для VXLive?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details><details class="faq-item"><summary>Можно ли мультитранслировать VXLive?</summary><p>Да — SplitCam вещает на несколько кам-сайтов сразу из одного кодирования.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>VXLive официально поддерживает SplitCam?</summary><p>Да — у VXModels (VXLive) есть отдельная официальная статья помощи по настройке SplitCam, и SplitCam указан наряду с OBS и XSplit как поддерживаемая программа вещания.</p></details><details class="faq-item"><summary>Как подключить SplitCam к VXLive?</summary><p>В VXLive выберите «Stream with third-party software», затем в SplitCam выберите пресет VISIT-X и вставьте URL сервера и ключ от VXLive.</p></details><details class="faq-item"><summary>Где жать «в эфир» — в SplitCam или VXLive?</summary><p>В обоих — сначала Go Live в SplitCam, затем GO ONLINE в VXLive.</p></details><details class="faq-item"><summary>SplitCam бесплатен для VXLive?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>

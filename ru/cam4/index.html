@@ -76,6 +76,14 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "CAM4 официально поддерживает OBS / внешние кодировщики?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — у CAM4 есть официальный OBS Guide на сайте поддержки, и платформа рекомендует опцию External Encoder. SplitCam использует тот же RTMP-путь."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Можно ли гео-блокировать эфир на CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -92,18 +100,10 @@
     },
     {
      "@type": "Question",
-     "name": "SplitCam бесплатен для CAM4?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — бесплатно, без водяного знака, без лимитов."
-     }
-    },
-    {
-     "@type": "Question",
      "name": "Какой битрейт для CAM4?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p; сначала проверьте аплоад."
+      "text": "Ниже, чем у большинства: приём CAM4 ограничивает видеобитрейт ~3000 Кбит/с при 30 fps и 1-секундном интервале ключевых кадров. В официальном OBS Guide CAM4 есть таблица по тесту скорости — выше ~3000 не нужно."
      }
     }
    ]
@@ -255,11 +255,11 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Настройте гео-ограничения</h3><p>CAM4 позволяет скрыть эфир в конкретных странах и регионах — задайте это на стороне CAM4 до выхода в эфир, если нужно.</p></div><div class="tip-card"><h3>Следите за зелёным слайдером</h3><p>При настройке CAM4 в Stream Settings SplitCam появляется зелёный слайдер при принятом ключе — красный значит проверьте ключ.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Настройте гео-ограничения</h3><p>CAM4 позволяет скрыть эфир в конкретных странах и регионах — задайте это на стороне CAM4 до выхода в эфир, если нужно.</p></div><div class="tip-card"><h3>Следите за зелёным слайдером</h3><p>При настройке CAM4 в Stream Settings SplitCam появляется зелёный слайдер при принятом ключе — красный значит проверьте ключ.</p></div><div class="tip-card"><h3>Битрейт ниже обычного</h3><p>Приём CAM4 ограничивает видеобитрейт примерно 3000 Кбит/с — ниже, чем у большинства кам-сайтов. Не задирайте выше.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Можно ли гео-блокировать эфир на CAM4?</summary><p>Да — у CAM4 есть встроенное гео-ограничение, чтобы скрыть эфир в некоторых странах. Настраивается на CAM4.</p></details><details class="faq-item"><summary>Где ключ трансляции CAM4?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CAM4?</summary><p>Да — бесплатно, без водяного знака, без лимитов.</p></details><details class="faq-item"><summary>Какой битрейт для CAM4?</summary><p>3500–6000 Кбит/с для 1080p; сначала проверьте аплоад.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>CAM4 официально поддерживает OBS / внешние кодировщики?</summary><p>Да — у CAM4 есть официальный OBS Guide на сайте поддержки, и платформа рекомендует опцию External Encoder. SplitCam использует тот же RTMP-путь.</p></details><details class="faq-item"><summary>Можно ли гео-блокировать эфир на CAM4?</summary><p>Да — у CAM4 есть встроенное гео-ограничение, чтобы скрыть эфир в некоторых странах. Настраивается на CAM4.</p></details><details class="faq-item"><summary>Где ключ трансляции CAM4?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>Какой битрейт для CAM4?</summary><p>Ниже, чем у большинства: приём CAM4 ограничивает видеобитрейт ~3000 Кбит/с при 30 fps и 1-секундном интервале ключевых кадров. В официальном OBS Guide CAM4 есть таблица по тесту скорости — выше ~3000 не нужно.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>

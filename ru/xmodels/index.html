@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Как вести трансляцию на XModels через SplitCam — гайд</title>
-<meta name="description" content="Вещание на XModels через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.">
+<meta name="description" content="Вещание на XModels через бесплатный SplitCam. Опция внешнего кодировщика в настройках модельного аккаунта. Сцены, накладки, без водяного знака.">
 <meta name="keywords" content="как вести трансляцию на xmodels, xmodels программа трансляции, xmodels rtmp">
 <link rel="canonical" href="https://NEWDOMAIN.com/ru/xmodels/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Как вести трансляцию на XModels через SplitCam — гайд">
-<meta property="og:description" content="Вещание на XModels через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.">
+<meta property="og:description" content="Вещание на XModels через бесплатный SplitCam. Опция внешнего кодировщика в настройках модельного аккаунта. Сцены, накладки, без водяного знака.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Как вести трансляцию на XModels через SplitCam",
-   "description": "Вещание на XModels через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.",
+   "description": "Вещание на XModels через бесплатный SplitCam. Опция внешнего кодировщика в настройках модельного аккаунта. Сцены, накладки, без водяного знака.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции XModels",
-     "text": "Войдите в XModels и откройте настройки вещания. Переключитесь на опцию внешний кодировщик / RTMP, чтобы увидеть URL сервера и ключ, скопируйте оба. Видео-гайд выше проходит текущий путь XModels."
+     "text": "В настройках модельного аккаунта XModels включите опцию вещания через внешний кодировщик. XModels выдаёт ключ трансляции — скопируйте его в SplitCam. Если опции или пути нет где ожидаете, поддержка XModels работает через FAQ-чат на сайте и info@xmodels.com; видео-гайд выше тоже показывает."
     },
     {
      "@type": "HowToStep",
@@ -79,7 +79,15 @@
      "name": "XModels поддерживает внешние кодировщики?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — XModels принимает RTMP/OBS-поток, так что SplitCam работает как кодировщик."
+      "text": "Да — в настройках модельного аккаунта есть опция вещания через внешний кодировщик с выдачей ключа, так что SplitCam работает."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Где получить помощь по XModels?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Поддержка XModels — через FAQ-чат на сайте и email info@xmodels.com; большого публичного хелп-центра нет."
      }
     },
     {
@@ -96,14 +104,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "3500–6000 Кбит/с для 1080p; проверьте аплоад."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно две камеры на XModels?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — добавьте несколько камер источниками сцены в SplitCam."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">XModels</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">XModels</span> через SplitCam</h1>
-  <p class="sub">XModels — кам-платформа. Через бесплатный <strong style='color:var(--text)'>SplitCam</strong> вы вещаете со сценами с несколькими камерами, накладками, фильтрами и AI-фоном вместо одной плоской камеры.</p>
+  <p class="sub">XModels — кам-платформа со встроенной <strong style='color:var(--text)'>опцией внешнего кодировщика</strong> в настройках модельного аккаунта. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> вещает на неё со сценами, накладками и фильтрами вместо одной плоской камеры.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,21 +245,21 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Вещание на XModels через SplitCam: установите SplitCam, соберите сцену, включите внешний кодировщик в XModels, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live. Смотрите видео-гайд выше.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ XModels.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на XModels через SplitCam: установите SplitCam, соберите сцену, в модельном аккаунте XModels включите опцию внешнего кодировщика, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Включите внешний кодировщик в настройках аккаунта XModels.</li><li>Вставьте URL и ключ в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/v-QUSgra5v8" title="Как вести трансляцию на XModels через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на XModels.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции XModels</div><p class="step-p">Войдите в XModels и откройте настройки вещания. Переключитесь на опцию <strong>внешний кодировщик / RTMP</strong>, чтобы увидеть URL сервера и ключ, скопируйте оба. Видео-гайд выше проходит текущий путь XModels.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к XModels</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ XModels в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на XModels. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на XModels.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции XModels</div><p class="step-p">В <strong>настройках модельного аккаунта</strong> XModels включите опцию <strong>вещания через внешний кодировщик</strong>. XModels выдаёт <strong>ключ трансляции</strong> — скопируйте его в SplitCam. Если опции или пути нет где ожидаете, поддержка XModels работает через FAQ-чат на сайте и <strong>info@xmodels.com</strong>; видео-гайд выше тоже показывает.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к XModels</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ XModels в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на XModels. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Смотрите видео-гайд</h3><p>Видео выше показывает актуальный путь к настройкам кодировщика XModels — интерфейсы со временем меняются.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Цели по токенам, ник и соцсети как слои сцены — базовая камера XModels так не умеет.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Опция в настройках аккаунта</h3><p>XModels помещает опцию внешнего кодировщика внутрь настроек модельного аккаунта, а не на отдельный экран вещания.</p></div><div class="tip-card"><h3>Поддержка — чат и email</h3><p>Большого публичного хелп-центра у XModels нет — FAQ-чат на сайте и info@xmodels.com это официальные каналы поддержки.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Цели по токенам, ник и соцсети как слои сцены — базовая камера XModels так не умеет.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>XModels поддерживает внешние кодировщики?</summary><p>Да — XModels принимает RTMP/OBS-поток, так что SplitCam работает как кодировщик.</p></details><details class="faq-item"><summary>SplitCam бесплатен для XModels?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для XModels?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details><details class="faq-item"><summary>Можно две камеры на XModels?</summary><p>Да — добавьте несколько камер источниками сцены в SplitCam.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>XModels поддерживает внешние кодировщики?</summary><p>Да — в настройках модельного аккаунта есть опция вещания через внешний кодировщик с выдачей ключа, так что SplitCam работает.</p></details><details class="faq-item"><summary>Где получить помощь по XModels?</summary><p>Поддержка XModels — через FAQ-чат на сайте и email info@xmodels.com; большого публичного хелп-центра нет.</p></details><details class="faq-item"><summary>SplitCam бесплатен для XModels?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для XModels?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>

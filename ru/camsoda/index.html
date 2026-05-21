@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Как вести трансляцию на CamSoda через SplitCam — гайд</title>
-<meta name="description" content="Вещание на CamSoda через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.">
-<meta name="keywords" content="как вести трансляцию на camsoda, camsoda live, camsoda программа трансляции, camsoda rtmp obs">
+<meta name="description" content="Вещание на CamSoda через бесплатный SplitCam. Кнопка Use OBS Broadcaster, официальный OBS-гайд в вики, региональные серверы. Без водяного знака.">
+<meta name="keywords" content="как вести трансляцию на camsoda, camsoda live, camsoda obs broadcaster, camsoda rtmp">
 <link rel="canonical" href="https://NEWDOMAIN.com/ru/camsoda/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Как вести трансляцию на CamSoda через SplitCam — гайд">
-<meta property="og:description" content="Вещание на CamSoda через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.">
+<meta property="og:description" content="Вещание на CamSoda через бесплатный SplitCam. Кнопка Use OBS Broadcaster, официальный OBS-гайд в вики, региональные серверы. Без водяного знака.">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   {
    "@type": "HowTo",
    "name": "Как вести трансляцию на CamSoda через SplitCam",
-   "description": "Вещание на CamSoda через бесплатный SplitCam — внешний кодировщик, сцены, накладки и фильтры. С видео-гайдом, без водяного знака.",
+   "description": "Вещание на CamSoda через бесплатный SplitCam. Кнопка Use OBS Broadcaster, официальный OBS-гайд в вики, региональные серверы. Без водяного знака.",
    "totalTime": "PT5M",
    "step": [
     {
@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции CamSoda",
-     "text": "Войдите в CamSoda и откройте настройки вещания. Выберите опцию OBS / внешний кодировщик, чтобы получить URL RTMP-сервера и ключ, скопируйте оба. Видео-гайд выше показывает точный путь меню CamSoda."
+     "text": "На странице Go Live CamSoda нажмите Use OBS Broadcaster. CamSoda покажет URL RTMP-сервера и ключ — скопируйте оба. Выберите ближайший региональный сервер (Северная Америка, Европа, Азия и т.д.). В вики CamSoda есть полный OBS-гайд, если нужны детали."
     },
     {
      "@type": "HowToStep",
@@ -76,10 +76,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "CamSoda поддерживает внешние кодировщики?",
+     "name": "CamSoda поддерживает OBS / внешние кодировщики?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — CamSoda принимает RTMP/OBS-поток, так что SplitCam работает как кодировщик."
+      "text": "Да — официально. На странице Go Live есть кнопка Use OBS Broadcaster и OBS-гайд в вики CamSoda, так что SplitCam работает."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Нужна ли верификация на CamSoda?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Чтобы вещать — нет. Чтобы получать чаевые — да: CamSoda требует сначала пройти заявку на верификацию."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Какое разрешение поддерживает CamSoda?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "До 1920×1080 при 30 fps, примерно 6000 Кбит/с максимум на RTMP-приёме."
      }
     },
     {
@@ -88,22 +104,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Да — бесплатно, без водяного знака, без лимита."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Какой битрейт для CamSoda?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p; проверьте аплоад."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно ли мультитранслировать CamSoda?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — SplitCam вещает на несколько кам-сайтов из одного кодирования."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">CamSoda</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">CamSoda</span> через SplitCam</h1>
-  <p class="sub">CamSoda — американская кам-платформа, известная необычными интерактивными форматами шоу. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает как её кодировщик — сцены, накладки, фильтры и аппаратное кодирование для более чистого, продуманного эфира.</p>
+  <p class="sub">CamSoda — американская кам-платформа, известная необычными интерактивными форматами шоу. Она официально поддерживает вещание через OBS — на странице Go Live есть кнопка <strong style='color:var(--text)'>Use OBS Broadcaster</strong> и официальный OBS-гайд в вики CamSoda. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> работает так же.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,21 +245,21 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Вещание на CamSoda через SplitCam: установите SplitCam, соберите сцену, включите OBS / внешний кодировщик в CamSoda, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live. Видео-гайд выше показывает путь.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ CamSoda.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на CamSoda через SplitCam: установите SplitCam, соберите сцену, нажмите Use OBS Broadcaster на странице Go Live CamSoda, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Нажмите Use OBS Broadcaster на CamSoda.</li><li>Вставьте URL и ключ в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/mCUrXWoTYXM" title="Как вести трансляцию на CamSoda через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CamSoda.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CamSoda</div><p class="step-p">Войдите в CamSoda и откройте настройки вещания. Выберите опцию <strong>OBS / внешний кодировщик</strong>, чтобы получить URL RTMP-сервера и ключ, скопируйте оба. Видео-гайд выше показывает точный путь меню CamSoda.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к CamSoda</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ CamSoda в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на CamSoda. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CamSoda.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CamSoda</div><p class="step-p">На странице <strong>Go Live</strong> CamSoda нажмите <strong>Use OBS Broadcaster</strong>. CamSoda покажет URL RTMP-сервера и ключ — скопируйте оба. Выберите ближайший региональный сервер (Северная Америка, Европа, Азия и т.д.). В вики CamSoda есть полный OBS-гайд, если нужны детали.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к CamSoda</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ CamSoda в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на CamSoda. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Смотрите видео-гайд</h3><p>Интерфейс вещания CamSoda удобнее освоить визуально — видео-гайд выше показывает актуальный путь к кодировщику.</p></div><div class="tip-card"><h3>Делайте шоу, а не просто камеру</h3><p>CamSoda поощряет необычные шоу — используйте сцены и накладки SplitCam, чтобы выделиться.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Пройдите верификацию для чаевых</h3><p>На CamSoda вещать может кто угодно, но чтобы получать чаевые, нужно пройти заявку на верификацию CamSoda.</p></div><div class="tip-card"><h3>Берите ближайший региональный сервер</h3><p>CamSoda даёт региональные серверы приёма — ближайший (СА / Европа / Азия / Южная Америка / Океания) снижает задержку и дропы кадров.</p></div><div class="tip-card"><h3>Потолок 1080p / 30 fps</h3><p>Приём CamSoda — примерно до 1080p, 30 fps и ~6000 Кбит/с — выше задирать не нужно.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>CamSoda поддерживает внешние кодировщики?</summary><p>Да — CamSoda принимает RTMP/OBS-поток, так что SplitCam работает как кодировщик.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CamSoda?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для CamSoda?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details><details class="faq-item"><summary>Можно ли мультитранслировать CamSoda?</summary><p>Да — SplitCam вещает на несколько кам-сайтов из одного кодирования.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>CamSoda поддерживает OBS / внешние кодировщики?</summary><p>Да — официально. На странице Go Live есть кнопка Use OBS Broadcaster и OBS-гайд в вики CamSoda, так что SplitCam работает.</p></details><details class="faq-item"><summary>Нужна ли верификация на CamSoda?</summary><p>Чтобы вещать — нет. Чтобы получать чаевые — да: CamSoda требует сначала пройти заявку на верификацию.</p></details><details class="faq-item"><summary>Какое разрешение поддерживает CamSoda?</summary><p>До 1920×1080 при 30 fps, примерно 6000 Кбит/с максимум на RTMP-приёме.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CamSoda?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>

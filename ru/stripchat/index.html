@@ -76,18 +76,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Как переключить Stripchat на внешний софт?",
+     "name": "Stripchat рекомендует OBS / внешний софт?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "В окне трансляции выберите Switch to external software, затем откройте настройки внешнего софта — там будет ключ."
+      "text": "Да — собственный FAQ Stripchat советует внешние программы вроде OBS «для лучшего качества видео и звука». SplitCam работает так же."
      }
     },
     {
      "@type": "Question",
-     "name": "Stripchat разрешает OBS / SplitCam?",
+     "name": "Как переключить Stripchat на внешний софт?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — режим external software принимает любой RTMP-кодировщик, включая SplitCam."
+      "text": "В Broadcast Center выберите Switch to External Broadcast Software (OBS), затем откройте настройки внешнего софта — там будет ключ (токен)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Какой битрейт для Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "RTMP-приём принимает до ~6000 Кбит/с при 2-секундном интервале ключевых кадров. 3500–6000 для 1080p оптимально — но нужен запас сильно выше минимума 2 Мбит/с, особенно при вещании через OBS."
      }
     },
     {
@@ -96,14 +104,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Да — бесплатно, без водяного знака, без лимитов."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Какой битрейт для Stripchat?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p; проверьте аплоад."
      }
     }
    ]
@@ -255,11 +255,11 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Ключ — это токен</h3><p>Ключ трансляции Stripchat это токен — копируйте точно, не делитесь, сбросьте при утечке.</p></div><div class="tip-card"><h3>Совпадение разрешения</h3><p>Stripchat рекомендует совпадение разрешения веб-камеры и трансляции — например, оба 1280×720.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Точно совпадайте по разрешению</h3><p>FAQ Stripchat предупреждает: разрешение в вашей программе должно точно совпадать с разрешением на сайте, иначе картинка пикселит. Ставьте одинаковое.</p></div><div class="tip-card"><h3>Помните про порог 2 Мбит/с</h3><p>Stripchat указывает 2 Мбит/с аплоада как минимум — и явно отмечает, что этого НЕ хватит для вещания через OBS или одновременной мультитрансляции. Берите с большим запасом.</p></div><div class="tip-card"><h3>Ключ — это токен</h3><p>Ключ трансляции Stripchat это токен — копируйте точно, не делитесь, сбросьте при утечке.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Как переключить Stripchat на внешний софт?</summary><p>В окне трансляции выберите Switch to external software, затем откройте настройки внешнего софта — там будет ключ.</p></details><details class="faq-item"><summary>Stripchat разрешает OBS / SplitCam?</summary><p>Да — режим external software принимает любой RTMP-кодировщик, включая SplitCam.</p></details><details class="faq-item"><summary>SplitCam бесплатен для Stripchat?</summary><p>Да — бесплатно, без водяного знака, без лимитов.</p></details><details class="faq-item"><summary>Какой битрейт для Stripchat?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Stripchat рекомендует OBS / внешний софт?</summary><p>Да — собственный FAQ Stripchat советует внешние программы вроде OBS «для лучшего качества видео и звука». SplitCam работает так же.</p></details><details class="faq-item"><summary>Как переключить Stripchat на внешний софт?</summary><p>В Broadcast Center выберите Switch to External Broadcast Software (OBS), затем откройте настройки внешнего софта — там будет ключ (токен).</p></details><details class="faq-item"><summary>Какой битрейт для Stripchat?</summary><p>RTMP-приём принимает до ~6000 Кбит/с при 2-секундном интервале ключевых кадров. 3500–6000 для 1080p оптимально — но нужен запас сильно выше минимума 2 Мбит/с, особенно при вещании через OBS.</p></details><details class="faq-item"><summary>SplitCam бесплатен для Stripchat?</summary><p>Да — бесплатно, без водяного знака, без лимитов.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>

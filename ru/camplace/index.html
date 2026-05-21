@@ -55,7 +55,7 @@
      "@type": "HowToStep",
      "position": 3,
      "name": "Получите ключ трансляции CamPlace",
-     "text": "Войдите в CamPlace и откройте настройки вещания. Переключитесь на внешний кодировщик / RTMP / OBS, чтобы увидеть URL сервера и ключ трансляции, скопируйте оба. Видео-гайд выше показывает точный путь в текущем интерфейсе CamPlace."
+     "text": "Войдите в CamPlace и откройте настройки вещания. Переключитесь на внешний кодировщик / RTMP / OBS, чтобы увидеть URL сервера и ключ трансляции, скопируйте оба. Официальной документации по OBS у CamPlace нет, поэтому видео-гайд выше — самый надёжный разбор текущего интерфейса."
     },
     {
      "@type": "HowToStep",
@@ -76,10 +76,18 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Есть ли у CamPlace официальный OBS-гайд?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Публичной статьи поддержки про внешние кодировщики не найдено. CamPlace принимает стандартный URL RTMP и ключ, так что SplitCam работает — следуйте видео-гайду выше для актуального пути."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "CamPlace поддерживает внешние кодировщики?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — CamPlace принимает RTMP-ключ, так что SplitCam работает как кодировщик."
+      "text": "Да — принимает стандартный RTMP-ключ, так что SplitCam подключается пользовательской RTMP-площадкой."
      }
     },
     {
@@ -96,14 +104,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "3500–6000 Кбит/с для 1080p; проверьте аплоад."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Можно две камеры на CamPlace?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Да — добавьте несколько камер источниками сцены в SplitCam и переключайтесь хоткеями."
      }
     }
    ]
@@ -237,7 +237,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <div class="hero-glow"></div>
   <span class="eyebrow">CamPlace</span>
   <h1 class="h1">Как вести трансляцию на <span class="accent">CamPlace</span> через SplitCam</h1>
-  <p class="sub">CamPlace — кам-платформа. Маршрут эфира через бесплатный <strong style='color:var(--text)'>SplitCam</strong> добавляет сцены с несколькими камерами, накладки, фильтры и AI-фон, которых нет у базовой браузерной камеры.</p>
+  <p class="sub">CamPlace — кам-платформа. Публичной статьи про OBS у неё нет, поэтому <strong style='color:var(--text)'>видео-гайд выше</strong> — основной ориентир. Бесплатный <strong style='color:var(--text)'>SplitCam</strong> подключается по стандартному RTMP и добавляет сцены, накладки и AI-фон, которых нет у базовой камеры.</p>
   <div class="hero-cta">
     <a href="#steps" class="btn-primary btn-lg">К шагам ↓</a>
   </div>
@@ -245,21 +245,21 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
-    <div class="qa-text">Вещание на CamPlace через SplitCam: установите SplitCam, соберите сцену, включите внешнее/RTMP-вещание в CamPlace, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live. Видео-гайд выше показывает путь.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ CamPlace.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
+    <div class="qa-text">Вещание на CamPlace через SplitCam: установите SplitCam, соберите сцену, включите внешнее/RTMP-вещание в CamPlace, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live. Следуйте видео-гайду выше для актуального пути.<ol><li>Установите SplitCam.</li><li>Добавьте камеру и сцену.</li><li>Получите RTMP-ключ CamPlace.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol></div>
   </div>
 </div>
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/1smUXVUzyAo" title="Как вести трансляцию на CamPlace через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CamPlace</div><p class="step-p">Войдите в CamPlace и откройте настройки вещания. Переключитесь на внешний кодировщик / RTMP / OBS, чтобы увидеть <strong>URL сервера</strong> и <strong>ключ трансляции</strong>, скопируйте оба. Видео-гайд выше показывает точный путь в текущем интерфейсе CamPlace.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к CamPlace</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ CamPlace в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на CamPlace. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настройте камеру и сцену</div><p class="step-p">Откройте SplitCam и добавьте веб-камеру. Соберите сцену как нужно — наложения, текст, вторая камера или телефон, бьюти-фильтры или AI-фон. Всё применяется в реальном времени до отправки потока.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CamPlace</div><p class="step-p">Войдите в CamPlace и откройте настройки вещания. Переключитесь на внешний кодировщик / RTMP / OBS, чтобы увидеть <strong>URL сервера</strong> и <strong>ключ трансляции</strong>, скопируйте оба. Официальной документации по OBS у CamPlace нет, поэтому <strong>видео-гайд выше</strong> — самый надёжный разбор текущего интерфейса.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Подключите SplitCam к CamPlace</div><p class="step-p">В SplitCam откройте <strong>Настройки трансляции</strong>, вставьте URL сервера и ключ CamPlace в поля custom RTMP. Битрейт: 3500–6000&nbsp;Кбит/с для 1080p, 2000–4000 для 720p. Сначала запустите встроенный тест скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите <strong>Go Live</strong> в SplitCam, затем запустите эфир на CamPlace. Через ~10 секунд камера в эфире. Следующие трансляции — в один клик.</p></div></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Смотрите видео-гайд</h3><p>Интерфейс CamPlace со временем меняется — видео-гайд выше показывает актуальный путь к настройкам кодировщика.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Цели по токенам, ник и соцсети как слои сцены — базовая камера CamPlace так не умеет.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Нет официального OBS-гайда — смотрите видео</h3><p>У CamPlace нет публичной статьи поддержки про внешние кодировщики; видео-гайд выше — ориентир по актуальному пути.</p></div><div class="tip-card"><h3>Стандартный RTMP работает</h3><p>Даже без документации CamPlace принимает стандартный URL RTMP-сервера и ключ — SplitCam подключается обычной пользовательской RTMP-площадкой.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Цели по токенам, ник и соцсети как слои сцены — базовая камера CamPlace так не умеет.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>CamPlace поддерживает внешние кодировщики?</summary><p>Да — CamPlace принимает RTMP-ключ, так что SplitCam работает как кодировщик.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CamPlace?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для CamPlace?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details><details class="faq-item"><summary>Можно две камеры на CamPlace?</summary><p>Да — добавьте несколько камер источниками сцены в SplitCam и переключайтесь хоткеями.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Есть ли у CamPlace официальный OBS-гайд?</summary><p>Публичной статьи поддержки про внешние кодировщики не найдено. CamPlace принимает стандартный URL RTMP и ключ, так что SplitCam работает — следуйте видео-гайду выше для актуального пути.</p></details><details class="faq-item"><summary>CamPlace поддерживает внешние кодировщики?</summary><p>Да — принимает стандартный RTMP-ключ, так что SplitCam подключается пользовательской RTMP-площадкой.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CamPlace?</summary><p>Да — бесплатно, без водяного знака, без лимита.</p></details><details class="faq-item"><summary>Какой битрейт для CamPlace?</summary><p>3500–6000 Кбит/с для 1080p; проверьте аплоад.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>

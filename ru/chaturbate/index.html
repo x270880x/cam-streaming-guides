@@ -79,7 +79,7 @@
      "name": "Chaturbate разрешает OBS / внешние кодировщики?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — Chaturbate выдаёт RTMP/OBS данные и токен в Broadcast Yourself, SplitCam работает как кодировщик."
+      "text": "Да — Chaturbate официально поддерживает внешние кодировщики и имеет свою статью «How do I set up OBS?». Включается через «Use External Encoder to Broadcast» в настройках вещания."
      }
     },
     {
@@ -92,10 +92,10 @@
     },
     {
      "@type": "Question",
-     "name": "SplitCam бесплатен для Chaturbate?",
+     "name": "Какое разрешение и fps поддерживает Chaturbate?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Да — полностью бесплатно, без водяного знака, без ограничения по времени."
+      "text": "RTMP-приём Chaturbate принимает до 3840×2160 (4K) и 60 fps с 2-секундным интервалом ключевых кадров — куда больше запаса, чем у большинства кам-платформ."
      }
     },
     {
@@ -103,7 +103,7 @@
      "name": "Какой битрейт для Chaturbate?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "3500–6000 Кбит/с для 1080p. Сначала проверьте аплоад тестом скорости SplitCam."
+      "text": "3500–6000 Кбит/с для 1080p достаточно. Потолок Chaturbate очень высокий, так что реальный предел — ваш аплоад; проверьте его тестом скорости SplitCam."
      }
     }
    ]
@@ -255,11 +255,11 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <section class="section">
   <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Токен — это ключ</h3><p>Chaturbate использует broadcast-токен вместо обычного ключа трансляции. Берегите как пароль, сбросьте если утёк.</p></div><div class="tip-card"><h3>Рекомендованный пресет SplitCam</h3><p>Гайд Chaturbate указывает на рекомендованный пресет — авто-настройки SplitCam ему соответствуют, вручную крутить почти не надо.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Токен — это ключ</h3><p>Chaturbate использует broadcast-токен вместо обычного ключа трансляции. Берегите как пароль, сбросьте если утёк.</p></div><div class="tip-card"><h3>Большой запас по качеству</h3><p>RTMP-приём Chaturbate принимает до 4K, 60 fps и очень высокий битрейт — качество ограничивает ваш аплоад, а не платформа. Интервал ключевых кадров — 2 секунды.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Ethernet надёжнее Wi-Fi для долгого эфира — обрыв кадра это потерянный токен. Протяните кабель к стрим-ПК.</p></div><div class="tip-card"><h3>Сначала приватный тест</h3><p>Короткая тестовая трансляция проверит камеру, звук, кадрирование и накладки до открытия комнаты.</p></div></div>
 </section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Chaturbate разрешает OBS / внешние кодировщики?</summary><p>Да — Chaturbate выдаёт RTMP/OBS данные и токен в Broadcast Yourself, SplitCam работает как кодировщик.</p></details><details class="faq-item"><summary>Где ключ трансляции Chaturbate?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Ключ — это broadcast-токен.</p></details><details class="faq-item"><summary>SplitCam бесплатен для Chaturbate?</summary><p>Да — полностью бесплатно, без водяного знака, без ограничения по времени.</p></details><details class="faq-item"><summary>Какой битрейт для Chaturbate?</summary><p>3500–6000 Кбит/с для 1080p. Сначала проверьте аплоад тестом скорости SplitCam.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Chaturbate разрешает OBS / внешние кодировщики?</summary><p>Да — Chaturbate официально поддерживает внешние кодировщики и имеет свою статью «How do I set up OBS?». Включается через «Use External Encoder to Broadcast» в настройках вещания.</p></details><details class="faq-item"><summary>Где ключ трансляции Chaturbate?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Ключ — это broadcast-токен.</p></details><details class="faq-item"><summary>Какое разрешение и fps поддерживает Chaturbate?</summary><p>RTMP-приём Chaturbate принимает до 3840×2160 (4K) и 60 fps с 2-секундным интервалом ключевых кадров — куда больше запаса, чем у большинства кам-платформ.</p></details><details class="faq-item"><summary>Какой битрейт для Chaturbate?</summary><p>3500–6000 Кбит/с для 1080p достаточно. Потолок Chaturbate очень высокий, так что реальный предел — ваш аплоад; проверьте его тестом скорости SplitCam.</p></details></div>
 </section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
