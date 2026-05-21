@@ -10,6 +10,7 @@ adult = revenue, so it gets its own domain + 301 redirects, not deletion).
 - **Local folder:** `/Users/splitcam/Documents/Дизайны/SplitCam/SPLITCAM DEV./cam-streaming-guides/`
 - **GitHub repo:** `x270880x/cam-streaming-guides`
 - **Live (staging):** https://x270880x.github.io/cam-streaming-guides/
+- **Production domain:** `camstreamguide.com` (registered; not yet connected to hosting).
 - Sister project: the main SplitCam site (`../splitcam/`).
 
 ## Current state

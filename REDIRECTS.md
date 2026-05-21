@@ -2,7 +2,7 @@
 *Created 2026-05-21. Goes into splitcam.com's `.htaccess` (Apache/WordPress).*
 
 ## Before using this
-1. Replace `camstreamguide.com` everywhere with the real domain once registered.
+1. Target domain is `camstreamguide.com` (registered 2026-05). The placeholder has already been substituted below.
 2. Build the consolidated pages on the new domain FIRST (one page per platform). Don't 301 to URLs that 404.
 3. Each platform = ONE page on the new domain. Multiple old splitcam.com URLs (start + video-tutorials + blog) collapse into it — this also fixes the existing self-cannibalization.
 4. Language preserved: EN → `/slug/`, RU → `/ru/slug/`, ES → `/es/slug/`.
