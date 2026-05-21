@@ -425,7 +425,7 @@ def render(p, lang, all_platforms):
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">{u['quick']}</div>
-    <div class="qa-text">{d['quick']}</div>
+    <div class="qa-text">{d['quick'].split('<ol>')[0]}</div>
   </div>
 </div>
 {video_section}
@@ -495,7 +495,7 @@ def render_hub(platforms, lang):
     hub_depth = "../" if u["path"] else ""
     avail = [p for p in platforms if lang in p]
     # hub display order: these first, then the rest in natural order
-    first = ["multistream-cams", "camsoda", "lovense", "onlyfans", "mfc-alerts"]
+    first = ["multistream-cams", "onlyfans", "mfc-alerts", "lovense"]
     ordered = ([p for s in first for p in avail if p["slug"] == s]
                + [p for p in avail if p["slug"] not in first])
     cards = "".join(
