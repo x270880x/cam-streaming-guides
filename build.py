@@ -290,7 +290,7 @@ def render(p, lang, all_platforms):
   <ul class="nav-links">
     <li><a href="{home}">{u['home']}</a></li>
   </ul>
-  <a href="{e(DOWNLOAD_URL)}" class="btn-primary" target="_blank" rel="noopener">⬇ {u['download']}</a>
+  <a href="{e(DOWNLOAD_URL)}" class="btn-primary" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
 </nav>
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(name)}</span>
@@ -301,7 +301,7 @@ def render(p, lang, all_platforms):
   <h1 class="h1">{d['h1html']}</h1>
   <p class="sub">{d['intro']}</p>
   <div class="hero-cta">
-    <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="noopener">⬇ {u['download']}</a>
+    <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
     <a href="#steps" class="btn-ghost btn-lg">{u['skip']} ↓</a>
   </div>
 </section>
@@ -330,7 +330,7 @@ def render(p, lang, all_platforms):
 <section class="cta-block">
   <h2>{u['cta_h']}</h2>
   <p>{u['cta_p']}</p>
-  <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="noopener">⬇ {u['download']}</a>
+  <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
 </section>
 <footer>
   <div class="footer-inner">
@@ -396,7 +396,7 @@ def render_hub(platforms, lang):
 <nav>
   <a class="nav-logo" href="./"><span class="dot"></span>{SITE_NAME}</a>
   <ul class="nav-links"><li><a href="./">{u['home']}</a></li></ul>
-  <a href="{e(DOWNLOAD_URL)}" class="btn-primary" target="_blank" rel="noopener">⬇ {u['download']}</a>
+  <a href="{e(DOWNLOAD_URL)}" class="btn-primary" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
 </nav>
 <section class="hero" style="padding-top:96px">
   <div class="hero-glow"></div>
