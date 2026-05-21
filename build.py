@@ -69,14 +69,21 @@ margin-bottom:18px;max-width:760px;position:relative;z-index:1}
 .sub{font-size:18px;color:var(--text-sub);max-width:660px;line-height:1.55;
 margin-bottom:26px;position:relative;z-index:1}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
-.hero-inner{display:grid;grid-template-columns:1fr 270px;gap:36px;align-items:center;position:relative;z-index:1}
-.collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
-.collab-badge{font-weight:800;font-size:18px;color:#fff;padding:11px 18px;border-radius:11px;letter-spacing:-.3px;line-height:1.2;max-width:100%;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-.collab-x{font-size:17px;color:var(--text-dim);font-weight:700;line-height:1}
-.collab-sc{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:11px;background:rgba(255,255,255,.05);border:1px solid var(--app-border)}
-.collab-sc img{display:block;width:26px;height:26px}
-.collab-sc span{font-size:18px;font-weight:700;letter-spacing:.3px}
-.collab-label{margin-top:3px;font-size:11px;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+.hero-inner{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center;position:relative;z-index:1}
+.collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.collab-flow{display:flex;align-items:center;justify-content:center}
+.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);white-space:nowrap;display:flex;align-items:center;gap:7px;line-height:1.1}
+.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2)}
+.collab-sc img{display:block;width:23px;height:23px}
+.collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
+.collab-logo{display:block;height:21px;width:auto;max-width:118px}
+.collab-wire{width:46px;height:4px;position:relative;flex-shrink:0;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.16))}
+.collab-dot{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 13px 2px var(--blue);transform:translateY(-50%);animation:collabflow 1.7s cubic-bezier(.55,0,.45,1) infinite}
+@keyframes collabflow{0%{left:-3px;opacity:0}14%{opacity:1}80%{opacity:1}100%{left:37px;opacity:0}}
+.collab-plat{position:relative}
+.collab-plat::after{content:"";position:absolute;inset:0;border-radius:13px;animation:collabrecv 1.7s ease-in-out infinite}
+@keyframes collabrecv{0%,52%{box-shadow:0 0 0 0 rgba(255,255,255,0)}70%{box-shadow:0 0 0 5px rgba(255,255,255,.25)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+.collab-label{font-size:11px;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
 .section{padding:40px 40px;max-width:900px;margin:0 auto}
 .sec-h{font-size:30px;font-weight:700;letter-spacing:-.9px;line-height:1.15;margin-bottom:16px}
 .sec-p{font-size:16px;color:var(--text-sub);line-height:1.7;margin-bottom:26px;max-width:680px}
@@ -277,6 +284,18 @@ def shot_for(slug, n, depth, caption):
     return ""
 
 
+LOGO_EXTS = ("svg", "png", "webp")
+
+
+def platform_logo(slug, depth, name):
+    """Official platform logo if dropped in logos/<slug>.<ext>, else the name as text.
+    Drop a logo file and it replaces the wordmark automatically on rebuild."""
+    for ext in LOGO_EXTS:
+        if (ROOT / "logos" / f"{slug}.{ext}").exists():
+            return f'<img class="collab-logo" src="{depth}logos/{slug}.{ext}" alt="{e(name)}">'
+    return e(name)
+
+
 def lang_switch(cur, depth, slug=None):
     """Language switcher. slug set -> platform pages; slug None -> hub pages."""
     items = []
@@ -394,9 +413,11 @@ def render(p, lang, all_platforms):
       </div>
     </div>
     <div class="collab" aria-hidden="true">
-      <div class="collab-badge" style="background:{brand}">{e(name)}</div>
-      <div class="collab-x">&times;</div>
-      <div class="collab-sc"><img src="{depth}assets/splitcam.png" alt="SplitCam" width="26" height="26"><span>splitcam</span></div>
+      <div class="collab-flow">
+        <div class="collab-pill collab-sc"><img src="{depth}assets/splitcam.png" alt=""><span>splitcam</span></div>
+        <div class="collab-wire"><div class="collab-dot"></div></div>
+        <div class="collab-pill collab-plat" style="background:{brand}">{platform_logo(p["slug"], depth, name)}</div>
+      </div>
       <div class="collab-label">{COLLAB_LABEL[lang]}</div>
     </div>
   </div>

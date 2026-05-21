@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Collab — refined B & C</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --app-base:#141420;--app-panel:#1c1c2e;--app-surface:#22223a;
+  --app-border:rgba(255,255,255,.08);--app-border2:rgba(255,255,255,.14);
+  --blue:#2878fc;--purple:#9c5bff;--text:#eeeeff;--text-sub:#9090bb;--text-dim:#50506a;
+}
+body{font-family:'Geist',sans-serif;background:var(--app-base);color:var(--text);
+  padding:46px 32px 80px;-webkit-font-smoothing:antialiased}
+h1{font-size:28px;font-weight:800;letter-spacing:-1px;margin-bottom:8px;text-align:center}
+.lede{text-align:center;color:var(--text-sub);font-size:14px;margin-bottom:40px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;max-width:900px;margin:0 auto}
+.opt{background:var(--app-panel);border:1px solid var(--app-border);border-radius:18px;
+  padding:30px 26px;display:flex;flex-direction:column;align-items:center}
+.opt-tag{font-size:11.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.opt-name{font-size:18px;font-weight:700;letter-spacing:-.3px;margin:5px 0 8px}
+.opt-desc{font-size:12.5px;color:var(--text-sub);text-align:center;line-height:1.55;
+  margin-bottom:8px;max-width:300px}
+.stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;
+  min-height:230px;padding:14px 0}
+
+/* shared SplitCam wordmark */
+.sc-word{display:flex;align-items:center;gap:7px;font-weight:700}
+.sc-word img{display:block}
+
+/* ===== VARIANT B — overlapping tiles ===== */
+.vB{display:flex;flex-direction:column;align-items:center;gap:18px}
+.vB-row{display:flex;align-items:center;justify-content:center}
+.vB .tile{width:112px;height:112px;border-radius:28px;display:flex;align-items:center;
+  justify-content:center;box-shadow:0 16px 34px rgba(0,0,0,.5)}
+.vB .tile-p{transform:rotate(-9deg);font-weight:800;font-size:46px;color:#fff}
+.vB .tile-p img{width:66px;height:66px;object-fit:contain}
+.vB .tile-s{margin-left:-26px;background:linear-gradient(160deg,#2a2a44,#16161f);
+  transform:rotate(9deg);position:relative;z-index:2}
+.vB .tile-s img{width:60px;height:60px}
+.vB .ring{position:absolute;inset:-3px;border-radius:31px;z-index:-1;
+  background:linear-gradient(135deg,var(--blue),var(--purple))}
+.vB .cap{font-size:15px;font-weight:700;letter-spacing:-.2px}
+.vB .cap .x{color:var(--text-dim);margin:0 7px;font-weight:600}
+.vB .cap .cs{color:var(--text-sub)}
+
+/* ===== VARIANT C — linked, signal flows platform -> SplitCam ===== */
+.vC{display:flex;align-items:center;justify-content:center}
+.vC .pill{padding:14px 20px;border-radius:14px;font-weight:800;font-size:17px;color:#fff;
+  box-shadow:0 12px 26px rgba(0,0,0,.4);white-space:nowrap;display:flex;align-items:center;gap:9px}
+.vC .pill-p img{width:24px;height:24px;object-fit:contain}
+.vC .pill-s{background:linear-gradient(150deg,#26263f,#16161f);
+  border:1px solid var(--app-border2)}
+.vC .pill-s img{width:25px;height:25px}
+.vC .pill-s span{font-size:18px;color:var(--text)}
+.vC .wire{width:78px;height:4px;position:relative;
+  background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.16))}
+.vC .wire .dot{position:absolute;top:50%;width:13px;height:13px;border-radius:50%;
+  background:var(--blue);box-shadow:0 0 14px 2px var(--blue);
+  transform:translateY(-50%);animation:flowC 1.7s cubic-bezier(.55,0,.45,1) infinite}
+@keyframes flowC{
+  0%{left:-2px;opacity:0}
+  15%{opacity:1}
+  80%{opacity:1}
+  100%{left:68px;opacity:0}
+}
+.vC .pill-s{position:relative}
+.vC .pill-s::after{content:"";position:absolute;inset:0;border-radius:14px;
+  box-shadow:0 0 0 0 rgba(40,120,252,.5);animation:absorb 1.7s ease-in-out infinite}
+@keyframes absorb{0%,55%{box-shadow:0 0 0 0 rgba(40,120,252,0)}
+  72%{box-shadow:0 0 0 5px rgba(40,120,252,.28)}
+  100%{box-shadow:0 0 0 9px rgba(40,120,252,0)}}
+
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>Collab — refined: B &amp; C</h1>
+<p class="lede">Shown for <strong>Chaturbate</strong>. SplitCam = real official logo. Platform =
+its official logo once you drop <code>logos/chaturbate.svg</code> in — until then a clean
+initial (B) or wordmark (C). Pick B or C.</p>
+
+<div class="grid">
+
+  <!-- B -->
+  <div class="opt">
+    <div class="opt-tag">Variant B</div>
+    <div class="opt-name">Overlapping tiles</div>
+    <div class="opt-desc">Two app-style tiles tilted into each other. SplitCam in front with a
+      gradient ring. Name lockup underneath — never clips, any platform name fits.</div>
+    <div class="stage">
+      <div class="vB">
+        <div class="vB-row">
+          <div class="tile tile-p" style="background:linear-gradient(150deg,#f5871f,#d96d00)">C</div>
+          <div class="tile tile-s"><div class="ring"></div><img src="assets/splitcam.png" alt=""></div>
+        </div>
+        <div class="cap">Chaturbate <span class="x">&times;</span> <span class="cs">SplitCam</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="opt">
+    <div class="opt-tag">Variant C</div>
+    <div class="opt-name">Linked &mdash; signal flows in</div>
+    <div class="opt-desc">Platform pill on the left, SplitCam on the right. A glowing dot
+      travels <strong>from the platform into SplitCam</strong>, which pulses as it "receives"
+      the signal. Pills fit any name length.</div>
+    <div class="stage">
+      <div class="vC">
+        <div class="pill pill-p" style="background:linear-gradient(135deg,#f5871f,#d96d00)">Chaturbate</div>
+        <div class="wire"><div class="dot"></div></div>
+        <div class="pill pill-s sc-word"><img src="assets/splitcam.png" alt=""><span>splitcam</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
