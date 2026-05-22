@@ -24,6 +24,20 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">Chaturbate</span> with SplitCam',
         "h1short": "Stream on Chaturbate",
         "card": "Token-based external encoder setup for Chaturbate.",
+        "steps": [
+            None,
+            ("Build a multi-camera scene", "Add your webcam in SplitCam, then layer in a "
+             "second camera or your phone, overlays and beauty or AI-background filters. "
+             "Chaturbate's broadcaster shows one flat camera — your composed scene replaces "
+             "it."),
+            None,
+            ("Paste the token into SplitCam", "Open Stream Settings and paste the broadcast "
+             "token into the custom RTMP key field. Chaturbate has huge headroom — set 1080p "
+             "at 3,500–6,000 Kbps with a 2-second keyframe."),
+            ("Go Live", "Press Go Live in SplitCam — your scene reaches the room in about 10 "
+             "seconds. Chaturbate's low-latency delivery keeps tips and reactions in sync "
+             "with what you do."),
+        ],
         "intro": "Chaturbate is one of the biggest cam platforms, built on a token economy. Its "
                  "browser broadcaster is a single plain camera — routing through the "
                  "<strong style='color:var(--text)'>external encoder</strong> option with free "
@@ -81,6 +95,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">CAM4</span> with SplitCam',
         "h1short": "Stream on CAM4",
         "card": "External Encoder setup for CAM4, with geo-controls.",
+        "steps": [
+            None,
+            ("Set up your scene and geo-blocking", "Add your webcam and overlays in SplitCam, "
+             "and decide on CAM4 which countries to hide your show from before you start."),
+            None,
+            ("Paste the CAM4 stream key", "Paste the key into SplitCam's Stream Settings — a "
+             "green slider confirms it. Keep the bitrate near 3,000 Kbps; CAM4's ingest caps "
+             "lower than most sites."),
+            ("Go Live", "Press Go Live in SplitCam, then start the broadcast on CAM4. Watch "
+             "that the slider stays green — red means re-check the key."),
+        ],
         "intro": "CAM4 is a global cam-and-earn platform with built-in geo-controls — you can "
                  "hide your broadcast in chosen countries. Streaming through free "
                  "<strong style='color:var(--text)'>SplitCam</strong> as the external encoder "
@@ -134,6 +159,18 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">BongaCams</span> with SplitCam',
         "h1short": "Stream on BongaCams",
         "card": "External Encoder setup for BongaCams.",
+        "steps": [
+            None,
+            ("Match the scene resolution", "Add your webcam and overlays in SplitCam, and set "
+             "the same resolution BongaCams uses — e.g. 1280×720 on both sides — so the "
+             "picture isn't rescaled."),
+            None,
+            ("Paste the BongaCams URL and key", "Paste the server URL and stream key into "
+             "SplitCam's custom RTMP fields. If BongaCams never showed an External Encoder "
+             "button, contact support to enable it first."),
+            ("Go Live", "Press Go Live in SplitCam to start broadcasting to BongaCams. Do a "
+             "short private test first to confirm camera and audio."),
+        ],
         "intro": "BongaCams is a global cam platform. External-encoder streaming there isn't "
                  "always on by default — once it's enabled, free "
                  "<strong style='color:var(--text)'>SplitCam</strong> drives the broadcast with "
@@ -184,6 +221,18 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">Stripchat</span> with SplitCam',
         "h1short": "Stream on Stripchat",
         "card": "External-software setup for Stripchat broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene at the site resolution", "Add your webcam, overlays and "
+             "filters in SplitCam. Set SplitCam's resolution to exactly match the one chosen "
+             "on Stripchat, or the video pixelates."),
+            None,
+            ("Paste the Stripchat token", "Paste the token-based stream key into SplitCam's "
+             "RTMP key field. Stay well above Stripchat's 2 Mbps minimum — aim for "
+             "3,500–6,000 Kbps at 1080p."),
+            ("Go Live", "Press Go Live in SplitCam, then click Start Show on Stripchat — "
+             "switching to external software alone doesn't make you public."),
+        ],
         "intro": "Stripchat is a large, interactivity-focused cam platform. Its <em>external "
                  "software</em> mode hands you a token-based key — feed it into free "
                  "<strong style='color:var(--text)'>SplitCam</strong> to broadcast with scenes, "
@@ -310,6 +359,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">CamPlace</span> with SplitCam',
         "h1short": "Stream on CamPlace",
         "card": "External encoder setup for CamPlace broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam in SplitCam and layer in overlays, a second "
+             "camera and filters — extras CamPlace's basic broadcaster can't produce."),
+            None,
+            ("Paste the CamPlace server URL and key", "Paste both into SplitCam's custom RTMP "
+             "fields. CamPlace publishes no encoder specs, so follow the video guide above "
+             "and let the speed test set your bitrate."),
+            ("Go Live", "Press Go Live in SplitCam to start the CamPlace broadcast. Run a "
+             "short private test first, since there are no official docs to fall back on."),
+        ],
         "intro": "CamPlace is a cam-streaming platform. It has no public OBS help article, so "
                  "the <strong style='color:var(--text)'>video guide above</strong> is the "
                  "reference — free <strong style='color:var(--text)'>SplitCam</strong> connects "
@@ -362,6 +422,18 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">CamSoda</span> with SplitCam',
         "h1short": "Stream on CamSoda",
         "card": "External encoder setup for CamSoda broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and filters in SplitCam. CamSoda "
+             "is known for interactive show formats — overlays for goals and games fit well "
+             "here."),
+            None,
+            ("Paste the CamSoda server URL and key", "Paste both into SplitCam, choosing the "
+             "regional CamSoda server (NA, Europe, Asia, etc.) nearest you. Cap quality at "
+             "1080p/30 fps, ~6,000 Kbps."),
+            ("Go Live", "Press Go Live in SplitCam to broadcast to CamSoda. Note you must "
+             "finish CamSoda's verification before you can receive tips."),
+        ],
         "intro": "CamSoda is a US cam platform known for novel, interactive show formats. It "
                  "officially supports OBS-style broadcasting — there's a "
                  "<strong style='color:var(--text)'>Use OBS Broadcaster</strong> button on the "
@@ -417,6 +489,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">Streamate</span> with SplitCam',
         "h1short": "Stream on Streamate",
         "card": "Streamate is a built-in SplitCam channel — quick setup.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and filters in SplitCam before "
+             "you fetch the key."),
+            None,
+            ("Add Streamate as a channel", "In SplitCam open Stream Settings → Add Channel, "
+             "pick Streamate from the built-in list and paste the SM Connect key — no manual "
+             "RTMP URL needed. Lock the resolution to 1080p."),
+            ("Go Live", "Press Go Live in SplitCam — a green slider confirms the connection. "
+             "The feed is adaptive, so a lower bitrate on a still shot is normal."),
+        ],
         "intro": "Streamate is an established cam platform — and it's one of the destinations "
                  "<strong style='color:var(--text)'>pre-configured inside SplitCam</strong>'s "
                  "channel list, so setup is quicker than a manual RTMP entry: pick Streamate, "
@@ -469,6 +552,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">StreamRay</span> with SplitCam',
         "h1short": "Stream on StreamRay",
         "card": "URL-from-chat external encoder setup for StreamRay.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam and overlays in SplitCam before you enable "
+             "StreamRay's OBS Broadcaster."),
+            None,
+            ("Paste the StreamRay URL — leave the key empty", "Copy the stream URL StreamRay "
+             "posts in the chat window into SplitCam's server field. StreamRay authenticates "
+             "by URL only, so leave the stream-key field empty."),
+            ("Go Live", "Press Go Live in SplitCam to start broadcasting to StreamRay. Test "
+             "privately first to confirm the URL pasted correctly."),
+        ],
         "intro": "StreamRay has an unusual external-encoder setup — it hands you the stream URL "
                  "inside the <strong style='color:var(--text)'>broadcast chat window</strong> "
                  "and uses no separate stream key. Free "
@@ -519,6 +613,16 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">XLoveCam</span> with SplitCam',
         "h1short": "Stream on XLoveCam",
         "card": "RTMP link + key setup for XLoveCam broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and a clear text overlay in your "
+             "language — XLoveCam's audience is European and multilingual."),
+            None,
+            ("Paste the XLoveCam link and key", "Copy both the RTMP link and the separate "
+             "stream key from My Account → settings into SplitCam. Pick the regional server "
+             "nearest you to cut latency."),
+            ("Go Live", "Press Go Live in SplitCam, then use Start your show on XLoveCam."),
+        ],
         "intro": "XLoveCam is a European, multilingual cam platform. Its account settings expose "
                  "both an <strong style='color:var(--text)'>RTMP link</strong> and a "
                  "<strong style='color:var(--text)'>stream key</strong> — free "
@@ -570,6 +674,16 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">SoulCams</span> with SplitCam',
         "h1short": "Stream on SoulCams",
         "card": "OBS-settings setup for SoulCams broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and filters in SplitCam, and "
+             "decide on SoulCams which countries to block before going online."),
+            None,
+            ("Paste the SoulCams server and key", "From SoulCams' OBS settings, copy the "
+             "RTMP server and key — shown together — into SplitCam's custom RTMP fields."),
+            ("Go Live", "Press Go Live in SplitCam to broadcast to SoulCams. The OBS details "
+             "only appear after Go Online, so do that first."),
+        ],
         "intro": "SoulCams is a cam platform whose OBS settings show the "
                  "<strong style='color:var(--text)'>RTMP server and stream key together</strong> "
                  "in one window. Drop both into free "
@@ -681,6 +795,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">VXLive</span> with SplitCam',
         "h1short": "Stream on VXLive",
         "card": "External encoder setup for VXLive broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam and overlays in SplitCam — a German title "
+             "or text overlay suits VXLive's largely German-speaking audience."),
+            None,
+            ("Use the VISIT-X preset", "In SplitCam pick VISIT-X from the platform list and "
+             "paste the server URL and key VXLive gives you under \"Stream with third-party "
+             "software\"."),
+            ("Go Live in two steps", "Press Go Live in SplitCam first, then click GO ONLINE "
+             "in VXLive — both, in that order."),
+        ],
         "intro": "VXLive (VXModels / VISIT-X) is a German-market cam platform — and one of the "
                  "few that <strong style='color:var(--text)'>officially supports SplitCam by "
                  "name</strong>. VXModels has a dedicated help article on connecting "
@@ -737,6 +862,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">VirtWish</span> with SplitCam',
         "h1short": "Stream on VirtWish",
         "card": "Stream URL + key setup for VirtWish broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and filters in SplitCam before "
+             "opening VirtWish's broadcast settings."),
+            None,
+            ("Paste the VirtWish URL and key", "Copy the link from the first line of "
+             "VirtWish's OBS section into SplitCam's Stream URL field, and the Stream Key "
+             "into the key field separately."),
+            ("Go Live", "Press Go Live in SplitCam to start the VirtWish broadcast. Test "
+             "privately first to confirm the URL and key landed correctly."),
+        ],
         "intro": "VirtWish is an interactive cam platform. Its broadcast settings give you a "
                  "<strong style='color:var(--text)'>stream URL and a separate stream key</strong> "
                  "in an OBS section — free <strong style='color:var(--text)'>SplitCam</strong> "
@@ -786,6 +922,17 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">XModels</span> with SplitCam',
         "h1short": "Stream on XModels",
         "card": "External encoder setup for XModels broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and filters in SplitCam — extras "
+             "XModels' basic camera can't add."),
+            None,
+            ("Paste the XModels key", "Enable the external-encoder option in your XModels "
+             "model account settings and paste the stream key into SplitCam. If the option "
+             "isn't where expected, XModels' FAQ chat and info@xmodels.com can help."),
+            ("Go Live", "Press Go Live in SplitCam, then start the broadcast in your XModels "
+             "account."),
+        ],
         "intro": "XModels is a cam-streaming platform with an in-product "
                  "<strong style='color:var(--text)'>external-encoder option</strong> in the "
                  "model account settings. Free <strong style='color:var(--text)'>SplitCam</strong> "
@@ -835,6 +982,16 @@ PLATFORMS_EN = [
         "h1html": 'How to stream on <span class="accent">Flirt4Free</span> with SplitCam',
         "h1short": "Stream on Flirt4Free",
         "card": "External encoder setup for Flirt4Free broadcasts.",
+        "steps": [
+            None,
+            ("Build your scene", "Add your webcam, overlays and filters in SplitCam."),
+            None,
+            ("Paste the Flirt4Free URL and Stream Name", "From the External Broadcast Form, "
+             "copy the RTMP URL and the Stream Name into SplitCam's server and key fields, "
+             "and set the same resolution and bitrate on the form as in SplitCam."),
+            ("Go Live", "Press Go Live in SplitCam, then start your show from the Flirt4Free "
+             "model area."),
+        ],
         "intro": "Flirt4Free is one of the longest-running cam platforms, online since the "
                  "1990s. It officially supports external broadcasting through an "
                  "<strong style='color:var(--text)'>External Broadcast Form</strong> — free "

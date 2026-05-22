@@ -231,15 +231,22 @@ STEP_TMPL = {
 
 
 def build_steps(p, lang):
-    """Build the 5-step list for a platform. Data may override via d['steps']."""
+    """Build the 5-step list for a platform.
+
+    d['steps'] may override the shared template. It can be a full list of
+    (head, body) tuples, or a list where some entries are None — a None entry
+    falls back to the shared template, so a platform can customise only the
+    steps that differ and keep generic ones (install, key) shared."""
     d = p[lang]
-    if d.get("steps"):
-        return d["steps"]
+    custom = d.get("steps")
     name = p["name"]
     out = []
-    for head, body in STEP_TMPL[lang]:
-        out.append((head.replace("{name}", name),
-                    body.replace("{name}", name).replace("{key}", d.get("key_how", ""))))
+    for idx, (head, body) in enumerate(STEP_TMPL[lang]):
+        if custom and idx < len(custom) and custom[idx]:
+            out.append(custom[idx])
+        else:
+            out.append((head.replace("{name}", name),
+                        body.replace("{name}", name).replace("{key}", d.get("key_how", ""))))
     return out
 
 
