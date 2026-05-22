@@ -159,6 +159,18 @@ border-radius:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:6
 background:transparent;color:var(--text);border:1px solid var(--app-border2);
 font-size:13px;font-weight:600;transition:all .15s}
 .btn-lg{padding:13px 24px;font-size:14px;border-radius:10px}
+.dl{position:relative;display:inline-block}
+.dl>summary{list-style:none;cursor:pointer}
+.dl>summary::-webkit-details-marker{display:none}
+.dl>summary::marker{content:""}
+.dl-caret{display:inline-block;font-size:11px;transition:transform .15s}
+.dl[open] .dl-caret{transform:rotate(180deg)}
+.dl-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;
+background:var(--app-surface);border:1px solid var(--app-border2);border-radius:12px;
+padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.dl-menu a{display:block;padding:11px 14px;border-radius:8px;font-size:14px;
+font-weight:600;color:var(--text);transition:background .12s}
+.dl-menu a:hover{background:var(--blue-dim)}
 .lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
 .lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
 .lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
@@ -278,7 +290,16 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
       <h1 class="h1">How to stream on <span class="accent">SoulCams</span> with SplitCam</h1>
       <p class="sub">SoulCams is a cam platform whose OBS settings show the <strong style='color:var(--text)'>RTMP server and stream key together</strong> in one window. Drop both into free <strong style='color:var(--text)'>SplitCam</strong> to broadcast with multi-camera scenes and overlays.</p>
       <div class="hero-cta">
-        <a href="#steps" class="btn-primary btn-lg">Skip to steps ↓</a>
+        <details class="dl">
+          <summary class="btn-primary btn-lg">⬇ Download SplitCam <span class="dl-caret">▾</span></summary>
+          <div class="dl-menu">
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">Windows</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">macOS</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">Android</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">iOS</a>
+          </div>
+        </details>
+        <a href="#steps" class="btn-ghost btn-lg">Skip to steps ↓</a>
       </div>
     </div>
     <div class="collab" aria-hidden="true">
