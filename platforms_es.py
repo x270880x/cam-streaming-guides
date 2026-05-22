@@ -43,7 +43,12 @@ PLATFORMS_ES = [
             ("Baja latencia por diseño", "Chaturbate entrega tu stream por HLS de baja latencia "
              "— unos 2–4 segundos de extremo a extremo —, así las propinas y reacciones de la "
              "audiencia van al ritmo de lo que haces en cámara."),
-            _T_ETH, _T_TEST,
+            ("Cable para el margen 4K", "Chaturbate acepta bitrates muy altos, así que "
+             "enviarás muchos datos — un enlace Ethernet por cable mantiene ese stream "
+             "estable donde el Wi-Fi perdería fotogramas."),
+            ("Prueba la sala en privado primero", "Chaturbate te deja emitir antes de salir "
+             "en público — haz una comprobación privada corta de cámara, audio y "
+             "superposiciones."),
         ],
         "faq": [
             ("¿Chaturbate permite OBS / codificadores externos?", "Sí — Chaturbate admite "
@@ -95,7 +100,11 @@ PLATFORMS_ES = [
              "fotograma clave de 1 segundo y el preset x264 veryfast/superfast con "
              "tune=zerolatency y B-frames a 0 — y recomienda activar «cambiar el bitrate "
              "dinámicamente». Haz primero el test de conexión en speedtest.xcdnpro.com."),
-            _T_ETH,
+            ("El cable gana al Wi-Fi en CAM4", "El ingest de CAM4 va por niveles según el "
+             "ancho de banda — un enlace por cable mantiene un nivel estable en vez de bajar "
+             "tu resolución en cada bajón de Wi-Fi."),
+            ("Prueba cámara y geo-ajustes", "Haz una emisión privada corta en CAM4 para "
+             "revisar cámara, audio y geo-restricciones antes de abrir la sala."),
         ],
         "faq": [
             ("¿CAM4 admite oficialmente OBS / codificadores externos?", "Sí — CAM4 tiene una "
@@ -139,7 +148,12 @@ PLATFORMS_ES = [
              "externa — si la opción falta en Broadcast settings, soporte debe activarla."),
             ("Iguala tu resolución", "BongaCams recomienda que la resolución de webcam y de "
              "emisión coincidan — por ejemplo, ambas a 1280×720."),
-            _T_ETH, _T_TEST,
+            ("Un fotograma perdido es una propina perdida", "En un show largo en BongaCams, "
+             "la inestabilidad del Wi-Fi te cuesta propinas — lleva un cable Ethernet al PC "
+             "de emisión."),
+            ("Prueba cuando soporte active la codificación", "Cuando BongaCams active la "
+             "codificación externa, haz una emisión privada corta para confirmar cámara, "
+             "audio y superposiciones."),
         ],
         "faq": [
             ("¿Por qué falta el botón External Encoder en BongaCams?", "La codificación externa "
@@ -151,8 +165,9 @@ PLATFORMS_ES = [
             ("¿Qué bitrate para BongaCams?", "El ingest RTMP de BongaCams limita el vídeo a "
              "unos 6.000 Kbps con fotograma clave de 2 segundos — 3.500–6.000 a 1080p es ideal; "
              "comprueba tu subida primero."),
-            ("¿SplitCam es gratis para BongaCams?", "Sí — gratis, sin marca de agua, sin "
-             "límites."),
+            ("¿SplitCam es gratis para BongaCams?", "Sí — totalmente gratis, sin marca de "
+             "agua ni límite de tiempo, así que el codificador nunca se come tus ingresos de "
+             "tokens en BongaCams ni limita la duración del show."),
         ],
     },
     {
@@ -187,7 +202,9 @@ PLATFORMS_ES = [
              "simultánea. Apunta muy por encima."),
             ("La clave es un token", "La clave de Stripchat es un token — cópiala exacta, no la "
              "compartas, reiníciala si se filtra."),
-            _T_ETH,
+            ("Por cable y muy por encima de 2 Mbps", "El mínimo de 2 Mbps de Stripchat no "
+             "basta para emitir con codificador — un enlace por cable más margen real sobre "
+             "ese mínimo mantienen el show fluido."),
         ],
         "faq": [
             ("¿Stripchat recomienda OBS / software externo?", "Sí — el propio FAQ de Stripchat "
@@ -199,8 +216,9 @@ PLATFORMS_ES = [
             ("¿Qué bitrate para Stripchat?", "Su ingest RTMP acepta hasta ~6.000 Kbps con "
              "fotograma clave de 2 segundos. 3.500–6.000 a 1080p es ideal — pero necesitas muy "
              "por encima del mínimo de 2 Mbps, sobre todo emitiendo con OBS."),
-            ("¿SplitCam es gratis para Stripchat?", "Sí — gratis, sin marca de agua, sin "
-             "límite."),
+            ("¿SplitCam es gratis para Stripchat?", "Sí — sin cuota de licencia, marca de "
+             "agua ni límite de tiempo, así que incluso los shows interactivos largos en "
+             "Stripchat no cuestan nada del lado del codificador."),
         ],
     },
     {
@@ -315,7 +333,9 @@ PLATFORMS_ES = [
              "RTMP estándar y una clave — SplitCam conecta como destino RTMP personalizado."),
             ("Superpón en SplitCam", "Objetivos de tokens, tu nombre y redes como capas de "
              "escena — la cámara básica de CamPlace no puede añadirlas."),
-            _T_ETH,
+            ("Usa conexión por cable", "Sin documentación oficial de codificador de CamPlace "
+             "a la que recurrir, un enlace Ethernet estable elimina las caídas de conexión "
+             "como variable mientras sigues la guía en vídeo."),
         ],
         "faq": [
             ("¿CamPlace tiene una guía OBS oficial?", "No se encontró artículo público de "
@@ -323,8 +343,12 @@ PLATFORMS_ES = [
              "clave, así que SplitCam funciona — sigue la guía en vídeo de arriba."),
             ("¿CamPlace admite codificadores externos?", "Sí — acepta una clave RTMP estándar, "
              "así que SplitCam conecta como destino RTMP personalizado."),
-            ("¿SplitCam es gratis para CamPlace?", "Sí — gratis, sin marca de agua, sin límite."),
-            ("¿Qué bitrate para CamPlace?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para CamPlace?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo. Como CamPlace no trae codificador propio, una herramienta RTMP "
+             "gratuita es todo lo que necesitas."),
+            ("¿Qué bitrate para CamPlace?", "CamPlace no publica una cifra oficial — toma "
+             "3.500–6.000 Kbps a 1080p como rango seguro y deja que el test de velocidad de "
+             "SplitCam fije tu techo real."),
         ],
     },
     {
@@ -360,7 +384,9 @@ PLATFORMS_ES = [
              "lag y los fotogramas perdidos."),
             ("Tope a 1080p / 30 fps", "El ingest de CamSoda llega hasta unos 1080p, 30 fps y "
              "~6.000 Kbps — no hace falta subir más."),
-            _T_ETH,
+            ("Cable hacia tu servidor regional", "Combina una conexión por cable con el "
+             "servidor de ingest regional de CamSoda más cercano — juntos mantienen baja la "
+             "latencia y los fotogramas perdidos."),
         ],
         "faq": [
             ("¿CamSoda admite OBS / codificadores externos?", "Sí — oficialmente. Hay un botón "
@@ -370,7 +396,9 @@ PLATFORMS_ES = [
              "CamSoda requiere completar antes su solicitud de verificación."),
             ("¿Qué resolución admite CamSoda?", "Hasta 1920×1080 a 30 fps, unos 6.000 Kbps "
              "máximo en su ingest RTMP."),
-            ("¿SplitCam es gratis para CamSoda?", "Sí — gratis, sin marca de agua, sin límite."),
+            ("¿SplitCam es gratis para CamSoda?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo. Funciona junto al propio modo gratuito Use OBS Broadcaster de "
+             "CamSoda, así que toda la cadena no cuesta nada."),
             ("¿Qué ajustes de audio y codificador usa CamSoda?", "El ingest de CamSoda admite "
              "audio AAC hasta 160 Kbps y vídeo H.264 con preset tune=zerolatency. CamSoda "
              "también es un servicio integrado en OBS, así que en SplitCam funciona como un "
@@ -411,16 +439,22 @@ PLATFORMS_ES = [
              "saltar a 1440, que en realidad no se entrega y baja tu calidad sin avisar — "
              "ponlo en 1080p a mano. Que el bitrate caiga en una imagen fija es normal: el "
              "feed de Streamate es adaptativo."),
-            _T_ETH, _T_TEST,
+            ("Usa conexión por cable", "El feed de Streamate ya baja el bitrate bajo presión "
+             "— no añadas encima la inestabilidad del Wi-Fi; lleva un cable Ethernet."),
+            ("Prueba primero con SM Connect", "Inicia un show privado corto vía SM Connect "
+             "para confirmar el slider verde y tu escena antes de salir en público."),
         ],
         "faq": [
             ("¿Streamate está integrado en SplitCam?", "Sí — Streamate aparece en la lista Add "
              "Channel de SplitCam, lo seleccionas en vez de escribir una URL RTMP."),
             ("¿Dónde está la clave de stream de Streamate?", "SM Connect → aceptar términos → "
              "Start Show → cerrar la ventana → copiar la clave."),
-            ("¿SplitCam es gratis para Streamate?", "Sí — gratis, sin marca de agua, sin "
-             "límite."),
-            ("¿Qué bitrate para Streamate?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para Streamate?", "Sí — gratis, sin marca de agua ni "
+             "límite de tiempo; y como Streamate es un canal integrado de SplitCam, tampoco "
+             "hay coste de codificador aparte."),
+            ("¿Qué bitrate para Streamate?", "Streamate no fija un techo duro — 3.500–6.000 "
+             "Kbps a 1080p funciona bien. El feed es adaptativo, así que un bitrate más bajo "
+             "en una imagen fija es normal, no un fallo."),
         ],
     },
     {
@@ -453,16 +487,23 @@ PLATFORMS_ES = [
              "la publica en la ventana de chat de tu emisión. Cópiala de ahí."),
             ("Deja la clave vacía", "StreamRay no usa clave aparte — solo la URL. No rellenes "
              "el campo de clave en SplitCam."),
-            _T_ETH, _T_TEST,
+            ("Cable para el flujo de solo-URL", "StreamRay autentica solo por URL — un "
+             "enlace por cable evita una reconexión a mitad de show que te enviaría de vuelta "
+             "a la ventana de chat por la URL."),
+            ("Prueba antes de emitir", "Haz una prueba privada corta de StreamRay para "
+             "confirmar que la URL se pegó bien y la escena se ve correcta."),
         ],
         "faq": [
             ("¿Dónde está la URL del stream de StreamRay?", "Tras activar OBS Broadcaster, "
              "StreamRay publica la URL en la ventana de chat — cópiala del chat."),
             ("¿Por qué StreamRay no tiene clave de stream?", "StreamRay autentica solo por URL "
              "— deja el campo de clave de SplitCam vacío."),
-            ("¿SplitCam es gratis para StreamRay?", "Sí — gratis, sin marca de agua, sin "
-             "límite."),
-            ("¿Qué bitrate para StreamRay?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para StreamRay?", "Sí — gratis, sin marca de agua ni "
+             "límite de tiempo, lo que encaja con el flujo de solo-URL de StreamRay, donde "
+             "solo pegas un enlace y emites."),
+            ("¿Qué bitrate para StreamRay?", "StreamRay no indica un techo oficial — apunta "
+             "a 3.500–6.000 Kbps a 1080p y haz el test de velocidad de SplitCam, ya que el "
+             "flujo de solo-URL no da retorno de bitrate."),
         ],
     },
     {
@@ -497,15 +538,21 @@ PLATFORMS_ES = [
              "reduce la latencia."),
             ("Audiencia multilingüe", "XLoveCam es europea y multilingüe — una superposición de "
              "texto clara en tu idioma ayuda a que te encuentren."),
-            _T_ETH,
+            ("El cable gana al Wi-Fi", "Tras elegir el servidor de XLoveCam más cercano, una "
+             "conexión por cable es la otra mitad de un stream estable — evita que los "
+             "fotogramas caigan en un show largo."),
         ],
         "faq": [
             ("¿Dónde están los datos RTMP de XLoveCam?", "My Account → settings — muestra el "
              "enlace RTMP y la clave."),
             ("¿XLoveCam admite codificadores externos?", "Sí — XLoveCam ofrece un modo oficial "
              "de emisión por OBS con enlace RTMP y clave, así que SplitCam funciona."),
-            ("¿SplitCam es gratis para XLoveCam?", "Sí — gratis, sin marca de agua, sin límite."),
-            ("¿Qué bitrate para XLoveCam?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para XLoveCam?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo, así que llegar a la audiencia europea multilingüe de XLoveCam no "
+             "supone coste de software."),
+            ("¿Qué bitrate para XLoveCam?", "XLoveCam no publica un límite fijo; 3.500–6.000 "
+             "Kbps a 1080p es ideal. Elegir el servidor regional más cercano importa igual — "
+             "reduce los fotogramas perdidos."),
         ],
     },
     {
@@ -539,15 +586,23 @@ PLATFORMS_ES = [
             ("Bloquea las regiones que no quieras", "SoulCams admite el bloqueo por países "
              "desde el lado de la modelo — elige qué países no pueden ver tu emisión antes de "
              "pulsar Go Online."),
-            _T_ETH, _T_TEST,
+            ("Usa conexión por cable", "SoulCams muestra servidor y clave juntos para "
+             "empezar rápido — mantén el propio stream igual de sólido con un cable "
+             "Ethernet."),
+            ("Prueba tras Go Online", "Los ajustes OBS solo aparecen tras Go Online — ya "
+             "conectado, haz una prueba privada corta antes de llevar la sala a público."),
         ],
         "faq": [
             ("¿Dónde están los ajustes OBS de SoulCams?", "Inicia sesión, pulsa Go Online, "
              "luego Settings → OBS — el servidor RTMP y la clave se muestran juntos."),
             ("¿SoulCams admite codificadores externos?", "Sí — sus ajustes OBS dan un servidor "
              "RTMP y clave, así que SplitCam funciona."),
-            ("¿SplitCam es gratis para SoulCams?", "Sí — gratis, sin marca de agua, sin límite."),
-            ("¿Qué bitrate para SoulCams?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para SoulCams?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo, así que un show completo en SoulCams con escenas de varias cámaras "
+             "y superposiciones no cuesta nada de codificar."),
+            ("¿Qué bitrate para SoulCams?", "SoulCams no da una cifra oficial — apunta a "
+             "3.500–6.000 Kbps a 1080p y comprueba tu subida primero, ya que su ventana OBS "
+             "no muestra guía de bitrate."),
         ],
     },
     {
@@ -598,7 +653,9 @@ PLATFORMS_ES = [
              "la cámara para que tu mezcla de audio y supresión de ruido pasen al directo."),
             ("Monta la escena antes de emitir", "ImLive muestra lo que SplitCam emita — ordena "
              "tus capas antes de iniciar el chat."),
-            _T_TEST,
+            ("Prueba primero la cámara virtual", "Antes de iniciar un chat en ImLive, "
+             "confirma que la cámara virtual de SplitCam funciona — revísala en la vista "
+             "previa de ajustes de ImLive."),
         ],
         "faq": [
             ("¿ImLive usa RTMP o clave de stream?", "No — ImLive usa tu webcam directamente vía "
@@ -606,7 +663,9 @@ PLATFORMS_ES = [
              "cámara virtual, no hay clave que copiar."),
             ("¿Cómo elijo SplitCam en ImLive?", "Start Video Chat → Go To Settings → elige "
              "SplitCam como webcam y micrófono."),
-            ("¿SplitCam es gratis para ImLive?", "Sí — gratis, sin marca de agua, sin límite."),
+            ("¿SplitCam es gratis para ImLive?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo. Como cámara virtual para ImLive no añade coste ni marca a tu "
+             "videochat."),
             ("¿Puedo usar superposiciones en ImLive?", "Sí — móntalas en la escena de SplitCam; "
              "ImLive muestra el resultado compuesto."),
         ],
@@ -646,7 +705,9 @@ PLATFORMS_ES = [
              "luego GO ONLINE en VXLive — ambos, en ese orden."),
             ("Plataforma del mercado alemán", "La audiencia de VXLive es mayormente "
              "germanoparlante — una superposición o título en alemán ayuda a conectar."),
-            _T_ETH,
+            ("Usa conexión por cable", "La salida en directo en dos pasos de VXLive significa "
+             "que una caída a mitad de show te cuesta ambas reconexiones — un enlace por "
+             "cable lo hace mucho menos probable."),
         ],
         "faq": [
             ("¿VXLive admite oficialmente SplitCam?", "Sí — VXModels (VXLive) tiene un artículo "
@@ -657,7 +718,9 @@ PLATFORMS_ES = [
              "y la clave que da VXLive."),
             ("¿Dónde pulso \"en directo\", en SplitCam o VXLive?", "En ambos — primero Go Live "
              "en SplitCam, luego GO ONLINE en VXLive."),
-            ("¿SplitCam es gratis para VXLive?", "Sí — gratis, sin marca de agua, sin límite."),
+            ("¿SplitCam es gratis para VXLive?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo. VXModels lista SplitCam como software admitido, así que es a la vez "
+             "gratuito y reconocido oficialmente."),
             ("¿Por qué VXModels recomienda SplitCam?", "El artículo de ayuda oficial de "
              "VXModels recomienda SplitCam concretamente para eliminar los artefactos de "
              "imagen y la pixelación de la webcam y estabilizar la conexión — no solo como "
@@ -693,15 +756,24 @@ PLATFORMS_ES = [
              "stream en la primera línea — cópiala en Stream URL de SplitCam, luego la clave."),
             ("Dos clics de Start Broadcast", "Pulsas Start Broadcast dos veces en VirtWish para "
              "llegar a la sección OBS — es lo esperado, no un fallo."),
-            _T_ETH, _T_TEST,
+            ("Usa conexión por cable", "VirtWish da una URL y una clave aparte — un enlace "
+             "por cable evita una reconexión que te haría pasar de nuevo por los dos clics de "
+             "Start Broadcast."),
+            ("Prueba antes de salir en directo", "Haz una emisión privada corta de VirtWish "
+             "para confirmar que la URL y la clave cayeron en los campos correctos de "
+             "SplitCam."),
         ],
         "faq": [
             ("¿Dónde están los datos RTMP de VirtWish?", "Icono arriba a la derecha → Profile → "
              "Start Broadcast dos veces → la sección OBS muestra el enlace y la clave."),
             ("¿VirtWish admite codificadores externos?", "Sí — su sección OBS da una URL de "
              "stream y clave, así que SplitCam funciona."),
-            ("¿SplitCam es gratis para VirtWish?", "Sí — gratis, sin marca de agua, sin límite."),
-            ("¿Qué bitrate para VirtWish?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para VirtWish?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo, así que la configuración de VirtWish con URL del stream y clave no "
+             "cuesta más que los pocos minutos que lleva."),
+            ("¿Qué bitrate para VirtWish?", "VirtWish no publica un techo oficial; "
+             "3.500–6.000 Kbps a 1080p es un rango seguro. Iguala la resolución de SplitCam a "
+             "la fijada en VirtWish para evitar el reescalado."),
         ],
     },
     {
@@ -737,7 +809,9 @@ PLATFORMS_ES = [
              "su chat FAQ en el sitio e info@xmodels.com son las vías oficiales de soporte."),
             ("Superpón en SplitCam", "Objetivos de tokens, tu nombre y redes como capas de "
              "escena — la cámara básica de XModels no puede añadirlas."),
-            _T_ETH,
+            ("Usa conexión por cable", "El soporte de XModels es solo por chat y email — un "
+             "enlace Ethernet estable te ahorra una vuelta lenta con soporte si el stream se "
+             "cae."),
         ],
         "faq": [
             ("¿XModels admite codificadores externos?", "Sí — los ajustes de la cuenta de "
@@ -745,8 +819,12 @@ PLATFORMS_ES = [
              "así que SplitCam funciona."),
             ("¿Dónde consigo ayuda con XModels?", "El soporte de XModels es vía su chat FAQ en "
              "el sitio y el email info@xmodels.com — no hay un gran centro de ayuda público."),
-            ("¿SplitCam es gratis para XModels?", "Sí — gratis, sin marca de agua, sin límite."),
-            ("¿Qué bitrate para XModels?", "3.500–6.000 Kbps a 1080p; comprueba tu subida."),
+            ("¿SplitCam es gratis para XModels?", "Sí — gratis, sin marca de agua ni límite "
+             "de tiempo, así que emitir a la red europea de XModels no añade coste de "
+             "software."),
+            ("¿Qué bitrate para XModels?", "XModels no documenta una cifra oficial — usa "
+             "3.500–6.000 Kbps a 1080p y haz el test de velocidad de SplitCam, ya que el "
+             "soporte de XModels es solo por chat y email."),
         ],
     },
     {
@@ -784,7 +862,9 @@ PLATFORMS_ES = [
             ("Una plataforma consolidada", "Flirt4Free funciona desde los años 90 — sus "
              "herramientas de modelo son maduras y el External Broadcast Form es parte "
              "documentada de ellas."),
-            _T_ETH,
+            ("Usa conexión por cable", "El External Broadcast Form de Flirt4Free fija tu "
+             "resolución y bitrate — un enlace por cable mantiene el stream en esos valores "
+             "sin bajones de Wi-Fi."),
         ],
         "faq": [
             ("¿Flirt4Free admite codificadores externos?", "Sí — oficialmente, mediante su "
@@ -793,8 +873,9 @@ PLATFORMS_ES = [
             ("¿Dónde consigo los datos RTMP de Flirt4Free?", "Del External Broadcast Form en el "
              "área de modelo — muestra la RTMP URL, el Stream Name y campos de "
              "resolución/bitrate."),
-            ("¿SplitCam es gratis para Flirt4Free?", "Sí — gratis, sin marca de agua, sin "
-             "límite."),
+            ("¿SplitCam es gratis para Flirt4Free?", "Sí — gratis, sin marca de agua ni "
+             "límite de tiempo, lo que viene bien para una plataforma tan veterana como "
+             "Flirt4Free, donde los shows pueden ser largos."),
             ("¿Qué bitrate para Flirt4Free?", "3.500–6.000 Kbps a 1080p — pon el mismo valor en "
              "el External Broadcast Form y en SplitCam."),
         ],
@@ -852,7 +933,9 @@ PLATFORMS_ES = [
             ("¿Alertas atascadas? Refresca la caché", "Si los efectos de alerta dejan de "
              "aparecer, haz clic derecho en la capa Browser de MFC Alerts y elige \"Refresh "
              "cache of current page\" — eso limpia una superposición obsoleta."),
-            _T_ETH,
+            ("Usa conexión por cable", "MFC Alerts es una superposición de navegador en vivo "
+             "que reacciona a las propinas — un enlace por cable evita que se entrecorten "
+             "tanto la cámara como las animaciones de alertas."),
         ],
         "faq": [
             ("¿Qué es MFC Alerts?", "Un sistema de notificaciones para MyFreeCams que muestra "
@@ -863,8 +946,9 @@ PLATFORMS_ES = [
             ("¿Y cómo emito al propio MyFreeCams?", "MyFreeCams admite oficialmente la emisión "
              "por OBS (su plugin Sidekick fue descontinuado — la wiki aconseja \"usa OBS\"). "
              "Recomendado: 720p, 30 fps, ~2.500 Kbps — SplitCam conecta igual."),
-            ("¿SplitCam es gratis para esto?", "Sí — SplitCam es gratis, sin marca de agua, "
-             "sin límites."),
+            ("¿SplitCam es gratis para esto?", "Sí — SplitCam es gratis, sin marca de agua "
+             "ni límite de tiempo, y la superposición de navegador MFC Alerts funciona "
+             "dentro de él sin coste extra."),
         ],
     },
     {
@@ -980,7 +1064,9 @@ PLATFORMS_ES = [
              "consume su propio bitrate — asegúrate de que tu conexión soporta el total."),
             ("Revisa las reglas de cada sitio", "Algunos sitios cam restringen emitir a la vez "
              "en otro lado — confírmalo antes de multiemitir."),
-            _T_ETH,
+            ("Por cable — aquí no puedes permitirte una caída", "La multiemisión multiplica "
+             "la carga de subida, así que un solo bajón de Wi-Fi puede parar todos los "
+             "destinos a la vez. La conexión por cable no es opcional aquí."),
             ("Monitor de estado", "SplitCam muestra el estado por destino — quita un sitio si "
              "tu subida no da abasto."),
         ],
