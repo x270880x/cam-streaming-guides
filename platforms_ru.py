@@ -419,7 +419,7 @@ PLATFORMS_RU = [
               "camsoda rtmp",
         "h1html": 'Как вести трансляцию на <span class="accent">CamSoda</span> через SplitCam',
         "h1short": "Трансляция на CamSoda",
-        "card": "Настройка через Use OBS Broadcaster на CamSoda.",
+        "card": "Настройка вещания на CamSoda через RTMP.",
         "steps": [
             None,
             ("Соберите сцену", "Добавьте веб-камеру, накладки и фильтры в SplitCam. CamSoda "
@@ -667,7 +667,7 @@ PLATFORMS_RU = [
         "kw": "как вести трансляцию на soulcams, soulcams obs, soul cams, soulcams rtmp",
         "h1html": 'Как вести трансляцию на <span class="accent">SoulCams</span> через SplitCam',
         "h1short": "Трансляция на SoulCams",
-        "card": "Настройка SoulCams через OBS-настройки.",
+        "card": "Настройка SoulCams через RTMP.",
         "steps": [
             None,
             ("Соберите сцену", "Добавьте веб-камеру, накладки и фильтры в SplitCam и решите на "

@@ -673,7 +673,7 @@ PLATFORMS_EN = [
               "soulcams broadcast",
         "h1html": 'How to stream on <span class="accent">SoulCams</span> with SplitCam',
         "h1short": "Stream on SoulCams",
-        "card": "OBS-settings setup for SoulCams broadcasts.",
+        "card": "RTMP setup for SoulCams broadcasts.",
         "steps": [
             None,
             ("Build your scene", "Add your webcam, overlays and filters in SplitCam, and "

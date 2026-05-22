@@ -422,7 +422,7 @@ PLATFORMS_ES = [
         "kw": "cómo emitir en camsoda, camsoda live, camsoda obs broadcaster, camsoda rtmp",
         "h1html": 'Cómo emitir en <span class="accent">CamSoda</span> con SplitCam',
         "h1short": "Emitir en CamSoda",
-        "card": "Configuración vía Use OBS Broadcaster de CamSoda.",
+        "card": "Configuración de emisión en CamSoda vía RTMP.",
         "steps": [
             None,
             ("Monta tu escena", "Añade tu webcam, superposiciones y filtros en SplitCam. "
@@ -673,7 +673,7 @@ PLATFORMS_ES = [
         "kw": "cómo emitir en soulcams, soulcams obs, soul cams, soulcams rtmp",
         "h1html": 'Cómo emitir en <span class="accent">SoulCams</span> con SplitCam',
         "h1short": "Emitir en SoulCams",
-        "card": "Configuración de SoulCams vía ajustes OBS.",
+        "card": "Configuración de SoulCams vía RTMP.",
         "steps": [
             None,
             ("Monta tu escena", "Añade tu webcam, superposiciones y filtros en SplitCam, y "
