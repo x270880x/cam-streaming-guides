@@ -205,6 +205,8 @@ margin-bottom:26px;position:relative;z-index:1}
 .collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
 .collab-logo{display:block;height:21px;width:auto;max-width:180px;
 object-fit:contain;object-position:left center}
+.collab-plat-mfc-alerts .collab-logo{filter:brightness(0) invert(1);
+-webkit-filter:brightness(0) invert(1);max-width:130px}
 .collab-wire{width:46px;height:4px;position:relative;flex-shrink:0;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.16))}
 .collab-dot{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 13px 2px var(--blue);transform:translateY(-50%);animation:collabflow 1.7s cubic-bezier(.55,0,.45,1) infinite}
 @keyframes collabflow{0%{left:-3px;opacity:0}14%{opacity:1}80%{opacity:1}100%{left:37px;opacity:0}}
@@ -307,7 +309,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
       <div class="collab-flow">
         <div class="collab-pill collab-sc"><img src="../../assets/splitcam.png" alt=""><span>splitcam</span></div>
         <div class="collab-wire"><div class="collab-dot"></div></div>
-        <div class="collab-pill collab-plat" style="background:#2878fc">Multiple Cam Sites</div>
+        <div class="collab-pill collab-plat collab-plat-multistream-cams" style="background:#2878fc">Multiple Cam Sites</div>
       </div>
       <div class="collab-label">Гайд по настройке</div>
     </div>
