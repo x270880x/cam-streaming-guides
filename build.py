@@ -23,9 +23,13 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "pt": "pt_BR", "nl": "nl_NL",
              "ro": "ro_RO", "bg": "bg_BG", "hu": "hu_HU",
              "el": "el_GR", "fi": "fi_FI", "da": "da_DK",
-             "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR"}
+             "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR",
+             "zh": "zh_CN", "ja": "ja_JP", "ar": "ar_AR",
+             "th": "th_TH", "fil": "fil_PH"}
 LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
-               "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr"]  # set by main() to those with platforms_<lang>.py
+               "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
+               "zh", "ja", "ar", "th", "fil"]  # set by main() to those with platforms_<lang>.py
+RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
 PUBLISHER = {"@type": "Organization", "name": SITE_NAME, "url": f"{SITE}/"}
 
 # ---------------------------------------------------------------- CSS (shared)
@@ -323,6 +327,46 @@ UI = {
            "updated": "Ažurirano", "about": "O nama", "contact": "Kontakt",
            "privacy": "Privatnost", "terms": "Uvjeti",
            "path": "hr/", "lang": "hr"},
+    "zh": {"home": "所有指南", "download": "下载 SplitCam", "crumb_home": "指南",
+           "skip": "跳到步骤", "related": "其他平台指南",
+           "quick": "快速回答", "steps_h": "分步指南",
+           "tips_h": "专业提示", "faq_h": "常见问题", "cta_h": "准备开始直播了吗？",
+           "cta_p": "免费软件。无水印，无需注册。一次设置，一键直播。",
+           "updated": "最后更新", "about": "关于", "contact": "联系",
+           "privacy": "隐私", "terms": "条款",
+           "path": "zh/", "lang": "zh"},
+    "ja": {"home": "すべてのガイド", "download": "SplitCamをダウンロード", "crumb_home": "ガイド",
+           "skip": "手順へ", "related": "他のプラットフォームガイド",
+           "quick": "簡単な答え", "steps_h": "ステップバイステップ",
+           "tips_h": "プロのヒント", "faq_h": "よくある質問", "cta_h": "ライブ配信の準備はできましたか？",
+           "cta_p": "無料ソフトウェア。透かしなし、登録不要。一度設定すれば、ワンクリックでライブ配信。",
+           "updated": "最終更新", "about": "概要", "contact": "お問い合わせ",
+           "privacy": "プライバシー", "terms": "利用規約",
+           "path": "ja/", "lang": "ja"},
+    "ar": {"home": "كل الأدلة", "download": "تحميل SplitCam", "crumb_home": "الأدلة",
+           "skip": "الانتقال إلى الخطوات", "related": "أدلة منصات أخرى",
+           "quick": "إجابة سريعة", "steps_h": "خطوة بخطوة",
+           "tips_h": "نصائح احترافية", "faq_h": "الأسئلة الشائعة", "cta_h": "جاهز للبث المباشر؟",
+           "cta_p": "برنامج مجاني. بدون علامة مائية، بدون تسجيل. إعداد لمرة واحدة، بث مباشر بنقرة واحدة.",
+           "updated": "آخر تحديث", "about": "حول", "contact": "اتصل بنا",
+           "privacy": "الخصوصية", "terms": "الشروط",
+           "path": "ar/", "lang": "ar"},
+    "th": {"home": "คู่มือทั้งหมด", "download": "ดาวน์โหลด SplitCam", "crumb_home": "คู่มือ",
+           "skip": "ข้ามไปยังขั้นตอน", "related": "คู่มือแพลตฟอร์มอื่น",
+           "quick": "คำตอบด่วน", "steps_h": "ทีละขั้นตอน",
+           "tips_h": "เคล็ดลับ", "faq_h": "คำถามที่พบบ่อย", "cta_h": "พร้อมไลฟ์สดหรือยัง?",
+           "cta_p": "ซอฟต์แวร์ฟรี ไม่มีลายน้ำ ไม่ต้องสมัคร ตั้งค่าครั้งเดียว ไลฟ์ได้ด้วยคลิกเดียว",
+           "updated": "อัพเดทล่าสุด", "about": "เกี่ยวกับ", "contact": "ติดต่อ",
+           "privacy": "ความเป็นส่วนตัว", "terms": "ข้อกำหนด",
+           "path": "th/", "lang": "th"},
+    "fil": {"home": "Lahat ng gabay", "download": "I-download ang SplitCam", "crumb_home": "Mga gabay",
+            "skip": "Pumunta sa mga hakbang", "related": "Iba pang gabay sa platform",
+            "quick": "Mabilis na sagot", "steps_h": "Hakbang-hakbang",
+            "tips_h": "Mga tip", "faq_h": "FAQ", "cta_h": "Handa nang mag-live?",
+            "cta_p": "Libreng software. Walang watermark, walang pagpaparehistro. Mag-set up minsan, mag-live sa isang click.",
+            "updated": "Huling na-update", "about": "Tungkol sa", "contact": "Kontakin",
+            "privacy": "Privacy", "terms": "Mga tuntunin",
+            "path": "fil/", "lang": "fil"},
 }
 
 def e(s):
@@ -540,6 +584,61 @@ STEP_TMPL = {
         ("Klikni Go Live",
          "Pritisni <strong>Go Live</strong> u SplitCamu, zatim pokreni prijenos na {name}. Za ~10 sekundi kamera je uživo. Sljedeći streamovi kreću jednim klikom — otvoriš SplitCam, Go Live."),
     ],
+    "zh": [
+        ("下载并安装 SplitCam",
+         "SplitCam 是适用于 Windows 和 macOS 的免费直播软件。下载并运行安装程序——无需注册、无需信用卡、无水印、无时间限制。SplitCam 是将您的视频发送到 {name} 的编码器。"),
+        ("设置摄像头和场景",
+         "打开 SplitCam 并添加网络摄像头。按照您希望观众看到的方式构建场景——叠加层、文本、第二个摄像头或手机、美颜滤镜或 AI 背景。所有内容都在直播流离开 PC 之前实时应用。"),
+        ("获取您的 {name} 直播密钥", "{key}"),
+        ("将 SplitCam 连接到 {name}",
+         "在 SplitCam 中打开 <strong>Stream Settings</strong>，将 {name} 服务器 URL 和直播密钥粘贴到自定义 RTMP 字段中。比特率：1080p 为 3,500–6,000&nbsp;Kbps，720p 为 2,000–4,000&nbsp;Kbps。先运行内置的速度测试。"),
+        ("点击 Go Live",
+         "在 SplitCam 中按 <strong>Go Live</strong>，然后在 {name} 上开始直播。约 10 秒内您的摄像头就会上线。后续直播只需一键——打开 SplitCam，点击 Go Live。"),
+    ],
+    "ja": [
+        ("SplitCamをダウンロードしてインストール",
+         "SplitCamはWindowsとmacOS用の無料ライブ配信ソフトウェアです。ダウンロードしてインストーラーを実行してください — 登録不要、カード不要、透かしなし、時間制限なし。SplitCamは、あなたのビデオを{name}に送信するエンコーダーです。"),
+        ("カメラとシーンをセットアップ",
+         "SplitCamを開いてウェブカメラを追加します。視聴者に見せたいようにシーンを構築 — オーバーレイ、テキスト、2台目のカメラまたはスマートフォン、ビューティーフィルターやAI背景。すべてがストリームがPCを離れる前にライブで適用されます。"),
+        ("{name}のストリームキーを取得", "{key}"),
+        ("SplitCamを{name}に接続",
+         "SplitCamで<strong>Stream Settings</strong>を開き、{name}のサーバーURLとストリームキーをカスタムRTMPフィールドに貼り付けます。ビットレート：1080pは3,500–6,000&nbsp;Kbps、720pは2,000–4,000&nbsp;Kbps。最初に内蔵の速度テストを実行してください。"),
+        ("Go Liveをクリック",
+         "SplitCamで<strong>Go Live</strong>を押してから、{name}で配信を開始。約10秒以内にカメラがライブになります。次回以降の配信はワンクリック — SplitCamを開いてGo Live。"),
+    ],
+    "ar": [
+        ("قم بتنزيل وتثبيت SplitCam",
+         "SplitCam هو برنامج بث مباشر مجاني لنظامي التشغيل Windows و macOS. قم بتنزيله وتشغيل المثبت — بدون تسجيل، بدون بطاقة، بدون علامة مائية، بدون حد زمني. SplitCam هو المُشفِّر الذي يرسل الفيديو الخاص بك إلى {name}."),
+         ("إعداد الكاميرا والمشهد",
+         "افتح SplitCam وأضف كاميرا الويب. ابنِ المشهد بالطريقة التي تريد أن يراه بها المشاهدون — التراكبات، النصوص، كاميرا ثانية أو هاتفك، مرشحات الجمال أو خلفية AI. يتم تطبيق كل شيء بشكل مباشر قبل أن يغادر البث جهازك."),
+         ("احصل على مفتاح بث {name} الخاص بك", "{key}"),
+         ("قم بتوصيل SplitCam بـ {name}",
+         "في SplitCam، افتح <strong>Stream Settings</strong>، الصق عنوان URL لخادم {name} ومفتاح البث في حقول RTMP المخصصة. معدل البت: 3,500–6,000&nbsp;Kbps لـ 1080p، 2,000–4,000&nbsp;Kbps لـ 720p. شغّل اختبار السرعة المدمج أولاً."),
+         ("انقر فوق Go Live",
+         "اضغط على <strong>Go Live</strong> في SplitCam، ثم ابدأ البث على {name}. خلال ~10 ثوانٍ، تكون كاميرتك مباشرة. تبدأ عمليات البث اللاحقة بنقرة واحدة — افتح SplitCam، Go Live."),
+    ],
+    "th": [
+        ("ดาวน์โหลดและติดตั้ง SplitCam",
+         "SplitCam คือซอฟต์แวร์สตรีมมิ่งสดฟรีสำหรับ Windows และ macOS ดาวน์โหลดและรันตัวติดตั้ง — ไม่ต้องสมัคร ไม่ต้องใช้บัตร ไม่มีลายน้ำ ไม่มีขีดจำกัดเวลา SplitCam คือ encoder ที่ส่งวิดีโอของคุณไปยัง {name}"),
+        ("ตั้งค่ากล้องและฉาก",
+         "เปิด SplitCam และเพิ่มเว็บแคม สร้างฉากตามที่คุณต้องการให้ผู้ชมเห็น — โอเวอร์เลย์ ข้อความ กล้องที่สองหรือโทรศัพท์ ฟิลเตอร์ความงามหรือพื้นหลัง AI ทุกอย่างจะถูกนำมาใช้แบบสดก่อนที่สตรีมจะออกจากพีซีของคุณ"),
+        ("รับสตรีมคีย์ {name} ของคุณ", "{key}"),
+        ("เชื่อมต่อ SplitCam กับ {name}",
+         "ใน SplitCam เปิด <strong>Stream Settings</strong> วาง URL เซิร์ฟเวอร์ {name} และสตรีมคีย์ในช่อง RTMP กำหนดเอง บิตเรต: 3,500–6,000&nbsp;Kbps สำหรับ 1080p, 2,000–4,000&nbsp;Kbps สำหรับ 720p เรียกใช้การทดสอบความเร็วในตัวก่อน"),
+        ("คลิก Go Live",
+         "กด <strong>Go Live</strong> ใน SplitCam จากนั้นเริ่มการถ่ายทอดสดบน {name} ภายในประมาณ 10 วินาที กล้องของคุณก็จะออนไลน์ การสตรีมครั้งต่อๆ ไปทำได้ด้วยคลิกเดียว — เปิด SplitCam, Go Live"),
+    ],
+    "fil": [
+        ("I-download at i-install ang SplitCam",
+         "Ang SplitCam ay libreng live-streaming software para sa Windows at macOS. I-download ito at patakbuhin ang installer — walang sign-up, walang card, walang watermark, walang time limit. Ito ang encoder na nagpapadala ng iyong video sa {name}."),
+        ("I-set up ang iyong camera at scene",
+         "Buksan ang SplitCam at idagdag ang iyong webcam. Buuin ang scene sa paraang gusto mong makita ng mga viewer — overlays, text, pangalawang camera o telepono, beauty filters o AI background. Ang lahat ay inilalapat nang live bago umalis ang stream sa iyong PC."),
+        ("Kunin ang iyong {name} stream key", "{key}"),
+        ("Ikonekta ang SplitCam sa {name}",
+         "Sa SplitCam buksan ang <strong>Stream Settings</strong>, i-paste ang {name} server URL at stream key sa mga custom RTMP field. Bitrate: 3,500–6,000&nbsp;Kbps para sa 1080p, 2,000–4,000&nbsp;Kbps para sa 720p. Patakbuhin muna ang built-in speed test."),
+        ("I-click ang Go Live",
+         "Pindutin ang <strong>Go Live</strong> sa SplitCam, pagkatapos ay simulan ang broadcast sa {name}. Sa loob ng ~10 segundo, live na ang iyong camera. Ang mga susunod na stream ay isang click lang — buksan ang SplitCam, Go Live."),
+    ],
 }
 
 
@@ -565,10 +664,12 @@ def build_steps(p, lang):
 
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
-              "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR"}
+              "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
+              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
-             "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/"}
+             "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
+             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -586,14 +687,18 @@ VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en ví
            "pt": "Guia em vídeo", "nl": "Videogids",
            "ro": "Ghid video", "bg": "Видео ръководство", "hu": "Videós útmutató",
            "el": "Οδηγός βίντεο", "fi": "Video-opas", "da": "Videoguide",
-           "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič"}
+           "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič",
+           "zh": "视频指南", "ja": "ビデオガイド", "ar": "دليل الفيديو",
+           "th": "คู่มือวิดีโอ", "fil": "Gabay sa video"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
                 "pt": "Guia de configuração", "nl": "Installatiegids",
                 "ro": "Ghid de configurare", "bg": "Ръководство за настройка",
                 "hu": "Beállítási útmutató", "el": "Οδηγός εγκατάστασης",
                 "fi": "Asennusohje", "da": "Opsætningsguide", "no": "Oppsettsguide",
-                "sr": "Водич за подешавање", "hr": "Vodič za postavljanje"}
+                "sr": "Водич за подешавање", "hr": "Vodič za postavljanje",
+                "zh": "设置指南", "ja": "セットアップガイド", "ar": "دليل الإعداد",
+                "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -715,7 +820,7 @@ def render(p, lang, all_platforms):
     }
 
     return f"""<!DOCTYPE html>
-<html lang="{u['lang']}">
+<html lang="{u['lang']}"{" dir=\"rtl\"" if u['lang'] in RTL_LANGS else ""}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -953,6 +1058,35 @@ HUB = {
            "sub": "Postavljanje korak po korak za prijenos na bilo kojoj cam platformi sa "
                   "besplatnim SplitCamom — vanjski enkoder, scene, preklapanja, bez vodenog žiga.",
            "pick": "Odaberi svoju platformu"},
+    "zh": {"title": "直播指南 — 使用 SplitCam 进行 cam 平台直播",
+           "desc": "使用 SplitCam 在任何 cam 平台直播的免费分步指南。",
+           "h1": '免费 <span class="accent">cam 直播指南</span>',
+           "sub": "使用免费 SplitCam 在任何 cam 平台直播的分步设置 — 外部编码器、场景、叠加层、无水印。",
+           "pick": "选择您的平台"},
+    "ja": {"title": "ストリーミングガイド — SplitCamでcam配信",
+           "desc": "SplitCamを使用してcamプラットフォームで配信するための無料ステップバイステップガイド。",
+           "h1": '無料の<span class="accent">camストリーミングガイド</span>',
+           "sub": "無料SplitCamで任意のcamプラットフォームに配信するためのステップバイステップ設定 — "
+                  "外部エンコーダー、シーン、オーバーレイ、透かしなし。",
+           "pick": "プラットフォームを選択"},
+    "ar": {"title": "أدلة البث — بث cam مع SplitCam",
+           "desc": "أدلة مجانية خطوة بخطوة للبث على أي منصة cam مع SplitCam.",
+           "h1": 'أدلة <span class="accent">بث cam</span> مجانية',
+           "sub": "إعداد خطوة بخطوة للبث على أي منصة cam مع SplitCam المجاني — "
+                  "مُشفِّر خارجي، مشاهد، تراكبات، بدون علامة مائية.",
+           "pick": "اختر منصتك"},
+    "th": {"title": "คู่มือสตรีมมิ่ง — การถ่ายทอด cam ด้วย SplitCam",
+           "desc": "คู่มือฟรีทีละขั้นตอนสำหรับการถ่ายทอดบนแพลตฟอร์ม cam ใดๆ ด้วย SplitCam",
+           "h1": 'คู่มือ<span class="accent">การสตรีม cam</span>ฟรี',
+           "sub": "การตั้งค่าทีละขั้นตอนสำหรับการถ่ายทอดบนแพลตฟอร์ม cam ใดๆ ด้วย SplitCam ฟรี — "
+                  "encoder ภายนอก, ฉาก, โอเวอร์เลย์, ไม่มีลายน้ำ",
+           "pick": "เลือกแพลตฟอร์มของคุณ"},
+    "fil": {"title": "Mga gabay sa streaming — cam broadcast sa SplitCam",
+            "desc": "Libreng hakbang-hakbang na gabay para mag-broadcast sa anumang cam platform gamit ang SplitCam.",
+            "h1": 'Libreng mga gabay sa <span class="accent">cam streaming</span>',
+            "sub": "Hakbang-hakbang na setup para mag-broadcast sa anumang cam platform gamit ang libreng "
+                   "SplitCam — external encoder, scenes, overlays, walang watermark.",
+            "pick": "Piliin ang iyong platform"},
 }
 
 
@@ -1026,6 +1160,26 @@ LEGAL = {
                "<p>Streaming Guides je besplatan, neovisan resurs za postavljanje prijenosa uživo na cam platformama za odrasle koristeći <strong>SplitCam</strong> — besplatan softver za streaming bez vodenog žiga za Windows i macOS.</p>"
                "<p>Pokrivamo 19 platformi vodičima korak po korak, savjetima za rješavanje problema i aktualnim tehničkim detaljima — od pronalaska stream ključa na svakoj stranici do odabira ispravnog bitrate-a.</p>"
                "<p>Ova stranica nije povezana ni s jednom od navedenih platformi. Sva imena marki i logotipi pripadaju svojim vlasnicima.</p>"),
+        "zh": ("关于 — Streaming Guides", "关于", "关于 Streaming Guides",
+               "<p>Streaming Guides 是一个免费的独立资源，用于使用 <strong>SplitCam</strong> 设置成人 cam 平台的直播 — 适用于 Windows 和 macOS 的免费无水印直播软件。</p>"
+               "<p>我们涵盖 19 个平台，提供分步指南、故障排除提示和当前技术细节 — 从在每个网站上找到您的直播密钥到选择正确的比特率。</p>"
+               "<p>本网站与任何列出的平台均无关联。所有品牌名称和徽标均归各自所有者所有。</p>"),
+        "ja": ("概要 — Streaming Guides", "概要", "Streaming Guides について",
+               "<p>Streaming Guides は、<strong>SplitCam</strong>（Windows と macOS 用の無料・透かしなしのストリーミングソフトウェア）を使用して、成人向け cam プラットフォームでライブ配信を設定するための、無料の独立したリソースです。</p>"
+               "<p>19のプラットフォームを、ステップバイステップガイド、トラブルシューティングのヒント、最新の技術的詳細でカバー — 各サイトでのストリームキーの見つけ方から、適切なビットレートの選択まで。</p>"
+               "<p>このサイトは、リストされているプラットフォームのいずれとも提携していません。すべてのブランド名とロゴは、それぞれの所有者に帰属します。</p>"),
+        "ar": ("حول — Streaming Guides", "حول", "حول Streaming Guides",
+               "<p>Streaming Guides هو مصدر مجاني ومستقل لإعداد عمليات البث المباشر على منصات cam للبالغين باستخدام <strong>SplitCam</strong> — برنامج بث مجاني بدون علامة مائية لنظامي التشغيل Windows و macOS.</p>"
+               "<p>نغطي 19 منصة بأدلة خطوة بخطوة، ونصائح لاستكشاف الأخطاء وإصلاحها، وتفاصيل تقنية حالية — من العثور على مفتاح البث الخاص بك على كل موقع إلى اختيار معدل البت الصحيح.</p>"
+               "<p>هذا الموقع غير منتسب لأي من المنصات المدرجة. تنتمي جميع أسماء العلامات التجارية والشعارات إلى أصحابها المعنيين.</p>"),
+        "th": ("เกี่ยวกับ — Streaming Guides", "เกี่ยวกับ", "เกี่ยวกับ Streaming Guides",
+               "<p>Streaming Guides คือแหล่งข้อมูลฟรีและเป็นอิสระสำหรับการตั้งค่าการถ่ายทอดสดบนแพลตฟอร์ม cam ผู้ใหญ่โดยใช้ <strong>SplitCam</strong> — ซอฟต์แวร์สตรีมมิ่งฟรีไม่มีลายน้ำสำหรับ Windows และ macOS</p>"
+               "<p>เราครอบคลุม 19 แพลตฟอร์มด้วยคู่มือทีละขั้นตอน เคล็ดลับการแก้ปัญหา และรายละเอียดทางเทคนิคที่เป็นปัจจุบัน — ตั้งแต่การหาสตรีมคีย์ของคุณบนแต่ละไซต์ไปจนถึงการเลือกบิตเรตที่เหมาะสม</p>"
+               "<p>เว็บไซต์นี้ไม่มีส่วนเกี่ยวข้องกับแพลตฟอร์มใดๆ ที่ระบุไว้ ชื่อแบรนด์และโลโก้ทั้งหมดเป็นของเจ้าของที่เกี่ยวข้อง</p>"),
+        "fil": ("Tungkol sa — Streaming Guides", "Tungkol sa", "Tungkol sa Streaming Guides",
+                "<p>Ang Streaming Guides ay isang libreng, malayang pinagkukunan para sa pag-set up ng live broadcasts sa adult cam platforms gamit ang <strong>SplitCam</strong> — libreng, walang-watermark na streaming software para sa Windows at macOS.</p>"
+                "<p>Sinasaklaw namin ang 19 platforms na may hakbang-hakbang na gabay, mga tip sa troubleshooting at kasalukuyang mga teknikal na detalye — mula sa paghahanap ng iyong stream key sa bawat site hanggang sa pagpili ng tamang bitrate.</p>"
+                "<p>Ang site na ito ay hindi kaakibat sa anumang nakalistang platform. Ang lahat ng brand name at logo ay pag-aari ng kani-kanilang may-ari.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -1130,6 +1284,36 @@ LEGAL = {
                "<h2>Zapisnici poslužitelja</h2><p>Standardni zapisnici web poslužitelja mogu bilježiti tvoju IP adresu i traženu stranicu, pohranjeno iz sigurnosnih razloga. Ove zapisnike ne povezujemo ni s jednim osobnim identitetom.</p>"
                "<h2>Tvoja prava</h2><p>Ako si u EU/Velikoj Britaniji, imaš prava prema GDPR-u. Budući da ne čuvamo osobne podatke vezane uz tebe, općenito nema ničega za pristup, ispravak ili brisanje. Za pitanja nas kontaktiraj preko stranice Kontakt.</p>"
                "<h2>Promjene</h2><p>Ova stranica se može promijeniti. Najnovija verzija je uvijek na ovom URL-u.</p>"),
+        "zh": ("隐私 — Streaming Guides", "隐私", "隐私政策",
+               "<h2>我们收集什么</h2><p>Streaming Guides 是一个静态网站。我们不使用 cookie、账户、表单或可识别您个人身份的分析。我们不投放广告或附属跟踪器。</p>"
+               "<h2>第三方服务</h2><p>页面嵌入 YouTube 视频（通过隐私增强的 youtube-nocookie.com 域名）并加载 Google Fonts。这些服务可能根据其自己的隐私政策设置自己的 cookie 并记录 IP 地址。</p>"
+               "<h2>服务器日志</h2><p>标准网络服务器日志可能会出于安全目的记录您的 IP 地址和请求的页面。我们不会将这些日志与任何个人身份关联。</p>"
+               "<h2>您的权利</h2><p>如果您在欧盟/英国，您享有 GDPR 下的权利。由于我们不保留与您相关的个人数据，通常无需访问、更正或删除任何内容。如有问题，请通过联系页面与我们联系。</p>"
+               "<h2>变更</h2><p>此页面可能会更改。最新版本始终在此 URL 上。</p>"),
+        "ja": ("プライバシー — Streaming Guides", "プライバシー", "プライバシーポリシー",
+               "<h2>収集する情報</h2><p>Streaming Guides は静的なウェブサイトです。Cookie、アカウント、フォーム、または個人を識別する分析を使用していません。広告やアフィリエイトトラッカーも実行していません。</p>"
+               "<h2>第三者サービス</h2><p>ページは（プライバシー強化された youtube-nocookie.com ドメインを介して）YouTube ビデオを埋め込み、Google Fonts を読み込みます。これらのサービスは、それぞれのプライバシーポリシーに従って独自の Cookie を設定し、IP アドレスをログに記録する場合があります。</p>"
+               "<h2>サーバーログ</h2><p>標準的なウェブサーバーログは、セキュリティ目的のためにあなたの IP アドレスと要求されたページを記録する場合があります。これらのログを個人の身元と結び付けることはありません。</p>"
+               "<h2>あなたの権利</h2><p>EU/英国にお住まいの場合、GDPR の下での権利があります。あなたに関連する個人データを保持していないため、通常、アクセス、修正、削除するものはありません。ご質問はお問い合わせページから。</p>"
+               "<h2>変更</h2><p>このページは変更される可能性があります。最新バージョンは常にこの URL にあります。</p>"),
+        "ar": ("الخصوصية — Streaming Guides", "الخصوصية", "سياسة الخصوصية",
+               "<h2>ما نجمعه</h2><p>Streaming Guides هو موقع ويب ثابت. لا نستخدم ملفات تعريف الارتباط أو الحسابات أو النماذج أو التحليلات التي تعرفك شخصيًا. لا نقوم بتشغيل إعلانات أو متعقبات تابعة.</p>"
+               "<h2>خدمات الطرف الثالث</h2><p>تضمن الصفحات مقاطع فيديو YouTube (عبر نطاق youtube-nocookie.com المعزز للخصوصية) وتحمل Google Fonts. قد تضبط هذه الخدمات ملفات تعريف الارتباط الخاصة بها وتسجل عناوين IP وفقًا لسياسات الخصوصية الخاصة بها.</p>"
+               "<h2>سجلات الخادم</h2><p>قد تسجل سجلات خادم الويب القياسية عنوان IP الخاص بك والصفحة المطلوبة، يتم الاحتفاظ بها لأغراض أمنية. لا نربط هذه السجلات بأي هوية شخصية.</p>"
+               "<h2>حقوقك</h2><p>إذا كنت في الاتحاد الأوروبي/المملكة المتحدة، فلديك حقوق بموجب GDPR. نظرًا لأننا لا نحتفظ ببيانات شخصية مرتبطة بك، فعمومًا لا يوجد شيء للوصول إليه أو تصحيحه أو حذفه. اتصل بنا عبر صفحة الاتصال لأي أسئلة.</p>"
+               "<h2>التغييرات</h2><p>قد تتغير هذه الصفحة. أحدث إصدار موجود دائمًا في هذا الرابط.</p>"),
+        "th": ("ความเป็นส่วนตัว — Streaming Guides", "ความเป็นส่วนตัว", "นโยบายความเป็นส่วนตัว",
+               "<h2>เราเก็บอะไรบ้าง</h2><p>Streaming Guides เป็นเว็บไซต์แบบสแตติก เราไม่ใช้คุกกี้ บัญชี แบบฟอร์ม หรือการวิเคราะห์ที่ระบุตัวคุณเป็นการส่วนตัว เราไม่แสดงโฆษณาหรือใช้ตัวติดตาม affiliate</p>"
+               "<h2>บริการของบุคคลที่สาม</h2><p>หน้าเพจฝังวิดีโอ YouTube (ผ่านโดเมนความเป็นส่วนตัวเพิ่ม youtube-nocookie.com) และโหลด Google Fonts บริการเหล่านี้อาจตั้งคุกกี้ของตัวเองและบันทึกที่อยู่ IP ตามนโยบายความเป็นส่วนตัวของตัวเอง</p>"
+               "<h2>บันทึกเซิร์ฟเวอร์</h2><p>บันทึกเว็บเซิร์ฟเวอร์มาตรฐานอาจบันทึกที่อยู่ IP และหน้าที่ขอเพื่อวัตถุประสงค์ด้านความปลอดภัย เราไม่เชื่อมโยงบันทึกเหล่านี้กับตัวตนส่วนบุคคลใดๆ</p>"
+               "<h2>สิทธิ์ของคุณ</h2><p>หากคุณอยู่ใน EU/UK คุณมีสิทธิ์ภายใต้ GDPR เนื่องจากเราไม่เก็บข้อมูลส่วนตัวที่เชื่อมโยงกับคุณ โดยทั่วไปจึงไม่มีอะไรให้เข้าถึง แก้ไข หรือลบ ติดต่อเราผ่านหน้าติดต่อสำหรับคำถาม</p>"
+               "<h2>การเปลี่ยนแปลง</h2><p>หน้านี้อาจมีการเปลี่ยนแปลง เวอร์ชันล่าสุดอยู่ที่ URL นี้เสมอ</p>"),
+        "fil": ("Privacy — Streaming Guides", "Privacy", "Patakaran sa privacy",
+                "<h2>Ano ang kinokolekta namin</h2><p>Ang Streaming Guides ay isang static na website. Hindi kami gumagamit ng cookies, accounts, forms, o analytics na nagpapakilala sa iyo nang personal. Hindi kami nagpapatakbo ng mga ad o affiliate tracker.</p>"
+                "<h2>Mga serbisyo ng third-party</h2><p>Ang mga pahina ay nag-eembed ng mga YouTube video (sa pamamagitan ng privacy-enhanced youtube-nocookie.com domain) at nag-load ng Google Fonts. Maaaring magtakda ang mga serbisyong ito ng kanilang sariling cookies at mag-log ng IP addresses ayon sa kanilang sariling mga patakaran sa privacy.</p>"
+                "<h2>Mga server log</h2><p>Maaaring i-record ng mga standard web server log ang iyong IP address at ang hiniling na pahina, pinananatili para sa mga layuning pang-seguridad. Hindi namin ini-link ang mga log na ito sa anumang personal na pagkakakilanlan.</p>"
+                "<h2>Ang iyong mga karapatan</h2><p>Kung ikaw ay nasa EU/UK, may mga karapatan ka sa ilalim ng GDPR. Dahil hindi kami humahawak ng personal na data na nakatali sa iyo, sa pangkalahatan ay walang ma-access, itama, o tanggalin. Makipag-ugnayan sa amin sa pamamagitan ng pahina ng Kontak para sa anumang mga tanong.</p>"
+                "<h2>Mga pagbabago</h2><p>Ang pahinang ito ay maaaring magbago. Ang pinakabagong bersyon ay palaging nasa URL na ito.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -1234,6 +1418,36 @@ LEGAL = {
                "<h2>Bez povezanosti</h2><p>Ova stranica nije povezana, podržana niti sponzorirana od strane bilo koje navedene cam platforme. Svi zaštitni znakovi pripadaju svojim vlasnicima i ovdje se koriste samo za identifikaciju.</p>"
                "<h2>SplitCam</h2><p>SplitCam je zaseban proizvod. Preuzmi ga samo sa službene stranice <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                "<h2>Bez jamstva</h2><p>Ova stranica se pruža «takva kakva jest», bez ikakvog jamstva. Nismo odgovorni za gubitke nastale korištenjem informacija objavljenih ovdje.</p>"),
+        "zh": ("使用条款 — Streaming Guides", "使用条款", "使用条款",
+               "<h2>受众</h2><p><strong>本网站面向成年人（18+）。</strong>指南涵盖成人 cam 平台的直播。使用本网站即表示您确认您在司法管辖区内已达到法定年龄。</p>"
+               "<h2>仅供参考</h2><p>这些指南仅供参考。我们无法保证信息始终准确——平台会更改界面、设置和政策。在依赖之前，请在平台的官方帮助中心验证步骤。</p>"
+               "<h2>无关联</h2><p>本网站与任何 cam 平台均无关联、未获其认可或赞助。所有商标归各自所有者所有，此处仅用于识别。</p>"
+               "<h2>SplitCam</h2><p>SplitCam 是独立产品。请仅从官方网站 <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a> 下载。</p>"
+               "<h2>无担保</h2><p>本网站按「现状」提供，不附带任何形式的担保。我们不对因使用此处发布的信息而产生的任何损失负责。</p>"),
+        "ja": ("利用規約 — Streaming Guides", "利用規約", "利用規約",
+               "<h2>対象者</h2><p><strong>このサイトは成人（18歳以上）向けです。</strong>ガイドは成人 cam プラットフォームでの配信をカバーしています。このサイトを使用することで、あなたは管轄区域で法定年齢に達していることを確認します。</p>"
+               "<h2>情報のみ</h2><p>ガイドは情報提供のみを目的としています。常に正確性を保証することはできません — プラットフォームはインターフェース、設定、ポリシーを変更します。依拠する前に、プラットフォーム独自のヘルプセンターで手順を確認してください。</p>"
+               "<h2>非提携</h2><p>このサイトは、参照されている cam プラットフォームのいずれとも提携、推奨、後援されていません。すべての商標はそれぞれの所有者に属し、ここでは識別目的でのみ使用されています。</p>"
+               "<h2>SplitCam</h2><p>SplitCam は別個の製品です。公式の <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a> ウェブサイトからのみダウンロードしてください。</p>"
+               "<h2>保証なし</h2><p>このサイトは「現状のまま」提供され、いかなる種類の保証もありません。ここでの情報の使用に起因する損失について、当社は責任を負いません。</p>"),
+        "ar": ("شروط الاستخدام — Streaming Guides", "شروط الاستخدام", "شروط الاستخدام",
+               "<h2>الجمهور</h2><p><strong>هذا الموقع مخصص للبالغين (18+).</strong> تغطي الأدلة البث على منصات cam للبالغين. باستخدام هذا الموقع، فإنك تؤكد أنك بلغت السن القانونية في ولايتك القضائية.</p>"
+               "<h2>للمعلومات فقط</h2><p>يتم توفير الأدلة لأغراض إعلامية. لا يمكننا ضمان الدقة في جميع الأوقات — تقوم المنصات بتغيير الواجهات والإعدادات والسياسات. تحقق من الخطوات في مركز المساعدة الرسمي للمنصة قبل الاعتماد عليها.</p>"
+               "<h2>لا توجد علاقة</h2><p>هذا الموقع ليس تابعًا أو معتمدًا أو مدعومًا من قبل أي من منصات cam المشار إليها. تنتمي جميع العلامات التجارية إلى أصحابها المعنيين وتستخدم هنا للتحديد فقط.</p>"
+               "<h2>SplitCam</h2><p>SplitCam هو منتج منفصل. قم بتنزيله فقط من الموقع الرسمي <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>بدون ضمان</h2><p>يتم توفير هذا الموقع «كما هو» بدون ضمان من أي نوع. نحن لسنا مسؤولين عن أي خسارة ناجمة عن استخدام المعلومات المنشورة هنا.</p>"),
+        "th": ("ข้อกำหนดการใช้งาน — Streaming Guides", "ข้อกำหนดการใช้งาน", "ข้อกำหนดการใช้งาน",
+               "<h2>กลุ่มเป้าหมาย</h2><p><strong>เว็บไซต์นี้มีไว้สำหรับผู้ใหญ่ (18+)</strong> คู่มือครอบคลุมการถ่ายทอดบนแพลตฟอร์ม cam ผู้ใหญ่ การใช้เว็บไซต์นี้แสดงว่าคุณยืนยันว่าคุณมีอายุตามกฎหมายในเขตอำนาจศาลของคุณ</p>"
+               "<h2>ข้อมูลเท่านั้น</h2><p>คู่มือนี้จัดทำขึ้นเพื่อวัตถุประสงค์ในการให้ข้อมูล เราไม่สามารถรับประกันความถูกต้องตลอดเวลาได้ — แพลตฟอร์มเปลี่ยนแปลงอินเตอร์เฟส การตั้งค่า และนโยบาย ตรวจสอบขั้นตอนที่ศูนย์ช่วยเหลือของแพลตฟอร์มก่อนพึ่งพา</p>"
+               "<h2>ไม่มีความเกี่ยวข้อง</h2><p>เว็บไซต์นี้ไม่ได้สังกัด รับรอง หรือสนับสนุนโดยแพลตฟอร์ม cam ใดๆ ที่อ้างถึง เครื่องหมายการค้าทั้งหมดเป็นของเจ้าของที่เกี่ยวข้องและใช้ที่นี่เพื่อระบุเท่านั้น</p>"
+               "<h2>SplitCam</h2><p>SplitCam เป็นผลิตภัณฑ์แยกต่างหาก ดาวน์โหลดจากเว็บไซต์ทางการเท่านั้น <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a></p>"
+               "<h2>ไม่มีการรับประกัน</h2><p>เว็บไซต์นี้ให้บริการ «ตามที่เป็น» โดยไม่มีการรับประกันใดๆ เราไม่รับผิดชอบต่อความสูญเสียที่เกิดจากการใช้ข้อมูลที่เผยแพร่ที่นี่</p>"),
+        "fil": ("Mga tuntunin — Streaming Guides", "Mga tuntunin", "Mga tuntunin ng paggamit",
+                "<h2>Madla</h2><p><strong>Ang site na ito ay para sa mga adulto (18+).</strong> Sinasaklaw ng mga gabay ang pag-broadcast sa adult cam platforms. Sa paggamit ng site na ito, kinukumpirma mong nasa legal na edad ka sa iyong hurisdiksyon.</p>"
+                "<h2>Impormasyon lamang</h2><p>Ang mga gabay ay ibinibigay para sa mga layuning impormasyon. Hindi namin masisigurado ang kawastuhan sa lahat ng oras — ang mga platform ay nagbabago ng mga interface, setting, at patakaran. I-verify ang mga hakbang sa opisyal na help center ng platform bago umasa sa mga ito.</p>"
+                "<h2>Walang kaakibatan</h2><p>Ang site na ito ay hindi kaakibat, hindi inendorso, at hindi sponsor ng anumang sinangguni na cam platform. Ang lahat ng trademark ay pag-aari ng kani-kanilang may-ari at ginagamit dito para lamang sa pagkakakilanlan.</p>"
+                "<h2>SplitCam</h2><p>Ang SplitCam ay isang hiwalay na produkto. I-download lamang ito mula sa opisyal na website na <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+                "<h2>Walang warranty</h2><p>Ang site na ito ay ibinibigay «as is» nang walang anumang warranty. Hindi kami mananagot sa anumang pagkalugi na dulot ng paggamit ng impormasyong inilathala dito.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -1304,6 +1518,26 @@ LEGAL = {
                "<p>Za pitanja, ispravke ili povratne informacije o vodičima, piši na <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                "<p>Ne pružamo podršku za račune ni tehničku podršku za same cam platforme — obrati se službenoj podršci svake platforme za to.</p>"
                "<p>Za podršku za softver SplitCam, pogledaj <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "zh": ("联系 — Streaming Guides", "联系", "联系",
+               "<p>有关指南的问题、更正或反馈，请发送电子邮件至 <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>。</p>"
+               "<p>我们不处理 cam 平台本身的账户或技术支持 — 请联系每个平台的官方支持。</p>"
+               "<p>有关 SplitCam 软件支持，请参阅 <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>。</p>"),
+        "ja": ("お問い合わせ — Streaming Guides", "お問い合わせ", "お問い合わせ",
+               "<p>ガイドに関するご質問、修正、フィードバックは <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a> までご連絡ください。</p>"
+               "<p>cam プラットフォーム自体のアカウントまたは技術サポートは取り扱っておりません — 各プラットフォームの公式サポートにお問い合わせください。</p>"
+               "<p>SplitCam ソフトウェアサポートについては、<a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a> をご覧ください。</p>"),
+        "ar": ("اتصل بنا — Streaming Guides", "اتصل بنا", "اتصل بنا",
+               "<p>للأسئلة أو التصحيحات أو التعليقات حول الأدلة، اكتب إلى <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>نحن لا نتعامل مع دعم الحساب أو الدعم الفني لمنصات cam نفسها — اتصل بالدعم الرسمي لكل منصة لذلك.</p>"
+               "<p>للحصول على دعم برنامج SplitCam، راجع <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "th": ("ติดต่อ — Streaming Guides", "ติดต่อ", "ติดต่อ",
+               "<p>สำหรับคำถาม การแก้ไข หรือข้อเสนอแนะเกี่ยวกับคู่มือ เขียนถึง <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a></p>"
+               "<p>เราไม่จัดการกับการสนับสนุนบัญชีหรือการสนับสนุนทางเทคนิคสำหรับแพลตฟอร์ม cam เอง — ติดต่อฝ่ายสนับสนุนทางการของแต่ละแพลตฟอร์มสำหรับสิ่งนั้น</p>"
+               "<p>สำหรับการสนับสนุนซอฟต์แวร์ SplitCam ดูที่ <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a></p>"),
+        "fil": ("Kontakin — Streaming Guides", "Kontakin", "Kontakin",
+                "<p>Para sa mga tanong, pagwawasto, o feedback tungkol sa mga gabay, sumulat sa <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+                "<p>Hindi kami humahawak ng suporta sa account o teknikal na suporta para sa mga cam platform mismo — kontakin ang opisyal na suporta ng bawat platform para diyan.</p>"
+                "<p>Para sa suporta sa software ng SplitCam, tingnan ang <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
     },
 }
 
@@ -1320,7 +1554,7 @@ def render_legal(slug, lang):
     ) + f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{slug}/">'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
     return f"""<!DOCTYPE html>
-<html lang="{u['lang']}">
+<html lang="{u['lang']}"{" dir=\"rtl\"" if u['lang'] in RTL_LANGS else ""}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1464,7 +1698,7 @@ def render_hub(platforms, lang):
         ],
     }
     return f"""<!DOCTYPE html>
-<html lang="{u['lang']}">
+<html lang="{u['lang']}"{" dir=\"rtl\"" if u['lang'] in RTL_LANGS else ""}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1538,7 +1772,8 @@ def main():
     from platforms_en import PLATFORMS_EN
     langs_data = {"en": PLATFORMS_EN}
     for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
-                 "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr"):
+                 "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
+                 "zh", "ja", "ar", "th", "fil"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
