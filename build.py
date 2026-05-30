@@ -90,7 +90,9 @@ margin-bottom:26px;position:relative;z-index:1}
 .collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
 .collab-logo{display:block;height:21px;width:auto;max-width:180px;
 object-fit:contain;object-position:left center}
-.collab-plat-mfc-alerts .collab-logo{max-width:130px}
+.collab-plat{padding:8px 15px}
+.collab-plat img{height:24px;width:24px;border-radius:50%;object-fit:cover}
+.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:nowrap}
 .hub-card-icon{width:32px;height:32px;flex-shrink:0;border-radius:50%;
 object-fit:cover;background:var(--app-surface)}
 .hub-grid .related-card{display:flex;align-items:center;gap:14px;
@@ -461,7 +463,7 @@ def render(p, lang, all_platforms):
       <div class="collab-flow">
         <div class="collab-pill collab-sc"><img src="{depth}assets/splitcam.png" alt=""><span>splitcam</span></div>
         <div class="collab-wire"><div class="collab-dot"></div></div>
-        <div class="collab-pill collab-plat collab-plat-{p["slug"]}" style="background:{brand}">{platform_logo(p["slug"], depth, name)}</div>
+        <div class="collab-pill collab-plat collab-plat-{p["slug"]}" style="background:{brand}"><img src="{depth}logos/round/{p["slug"]}.png" alt=""><span>{e(name)}</span></div>
       </div>
       <div class="collab-label">{COLLAB_LABEL[lang]}</div>
     </div>
