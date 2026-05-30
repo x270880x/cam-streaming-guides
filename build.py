@@ -1081,9 +1081,6 @@ def render(p, lang, all_platforms):
   <p>{u['cta_p']}</p>
   <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
 </section>
-<div class="section meta-line">
-  <span>{u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time></span>
-</div>
 <footer>
   <div class="footer-inner">
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
@@ -1743,9 +1740,6 @@ def render_legal(slug, lang):
 <section class="section" style="max-width:760px;margin:0 auto;padding-top:24px">
   <h1 class="h1">{e(h1)}</h1>
   <div class="legal-body">{body}</div>
-  <p style="margin-top:32px;color:var(--text-sub);font-size:13px">
-    {u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time>
-  </p>
 </section>
 <footer>
   <div class="footer-inner">
