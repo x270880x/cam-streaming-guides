@@ -20,8 +20,12 @@ PUBLISHED_DATE = "2026-05-21"
 MODIFIED_DATE = datetime.date.today().isoformat()
 OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "de": "de_DE", "fr": "fr_FR", "it": "it_IT",
-             "pt": "pt_BR", "nl": "nl_NL"}
-LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl"]  # set by main() to those with platforms_<lang>.py
+             "pt": "pt_BR", "nl": "nl_NL",
+             "ro": "ro_RO", "bg": "bg_BG", "hu": "hu_HU",
+             "el": "el_GR", "fi": "fi_FI", "da": "da_DK",
+             "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR"}
+LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
+               "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr"]  # set by main() to those with platforms_<lang>.py
 PUBLISHER = {"@type": "Organization", "name": SITE_NAME, "url": f"{SITE}/"}
 
 # ---------------------------------------------------------------- CSS (shared)
@@ -247,6 +251,78 @@ UI = {
            "updated": "Laatst bijgewerkt", "about": "Over", "contact": "Contact",
            "privacy": "Privacy", "terms": "Voorwaarden",
            "path": "nl/", "lang": "nl"},
+    "ro": {"home": "Toate ghidurile", "download": "Descarcă SplitCam", "crumb_home": "Ghiduri",
+           "skip": "La pași", "related": "Alte ghiduri de platforme",
+           "quick": "Pe scurt", "steps_h": "Pas cu pas",
+           "tips_h": "Sfaturi", "faq_h": "Întrebări frecvente", "cta_h": "Gata să intri live?",
+           "cta_p": "Software gratuit. Fără filigran, fără cont. Configurezi o dată, intri live cu un clic.",
+           "updated": "Actualizat", "about": "Despre", "contact": "Contact",
+           "privacy": "Confidențialitate", "terms": "Termeni",
+           "path": "ro/", "lang": "ro"},
+    "bg": {"home": "Всички ръководства", "download": "Изтегли SplitCam", "crumb_home": "Ръководства",
+           "skip": "Към стъпките", "related": "Други ръководства за платформи",
+           "quick": "Накратко", "steps_h": "Стъпка по стъпка",
+           "tips_h": "Съвети", "faq_h": "Често задавани въпроси", "cta_h": "Готов(а) ли си за ефир?",
+           "cta_p": "Безплатен софтуер. Без воден знак, без регистрация. Настройваш веднъж, излизаш на живо с един клик.",
+           "updated": "Обновено", "about": "За проекта", "contact": "Контакти",
+           "privacy": "Поверителност", "terms": "Условия",
+           "path": "bg/", "lang": "bg"},
+    "hu": {"home": "Összes útmutató", "download": "SplitCam letöltése", "crumb_home": "Útmutatók",
+           "skip": "Ugrás a lépésekhez", "related": "További platform-útmutatók",
+           "quick": "Röviden", "steps_h": "Lépésről lépésre",
+           "tips_h": "Tippek", "faq_h": "GYIK", "cta_h": "Készen állsz az élő adásra?",
+           "cta_p": "Ingyenes szoftver. Vízjel nélkül, regisztráció nélkül. Egyszer beállítod, és egy kattintással élőben vagy.",
+           "updated": "Frissítve", "about": "Rólunk", "contact": "Kapcsolat",
+           "privacy": "Adatvédelem", "terms": "Feltételek",
+           "path": "hu/", "lang": "hu"},
+    "el": {"home": "Όλοι οι οδηγοί", "download": "Λήψη SplitCam", "crumb_home": "Οδηγοί",
+           "skip": "Στα βήματα", "related": "Άλλοι οδηγοί πλατφορμών",
+           "quick": "Σύντομη απάντηση", "steps_h": "Βήμα προς βήμα",
+           "tips_h": "Συμβουλές", "faq_h": "Συχνές ερωτήσεις", "cta_h": "Έτοιμος για ζωντανή μετάδοση;",
+           "cta_p": "Δωρεάν λογισμικό. Χωρίς υδατογράφημα, χωρίς εγγραφή. Στήσε μία φορά, βγες ζωντανά με ένα κλικ.",
+           "updated": "Τελευταία ενημέρωση", "about": "Σχετικά", "contact": "Επικοινωνία",
+           "privacy": "Απόρρητο", "terms": "Όροι",
+           "path": "el/", "lang": "el"},
+    "fi": {"home": "Kaikki oppaat", "download": "Lataa SplitCam", "crumb_home": "Oppaat",
+           "skip": "Vaiheisiin", "related": "Muut alustaoppaat",
+           "quick": "Lyhyesti", "steps_h": "Vaihe vaiheelta",
+           "tips_h": "Vinkit", "faq_h": "UKK", "cta_h": "Valmis lähetykseen?",
+           "cta_p": "Ilmainen ohjelmisto. Ei vesileimaa, ei rekisteröitymistä. Aseta kerran, mene livenä yhdellä klikkauksella.",
+           "updated": "Päivitetty", "about": "Tietoja", "contact": "Yhteystiedot",
+           "privacy": "Tietosuoja", "terms": "Ehdot",
+           "path": "fi/", "lang": "fi"},
+    "da": {"home": "Alle guides", "download": "Hent SplitCam", "crumb_home": "Guides",
+           "skip": "Til trinene", "related": "Andre platformsguides",
+           "quick": "Kort fortalt", "steps_h": "Trin for trin",
+           "tips_h": "Tips", "faq_h": "FAQ", "cta_h": "Klar til at gå live?",
+           "cta_p": "Gratis software. Intet vandmærke, ingen oprettelse. Sæt op én gang, gå live med ét klik.",
+           "updated": "Senest opdateret", "about": "Om os", "contact": "Kontakt",
+           "privacy": "Privatliv", "terms": "Vilkår",
+           "path": "da/", "lang": "da"},
+    "no": {"home": "Alle guider", "download": "Last ned SplitCam", "crumb_home": "Guider",
+           "skip": "Til trinnene", "related": "Andre plattformguider",
+           "quick": "Kort", "steps_h": "Steg for steg",
+           "tips_h": "Tips", "faq_h": "FAQ", "cta_h": "Klar til å gå live?",
+           "cta_p": "Gratis programvare. Uten vannmerke, uten konto. Sett opp én gang, gå live med ett klikk.",
+           "updated": "Sist oppdatert", "about": "Om oss", "contact": "Kontakt",
+           "privacy": "Personvern", "terms": "Vilkår",
+           "path": "no/", "lang": "no"},
+    "sr": {"home": "Сви водичи", "download": "Преузми SplitCam", "crumb_home": "Водичи",
+           "skip": "На кораке", "related": "Други водичи за платформе",
+           "quick": "Укратко", "steps_h": "Корак по корак",
+           "tips_h": "Савети", "faq_h": "Честа питања", "cta_h": "Спреман(на) за пренос уживо?",
+           "cta_p": "Бесплатан софтвер. Без водеяног жига, без регистрације. Подеси једном, иди уживо једним кликом.",
+           "updated": "Ажурирано", "about": "О сајту", "contact": "Контакт",
+           "privacy": "Приватност", "terms": "Услови",
+           "path": "sr/", "lang": "sr"},
+    "hr": {"home": "Svi vodiči", "download": "Preuzmi SplitCam", "crumb_home": "Vodiči",
+           "skip": "Na korake", "related": "Drugi vodiči za platforme",
+           "quick": "Ukratko", "steps_h": "Korak po korak",
+           "tips_h": "Savjeti", "faq_h": "Česta pitanja", "cta_h": "Spreman(a) za prijenos uživo?",
+           "cta_p": "Besplatan softver. Bez vodenog žiga, bez registracije. Postavi jednom, idi uživo jednim klikom.",
+           "updated": "Ažurirano", "about": "O nama", "contact": "Kontakt",
+           "privacy": "Privatnost", "terms": "Uvjeti",
+           "path": "hr/", "lang": "hr"},
 }
 
 def e(s):
@@ -365,6 +441,105 @@ STEP_TMPL = {
         ("Klik op Go Live",
          "Druk in SplitCam op <strong>Go Live</strong> en start daarna de uitzending op {name}. Binnen ~10 seconden is je camera live. Volgende streams gaan met één klik — SplitCam openen, Go Live."),
     ],
+    "ro": [
+        ("Descarcă și instalează SplitCam",
+         "SplitCam este software de streaming gratuit pentru Windows și macOS. Descarcă-l și rulează installerul — fără înregistrare, fără card, fără filigran, fără limită de timp. SplitCam este encoderul care îți trimite videoul către {name}."),
+        ("Configurează camera și scena",
+         "Deschide SplitCam și adaugă webcamul. Construiește scena așa cum vrei să o vadă spectatorii — suprapuneri, text, o a doua cameră sau telefonul, filtre beauty sau fundal AI. Totul se aplică live înainte ca streamul să plece din PC."),
+        ("Obține cheia de stream {name}", "{key}"),
+        ("Conectează SplitCam la {name}",
+         "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului și cheia de stream {name} în câmpurile RTMP personalizate. Bitrate: 3.500–6.000&nbsp;Kbps la 1080p, 2.000–4.000&nbsp;Kbps la 720p. Rulează mai întâi testul de viteză integrat."),
+        ("Apasă Go Live",
+         "Apasă <strong>Go Live</strong> în SplitCam, apoi pornește transmisiunea pe {name}. În ~10 secunde camera ta este live. Următoarele streamuri se pornesc cu un singur clic — deschizi SplitCam, Go Live."),
+    ],
+    "bg": [
+        ("Изтегли и инсталирай SplitCam",
+         "SplitCam е безплатен софтуер за стрийминг за Windows и macOS. Изтегли го и пусни инсталатора — без регистрация, без карта, без воден знак, без времево ограничение. SplitCam е енкодерът, който изпраща видеото ти към {name}."),
+        ("Настрой камера и сцена",
+         "Отвори SplitCam и добави уебкамерата. Изгради сцената така, както искаш зрителите да я видят — наслагвания, текст, втора камера или телефонът, бюти филтри или AI фон. Всичко се прилага на живо, преди потокът да напусне компютъра."),
+        ("Вземи стрийм ключа на {name}", "{key}"),
+        ("Свържи SplitCam към {name}",
+         "В SplitCam отвори <strong>Stream Settings</strong>, постави URL-а на сървъра и стрийм ключа на {name} в полетата за custom RTMP. Битрейт: 3500–6000&nbsp;Kbps за 1080p, 2000–4000&nbsp;Kbps за 720p. Първо пусни вградения тест за скорост."),
+        ("Натисни Go Live",
+         "Натисни <strong>Go Live</strong> в SplitCam, после стартирай излъчването на {name}. След ~10 секунди камерата е в ефир. Следващите трансляции тръгват с един клик — отваряш SplitCam, Go Live."),
+    ],
+    "hu": [
+        ("Töltsd le és telepítsd a SplitCamet",
+         "A SplitCam ingyenes streamelő szoftver Windowsra és macOS-re. Töltsd le és futtasd a telepítőt — regisztráció, kártya, vízjel és időkorlát nélkül. A SplitCam az enkóder, amely a videódat a {name} felé küldi."),
+        ("Állítsd be a kamerát és a jelenetet",
+         "Nyisd meg a SplitCamet és add hozzá a webkamerát. Építsd fel a jelenetet úgy, ahogy a nézők látni fogják — overlay-ek, szöveg, második kamera vagy a telefon, szépségszűrők vagy AI háttér. Minden élőben alkalmazódik, mielőtt a stream elhagyná a gépet."),
+        ("Szerezd meg a {name} stream kulcsodat", "{key}"),
+        ("Csatlakoztasd a SplitCamet a {name} platformhoz",
+         "A SplitCamben nyisd meg a <strong>Stream Settings</strong> menüt, illeszd be a {name} szerver URL-t és a stream kulcsot a custom RTMP mezőkbe. Bitráta: 3500–6000&nbsp;Kbps 1080p-hez, 2000–4000&nbsp;Kbps 720p-hez. Először futtasd le a beépített sebességtesztet."),
+        ("Kattints a Go Live gombra",
+         "Nyomd meg a <strong>Go Live</strong> gombot a SplitCamben, majd indítsd el az adást a {name} oldalon. ~10 másodperc alatt élőben vagy. A következő streamek egy kattintással indulnak — megnyitod a SplitCamet, Go Live."),
+    ],
+    "el": [
+        ("Κατέβασε και εγκατέστησε το SplitCam",
+         "Το SplitCam είναι δωρεάν λογισμικό streaming για Windows και macOS. Κατέβασέ το και τρέξε τον installer — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα, χωρίς χρονικό όριο. Το SplitCam είναι ο encoder που στέλνει το βίντεό σου στο {name}."),
+        ("Ρύθμισε κάμερα και σκηνή",
+         "Άνοιξε το SplitCam και πρόσθεσε την webcam σου. Φτιάξε τη σκηνή όπως θέλεις να τη βλέπουν οι θεατές — overlays, κείμενο, δεύτερη κάμερα ή το κινητό, beauty φίλτρα ή AI φόντο. Όλα εφαρμόζονται ζωντανά πριν φύγει το stream από τον υπολογιστή."),
+        ("Πάρε το stream key για {name}", "{key}"),
+        ("Σύνδεσε το SplitCam στο {name}",
+         "Στο SplitCam άνοιξε τα <strong>Stream Settings</strong>, επικόλλησε το server URL και το stream key του {name} στα πεδία custom RTMP. Bitrate: 3.500–6.000&nbsp;Kbps για 1080p, 2.000–4.000&nbsp;Kbps για 720p. Τρέξε πρώτα το ενσωματωμένο speed test."),
+        ("Πάτησε Go Live",
+         "Πάτησε <strong>Go Live</strong> στο SplitCam, μετά ξεκίνα την μετάδοση στο {name}. Σε ~10 δευτερόλεπτα η κάμερά σου είναι ζωντανή. Οι επόμενες μεταδόσεις ξεκινούν με ένα κλικ — ανοίγεις το SplitCam, Go Live."),
+    ],
+    "fi": [
+        ("Lataa ja asenna SplitCam",
+         "SplitCam on ilmainen suoratoisto-ohjelmisto Windowsille ja macOS:lle. Lataa se ja aja asennusohjelma — ei rekisteröitymistä, ei korttia, ei vesileimaa, ei aikarajaa. SplitCam on enkooderi, joka lähettää videosi alustalle {name}."),
+        ("Aseta kamera ja näkymä",
+         "Avaa SplitCam ja lisää webkamera. Rakenna näkymä sellaiseksi, kuin haluat katsojien näkevän — overlayt, teksti, toinen kamera tai puhelin, beauty-suodattimet tai AI-tausta. Kaikki sovelletaan livenä ennen kuin striimi lähtee koneelta."),
+        ("Hanki {name}-striimiavain", "{key}"),
+        ("Yhdistä SplitCam alustaan {name}",
+         "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä {name}-palvelimen URL ja striimiavain custom RTMP -kenttiin. Bitrate: 3 500–6 000&nbsp;Kbps 1080p:lle, 2 000–4 000&nbsp;Kbps 720p:lle. Aja ensin sisäänrakennettu nopeustesti."),
+        ("Klikkaa Go Live",
+         "Paina <strong>Go Live</strong> SplitCamissa, käynnistä sitten lähetys alustalla {name}. ~10 sekunnissa kamerasi on livenä. Seuraavat striimit lähtevät yhdellä klikkauksella."),
+    ],
+    "da": [
+        ("Hent og installer SplitCam",
+         "SplitCam er gratis streamingsoftware til Windows og macOS. Hent det og kør installationsprogrammet — ingen oprettelse, intet kort, intet vandmærke, ingen tidsbegrænsning. SplitCam er encoderen, der sender din video til {name}."),
+        ("Sæt kamera og scene op",
+         "Åbn SplitCam og tilføj webcammet. Byg scenen, som du ønsker seerne skal se den — overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller AI-baggrund. Alt anvendes live, før streamen forlader din PC."),
+        ("Hent din {name}-stream key", "{key}"),
+        ("Forbind SplitCam til {name}",
+         "I SplitCam åbn <strong>Stream Settings</strong>, indsæt {name}-server-URL og stream key i de tilpassede RTMP-felter. Bitrate: 3.500–6.000&nbsp;Kbps til 1080p, 2.000–4.000&nbsp;Kbps til 720p. Kør først den indbyggede hastighedstest."),
+        ("Klik Go Live",
+         "Tryk <strong>Go Live</strong> i SplitCam, og start derefter udsendelsen på {name}. På ~10 sekunder er dit kamera live. Næste streams starter med ét klik — åbn SplitCam, Go Live."),
+    ],
+    "no": [
+        ("Last ned og installer SplitCam",
+         "SplitCam er gratis strømmeprogramvare for Windows og macOS. Last ned og kjør installasjonsprogrammet — uten registrering, uten kort, uten vannmerke, uten tidsgrense. SplitCam er enkoderen som sender videoen din til {name}."),
+        ("Sett opp kamera og scene",
+         "Åpne SplitCam og legg til webkameraet. Bygg scenen slik du vil at seerne skal se den — overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller AI-bakgrunn. Alt brukes live før strømmen forlater PC-en."),
+        ("Hent {name}-strømnøkkelen din", "{key}"),
+        ("Koble SplitCam til {name}",
+         "I SplitCam åpne <strong>Stream Settings</strong>, lim inn {name}-server-URL og strømnøkkelen i custom RTMP-feltene. Bitrate: 3 500–6 000&nbsp;Kbps for 1080p, 2 000–4 000&nbsp;Kbps for 720p. Kjør først den innebygde hastighetstesten."),
+        ("Klikk Go Live",
+         "Trykk <strong>Go Live</strong> i SplitCam, og start så sendingen på {name}. På ~10 sekunder er kameraet ditt live. Neste strømmer starter med ett klikk — åpne SplitCam, Go Live."),
+    ],
+    "sr": [
+        ("Преузми и инсталирај SplitCam",
+         "SplitCam је бесплатан софтвер за стриминг за Windows и macOS. Преузми га и покрени инсталер — без регистрације, без картице, без воденог жига, без временског ограничења. SplitCam је енкодер који шаље твој видео ка {name}."),
+        ("Подеси камеру и сцену",
+         "Отвори SplitCam и додај веб камеру. Изгради сцену онако како желиш да је гледаоци виде — преклапања, текст, друга камера или телефон, бјути филтери или AI позадина. Све се примењује уживо пре него што стрим оде са рачунара."),
+        ("Узми свој {name} стрим кључ", "{key}"),
+        ("Повежи SplitCam са {name}",
+         "У SplitCam-у отвори <strong>Stream Settings</strong>, налепи URL сервера и стрим кључ платформе {name} у custom RTMP поља. Bitrate: 3.500–6.000&nbsp;Kbps за 1080p, 2.000–4.000&nbsp;Kbps за 720p. Прво покрени уграђени тест брзине."),
+        ("Кликни Go Live",
+         "Притисни <strong>Go Live</strong> у SplitCam-у, затим покрени пренос на {name}. За ~10 секунди камера је уживо. Наредни стримови крећу једним кликом — отвориш SplitCam, Go Live."),
+    ],
+    "hr": [
+        ("Preuzmi i instaliraj SplitCam",
+         "SplitCam je besplatan softver za streaming za Windows i macOS. Preuzmi ga i pokreni instalacijski program — bez registracije, bez kartice, bez vodenog žiga, bez vremenskog ograničenja. SplitCam je enkoder koji šalje tvoj video prema {name}."),
+        ("Postavi kameru i scenu",
+         "Otvori SplitCam i dodaj web kameru. Izgradi scenu onako kako želiš da je gledatelji vide — preklapanja, tekst, druga kamera ili mobitel, beauty filtri ili AI pozadina. Sve se primjenjuje uživo prije nego stream napusti računalo."),
+        ("Uzmi svoj {name} stream ključ", "{key}"),
+        ("Spoji SplitCam s {name}",
+         "U SplitCamu otvori <strong>Stream Settings</strong>, zalijepi URL servera i stream ključ platforme {name} u custom RTMP polja. Bitrate: 3.500–6.000&nbsp;Kbps za 1080p, 2.000–4.000&nbsp;Kbps za 720p. Prvo pokreni ugrađeni test brzine."),
+        ("Klikni Go Live",
+         "Pritisni <strong>Go Live</strong> u SplitCamu, zatim pokreni prijenos na {name}. Za ~10 sekundi kamera je uživo. Sljedeći streamovi kreću jednim klikom — otvoriš SplitCam, Go Live."),
+    ],
 }
 
 
@@ -389,9 +564,11 @@ def build_steps(p, lang):
 
 
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
-              "pt": "PT", "nl": "NL"}
+              "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
+              "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
-             "pt": "pt/", "nl": "nl/"}
+             "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
+             "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -406,10 +583,17 @@ VIDEOS = {
 }
 VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en vídeo",
            "de": "Video-Anleitung", "fr": "Guide vidéo", "it": "Guida video",
-           "pt": "Guia em vídeo", "nl": "Videogids"}
+           "pt": "Guia em vídeo", "nl": "Videogids",
+           "ro": "Ghid video", "bg": "Видео ръководство", "hu": "Videós útmutató",
+           "el": "Οδηγός βίντεο", "fi": "Video-opas", "da": "Videoguide",
+           "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
-                "pt": "Guia de configuração", "nl": "Installatiegids"}
+                "pt": "Guia de configuração", "nl": "Installatiegids",
+                "ro": "Ghid de configurare", "bg": "Ръководство за настройка",
+                "hu": "Beállítási útmutató", "el": "Οδηγός εγκατάστασης",
+                "fi": "Asennusohje", "da": "Opsætningsguide", "no": "Oppsettsguide",
+                "sr": "Водич за подешавање", "hr": "Vodič za postavljanje"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -715,6 +899,60 @@ HUB = {
            "sub": "Stap-voor-stap setup voor uitzenden op elk camplatform met gratis "
                   "SplitCam — externe encoder, scènes, overlays, geen watermerk.",
            "pick": "Kies je platform"},
+    "ro": {"title": "Ghiduri de streaming — transmisiuni cam cu SplitCam",
+           "desc": "Ghiduri gratuite pas cu pas pentru transmisiuni pe platforme cam cu SplitCam.",
+           "h1": 'Ghiduri gratuite de <span class="accent">streaming cam</span>',
+           "sub": "Configurare pas cu pas pentru transmisiuni pe orice platformă cam cu "
+                  "SplitCam gratuit — encoder extern, scene, suprapuneri, fără filigran.",
+           "pick": "Alege-ți platforma"},
+    "bg": {"title": "Ръководства за стрийминг — кам излъчвания със SplitCam",
+           "desc": "Безплатни стъпка по стъпка ръководства за излъчване на кам платформи със SplitCam.",
+           "h1": 'Безплатни ръководства за <span class="accent">кам стрийминг</span>',
+           "sub": "Стъпка по стъпка настройка за излъчване на всяка кам платформа с "
+                  "безплатния SplitCam — външен енкодер, сцени, наслагвания, без воден знак.",
+           "pick": "Избери своята платформа"},
+    "hu": {"title": "Streaming útmutatók — cam adások SplitCammel",
+           "desc": "Ingyenes lépésről lépésre útmutatók cam platformokon való adáshoz SplitCammel.",
+           "h1": 'Ingyenes <span class="accent">cam streaming útmutatók</span>',
+           "sub": "Lépésről lépésre beállítás bármely cam platformra az ingyenes SplitCammel — "
+                  "külső enkóder, jelenetek, overlay-ek, vízjel nélkül.",
+           "pick": "Válaszd ki a platformodat"},
+    "el": {"title": "Οδηγοί streaming — μεταδόσεις cam με SplitCam",
+           "desc": "Δωρεάν οδηγοί βήμα προς βήμα για μεταδόσεις σε cam πλατφόρμες με SplitCam.",
+           "h1": 'Δωρεάν οδηγοί <span class="accent">cam streaming</span>',
+           "sub": "Εγκατάσταση βήμα προς βήμα για μετάδοση σε οποιαδήποτε cam πλατφόρμα με "
+                  "το δωρεάν SplitCam — εξωτερικός encoder, σκηνές, overlays, χωρίς υδατογράφημα.",
+           "pick": "Επίλεξε την πλατφόρμα σου"},
+    "fi": {"title": "Suoratoisto-oppaat — cam-lähetykset SplitCamilla",
+           "desc": "Ilmaiset vaihe vaiheelta oppaat cam-alustojen lähetyksiin SplitCamilla.",
+           "h1": 'Ilmaiset <span class="accent">cam-striimioppaat</span>',
+           "sub": "Vaihe vaiheelta asennus mille tahansa cam-alustalle ilmaisella SplitCamilla — "
+                  "ulkoinen enkooderi, näkymät, overlayt, ei vesileimaa.",
+           "pick": "Valitse alustasi"},
+    "da": {"title": "Streaming-guides — cam-udsendelser med SplitCam",
+           "desc": "Gratis trin-for-trin guides til udsendelse på cam-platforme med SplitCam.",
+           "h1": 'Gratis <span class="accent">cam-streaming-guides</span>',
+           "sub": "Trin-for-trin opsætning til udsendelse på enhver cam-platform med gratis "
+                  "SplitCam — ekstern encoder, scener, overlays, intet vandmærke.",
+           "pick": "Vælg din platform"},
+    "no": {"title": "Strømmingsguider — cam-sendinger med SplitCam",
+           "desc": "Gratis trinn-for-trinn guider for sendinger på cam-plattformer med SplitCam.",
+           "h1": 'Gratis <span class="accent">cam-strømmingsguider</span>',
+           "sub": "Trinn-for-trinn oppsett for sending på enhver cam-plattform med gratis "
+                  "SplitCam — ekstern enkoder, scener, overlays, uten vannmerke.",
+           "pick": "Velg plattformen din"},
+    "sr": {"title": "Водичи за стриминг — кам преноси са SplitCam-ом",
+           "desc": "Бесплатни водичи корак по корак за преносе на кам платформама са SplitCam-ом.",
+           "h1": 'Бесплатни водичи за <span class="accent">кам стриминг</span>',
+           "sub": "Подешавање корак по корак за пренос на било којој кам платформи са "
+                  "бесплатним SplitCam-ом — спољни енкодер, сцене, преклапања, без воденог жига.",
+           "pick": "Изабери своју платформу"},
+    "hr": {"title": "Vodiči za streaming — cam prijenosi sa SplitCamom",
+           "desc": "Besplatni vodiči korak po korak za prijenose na cam platformama sa SplitCamom.",
+           "h1": 'Besplatni vodiči za <span class="accent">cam streaming</span>',
+           "sub": "Postavljanje korak po korak za prijenos na bilo kojoj cam platformi sa "
+                  "besplatnim SplitCamom — vanjski enkoder, scene, preklapanja, bez vodenog žiga.",
+           "pick": "Odaberi svoju platformu"},
 }
 
 
@@ -752,6 +990,42 @@ LEGAL = {
                "<p>Streaming Guides is een gratis, onafhankelijke bron voor het opzetten van live-uitzendingen op cam-platforms voor volwassenen met <strong>SplitCam</strong> — gratis streamingsoftware zonder watermerk voor Windows en macOS.</p>"
                "<p>We behandelen 19 platforms met stap-voor-stap gidsen, oplossingen voor veelvoorkomende problemen en actuele technische details — van het vinden van je stream key op elk platform tot het kiezen van de juiste bitrate.</p>"
                "<p>Deze site is niet gelieerd aan een van de genoemde platforms. Alle merknamen en logo's zijn eigendom van hun respectieve eigenaars.</p>"),
+        "ro": ("Despre — Streaming Guides", "Despre", "Despre Streaming Guides",
+               "<p>Streaming Guides este o resursă gratuită și independentă pentru configurarea transmisiunilor live pe platformele cam pentru adulți folosind <strong>SplitCam</strong> — software de streaming gratuit, fără filigran, pentru Windows și macOS.</p>"
+               "<p>Acoperim 19 platforme cu ghiduri pas cu pas, sfaturi pentru rezolvarea problemelor și detalii tehnice actuale — de la găsirea cheii de stream pe fiecare site până la alegerea bitrate-ului potrivit.</p>"
+               "<p>Acest site nu este afiliat cu niciuna dintre platformele enumerate. Toate numele de marcă și logourile aparțin proprietarilor respectivi.</p>"),
+        "bg": ("За проекта — Streaming Guides", "За проекта", "За Streaming Guides",
+               "<p>Streaming Guides е безплатен, независим ресурс за настройка на излъчвания на живо на кам платформи за възрастни чрез <strong>SplitCam</strong> — безплатен софтуер за стрийминг без воден знак за Windows и macOS.</p>"
+               "<p>Покриваме 19 платформи с ръководства стъпка по стъпка, съвети за отстраняване на проблеми и актуални технически детайли — от това къде да намериш стрийм ключа на всеки сайт до избора на правилния битрейт.</p>"
+               "<p>Този сайт не е свързан с никоя от изброените платформи. Всички марки и логота принадлежат на съответните им собственици.</p>"),
+        "hu": ("Rólunk — Streaming Guides", "Rólunk", "A Streaming Guidesról",
+               "<p>A Streaming Guides egy ingyenes, független erőforrás élő közvetítések beállításához felnőtt cam platformokon a <strong>SplitCam</strong> segítségével — ingyenes, vízjel nélküli streamelő szoftver Windowsra és macOS-re.</p>"
+               "<p>19 platformot tárgyalunk lépésről lépésre útmutatókkal, hibaelhárítási tippekkel és aktuális technikai részletekkel — az egyes oldalak stream kulcsának megtalálásától a megfelelő bitráta kiválasztásáig.</p>"
+               "<p>Ez az oldal nem áll kapcsolatban a felsorolt platformok egyikével sem. Minden márkanév és logó a megfelelő tulajdonosé.</p>"),
+        "el": ("Σχετικά — Streaming Guides", "Σχετικά", "Σχετικά με το Streaming Guides",
+               "<p>Το Streaming Guides είναι μια δωρεάν, ανεξάρτητη πηγή για την εγκατάσταση ζωντανών μεταδόσεων σε cam πλατφόρμες για ενήλικες με χρήση του <strong>SplitCam</strong> — δωρεάν λογισμικό streaming χωρίς υδατογράφημα για Windows και macOS.</p>"
+               "<p>Καλύπτουμε 19 πλατφόρμες με οδηγούς βήμα προς βήμα, συμβουλές αντιμετώπισης προβλημάτων και επίκαιρες τεχνικές λεπτομέρειες — από την εύρεση του stream key σε κάθε site έως την επιλογή του σωστού bitrate.</p>"
+               "<p>Αυτό το site δεν συνδέεται με καμία από τις πλατφόρμες που αναφέρονται. Όλα τα ονόματα μάρκας και τα λογότυπα ανήκουν στους αντίστοιχους κατόχους τους.</p>"),
+        "fi": ("Tietoja — Streaming Guides", "Tietoja", "Tietoja Streaming Guidesista",
+               "<p>Streaming Guides on ilmainen, riippumaton resurssi suorien lähetysten asentamiseen aikuisille suunnatuilla cam-alustoilla käyttäen <strong>SplitCamia</strong> — ilmainen, vesileimaton streaming-ohjelmisto Windowsille ja macOS:lle.</p>"
+               "<p>Käsittelemme 19 alustaa vaihe vaiheelta -oppailla, vianmääritysvinkeillä ja ajantasaisilla teknisillä yksityiskohdilla — striimiavaimen löytämisestä jokaisella sivulla oikean bitraten valintaan.</p>"
+               "<p>Tämä sivusto ei ole sidoksissa mihinkään luetelluista alustoista. Kaikki brändinimet ja logot kuuluvat omistajilleen.</p>"),
+        "da": ("Om os — Streaming Guides", "Om os", "Om Streaming Guides",
+               "<p>Streaming Guides er en gratis, uafhængig ressource til opsætning af live-udsendelser på voksen-cam-platforme med <strong>SplitCam</strong> — gratis streamingsoftware uden vandmærke til Windows og macOS.</p>"
+               "<p>Vi dækker 19 platforme med trin-for-trin guides, fejlfindingstips og aktuelle tekniske detaljer — fra at finde din stream key på hver side til at vælge den rigtige bitrate.</p>"
+               "<p>Denne side er ikke tilknyttet nogen af de listede platforme. Alle varemærker og logoer tilhører deres respektive ejere.</p>"),
+        "no": ("Om oss — Streaming Guides", "Om oss", "Om Streaming Guides",
+               "<p>Streaming Guides er en gratis, uavhengig ressurs for å sette opp direktesendinger på voksen-cam-plattformer med <strong>SplitCam</strong> — gratis strømmeprogramvare uten vannmerke for Windows og macOS.</p>"
+               "<p>Vi dekker 19 plattformer med trinn-for-trinn guider, feilsøkingstips og oppdaterte tekniske detaljer — fra å finne strømnøkkelen på hvert nettsted til å velge riktig bitrate.</p>"
+               "<p>Denne siden er ikke tilknyttet noen av de oppførte plattformene. Alle varemerker og logoer tilhører sine respektive eiere.</p>"),
+        "sr": ("О сајту — Streaming Guides", "О сајту", "О Streaming Guides",
+               "<p>Streaming Guides је бесплатан, независан ресурс за подешавање преноса уживо на кам платформама за одрасле користећи <strong>SplitCam</strong> — бесплатан софтвер за стриминг без воденог жига за Windows и macOS.</p>"
+               "<p>Покривамо 19 платформи водичима корак по корак, саветима за решавање проблема и актуелним техничким детаљима — од проналажења стрим кључа на сваком сајту до избора правог битрејта.</p>"
+               "<p>Овај сајт није повезан ни са једном од наведених платформи. Сви називи марки и логотипи припадају својим власницима.</p>"),
+        "hr": ("O nama — Streaming Guides", "O nama", "O Streaming Guidesu",
+               "<p>Streaming Guides je besplatan, neovisan resurs za postavljanje prijenosa uživo na cam platformama za odrasle koristeći <strong>SplitCam</strong> — besplatan softver za streaming bez vodenog žiga za Windows i macOS.</p>"
+               "<p>Pokrivamo 19 platformi vodičima korak po korak, savjetima za rješavanje problema i aktualnim tehničkim detaljima — od pronalaska stream ključa na svakoj stranici do odabira ispravnog bitrate-a.</p>"
+               "<p>Ova stranica nije povezana ni s jednom od navedenih platformi. Sva imena marki i logotipi pripadaju svojim vlasnicima.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -802,6 +1076,60 @@ LEGAL = {
                "<h2>Serverlogs</h2><p>Standaard serverlogs kunnen je IP-adres en de opgevraagde pagina registreren, bewaard om veiligheidsredenen. We koppelen deze logs niet aan een persoonlijke identiteit.</p>"
                "<h2>Jouw rechten</h2><p>Ben je in de EU/het VK, dan heb je rechten onder de AVG/UK GDPR. Omdat we geen persoonsgegevens van jou bewaren, valt er meestal niets in te zien, te corrigeren of te wissen. Voor vragen kun je ons bereiken via de Contact-pagina.</p>"
                "<h2>Wijzigingen</h2><p>Deze pagina kan veranderen. De meest recente versie staat altijd op deze URL.</p>"),
+        "ro": ("Confidențialitate — Streaming Guides", "Confidențialitate", "Politică de confidențialitate",
+               "<h2>Ce colectăm</h2><p>Streaming Guides este un site static. Nu folosim cookie-uri, conturi, formulare sau analytics care te identifică personal. Nu rulăm reclame sau trackere de afiliere.</p>"
+               "<h2>Servicii terțe</h2><p>Paginile încorporează videoclipuri YouTube (prin domeniul cu confidențialitate îmbunătățită youtube-nocookie.com) și încarcă Google Fonts. Aceste servicii pot seta cookie-uri proprii și înregistra adrese IP conform politicilor lor de confidențialitate.</p>"
+               "<h2>Loguri server</h2><p>Logurile standard ale serverului pot înregistra adresa ta IP și pagina solicitată, păstrate în scopuri de securitate. Nu legăm aceste loguri de nicio identitate personală.</p>"
+               "<h2>Drepturile tale</h2><p>Dacă ești în UE/Marea Britanie, ai drepturi conform GDPR. Deoarece nu deținem date personale legate de tine, în general nu există nimic de accesat, corectat sau șters. Pentru întrebări, contactează-ne prin pagina Contact.</p>"
+               "<h2>Modificări</h2><p>Această pagină se poate schimba. Cea mai recentă versiune este întotdeauna la acest URL.</p>"),
+        "bg": ("Поверителност — Streaming Guides", "Поверителност", "Политика за поверителност",
+               "<h2>Какво събираме</h2><p>Streaming Guides е статичен сайт. Не използваме бисквитки, акаунти, формуляри или аналитика, която те идентифицира лично. Не пускаме реклами или affiliate тракери.</p>"
+               "<h2>Услуги от трети страни</h2><p>Страниците вграждат YouTube видеа (чрез домейна с подобрена поверителност youtube-nocookie.com) и зареждат Google Fonts. Тези услуги могат да задават собствени бисквитки и да записват IP адреси според собствените си политики за поверителност.</p>"
+               "<h2>Сървърни логове</h2><p>Стандартните уеб логове може да записват твоя IP адрес и заявената страница, съхранявани с цел сигурност. Не свързваме тези логове с лична самоличност.</p>"
+               "<h2>Твоите права</h2><p>Ако си в ЕС/Великобритания, имаш права по GDPR. Тъй като не съхраняваме лични данни, свързани с теб, обикновено няма какво да достъпиш, поправиш или изтриеш. За въпроси се свържи с нас чрез страницата Контакти.</p>"
+               "<h2>Промени</h2><p>Тази страница може да се промени. Най-новата версия винаги е на този URL.</p>"),
+        "hu": ("Adatvédelem — Streaming Guides", "Adatvédelem", "Adatvédelmi szabályzat",
+               "<h2>Mit gyűjtünk</h2><p>A Streaming Guides statikus weboldal. Nem használunk sütiket, fiókokat, űrlapokat vagy téged személyesen azonosító analitikát. Nem futtatunk hirdetéseket vagy affiliate trackereket.</p>"
+               "<h2>Harmadik féltől származó szolgáltatások</h2><p>Az oldalak YouTube-videókat ágyaznak be (a fokozott adatvédelmű youtube-nocookie.com domainen keresztül) és Google Fontsot töltenek be. Ezek a szolgáltatások saját sütiket állíthatnak be és IP-címeket naplózhatnak saját adatvédelmi szabályzatuk szerint.</p>"
+               "<h2>Szerver naplók</h2><p>A szabványos webszerver naplók rögzíthetik az IP-címedet és a kért oldalt, biztonsági okokból megőrizve. Nem kapcsoljuk össze ezeket a naplókat semmilyen személyes azonosítóval.</p>"
+               "<h2>Jogaid</h2><p>Ha az EU-ban/Egyesült Királyságban vagy, jogokat élvezel a GDPR alapján. Mivel nem tárolunk hozzád kötött személyes adatokat, általában nincs mit hozzáférned, javítanod vagy törölnöd. Kérdésekért keress minket a Kapcsolat oldalon.</p>"
+               "<h2>Változások</h2><p>Ez az oldal változhat. A legújabb verzió mindig ezen a URL-en található.</p>"),
+        "el": ("Απόρρητο — Streaming Guides", "Απόρρητο", "Πολιτική απορρήτου",
+               "<h2>Τι συλλέγουμε</h2><p>Το Streaming Guides είναι ένα στατικό website. Δεν χρησιμοποιούμε cookies, λογαριασμούς, φόρμες ή analytics που σας ταυτοποιούν προσωπικά. Δεν τρέχουμε διαφημίσεις ή affiliate trackers.</p>"
+               "<h2>Υπηρεσίες τρίτων</h2><p>Οι σελίδες ενσωματώνουν βίντεο YouTube (μέσω του domain ενισχυμένης ιδιωτικότητας youtube-nocookie.com) και φορτώνουν Google Fonts. Αυτές οι υπηρεσίες μπορεί να ορίζουν δικά τους cookies και να καταγράφουν διευθύνσεις IP σύμφωνα με τις δικές τους πολιτικές απορρήτου.</p>"
+               "<h2>Logs διακομιστή</h2><p>Τα τυπικά logs διακομιστή μπορεί να καταγράφουν τη διεύθυνση IP σας και τη σελίδα που ζητήθηκε, για λόγους ασφαλείας. Δεν συνδέουμε αυτά τα logs με καμία προσωπική ταυτότητα.</p>"
+               "<h2>Τα δικαιώματά σας</h2><p>Αν είστε στην ΕΕ/ΗΒ, έχετε δικαιώματα βάσει του GDPR. Καθώς δεν διατηρούμε προσωπικά δεδομένα συνδεδεμένα με εσάς, γενικά δεν υπάρχει τίποτα να αποκτήσετε πρόσβαση, να διορθώσετε ή να διαγράψετε. Για ερωτήσεις, επικοινωνήστε μαζί μας μέσω της σελίδας Επικοινωνία.</p>"
+               "<h2>Αλλαγές</h2><p>Αυτή η σελίδα μπορεί να αλλάξει. Η τελευταία έκδοση είναι πάντα σε αυτό το URL.</p>"),
+        "fi": ("Tietosuoja — Streaming Guides", "Tietosuoja", "Tietosuojakäytäntö",
+               "<h2>Mitä keräämme</h2><p>Streaming Guides on staattinen sivusto. Emme käytä evästeitä, tilejä, lomakkeita tai sinut henkilökohtaisesti tunnistavaa analytiikkaa. Emme näytä mainoksia tai käytä affiliate-seurainta.</p>"
+               "<h2>Kolmannen osapuolen palvelut</h2><p>Sivut upottavat YouTube-videoita (parannetun yksityisyyden youtube-nocookie.com-domainin kautta) ja lataavat Google Fontsia. Nämä palvelut voivat asettaa omia evästeitään ja kirjata IP-osoitteita omien tietosuojakäytäntöjensä mukaan.</p>"
+               "<h2>Palvelimen lokit</h2><p>Vakio-verkkopalvelimen lokit voivat tallentaa IP-osoitteesi ja pyydetyn sivun, säilytettynä turvallisuussyistä. Emme yhdistä näitä lokeja mihinkään henkilökohtaiseen identiteettiin.</p>"
+               "<h2>Oikeutesi</h2><p>Jos olet EU:ssa/Iso-Britanniassa, sinulla on oikeudet GDPR:n mukaisesti. Koska emme säilytä sinuun liittyviä henkilötietoja, yleensä mitään ei ole tarkasteltavaksi, korjattavaksi tai poistettavaksi. Yhteydenotot Yhteystiedot-sivun kautta.</p>"
+               "<h2>Muutokset</h2><p>Tämä sivu voi muuttua. Uusin versio on aina tässä URL-osoitteessa.</p>"),
+        "da": ("Privatliv — Streaming Guides", "Privatliv", "Privatlivspolitik",
+               "<h2>Hvad vi indsamler</h2><p>Streaming Guides er en statisk hjemmeside. Vi bruger ikke cookies, konti, formularer eller analyser, der identificerer dig personligt. Vi viser ikke reklamer eller bruger affiliate-trackere.</p>"
+               "<h2>Tredjepartstjenester</h2><p>Sider indlejrer YouTube-videoer (via det privatlivsforbedrede domæne youtube-nocookie.com) og indlæser Google Fonts. Disse tjenester kan sætte egne cookies og logge IP-adresser i henhold til deres egne privatlivspolitikker.</p>"
+               "<h2>Serverlogs</h2><p>Standard webserverlogs kan registrere din IP-adresse og den anmodede side, opbevaret af sikkerhedshensyn. Vi forbinder ikke disse logs med nogen personlig identitet.</p>"
+               "<h2>Dine rettigheder</h2><p>Hvis du er i EU/UK, har du rettigheder under GDPR. Da vi ikke opbevarer personlige data knyttet til dig, er der generelt intet at få adgang til, rette eller slette. Kontakt os via Kontakt-siden for spørgsmål.</p>"
+               "<h2>Ændringer</h2><p>Denne side kan ændre sig. Den nyeste version er altid på denne URL.</p>"),
+        "no": ("Personvern — Streaming Guides", "Personvern", "Personvernerklæring",
+               "<h2>Hva vi samler inn</h2><p>Streaming Guides er en statisk nettside. Vi bruker ikke informasjonskapsler, kontoer, skjemaer eller analyser som identifiserer deg personlig. Vi viser ikke annonser og bruker ikke affiliate-sporere.</p>"
+               "<h2>Tredjepartstjenester</h2><p>Sider bygger inn YouTube-videoer (via det personvernforbedrede domenet youtube-nocookie.com) og laster Google Fonts. Disse tjenestene kan sette egne informasjonskapsler og logge IP-adresser i henhold til sine egne personvernerklæringer.</p>"
+               "<h2>Serverlogger</h2><p>Standard webserverlogger kan registrere IP-adressen din og den forespurte siden, oppbevart av sikkerhetsgrunner. Vi knytter ikke disse loggene til noen personlig identitet.</p>"
+               "<h2>Dine rettigheter</h2><p>Hvis du er i EU/Storbritannia, har du rettigheter under GDPR. Siden vi ikke har personopplysninger knyttet til deg, er det generelt ingenting å få tilgang til, korrigere eller slette. Kontakt oss via Kontakt-siden for spørsmål.</p>"
+               "<h2>Endringer</h2><p>Denne siden kan endres. Den nyeste versjonen er alltid på denne URL-en.</p>"),
+        "sr": ("Приватност — Streaming Guides", "Приватност", "Политика приватности",
+               "<h2>Шта прикупљамо</h2><p>Streaming Guides је статички сајт. Не користимо колачиће, налоге, формуларе или аналитику која те идентификује лично. Не приказујемо рекламе нити користимо affiliate трекере.</p>"
+               "<h2>Услуге трећих страна</h2><p>Странице уграђују YouTube видео-снимке (преко домена са побољшаном приватношћу youtube-nocookie.com) и учитавају Google Fonts. Ове услуге могу постављати сопствене колачиће и бележити IP адресе у складу са сопственим политикама приватности.</p>"
+               "<h2>Логови сервера</h2><p>Стандардни логови веб сервера могу бележити твоју IP адресу и тражену страницу, чувано из безбедносних разлога. Ове логове не повезујемо ни са једним личним идентитетом.</p>"
+               "<h2>Твоја права</h2><p>Ако си у ЕУ/Великој Британији, имаш права по GDPR-у. Пошто не чувамо личне податке везане за тебе, обично нема ничега за приступ, исправљање или брисање. За питања нас контактирај преко странице Контакт.</p>"
+               "<h2>Промене</h2><p>Ова страница се може мењати. Најновија верзија је увек на овом URL-у.</p>"),
+        "hr": ("Privatnost — Streaming Guides", "Privatnost", "Politika privatnosti",
+               "<h2>Što prikupljamo</h2><p>Streaming Guides je statična web stranica. Ne koristimo kolačiće, račune, obrasce ili analitiku koja te osobno identificira. Ne pokazujemo oglase i ne koristimo affiliate trackere.</p>"
+               "<h2>Usluge trećih strana</h2><p>Stranice ugrađuju YouTube videozapise (preko domene s pojačanom privatnošću youtube-nocookie.com) i učitavaju Google Fonts. Ove usluge mogu postavljati vlastite kolačiće i bilježiti IP adrese sukladno svojim politikama privatnosti.</p>"
+               "<h2>Zapisnici poslužitelja</h2><p>Standardni zapisnici web poslužitelja mogu bilježiti tvoju IP adresu i traženu stranicu, pohranjeno iz sigurnosnih razloga. Ove zapisnike ne povezujemo ni s jednim osobnim identitetom.</p>"
+               "<h2>Tvoja prava</h2><p>Ako si u EU/Velikoj Britaniji, imaš prava prema GDPR-u. Budući da ne čuvamo osobne podatke vezane uz tebe, općenito nema ničega za pristup, ispravak ili brisanje. Za pitanja nas kontaktiraj preko stranice Kontakt.</p>"
+               "<h2>Promjene</h2><p>Ova stranica se može promijeniti. Najnovija verzija je uvijek na ovom URL-u.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -852,6 +1180,60 @@ LEGAL = {
                "<h2>Geen affiliatie</h2><p>Deze site is niet gelieerd aan, onderschreven door of gesponsord door een van de genoemde cam-platforms. Alle handelsmerken zijn eigendom van hun respectieve eigenaars en worden hier uitsluitend ter identificatie gebruikt.</p>"
                "<h2>SplitCam</h2><p>SplitCam is een apart product. Download het uitsluitend van de officiële website <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                "<h2>Geen garantie</h2><p>Deze site wordt geleverd «zoals deze is», zonder enige garantie. We zijn niet aansprakelijk voor verlies dat voortvloeit uit het gebruik van de hier gepubliceerde informatie.</p>"),
+        "ro": ("Termeni de utilizare — Streaming Guides", "Termeni de utilizare", "Termeni de utilizare",
+               "<h2>Public</h2><p><strong>Acest site este destinat adulților (18+).</strong> Ghidurile acoperă transmisiuni pe platforme cam pentru adulți. Prin utilizarea acestui site confirmi că ești major în jurisdicția ta.</p>"
+               "<h2>Doar informare</h2><p>Ghidurile sunt furnizate cu scop informativ. Nu putem garanta acuratețea în orice moment — platformele își modifică interfețele, setările și politicile. Verifică pașii în centrul oficial de asistență al platformei înainte de a te baza pe ei.</p>"
+               "<h2>Fără afiliere</h2><p>Acest site nu este afiliat, susținut sau sponsorizat de niciuna dintre platformele cam menționate. Toate mărcile aparțin proprietarilor lor și sunt folosite aici doar pentru identificare.</p>"
+               "<h2>SplitCam</h2><p>SplitCam este un produs separat. Descarcă-l doar de pe site-ul oficial <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Fără garanție</h2><p>Acest site este furnizat «așa cum este», fără nicio garanție. Nu suntem responsabili pentru pierderile rezultate din utilizarea informațiilor publicate aici.</p>"),
+        "bg": ("Условия за ползване — Streaming Guides", "Условия за ползване", "Условия за ползване",
+               "<h2>Аудитория</h2><p><strong>Този сайт е предназначен за възрастни (18+).</strong> Ръководствата покриват излъчване на кам платформи за възрастни. Използвайки този сайт, потвърждаваш, че си пълнолетен(на) в твоята юрисдикция.</p>"
+               "<h2>Само информация</h2><p>Ръководствата се предоставят с информативна цел. Не можем да гарантираме точност през цялото време — платформите променят интерфейси, настройки и политики. Провери стъпките в официалния център за помощ на платформата, преди да разчиташ на тях.</p>"
+               "<h2>Без афилиация</h2><p>Този сайт не е свързан, одобрен или спонсориран от никоя от споменатите кам платформи. Всички търговски марки принадлежат на съответните им собственици и се използват тук само за идентификация.</p>"
+               "<h2>SplitCam</h2><p>SplitCam е отделен продукт. Изтегляй го само от официалния сайт <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Без гаранция</h2><p>Този сайт се предоставя «както е», без каквато и да е гаранция. Не носим отговорност за загуби, произтичащи от използването на публикуваната тук информация.</p>"),
+        "hu": ("Felhasználási feltételek — Streaming Guides", "Felhasználási feltételek", "Felhasználási feltételek",
+               "<h2>Célközönség</h2><p><strong>Ez az oldal felnőtteknek (18+) készült.</strong> Az útmutatók felnőtt cam platformokon való adást ismertetnek. A site használatával megerősíted, hogy nagykorú vagy a saját joghatóságodban.</p>"
+               "<h2>Csak információ</h2><p>Az útmutatók tájékoztató jellegűek. Nem tudjuk minden időpontban garantálni a pontosságot — a platformok változtatják felületeiket, beállításaikat és szabályzataikat. Mielőtt rájuk hagyatkoznál, ellenőrizd a lépéseket a platform hivatalos súgóközpontjában.</p>"
+               "<h2>Nincs kapcsolat</h2><p>Ez az oldal nincs kapcsolatban, nincs jóváhagyva és nincs szponzorálva az említett cam platformok egyikével sem. Minden védjegy a megfelelő tulajdonosé, és itt kizárólag azonosítás céljából használjuk.</p>"
+               "<h2>SplitCam</h2><p>A SplitCam külön termék. Csak a hivatalos <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a> oldalról töltsd le.</p>"
+               "<h2>Nincs garancia</h2><p>Ezt az oldalt «adott állapotban» biztosítjuk, mindenféle garancia nélkül. Nem vagyunk felelősek az itt közzétett információk használatából eredő veszteségekért.</p>"),
+        "el": ("Όροι χρήσης — Streaming Guides", "Όροι χρήσης", "Όροι χρήσης",
+               "<h2>Κοινό</h2><p><strong>Αυτό το site προορίζεται για ενήλικες (18+).</strong> Οι οδηγοί καλύπτουν μετάδοση σε cam πλατφόρμες για ενήλικες. Χρησιμοποιώντας αυτό το site, επιβεβαιώνετε ότι έχετε ενηλικιωθεί στη δικαιοδοσία σας.</p>"
+               "<h2>Μόνο πληροφορίες</h2><p>Οι οδηγοί παρέχονται για ενημερωτικούς σκοπούς. Δεν μπορούμε να εγγυηθούμε την ακρίβεια ανά πάσα στιγμή — οι πλατφόρμες αλλάζουν διεπαφές, ρυθμίσεις και πολιτικές. Επαληθεύστε τα βήματα στο επίσημο κέντρο βοήθειας της πλατφόρμας πριν τα εμπιστευτείτε.</p>"
+               "<h2>Καμία σύνδεση</h2><p>Αυτό το site δεν σχετίζεται, δεν εγκρίνεται ούτε χρηματοδοτείται από καμία από τις cam πλατφόρμες που αναφέρονται. Όλα τα εμπορικά σήματα ανήκουν στους αντίστοιχους κατόχους τους και χρησιμοποιούνται εδώ μόνο για αναγνώριση.</p>"
+               "<h2>SplitCam</h2><p>Το SplitCam είναι ξεχωριστό προϊόν. Κατεβάστε το μόνο από την επίσημη ιστοσελίδα <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Καμία εγγύηση</h2><p>Αυτό το site παρέχεται «ως έχει» χωρίς καμία εγγύηση. Δεν είμαστε υπεύθυνοι για απώλειες που προκύπτουν από τη χρήση των πληροφοριών που δημοσιεύονται εδώ.</p>"),
+        "fi": ("Käyttöehdot — Streaming Guides", "Käyttöehdot", "Käyttöehdot",
+               "<h2>Yleisö</h2><p><strong>Tämä sivusto on tarkoitettu aikuisille (18+).</strong> Oppaat kattavat lähetykset aikuisille tarkoitetuilla cam-alustoilla. Käyttämällä tätä sivustoa vahvistat, että olet täysi-ikäinen lainkäyttöalueellasi.</p>"
+               "<h2>Vain tiedoksi</h2><p>Oppaat tarjotaan tiedonantotarkoituksessa. Emme voi taata oikeellisuutta jokaisena hetkenä — alustat muuttavat käyttöliittymiä, asetuksia ja käytäntöjä. Tarkista vaiheet alustan virallisesta tukikeskuksesta ennen kuin luotat niihin.</p>"
+               "<h2>Ei kytköstä</h2><p>Tämä sivusto ei ole sidoksissa, tukema tai sponsoroima minkään mainitun cam-alustan toimesta. Kaikki tavaramerkit kuuluvat omistajilleen ja niitä käytetään täällä vain tunnistamistarkoituksessa.</p>"
+               "<h2>SplitCam</h2><p>SplitCam on erillinen tuote. Lataa se vain viralliselta sivustolta <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Ei takuuta</h2><p>Tämä sivusto tarjotaan «sellaisenaan» ilman minkäänlaista takuuta. Emme ole vastuussa täällä julkaistujen tietojen käytöstä aiheutuvista menetyksistä.</p>"),
+        "da": ("Vilkår — Streaming Guides", "Vilkår", "Vilkår for brug",
+               "<h2>Målgruppe</h2><p><strong>Denne side er tiltænkt voksne (18+).</strong> Guidesne dækker udsendelse på voksen-cam-platforme. Ved at bruge denne side bekræfter du, at du er myndig i din jurisdiktion.</p>"
+               "<h2>Kun information</h2><p>Guidesne leveres til informationsformål. Vi kan ikke garantere nøjagtighed til enhver tid — platformene ændrer grænseflader, indstillinger og politikker. Verificer trinene i platformens officielle hjælpecenter, før du stoler på dem.</p>"
+               "<h2>Ingen tilknytning</h2><p>Denne side er ikke tilknyttet, godkendt eller sponsoreret af nogen af de nævnte cam-platforme. Alle varemærker tilhører deres respektive ejere og bruges her udelukkende til identifikation.</p>"
+               "<h2>SplitCam</h2><p>SplitCam er et separat produkt. Hent det kun fra det officielle <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Ingen garanti</h2><p>Denne side leveres «som den er», uden nogen form for garanti. Vi er ikke ansvarlige for tab, der opstår ved brug af informationen, der offentliggøres her.</p>"),
+        "no": ("Vilkår — Streaming Guides", "Vilkår", "Vilkår for bruk",
+               "<h2>Målgruppe</h2><p><strong>Denne siden er ment for voksne (18+).</strong> Guidene dekker sending på voksen-cam-plattformer. Ved å bruke denne siden bekrefter du at du er myndig i din jurisdiksjon.</p>"
+               "<h2>Kun informasjon</h2><p>Guidene tilbys for informasjonsformål. Vi kan ikke garantere nøyaktighet til enhver tid — plattformene endrer grensesnitt, innstillinger og retningslinjer. Verifiser trinnene i plattformens offisielle hjelpesenter før du stoler på dem.</p>"
+               "<h2>Ingen tilknytning</h2><p>Denne siden er ikke tilknyttet, anbefalt eller sponset av noen av de nevnte cam-plattformene. Alle varemerker tilhører sine respektive eiere og brukes her kun for identifisering.</p>"
+               "<h2>SplitCam</h2><p>SplitCam er et separat produkt. Last det ned kun fra den offisielle <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>-siden.</p>"
+               "<h2>Ingen garanti</h2><p>Denne siden leveres «som den er», uten noen form for garanti. Vi er ikke ansvarlige for tap som oppstår ved bruk av informasjonen som er publisert her.</p>"),
+        "sr": ("Услови коришћења — Streaming Guides", "Услови коришћења", "Услови коришћења",
+               "<h2>Публика</h2><p><strong>Овај сајт је намењен одраслима (18+).</strong> Водичи покривају преносе на кам платформама за одрасле. Коришћењем овог сајта потврђујеш да си пунолетан(а) у својој јурисдикцији.</p>"
+               "<h2>Само информације</h2><p>Водичи се пружају у информативне сврхе. Не можемо гарантовати тачност у сваком тренутку — платформе мењају интерфејсе, подешавања и политике. Провери кораке у званичном центру за помоћ платформе пре него што се ослониш на њих.</p>"
+               "<h2>Без повезаности</h2><p>Овај сајт није повезан, подржан нити спонзорисан од стране било које наведене кам платформе. Сви заштитни знаци припадају својим власницима и овде се користе само за идентификацију.</p>"
+               "<h2>SplitCam</h2><p>SplitCam је засебан производ. Преузми га само са званичног сајта <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Без гаранције</h2><p>Овај сајт се пружа «такав какав је», без икакве гаранције. Нисмо одговорни за губитке настале коришћењем информација објављених овде.</p>"),
+        "hr": ("Uvjeti korištenja — Streaming Guides", "Uvjeti korištenja", "Uvjeti korištenja",
+               "<h2>Publika</h2><p><strong>Ova stranica je namijenjena odraslima (18+).</strong> Vodiči pokrivaju prijenose na cam platformama za odrasle. Korištenjem ove stranice potvrđuješ da si punoljetan(a) u svojoj jurisdikciji.</p>"
+               "<h2>Samo informacije</h2><p>Vodiči se pružaju u informativne svrhe. Ne možemo jamčiti točnost u svakom trenutku — platforme mijenjaju sučelja, postavke i pravila. Provjeri korake u službenom centru za pomoć platforme prije nego što se osloniš na njih.</p>"
+               "<h2>Bez povezanosti</h2><p>Ova stranica nije povezana, podržana niti sponzorirana od strane bilo koje navedene cam platforme. Svi zaštitni znakovi pripadaju svojim vlasnicima i ovdje se koriste samo za identifikaciju.</p>"
+               "<h2>SplitCam</h2><p>SplitCam je zaseban proizvod. Preuzmi ga samo sa službene stranice <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Bez jamstva</h2><p>Ova stranica se pruža «takva kakva jest», bez ikakvog jamstva. Nismo odgovorni za gubitke nastale korištenjem informacija objavljenih ovdje.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -886,6 +1268,42 @@ LEGAL = {
                "<p>Voor vragen, correcties of feedback over de gidsen, mail naar <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                "<p>We bieden geen account- of technische ondersteuning voor de cam-platforms zelf — neem voor zulke vragen contact op met de officiële support van het betreffende platform.</p>"
                "<p>Voor SplitCam-softwaresupport, zie <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "ro": ("Contact — Streaming Guides", "Contact", "Contact",
+               "<p>Pentru întrebări, corecții sau feedback despre ghiduri, scrie la <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Nu oferim asistență pentru conturi sau asistență tehnică pentru platformele cam în sine — contactează asistența oficială a fiecărei platforme pentru asta.</p>"
+               "<p>Pentru asistența software SplitCam, vezi <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "bg": ("Контакти — Streaming Guides", "Контакти", "Контакти",
+               "<p>За въпроси, корекции или обратна връзка относно ръководствата, пиши на <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Не предоставяме поддръжка за акаунти или техническа поддръжка за самите кам платформи — обърни се към официалната поддръжка на всяка платформа за това.</p>"
+               "<p>За поддръжка на софтуера SplitCam, виж <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "hu": ("Kapcsolat — Streaming Guides", "Kapcsolat", "Kapcsolat",
+               "<p>Az útmutatókkal kapcsolatos kérdésekért, javításokért vagy visszajelzésért írj a <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a> címre.</p>"
+               "<p>Nem nyújtunk fiók- vagy technikai támogatást maguknak a cam platformoknak — ehhez fordulj az egyes platformok hivatalos támogatásához.</p>"
+               "<p>SplitCam szoftvertámogatáshoz lásd: <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "el": ("Επικοινωνία — Streaming Guides", "Επικοινωνία", "Επικοινωνία",
+               "<p>Για ερωτήσεις, διορθώσεις ή σχόλια σχετικά με τους οδηγούς, γράψτε στο <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Δεν παρέχουμε υποστήριξη λογαριασμού ή τεχνική υποστήριξη για τις ίδιες τις cam πλατφόρμες — επικοινωνήστε με την επίσημη υποστήριξη κάθε πλατφόρμας για αυτό.</p>"
+               "<p>Για υποστήριξη του λογισμικού SplitCam, δείτε <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "fi": ("Yhteystiedot — Streaming Guides", "Yhteystiedot", "Yhteystiedot",
+               "<p>Kysymyksiä, korjauksia tai palautetta oppaista voi lähettää osoitteeseen <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Emme tarjoa tili- tai teknistä tukea itse cam-alustoille — ota yhteyttä kunkin alustan viralliseen tukeen sitä varten.</p>"
+               "<p>SplitCam-ohjelmiston tukea varten katso <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "da": ("Kontakt — Streaming Guides", "Kontakt", "Kontakt",
+               "<p>For spørgsmål, rettelser eller feedback om guidesne, skriv til <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Vi yder ikke konto- eller teknisk support for selve cam-platformene — kontakt den enkelte platforms officielle support for det.</p>"
+               "<p>For SplitCam-softwaresupport, se <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "no": ("Kontakt — Streaming Guides", "Kontakt", "Kontakt",
+               "<p>For spørsmål, rettelser eller tilbakemeldinger om guidene, skriv til <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Vi gir ikke konto- eller teknisk støtte for selve cam-plattformene — kontakt hver plattforms offisielle støtte for det.</p>"
+               "<p>For SplitCam-programvarestøtte, se <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "sr": ("Контакт — Streaming Guides", "Контакт", "Контакт",
+               "<p>За питања, исправке или повратне информације о водичима, пиши на <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Не пружамо подршку за налоге или техничку подршку за саме кам платформе — обрати се званичној подршци сваке платформе за то.</p>"
+               "<p>За подршку за софтвер SplitCam, погледај <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "hr": ("Kontakt — Streaming Guides", "Kontakt", "Kontakt",
+               "<p>Za pitanja, ispravke ili povratne informacije o vodičima, piši na <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Ne pružamo podršku za račune ni tehničku podršku za same cam platforme — obrati se službenoj podršci svake platforme za to.</p>"
+               "<p>Za podršku za softver SplitCam, pogledaj <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
     },
 }
 
@@ -1119,7 +1537,8 @@ def main():
     global LANGS_AVAIL
     from platforms_en import PLATFORMS_EN
     langs_data = {"en": PLATFORMS_EN}
-    for code in ("ru", "es", "de", "fr", "it", "pt", "nl"):
+    for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
+                 "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")

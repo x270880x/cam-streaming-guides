@@ -1,0 +1,538 @@
+# -*- coding: utf-8 -*-
+"""Hungarian (hu) content for cam-streaming-guides."""
+
+_T_ETH = ("Használj vezetékes kapcsolatot", "Az Ethernet veri a Wi-Fit egy hosszú streamben — "
+          "egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.")
+_T_TEST = ("Először csinálj privát tesztet", "Futtass egy rövid teszt-adást a kamerára, hangra, "
+           "kompozícióra és overlay-ekre, mielőtt a szobát megnyitod a közönségnek.")
+
+PLATFORMS_HU = [
+    {"slug": "chaturbate", "name": "Chaturbate",
+     "title": "Adás a Chaturbate-en SplitCammel — Token & RTMP",
+     "desc": "Adás a Chaturbate-en ingyenes SplitCammel — broadcast token, RTMP, multi-kamera jelenetek és overlay-ek. Nincs vízjel.",
+     "kw": "chaturbate adás, chaturbate broadcast token, chaturbate rtmp obs, chaturbate external encoder, chaturbate live",
+     "h1html": 'Hogyan adsz a <span class="accent">Chaturbate</span>-en SplitCammel',
+     "h1short": "Adás Chaturbate",
+     "card": "Token-alapú beállítás külső enkóderrel a Chaturbate-en.",
+     "intro": "A Chaturbate az egyik legnagyobb cam platform, token-gazdaságra építve. A böngészős broadcaster egy lapos egy-kamerás eszköz — a <strong style='color:var(--text)'>külső enkóderre</strong> váltás az ingyenes <strong style='color:var(--text)'>SplitCammel</strong> multi-kamera jeleneteket, overlay-eket és szűrőket nyit meg ugyanazon a token-alapú streamen.",
+     "quick": "Adás a Chaturbate-en SplitCammel: telepíted a SplitCamet, jelenetet építesz, Chaturbate-en megnyitod <em>Broadcast Yourself → My Broadcast</em>, másolod a broadcast tokent, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Másold a broadcast tokent a Chaturbate-ről.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Chaturbate-en kattints <strong>Broadcast Yourself</strong> a <strong>My Broadcast</strong> oldalért, majd <strong>View RTMP/OBS broadcast information and stream key</strong>. A kulcs <strong>broadcast tokenként</strong> jelenik meg — másold. Jelszóként kezeld; soha nem nyilvános.",
+     "tips": [
+         ("A token a kulcs", "A Chaturbate a broadcast tokenedet használja generikus stream key helyett. Jelszóként kezeld és reseteld, ha kiszivárog."),
+         ("Sok tartalék", "A Chaturbate RTMP ingestje 4K-ig, 60 fps-ig és magas bitrátáig fogad — a limit a feltöltésed, nem a platform. Keyframe 2 másodpercenként."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Engedi a Chaturbate az OBS-t / külső enkódereket?", "Igen — a Chaturbate hivatalosan támogatja a külső enkódereket, saját «How do I set up OBS?» cikkel. A «Use External Encoder to Broadcast» kapcsolóval aktiválod az adás beállításokban."),
+         ("Hol a Chaturbate stream key-em?", "Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. A kulcs a broadcast tokened."),
+         ("Milyen bitráta a Chaturbate-hez?", "3500–6000 Kbps 1080p-n bőven elég. A Chaturbate plafonja magas — a valódi limit a feltöltésed; először futtasd a SplitCam sebességtesztjét."),
+         ("Ingyenes a SplitCam a Chaturbate-hez?", "Igen — teljesen ingyenes, vízjel nélkül és időkorlát nélkül: az enkóder nem eszi meg a token bevételedet."),
+     ]},
+    {"slug": "cam4", "name": "CAM4",
+     "title": "Adás a CAM4-en SplitCammel — External Encoder",
+     "desc": "Adás a CAM4-en ingyenes SplitCammel — External Encoder, stream key, geo-blokkolás és overlay-ek. Nincs vízjel.",
+     "kw": "cam4 adás, cam4.com, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+     "h1html": 'Hogyan adsz a <span class="accent">CAM4</span>-en SplitCammel',
+     "h1short": "Adás CAM4",
+     "card": "External Encoder a CAM4-en geo-kontrollokkal.",
+     "intro": "A CAM4 globális cam-and-earn platform beépített geo-kontrollokkal — elrejtheted az adást válogatott országokban. Az ingyenes <strong style='color:var(--text)'>SplitCamen</strong> keresztüli adás külső enkóderként jelenetváltásokat és overlay-eket nyit meg, amiket az alap broadcaster nem csinál.",
+     "quick": "Adás a CAM4-en SplitCammel: telepíted a SplitCamet, jelenetet építesz, CAM4-en mész <em>Broadcast &amp; Earn Money → Start Broadcast → External Encoder</em>, Get Stream Key, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg a stream keyt a CAM4-től.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "CAM4-en kattints <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn Money</strong> → <strong>Start Broadcast</strong>, majd <strong>External Encoder</strong> felül. Töltsd ki a születési dátumot, nemet és országot, használd <strong>Get Stream Key</strong>-t és másold. Zöld slider a SplitCam Stream Settingsben jelzi a kapcsolatot.",
+     "tips": [
+         ("Állítsd be a geo-korlátokat", "A CAM4 engedi az adás elrejtését konkrét országokban és régiókban — állítsd be a CAM4 oldalon go-live előtt."),
+         ("Figyeld a zöld slidert", "A CAM4 setupja zöld slidert mutat a SplitCam Stream Settingsben, amikor a kulcs elfogadott — piros = nézd át a kulcsot."),
+         ("Alacsonyabb bitráta a szokásosnál", "A CAM4 ingestje kb. 3000 Kbps-re korlátozza a videó bitrátát — alacsonyabb, mint a legtöbb cam site. Ne erőltesd magasabbra."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hivatalosan támogatja a CAM4 az OBS-t / külső enkódereket?", "Igen — a CAM4-nek hivatalos OBS Guide-ja van a support oldalon és az External Encodert ajánlja a legjobb élményhez. A SplitCam ugyanazt az RTMP útvonalat használja."),
+         ("Geo-blokkolhatom a CAM4 streamemet?", "Igen — a CAM4-nek beépített geo-korlátozása van az adás bizonyos országokban való elrejtésére. A CAM4-en állítsd be, nem a SplitCamben."),
+         ("Hol a CAM4 stream key?", "Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key."),
+         ("Milyen bitráta a CAM4-hez?", "Alacsonyabb az átlagosnál — a CAM4 ingestje ~3000 Kbps-re korlátoz 30 fps-en 1 másodperces keyframe-el. A hivatalos táblázat azt ajánlja, ne menj ~3000 fölé."),
+     ]},
+    {"slug": "bongacams", "name": "BongaCams",
+     "title": "Adás a BongaCamsen SplitCammel — External Encoder",
+     "desc": "Adás a BongaCamsen ingyenes SplitCammel — External Encoder, multi-kamera jelenetek, overlay-ek és AI háttér. Nincs vízjel.",
+     "kw": "bongacams, bongcams, bongacams adás, bongacams external encoder, bongacams rtmp obs",
+     "h1html": 'Hogyan adsz a <span class="accent">BongaCams</span>en SplitCammel',
+     "h1short": "Adás BongaCams",
+     "card": "External Encoder beállítás a BongaCamshez.",
+     "intro": "A BongaCams globális cam platform. A külső enkóderes adás nem mindig aktív alapból — aktiválás után az ingyenes <strong style='color:var(--text)'>SplitCam</strong> vezeti az adást multi-kamera jelenetekkel, overlay-ekkel és AI háttérrel.",
+     "quick": "Adás a BongaCamsen SplitCammel: telepíted a SplitCamet, jelenetet építesz, BongaCamsen mész <em>Options → Broadcast settings → Select Encoder → External Encoder</em>, másolod az URL-t és a kulcsot, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és a kulcsot a BongaCamstől.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "BongaCamsen nyisd meg <strong>Options</strong> → <strong>Broadcast settings</strong> → <strong>Select Encoder</strong> → <strong>External Encoder</strong> és másold a megjelenített szerver URL-t és stream key-t. <strong>Ha az External Encoder gomb hiányzik</strong>, lépj kapcsolatba a BongaCams supporttal és kérd a külső kódolás aktiválását a fiókodon.",
+     "tips": [
+         ("Nincs External Encoder gomb? Support", "A BongaCams fiókonként aktiválja a külső kódolást — ha az opció hiányzik a Broadcast settingsből, a support aktiválja."),
+         ("Egyeztesd a felbontást", "A BongaCams azt ajánlja, hogy a webkamera felbontása és az adás felbontása egyezzen — például mindkettő 1280×720."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Miért nem jelenik meg az External Encoder gomb a BongaCamsen?", "A külső kódolás nem aktív alapból minden fiókon — lépj kapcsolatba a BongaCams supporttal az aktiválásért, és a gomb megjelenik a Broadcast settingsben."),
+         ("Verifikálnom kell a BongaCams fiókomat?", "Igen — az adás 18+ kort, hivatalos ID-t a kor ellenőrzéséhez és fiók-jóváhagyást igényel élő adás előtt."),
+         ("Milyen bitráta a BongaCamshez?", "A BongaCams RTMP ingestje kb. 6000 Kbps-re korlátozza a videó bitrátát 2 másodperces keyframe-el — 3500–6000 1080p-n az ideális zóna; tesztold a feltöltést előbb."),
+         ("Ingyenes a SplitCam a BongaCamshez?", "Igen — teljesen ingyenes, vízjel nélkül és időkorlát nélkül, így az enkóder nem csökkenti a token bevételedet BongaCamsen."),
+     ]},
+    {"slug": "stripchat", "name": "Stripchat",
+     "title": "Adás a Stripchaten SplitCammel — Strip Cam Setup",
+     "desc": "Adás a Stripchaten — a strip cam platformon — ingyenes SplitCammel. Külső szoftver, token-kulcs, jelenetek és overlay-ek.",
+     "kw": "strip cam, stripchat live stream, stripchat adás, stripchat external software, stripchat stream key, stripchat rtmp obs",
+     "h1html": 'Hogyan adsz a <span class="accent">Stripchaten</span> SplitCammel',
+     "h1short": "Adás Stripchat",
+     "card": "Külső szoftver setup a Stripchat streamekhez.",
+     "intro": "A Stripchat nagy cam platform interaktivitás fókusszal. Az <em>external software</em> mód token-alapú kulcsot ad neked — dobd be az ingyenes <strong style='color:var(--text)'>SplitCambe</strong>, hogy jelenetekkel, overlay-ekkel és szűrőkkel adj, ne lapos kamerával.",
+     "quick": "Adás a Stripchaten SplitCammel: telepíted a SplitCamet, jelenetet építesz, Stripchaten választod <em>Switch to external software</em>-t, másolod a stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg a stream keyt a Stripchattől.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Stripchaten válaszd <strong>Switch to external software</strong>, majd <strong>Show external software settings for the stream</strong>. Másold a stream key-t — a Stripchat tokenként mutatja. Tartsd privátban.",
+     "tips": [
+         ("Egyeztesd a felbontást a sitetal", "A Stripchat FAQ figyelmeztet: a szoftveredben lévő felbontásnak pontosan a sitehoz kell illeszkednie, különben pixelesedik a videó. Állítsd be mindkettőt egyformán."),
+         ("Vigyázz a 2 Mbps minimummal", "A Stripchat 2 Mbps feltöltést sorol minimumként — és nyíltan mondja, hogy ez nem elég OBS streamhez vagy multistreamhez. Lőj sokkal magasabbra."),
+         ("A kulcs egy token", "A Stripchat stream keyje token — másold pontosan, soha ne oszd meg, reseteld kiszivárgás esetén."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Ajánlja a Stripchat az OBS-t / külső szoftvert?", "Igen — a Stripchat hivatalos FAQ-ja OBS-szerű külső broadcast szoftvert ajánl «a legjobb videó és hang minőség elérésére». A SplitCam ugyanúgy működik."),
+         ("Hogyan váltok Stripchatet külső szoftverre?", "A Broadcast Centerben válaszd Switch to External Broadcast Software (OBS), majd nyisd meg az external software settings-et a stream key (token) felfedéséhez."),
+         ("Milyen bitráta a Stripchathez?", "Az RTMP ingest ~6000 Kbps-ig fogad 2 másodperces keyframe-el. 3500–6000 1080p-n ideális — de jócskán a 2 Mbps minimum fölött kell lenned, főleg OBS streamhez."),
+         ("Ingyenes a SplitCam a Stripchathez?", "Igen — nincs licencdíj, nincs vízjel, nincs időkorlát: még hosszú interaktív Stripchat showk sem kerülnek semmibe az enkóder oldaláról."),
+     ]},
+    {"slug": "onlyfans", "name": "OnlyFans",
+     "title": "Élő adás OnlyFansen SplitCammel — Authorizáció vagy kulcs",
+     "desc": "Élő adás OnlyFansen ingyenes SplitCammel — bejelentkezés authorizációval vagy OBS Key, multi-kamera jelenetek, overlay-ek. Nincs vízjel.",
+     "kw": "élő onlyfans, onlyfans live stream, onlyfans authorizáció splitcam, onlyfans obs key, onlyfans streaming szoftver",
+     "h1html": 'Hogyan mész élőben <span class="accent">OnlyFansen</span> SplitCammel',
+     "h1short": "Live OnlyFans",
+     "card": "Authorizálj egyszer vagy illeszd be a kulcsot — élőben OnlyFansen.",
+     "intro": "Az OnlyFans live az előfizetőidnek szól. A SplitCam <strong style='color:var(--text)'>két módon</strong> csatlakozik — egyszer bejelentkezel az OnlyFans fiókoddal, és a SplitCam automatikusan lekéri és szinkronban tartja a stream key-t, vagy kézzel beilleszted az OBS Key-t. Mindkét módon multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel adsz.",
+     "quick": "Live OnlyFansen SplitCammel: telepíted a SplitCamet, jelenetet építesz, megnyitod Stream Settings &rarr; Add Channel &rarr; OnlyFans és választod <em>Authorizáció</em>-t — bejelentkezel az OnlyFans fiókkal, a SplitCam automatikusan lekéri a kulcsot — és Go Live-ot nyomsz. Csatlakoztatott fiókkal módosíthatod az OnlyFans stream paramétereket a SplitCamből, anélkül hogy megnyitnád az OnlyFans oldalt.",
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet",
+          "A SplitCam ingyenes stream szoftver Windowsra és macOS-re — regisztráció, kártya, vízjel nélkül. Ez az enkóder, ami a videódat az OnlyFansre küldi."),
+         ("Állítsd be a kamerát és a jelenetet",
+          "Nyisd meg a SplitCamet és add hozzá a webkamerát. Építsd fel a jelenetet, amit a nézők látni fognak — overlay-ek, szöveg, második kamera, beauty szűrők vagy AI háttér, mind élőben alkalmazva."),
+         ("Csatlakozás — 1. módszer: Authorizáció (ajánlott)",
+          "A SplitCamben nyisd meg <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> és válaszd <strong>Authorizáció</strong>-t. Jelentkezz be OnlyFans e-maillel és jelszóval. A SplitCam összekapcsolja a fiókodat, automatikusan lekéri a stream key-t és szinkronban tartja — és lehetővé teszi, hogy az OnlyFans live paramétereket a SplitCamen belül kezeld, módosítva őket az adás közben vagy után, az OnlyFans oldal megnyitása nélkül."),
+         ("Csatlakozás — 2. módszer: Stream Key (kézzel)",
+          "Inkább nem jelentkeznél be? Használd a kulcsot. OnlyFansen menj <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Other</strong> szekció és másold az <strong>OBS Key</strong>-t. A SplitCamben Add Channel &rarr; OnlyFans, illeszd be a kulcs mezőbe. Ez a kulcs statikus — későbbi beállítás-módosításhoz visszamész az OnlyFans oldalra."),
+         ("Go Live",
+          "Bármelyik módszerrel, nyomd meg <strong>Go Live</strong>-ot a SplitCamben. Az 1. módszerrel az OnlyFans paramétereket valós időben tovább állíthatod a SplitCamből; a 2. módszerrel a kulcs pontosan úgy marad, ahogy beállítottad."),
+     ],
+     "tips": [
+         ("Authorizáció vs Stream Key", "Két csatlakozási mód: <strong>Authorizáció</strong> (egyszer bejelentkezel, a kulcs lekérve és szinkronizálva — a legkönnyebb út) vagy <strong>Stream Key</strong> (másolod az OBS Keyt OnlyFans → Profile → Settings → Other-ből és beilleszted). Az authorizáció megkíméli a kézi copy-paste-tól."),
+         ("Beállítások módosítása a SplitCam elhagyása nélkül", "Authorizációval a fiók összekapcsolva marad, így az OnlyFans live paramétereit a SplitCamből módosítod adás közben vagy után — az OnlyFans oldalon átmenni nélkül."),
+         ("Szerény bitráta", "Az OnlyFans RTMP ingestje kb. 2500 Kbps-re korlátozza a videó bitrátát — szűkebb, mint a legtöbb cam site. Célozz 720p–1080p-re ~2000–2500-on."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hogyan csatlakoztatom az OnlyFanst a SplitCamhez?", "Két módon. <strong>Authorizáció</strong> — Stream Settings → Add Channel → OnlyFans → bejelentkezel OnlyFans fiókkal és a SplitCam automatikusan lekéri a kulcsot. Vagy <strong>Stream Key</strong> — másolod az OBS Keyt OnlyFans → Profile → Settings → Other-ből és beilleszted."),
+         ("Módosíthatom az OnlyFans live beállításokat az oldal megnyitása nélkül?", "Igen — Authorizáció módszerrel a SplitCam összekapcsolva marad az OnlyFans fiókoddal, így a kulcs és a beállítások automatikusan szinkronizálnak. Mindent a SplitCamből módosítasz adás közben vagy után, az onlyfans.com meglátogatása nélkül."),
+         ("Milyen bitráta az OnlyFanshez?", "Szerény — az OnlyFans RTMP ingestje kb. 2500 Kbps-re korlátozza a bitrátát, sokkal szűkebb, mint más cam platformok. Célozz 720p–1080p-re 2000–2500 Kbps körül."),
+         ("Ingyenes a SplitCam az OnlyFans live-hoz?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Nincs költség az enkóder oldalán."),
+     ]},
+    {"slug": "camplace", "name": "CamPlace",
+     "title": "Adás a CamPlace-en SplitCammel — Ingyenes útmutató",
+     "desc": "Adás a CamPlace-en ingyenes SplitCammel — külső enkóder, RTMP kulcs, jelenetek és overlay-ek. Lépésről lépésre, vízjel nélkül.",
+     "kw": "camplace adás, camplace broadcasting software, camplace rtmp, camplace external encoder, camplace stream key",
+     "h1html": 'Hogyan adsz a <span class="accent">CamPlace</span>-en SplitCammel',
+     "h1short": "Adás CamPlace",
+     "card": "Külső enkóder setup a CamPlace streamekhez.",
+     "intro": "A CamPlace cam-streaming platform. Nincs publikus OBS cikk, így a <strong style='color:var(--text)'>fenti videó útmutató</strong> a referenciád — az ingyenes <strong style='color:var(--text)'>SplitCam</strong> szabványos RTMP-n keresztül csatlakozik és jeleneteket, overlay-eket és AI hátteret ad hozzá, amit az alap kamera nem.",
+     "quick": "Adás a CamPlace-en SplitCammel: telepíted a SplitCamet, jelenetet építesz, aktiválod a külső/RTMP broadcasting-et a CamPlace-en, másolod a szerver URL-t és a stream key-t, beilleszted a SplitCambe, Go Live. Kövesd a videót a jelenlegi útvonalért."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg a CamPlace RTMP kulcsát.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a CamPlace-re és nyisd meg az adás beállításokat. Válts külső enkóder / RTMP / OBS opcióra, hogy felfedd a <strong>szerver URL</strong>-t és a <strong>stream key</strong>-t, mindkettőt másold. A CamPlace nem publikál hivatalos OBS dokumentációt — a <strong>fenti videó</strong> a legmegbízhatóbb lépésről lépésre útvonal a jelenlegi felületen.",
+     "tips": [
+         ("Nincs hivatalos OBS útmutató — használd a videót", "A CamPlace nem rendelkezik publikus cikkel a külső enkóderekről; a fenti videó a referencia a jelenlegi útvonalra."),
+         ("Szabványos RTMP működik", "Bár dokumentálatlan, a CamPlace fogad szabványos RTMP szerver URL-t és kulcsot — a SplitCam egyedi RTMP célként csatlakozik."),
+         ("Rétegzd az overlay-eket a SplitCamben", "Tip célok, név és social handlek mint jelenet-rétegek — a CamPlace alap kamerája nem ad hozzá ilyeneket."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Van hivatalos OBS útmutatója a CamPlace-nek?", "Nem található publikus cikk a külső enkóderekről. A CamPlace szabványos RTMP URL-t és kulcsot fogad, így a SplitCam működik — kövesd a videót."),
+         ("Támogat a CamPlace külső enkódereket?", "Igen — szabványos RTMP stream key-t fogad, így a SplitCam egyedi RTMP célként csatlakozik."),
+         ("Milyen bitráta a CamPlace-hez?", "A CamPlace nem publikál hivatalos számot — használj 3500–6000 Kbps-t 1080p-n biztonságos tartományként és hagyd, hogy a SplitCam sebességtesztje rögzítse a valódi plafonod."),
+         ("Ingyenes a SplitCam a CamPlace-hez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Mivel a CamPlace nem hozza a saját enkóderét, egy ingyenes RTMP eszköz végzi a munkát."),
+     ]},
+    {"slug": "camsoda", "name": "CamSoda",
+     "title": "CamSoda live SplitCammel — Ingyenes beállítás",
+     "desc": "CamSoda live ingyenes SplitCammel — Use OBS Broadcaster, regionális szerverek, jelenetek és overlay-ek. Nincs vízjel.",
+     "kw": "camsoda live, camsoda adás, camsoda obs broadcaster, camsoda rtmp obs, camsoda live broadcast",
+     "h1html": 'Hogyan adsz a <span class="accent">CamSoda</span>-n SplitCammel',
+     "h1short": "Adás CamSoda",
+     "card": "Use OBS Broadcaster beállítás a CamSoda-n.",
+     "intro": "A CamSoda amerikai cam platform, interaktív és szokatlan show formátumairól ismert. Hivatalosan támogatja az OBS streaminget — van egy <strong style='color:var(--text)'>Use OBS Broadcaster</strong> gomb a Go Live oldalon és hivatalos OBS útmutató a CamSoda wikin. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> ugyanúgy működik.",
+     "quick": "Adás a CamSoda-n SplitCammel: telepíted a SplitCamet, jelenetet építesz, Use OBS Broadcaster-re kattintasz a CamSoda Go Live oldalon, másolod a szerver URL-t és a stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Kattints Use OBS Broadcaster a CamSoda-n.</li>"
+              "<li>Illeszd be a szerver URL-t + kulcsot a SplitCambe.</li><li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "A CamSoda <strong>Go Live</strong> oldalon kattints <strong>Use OBS Broadcaster</strong>-re. A CamSoda megjeleníti az RTMP szerver URL-t és a stream key-t — mindkettőt másold. Válaszd a hozzád legközelebbi regionális szervert (Észak-Amerika, Európa, Ázsia stb.). A CamSoda wiki teljes OBS útmutatót tartalmaz, ha részletekre van szükséged.",
+     "tips": [
+         ("Verifikáld magad a tipekért", "A CamSoda-n bárki adhat, de a tipek fogadásához be kell fejezned a CamSoda verifikációs folyamatát."),
+         ("Válaszd a legközelebbi regionális szervert", "A CamSoda regionális ingest szervereket kínál — a legközelebbi (NA / Európa / Ázsia / Dél-Amerika / Óceánia) csökkenti a késleltetést és az eldobott frame-eket."),
+         ("Plafon 1080p / 30 fps-en", "A CamSoda ingestje kb. 1080p-ig, 30 fps-ig és ~6000 Kbps-ig megy — ne erőltesd magasabbra."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogat a CamSoda OBS-t / külső enkódereket?", "Igen — hivatalosan. Van egy Use OBS Broadcaster gomb a Go Live oldalon és OBS útmutató a CamSoda wikin, így a SplitCam működik."),
+         ("Verifikálnom kell magam a CamSoda-n?", "Adáshoz, nem. Tipek fogadásához, igen — a CamSoda előbb megköveteli a verifikációs folyamat befejezését."),
+         ("Milyen felbontást támogat a CamSoda?", "1920×1080-ig 30 fps-en, kb. 6000 Kbps maximum az RTMP ingesten."),
+         ("Ingyenes a SplitCam a CamSoda-hoz?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Működik a CamSoda ingyenes Use OBS Broadcaster módjával, így a teljes lánc semmibe sem kerül."),
+     ]},
+    {"slug": "streamate", "name": "Streamate",
+     "title": "Adás a Streamate-en SplitCammel — Integrált csatorna",
+     "desc": "Adás a Streamate-en ingyenes SplitCammel — integrált csatorna, SM Connect kulcs, jelenetek és overlay-ek. Nincs vízjel.",
+     "kw": "streamate, streamate sm connect, streamate adás, streamate broadcasting software, streamate rtmp",
+     "h1html": 'Hogyan adsz a <span class="accent">Streamate</span>-en SplitCammel',
+     "h1short": "Adás Streamate",
+     "card": "Streamate integrált csatorna a SplitCamben — gyors setup.",
+     "intro": "A Streamate megalapozott cam platform — és egyike a <strong style='color:var(--text)'>SplitCamben előre konfigurált desztinációknak</strong>, a csatornalistában, így a setup gyorsabb, mint a kézi RTMP bevitel: kiválasztod a Streamate-et, beilleszted a kulcsot, kész.",
+     "quick": "Adás a Streamate-en SplitCammel: telepíted a SplitCamet, jelenetet építesz, Streamate-en <em>SM Connect → Start Show</em>-t használod és másolod a kulcsot, majd a SplitCamben megnyitod <em>Stream Settings → Add Channel → Streamate</em>-et és beilleszted."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg a Streamate kulcsát SM Connect-en át.</li>"
+              "<li>Add Channel → Streamate a SplitCamben.</li><li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Streamate-en nyisd meg <strong>SM Connect</strong>-et, fogadd el a feltételeket, kattints <strong>Start Show</strong>-ra balra és zárd be a megnyíló ablakot — majd másold a streaming kulcsot. A SplitCamben nyisd meg <strong>Stream Settings</strong> → <strong>Add Channel</strong>-t, válaszd <strong>Streamate</strong>-et a listából és illeszd be a kulcsot. Zöld slider erősíti meg a kapcsolatot.",
+     "tips": [
+         ("A Streamate integrált", "Nincs kézi RTMP URL — a SplitCamnek van Streamate-je az Add Channel listában; csak kiválasztod és beilleszted a kulcsot."),
+         ("Zárd be az SM Connect popup-ot", "Start Show után a Streamate megnyit egy ablakot — zárd be; csak a streaming kulcs felfedésére szolgált."),
+         ("Rögzítsd a felbontást 1080p-re", "Az SM Connect Video Resolution mezője csendesen 1440-re ugorhat, ami valójában nem kerül leszállításra és csendesen csökkenti a minőséged — kézzel állítsd 1080p-re. Bitráta, ami csökken statikus képen, normális: a Streamate streamje adaptív."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Integrált a Streamate a SplitCamben?", "Igen — a Streamate megjelenik a SplitCam Add Channel listájában; választod, ahelyett hogy RTMP URL-t gépelnél kézzel."),
+         ("Hol a Streamate streaming kulcs?", "SM Connect → fogadd el a feltételeket → Start Show → zárd be a popupot → másold a kulcsot."),
+         ("Milyen bitráta a Streamate-hez?", "A Streamate nem rögzít kemény plafont — 3500–6000 Kbps 1080p-n jól működik. A stream adaptív, így alacsonyabb bitráta statikus képen normális, nem bug."),
+         ("Ingyenes a SplitCam a Streamate-hez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül; és mivel a Streamate integrált csatorna a SplitCamben, nincs külön enkóder költség sem."),
+     ]},
+    {"slug": "streamray", "name": "StreamRay",
+     "title": "Adás a StreamRay camen SplitCammel — Chat URL",
+     "desc": "Adás a StreamRay camen ingyenes SplitCammel — URL chatben posztolva, OBS Broadcaster mód, jelenetek és overlay-ek. Nincs vízjel.",
+     "kw": "streamray, streamray cam, streamray adás, streamray obs broadcaster, streamray rtmp",
+     "h1html": 'Hogyan adsz a <span class="accent">StreamRay</span>-en SplitCammel',
+     "h1short": "Adás StreamRay",
+     "card": "Chat-URL külső enkóder setup a StreamRay-hez.",
+     "intro": "A StreamRay szokatlan külső enkóder setuppal rendelkezik — a stream URL-t az <strong style='color:var(--text)'>adás chat ablakában</strong> kézbesíti és nem használ külön stream key-t. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kezeli ezt a csak-URL folyamatot.",
+     "quick": "Adás a StreamRay-en SplitCammel: telepíted a SplitCamet, jelenetet építesz, StreamRay-en aktiválod az OBS Broadcaster-t, másolod a stream URL-t a chat ablakból, beilleszted a SplitCambe (a kulcs mezőt üresen hagyod), Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Másold a StreamRay URL-t a chatből.</li>"
+              "<li>Illeszd be az URL-t a SplitCambe.</li><li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "StreamRay-en duplán kattints <strong>Broadcast Now</strong>-ra, nyisd meg az <strong>Other</strong> menüt, válaszd <strong>OBS Broadcaster</strong>-t és <strong>Save and Close</strong>-t. A StreamRay aztán a <strong>stream URL-t a chat ablakban</strong> posztolja — onnan másold. Hagyd a SplitCam stream key mezőjét <strong>üresen</strong>; a StreamRay csak URL-lel authentikál.",
+     "tips": [
+         ("Az URL a chatben van", "A StreamRay nem mutatja a stream URL-t beállítási dobozban — az adás chat ablakában posztolja. Onnan másold."),
+         ("Hagyd a kulcs mezőt üresen", "A StreamRay nem használ külön kulcsot — csak URL-t. Ne tegyél semmit a SplitCam kulcs mezőjébe."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hol a StreamRay stream URL?", "Az OBS Broadcaster aktiválása után a StreamRay az URL-t a chat ablakban posztolja — chatből másold."),
+         ("Miért nincs stream key a StreamRay-en?", "A StreamRay csak URL-lel authentikál — hagyd a SplitCam kulcs mezőt üresen."),
+         ("Milyen bitráta a StreamRay-hez?", "A StreamRay nem deklarál hivatalos plafont — célozz 3500–6000 Kbps-re 1080p-n és futtasd a SplitCam sebességtesztjét, mert a csak-URL folyamat nem ad bitráta visszajelzést."),
+         ("Ingyenes a SplitCam a StreamRay-hez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül, ami illik a StreamRay csak-URL folyamatához: beillesztesz egy linket és élőben vagy."),
+     ]},
+    {"slug": "xlovecam", "name": "XLoveCam",
+     "title": "Adás az XLoveCamen SplitCammel — RTMP link & kulcs",
+     "desc": "Adás az XLoveCamen ingyenes SplitCammel — RTMP link és kulcs, regionális szerverek, jelenetek és overlay-ek. Nincs vízjel.",
+     "kw": "xlovecam, x love cam, xlovecam adás, xlovecam rtmp link, xlovecam stream key",
+     "h1html": 'Hogyan adsz az <span class="accent">XLoveCam</span>en SplitCammel',
+     "h1short": "Adás XLoveCam",
+     "card": "RTMP link + kulcs setup az XLoveCamhez.",
+     "intro": "Az XLoveCam európai többnyelvű cam platform. A fiók beállítások mind <strong style='color:var(--text)'>RTMP linket</strong>, mind <strong style='color:var(--text)'>stream key-t</strong> mutatnak — az ingyenes <strong style='color:var(--text)'>SplitCam</strong> mindkettőt veszi és teljes jelenetekkel és overlay-ekkel ad.",
+     "quick": "Adás az XLoveCamen SplitCammel: telepíted a SplitCamet, jelenetet építesz, XLoveCamen megnyitod <em>My Account → settings</em>-et, másolod az RTMP linket és a stream key-t, mindkettőt beilleszted a SplitCambe, elindítod a show-t."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Másold az XLoveCam RTMP linket + kulcsot.</li><li>Illeszd be mindkettőt a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "XLoveCamen nyisd meg <strong>My Account</strong> → <strong>settings</strong>. A beállítások mind <strong>RTMP linket</strong>, mind <strong>stream key-t</strong> mutatnak — másold mindkettőt a SplitCam szerver URL és kulcs mezőibe, majd <strong>Start your show</strong> XLoveCamen.",
+     "tips": [
+         ("Másold linket ÉS kulcsot", "Az XLoveCam RTMP linket ÉS külön stream key-t ad — mindkettő kell a SplitCamben, nem csak egy."),
+         ("Többnyelvű közönség", "Az XLoveCam európai és többnyelvű — tiszta szöveg overlay a nyelveden segít a nézőknek megtalálni téged."),
+         ("Válaszd a legközelebbi szervert", "Az XLoveCam regionális RTMP szervereket kínál — Európa, Észak-Amerika, Dél-Amerika és Ázsia. A legközelebbi csökkenti a késleltetést és az eldobott frame-eket."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hol vannak az XLoveCam RTMP adatai?", "My Account → settings — mutatja mind az RTMP linket, mind a kulcsot."),
+         ("Támogat az XLoveCam külső enkódereket?", "Igen — RTMP linket és kulcsot biztosít, így a SplitCam enkóderként működik."),
+         ("Milyen bitráta az XLoveCamhez?", "Az XLoveCam nem publikál fix limitet; 3500–6000 Kbps 1080p-n ideális. A legközelebbi regionális szerver kiválasztása ugyanennyit számít — csökkenti az eldobott frame-eket."),
+         ("Ingyenes a SplitCam az XLoveCamhez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Az XLoveCam európai többnyelvű közönségének elérése nem kerül szoftverbe."),
+     ]},
+    {"slug": "soulcams", "name": "SoulCams",
+     "title": "Adás a SoulCamsen SplitCammel — OBS beállítások",
+     "desc": "Adás a SoulCamsen ingyenes SplitCammel — OBS beállítások, RTMP szerver és kulcs, multi-kamera jelenetek és overlay-ek.",
+     "kw": "soul cams, soulcams, soulcams adás, soulcams obs, soulcams rtmp, soulcams broadcast",
+     "h1html": 'Hogyan adsz a <span class="accent">SoulCams</span>en SplitCammel',
+     "h1short": "Adás SoulCams",
+     "card": "OBS beállítások setup a SoulCamshez.",
+     "intro": "A SoulCams cam platform, amelynek OBS beállításai <strong style='color:var(--text)'>RTMP szervert és stream key-t együtt</strong> mutatnak egy ablakban. Illeszd be mindkettőt az ingyenes <strong style='color:var(--text)'>SplitCambe</strong>, hogy multi-kamera jelenetekkel és overlay-ekkel adj.",
+     "quick": "Adás a SoulCamsen SplitCammel: telepíted a SplitCamet, jelenetet építesz, SoulCamsen Go Online → Settings → OBS-re kattintasz, másolod a szervert és a kulcsot, mindkettőt beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Nyisd meg SoulCams Settings → OBS-t.</li><li>Illeszd be a szervert + kulcsot a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "SoulCamsen jelentkezz be és kattints <strong>Go Online</strong>-ra, majd nyisd meg <strong>Settings</strong> → <strong>OBS</strong>-et. Az OBS ablak <strong>RTMP szervert</strong> és <strong>stream key-t</strong> együtt mutat — mindkettőt másold a SplitCambe.",
+     "tips": [
+         ("Szerver és kulcs egymás mellett", "A SoulCams RTMP szervert és kulcsot ugyanabban az OBS ablakban mutat — mindkettőt egy lépésben veszed."),
+         ("Először Go Online", "Az OBS beállítások csak akkor jelennek meg, miután a SoulCamsen Go Online-ra kattintottál — tedd meg ezt, mielőtt enkóder adatokat keresnél."),
+         ("Blokkold a nem kívánt régiókat", "A SoulCams engedi a geo-blokkolást a modell oldalán — válaszd ki, mely országok nem láthatják a streamet, mielőtt Go Online-ra kattintasz."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hol vannak a SoulCams OBS beállításai?", "Jelentkezz be, kattints Go Online, majd Settings → OBS — az RTMP szerver és stream key együtt jelenik meg."),
+         ("Támogat a SoulCams külső enkódereket?", "Igen — az OBS beállítások RTMP szervert és kulcsot adnak, így a SplitCam működik."),
+         ("Milyen bitráta a SoulCamshez?", "A SoulCams nem ad hivatalos számot — célozz 3500–6000 Kbps-re 1080p-n és tesztold a feltöltést, mert az OBS ablak nem mutat bitráta útmutatást."),
+         ("Ingyenes a SplitCam a SoulCamshez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül, így egy teljes SoulCams show multi-kamera jelenetekkel és overlay-ekkel semmibe sem kerül az enkóder oldalán."),
+     ]},
+    {"slug": "imlive", "name": "ImLive",
+     "title": "Adás az ImLive-on SplitCammel — Virtuális kamera",
+     "desc": "Im Live stream setup ingyenes SplitCammel — az ImLive közvetlenül használja a webkamerát (nincs RTMP), csatlakoztasd a SplitCamet virtuális kameraként jelenetekkel.",
+     "kw": "im live stream, imlive splitcam, imlive adás, imlive virtuális kamera, imlive webkamera, im live cam",
+     "h1html": 'Hogyan használd az <span class="accent">ImLive</span>-ot SplitCammel',
+     "h1short": "SplitCam ImLive-on",
+     "card": "Virtuális kamera setup az ImLive-hoz — nincs RTMP.",
+     "intro": "Az ImLive közvetlenül használja a webkamerát a böngészőben — <strong style='color:var(--text)'>nincs RTMP, nincs stream key</strong>. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> <strong style='color:var(--text)'>virtuális kameraként</strong> csatlakozik: a SplitCamben építed a jelenetet, majd az ImLive-ban kiválasztod a SplitCamet kameraként.",
+     "quick": "SplitCam használata az ImLive-on: telepíted a SplitCamet, jelenetet építesz médiarétegekkel, megnyitod az ImLive-ot és video chatet indítasz, az ImLive beállításokban kiválasztod a SplitCamet webkameraként és mikrofonként."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Építsd fel a jelenetet a SplitCamben.</li>"
+              "<li>Indíts video chatet az ImLive-on.</li>"
+              "<li>Válaszd a SplitCamet ImLive kameraként.</li><li>Indítsd el a chatet.</li></ol>",
+     "steps": [
+         ("Telepítsd a SplitCamet",
+          "A SplitCam ingyenes szoftver Windowsra és macOS-re. Telepítsd — vízjel és regisztráció nélkül. Az ImLive-hoz <strong>virtuális kameraként</strong> működik, nem RTMP enkóderként."),
+         ("Építsd fel a jelenetet a SplitCamben",
+          "Nyisd meg a SplitCamet és használd a <strong>Media Layers +</strong>-t a webkamera plusz bármilyen overlay, szöveg, szűrő vagy AI háttér hozzáadásához. Ez az összetett jelenet az, amit az ImLive a kameraidnak lát."),
+         ("Indíts video chatet az ImLive-on",
+          "Jelentkezz be az ImLive oldalra és kattints <strong>Start Video Chat</strong>-re, majd nyisd meg <strong>Go To Settings</strong>-t a kamera és mikrofon opciókhoz."),
+         ("Válaszd a SplitCamet kameraként",
+          "Az ImLive beállításokban válaszd a <strong>SplitCam</strong>-et webkameraként ÉS mikrofonként. Az ImLive most a teljes SplitCam jelenetedet jeleníti meg lapos webkamera helyett."),
+         ("Indítsd a Free Live Chat-et",
+          "Kattints <strong>Free Live Chat</strong>-re az ImLive-on, hogy élőben légy. A megjelenés módosításához a szessziók közepén szerkeszd a jelenetet a SplitCamben — az ImLive azonnal frissül."),
+     ],
+     "tips": [
+         ("Nincs szükség stream key-re", "Az ImLive nem rendelkezik RTMP-vel — ne keress szerver URL-t vagy kulcsot. A SplitCam csak kamera eszközként van kiválasztva."),
+         ("Állítsd be a SplitCamet mikrofonnak is", "Válaszd a SplitCamet mikrofonnak a kamera mellett, hogy az audio mix és zajszűrés is bejusson a live-ba."),
+         ("Építsd fel a jelenetet a live előtt", "Az ImLive azt jeleníti meg, amit a SplitCam küld — rendezd el a rétegeket a chat indítása előtt."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Az ImLive RTMP-t vagy stream key-t használ?", "Nem — az ImLive közvetlenül használja a webkamerát a böngészőn keresztül. A SplitCam virtuális kameraként csatlakozik, nincs kulcs másolásra."),
+         ("Hogyan választom ki a SplitCamet az ImLive-on?", "Start Video Chat → Go To Settings → válaszd a SplitCamet webkameraként és mikrofonként."),
+         ("Használhatok overlay-eket az ImLive-on?", "Igen — a SplitCam jelenetben építed őket; az ImLive az összetett eredményt mutatja."),
+         ("Ingyenes a SplitCam az ImLive-hoz?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Virtuális kameraként az ImLive-hoz nem ad költséget vagy brandinget a video chatedhez."),
+     ]},
+    {"slug": "vxlive", "name": "VXLive",
+     "title": "Adás a VXLive-on SplitCammel — Hivatalos támogatás",
+     "desc": "Adás a VXLive-on (VXModels / VISIT-X) ingyenes SplitCammel — hivatalos VISIT-X preset, szerver és kulcs, jelenetek. Nincs vízjel.",
+     "kw": "vxlive, visit-x, vxmodels splitcam, vxlive adás, visit-x stream, vxlive rtmp",
+     "h1html": 'Hogyan adsz a <span class="accent">VXLive</span>-on SplitCammel',
+     "h1short": "Adás VXLive",
+     "card": "A VXLive hivatalosan támogatja a SplitCamet (VISIT-X preset).",
+     "intro": "A VXLive (VXModels / VISIT-X) cam platform a német piacról — és egyike azon kevesnek, amelyek <strong style='color:var(--text)'>hivatalosan néven támogatják a SplitCamet</strong>. A VXModels dedikált súgócikkel rendelkezik a <strong style='color:var(--text)'>SplitCam</strong> VXLive-hoz csatlakoztatásához, és a SplitCam VISIT-X-et kész csatorna presetként hozza.",
+     "quick": "Adás a VXLive-on SplitCammel: telepíted a SplitCamet, jelenetet építesz, VXLive-on választod «Stream with third-party software»-t, másolod a szerver URL-t és a kulcsot, a SplitCamben kiválasztod a VISIT-X presetet és beilleszted, Go Live a SplitCamben, majd GO ONLINE a VXLive-on."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg a szerver URL-t + kulcsot a VXLive-tól.</li>"
+              "<li>Válaszd a VISIT-X presetet a SplitCamben, illeszd be.</li>"
+              "<li>Go Live, majd GO ONLINE a VXLive-on.</li></ol>",
+     "key_how": "VXLive-on válaszd <strong>Stream with third-party software</strong>-t és válaszd az <strong>OBS, SplitCam vagy XSplit</strong> opciót. A VXLive <strong>szerver URL</strong>-t és <strong>stream key</strong>-t biztosít. A SplitCamben válaszd <strong>VISIT-X</strong>-et streaming platformként, illeszd be mindkettőt, nyomd meg <strong>Go Live</strong>-ot a SplitCamben, majd <strong>GO ONLINE</strong>-ot a VXLive-on.",
+     "tips": [
+         ("VISIT-X integrált preset", "Ne gépelj nyers RTMP URL-t — a SplitCamnek van VISIT-X-je a platform listában; csak kiválasztod és beilleszted a szerver URL-t és kulcsot."),
+         ("Két lépéses go-live", "A VXLive-on először Go Live a SplitCamben, majd GO ONLINE a VXLive-on — mindkettő, ebben a sorrendben."),
+         ("Német piac", "A VXLive közönsége túlnyomórészt német nyelvű — német szöveg overlay vagy cím segít kapcsolódni a nézőkkel."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hivatalosan támogatja a VXLive a SplitCamet?", "Igen — a VXModels (VXLive) dedikált hivatalos súgócikket tart fenn a SplitCam beállításhoz és a SplitCamet listázza OBS és XSplit mellett mint támogatott broadcasting szoftvert."),
+         ("Hogyan csatlakoztatom a SplitCamet a VXLive-hoz?", "VXLive-on válaszd «Stream with third-party software»-t, majd a SplitCamben válaszd a VISIT-X presetet és illeszd be a VXLive által adott szerver URL-t és stream key-t."),
+         ("A SplitCamben vagy a VXLive-on megyek élőben?", "Mindkettőben — először Go Live a SplitCamben, majd GO ONLINE a VXLive-on."),
+         ("Miért ajánlja a VXModels a SplitCamet?", "A VXModels hivatalos súgócikke kifejezetten a webkamera képi artifaktumainak és pixelesedésének kiküszöbölése és a kapcsolat stabilizálása érdekében ajánlja a SplitCamet — nem csak általános enkóderként."),
+     ]},
+    {"slug": "virtwish", "name": "VirtWish",
+     "title": "Adás a VirtWishen SplitCammel — Stream URL & kulcs",
+     "desc": "Adás a VirtWishen ingyenes SplitCammel — Profile → Start Broadcast OBS szekció, stream URL és kulcs, jelenetek és overlay-ek.",
+     "kw": "virtwish, virtwish adás, virtwish broadcasting software, virtwish rtmp, virtwish stream key, virtwish obs",
+     "h1html": 'Hogyan adsz a <span class="accent">VirtWish</span>en SplitCammel',
+     "h1short": "Adás VirtWish",
+     "card": "Stream URL + kulcs setup a VirtWishhez.",
+     "intro": "A VirtWish interaktív cam platform. Az adás beállítások <strong style='color:var(--text)'>stream URL-t és külön stream key-t</strong> adnak egy OBS szekcióban — az ingyenes <strong style='color:var(--text)'>SplitCam</strong> mindkettőt veszi és jelenetekkel és overlay-ekkel futtatja a showt.",
+     "quick": "Adás a VirtWishen SplitCammel: telepíted a SplitCamet, jelenetet építesz, VirtWishen megnyitod <em>Profile → Start Broadcast</em>-et az OBS szekcióig, másolod a linket és a kulcsot, mindkettőt beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg a VirtWish URL + kulcsot.</li><li>Illeszd be mindkettőt a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "VirtWishen kattints a jobb felső sarok ikonjára → <strong>Profile</strong> → <strong>Start Broadcast</strong>, majd <strong>Start Broadcast</strong> újra az OBS szekció eléréséhez. <strong>Másold az első sor linkjét</strong> a SplitCam Stream URL mezőjébe, és a <strong>Stream Key</strong>-t külön a kulcs mezőbe.",
+     "tips": [
+         ("Link az első soron", "A VirtWish OBS szekciója a stream URL-t az első sorra teszi — másold a SplitCam Stream URL-be, majd a külön kulcsot."),
+         ("Két kattintás a Start Broadcast-en", "Kétszer kattintasz a Start Broadcast-en a VirtWishen, hogy elérd az OBS szekciót — várt, nem bug."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hol vannak a VirtWish RTMP adatai?", "Jobb felső ikon → Profile → Start Broadcast kétszer → az OBS szekció a linket és stream key-t mutatja."),
+         ("Támogat a VirtWish külső enkódereket?", "Igen — az OBS szekció stream URL-t és kulcsot biztosít, így a SplitCam működik."),
+         ("Milyen bitráta a VirtWishhez?", "A VirtWish nem publikál hivatalos plafont; 3500–6000 Kbps 1080p-n biztonságos. Egyeztesd a SplitCam felbontását a VirtWishen beállítottal a rescaling elkerüléséhez."),
+         ("Ingyenes a SplitCam a VirtWishhez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. A VirtWish URL-és-kulcs setupja csak a hozzá szükséges perceket kerül."),
+     ]},
+    {"slug": "xmodels", "name": "XModels",
+     "title": "Adás az XModelsen SplitCammel — Ingyenes útmutató",
+     "desc": "Adás az XModelsen ingyenes SplitCammel — külső enkóder opció a modell fiók beállításokban, RTMP kulcs, jelenetek és overlay-ek.",
+     "kw": "xmodels, xmodels adás, xmodels broadcasting software, xmodels rtmp, xmodels external encoder",
+     "h1html": 'Hogyan adsz az <span class="accent">XModels</span>en SplitCammel',
+     "h1short": "Adás XModels",
+     "card": "Külső enkóder setup az XModels streamekhez.",
+     "intro": "Az XModels cam-streaming platform beépített <strong style='color:var(--text)'>külső enkóder opcióval</strong> a modell fiók beállításokban. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> ott ad multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel egyetlen lapos kamera helyett.",
+     "quick": "Adás az XModelsen SplitCammel: telepíted a SplitCamet, jelenetet építesz, az XModels modell fiókban aktiválod a külső enkóder opciót, másolod a szerver URL-t és a stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Aktiváld a külső enkódert az XModels beállításokban.</li>"
+              "<li>Illeszd be a szerver URL-t + kulcsot a SplitCambe.</li><li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Az XModels <strong>modell fiók beállításokban</strong> aktiváld a <strong>broadcasting külső enkóderen át</strong> opciót. Az XModels <strong>stream key</strong>-t biztosít — másold a SplitCambe. Ha az opció nincs ott, ahol várod, az XModels support FAQ chatten és <strong>info@xmodels.com</strong>-on érhető el; a fenti videó is megmutatja.",
+     "tips": [
+         ("A fiók beállításokban van", "Az XModels a külső enkóder opciót a modell fiók beállításokban helyezi el, nem külön broadcast képernyőn."),
+         ("Support: chat + e-mail", "Az XModels nem rendelkezik nagy publikus help-centerrel — a site FAQ chatje és info@xmodels.com a hivatalos support csatornák."),
+         ("Rétegzd az overlay-eket a SplitCamben", "Tip célok, név és social handlek mint jelenet-rétegek — az XModels alap kamerája nem ad hozzá ilyeneket."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogat az XModels külső enkódereket?", "Igen — a modell fiók beállítások tartalmaznak egy külső enkóder broadcast opciót, ami stream key-t biztosít, így a SplitCam működik."),
+         ("Hol kapok XModels segítséget?", "Az XModels support a site FAQ chatén és info@xmodels.com e-mailen érhető el — nincs nagy publikus help-center."),
+         ("Milyen bitráta az XModelshez?", "Az XModels nem dokumentál hivatalos számot — használj 3500–6000 Kbps-t 1080p-n és futtasd a SplitCam sebességtesztjét, mivel az XModels support csak chat és e-mail."),
+         ("Ingyenes a SplitCam az XModelshez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül, így az XModels európai hálózatára adás nem ad szoftver költséget."),
+     ]},
+    {"slug": "flirt4free", "name": "Flirt4Free",
+     "title": "Adás a Flirt for Free camen SplitCammel — Ingyenes útmutató",
+     "desc": "Adás a Flirt for Free camen ingyenes SplitCammel — External Broadcast Form, RTMP URL és Stream Name, jelenetek és overlay-ek.",
+     "kw": "flirt for free cam, flirt 4 free cam, flirt4free, flirt4free adás, flirt4free external broadcast, flirt4free rtmp",
+     "h1html": 'Hogyan adsz a <span class="accent">Flirt4Free</span>-n SplitCammel',
+     "h1short": "Adás Flirt4Free",
+     "card": "External Broadcast Form setup a Flirt4Free-hez.",
+     "intro": "A Flirt4Free az egyik legrégebbi cam platform, a 90-es évek óta éterben. Hivatalosan támogatja a külső adást egy <strong style='color:var(--text)'>External Broadcast Form</strong>-on keresztül — az ingyenes <strong style='color:var(--text)'>SplitCam</strong> küldi a streamet, miközben a form a felbontást és bitrátát állítja be.",
+     "quick": "Adás a Flirt4Free-n SplitCammel: telepíted a SplitCamet, jelenetet építesz, megnyitod a Flirt4Free External Broadcast Form-ot, másolod az RTMP URL-t és a Stream Name-t és felbontást/bitrátát állítasz, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Nyisd meg a Flirt4Free External Broadcast Form-ot.</li>"
+              "<li>Illeszd be az RTMP URL-t + Stream Name-t a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "A Flirt4Free modell területén nyisd meg az <strong>External Broadcast Form</strong>-ot. A legtöbb cam site-tal ellentétben a Flirt4Free <strong>RTMP URL</strong>-t és <strong>Stream Name</strong>-t ad neked (nem «kulcsot»), plusz felbontás és bitráta mezőket, amelyeket magában a formban töltesz ki. Másold az URL-t és Stream Name-t a SplitCam szerver és kulcs mezőibe.",
+     "tips": [
+         ("Stream Name, nem kulcs", "A Flirt4Free a credentialt Stream Name-nek hívja. A SplitCam stream key mezőbe illeszted — ugyanazt a szerepet tölti be."),
+         ("Állítsd a felbontást/bitrátát a formban", "A Flirt4Free External Broadcast Form-jának saját felbontás és bitráta mezői vannak — egyeztesd a SplitCam beállításaival, hogy a kép ne legyen átskálázva."),
+         ("Történelmi platform", "A Flirt4Free a 90-es évek óta fut — a modell eszközök érettek és az External Broadcast Form ennek dokumentált része."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogat a Flirt4Free külső enkódereket?", "Igen — hivatalosan, az External Broadcast Form-on keresztül, ami RTMP URL-t és Stream Name-t biztosít. A SplitCam enkóderként működik."),
+         ("Hol kapom meg a Flirt4Free RTMP adatait?", "Az External Broadcast Form-ból a modell területen — RTMP URL-t, Stream Name-t és felbontás/bitráta mezőket mutat."),
+         ("Milyen bitráta a Flirt4Free-hez?", "3500–6000 Kbps 1080p-n — állítsd ugyanazt az értéket az External Broadcast Form-ban és a SplitCamben."),
+         ("Ingyenes a SplitCam a Flirt4Free-hez?", "Igen — ingyenes, vízjel nélkül és időkorlát nélkül, ami illik egy történelmi platformhoz, mint a Flirt4Free, ahol a showk hosszúak lehetnek."),
+     ]},
+    {"slug": "mfc-alerts", "name": "MFC Alerts",
+     "title": "MFC Alerts hozzáadása a streamhez SplitCammel",
+     "desc": "Animált tip alerts megjelenítése a MyFreeCams streamben — mfcalerts.com URL mint Browser réteg az ingyenes SplitCamben, a webkamera felett.",
+     "kw": "mfc alerts, myfreecams alerts, mfc alerts hozzáadás, mfcalerts splitcam, myfreecams tip alerts, myfreecams alerts overlay",
+     "h1html": 'Hogyan adj <span class="accent">MFC Alerts</span>-et a streamhez',
+     "h1short": "MFC Alerts hozzáadás",
+     "card": "Animált tip alerts a MyFreeCams streamedben.",
+     "intro": "Az MFC Alerts animált effekteket jelenít meg a MyFreeCams streamedben minden alkalommal, amikor egy néző tipet küld. <strong style='color:var(--text)'>Browser rétegként</strong> fut az ingyenes <strong style='color:var(--text)'>SplitCamben</strong> — egyszer beállítod és a tipek képernyőre reagálnak élőben.",
+     "quick": "MFC Alerts hozzáadása SplitCammel: telepíted a SplitCamet, hozzáadod a webkamerát, megnyitod a Browser tabot és betöltöd az mfcalerts.com-ot, másolod az alerts URL-t, hozzáadod Browser rétegként a webkamera felett, majd teszteled egy teszt tippel."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Add hozzá a webkamerát.</li>"
+              "<li>Szerezd meg az URL-t az mfcalerts.com-ról.</li>"
+              "<li>Add hozzá Browser rétegként a webkamera felett.</li>"
+              "<li>Küldj teszt tipet.</li></ol>",
+     "steps": [
+         ("Telepítsd a SplitCamet és add hozzá a webkamerát",
+          "Telepítsd az ingyenes SplitCamet Windowsra vagy macOS-re, majd add hozzá a <strong>webkamerát</strong> forrásként. Az MFC Alerts rétegként ül ezen a kamerán."),
+         ("Nyisd meg a Browser tabot és menj az mfcalerts.com-ra",
+          "A SplitCamben nyisd meg a <strong>Browser</strong> tabot és navigálj a <strong>www.mfcalerts.com</strong>-ra. Jelentkezz be, vagy regisztrálj, ha még nincs mfcalerts.com fiókod."),
+         ("Másold az alerts URL-t",
+          "Az mfcalerts.com-on használd a <strong>Copy to clipboard</strong>-ot a személyes alerts URL-ed másolásához — ez az oldal rendereli a tip animációkat."),
+         ("Add hozzá az URL-t Browser rétegként — a webkamera felett",
+          "Illeszd be az URL-t a SplitCam Browser ablakába és kattints <strong>Add</strong>-re. Majd rendezd át a forrás listát úgy, hogy az <strong>MFC Alerts a webkamera felett legyen</strong> (3-pont menü → Move Up). Ha alatta ül, az effektek rejtve maradnak."),
+         ("Teszteld teszt tippel",
+          "Nyisd meg <strong>Settings → Send test tip</strong>-et és erősítsd meg, hogy az alert effekt megjelenik a kamerád felett. Majd streamelj normálisan a MyFreeCams-en — a valódi tipek most az animációkat triggerelik."),
+     ],
+     "tips": [
+         ("Az MFC Alerts-nek a webkamera felett kell lennie", "A leggyakoribb hiba: ha az MFC Alerts réteg a webkamera alatt van a forrás listában, az effektek rejtve maradnak. Mozgasd felfelé."),
+         ("Mfcalerts.com fiók szükséges", "Az alerts URL személyes — regisztrálj az mfcalerts.com-on először, ha nincs fiókod."),
+         ("Küldj teszt tipet a live előtt", "Használd Settings → Send test tip-et, hogy megerősítsd az overlay működését — ne a show közepén fedezd fel a hibát."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Mi az MFC Alerts?", "Egy értesítési rendszer a MyFreeCams számára, ami videó effekteket jelenít meg a streamedben, amikor a nézők tipet küldenek — Browser overlayként hozzáadva a SplitCamben."),
+         ("Miért nem jelennek meg az MFC Alerts-eim?", "Szinte mindig a réteg sorrend — az MFC Alerts Browser rétegnek a webkamera felett kell lennie a SplitCam forrás listában."),
+         ("Kell-e fiók az MFC Alerts-hez?", "Igen — regisztrálj az mfcalerts.com-on, hogy megkapd a személyes alerts URL-ed."),
+         ("Ingyenes a SplitCam ehhez?", "Igen — a SplitCam ingyenes, vízjel nélkül és időkorlát nélkül, és az MFC Alerts browser overlay benne fut többletköltség nélkül."),
+     ]},
+    {"slug": "lovense", "name": "Lovense",
+     "title": "Lovense játékszer hozzáadása a streamhez SplitCammel",
+     "desc": "Interaktív Lovense játékszer csatlakoztatása a cam streamhez ingyenes SplitCammel — Lovense SplitCam Toolset, képernyőre tip alerts, reakciók.",
+     "kw": "lovense hozzáadás stream, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense interactive toy streaming",
+     "h1html": 'Hogyan adj <span class="accent">Lovense játékszert</span> a streamhez',
+     "h1short": "Lovense játékszer hozzáadása",
+     "card": "Csatlakoztass interaktív Lovense játékszert a cam streamhez.",
+     "intro": "Futtatod a cam streamet az ingyenes <strong style='color:var(--text)'>SplitCamen</strong> és párosítasz egy <strong style='color:var(--text)'>Lovense</strong> játékszert, ami tokenekre reagál. A Lovense hivatalos <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>-et dokumentál, és a SplitCam hivatalos Lovense plugint biztosít — az integráció mindkét oldalról támogatott.",
+     "quick": "Lovense játékszer hozzáadásához a streamhez: telepítsd a SplitCamet és a Lovense szoftvert, párosítsd a játékszert, kapcsold a Lovense-t a cam platformhoz, add hozzá a Lovense statust Browser rétegként a SplitCamben, majd streamelj normálisan."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Telepítsd a Lovense szoftvert és párosítsd a játékszert.</li>"
+              "<li>Kapcsold a Lovense-t a cam sitehoz.</li>"
+              "<li>Add hozzá a Lovense overlayt a SplitCamben.</li><li>Nyomd meg a Go Live-ot.</li></ol>",
+     "steps": [
+         ("Telepítsd a SplitCamet",
+          "A SplitCam ingyenes stream szoftver Windowsra és macOS-re — az enkóder, ami a videódat a cam platformra küldi. Telepítsd; vízjel nélkül."),
+         ("Telepítsd a Lovense szoftvert és párosítsd a játékszert",
+          "Telepítsd a Lovense Connect / Lovense Stream-et (a hivatalos desktop app). Kapcsold be a játékszert és párosítsd Bluetooth-on át, hogy az app csatlakoztatva-t mutasson."),
+         ("Kapcsold a Lovense-t a cam platformhoz",
+          "A Lovense app-ban kapcsold a cam fiókodat, hogy a játékszer reagáljon a nézői tokenekre / tipekre. A legtöbb nagy cam platform támogatott."),
+         ("Add hozzá a Lovense overlayt a SplitCamben",
+          "A Lovense overlay / widget URL-t biztosít. Add hozzá <strong>Browser</strong> rétegként a SplitCam jelenetbe, hogy a nézők lássák a játékszer státuszát és a legutóbbi tipeket a képernyőn."),
+         ("Építsd fel a jelenetet és Go Live",
+          "Add hozzá a kamerát és a többi overlayt, illeszd be a cam platform RTMP kulcsát a SplitCambe és kattints <strong>Go Live</strong>-ra. A játékszer valós időben reagál a tipekre."),
+     ],
+     "tips": [
+         ("Használd a hivatalos Lovense SplitCam Toolset-et", "A Lovense SplitCam-specifikus toolsetet publikál saját telepítési útmutatóval — hozzáad játékszer aktivitás overlayt és SplitCam-re készített tip alerts-et."),
+         ("Frissítsd a Lovense Cam Extension-t", "A toolset friss Lovense Cam Extension-t kér (30.1.4 vagy újabb) — frissítsd live előtt."),
+         ("Tartsd a játékszert töltve", "Majdnem üres akku a show közepén megöli az interaktív részt — tölts teljesen live előtt."),
+         ("Teszteld a token reakciót", "Küldj egy kis teszt tipet, hogy megerősítsd, a játékszer reagál, mielőtt megnyitod a szobát."),
+         ("Ellenőrizd a verzió követelményeket", "A Lovense SplitCam Toolset SplitCam 10.4.5-öt vagy újabbat igényel. A Lovense Cam Extension hivatalosan lefedi a Chaturbate-et, Stripchat-et, BongaCams-t, MyFreeCams-t és CamSoda-t — bármely más site-hoz használd a Lovense Generic URL integrációját."),
+     ],
+     "faq": [
+         ("Hivatalosan támogatja a Lovense a SplitCamet?", "Igen — a Lovense hivatalos «Lovense SplitCam Toolset»-et dokumentál saját telepítési útmutatóval, és a SplitCam hivatalos Lovense plugint biztosít. Az integráció mindkét oldalról támogatott."),
+         ("A játékszer közvetlenül csatlakozik a SplitCamhez?", "Nem — a játékszer a Lovense app-pal párosul; a SplitCam mutatja a Lovense overlayt és streameli a kamerát."),
+         ("Mely cam site-ok támogatják a Lovense-t?", "A Lovense Cam Extension hivatalosan támogatja a Chaturbate-et, Stripchat-et, BongaCams-t, MyFreeCams-t és CamSoda-t, változó támogatással más site-okhoz — ellenőrizd az aktuális listát a Lovense app-ban."),
+         ("Megjeleníthetem a legutóbbi tipeket a képernyőn?", "Igen — add hozzá a Lovense widget URL-t Browser rétegként a SplitCamben."),
+     ]},
+    {"slug": "multistream-cams", "name": "Több cam site",
+     "title": "Adás több cam site-ra egyszerre SplitCammel",
+     "desc": "Adás MyFreeCams-re, Chaturbate-re, BongaCams-re, CAM4-re, Stripchat-re és többre egyszerre az ingyenes SplitCam multistreaming-jével. Egy klikk, vízjel nélkül.",
+     "kw": "adás több cam site-ra, multistream cam sites, adás chaturbate-re és bongacams-re egyszerre, multistream cam szoftver",
+     "h1html": 'Hogyan adsz <span class="accent">több cam site-ra</span> egyszerre',
+     "h1short": "Cam multistreaming",
+     "card": "Adás több cam site-ra egyszerre.",
+     "intro": "Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> egy kódolást streamelhet <strong style='color:var(--text)'>több cam site-ra egyszerre</strong> — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat és többre. Vízjel nélkül, egy klikk.",
+     "quick": "Több cam site-ra egyszerre adáshoz: telepítsd a SplitCamet, építsd fel a jelenetet, szerezd meg minden cam site RTMP szerver URL-jét és stream key-jét, add hozzá mindet a SplitCam multistreaming beállításokhoz, kattints Go Live-ra egyszer."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az RTMP kulcsot minden cam site-tól.</li>"
+              "<li>Add hozzá az összes kulcsot a SplitCam multistream-ben.</li>"
+              "<li>Nyomd meg a Go Live-ot egyszer.</li></ol>",
+     "steps": [
+         ("Telepítsd a SplitCamet",
+          "A SplitCam ingyenes stream szoftver Windowsra és macOS-re beépített multistreaming-gel. Telepítsd — vízjel nélkül, regisztráció nélkül."),
+         ("Állítsd be a kamerát és a jelenetet",
+          "Nyisd meg a SplitCamet, add hozzá a webkamerát és építsd fel a jelenetet overlay-ekkel és szűrőkkel. Egy jelenet táplálja minden desztinációt."),
+         ("Szerezd meg az RTMP kulcsot minden cam site-tól",
+          "Minden cam platformon aktiváld a külső / RTMP broadcasting-et és másold a <strong>szerver URL</strong>-t és a <strong>stream key</strong>-t. Ismételd minden site-ra, amelyen streamelni akarsz — az egyéni platform útmutatókban a pontos útvonalakért."),
+         ("Add hozzá minden desztinációt a SplitCamben",
+          "Nyisd meg <strong>Stream Settings</strong>-et és add hozzá minden cam site-ot egyedi RTMP desztinációként — illeszd be a szerver URL-t és a kulcsot. Pipálj ki mindent, amit élőben akarsz."),
+         ("Kattints Go Live-ra egyszer",
+          "Nyomd meg <strong>Go Live</strong>-ot. A SplitCam egyidejűleg küldi a streamet minden kiválasztott cam site-ra, peer-to-peer, egy kódolásból — extra díj nélkül."),
+     ],
+     "tips": [
+         ("Figyeld a feltöltésed", "A multistreaming megsokszorozza a feltöltési terhelést. Minden desztináció saját bitrátáját használja — győződj meg róla, hogy a kapcsolatod bírja az összeget."),
+         ("Ellenőrizd a platform szabályokat", "Néhány cam site tiltja az egyidejű máshova streamelést — erősítsd meg multistreaming előtt."),
+         ("Kábel — itt nem engedheted meg a drop-okat", "A multistreaming megsokszorozza a feltöltési terhelést, így egyetlen wi-fi drop egyszerre döntheti le az összes desztinációt. A kábel itt nem opcionális."),
+         ("Figyeld a health monitort", "A SplitCam desztinációnként mutatja a státuszt — dobj le egy site-ot, ha a feltöltésed nem bírja."),
+     ],
+     "faq": [
+         ("Ingyenes a SplitCam multistreaming?", "Igen — a multistreaming beépített és ingyenes, desztinációnként díj nélkül, vízjel nélkül."),
+         ("Hány cam site-ra streamelhetek egyszerre?", "Annyira, amennyit a feltöltési sávszélességed bír — minden desztináció saját bitrátáját használja."),
+         ("Használ cloud relay-t?", "Nem — a SplitCam peer-to-peer küldi a streameket közvetlenül a PC-ről minden platform ingestjére."),
+         ("Lassítja a multistreaming a PC-met?", "A kódolás egyszer történik és újra felhasználódik; a hardver kódolás alacsonyan tartja a CPU terhelést. A feltöltési sávszélesség a valódi limit."),
+     ]},
+]
