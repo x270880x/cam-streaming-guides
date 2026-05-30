@@ -1082,7 +1082,6 @@ def render(p, lang, all_platforms):
   <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
 </section>
 <div class="section meta-line">
-  <span class="age-tag">18+</span>
   <span>{u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time></span>
 </div>
 <footer>
@@ -1745,7 +1744,7 @@ def render_legal(slug, lang):
   <h1 class="h1">{e(h1)}</h1>
   <div class="legal-body">{body}</div>
   <p style="margin-top:32px;color:var(--text-sub);font-size:13px">
-    <span class="age-tag">18+</span> &nbsp; {u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time>
+    {u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time>
   </p>
 </section>
 <footer>
