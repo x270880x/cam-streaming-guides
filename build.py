@@ -7,13 +7,19 @@ from a shared dark-theme template. Run:  python3 build.py
 
 Output: <slug>/index.html (EN), ru/<slug>/index.html, es/<slug>/index.html
 """
+import datetime
 import html
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
 SITE_NAME = "Streaming Guides"
+PUBLISHED_DATE = "2026-05-21"
+MODIFIED_DATE = datetime.date.today().isoformat()
+OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES"}
+PUBLISHER = {"@type": "Organization", "name": SITE_NAME, "url": f"{SITE}/"}
 
 # ---------------------------------------------------------------- CSS (shared)
 CSS = """
@@ -376,20 +382,27 @@ def render(p, lang, all_platforms):
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
         for q, a in d["faq"])
 
-    canon = f'https://camstreamguide.com/{u["path"]}{p["slug"]}/'
+    canon = f'{SITE}/{u["path"]}{p["slug"]}/'
+    og_image = f'{SITE}/assets/og/{p["slug"]}.png'
+    hreflang_html = "\n".join(
+        f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}{p["slug"]}/">'
+        for L in ("en", "ru", "es")
+    ) + f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{p["slug"]}/">'
     schema = {
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": u["crumb_home"],
-                 "item": f'https://camstreamguide.com/{u["path"]}'},
+                 "item": f'{SITE}/{u["path"]}'},
                 {"@type": "ListItem", "position": 2, "name": name, "item": canon}]},
             {"@type": "HowTo", "name": _strip(d["h1html"]), "description": d["desc"],
-             "totalTime": "PT5M",
+             "totalTime": "PT5M", "inLanguage": lang,
+             "datePublished": PUBLISHED_DATE, "dateModified": MODIFIED_DATE,
+             "publisher": PUBLISHER, "image": og_image,
              "step": [{"@type": "HowToStep", "position": i+1, "name": s[0],
                        "text": html.unescape(_strip(s[1]))}
                       for i, s in enumerate(steps)]},
-            {"@type": "FAQPage", "mainEntity": [
+            {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
                 {"@type": "Question", "name": q,
                  "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
                 for q, a in d["faq"]]},
@@ -409,16 +422,22 @@ def render(p, lang, all_platforms):
 <meta name="description" content="{e(d['desc'])}">
 <meta name="keywords" content="{e(d['kw'])}">
 <link rel="canonical" href="{canon}">
+{hreflang_html}
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(d['title'])}">
 <meta property="og:description" content="{e(d['desc'])}">
 <meta property="og:site_name" content="{SITE_NAME}">
-<meta property="og:image" content="https://camstreamguide.com/assets/splitcam.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:locale" content="{OG_LOCALE[lang]}">
+<meta property="og:image" content="{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(d['title'])}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(d['title'])}">
 <meta name="twitter:description" content="{e(d['desc'])}">
+<meta name="twitter:image" content="{og_image}">
 <meta name="theme-color" content="#141420">
 <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=1)}
@@ -550,6 +569,32 @@ def render_hub(platforms, lang):
         f'<img class="hub-card-icon" src="logos/round/{p["slug"]}.png" alt="">'
         f'<div class="hub-card-body"><h4>{e(p[lang]["h1short"])}</h4>'
         f'<p>{e(p[lang]["card"])}</p></div></a>' for p in ordered)
+    canon = f'{SITE}/{u["path"]}'
+    og_image = f'{SITE}/assets/og/hub-{lang}.png'
+    hreflang_html = "\n".join(
+        f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}">'
+        for L in ("en", "ru", "es")
+    ) + f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/">'
+    hub_schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "WebSite", "name": SITE_NAME, "url": f"{SITE}/",
+             "inLanguage": lang, "publisher": PUBLISHER},
+            {"@type": "CollectionPage", "name": hb["title"],
+             "description": hb["desc"], "url": canon,
+             "inLanguage": lang, "datePublished": PUBLISHED_DATE,
+             "dateModified": MODIFIED_DATE, "publisher": PUBLISHER,
+             "mainEntity": {"@type": "ItemList", "numberOfItems": len(ordered),
+                            "itemListElement": [
+                {"@type": "ListItem", "position": i+1,
+                 "url": f"{canon}{p['slug']}/",
+                 "name": p[lang]["h1short"]}
+                for i, p in enumerate(ordered)]}},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": u["crumb_home"],
+                 "item": canon}]},
+        ],
+    }
     return f"""<!DOCTYPE html>
 <html lang="{u['lang']}">
 <head>
@@ -557,8 +602,26 @@ def render_hub(platforms, lang):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{e(hb['title'])}</title>
 <meta name="description" content="{e(hb['desc'])}">
+<link rel="canonical" href="{canon}">
+{hreflang_html}
 <meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{canon}">
+<meta property="og:title" content="{e(hb['title'])}">
+<meta property="og:description" content="{e(hb['desc'])}">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:locale" content="{OG_LOCALE[lang]}">
+<meta property="og:image" content="{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(hb['title'])}">
+<meta name="twitter:description" content="{e(hb['desc'])}">
+<meta name="twitter:image" content="{og_image}">
 <meta name="theme-color" content="#141420">
+<script type="application/ld+json">
+{json.dumps(hub_schema, ensure_ascii=False, indent=1)}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -628,7 +691,42 @@ def main():
         hubdir.mkdir(parents=True, exist_ok=True)
         (hubdir / "index.html").write_text(render_hub(platforms, lang), encoding="utf-8")
         count += 1
-    print(f"Generated {count} pages across {len(langs_data)} language(s).")
+
+    # ---- sitemap.xml with hreflang alternates ----
+    def alt_links(slug=None):
+        out = []
+        for L in langs_data:
+            href = f'{SITE}/{LANG_PATH[L]}{slug + "/" if slug else ""}'
+            out.append(f'    <xhtml:link rel="alternate" hreflang="{L}" href="{href}"/>')
+        out.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}/{slug + "/" if slug else ""}"/>')
+        return "\n".join(out)
+
+    urls = []
+    today = MODIFIED_DATE
+    for lang in langs_data:
+        # hub
+        loc = f'{SITE}/{LANG_PATH[lang]}'
+        urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
+                    f'    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n'
+                    f'{alt_links()}\n  </url>')
+        for p in [p for p in platforms if lang in p]:
+            loc = f'{SITE}/{LANG_PATH[lang]}{p["slug"]}/'
+            urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
+                        f'    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n'
+                        f'{alt_links(p["slug"])}\n  </url>')
+    sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+               'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+               + "\n".join(urls) + "\n</urlset>\n")
+    (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+
+    # ---- robots.txt ----
+    robots = ("User-agent: *\nAllow: /\n\n"
+              f"Sitemap: {SITE}/sitemap.xml\n")
+    (ROOT / "robots.txt").write_text(robots, encoding="utf-8")
+
+    print(f"Generated {count} pages across {len(langs_data)} language(s); "
+          f"sitemap.xml ({len(urls)} URLs) + robots.txt written.")
 
 
 if __name__ == "__main__":
