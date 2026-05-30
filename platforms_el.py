@@ -1,0 +1,538 @@
+# -*- coding: utf-8 -*-
+"""Greek (el) content for cam-streaming-guides."""
+
+_T_ETH = ("Χρησιμοποίησε ενσύρματη σύνδεση", "Το Ethernet νικάει το Wi-Fi σε ένα μακρύ stream — "
+          "ένα χαμένο frame είναι ένα χαμένο tip. Τράβα καλώδιο στο stream PC.")
+_T_TEST = ("Κάνε πρώτα ιδιωτικό τεστ", "Τρέξε μια σύντομη δοκιμαστική μετάδοση για κάμερα, "
+           "ήχο, καδράρισμα και overlays πριν ανοίξεις τη room στο κοινό.")
+
+PLATFORMS_EL = [
+    {"slug": "chaturbate", "name": "Chaturbate",
+     "title": "Μετάδοση στο Chaturbate με SplitCam — Token & RTMP",
+     "desc": "Μετάδοση στο Chaturbate με δωρεάν SplitCam — broadcast token, RTMP, multi-camera σκηνές και overlays. Χωρίς υδατογράφημα.",
+     "kw": "μετάδοση chaturbate, chaturbate broadcast token, chaturbate rtmp obs, chaturbate external encoder, chaturbate live",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Chaturbate</span> με SplitCam',
+     "h1short": "Μετάδοση Chaturbate",
+     "card": "Token-βασισμένη ρύθμιση με εξωτερικό encoder στο Chaturbate.",
+     "intro": "Το Chaturbate είναι μία από τις μεγαλύτερες cam πλατφόρμες, χτισμένη πάνω σε οικονομία tokens. Ο browser broadcaster είναι μια επίπεδη μονο-κάμερας εφαρμογή — η μετάβαση σε <strong style='color:var(--text)'>εξωτερικό encoder</strong> με τον δωρεάν <strong style='color:var(--text)'>SplitCam</strong> ανοίγει multi-camera σκηνές, overlays και φίλτρα πάνω στο ίδιο token-βασισμένο stream.",
+     "quick": "Μετάδοση στο Chaturbate με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Chaturbate ανοίγεις <em>Broadcast Yourself → My Broadcast</em>, αντιγράφεις το broadcast token, το επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Αντίγραψε το broadcast token από το Chaturbate.</li><li>Επικόλλησε στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο Chaturbate κάνε κλικ στο <strong>Broadcast Yourself</strong> για τη σελίδα <strong>My Broadcast</strong>, μετά <strong>View RTMP/OBS broadcast information and stream key</strong>. Το κλειδί εμφανίζεται ως <strong>broadcast token</strong> — αντίγραψε. Αντιμετώπισέ το σαν password· ποτέ δημόσιο.",
+     "tips": [
+         ("Το token είναι το κλειδί", "Το Chaturbate χρησιμοποιεί το broadcast token σου αντί για γενικό stream key. Αντιμετώπισέ το σαν password και κάνε reset αν διαρρεύσει."),
+         ("Πολλά περιθώρια", "Το RTMP ingest του Chaturbate δέχεται έως 4K, 60 fps και υψηλό bitrate — το όριο είναι το upload σου, όχι η πλατφόρμα. Keyframe ανά 2 δευτερόλεπτα."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Επιτρέπει το Chaturbate OBS / εξωτερικούς encoders;", "Ναι — το Chaturbate υποστηρίζει εξωτερικούς encoders επίσημα με δικό του άρθρο «How do I set up OBS?». Ενεργοποίηση μέσω «Use External Encoder to Broadcast» στις ρυθμίσεις μετάδοσης."),
+         ("Πού είναι το Chaturbate stream key μου;", "Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Το κλειδί είναι το broadcast token."),
+         ("Τι bitrate για Chaturbate;", "3.500–6.000 Kbps στα 1080p αρκούν. Το ταβάνι του Chaturbate είναι υψηλό — το πραγματικό όριο είναι το upload· τρέξε πρώτα το ενσωματωμένο speed test του SplitCam."),
+         ("Είναι ο SplitCam δωρεάν για Chaturbate;", "Ναι — εντελώς δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο: ο encoder δεν τρώει από τα κέρδη σου σε tokens."),
+     ]},
+    {"slug": "cam4", "name": "CAM4",
+     "title": "Μετάδοση στο CAM4 με SplitCam — External Encoder",
+     "desc": "Μετάδοση στο CAM4 με δωρεάν SplitCam — External Encoder, stream key, γεω-φραγή και overlays. Χωρίς υδατογράφημα.",
+     "kw": "μετάδοση cam4, cam4.com, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">CAM4</span> με SplitCam',
+     "h1short": "Μετάδοση CAM4",
+     "card": "External Encoder στο CAM4 με γεω-ελέγχους.",
+     "intro": "Το CAM4 είναι παγκόσμια cam-and-earn πλατφόρμα με ενσωματωμένους γεω-ελέγχους — μπορείς να κρύψεις τη μετάδοση σε επιλεγμένες χώρες. Η μετάδοση μέσω δωρεάν <strong style='color:var(--text)'>SplitCam</strong> ως εξωτερικός encoder ανοίγει εναλλαγές σκηνής και overlays που ο βασικός broadcaster δεν κάνει.",
+     "quick": "Μετάδοση στο CAM4 με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο CAM4 πας <em>Broadcast &amp; Earn Money → Start Broadcast → External Encoder</em>, Get Stream Key, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το stream key από το CAM4.</li><li>Επικόλλησε στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο CAM4 κλικ <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn Money</strong> → <strong>Start Broadcast</strong>, μετά <strong>External Encoder</strong> πάνω. Συμπλήρωσε ημερομηνία γέννησης, φύλο και χώρα, χρησιμοποίησε <strong>Get Stream Key</strong> και αντίγραψε. Πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει τη σύνδεση.",
+     "tips": [
+         ("Όρισε γεω-περιορισμούς", "Το CAM4 επιτρέπει το κρύψιμο της μετάδοσης σε συγκεκριμένες χώρες και περιοχές — ρύθμισε από την πλευρά CAM4 πριν το go-live."),
+         ("Παρακολούθα το πράσινο slider", "Η ρύθμιση CAM4 δείχνει πράσινο slider στις Stream Settings του SplitCam όταν το κλειδί γίνεται δεκτό — κόκκινο = έλεγξε το κλειδί."),
+         ("Χαμηλότερο bitrate από συνηθισμένο", "Το ingest του CAM4 περιορίζει το βίντεο bitrate σε περίπου 3.000 Kbps — χαμηλότερα από τα περισσότερα cam sites. Μην το πιέζεις ψηλότερα."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το CAM4 επίσημα OBS / εξωτερικούς encoders;", "Ναι — το CAM4 έχει επίσημο OBS Guide στο support site και προτείνει External Encoder για την καλύτερη εμπειρία. Ο SplitCam χρησιμοποιεί την ίδια διαδρομή RTMP."),
+         ("Μπορώ να γεω-φράξω το CAM4 stream;", "Ναι — το CAM4 έχει ενσωματωμένο γεω-περιορισμό για το κρύψιμο της μετάδοσης σε ορισμένες χώρες. Ρύθμισέ τον στο CAM4, όχι στο SplitCam."),
+         ("Πού είναι το CAM4 stream key;", "Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key."),
+         ("Τι bitrate για CAM4;", "Χαμηλότερο από τον μέσο όρο — το ingest CAM4 περιορίζει σε ~3.000 Kbps στα 30 fps με 1 δευτερόλεπτο keyframe. Ο επίσημος πίνακας προτείνει να μην υπερβείς τα ~3.000."),
+     ]},
+    {"slug": "bongacams", "name": "BongaCams",
+     "title": "Μετάδοση στο BongaCams με SplitCam — External Encoder",
+     "desc": "Μετάδοση στο BongaCams με δωρεάν SplitCam — External Encoder, multi-camera σκηνές, overlays και AI φόντο. Χωρίς υδατογράφημα.",
+     "kw": "bongacams, bongcams, μετάδοση bongacams, bongacams external encoder, bongacams rtmp obs",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">BongaCams</span> με SplitCam',
+     "h1short": "Μετάδοση BongaCams",
+     "card": "External Encoder ρύθμιση για BongaCams.",
+     "intro": "Το BongaCams είναι παγκόσμια cam πλατφόρμα. Η μετάδοση μέσω εξωτερικού encoder δεν είναι πάντα ενεργοποιημένη — μόλις ενεργοποιηθεί, ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> οδηγεί τη μετάδοση με multi-camera σκηνές, overlays και AI φόντο.",
+     "quick": "Μετάδοση στο BongaCams με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο BongaCams πας <em>Options → Broadcast settings → Select Encoder → External Encoder</em>, αντιγράφεις URL και κλειδί, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε URL και κλειδί από BongaCams.</li><li>Επικόλλησε στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο BongaCams άνοιξε <strong>Options</strong> → <strong>Broadcast settings</strong> → <strong>Select Encoder</strong> → <strong>External Encoder</strong> και αντίγραψε το server URL και το stream key που εμφανίζονται. <strong>Αν το κουμπί External Encoder λείπει</strong>, επικοινώνησε με το support του BongaCams και ζήτησε ενεργοποίηση εξωτερικής κωδικοποίησης στον λογαριασμό σου.",
+     "tips": [
+         ("Χωρίς κουμπί External Encoder; Support", "Το BongaCams ενεργοποιεί την εξωτερική κωδικοποίηση ανά λογαριασμό — αν η επιλογή λείπει από τις Broadcast settings, το support την ενεργοποιεί."),
+         ("Συμφώνησε την ανάλυση", "Το BongaCams συστήνει η ανάλυση της webcam και αυτή της μετάδοσης να ταιριάζουν — π.χ. και οι δύο στα 1280×720."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Γιατί το κουμπί External Encoder δεν εμφανίζεται στο BongaCams;", "Η εξωτερική κωδικοποίηση δεν είναι ενεργή εξ ορισμού σε κάθε λογαριασμό — επικοινώνησε με το support του BongaCams για να την ενεργοποιήσει και το κουμπί θα εμφανιστεί στις Broadcast settings."),
+         ("Πρέπει να επαληθεύσω τον λογαριασμό BongaCams;", "Ναι — η μετάδοση απαιτεί 18+, επίσημο έγγραφο για έλεγχο ηλικίας και έγκριση λογαριασμού πριν τη ζωντανή μετάδοση."),
+         ("Τι bitrate για BongaCams;", "Το RTMP ingest του BongaCams περιορίζει το βίντεο bitrate σε ~6.000 Kbps με 2 δευτερόλεπτα keyframe — 3.500–6.000 στα 1080p είναι η ιδανική ζώνη· δοκίμασε το upload πρώτα."),
+         ("Είναι ο SplitCam δωρεάν για BongaCams;", "Ναι — εντελώς δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, ώστε ο encoder να μην μειώνει τα κέρδη σου σε tokens στο BongaCams."),
+     ]},
+    {"slug": "stripchat", "name": "Stripchat",
+     "title": "Μετάδοση στο Stripchat με SplitCam — Strip Cam Setup",
+     "desc": "Μετάδοση στο Stripchat — strip cam πλατφόρμα — με δωρεάν SplitCam. Εξωτερικό λογισμικό, token-κλειδί, σκηνές και overlays.",
+     "kw": "strip cam, stripchat live stream, μετάδοση stripchat, stripchat external software, stripchat stream key, stripchat rtmp obs",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Stripchat</span> με SplitCam',
+     "h1short": "Μετάδοση Stripchat",
+     "card": "Εξωτερικό λογισμικό για Stripchat streams.",
+     "intro": "Το Stripchat είναι μεγάλη cam πλατφόρμα με έμφαση στη διαδραστικότητα. Η λειτουργία <em>external software</em> σου δίνει token-βασισμένο κλειδί — βάλε το στον δωρεάν <strong style='color:var(--text)'>SplitCam</strong> για να μεταδίδεις με σκηνές, overlays και φίλτρα αντί για επίπεδη κάμερα.",
+     "quick": "Μετάδοση στο Stripchat με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Stripchat επιλέγεις <em>Switch to external software</em>, αντιγράφεις το stream key, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το stream key από Stripchat.</li><li>Επικόλλησε στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο Stripchat επίλεξε <strong>Switch to external software</strong>, μετά <strong>Show external software settings for the stream</strong>. Αντίγραψε το stream key — το Stripchat το δείχνει ως token. Κράτησέ το ιδιωτικό.",
+     "tips": [
+         ("Συμφώνησε την ανάλυση με το site", "Το FAQ του Stripchat προειδοποιεί: η ανάλυση στο λογισμικό σου πρέπει να ταιριάζει ακριβώς με αυτή του site, αλλιώς το βίντεο πιξελιάζει. Όρισε και τα δύο ίδια."),
+         ("Προσοχή στο ελάχιστο των 2 Mbps", "Το Stripchat αναφέρει 2 Mbps upload ως ελάχιστο — και λέει ευθέως ότι δεν αρκεί για OBS streaming ή multistreaming. Στόχευσε πολύ πιο ψηλά."),
+         ("Το κλειδί είναι token", "Το stream key του Stripchat είναι token — αντίγραψε ακριβώς, ποτέ μη μοιραστείς, κάνε reset αν διαρρεύσει."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Προτείνει το Stripchat OBS / εξωτερικό λογισμικό;", "Ναι — το επίσημο FAQ του Stripchat προτείνει εξωτερικό broadcast λογισμικό όπως το OBS «για να επιτευχθεί η καλύτερη ποιότητα βίντεο και ήχου». Ο SplitCam δουλεύει το ίδιο."),
+         ("Πώς αλλάζω το Stripchat σε εξωτερικό λογισμικό;", "Στο Broadcast Center επίλεξε Switch to External Broadcast Software (OBS), μετά άνοιξε external software settings για να εμφανιστεί το stream key (token)."),
+         ("Τι bitrate για Stripchat;", "Το RTMP ingest δέχεται έως ~6.000 Kbps με 2 δευτερόλεπτα keyframe. 3.500–6.000 στα 1080p είναι ιδανικά — αλλά πρέπει να είσαι αρκετά πάνω από το ελάχιστο των 2 Mbps, ιδίως για OBS streaming."),
+         ("Είναι ο SplitCam δωρεάν για Stripchat;", "Ναι — χωρίς συνδρομή, χωρίς υδατογράφημα, χωρίς χρονικό όριο: ακόμη και μακρά διαδραστικά Stripchat shows δεν κοστίζουν τίποτα από την πλευρά του encoder."),
+     ]},
+    {"slug": "onlyfans", "name": "OnlyFans",
+     "title": "Ζωντανά στο OnlyFans με SplitCam — Εξουσιοδότηση ή κλειδί",
+     "desc": "Ζωντανά στο OnlyFans με δωρεάν SplitCam — σύνδεση με εξουσιοδότηση ή OBS Key, multi-camera σκηνές, overlays. Χωρίς υδατογράφημα.",
+     "kw": "ζωντανά onlyfans, onlyfans live stream, onlyfans εξουσιοδότηση splitcam, onlyfans obs key, onlyfans streaming software",
+     "h1html": 'Πώς πας ζωντανά στο <span class="accent">OnlyFans</span> με SplitCam',
+     "h1short": "Live OnlyFans",
+     "card": "Εξουσιοδότησε μία φορά ή επικόλλησε το κλειδί — live στο OnlyFans.",
+     "intro": "Το OnlyFans live είναι για τους συνδρομητές σου. Ο SplitCam συνδέει με <strong style='color:var(--text)'>δύο τρόπους</strong> — μπαίνεις μία φορά με τον OnlyFans λογαριασμό και ο SplitCam παίρνει το stream key αυτόματα και το κρατά συγχρονισμένο, ή επικολλάς το OBS Key χειροκίνητα. Και στις δύο περιπτώσεις μεταδίδεις με multi-camera σκηνές, overlays και φίλτρα.",
+     "quick": "Live στο OnlyFans με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ανοίγεις Stream Settings &rarr; Add Channel &rarr; OnlyFans και επιλέγεις <em>Εξουσιοδότηση</em> — μπαίνεις με OnlyFans λογαριασμό, ο SplitCam παίρνει το κλειδί αυτόματα — και πατάς Go Live. Με συνδεδεμένο λογαριασμό αλλάζεις τις παραμέτρους του OnlyFans stream μέσα από το SplitCam, χωρίς να ανοίξεις το site OnlyFans.",
+     "steps": [
+         ("Κατέβασε και εγκατέστησε το SplitCam",
+          "Το SplitCam είναι δωρεάν λογισμικό streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Είναι ο encoder που στέλνει το βίντεο στο OnlyFans."),
+         ("Ρύθμισε κάμερα και σκηνή",
+          "Άνοιξε το SplitCam και πρόσθεσε την webcam. Φτιάξε τη σκηνή που θα βλέπουν οι θεατές — overlays, κείμενο, δεύτερη κάμερα, beauty φίλτρα ή AI φόντο, όλα εφαρμοσμένα ζωντανά."),
+         ("Σύνδεση — Μέθοδος 1: Εξουσιοδότηση (συνιστώμενη)",
+          "Στο SplitCam άνοιξε <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> και επίλεξε <strong>Εξουσιοδότηση</strong>. Μπες με email και κωδικό OnlyFans. Ο SplitCam συνδέει τον λογαριασμό σου, παίρνει το stream key αυτόματα και το κρατά συγχρονισμένο — και σου επιτρέπει να διαχειρίζεσαι τις παραμέτρους του OnlyFans live μέσα από τον SplitCam, αλλάζοντάς τες κατά τη διάρκεια ή μετά τη μετάδοση χωρίς να ανοίξεις το site OnlyFans."),
+         ("Σύνδεση — Μέθοδος 2: Stream Key (χειροκίνητα)",
+          "Προτιμάς να μη μπεις; Χρησιμοποίησε το κλειδί. Στο OnlyFans πήγαινε <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; τμήμα <strong>Other</strong> και αντίγραψε το <strong>OBS Key</strong>. Στο SplitCam, Add Channel &rarr; OnlyFans, επικόλλησε στο πεδίο κλειδιού. Αυτό το κλειδί είναι στατικό — για να αλλάξεις ρυθμίσεις αργότερα γυρνάς στο site OnlyFans."),
+         ("Go Live",
+          "Όποια μέθοδο, πάτα <strong>Go Live</strong> στο SplitCam. Με τη Μέθοδο 1 μπορείς να συνεχίσεις να ρυθμίζεις τις παραμέτρους OnlyFans από τον SplitCam σε πραγματικό χρόνο· με τη Μέθοδο 2 το κλειδί παραμένει ακριβώς όπως το όρισες."),
+     ],
+     "tips": [
+         ("Εξουσιοδότηση vs Stream Key", "Δύο τρόποι σύνδεσης: <strong>Εξουσιοδότηση</strong> (μπαίνεις μία φορά, το κλειδί παίρνεται και συγχρονίζεται — ευκολότερη διαδρομή) ή <strong>Stream Key</strong> (αντιγράφεις το OBS Key στο OnlyFans → Profile → Settings → Other και επικολλάς). Η εξουσιοδότηση γλιτώνει το χειροκίνητο copy-paste."),
+         ("Άλλαξε ρυθμίσεις χωρίς να φύγεις από το SplitCam", "Με εξουσιοδότηση ο λογαριασμός παραμένει συνδεδεμένος, οπότε ρυθμίζεις τις OnlyFans live παραμέτρους από τον SplitCam κατά τη μετάδοση ή μετά — χωρίς να περάσεις από το site OnlyFans."),
+         ("Μέτριο bitrate", "Το RTMP ingest του OnlyFans περιορίζει το βίντεο bitrate σε ~2.500 Kbps — πιο σφιχτό από τα περισσότερα cam sites. Στόχευσε 720p–1080p στα ~2.000–2.500."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Πώς συνδέω το OnlyFans με το SplitCam;", "Δύο τρόποι. <strong>Εξουσιοδότηση</strong> — Stream Settings → Add Channel → OnlyFans → μπαίνεις με OnlyFans λογαριασμό και ο SplitCam παίρνει το κλειδί αυτόματα. Ή <strong>Stream Key</strong> — αντιγράφεις το OBS Key στο OnlyFans → Profile → Settings → Other και επικολλάς."),
+         ("Μπορώ να αλλάξω ρυθμίσεις OnlyFans live χωρίς να ανοίξω το site;", "Ναι — με τη μέθοδο Εξουσιοδότησης ο SplitCam παραμένει συνδεδεμένος με τον λογαριασμό OnlyFans, ώστε το κλειδί και οι ρυθμίσεις συγχρονίζονται αυτόματα. Αλλάζεις τα πάντα μέσα από τον SplitCam κατά τη διάρκεια ή μετά τη μετάδοση, χωρίς να επισκεφθείς το onlyfans.com."),
+         ("Τι bitrate για OnlyFans;", "Μέτριο — το RTMP ingest του OnlyFans περιορίζει το bitrate σε ~2.500 Kbps, πολύ πιο σφιχτό από άλλες cam πλατφόρμες. Στόχευσε 720p–1080p γύρω στα 2.000–2.500 Kbps."),
+         ("Είναι ο SplitCam δωρεάν για OnlyFans live;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Κανένα κόστος από την πλευρά του encoder."),
+     ]},
+    {"slug": "camplace", "name": "CamPlace",
+     "title": "Μετάδοση στο CamPlace με SplitCam — Δωρεάν οδηγός",
+     "desc": "Μετάδοση στο CamPlace με δωρεάν SplitCam — εξωτερικός encoder, RTMP κλειδί, σκηνές και overlays. Βήμα προς βήμα, χωρίς υδατογράφημα.",
+     "kw": "μετάδοση camplace, camplace broadcasting software, camplace rtmp, camplace external encoder, camplace stream key",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">CamPlace</span> με SplitCam',
+     "h1short": "Μετάδοση CamPlace",
+     "card": "Εξωτερικός encoder για CamPlace streams.",
+     "intro": "Το CamPlace είναι cam-streaming πλατφόρμα. Δεν υπάρχει δημόσιο OBS άρθρο, οπότε ο <strong style='color:var(--text)'>βίντεο οδηγός παραπάνω</strong> είναι η αναφορά σου — ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> συνδέει μέσω τυπικού RTMP και προσθέτει σκηνές, overlays και AI φόντο που η βασική κάμερα δεν κάνει.",
+     "quick": "Μετάδοση στο CamPlace με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ενεργοποιείς εξωτερική/RTMP μετάδοση στο CamPlace, αντιγράφεις το server URL και το stream key, επικολλάς στο SplitCam, Go Live. Ακολούθα το βίντεο για την τρέχουσα διαδρομή."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το RTMP κλειδί από CamPlace.</li><li>Επικόλλησε στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στο CamPlace και άνοιξε τις ρυθμίσεις μετάδοσης. Άλλαξε στην επιλογή εξωτερικός encoder / RTMP / OBS για να εμφανιστούν το <strong>server URL</strong> και το <strong>stream key</strong>, αντίγραψε και τα δύο. Το CamPlace δεν δημοσιεύει επίσημη OBS τεκμηρίωση — το <strong>βίντεο παραπάνω</strong> είναι η πιο αξιόπιστη βήμα-προς-βήμα διαδρομή στο τρέχον περιβάλλον.",
+     "tips": [
+         ("Χωρίς επίσημο OBS οδηγό — χρησιμοποίησε το βίντεο", "Το CamPlace δεν έχει δημόσιο άρθρο για εξωτερικούς encoders· το βίντεο παραπάνω είναι η αναφορά για την τρέχουσα διαδρομή."),
+         ("Τυπικό RTMP δουλεύει", "Παρότι αδιαφανές, το CamPlace δέχεται τυπικό RTMP server URL και κλειδί — ο SplitCam συνδέει ως custom RTMP προορισμός."),
+         ("Στοίβαξε overlays στο SplitCam", "Tip στόχοι, όνομα και social handles ως σκηνικά στρώματα — η βασική κάμερα CamPlace δεν προσθέτει τέτοια."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Έχει το CamPlace επίσημο OBS οδηγό;", "Δεν βρέθηκε δημόσιο άρθρο για εξωτερικούς encoders. Το CamPlace δέχεται τυπικό RTMP URL και κλειδί, οπότε ο SplitCam δουλεύει — ακολούθα το βίντεο."),
+         ("Υποστηρίζει το CamPlace εξωτερικούς encoders;", "Ναι — δέχεται τυπικό RTMP stream key, οπότε ο SplitCam συνδέει ως custom RTMP προορισμός."),
+         ("Τι bitrate για CamPlace;", "Το CamPlace δεν δημοσιεύει επίσημο αριθμό — χρησιμοποίησε 3.500–6.000 Kbps στα 1080p ως ασφαλές εύρος και άσε το speed test του SplitCam να καθορίσει το πραγματικό σου ταβάνι."),
+         ("Είναι ο SplitCam δωρεάν για CamPlace;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Καθώς το CamPlace δεν έρχεται με δικό του encoder, ένα δωρεάν RTMP εργαλείο κάνει τη δουλειά."),
+     ]},
+    {"slug": "camsoda", "name": "CamSoda",
+     "title": "CamSoda live με SplitCam — Δωρεάν ρύθμιση",
+     "desc": "CamSoda live με δωρεάν SplitCam — Use OBS Broadcaster, περιφερειακοί servers, σκηνές και overlays. Χωρίς υδατογράφημα.",
+     "kw": "camsoda live, μετάδοση camsoda, camsoda obs broadcaster, camsoda rtmp obs, camsoda live broadcast",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">CamSoda</span> με SplitCam',
+     "h1short": "Μετάδοση CamSoda",
+     "card": "Use OBS Broadcaster ρύθμιση στο CamSoda.",
+     "intro": "Το CamSoda είναι αμερικανική cam πλατφόρμα γνωστή για διαδραστικές και ασυνήθιστες show μορφές. Υποστηρίζει επίσημα OBS streaming — υπάρχει κουμπί <strong style='color:var(--text)'>Use OBS Broadcaster</strong> στη σελίδα Go Live και επίσημος OBS οδηγός στο CamSoda wiki. Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> δουλεύει το ίδιο.",
+     "quick": "Μετάδοση στο CamSoda με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, κλικ Use OBS Broadcaster στη σελίδα Go Live CamSoda, αντιγράφεις το server URL και το stream key, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Κλικ Use OBS Broadcaster στο CamSoda.</li>"
+              "<li>Επικόλλησε server URL + κλειδί στο SplitCam.</li><li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στη σελίδα <strong>Go Live</strong> του CamSoda κλικ <strong>Use OBS Broadcaster</strong>. Το CamSoda εμφανίζει το RTMP server URL και το stream key — αντίγραψε και τα δύο. Επίλεξε τον περιφερειακό server (Βόρεια Αμερική, Ευρώπη, Ασία κλπ) που είναι κοντινότερος. Το wiki του CamSoda έχει πλήρη OBS οδηγό για λεπτομέρειες.",
+     "tips": [
+         ("Επαλήθευσέ σου για tips", "Στο CamSoda ο καθένας μπορεί να μεταδώσει, αλλά για να λαμβάνεις tips πρέπει να ολοκληρώσεις τη διαδικασία επαλήθευσης CamSoda."),
+         ("Επίλεξε τον κοντινότερο περιφερειακό server", "Το CamSoda προσφέρει περιφερειακούς ingest servers — ο κοντινότερος (NA / Ευρώπη / Ασία / Νότια Αμερική / Ωκεανία) μειώνει την καθυστέρηση και τα χαμένα frames."),
+         ("Ταβάνι στα 1080p / 30 fps", "Το ingest του CamSoda φτάνει στα ~1080p, 30 fps και ~6.000 Kbps — μην το πιέζεις πιο ψηλά."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το CamSoda OBS / εξωτερικούς encoders;", "Ναι — επίσημα. Υπάρχει κουμπί Use OBS Broadcaster στη σελίδα Go Live και OBS οδηγός στο CamSoda wiki, οπότε ο SplitCam δουλεύει."),
+         ("Πρέπει να επαληθεύσω τον CamSoda;", "Για μετάδοση, όχι. Για να λαμβάνεις tips, ναι — το CamSoda απαιτεί πρώτα τη διαδικασία επαλήθευσης."),
+         ("Τι ανάλυση υποστηρίζει το CamSoda;", "Έως 1920×1080 στα 30 fps, ~6.000 Kbps μέγιστο στο RTMP ingest."),
+         ("Είναι ο SplitCam δωρεάν για CamSoda;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Δουλεύει με τη δωρεάν λειτουργία Use OBS Broadcaster του CamSoda, οπότε όλη η αλυσίδα δεν κοστίζει τίποτα."),
+     ]},
+    {"slug": "streamate", "name": "Streamate",
+     "title": "Μετάδοση στο Streamate με SplitCam — Ενσωματωμένο κανάλι",
+     "desc": "Μετάδοση στο Streamate με δωρεάν SplitCam — ενσωματωμένο κανάλι, SM Connect κλειδί, σκηνές και overlays. Χωρίς υδατογράφημα.",
+     "kw": "streamate, streamate sm connect, μετάδοση streamate, streamate broadcasting software, streamate rtmp",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Streamate</span> με SplitCam',
+     "h1short": "Μετάδοση Streamate",
+     "card": "Το Streamate είναι ενσωματωμένο κανάλι στο SplitCam — γρήγορη ρύθμιση.",
+     "intro": "Το Streamate είναι καθιερωμένη cam πλατφόρμα — και είναι ένας από τους <strong style='color:var(--text)'>προ-ρυθμισμένους προορισμούς στο SplitCam</strong>, στη λίστα καναλιών, οπότε η ρύθμιση είναι γρηγορότερη από τη χειροκίνητη RTMP εισαγωγή: επιλέγεις Streamate, επικολλάς το κλειδί, έτοιμο.",
+     "quick": "Μετάδοση στο Streamate με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Streamate χρησιμοποιείς <em>SM Connect → Start Show</em> και αντιγράφεις το κλειδί, μετά στο SplitCam ανοίγεις <em>Stream Settings → Add Channel → Streamate</em> και επικολλάς."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το κλειδί Streamate μέσω SM Connect.</li>"
+              "<li>Add Channel → Streamate στο SplitCam.</li><li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο Streamate άνοιξε <strong>SM Connect</strong>, αποδέξου τους όρους, κλικ <strong>Start Show</strong> αριστερά και κλείσε το παράθυρο που ανοίγει — μετά αντίγραψε το streaming κλειδί. Στο SplitCam άνοιξε <strong>Stream Settings</strong> → <strong>Add Channel</strong>, επίλεξε <strong>Streamate</strong> από τη λίστα και επικόλλησε το κλειδί. Πράσινο slider επιβεβαιώνει τη σύνδεση.",
+     "tips": [
+         ("Το Streamate είναι ενσωματωμένο", "Όχι χειροκίνητο RTMP URL — ο SplitCam έχει Streamate στη λίστα Add Channel· απλώς επιλέγεις και επικολλάς το κλειδί."),
+         ("Κλείσε το SM Connect popup", "Μετά το Start Show το Streamate ανοίγει ένα παράθυρο — κλείσε το· ήταν μόνο για να εμφανιστεί το streaming κλειδί."),
+         ("Σταθεροποίησε την ανάλυση στα 1080p", "Το πεδίο Video Resolution στο SM Connect μπορεί σιωπηρά να πηδήξει στα 1440, κάτι που στην πράξη δεν παραδίδεται και μειώνει την ποιότητά σου χωρίς προειδοποίηση — όρισε χειροκίνητα 1080p. Bitrate που πέφτει σε στατική εικόνα είναι φυσιολογικό: το stream του Streamate είναι προσαρμοστικό."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Είναι το Streamate ενσωματωμένο στο SplitCam;", "Ναι — το Streamate εμφανίζεται στη λίστα Add Channel του SplitCam· το επιλέγεις αντί να πληκτρολογήσεις RTMP URL."),
+         ("Πού είναι το Streamate streaming κλειδί;", "SM Connect → αποδοχή όρων → Start Show → κλείσιμο popup → αντιγραφή κλειδιού."),
+         ("Τι bitrate για Streamate;", "Το Streamate δεν ορίζει σκληρό ταβάνι — 3.500–6.000 Kbps στα 1080p δουλεύει καλά. Το stream είναι προσαρμοστικό, οπότε χαμηλότερο bitrate σε στατική εικόνα είναι φυσιολογικό, όχι bug."),
+         ("Είναι ο SplitCam δωρεάν για Streamate;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο· και επειδή το Streamate είναι ενσωματωμένο κανάλι στον SplitCam, δεν υπάρχει ξεχωριστό κόστος encoder."),
+     ]},
+    {"slug": "streamray", "name": "StreamRay",
+     "title": "Μετάδοση στο StreamRay cam με SplitCam — URL chat",
+     "desc": "Μετάδοση στο StreamRay cam με δωρεάν SplitCam — URL αναρτημένο στο chat, OBS Broadcaster λειτουργία, σκηνές και overlays. Χωρίς υδατογράφημα.",
+     "kw": "streamray, streamray cam, μετάδοση streamray, streamray obs broadcaster, streamray rtmp",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">StreamRay</span> με SplitCam',
+     "h1short": "Μετάδοση StreamRay",
+     "card": "URL-στο-chat εξωτερικός encoder για StreamRay.",
+     "intro": "Το StreamRay έχει ασυνήθιστη ρύθμιση εξωτερικού encoder — παραδίδει το URL του stream στο <strong style='color:var(--text)'>παράθυρο chat της μετάδοσης</strong> και δεν χρησιμοποιεί ξεχωριστό stream key. Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> χειρίζεται αυτή τη μόνο-URL ροή.",
+     "quick": "Μετάδοση στο StreamRay με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο StreamRay ενεργοποιείς OBS Broadcaster, αντιγράφεις το URL stream από το παράθυρο chat, επικολλάς στο SplitCam (αφήνεις το πεδίο κλειδιού κενό), Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Αντίγραψε το StreamRay URL από το chat.</li>"
+              "<li>Επικόλλησε το URL στο SplitCam.</li><li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο StreamRay διπλό κλικ στο <strong>Broadcast Now</strong>, άνοιξε το μενού <strong>Other</strong>, επίλεξε <strong>OBS Broadcaster</strong> και <strong>Save and Close</strong>. Το StreamRay τότε δημοσιεύει το <strong>URL του stream στο παράθυρο chat</strong> — αντίγραψε από εκεί. Άσε το πεδίο stream key του SplitCam <strong>κενό</strong>· το StreamRay αυθεντικοποιεί μόνο με URL.",
+     "tips": [
+         ("Το URL είναι στο chat", "Το StreamRay δεν δείχνει το URL του stream σε κουτί ρυθμίσεων — το δημοσιεύει στο παράθυρο chat της μετάδοσης. Αντίγραψε από εκεί."),
+         ("Άσε το πεδίο κλειδιού κενό", "Το StreamRay δεν χρησιμοποιεί ξεχωριστό κλειδί — μόνο URL. Μην βάλεις τίποτα στο πεδίο κλειδιού του SplitCam."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Πού είναι το URL του stream StreamRay;", "Μετά την ενεργοποίηση του OBS Broadcaster, το StreamRay δημοσιεύει το URL στο παράθυρο chat — αντίγραψε από το chat."),
+         ("Γιατί δεν υπάρχει stream key στο StreamRay;", "Το StreamRay αυθεντικοποιεί μόνο με URL — άσε το πεδίο κλειδιού SplitCam κενό."),
+         ("Τι bitrate για StreamRay;", "Το StreamRay δεν δηλώνει επίσημο ταβάνι — στόχευσε 3.500–6.000 Kbps στα 1080p και τρέξε το speed test του SplitCam, αφού η μόνο-URL ροή δεν δίνει feedback bitrate."),
+         ("Είναι ο SplitCam δωρεάν για StreamRay;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, ταιριάζει με τη μόνο-URL ροή του StreamRay: επικολλάς ένα link και είσαι live."),
+     ]},
+    {"slug": "xlovecam", "name": "XLoveCam",
+     "title": "Μετάδοση στο XLoveCam με SplitCam — RTMP link & κλειδί",
+     "desc": "Μετάδοση στο XLoveCam με δωρεάν SplitCam — RTMP link και κλειδί, περιφερειακοί servers, σκηνές και overlays. Χωρίς υδατογράφημα.",
+     "kw": "xlovecam, x love cam, μετάδοση xlovecam, xlovecam rtmp link, xlovecam stream key",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">XLoveCam</span> με SplitCam',
+     "h1short": "Μετάδοση XLoveCam",
+     "card": "RTMP link + κλειδί ρύθμιση για XLoveCam.",
+     "intro": "Το XLoveCam είναι ευρωπαϊκή πολυγλωσσική cam πλατφόρμα. Οι ρυθμίσεις λογαριασμού δείχνουν τόσο <strong style='color:var(--text)'>RTMP link</strong> όσο και <strong style='color:var(--text)'>stream key</strong> — ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> παίρνει και τα δύο και μεταδίδει με πλήρεις σκηνές και overlays.",
+     "quick": "Μετάδοση στο XLoveCam με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο XLoveCam ανοίγεις <em>My Account → settings</em>, αντιγράφεις RTMP link και stream key, επικολλάς και τα δύο στο SplitCam, ξεκινάς το show."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Αντίγραψε RTMP link + κλειδί από XLoveCam.</li><li>Επικόλλησε και τα δύο στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο XLoveCam άνοιξε <strong>My Account</strong> → <strong>settings</strong>. Οι ρυθμίσεις δείχνουν τόσο <strong>RTMP link</strong> όσο και <strong>stream key</strong> — αντίγραψε και τα δύο στα πεδία server URL και κλειδί του SplitCam, μετά <strong>Start your show</strong> στο XLoveCam.",
+     "tips": [
+         ("Αντίγραψε link ΚΑΙ κλειδί", "Το XLoveCam σου δίνει RTMP link ΚΑΙ ξεχωριστό stream key — χρειάζεσαι και τα δύο στο SplitCam, όχι μόνο το ένα."),
+         ("Πολυγλωσσικό κοινό", "Το XLoveCam είναι ευρωπαϊκό και πολυγλωσσικό — καθαρό overlay κειμένου στη γλώσσα σου βοηθά τους θεατές να σε βρουν."),
+         ("Επίλεξε τον κοντινότερο server", "Το XLoveCam προσφέρει περιφερειακούς RTMP servers — Ευρώπη, Βόρεια Αμερική, Νότια Αμερική και Ασία. Ο κοντινότερος μειώνει την καθυστέρηση και τα χαμένα frames."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Πού είναι τα RTMP δεδομένα XLoveCam;", "My Account → settings — δείχνει τόσο το RTMP link όσο και το κλειδί."),
+         ("Υποστηρίζει το XLoveCam εξωτερικούς encoders;", "Ναι — παρέχει RTMP link και κλειδί, οπότε ο SplitCam δουλεύει ως encoder."),
+         ("Τι bitrate για XLoveCam;", "Το XLoveCam δεν δημοσιεύει σταθερό όριο· 3.500–6.000 Kbps στα 1080p είναι ιδανικά. Η επιλογή του κοντινότερου περιφερειακού server μετράει εξίσου — μειώνει τα χαμένα frames."),
+         ("Είναι ο SplitCam δωρεάν για XLoveCam;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η πρόσβαση στο πολυγλωσσικό ευρωπαϊκό κοινό του XLoveCam δεν κοστίζει σε λογισμικό."),
+     ]},
+    {"slug": "soulcams", "name": "SoulCams",
+     "title": "Μετάδοση στο SoulCams με SplitCam — Ρυθμίσεις OBS",
+     "desc": "Μετάδοση στο SoulCams με δωρεάν SplitCam — ρυθμίσεις OBS, RTMP server και κλειδί, multi-camera σκηνές και overlays.",
+     "kw": "soul cams, soulcams, μετάδοση soulcams, soulcams obs, soulcams rtmp, soulcams broadcast",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">SoulCams</span> με SplitCam',
+     "h1short": "Μετάδοση SoulCams",
+     "card": "Ρυθμίσεις OBS για SoulCams.",
+     "intro": "Το SoulCams είναι cam πλατφόρμα της οποίας οι ρυθμίσεις OBS δείχνουν <strong style='color:var(--text)'>RTMP server και stream key μαζί</strong> σε ένα παράθυρο. Επικόλλησε και τα δύο στον δωρεάν <strong style='color:var(--text)'>SplitCam</strong> για να μεταδώσεις με multi-camera σκηνές και overlays.",
+     "quick": "Μετάδοση στο SoulCams με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο SoulCams κάνεις κλικ Go Online → Settings → OBS, αντιγράφεις server και κλειδί, επικολλάς και τα δύο στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Άνοιξε SoulCams Settings → OBS.</li><li>Επικόλλησε server + κλειδί στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο SoulCams συνδέσου και κλικ <strong>Go Online</strong>, μετά άνοιξε <strong>Settings</strong> → <strong>OBS</strong>. Το παράθυρο OBS δείχνει <strong>RTMP server</strong> και <strong>stream key</strong> μαζί — αντίγραψε και τα δύο στο SplitCam.",
+     "tips": [
+         ("Server και κλειδί δίπλα-δίπλα", "Το SoulCams δείχνει RTMP server και κλειδί στο ίδιο παράθυρο OBS — τα παίρνεις και τα δύο μονομιάς."),
+         ("Πρώτα Go Online", "Οι ρυθμίσεις OBS εμφανίζονται μόνο αφού κάνεις κλικ Go Online στο SoulCams — κάν' το πριν ψάξεις για τα δεδομένα encoder."),
+         ("Φράξε ανεπιθύμητες περιοχές", "Το SoulCams επιτρέπει γεω-φραγή από την πλευρά του μοντέλου — επίλεξε ποιες χώρες δεν μπορούν να δουν τη μετάδοση πριν πατήσεις Go Online."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Πού είναι οι ρυθμίσεις OBS του SoulCams;", "Συνδέσου, κλικ Go Online, μετά Settings → OBS — RTMP server και stream key εμφανίζονται μαζί."),
+         ("Υποστηρίζει το SoulCams εξωτερικούς encoders;", "Ναι — οι ρυθμίσεις OBS δίνουν RTMP server και κλειδί, οπότε ο SplitCam δουλεύει."),
+         ("Τι bitrate για SoulCams;", "Το SoulCams δεν δίνει επίσημο αριθμό — στόχευσε 3.500–6.000 Kbps στα 1080p και δοκίμασε το upload, καθώς το παράθυρο OBS δεν δείχνει οδηγία bitrate."),
+         ("Είναι ο SplitCam δωρεάν για SoulCams;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, οπότε ένα πλήρες show SoulCams με multi-camera σκηνές και overlays δεν κοστίζει τίποτα από την πλευρά του encoder."),
+     ]},
+    {"slug": "imlive", "name": "ImLive",
+     "title": "Μετάδοση στο ImLive με SplitCam — Εικονική κάμερα",
+     "desc": "Im Live stream ρύθμιση με δωρεάν SplitCam — το ImLive χρησιμοποιεί απευθείας την webcam (χωρίς RTMP), συνδέεις το SplitCam ως εικονική κάμερα με σκηνές.",
+     "kw": "im live stream, imlive splitcam, μετάδοση imlive, imlive εικονική κάμερα, imlive webcam, im live cam",
+     "h1html": 'Πώς χρησιμοποιείς το <span class="accent">ImLive</span> με SplitCam',
+     "h1short": "SplitCam στο ImLive",
+     "card": "Εικονική κάμερα για ImLive — χωρίς RTMP.",
+     "intro": "Το ImLive χρησιμοποιεί απευθείας την webcam στον browser — <strong style='color:var(--text)'>δεν υπάρχει ούτε RTMP ούτε stream key</strong>. Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> συνδέει ως <strong style='color:var(--text)'>εικονική κάμερα</strong>: χτίζεις τη σκηνή στο SplitCam, μετά επιλέγεις SplitCam ως κάμερα στο ImLive.",
+     "quick": "Χρήση SplitCam με ImLive: εγκαθιστάς SplitCam, χτίζεις σκηνή με media layers, ανοίγεις ImLive και ξεκινάς video chat, στις ρυθμίσεις ImLive επιλέγεις SplitCam ως webcam και μικρόφωνο."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Χτίσε σκηνή στο SplitCam.</li>"
+              "<li>Ξεκίνα video chat στο ImLive.</li>"
+              "<li>Επίλεξε SplitCam ως κάμερα ImLive.</li><li>Ξεκίνα το chat.</li></ol>",
+     "steps": [
+         ("Εγκατάστησε το SplitCam",
+          "Το SplitCam είναι δωρεάν λογισμικό για Windows και macOS. Εγκατάστησέ το — χωρίς υδατογράφημα, χωρίς εγγραφή. Για το ImLive δουλεύει ως <strong>εικονική κάμερα</strong>, όχι RTMP encoder."),
+         ("Χτίσε σκηνή στο SplitCam",
+          "Άνοιξε το SplitCam και χρησιμοποίησε <strong>Media Layers +</strong> για να προσθέσεις την webcam συν τυχόν overlays, κείμενο, φίλτρα ή AI φόντο. Αυτή η σύνθετη σκηνή είναι αυτό που το ImLive θα δει ως κάμερά σου."),
+         ("Ξεκίνα video chat στο ImLive",
+          "Συνδέσου στο site ImLive και κλικ <strong>Start Video Chat</strong>, μετά άνοιξε <strong>Go To Settings</strong> για τις επιλογές κάμερας και μικροφώνου."),
+         ("Επίλεξε SplitCam ως κάμερα",
+          "Στις ρυθμίσεις ImLive επίλεξε <strong>SplitCam</strong> ως webcam ΚΑΙ ως μικρόφωνο. Το ImLive τώρα δείχνει την πλήρη σκηνή σου SplitCam αντί για επίπεδη webcam."),
+         ("Ξεκίνα Free Live Chat",
+          "Κλικ <strong>Free Live Chat</strong> στο ImLive για να μπεις live. Για αλλαγή εμφάνισης στη μέση συνεδρίας, επεξεργάσου τη σκηνή στο SplitCam — το ImLive ενημερώνεται άμεσα."),
+     ],
+     "tips": [
+         ("Δεν χρειάζεται stream key", "Το ImLive δεν έχει RTMP — μην ψάχνεις για server URL ή κλειδί. Το SplitCam απλώς επιλέγεται ως συσκευή κάμερας."),
+         ("Όρισε το SplitCam και ως μικρόφωνο", "Επίλεξε SplitCam για μικρόφωνο εκτός από κάμερα, ώστε το audio mix και η μείωση θορύβου να περάσουν επίσης στο live."),
+         ("Χτίσε σκηνή πριν το live", "Το ImLive δείχνει ό,τι στέλνει το SplitCam — τακτοποίησε τα στρώματα πριν ξεκινήσεις το chat."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Χρησιμοποιεί το ImLive RTMP ή stream key;", "Όχι — το ImLive χρησιμοποιεί την webcam απευθείας μέσω browser. Το SplitCam συνδέει ως εικονική κάμερα, δεν υπάρχει κλειδί για αντιγραφή."),
+         ("Πώς επιλέγω SplitCam στο ImLive;", "Start Video Chat → Go To Settings → επίλεξε SplitCam ως webcam και μικρόφωνο."),
+         ("Μπορώ να χρησιμοποιήσω overlays στο ImLive;", "Ναι — τα χτίζεις στη σκηνή SplitCam· το ImLive δείχνει το σύνθετο αποτέλεσμα."),
+         ("Είναι ο SplitCam δωρεάν για ImLive;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Ως εικονική κάμερα για ImLive δεν προσθέτει κόστος ή branding στο video chat σου."),
+     ]},
+    {"slug": "vxlive", "name": "VXLive",
+     "title": "Μετάδοση στο VXLive με SplitCam — Επίσημη υποστήριξη",
+     "desc": "Μετάδοση στο VXLive (VXModels / VISIT-X) με δωρεάν SplitCam — επίσημο VISIT-X preset, server και κλειδί, σκηνές. Χωρίς υδατογράφημα.",
+     "kw": "vxlive, visit-x, vxmodels splitcam, μετάδοση vxlive, visit-x stream, vxlive rtmp",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">VXLive</span> με SplitCam',
+     "h1short": "Μετάδοση VXLive",
+     "card": "Το VXLive υποστηρίζει επίσημα το SplitCam (VISIT-X preset).",
+     "intro": "Το VXLive (VXModels / VISIT-X) είναι cam πλατφόρμα από τη γερμανική αγορά — και μία από τις λίγες που <strong style='color:var(--text)'>υποστηρίζουν επίσημα το SplitCam ονομαστικά</strong>. Η VXModels διατηρεί ειδικό άρθρο βοήθειας για σύνδεση του <strong style='color:var(--text)'>SplitCam</strong> στο VXLive, και ο SplitCam προσφέρει VISIT-X ως έτοιμο preset καναλιού.",
+     "quick": "Μετάδοση στο VXLive με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο VXLive επιλέγεις «Stream with third-party software», αντιγράφεις server URL και κλειδί, στο SplitCam επιλέγεις VISIT-X preset και επικολλάς, Go Live στο SplitCam, μετά GO ONLINE στο VXLive."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε server URL + κλειδί από VXLive.</li>"
+              "<li>Επίλεξε VISIT-X preset στο SplitCam, επικόλλησε.</li>"
+              "<li>Go Live, μετά GO ONLINE στο VXLive.</li></ol>",
+     "key_how": "Στο VXLive επίλεξε <strong>Stream with third-party software</strong> και επίλεξε την επιλογή για <strong>OBS, SplitCam ή XSplit</strong>. Το VXLive παρέχει <strong>server URL</strong> και <strong>stream key</strong>. Στο SplitCam επίλεξε <strong>VISIT-X</strong> ως πλατφόρμα streaming, επικόλλησε και τα δύο, πάτα <strong>Go Live</strong> στο SplitCam, μετά <strong>GO ONLINE</strong> στο VXLive.",
+     "tips": [
+         ("Το VISIT-X είναι ενσωματωμένο preset", "Μην πληκτρολογείς ωμό RTMP URL — ο SplitCam έχει VISIT-X στη λίστα πλατφορμών· απλώς επιλέγεις και επικολλάς server URL και κλειδί."),
+         ("Go-live σε δύο βήματα", "Στο VXLive πρώτα πατάς Go Live στο SplitCam, μετά GO ONLINE στο VXLive — και τα δύο, με αυτή τη σειρά."),
+         ("Γερμανική αγορά", "Το κοινό του VXLive είναι κυρίως γερμανόφωνο — γερμανικό overlay κειμένου ή τίτλος βοηθά τη σύνδεση με τους θεατές."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το VXLive το SplitCam επίσημα;", "Ναι — η VXModels (VXLive) διατηρεί ειδικό επίσημο άρθρο βοήθειας για ρύθμιση SplitCam και αναφέρει το SplitCam δίπλα στο OBS και το XSplit ως υποστηριζόμενο λογισμικό broadcasting."),
+         ("Πώς συνδέω το SplitCam με το VXLive;", "Στο VXLive επιλέγεις «Stream with third-party software», μετά στο SplitCam επιλέγεις το VISIT-X preset και επικολλάς το server URL και stream key που δίνει το VXLive."),
+         ("Στο SplitCam ή στο VXLive μπαίνω live;", "Και στα δύο — πρώτα Go Live στο SplitCam, μετά GO ONLINE στο VXLive."),
+         ("Γιατί η VXModels προτείνει το SplitCam;", "Το επίσημο άρθρο βοήθειας της VXModels προτείνει το SplitCam συγκεκριμένα για την εξάλειψη οπτικών αλλοιώσεων και πιξελιάσματος της webcam και τη σταθεροποίηση της σύνδεσης — όχι μόνο ως γενικό encoder."),
+     ]},
+    {"slug": "virtwish", "name": "VirtWish",
+     "title": "Μετάδοση στο VirtWish με SplitCam — URL stream & κλειδί",
+     "desc": "Μετάδοση στο VirtWish με δωρεάν SplitCam — Profile → Start Broadcast OBS τμήμα, URL stream και κλειδί, σκηνές και overlays.",
+     "kw": "virtwish, μετάδοση virtwish, virtwish broadcasting software, virtwish rtmp, virtwish stream key, virtwish obs",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">VirtWish</span> με SplitCam',
+     "h1short": "Μετάδοση VirtWish",
+     "card": "URL stream + κλειδί ρύθμιση για VirtWish.",
+     "intro": "Το VirtWish είναι διαδραστική cam πλατφόρμα. Οι ρυθμίσεις μετάδοσης σου δίνουν <strong style='color:var(--text)'>URL stream και ξεχωριστό stream key</strong> σε ένα τμήμα OBS — ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> παίρνει και τα δύο και τρέχει το show με σκηνές και overlays.",
+     "quick": "Μετάδοση στο VirtWish με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο VirtWish ανοίγεις <em>Profile → Start Broadcast</em> έως το τμήμα OBS, αντιγράφεις link και κλειδί, επικολλάς και τα δύο στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε URL + κλειδί από VirtWish.</li><li>Επικόλλησε και τα δύο στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στο VirtWish κλικ στο εικονίδιο πάνω δεξιά → <strong>Profile</strong> → <strong>Start Broadcast</strong>, μετά <strong>Start Broadcast</strong> ξανά για να φτάσεις στο τμήμα OBS. <strong>Αντίγραψε το link στην πρώτη γραμμή</strong> στο πεδίο Stream URL του SplitCam, και το <strong>Stream Key</strong> ξεχωριστά στο πεδίο κλειδιού.",
+     "tips": [
+         ("Link στην πρώτη γραμμή", "Το τμήμα OBS του VirtWish βάζει το URL stream στην πρώτη γραμμή — αντίγραψε στο Stream URL SplitCam, μετά το ξεχωριστό κλειδί."),
+         ("Δύο κλικ στο Start Broadcast", "Πατάς Start Broadcast δύο φορές στο VirtWish για να φτάσεις στο τμήμα OBS — αναμενόμενο, όχι bug."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Πού είναι τα RTMP δεδομένα VirtWish;", "Εικονίδιο πάνω δεξιά → Profile → Start Broadcast δύο φορές → το τμήμα OBS δείχνει το link και το stream key."),
+         ("Υποστηρίζει το VirtWish εξωτερικούς encoders;", "Ναι — το τμήμα OBS παρέχει URL stream και κλειδί, οπότε ο SplitCam δουλεύει."),
+         ("Τι bitrate για VirtWish;", "Το VirtWish δεν δημοσιεύει επίσημο ταβάνι· 3.500–6.000 Kbps στα 1080p είναι ασφαλή. Συμφώνησε την ανάλυση SplitCam με αυτή που ορίζεις στο VirtWish για να αποφύγεις rescaling."),
+         ("Είναι ο SplitCam δωρεάν για VirtWish;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η ρύθμιση URL-και-κλειδί του VirtWish κοστίζει μόνο τα λεπτά που χρειάζονται."),
+     ]},
+    {"slug": "xmodels", "name": "XModels",
+     "title": "Μετάδοση στο XModels με SplitCam — Δωρεάν οδηγός",
+     "desc": "Μετάδοση στο XModels με δωρεάν SplitCam — επιλογή εξωτερικού encoder στις ρυθμίσεις λογαριασμού μοντέλου, RTMP κλειδί, σκηνές και overlays.",
+     "kw": "xmodels, μετάδοση xmodels, xmodels broadcasting software, xmodels rtmp, xmodels external encoder",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">XModels</span> με SplitCam',
+     "h1short": "Μετάδοση XModels",
+     "card": "Εξωτερικός encoder για XModels streams.",
+     "intro": "Το XModels είναι cam-streaming πλατφόρμα με ενσωματωμένη <strong style='color:var(--text)'>επιλογή εξωτερικού encoder</strong> στις ρυθμίσεις λογαριασμού μοντέλου. Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> μεταδίδει εκεί με multi-camera σκηνές, overlays και φίλτρα αντί για μια επίπεδη κάμερα.",
+     "quick": "Μετάδοση στο XModels με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στον λογαριασμό μοντέλου XModels ενεργοποιείς την επιλογή εξωτερικού encoder, αντιγράφεις server URL και stream key, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Ενεργοποίησε εξωτερικό encoder στις ρυθμίσεις XModels.</li>"
+              "<li>Επικόλλησε server URL + κλειδί στο SplitCam.</li><li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στις <strong>ρυθμίσεις λογαριασμού μοντέλου</strong> XModels ενεργοποίησε την επιλογή <strong>μετάδοση μέσω εξωτερικού encoder</strong>. Το XModels παρέχει <strong>stream key</strong> — αντίγραψε στο SplitCam. Αν η επιλογή δεν βρίσκεται εκεί που περιμένεις, το support του XModels είναι μέσω FAQ chat στο site και <strong>info@xmodels.com</strong>· το βίντεο παραπάνω το δείχνει επίσης.",
+     "tips": [
+         ("Είναι στις ρυθμίσεις λογαριασμού", "Το XModels τοποθετεί την επιλογή εξωτερικού encoder στις ρυθμίσεις λογαριασμού μοντέλου, όχι σε ξεχωριστή οθόνη μετάδοσης."),
+         ("Support: chat + email", "Το XModels δεν έχει μεγάλο δημόσιο help center — το FAQ chat στο site και info@xmodels.com είναι τα επίσημα κανάλια support."),
+         ("Στοίβαξε overlays στο SplitCam", "Tip στόχοι, όνομα και social handles ως σκηνικά στρώματα — η βασική κάμερα XModels δεν προσθέτει τέτοια."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το XModels εξωτερικούς encoders;", "Ναι — οι ρυθμίσεις λογαριασμού μοντέλου περιλαμβάνουν επιλογή μετάδοσης μέσω εξωτερικού encoder που παρέχει stream key, οπότε ο SplitCam δουλεύει."),
+         ("Πού βρίσκω βοήθεια XModels;", "Το support XModels είναι μέσω FAQ chat στο site και email info@xmodels.com — δεν υπάρχει μεγάλο δημόσιο help center."),
+         ("Τι bitrate για XModels;", "Το XModels δεν τεκμηριώνει επίσημο αριθμό — χρησιμοποίησε 3.500–6.000 Kbps στα 1080p και τρέξε το speed test του SplitCam, καθώς το support XModels είναι μόνο chat και email."),
+         ("Είναι ο SplitCam δωρεάν για XModels;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, οπότε η μετάδοση στο ευρωπαϊκό δίκτυο του XModels δεν προσθέτει κόστος λογισμικού."),
+     ]},
+    {"slug": "flirt4free", "name": "Flirt4Free",
+     "title": "Μετάδοση στο Flirt for Free cam με SplitCam — Δωρεάν οδηγός",
+     "desc": "Μετάδοση στο Flirt for Free cam με δωρεάν SplitCam — External Broadcast Form, RTMP URL και Stream Name, σκηνές και overlays.",
+     "kw": "flirt for free cam, flirt 4 free cam, flirt4free, μετάδοση flirt4free, flirt4free external broadcast, flirt4free rtmp",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Flirt4Free</span> με SplitCam',
+     "h1short": "Μετάδοση Flirt4Free",
+     "card": "External Broadcast Form για Flirt4Free.",
+     "intro": "Το Flirt4Free είναι μία από τις παλαιότερες cam πλατφόρμες, στον αέρα από τη δεκαετία του '90. Υποστηρίζει επίσημα εξωτερική μετάδοση μέσω <strong style='color:var(--text)'>External Broadcast Form</strong> — ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> στέλνει το stream ενώ η φόρμα ορίζει την ανάλυση και το bitrate.",
+     "quick": "Μετάδοση στο Flirt4Free με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ανοίγεις την External Broadcast Form του Flirt4Free, αντιγράφεις RTMP URL και Stream Name και ορίζεις ανάλυση/bitrate, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Άνοιξε την External Broadcast Form του Flirt4Free.</li>"
+              "<li>Επικόλλησε RTMP URL + Stream Name στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Στην περιοχή μοντέλου του Flirt4Free άνοιξε την <strong>External Broadcast Form</strong>. Σε αντίθεση με τα περισσότερα cam sites, το Flirt4Free σου δίνει <strong>RTMP URL</strong> και <strong>Stream Name</strong> (όχι «κλειδί»), συν πεδία ανάλυσης και bitrate που συμπληρώνεις στην ίδια τη φόρμα. Αντίγραψε URL και Stream Name στα πεδία server και κλειδί του SplitCam.",
+     "tips": [
+         ("Είναι Stream Name, όχι κλειδί", "Το Flirt4Free ονομάζει το credential Stream Name. Το επικολλάς στο πεδίο stream key του SplitCam — παίζει τον ίδιο ρόλο."),
+         ("Όρισε ανάλυση/bitrate στη φόρμα", "Η External Broadcast Form του Flirt4Free έχει δικά της πεδία ανάλυσης και bitrate — ευθυγράμμισε με τις ρυθμίσεις του SplitCam ώστε η εικόνα να μη γίνεται rescale."),
+         ("Ιστορική πλατφόρμα", "Το Flirt4Free τρέχει από τη δεκαετία του '90 — τα εργαλεία μοντέλων είναι ώριμα και η External Broadcast Form είναι τεκμηριωμένο μέρος τους."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το Flirt4Free εξωτερικούς encoders;", "Ναι — επίσημα, μέσω της External Broadcast Form, που παρέχει RTMP URL και Stream Name. Ο SplitCam δουλεύει ως encoder."),
+         ("Πού παίρνω τα RTMP δεδομένα Flirt4Free;", "Από την External Broadcast Form στην περιοχή μοντέλου — δείχνει RTMP URL, Stream Name και πεδία ανάλυσης/bitrate."),
+         ("Τι bitrate για Flirt4Free;", "3.500–6.000 Kbps στα 1080p — όρισε την ίδια τιμή στην External Broadcast Form και στο SplitCam."),
+         ("Είναι ο SplitCam δωρεάν για Flirt4Free;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, ταιριάζει με μια ιστορική πλατφόρμα όπως το Flirt4Free, όπου τα shows μπορεί να είναι μακρά."),
+     ]},
+    {"slug": "mfc-alerts", "name": "MFC Alerts",
+     "title": "Προσθήκη MFC Alerts στο stream με SplitCam",
+     "desc": "Εμφάνιση κινούμενων tip alerts στο MyFreeCams stream — URL mfcalerts.com ως Browser στρώμα στον δωρεάν SplitCam, πάνω από την webcam.",
+     "kw": "mfc alerts, myfreecams alerts, προσθήκη mfc alerts, mfcalerts splitcam, myfreecams tip alerts, myfreecams alerts overlay",
+     "h1html": 'Πώς προσθέτεις <span class="accent">MFC Alerts</span> στο stream',
+     "h1short": "Προσθήκη MFC Alerts",
+     "card": "Εμφάνιση κινούμενων tip alerts στο MyFreeCams stream.",
+     "intro": "Το MFC Alerts εμφανίζει κινούμενα εφέ στο MyFreeCams stream σου κάθε φορά που ένας θεατής στέλνει tip. Τρέχει ως <strong style='color:var(--text)'>Browser στρώμα</strong> μέσα στον δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — το ρυθμίζεις μία φορά και τα tips ενεργοποιούν αντιδράσεις στην οθόνη ζωντανά.",
+     "quick": "Προσθήκη MFC Alerts με SplitCam: εγκαθιστάς SplitCam, προσθέτεις την webcam, ανοίγεις την καρτέλα Browser και φορτώνεις mfcalerts.com, αντιγράφεις το URL alerts, προσθέτεις ως Browser στρώμα πάνω από την webcam, μετά δοκιμάζεις με δοκιμαστικό tip."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε την webcam.</li>"
+              "<li>Πάρε το URL από mfcalerts.com.</li>"
+              "<li>Πρόσθεσε ως Browser στρώμα πάνω από webcam.</li>"
+              "<li>Στείλε δοκιμαστικό tip.</li></ol>",
+     "steps": [
+         ("Εγκατάστησε SplitCam και πρόσθεσε την webcam",
+          "Εγκατέστησε τον δωρεάν SplitCam για Windows ή macOS, μετά πρόσθεσε την <strong>webcam</strong> ως πηγή. Το MFC Alerts κάθεται ως στρώμα πάνω από αυτή την κάμερα."),
+         ("Άνοιξε καρτέλα Browser και πήγαινε στο mfcalerts.com",
+          "Στο SplitCam άνοιξε την καρτέλα <strong>Browser</strong> και πλοήγησε στο <strong>www.mfcalerts.com</strong>. Συνδέσου ή κάνε εγγραφή αν δεν έχεις λογαριασμό mfcalerts.com ακόμα."),
+         ("Αντίγραψε το URL alerts",
+          "Στο mfcalerts.com χρησιμοποίησε <strong>Copy to clipboard</strong> για να αντιγράψεις το προσωπικό URL alerts — είναι η σελίδα που αποδίδει τα κινούμενα tip εφέ."),
+         ("Πρόσθεσε το URL ως Browser στρώμα — πάνω από την webcam",
+          "Επικόλλησε το URL στο παράθυρο Browser του SplitCam και κλικ <strong>Add</strong>. Μετά αναδιάταξε τη λίστα πηγών ώστε το <strong>MFC Alerts να είναι πάνω από την webcam</strong> (μενού 3 κουκκίδων → Move Up). Αν κάθεται κάτω, τα εφέ μένουν κρυμμένα."),
+         ("Δοκίμασε με δοκιμαστικό tip",
+          "Άνοιξε <strong>Settings → Send test tip</strong> και επιβεβαίωσε ότι το εφέ alert εμφανίζεται πάνω από την κάμερα. Μετά μετέδωσε κανονικά στο MyFreeCams — τα πραγματικά tips τώρα ενεργοποιούν τις κινούμενες εικόνες."),
+     ],
+     "tips": [
+         ("Το MFC Alerts πρέπει να είναι πάνω από την webcam", "Το πιο συχνό λάθος: αν το στρώμα MFC Alerts είναι κάτω από την webcam στη λίστα πηγών, τα εφέ μένουν κρυμμένα. Σύρε το πάνω."),
+         ("Λογαριασμός mfcalerts.com απαιτείται", "Το URL alerts είναι προσωπικό — εγγράψου στο mfcalerts.com πρώτα αν δεν έχεις λογαριασμό."),
+         ("Στείλε δοκιμαστικό tip πριν το live", "Χρησιμοποίησε Settings → Send test tip για να επιβεβαιώσεις ότι το overlay δουλεύει — μην ανακαλύψεις το λάθος στη μέση του show."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Τι είναι το MFC Alerts;", "Σύστημα ειδοποιήσεων για MyFreeCams που εμφανίζει εφέ βίντεο στο stream όταν θεατές στέλνουν tips — προστίθεται ως Browser overlay στο SplitCam."),
+         ("Γιατί δεν εμφανίζονται τα MFC Alerts μου;", "Σχεδόν πάντα είναι η σειρά στρωμάτων — το Browser στρώμα MFC Alerts πρέπει να είναι πάνω από την webcam στη λίστα πηγών SplitCam."),
+         ("Χρειάζομαι λογαριασμό για MFC Alerts;", "Ναι — εγγράψου στο mfcalerts.com για να πάρεις το προσωπικό σου URL alerts."),
+         ("Είναι ο SplitCam δωρεάν για αυτό;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, και το browser overlay MFC Alerts τρέχει μέσα του χωρίς επιπλέον κόστος."),
+     ]},
+    {"slug": "lovense", "name": "Lovense",
+     "title": "Προσθήκη Lovense παιχνιδιού στο stream με SplitCam",
+     "desc": "Σύνδεση διαδραστικού Lovense παιχνιδιού στο cam stream με δωρεάν SplitCam — Lovense SplitCam Toolset, tip alerts στην οθόνη, αντιδράσεις.",
+     "kw": "προσθήκη lovense στο stream, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense interactive toy streaming",
+     "h1html": 'Πώς προσθέτεις ένα <span class="accent">Lovense παιχνίδι</span> στο stream',
+     "h1short": "Προσθήκη Lovense",
+     "card": "Σύνδεσε διαδραστικό Lovense παιχνίδι στο cam stream.",
+     "intro": "Τρέχεις το cam stream μέσω του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> και ζευγαρώνεις ένα <strong style='color:var(--text)'>Lovense</strong> παιχνίδι που αντιδρά σε tokens. Η Lovense τεκμηριώνει επίσημο <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>, και ο SplitCam παρέχει επίσημο Lovense plugin — η ενσωμάτωση υποστηρίζεται και από τις δύο πλευρές.",
+     "quick": "Για να προσθέσεις Lovense παιχνίδι στο stream: εγκατέστησε SplitCam και Lovense λογισμικό, ζευγάρωσε το παιχνίδι, σύνδεσε το Lovense στην cam πλατφόρμα, πρόσθεσε το Lovense status ως Browser στρώμα στο SplitCam, μετά μετέδωσε κανονικά."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Εγκατάστησε Lovense λογισμικό και ζευγάρωσε παιχνίδι.</li>"
+              "<li>Σύνδεσε Lovense στο cam site.</li>"
+              "<li>Πρόσθεσε Lovense overlay στο SplitCam.</li><li>Πάτα Go Live.</li></ol>",
+     "steps": [
+         ("Εγκατάστησε SplitCam",
+          "Το SplitCam είναι δωρεάν λογισμικό streaming για Windows και macOS — ο encoder που στέλνει το βίντεό σου στην cam πλατφόρμα. Εγκατάστησε· χωρίς υδατογράφημα."),
+         ("Εγκατάστησε Lovense λογισμικό και ζευγάρωσε το παιχνίδι",
+          "Εγκατάστησε Lovense Connect / Lovense Stream (επίσημη desktop εφαρμογή). Άναψε το παιχνίδι και ζευγάρωσε μέσω Bluetooth ώστε η εφαρμογή να δείχνει συνδεδεμένο."),
+         ("Σύνδεσε το Lovense στην cam πλατφόρμα",
+          "Στην εφαρμογή Lovense σύνδεσε τον cam λογαριασμό σου ώστε το παιχνίδι να αντιδρά σε tokens / tips θεατών. Οι περισσότερες μεγάλες cam πλατφόρμες υποστηρίζονται."),
+         ("Πρόσθεσε το Lovense overlay στο SplitCam",
+          "Η Lovense παρέχει URL overlay / widget. Πρόσθεσε ως <strong>Browser</strong> στρώμα στη σκηνή SplitCam ώστε οι θεατές να βλέπουν το status του παιχνιδιού και τα πρόσφατα tips στην οθόνη."),
+         ("Χτίσε σκηνή και Go Live",
+          "Πρόσθεσε την κάμερα και τα άλλα overlays, επικόλλησε το RTMP κλειδί της cam πλατφόρμας στο SplitCam και κλικ <strong>Go Live</strong>. Το παιχνίδι αντιδρά σε tips σε πραγματικό χρόνο."),
+     ],
+     "tips": [
+         ("Χρησιμοποίησε το επίσημο Lovense SplitCam Toolset", "Η Lovense δημοσιεύει SplitCam-ειδικό toolset με δικό του οδηγό εγκατάστασης — προσθέτει overlay δραστηριότητας παιχνιδιού και tip alerts φτιαγμένα για SplitCam."),
+         ("Ενημέρωσε το Lovense Cam Extension", "Το toolset απαιτεί πρόσφατο Lovense Cam Extension (30.1.4 ή νεότερο) — ενημέρωσε πριν το live."),
+         ("Κράτα το παιχνίδι φορτισμένο", "Σχεδόν άδεια μπαταρία στη μέση του show σκοτώνει τη διαδραστική πλευρά — φόρτισε πλήρως πριν το live."),
+         ("Δοκίμασε την αντίδραση σε tokens", "Στείλε μικρό δοκιμαστικό tip για να επιβεβαιώσεις ότι το παιχνίδι αντιδρά πριν ανοίξεις τη room."),
+         ("Έλεγξε τις απαιτήσεις έκδοσης", "Το Lovense SplitCam Toolset απαιτεί SplitCam 10.4.5 ή νεότερο. Το Lovense Cam Extension καλύπτει επίσημα Chaturbate, Stripchat, BongaCams, MyFreeCams και CamSoda — για οποιοδήποτε άλλο site, χρησιμοποίησε την ενσωμάτωση Generic URL της Lovense."),
+     ],
+     "faq": [
+         ("Υποστηρίζει η Lovense το SplitCam επίσημα;", "Ναι — η Lovense τεκμηριώνει επίσημο «Lovense SplitCam Toolset» με δικό του οδηγό εγκατάστασης, και ο SplitCam παρέχει επίσημο Lovense plugin. Η ενσωμάτωση υποστηρίζεται και από τις δύο πλευρές."),
+         ("Συνδέεται το παιχνίδι απευθείας με το SplitCam;", "Όχι — το παιχνίδι ζευγαρώνει με την εφαρμογή Lovense· ο SplitCam δείχνει το Lovense overlay και μεταδίδει την κάμερα."),
+         ("Ποια cam sites υποστηρίζουν Lovense;", "Το Lovense Cam Extension υποστηρίζει επίσημα Chaturbate, Stripchat, BongaCams, MyFreeCams και CamSoda, με μεταβλητή υποστήριξη για άλλα — έλεγξε την τρέχουσα λίστα στην εφαρμογή Lovense."),
+         ("Μπορώ να εμφανίσω πρόσφατα tips στην οθόνη;", "Ναι — πρόσθεσε το URL widget Lovense ως Browser στρώμα στο SplitCam."),
+     ]},
+    {"slug": "multistream-cams", "name": "Πολλά cam sites",
+     "title": "Μετάδοση σε πολλά cam sites ταυτόχρονα με SplitCam",
+     "desc": "Μετάδοση σε MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat και άλλα ταυτόχρονα με το δωρεάν multistreaming SplitCam. Ένα κλικ, χωρίς υδατογράφημα.",
+     "kw": "μετάδοση σε πολλά cam sites, multistream cam sites, μετάδοση σε chaturbate και bongacams ταυτόχρονα, multistream cam λογισμικό",
+     "h1html": 'Πώς μεταδίδεις σε <span class="accent">πολλά cam sites</span> ταυτόχρονα',
+     "h1short": "Cam multistreaming",
+     "card": "Μετάδοση σε πολλά cam sites ταυτόχρονα.",
+     "intro": "Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> μπορεί να μεταδώσει μία κωδικοποίηση σε <strong style='color:var(--text)'>πολλά cam sites ταυτόχρονα</strong> — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat και άλλα. Χωρίς υδατογράφημα, ένα κλικ.",
+     "quick": "Για μετάδοση σε πολλά cam sites μαζί: εγκατέστησε SplitCam, χτίσε τη σκηνή, πάρε το RTMP server URL και stream key κάθε cam site, πρόσθεσε όλα στις ρυθμίσεις multistreaming SplitCam, κλικ Go Live μία φορά."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε ένα RTMP κλειδί από κάθε cam site.</li>"
+              "<li>Πρόσθεσε όλα τα κλειδιά στο multistream SplitCam.</li>"
+              "<li>Πάτα Go Live μία φορά.</li></ol>",
+     "steps": [
+         ("Εγκατάστησε SplitCam",
+          "Το SplitCam είναι δωρεάν λογισμικό streaming για Windows και macOS με ενσωματωμένο multistreaming. Εγκατάστησε — χωρίς υδατογράφημα, χωρίς εγγραφή."),
+         ("Ρύθμισε κάμερα και σκηνή",
+          "Άνοιξε το SplitCam, πρόσθεσε την webcam και χτίσε τη σκηνή με overlays και φίλτρα. Μία σκηνή τροφοδοτεί κάθε προορισμό."),
+         ("Πάρε ένα RTMP κλειδί από κάθε cam site",
+          "Σε κάθε cam πλατφόρμα ενεργοποίησε εξωτερική / RTMP μετάδοση και αντίγραψε το <strong>server URL</strong> και το <strong>stream key</strong>. Επανάλαβε για κάθε site που θέλεις να μεταδώσεις — δες τους ξεχωριστούς οδηγούς πλατφόρμας για ακριβείς διαδρομές."),
+         ("Πρόσθεσε κάθε προορισμό στο SplitCam",
+          "Άνοιξε <strong>Stream Settings</strong> και πρόσθεσε κάθε cam site ως custom RTMP προορισμό — επικόλλησε server URL και κλειδί. Τσέκαρε ό,τι θέλεις να είναι live."),
+         ("Κλικ Go Live μία φορά",
+          "Πάτα <strong>Go Live</strong>. Ο SplitCam στέλνει το stream σε κάθε επιλεγμένο cam site ταυτόχρονα, peer-to-peer, από μία κωδικοποίηση — χωρίς επιπλέον χρέωση."),
+     ],
+     "tips": [
+         ("Παρακολούθα το upload σου", "Το multistreaming πολλαπλασιάζει το upload φορτίο. Κάθε προορισμός καταναλώνει το δικό του bitrate — βεβαιώσου ότι η σύνδεσή σου αντέχει το άθροισμα."),
+         ("Έλεγξε τους κανόνες πλατφόρμας", "Μερικά cam sites απαγορεύουν ταυτόχρονη μετάδοση αλλού — επιβεβαίωσε πριν το multistreaming."),
+         ("Καλώδιο — εδώ δεν αντέχεις drops", "Το multistreaming πολλαπλασιάζει το upload φορτίο, οπότε ένα μόνο wi-fi drop μπορεί να ρίξει όλους τους προορισμούς ταυτόχρονα. Καλώδιο εδώ δεν είναι προαιρετικό."),
+         ("Παρακολούθα το health monitor", "Ο SplitCam δείχνει status ανά προορισμό — ρίξε ένα site αν το upload δεν αντέχει."),
+     ],
+     "faq": [
+         ("Είναι το SplitCam multistreaming δωρεάν;", "Ναι — το multistreaming είναι ενσωματωμένο και δωρεάν, χωρίς χρέωση ανά προορισμό, χωρίς υδατογράφημα."),
+         ("Σε πόσα cam sites μπορώ να μεταδώσω ταυτόχρονα;", "Όσα αντέχει το upload bandwidth σου — κάθε προορισμός καταναλώνει το δικό του bitrate."),
+         ("Χρησιμοποιεί cloud relay;", "Όχι — ο SplitCam στέλνει τα streams peer-to-peer απευθείας από τον PC στο ingest κάθε πλατφόρμας."),
+         ("Επιβραδύνει το multistreaming τον PC μου;", "Η κωδικοποίηση γίνεται μία φορά και επαναχρησιμοποιείται· η hardware κωδικοποίηση κρατά τη CPU χαμηλά. Το upload bandwidth είναι το πραγματικό όριο."),
+     ]},
+]
