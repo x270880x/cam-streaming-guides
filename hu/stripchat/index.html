@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Ajánlja a Stripchat az OBS-t / külső szoftvert?</summary><p>Igen — a Stripchat hivatalos FAQ-ja OBS-szerű külső broadcast szoftvert ajánl «a legjobb videó és hang minőség elérésére». A SplitCam ugyanúgy működik.</p></details><details class="faq-item"><summary>Hogyan váltok Stripchatet külső szoftverre?</summary><p>A Broadcast Centerben válaszd Switch to External Broadcast Software (OBS), majd nyisd meg az external software settings-et a stream key (token) felfedéséhez.</p></details><details class="faq-item"><summary>Milyen bitráta a Stripchathez?</summary><p>Az RTMP ingest ~6000 Kbps-ig fogad 2 másodperces keyframe-el. 3500–6000 1080p-n ideális — de jócskán a 2 Mbps minimum fölött kell lenned, főleg OBS streamhez.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a Stripchathez?</summary><p>Igen — nincs licencdíj, nincs vízjel, nincs időkorlát: még hosszú interaktív Stripchat showk sem kerülnek semmibe az enkóder oldaláról.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Hivatalos támogatás — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Független útmutató vagyunk. Fiók-, fizetési vagy technikai problémák esetén lépj kapcsolatba közvetlenül a platform hivatalos támogatásával.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">További platform-útmutatók</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Adás Chaturbate</h4><p>Token-alapú beállítás külső enkóderrel a Chaturbate-en.</p></a><a class="related-card" href="../cam4/"><h4>Adás CAM4</h4><p>External Encoder a CAM4-en geo-kontrollokkal.</p></a><a class="related-card" href="../bongacams/"><h4>Adás BongaCams</h4><p>External Encoder beállítás a BongaCamshez.</p></a></div>

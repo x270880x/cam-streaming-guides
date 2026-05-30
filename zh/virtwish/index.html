@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>VirtWish 的 RTMP 数据在哪里？</summary><p>右上角图标 → Profile → Start Broadcast 两次 → OBS 部分显示链接和直播密钥。</p></details><details class="faq-item"><summary>VirtWish 支持外部编码器吗？</summary><p>是 — OBS 部分提供直播 URL 和密钥，因此 SplitCam 工作。</p></details><details class="faq-item"><summary>VirtWish 用什么比特率？</summary><p>VirtWish 不发布官方上限；1080p 下 3,500–6,000 Kbps 安全。将 SplitCam 分辨率与 VirtWish 上设置的分辨率匹配以避免重新缩放。</p></details><details class="faq-item"><summary>SplitCam 对 VirtWish 免费吗？</summary><p>是 — 免费、无水印、无时间限制。VirtWish 的 URL 和密钥设置只花费所需的几分钟。</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">官方支持 — VirtWish</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://t.me/vwsupport" rel="nofollow noopener" target="_blank">https://t.me/vwsupport</a></li></ul><p class="sp-note">我们是独立的指南。如有账户、付款或技术问题，请直接联系平台的官方支持。</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">其他平台指南</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 直播</h4><p>BongaCams 的 External Encoder 设置。</p></a></div>

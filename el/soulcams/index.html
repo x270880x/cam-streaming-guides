@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Συχνές ερωτήσεις</h2>
   <div class="faq-list"><details class="faq-item"><summary>Πού είναι οι ρυθμίσεις OBS του SoulCams;</summary><p>Συνδέσου, κλικ Go Online, μετά Settings → OBS — RTMP server και stream key εμφανίζονται μαζί.</p></details><details class="faq-item"><summary>Υποστηρίζει το SoulCams εξωτερικούς encoders;</summary><p>Ναι — οι ρυθμίσεις OBS δίνουν RTMP server και κλειδί, οπότε ο SplitCam δουλεύει.</p></details><details class="faq-item"><summary>Τι bitrate για SoulCams;</summary><p>Το SoulCams δεν δίνει επίσημο αριθμό — στόχευσε 3.500–6.000 Kbps στα 1080p και δοκίμασε το upload, καθώς το παράθυρο OBS δεν δείχνει οδηγία bitrate.</p></details><details class="faq-item"><summary>Είναι ο SplitCam δωρεάν για SoulCams;</summary><p>Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, οπότε ένα πλήρες show SoulCams με multi-camera σκηνές και overlays δεν κοστίζει τίποτα από την πλευρά του encoder.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Επίσημη υποστήριξη — SoulCams</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://soulcams.com/" rel="nofollow noopener" target="_blank">https://soulcams.com/</a></li></ul><p class="sp-note">Είμαστε ανεξάρτητος οδηγός. Για ζητήματα λογαριασμού, πληρωμών ή τεχνικά προβλήματα επικοινωνήστε απευθείας με την επίσημη υποστήριξη της πλατφόρμας.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Άλλοι οδηγοί πλατφορμών</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Μετάδοση Chaturbate</h4><p>Token-βασισμένη ρύθμιση με εξωτερικό encoder στο Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Μετάδοση CAM4</h4><p>External Encoder στο CAM4 με γεω-ελέγχους.</p></a><a class="related-card" href="../bongacams/"><h4>Μετάδοση BongaCams</h4><p>External Encoder ρύθμιση για BongaCams.</p></a></div>

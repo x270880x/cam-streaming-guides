@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">よくある質問</h2>
   <div class="faq-list"><details class="faq-item"><summary>CAM4はOBS / 外部エンコーダーを公式サポート？</summary><p>はい — CAM4はサポートサイトに公式OBS Guideがあり、最高の体験のためにExternal Encoderを推奨。SplitCamは同じRTMPルートを使用。</p></details><details class="faq-item"><summary>CAM4ストリームを地域ブロックできる？</summary><p>はい — CAM4は特定の国で配信を隠す地域制限が内蔵。CAM4で設定、SplitCamではない。</p></details><details class="faq-item"><summary>CAM4のストリームキーは？</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key。</p></details><details class="faq-item"><summary>CAM4のビットレートは？</summary><p>平均より低い — CAM4 ingestは30 fps、1秒キーフレームで~3,000 Kbpsに制限。公式テーブルは~3,000を超えないことを推奨。</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">公式サポート — CAM4</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@cam4.biz">support@cam4.biz</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.cam4support.com/" rel="nofollow noopener" target="_blank">https://www.cam4support.com/</a></li></ul><p class="sp-note">私たちは独立したガイドです。アカウント、支払い、技術的な問題については、プラットフォームの公式サポートに直接お問い合わせください。</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">他のプラットフォームガイド</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate配信</h4><p>Chaturbateでの外部エンコーダーによるトークンベース設定。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams配信</h4><p>BongaCams用External Encoder設定。</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat配信</h4><p>Stripchat配信用外部ソフトウェア設定。</p></a></div>

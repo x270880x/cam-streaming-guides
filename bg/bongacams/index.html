@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Често задавани въпроси</h2>
   <div class="faq-list"><details class="faq-item"><summary>Защо бутонът External Encoder не се появява в BongaCams?</summary><p>Външното кодиране не е активно по подразбиране на всеки акаунт — свържи се с поддръжката на BongaCams за активиране и бутонът ще се появи в Broadcast settings.</p></details><details class="faq-item"><summary>Трябва ли да верифицирам акаунта си в BongaCams?</summary><p>Да — излъчването изисква 18+, официален документ за проверка на възрастта и одобрение на акаунта преди да си на живо.</p></details><details class="faq-item"><summary>Какъв битрейт за BongaCams?</summary><p>RTMP ingest на BongaCams ограничава видео битрейта до около 6000 Kbps с 2-секунден keyframe — 3500–6000 на 1080p е оптималната зона; тествай upload-а първо.</p></details><details class="faq-item"><summary>SplitCam безплатен ли е за BongaCams?</summary><p>Да — напълно безплатен, без воден знак и без времево ограничение, така че енкодерът не намалява печалбите ти в токени в BongaCams.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Официална поддръжка — BongaCams</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@bongacams.com">support@bongacams.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://bongacams.com/contacts" rel="nofollow noopener" target="_blank">https://bongacams.com/contacts</a></li></ul><p class="sp-note">Ние сме независим ресурс. За въпроси по акаунт, плащания или технически проблеми се свържи директно с официалната поддръжка на платформата.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други ръководства за платформи</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a><a class="related-card" href="../stripchat/"><h4>Излъчване Stripchat</h4><p>Външен софтуер за Stripchat стрийм.</p></a></div>

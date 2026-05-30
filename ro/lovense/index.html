@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Suportă Lovense SplitCam oficial?</summary><p>Da — Lovense documentează un «Lovense SplitCam Toolset» oficial cu propriul ghid de instalare, iar SplitCam livrează un plugin Lovense oficial. Integrarea e suportată de ambele părți.</p></details><details class="faq-item"><summary>Toy-ul se conectează direct la SplitCam?</summary><p>Nu — toy-ul împerechează cu aplicația Lovense; SplitCam afișează overlay-ul Lovense și transmite camera.</p></details><details class="faq-item"><summary>Ce cam-site-uri suportă Lovense?</summary><p>Cam Extension Lovense suportă oficial Chaturbate, Stripchat, BongaCams, MyFreeCams și CamSoda, cu suport variabil pentru altele — verifică lista actuală în aplicația Lovense.</p></details><details class="faq-item"><summary>Pot afișa tip-uri recente pe ecran?</summary><p>Da — adaugă URL-ul widget-ului Lovense ca strat Browser în SplitCam.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Suport oficial — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">Suntem un ghid independent. Pentru probleme de cont, plată sau tehnice, contactează direct suportul oficial al platformei.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisie BongaCams</h4><p>Setup External Encoder pentru BongaCams.</p></a></div>

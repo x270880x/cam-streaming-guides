@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Česta pitanja</h2>
   <div class="faq-list"><details class="faq-item"><summary>Podržava li CamSoda OBS / vanjske enkodere?</summary><p>Da — službeno. Postoji gumb Use OBS Broadcaster na Go Live stranici i OBS vodič na CamSoda wikiju, tako da SplitCam radi.</p></details><details class="faq-item"><summary>Moram li se verificirati na CamSodi?</summary><p>Za prijenos, ne. Za primanje tipova, da — CamSoda zahtijeva prvo proces verifikacije dovršen.</p></details><details class="faq-item"><summary>Koju rezoluciju podržava CamSoda?</summary><p>Do 1920×1080 pri 30 fps, oko 6000 Kbps maksimum na RTMP ingestu.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za CamSodu?</summary><p>Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Radi s besplatnim Use OBS Broadcaster načinom CamSode, tako da cijeli lanac ne košta ništa.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Službena podrška — CamSoda</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:modelsupport@camsoda.com">modelsupport@camsoda.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.camsoda.com/support" rel="nofollow noopener" target="_blank">https://www.camsoda.com/support</a></li></ul><p class="sp-note">Mi smo neovisan vodič. Za pitanja računa, plaćanja ili tehničke probleme obratite se izravno službenoj podršci platforme.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Drugi vodiči za platforme</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Prijenos Chaturbate</h4><p>Token-bazirano podešavanje s vanjskim enkoderom na Chaturbateu.</p></a><a class="related-card" href="../cam4/"><h4>Prijenos CAM4</h4><p>External Encoder na CAM4 s geo-kontrolama.</p></a><a class="related-card" href="../bongacams/"><h4>Prijenos BongaCams</h4><p>External Encoder podešavanje za BongaCams.</p></a></div>

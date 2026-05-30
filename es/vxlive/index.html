@@ -315,6 +315,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -426,6 +433,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Preguntas frecuentes</h2>
   <div class="faq-list"><details class="faq-item"><summary>¿VXLive admite oficialmente SplitCam?</summary><p>Sí — VXModels (VXLive) tiene un artículo de ayuda oficial dedicado a configurar SplitCam, y lista SplitCam junto a OBS y XSplit como software de emisión admitido.</p></details><details class="faq-item"><summary>¿Cómo conecto SplitCam con VXLive?</summary><p>En VXLive elige "Stream with third-party software", luego en SplitCam elige el preset VISIT-X y pega la URL del servidor y la clave que da VXLive.</p></details><details class="faq-item"><summary>¿Dónde pulso &quot;en directo&quot;, en SplitCam o VXLive?</summary><p>En ambos — primero Go Live en SplitCam, luego GO ONLINE en VXLive.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para VXLive?</summary><p>Sí — gratis, sin marca de agua ni límite de tiempo. VXModels lista SplitCam como software admitido, así que es a la vez gratuito y reconocido oficialmente.</p></details><details class="faq-item"><summary>¿Por qué VXModels recomienda SplitCam?</summary><p>El artículo de ayuda oficial de VXModels recomienda SplitCam concretamente para eliminar los artefactos de imagen y la pixelación de la webcam y estabilizar la conexión — no solo como codificador genérico.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Soporte oficial — VXLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://helpcenter.vxmodels.com/" rel="nofollow noopener" target="_blank">https://helpcenter.vxmodels.com/</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🎫</span><a href="https://support.vxmodels.com/" rel="nofollow noopener" target="_blank">https://support.vxmodels.com/</a></li></ul><p class="sp-note">Somos una guía independiente. Para problemas de cuenta, pagos o técnicos contacta directamente con el soporte oficial de la plataforma.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guías de otras plataformas</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Emitir en Chaturbate</h4><p>Configuración por token y codificador externo de Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Emitir en CAM4</h4><p>External Encoder de CAM4 con geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Emitir en BongaCams</h4><p>External Encoder de BongaCams.</p></a></div>

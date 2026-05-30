@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Streamate è integrato in SplitCam?</summary><p>Sì — Streamate appare nella lista Add Channel di SplitCam, lo selezioni invece di inserire un'URL RTMP a mano.</p></details><details class="faq-item"><summary>Dov&#x27;è la streaming key di Streamate?</summary><p>SM Connect → accetta i termini → Start Show → chiudi il popup → copia la chiave.</p></details><details class="faq-item"><summary>Quale bitrate per Streamate?</summary><p>Streamate non fissa un tetto rigido — 3.500–6.000 Kbps a 1080p funziona bene. Il flusso è adattivo, quindi un bitrate più basso su immagini ferme è normale, non un bug.</p></details><details class="faq-item"><summary>SplitCam è gratuito per Streamate?</summary><p>Sì — gratis, senza filigrana e senza limite di tempo; e dato che Streamate è un canale integrato in SplitCam, non c'è nemmeno un costo separato di encoder.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Supporto ufficiale — Streamate</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:smsupport@streamatemodels.com">smsupport@streamatemodels.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.streamatemodels.com/" rel="nofollow noopener" target="_blank">https://www.streamatemodels.com/</a></li></ul><p class="sp-note">Siamo una guida indipendente. Per problemi di account, pagamenti o tecnici contatta direttamente il supporto ufficiale della piattaforma.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Altre guide di piattaforma</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Trasmettere su Chaturbate</h4><p>Configurazione tramite token con encoder esterno per Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Trasmettere su CAM4</h4><p>External Encoder per CAM4 con geo-controlli.</p></a><a class="related-card" href="../bongacams/"><h4>Trasmettere su BongaCams</h4><p>Configurazione External Encoder per BongaCams.</p></a></div>

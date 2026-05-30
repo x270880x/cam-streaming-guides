@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Tukeeko XModels ulkoisia enkoodereita?</summary><p>Kyllä — mallitilin asetukset sisältävät ulkoisen enkooderin lähetysvaihtoehdon, joka tarjoaa stream keyn, joten SplitCam toimii.</p></details><details class="faq-item"><summary>Mistä saan XModels-apua?</summary><p>XModelsin tuki on sivuston FAQ-chatissa ja info@xmodels.com-sähköpostissa — ei suurta julkista help-keskusta.</p></details><details class="faq-item"><summary>Mikä bitrate XModelsille?</summary><p>XModels ei dokumentoi virallista numeroa — käytä 3 500–6 000 Kbps:ää 1080p:ssä ja aja SplitCamin nopeustesti, koska XModelsin tuki on vain chattia ja sähköpostia.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen XModelsille?</summary><p>Kyllä — ilmainen, ilman vesileimaa ja ilman aikarajaa, joten lähettäminen XModelsin eurooppalaiseen verkkoon ei lisää ohjelmistokustannuksia.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Virallinen tuki — XModels</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:info@xmodels.com">info@xmodels.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.xmodels.com/contact" rel="nofollow noopener" target="_blank">https://www.xmodels.com/contact</a></li></ul><p class="sp-note">Olemme riippumaton opas. Tili-, maksu- tai teknisten ongelmien yhteydessä ota suoraan yhteyttä alustan viralliseen tukeen.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Muut alustaoppaat</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Lähetys Chaturbate</h4><p>Token-pohjainen asetus ulkoisella enkooderilla Chaturbatessa.</p></a><a class="related-card" href="../cam4/"><h4>Lähetys CAM4</h4><p>External Encoder CAM4:ssä geo-hallinnoilla.</p></a><a class="related-card" href="../bongacams/"><h4>Lähetys BongaCams</h4><p>External Encoder -asetus BongaCamsille.</p></a></div>

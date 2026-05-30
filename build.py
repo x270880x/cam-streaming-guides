@@ -187,6 +187,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -755,6 +762,94 @@ BRAND = {
 SHOT_EXTS = ("png", "jpg", "jpeg", "webp")
 
 
+# Official support contacts per platform. Verified from each platform's own
+# help / contact pages. Omit a key when the platform doesn't publish one.
+PLATFORM_SUPPORT = {
+    "chaturbate":  {"email": "support@chaturbate.com",       "url": "https://support.chaturbate.com/hc/en-us"},
+    "cam4":        {"email": "support@cam4.biz",             "url": "https://www.cam4support.com/"},
+    "bongacams":   {"email": "support@bongacams.com",        "url": "https://bongacams.com/contacts"},
+    "stripchat":   {"email": "help@stripchat.com",           "url": "https://support.stripchat.com/hc/en-us"},
+    "onlyfans":    {"email": "support@onlyfans.com",         "url": "https://onlyfans.com/help"},
+    "camplace":    {                                          "url": "https://www.camplace.com/contact"},
+    "camsoda":     {"email": "modelsupport@camsoda.com",     "url": "https://www.camsoda.com/support"},
+    "streamate":   {"email": "smsupport@streamatemodels.com","url": "https://www.streamatemodels.com/"},
+    "streamray":   {                                          "url": "https://streamray.com/"},
+    "xlovecam":    {                                          "url": "https://www.xlovecam.com/en/contact"},
+    "soulcams":    {                                          "url": "https://soulcams.com/"},
+    "imlive":      {                                          "url": "https://imlive.com/help/CsCenter.aspx"},
+    "vxlive":      {                                          "url": "https://helpcenter.vxmodels.com/", "ticket": "https://support.vxmodels.com/"},
+    "virtwish":    {                                          "url": "https://t.me/vwsupport", "chat": "https://t.me/vwsupport"},
+    "xmodels":     {"email": "info@xmodels.com",             "url": "https://www.xmodels.com/contact"},
+    "flirt4free":  {"email": "customerservice@flirt4free.com","url": "https://www.flirt4free.com/help"},
+    "mfc-alerts":  {"email": "mfcalerts@myfreecamsmail.com", "url": "https://mfcalerts.com/"},
+    "lovense":     {"email": "support@lovense.com",          "url": "https://support.lovense.com/"},
+    "multistream-cams": {"email": "hello@splitcam.com",      "url": "https://splitcam.com/support"},
+}
+
+# Localized heading + disclaimer for the platform support block.
+# (heading, note)
+SUPPORT_LABELS = {
+    "en":  ("Official support", "We are an independent guide. For account, payment or technical issues contact the platform's official support directly."),
+    "ru":  ("Официальная поддержка платформы", "Мы независимый ресурс. По вопросам аккаунта, выплат или техподдержки обращайтесь в официальный саппорт платформы напрямую."),
+    "es":  ("Soporte oficial", "Somos una guía independiente. Para problemas de cuenta, pagos o técnicos contacta directamente con el soporte oficial de la plataforma."),
+    "de":  ("Offizieller Support", "Wir sind ein unabhängiger Guide. Bei Konto-, Zahlungs- oder technischen Problemen wende dich direkt an den offiziellen Support der Plattform."),
+    "fr":  ("Support officiel", "Nous sommes un guide indépendant. Pour les problèmes de compte, de paiement ou techniques, contactez directement le support officiel de la plateforme."),
+    "it":  ("Supporto ufficiale", "Siamo una guida indipendente. Per problemi di account, pagamenti o tecnici contatta direttamente il supporto ufficiale della piattaforma."),
+    "pt":  ("Suporte oficial", "Somos um guia independente. Pra questões de conta, pagamentos ou problemas técnicos, fale direto com o suporte oficial da plataforma."),
+    "nl":  ("Officiële support", "We zijn een onafhankelijke gids. Voor account-, betaal- of technische problemen neem direct contact op met de officiële support van het platform."),
+    "ro":  ("Suport oficial", "Suntem un ghid independent. Pentru probleme de cont, plată sau tehnice, contactează direct suportul oficial al platformei."),
+    "bg":  ("Официална поддръжка", "Ние сме независим ресурс. За въпроси по акаунт, плащания или технически проблеми се свържи директно с официалната поддръжка на платформата."),
+    "hu":  ("Hivatalos támogatás", "Független útmutató vagyunk. Fiók-, fizetési vagy technikai problémák esetén lépj kapcsolatba közvetlenül a platform hivatalos támogatásával."),
+    "el":  ("Επίσημη υποστήριξη", "Είμαστε ανεξάρτητος οδηγός. Για ζητήματα λογαριασμού, πληρωμών ή τεχνικά προβλήματα επικοινωνήστε απευθείας με την επίσημη υποστήριξη της πλατφόρμας."),
+    "fi":  ("Virallinen tuki", "Olemme riippumaton opas. Tili-, maksu- tai teknisten ongelmien yhteydessä ota suoraan yhteyttä alustan viralliseen tukeen."),
+    "da":  ("Officiel support", "Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte."),
+    "no":  ("Offisiell støtte", "Vi er en uavhengig guide. For konto-, betalings- eller tekniske problemer kontakt plattformens offisielle støtte direkte."),
+    "sr":  ("Званична подршка", "Ми смо независан водич. За питања налога, плаћања или техничке проблеме обратите се директно званичној подршци платформе."),
+    "hr":  ("Službena podrška", "Mi smo neovisan vodič. Za pitanja računa, plaćanja ili tehničke probleme obratite se izravno službenoj podršci platforme."),
+    "zh":  ("官方支持", "我们是独立的指南。如有账户、付款或技术问题，请直接联系平台的官方支持。"),
+    "ja":  ("公式サポート", "私たちは独立したガイドです。アカウント、支払い、技術的な問題については、プラットフォームの公式サポートに直接お問い合わせください。"),
+    "ar":  ("الدعم الرسمي", "نحن دليل مستقل. لمشاكل الحساب أو الدفع أو الفنية، تواصل مباشرة مع الدعم الرسمي للمنصة."),
+    "th":  ("ฝ่ายสนับสนุนอย่างเป็นทางการ", "เราคือคู่มืออิสระ สำหรับปัญหาเกี่ยวกับบัญชี การชำระเงิน หรือปัญหาทางเทคนิค โปรดติดต่อฝ่ายสนับสนุนอย่างเป็นทางการของแพลตฟอร์มโดยตรง"),
+    "fil": ("Opisyal na suporta", "Kami ay isang independyenteng gabay. Para sa mga isyu sa account, bayad o teknikal, direktang kontakin ang opisyal na suporta ng platform."),
+}
+
+
+def render_support(slug, name, lang):
+    """Render the official-platform-support block for a platform page, or '' if no contacts known."""
+    sup = PLATFORM_SUPPORT.get(slug)
+    if not sup:
+        return ""
+    heading, note = SUPPORT_LABELS.get(lang, SUPPORT_LABELS["en"])
+    items = []
+    if sup.get("email"):
+        items.append(
+            f'<li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span>'
+            f'<a href="mailto:{sup["email"]}">{sup["email"]}</a></li>'
+        )
+    if sup.get("url"):
+        items.append(
+            f'<li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span>'
+            f'<a href="{sup["url"]}" rel="nofollow noopener" target="_blank">{sup["url"]}</a></li>'
+        )
+    if sup.get("ticket"):
+        items.append(
+            f'<li class="sp-row"><span class="sp-icon" aria-hidden="true">🎫</span>'
+            f'<a href="{sup["ticket"]}" rel="nofollow noopener" target="_blank">{sup["ticket"]}</a></li>'
+        )
+    if sup.get("chat") and sup.get("chat") != sup.get("url"):
+        items.append(
+            f'<li class="sp-row"><span class="sp-icon" aria-hidden="true">💬</span>'
+            f'<a href="{sup["chat"]}" rel="nofollow noopener" target="_blank">{sup["chat"]}</a></li>'
+        )
+    if not items:
+        return ""
+    return (
+        f'<section class="section sp-block"><h2 class="sec-h">{heading} — {e(name)}</h2>'
+        f'<ul class="sp-list">{"".join(items)}</ul>'
+        f'<p class="sp-note">{note}</p></section>'
+    )
+
+
 def shot_for(slug, n, depth, caption):
     """Return a figure block if a screenshot file exists for this step, else ''.
     Convention: shots/<slug>-<n>.<ext> — e.g. shots/onlyfans-3.png for step 3."""
@@ -841,6 +936,8 @@ def render(p, lang, all_platforms):
     faq_html = "".join(
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
         for q, a in d["faq"])
+
+    support_html = render_support(p["slug"], name, lang)
 
     canon = f'{SITE}/{u["path"]}{p["slug"]}/'
     og_image = f'{SITE}/assets/og/{p["slug"]}.png'
@@ -974,6 +1071,7 @@ def render(p, lang, all_platforms):
   <h2 class="sec-h">{u['faq_h']}</h2>
   <div class="faq-list">{faq_html}</div>
 </section>
+{support_html}
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">{u['related']}</h3>
   <div class="related-grid">{related}</div>

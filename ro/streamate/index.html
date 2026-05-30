@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Streamate e integrat în SplitCam?</summary><p>Da — Streamate apare în lista Add Channel SplitCam; selectezi în loc să tastezi un URL RTMP.</p></details><details class="faq-item"><summary>Unde e streaming key Streamate?</summary><p>SM Connect → accept termeni → Start Show → închizi popup → copiezi cheia.</p></details><details class="faq-item"><summary>Ce bitrate pentru Streamate?</summary><p>Streamate nu fixează plafon dur — 3.500–6.000 Kbps la 1080p funcționează bine. Streamul e adaptiv, deci bitrate mai mic la imagine statică e normal, nu bug.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru Streamate?</summary><p>Da — gratuit, fără filigran și fără limită de timp; și pentru că Streamate e canal integrat în SplitCam, nu există nici cost separat de encoder.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Suport oficial — Streamate</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:smsupport@streamatemodels.com">smsupport@streamatemodels.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.streamatemodels.com/" rel="nofollow noopener" target="_blank">https://www.streamatemodels.com/</a></li></ul><p class="sp-note">Suntem un ghid independent. Pentru probleme de cont, plată sau tehnice, contactează direct suportul oficial al platformei.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisie BongaCams</h4><p>Setup External Encoder pentru BongaCams.</p></a></div>

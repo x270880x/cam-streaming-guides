@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Честа питања</h2>
   <div class="faq-list"><details class="faq-item"><summary>Препоручује ли Stripchat OBS / спољни софтвер?</summary><p>Да — Stripchat-ов званични FAQ препоручује спољни broadcast софтвер као OBS «за постизање најбољег видео и аудио квалитета». SplitCam ради на исти начин.</p></details><details class="faq-item"><summary>Како да пребацим Stripchat на спољни софтвер?</summary><p>У Broadcast Center изабери Switch to External Broadcast Software (OBS), затим отвори external software settings да откријеш stream key (token).</p></details><details class="faq-item"><summary>Који битрејт за Stripchat?</summary><p>RTMP ingest прихвата до ~6000 Kbps са 2-секундним keyframe. 3500–6000 на 1080p је идеално — али мораш бити доста изнад 2 Mbps минимума, посебно за OBS streaming.</p></details><details class="faq-item"><summary>Је ли SplitCam бесплатан за Stripchat?</summary><p>Да — без лиценцне накнаде, без воденог жига, без временског ограничења: чак и дугачки интерактивни Stripchat шоу-и не коштају ништа са стране енкодера.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Званична подршка — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Ми смо независан водич. За питања налога, плаћања или техничке проблеме обратите се директно званичној подршци платформе.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други водичи за платформе</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Пренос Chaturbate</h4><p>Token-базирано подешавање са спољним енкодером на Chaturbate-у.</p></a><a class="related-card" href="../cam4/"><h4>Пренос CAM4</h4><p>External Encoder на CAM4 са гео-контролама.</p></a><a class="related-card" href="../bongacams/"><h4>Пренос BongaCams</h4><p>External Encoder подешавање за BongaCams.</p></a></div>

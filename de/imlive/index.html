@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Nutzt ImLive RTMP oder einen Stream-Key?</summary><p>Nein — ImLive nutzt deine Webcam direkt über den Browser. SplitCam verbindet sich als virtuelle Kamera, es gibt keinen Key zu kopieren.</p></details><details class="faq-item"><summary>Wie wähle ich SplitCam auf ImLive?</summary><p>Start Video Chat → Go To Settings → SplitCam als Webcam und Mikrofon wählen.</p></details><details class="faq-item"><summary>Kann ich Overlays auf ImLive nutzen?</summary><p>Ja — sie in die SplitCam-Szene einbauen; ImLive zeigt das komponierte Ergebnis.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für ImLive?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Als virtuelle Kamera für ImLive bringt es weder Kosten noch Branding in deinen Videochat.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Offizieller Support — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">Wir sind ein unabhängiger Guide. Bei Konto-, Zahlungs- oder technischen Problemen wende dich direkt an den offiziellen Support der Plattform.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere Plattform-Anleitungen</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Auf Chaturbate streamen</h4><p>Token-Setup für Chaturbate über externen Encoder.</p></a><a class="related-card" href="../cam4/"><h4>Auf CAM4 streamen</h4><p>External Encoder bei CAM4 mit Geo-Kontrollen.</p></a><a class="related-card" href="../bongacams/"><h4>Auf BongaCams streamen</h4><p>External-Encoder-Setup für BongaCams.</p></a></div>

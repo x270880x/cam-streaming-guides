@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hvorfor vises External Encoder-knappen ikke på BongaCams?</summary><p>Ekstern kodning er ikke aktiv som standard på hver konto — kontakt BongaCams-support for at aktivere den, og knappen vises i Broadcast settings.</p></details><details class="faq-item"><summary>Skal jeg verificere min BongaCams-konto?</summary><p>Ja — udsendelse kræver 18+, officielt ID til aldersverificering og konto-godkendelse før live.</p></details><details class="faq-item"><summary>Hvilken bitrate til BongaCams?</summary><p>BongaCams' RTMP ingest begrænser video-bitrate til omkring 6.000 Kbps med 2-sekunds keyframe — 3.500–6.000 ved 1080p er den ideelle zone; test upload først.</p></details><details class="faq-item"><summary>Er SplitCam gratis til BongaCams?</summary><p>Ja — helt gratis, uden vandmærke og uden tidsbegrænsning, så encoderen ikke reducerer dine token-indtægter på BongaCams.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Officiel support — BongaCams</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@bongacams.com">support@bongacams.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://bongacams.com/contacts" rel="nofollow noopener" target="_blank">https://bongacams.com/contacts</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre platformsguides</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Udsend Chaturbate</h4><p>Token-baseret opsætning med ekstern encoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Udsend CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a><a class="related-card" href="../stripchat/"><h4>Udsend Stripchat</h4><p>Ekstern software-opsætning til Stripchat-streams.</p></a></div>

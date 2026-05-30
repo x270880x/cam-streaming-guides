@@ -307,6 +307,13 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -418,6 +425,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Вопросы и ответы</h2>
   <div class="faq-list"><details class="faq-item"><summary>Что такое MFC Alerts?</summary><p>Система уведомлений для MyFreeCams, показывающая видео-эффекты на трансляции при отправке токенов — добавляется накладкой Browser в SplitCam.</p></details><details class="faq-item"><summary>Почему мои MFC Alerts не видны?</summary><p>Почти всегда порядок слоёв — слой Browser с MFC Alerts должен быть выше веб-камеры в списке источников SplitCam.</p></details><details class="faq-item"><summary>А как вещать на сам MyFreeCams?</summary><p>MyFreeCams официально поддерживает вещание через OBS (свой плагин Sidekick прекращён — вики советует «используйте OBS»). Рекомендованно: 720p, 30 fps, ~2500 Кбит/с — SplitCam подключается так же.</p></details><details class="faq-item"><summary>SplitCam для этого бесплатен?</summary><p>Да — SplitCam бесплатен, без водяного знака и без лимита по времени, и браузерная накладка MFC Alerts работает внутри него без доплат.</p></details></div>
 </section>
+<section class="section sp-block"><h2 class="sec-h">Официальная поддержка платформы — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Мы независимый ресурс. По вопросам аккаунта, выплат или техподдержки обращайтесь в официальный саппорт платформы напрямую.</p></section>
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка через токен и внешний кодировщик Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>External Encoder CAM4 + гео-настройки.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>External Encoder BongaCams.</p></a></div>
