@@ -154,8 +154,8 @@ PLATFORMS_EN = [
         "title": "How to Stream on BongaCams with SplitCam — External Encoder",
         "desc": "Broadcast on BongaCams with free SplitCam. Open Broadcast settings → Select "
                 "Encoder → External Encoder. If the button is missing, support enables it.",
-        "kw": "how to stream on bongacams, bongacams external encoder, bongacams rtmp obs, "
-              "bongacams broadcast settings",
+        "kw": "bongacams, bongcams, how to stream on bongacams, bongacams external encoder, "
+              "bongacams rtmp obs, bongacams broadcast settings",
         "h1html": 'How to stream on <span class="accent">BongaCams</span> with SplitCam',
         "h1short": "Stream on BongaCams",
         "card": "External Encoder setup for BongaCams.",
@@ -213,11 +213,12 @@ PLATFORMS_EN = [
     },
     {
         "slug": "stripchat", "name": "Stripchat",
-        "title": "How to Stream on Stripchat with SplitCam — External Software Setup",
-        "desc": "Broadcast on Stripchat with free SplitCam. Switch to external software, copy "
-                "the token-based stream key, run scenes and overlays. No watermark.",
-        "kw": "how to stream on stripchat, stripchat external software, stripchat stream key, "
-              "stripchat rtmp obs, stripchat live stream",
+        "title": "How to Stream on Stripchat with SplitCam — Strip Cam Setup",
+        "desc": "Broadcast on Stripchat — the strip cam platform — with free SplitCam. Switch "
+                "to external software, copy the token-based stream key, run scenes and overlays "
+                "for your live stream. No watermark.",
+        "kw": "strip cam, stripchat live stream, how to stream on stripchat, stripchat external "
+              "software, stripchat stream key, stripchat rtmp obs",
         "h1html": 'How to stream on <span class="accent">Stripchat</span> with SplitCam',
         "h1short": "Stream on Stripchat",
         "card": "External-software setup for Stripchat broadcasts.",
@@ -414,11 +415,11 @@ PLATFORMS_EN = [
     },
     {
         "slug": "camsoda", "name": "CamSoda",
-        "title": "How to Stream on CamSoda with SplitCam — Free Setup Guide",
-        "desc": "Broadcast on CamSoda with free SplitCam — external encoder, scenes, overlays "
-                "and filters. Video guide included, no watermark.",
-        "kw": "how to stream on camsoda, camsoda live, camsoda broadcasting software, "
-              "camsoda rtmp obs",
+        "title": "How to Stream on CamSoda Live with SplitCam — Free Setup",
+        "desc": "Go CamSoda live with free SplitCam — external encoder, scenes, overlays and "
+                "filters. Video guide included, no watermark.",
+        "kw": "camsoda live, how to stream on camsoda, camsoda broadcasting software, "
+              "camsoda rtmp obs, camsoda live broadcast",
         "h1html": 'How to stream on <span class="accent">CamSoda</span> with SplitCam',
         "h1short": "Stream on CamSoda",
         "card": "External encoder setup for CamSoda broadcasts.",
@@ -547,8 +548,8 @@ PLATFORMS_EN = [
         "title": "How to Stream on StreamRay with SplitCam — URL-from-Chat Setup",
         "desc": "Broadcast on StreamRay with free SplitCam. StreamRay posts the stream URL in "
                 "the chat window and uses no stream key — SplitCam handles the URL-only flow.",
-        "kw": "how to stream on streamray, streamray obs broadcaster, streamray cam, "
-              "streamray rtmp, streamray broadcast",
+        "kw": "streamray, streamray cam, how to stream on streamray, streamray obs "
+              "broadcaster, streamray rtmp, streamray broadcast",
         "h1html": 'How to stream on <span class="accent">StreamRay</span> with SplitCam',
         "h1short": "Stream on StreamRay",
         "card": "URL-from-chat external encoder setup for StreamRay.",
@@ -726,11 +727,12 @@ PLATFORMS_EN = [
     },
     {
         "slug": "imlive", "name": "ImLive",
-        "title": "How to Use SplitCam on ImLive — Virtual Camera Setup",
-        "desc": "ImLive uses your webcam directly — no RTMP. Connect SplitCam as a virtual "
-                "camera so your scenes, overlays and filters show in ImLive video chat.",
-        "kw": "how to stream on imlive, imlive splitcam, imlive virtual camera, imlive webcam, "
-              "im live stream",
+        "title": "How to Stream on ImLive with SplitCam — Im Live Stream Setup",
+        "desc": "Im Live stream setup with free SplitCam. ImLive uses your webcam directly — "
+                "no RTMP — so connect SplitCam as a virtual camera and run scenes, overlays "
+                "and filters in the ImLive video chat.",
+        "kw": "im live stream, imlive splitcam, how to stream on imlive, imlive virtual camera, "
+              "imlive webcam, im live cam",
         "h1html": 'How to use <span class="accent">ImLive</span> with SplitCam',
         "h1short": "Use SplitCam on ImLive",
         "card": "Virtual-camera setup for ImLive — no RTMP needed.",
@@ -977,8 +979,8 @@ PLATFORMS_EN = [
         "title": "How to Stream on Flirt4Free with SplitCam — Free Setup Guide",
         "desc": "Broadcast on Flirt4Free with free SplitCam — external encoder, scenes, overlays "
                 "and filters. Video guide included, no watermark.",
-        "kw": "how to stream on flirt4free, flirt for free cam, flirt4free broadcasting "
-              "software, flirt4free rtmp",
+        "kw": "flirt for free cam, flirt 4 free cam, how to stream on flirt4free, "
+              "flirt4free broadcasting software, flirt4free rtmp",
         "h1html": 'How to stream on <span class="accent">Flirt4Free</span> with SplitCam',
         "h1short": "Stream on Flirt4Free",
         "card": "External encoder setup for Flirt4Free broadcasts.",

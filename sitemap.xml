@@ -201,6 +201,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/multistream-cams/"/>
   </url>
   <url>
+    <loc>https://camstreamguide.com/about/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/about/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/privacy/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/terms/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/contact/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/contact/"/>
+  </url>
+  <url>
     <loc>https://camstreamguide.com/ru/</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -401,6 +441,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/multistream-cams/"/>
   </url>
   <url>
+    <loc>https://camstreamguide.com/ru/about/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/about/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/ru/privacy/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/ru/terms/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/ru/contact/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/contact/"/>
+  </url>
+  <url>
     <loc>https://camstreamguide.com/es/</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -599,5 +679,45 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/multistream-cams/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/multistream-cams/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/multistream-cams/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/es/about/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/about/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/es/privacy/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/es/terms/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://camstreamguide.com/es/contact/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://camstreamguide.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/contact/"/>
   </url>
 </urlset>

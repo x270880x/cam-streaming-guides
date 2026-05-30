@@ -157,6 +157,13 @@ border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border)
 text-align:center;margin-top:44px}
 .cta-block h2{font-size:30px;font-weight:700;letter-spacing:-.8px;margin-bottom:12px}
 .cta-block p{font-size:15.5px;color:var(--text-sub);max-width:520px;margin:0 auto 24px;line-height:1.6}
+.meta-line{display:flex;align-items:center;gap:14px;padding:18px 20px 0;
+font-size:13px;color:var(--text-sub)}
+.age-tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:6px;
+background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.5px}
+.age-tag-sm{display:inline-block;padding:1px 6px;border-radius:4px;
+background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.3px;
+vertical-align:middle;margin-left:4px}
 footer{padding:36px 40px;border-top:1px solid var(--app-border);background:var(--app-panel)}
 .footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
 flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
@@ -178,18 +185,24 @@ UI = {
            "quick": "Quick answer", "steps_h": "Step-by-step",
            "tips_h": "Pro tips", "faq_h": "FAQ", "cta_h": "Ready to go live?",
            "cta_p": "Free software. No watermark, no signup. Set up once, go live in one click.",
+           "updated": "Last updated", "about": "About", "contact": "Contact",
+           "privacy": "Privacy", "terms": "Terms",
            "path": "", "lang": "en"},
     "ru": {"home": "Все гайды", "download": "Скачать SplitCam", "crumb_home": "Гайды",
            "skip": "К шагам", "related": "Гайды по другим платформам",
            "quick": "Коротко", "steps_h": "Пошагово",
            "tips_h": "Советы", "faq_h": "Вопросы и ответы", "cta_h": "Готовы выйти в эфир?",
            "cta_p": "Бесплатная программа. Без водяного знака и регистрации. Настройка один раз — эфир в один клик.",
+           "updated": "Обновлено", "about": "О проекте", "contact": "Контакты",
+           "privacy": "Конфиденциальность", "terms": "Условия",
            "path": "ru/", "lang": "ru"},
     "es": {"home": "Todas las guías", "download": "Descargar SplitCam", "crumb_home": "Guías",
            "skip": "Ir a los pasos", "related": "Guías de otras plataformas",
            "quick": "Respuesta rápida", "steps_h": "Paso a paso",
            "tips_h": "Consejos", "faq_h": "Preguntas frecuentes", "cta_h": "¿Listo para emitir?",
            "cta_p": "Software gratuito. Sin marca de agua ni registro. Configúralo una vez y emite con un clic.",
+           "updated": "Actualizado", "about": "Acerca de", "contact": "Contacto",
+           "privacy": "Privacidad", "terms": "Términos",
            "path": "es/", "lang": "es"},
 }
 
@@ -424,6 +437,12 @@ def render(p, lang, all_platforms):
 <link rel="canonical" href="{canon}">
 {hreflang_html}
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
+<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<!-- <meta name="google-site-verification" content="YOUR-GSC-TOKEN"> -->
+<!-- <meta name="msvalidate.01" content="YOUR-BING-TOKEN"> -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-TOKEN"> -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(d['title'])}">
@@ -516,10 +535,20 @@ def render(p, lang, all_platforms):
   <p>{u['cta_p']}</p>
   <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
 </section>
+<div class="section meta-line">
+  <span class="age-tag">18+</span>
+  <span>{u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time></span>
+</div>
 <footer>
   <div class="footer-inner">
-    <div>© 2026 {SITE_NAME}</div>
-    <div class="footer-links"><a href="{home}">{u['home']}</a></div>
+    <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="{home}">{u['home']}</a>
+      <a href="{depth}about/">{u['about']}</a>
+      <a href="{depth}contact/">{u['contact']}</a>
+      <a href="{depth}privacy/">{u['privacy']}</a>
+      <a href="{depth}terms/">{u['terms']}</a>
+    </div>
   </div>
 </footer>
 </body>
@@ -553,6 +582,193 @@ HUB = {
                   "gratis — codificador externo, escenas, superposiciones, sin marca de agua.",
            "pick": "Elige tu plataforma"},
 }
+
+
+LEGAL = {
+    "about": {
+        "en": ("About — Streaming Guides", "About this site", "About — Streaming Guides",
+               "<p>Streaming Guides is a free, independent resource for setting up live broadcasts on adult cam platforms using <strong>SplitCam</strong> — free, no-watermark streaming software for Windows and macOS.</p>"
+               "<p>We cover 19 platforms with step-by-step guides, troubleshooting tips and current technical details — from finding your stream key on each site to picking the right bitrate.</p>"
+               "<p>This site is not affiliated with any of the platforms listed. Every brand name and logo belongs to its respective owner.</p>"),
+        "ru": ("О проекте — Streaming Guides", "О проекте", "О сайте Streaming Guides",
+               "<p>Streaming Guides — бесплатный независимый ресурс по настройке прямых трансляций на adult-кам платформах через <strong>SplitCam</strong>, бесплатную программу для стриминга на Windows и macOS, без водяного знака.</p>"
+               "<p>Мы покрываем 19 платформ пошаговыми гайдами, советами по решению проблем и актуальными техническими деталями — от поиска ключа трансляции до выбора битрейта.</p>"
+               "<p>Сайт не аффилирован ни с одной из перечисленных платформ. Все упомянутые торговые знаки и логотипы принадлежат их правообладателям.</p>"),
+        "es": ("Acerca de — Streaming Guides", "Acerca de", "Acerca de Streaming Guides",
+               "<p>Streaming Guides es un recurso gratuito e independiente para configurar emisiones en directo en plataformas cam para adultos usando <strong>SplitCam</strong> — software de streaming gratuito y sin marca de agua para Windows y macOS.</p>"
+               "<p>Cubrimos 19 plataformas con guías paso a paso, consejos de resolución de problemas y detalles técnicos actuales — desde encontrar tu clave de stream hasta elegir el bitrate adecuado.</p>"
+               "<p>Este sitio no está afiliado a ninguna de las plataformas listadas. Todos los nombres comerciales y logotipos pertenecen a sus respectivos propietarios.</p>"),
+    },
+    "privacy": {
+        "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
+               "<h2>What we collect</h2><p>Streaming Guides is a static website. We don't run cookies, accounts, forms or analytics that identify you personally. We don't run ads or affiliate trackers.</p>"
+               "<h2>Third-party services</h2><p>Pages embed YouTube videos (via the privacy-enhanced youtube-nocookie.com domain) and load Google Fonts. These services may set their own cookies and log IP addresses according to their own privacy policies.</p>"
+               "<h2>Server logs</h2><p>Standard web server logs may record your IP address and the page requested, retained for security purposes. We don't link these logs to any personal identity.</p>"
+               "<h2>Your rights</h2><p>If you're in the EU/UK, you have rights under GDPR/UK GDPR. Since we hold no personal data tied to you, there's generally nothing to access, correct or delete. Contact us via the Contact page for any questions.</p>"
+               "<h2>Changes</h2><p>This page may change. The latest version is always at this URL.</p>"),
+        "ru": ("Конфиденциальность — Streaming Guides", "Конфиденциальность", "Политика конфиденциальности",
+               "<h2>Что мы собираем</h2><p>Streaming Guides — статический сайт. Мы не используем cookies, не ведём аккаунты, не запускаем форм и не подключаем аналитику, которая идентифицирует пользователя лично. Рекламы и аффилиатных трекеров на сайте нет.</p>"
+               "<h2>Сторонние сервисы</h2><p>На страницах встроены YouTube-видео (через домен повышенной приватности youtube-nocookie.com) и загружаются Google Fonts. Эти сервисы могут устанавливать собственные cookies и записывать IP-адреса согласно своим политикам конфиденциальности.</p>"
+               "<h2>Логи сервера</h2><p>Стандартные веб-логи могут содержать IP-адрес и адрес запрошенной страницы; хранятся в целях безопасности. Мы не связываем эти логи с личностью пользователя.</p>"
+               "<h2>Ваши права</h2><p>Если вы в ЕС/Великобритании, у вас есть права по GDPR/UK GDPR. Поскольку личных данных, связанных с вами, у нас нет, доступа, исправления или удаления, как правило, не требуется. Вопросы — через страницу «Контакты».</p>"
+               "<h2>Изменения</h2><p>Содержимое страницы может меняться. Актуальная версия всегда по этому URL.</p>"),
+        "es": ("Privacidad — Streaming Guides", "Privacidad", "Política de privacidad",
+               "<h2>Qué recopilamos</h2><p>Streaming Guides es un sitio estático. No usamos cookies, cuentas, formularios ni analíticas que te identifiquen personalmente. No tenemos publicidad ni rastreadores de afiliados.</p>"
+               "<h2>Servicios de terceros</h2><p>Las páginas incrustan vídeos de YouTube (a través del dominio de privacidad mejorada youtube-nocookie.com) y cargan Google Fonts. Estos servicios pueden establecer sus propias cookies y registrar direcciones IP según sus propias políticas de privacidad.</p>"
+               "<h2>Registros del servidor</h2><p>Los registros estándar del servidor pueden contener tu dirección IP y la página solicitada, conservados con fines de seguridad. No vinculamos estos registros con ninguna identidad personal.</p>"
+               "<h2>Tus derechos</h2><p>Si estás en la UE/Reino Unido, tienes derechos bajo el RGPD. Como no conservamos datos personales vinculados a ti, generalmente no hay nada que acceder, corregir o eliminar. Para cualquier consulta, contáctanos a través de la página Contacto.</p>"
+               "<h2>Cambios</h2><p>Esta página puede cambiar. La versión más reciente está siempre en esta URL.</p>"),
+    },
+    "terms": {
+        "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
+               "<h2>Audience</h2><p><strong>This site is intended for adults (18+).</strong> The guides cover broadcasting on adult cam platforms. By using this site you confirm you are of legal age in your jurisdiction.</p>"
+               "<h2>Information only</h2><p>The guides are provided for informational purposes. We can't guarantee accuracy at all times — platforms change interfaces, settings and policies. Verify steps on the platform's own help center before relying on them.</p>"
+               "<h2>No affiliation</h2><p>This site isn't affiliated with, endorsed by or sponsored by any of the cam platforms referenced. All trademarks belong to their respective owners and are used here only for identification.</p>"
+               "<h2>SplitCam</h2><p>SplitCam is a separate product. Download it only from the official <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a> website.</p>"
+               "<h2>No warranty</h2><p>This site is provided 'as is' without warranty of any kind. We're not liable for any loss arising from use of the information here.</p>"),
+        "ru": ("Условия использования — Streaming Guides", "Условия использования", "Условия использования",
+               "<h2>Аудитория</h2><p><strong>Сайт предназначен для совершеннолетних (18+).</strong> Гайды посвящены вещанию на adult-кам платформах. Используя сайт, вы подтверждаете, что достигли совершеннолетия по законам вашей юрисдикции.</p>"
+               "<h2>Только информация</h2><p>Гайды предоставляются в информационных целях. Мы не можем гарантировать актуальность 100% времени — платформы меняют интерфейсы, настройки и правила. Перед действиями сверяйтесь с официальным хелп-центром платформы.</p>"
+               "<h2>Без аффилированности</h2><p>Сайт не аффилирован, не одобрен и не спонсируется ни одной из упомянутых кам-платформ. Все торговые знаки принадлежат их правообладателям и используются здесь только для идентификации.</p>"
+               "<h2>SplitCam</h2><p>SplitCam — отдельный продукт. Скачивайте его только с официального сайта <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Без гарантий</h2><p>Сайт предоставляется «как есть», без каких-либо гарантий. Мы не несём ответственности за убытки, возникшие из использования информации с этого сайта.</p>"),
+        "es": ("Términos de uso — Streaming Guides", "Términos de uso", "Términos de uso",
+               "<h2>Audiencia</h2><p><strong>Este sitio está destinado a adultos (18+).</strong> Las guías cubren la emisión en plataformas cam para adultos. Al usar este sitio confirmas que tienes la mayoría de edad legal en tu jurisdicción.</p>"
+               "<h2>Solo información</h2><p>Las guías se proporcionan con fines informativos. No podemos garantizar la exactitud en todo momento — las plataformas cambian interfaces, ajustes y políticas. Verifica los pasos en el centro de ayuda de cada plataforma antes de actuar.</p>"
+               "<h2>Sin afiliación</h2><p>Este sitio no está afiliado, respaldado ni patrocinado por ninguna de las plataformas cam mencionadas. Todas las marcas comerciales pertenecen a sus respectivos propietarios y se usan aquí solo para identificación.</p>"
+               "<h2>SplitCam</h2><p>SplitCam es un producto independiente. Descárgalo únicamente del sitio oficial <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Sin garantía</h2><p>Este sitio se proporciona «tal cual» sin garantía de ningún tipo. No somos responsables de ninguna pérdida derivada del uso de la información aquí publicada.</p>"),
+    },
+    "contact": {
+        "en": ("Contact — Streaming Guides", "Contact", "Contact",
+               "<p>For questions, corrections or feedback about the guides, write to <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>We don't handle account or technical support for the cam platforms themselves — contact each platform's official support for that.</p>"
+               "<p>For SplitCam software support, see <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "ru": ("Контакты — Streaming Guides", "Контакты", "Контакты",
+               "<p>Вопросы, правки и предложения по гайдам — на <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Поддержку аккаунтов и техподдержку самих кам-платформ мы не оказываем — пишите в официальную поддержку каждой платформы.</p>"
+               "<p>По поддержке программы SplitCam — <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "es": ("Contacto — Streaming Guides", "Contacto", "Contacto",
+               "<p>Para consultas, correcciones o comentarios sobre las guías, escribe a <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>No gestionamos soporte de cuenta ni soporte técnico de las propias plataformas cam — contacta con el soporte oficial de cada plataforma para eso.</p>"
+               "<p>Para soporte del software SplitCam, consulta <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+    },
+}
+
+
+def render_legal(slug, lang):
+    u = UI[lang]
+    title, h1, crumb, body = LEGAL[slug][lang]
+    depth = "../" if u["path"] else ""
+    home = depth or "./"
+    canon = f'{SITE}/{u["path"]}{slug}/'
+    hreflang_html = "\n".join(
+        f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}{slug}/">'
+        for L in ("en", "ru", "es")
+    ) + f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{slug}/">'
+    og_image = f'{SITE}/assets/og/hub-{lang}.png'
+    return f"""<!DOCTYPE html>
+<html lang="{u['lang']}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{e(title)}</title>
+<meta name="description" content="{e(title)}">
+<link rel="canonical" href="{canon}">
+{hreflang_html}
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
+<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{canon}">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:locale" content="{OG_LOCALE[lang]}">
+<meta property="og:image" content="{og_image}">
+<meta name="theme-color" content="#141420">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>{CSS}</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
+  <ul class="nav-links"><li><a href="{home}">{u['home']}</a></li></ul>
+  {lang_switch(lang, depth)}
+</nav>
+<div class="breadcrumbs">
+  <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(crumb)}</span>
+</div>
+<section class="section" style="max-width:760px;margin:0 auto;padding-top:24px">
+  <h1 class="h1">{e(h1)}</h1>
+  <div class="legal-body">{body}</div>
+  <p style="margin-top:32px;color:var(--text-sub);font-size:13px">
+    <span class="age-tag">18+</span> &nbsp; {u['updated']}: <time datetime="{MODIFIED_DATE}">{MODIFIED_DATE}</time>
+  </p>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="{home}">{u['home']}</a>
+      <a href="{depth}about/">{u['about']}</a>
+      <a href="{depth}contact/">{u['contact']}</a>
+      <a href="{depth}privacy/">{u['privacy']}</a>
+      <a href="{depth}terms/">{u['terms']}</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+"""
+
+
+def render_404():
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found · {SITE_NAME}</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="theme-color" content="#141420">
+<style>{CSS}
+.err-wrap{{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px}}
+.err-code{{font-size:120px;font-weight:900;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}}
+.err-msg{{font-size:22px;color:var(--text);margin:18px 0 8px}}
+.err-sub{{color:var(--text-sub);font-size:15px;max-width:480px;margin-bottom:28px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/"><span class="dot"></span>{SITE_NAME}</a>
+  <ul class="nav-links"><li><a href="/">All guides</a></li></ul>
+</nav>
+<div class="err-wrap">
+  <div class="err-code">404</div>
+  <div class="err-msg">Page not found</div>
+  <div class="err-sub">The page you're looking for doesn't exist or has moved. Head back to the guides hub and pick a platform.</div>
+  <a href="/" class="btn-primary btn-lg">← All streaming guides</a>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+"""
 
 
 def render_hub(platforms, lang):
@@ -605,6 +821,12 @@ def render_hub(platforms, lang):
 <link rel="canonical" href="{canon}">
 {hreflang_html}
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="{hub_depth}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{hub_depth}favicon.ico">
+<link rel="apple-touch-icon" href="{hub_depth}apple-touch-icon.png">
+<!-- <meta name="google-site-verification" content="YOUR-GSC-TOKEN"> -->
+<!-- <meta name="msvalidate.01" content="YOUR-BING-TOKEN"> -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-TOKEN"> -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(hb['title'])}">
@@ -644,8 +866,14 @@ def render_hub(platforms, lang):
 </section>
 <footer>
   <div class="footer-inner">
-    <div>© 2026 {SITE_NAME}</div>
-    <div class="footer-links"><a href="./">{u['home']}</a></div>
+    <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="./">{u['home']}</a>
+      <a href="about/">{u['about']}</a>
+      <a href="contact/">{u['contact']}</a>
+      <a href="privacy/">{u['privacy']}</a>
+      <a href="terms/">{u['terms']}</a>
+    </div>
   </div>
 </footer>
 </body>
@@ -692,6 +920,16 @@ def main():
         (hubdir / "index.html").write_text(render_hub(platforms, lang), encoding="utf-8")
         count += 1
 
+        # legal pages for this language
+        for slug in ("about", "privacy", "terms", "contact"):
+            legaldir = ROOT / u["path"] / slug
+            legaldir.mkdir(parents=True, exist_ok=True)
+            (legaldir / "index.html").write_text(render_legal(slug, lang), encoding="utf-8")
+            count += 1
+
+    # 404 page (root)
+    (ROOT / "404.html").write_text(render_404(), encoding="utf-8")
+
     # ---- sitemap.xml with hreflang alternates ----
     def alt_links(slug=None):
         out = []
@@ -714,6 +952,11 @@ def main():
             urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
                         f'    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n'
                         f'{alt_links(p["slug"])}\n  </url>')
+        for slug in ("about", "privacy", "terms", "contact"):
+            loc = f'{SITE}/{LANG_PATH[lang]}{slug}/'
+            urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
+                        f'    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n'
+                        f'{alt_links(slug)}\n  </url>')
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
