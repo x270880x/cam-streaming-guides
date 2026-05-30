@@ -19,8 +19,8 @@ SITE_NAME = "Streaming Guides"
 PUBLISHED_DATE = "2026-05-21"
 MODIFIED_DATE = datetime.date.today().isoformat()
 OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
-             "de": "de_DE", "fr": "fr_FR"}
-LANGS_AVAIL = ["en", "ru", "es", "de", "fr"]  # set by main() to those with platforms_<lang>.py
+             "de": "de_DE", "fr": "fr_FR", "it": "it_IT"}
+LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it"]  # set by main() to those with platforms_<lang>.py
 PUBLISHER = {"@type": "Organization", "name": SITE_NAME, "url": f"{SITE}/"}
 
 # ---------------------------------------------------------------- CSS (shared)
@@ -222,6 +222,14 @@ UI = {
            "updated": "Mis à jour", "about": "À propos", "contact": "Contact",
            "privacy": "Confidentialité", "terms": "Conditions",
            "path": "fr/", "lang": "fr"},
+    "it": {"home": "Tutte le guide", "download": "Scarica SplitCam", "crumb_home": "Guide",
+           "skip": "Vai ai passaggi", "related": "Altre guide di piattaforma",
+           "quick": "In breve", "steps_h": "Passo dopo passo",
+           "tips_h": "Consigli", "faq_h": "FAQ", "cta_h": "Pronto a trasmettere in diretta?",
+           "cta_p": "Software gratuito. Nessuna filigrana, nessuna registrazione. Configuralo una volta, vai live con un clic.",
+           "updated": "Aggiornato", "about": "Chi siamo", "contact": "Contatti",
+           "privacy": "Privacy", "terms": "Termini",
+           "path": "it/", "lang": "it"},
 }
 
 def e(s):
@@ -307,6 +315,17 @@ STEP_TMPL = {
         ("Cliquez sur Go Live",
          "Appuyez sur <strong>Go Live</strong> dans SplitCam, puis lancez la diffusion sur {name}. En ~10 secondes votre caméra est en direct. Les streams suivants se lancent en un clic — ouvrir SplitCam, Go Live."),
     ],
+    "it": [
+        ("Scarica e installa SplitCam",
+         "SplitCam è un software di streaming gratuito per Windows e macOS. Scaricalo e avvia il programma di installazione — nessuna registrazione, nessuna carta, nessuna filigrana, nessun limite di tempo. SplitCam è l'encoder che invia il tuo video a {name}."),
+        ("Configura la tua camera e la scena",
+         "Apri SplitCam e aggiungi la webcam. Costruisci la scena come vuoi che i tuoi spettatori la vedano — sovrapposizioni, testo, una seconda camera o il telefono, filtri beauty o sfondo IA. Tutto si applica in diretta prima che lo stream lasci il PC."),
+        ("Recupera la stream key di {name}", "{key}"),
+        ("Connetti SplitCam a {name}",
+         "In SplitCam apri <strong>Stream Settings</strong>, incolla l'URL del server e la stream key di {name} nei campi RTMP personalizzati. Bitrate: 3.500–6.000&nbsp;Kbps in 1080p, 2.000–4.000&nbsp;Kbps in 720p. Esegui prima lo speed test integrato."),
+        ("Clicca su Go Live",
+         "Premi <strong>Go Live</strong> in SplitCam, poi avvia la trasmissione su {name}. In ~10 secondi la tua camera è in diretta. Le trasmissioni successive partono con un clic — apri SplitCam, Go Live."),
+    ],
 }
 
 
@@ -330,8 +349,8 @@ def build_steps(p, lang):
     return out
 
 
-LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR"}
-LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/"}
+LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT"}
+LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -345,9 +364,9 @@ VIDEOS = {
     "xmodels": "v-QUSgra5v8",
 }
 VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en vídeo",
-           "de": "Video-Anleitung", "fr": "Guide vidéo"}
+           "de": "Video-Anleitung", "fr": "Guide vidéo", "it": "Guida video"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
-                "de": "Setup-Anleitung", "fr": "Guide d'installation"}
+                "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -635,6 +654,12 @@ HUB = {
            "sub": "Configuration pas à pas pour diffuser sur toutes les plateformes cam avec "
                   "SplitCam gratuit — encodeur externe, scènes, overlays, sans filigrane.",
            "pick": "Choisis ta plateforme"},
+    "it": {"title": "Guide allo streaming — trasmissioni cam con SplitCam",
+           "desc": "Guide gratuite passo dopo passo per trasmettere sulle piattaforme cam con SplitCam.",
+           "h1": 'Guide gratuite allo <span class="accent">streaming cam</span>',
+           "sub": "Configurazione passo dopo passo per trasmettere su qualsiasi piattaforma cam "
+                  "con SplitCam gratuito — encoder esterno, scene, sovrapposizioni, senza filigrana.",
+           "pick": "Scegli la tua piattaforma"},
 }
 
 
@@ -660,6 +685,10 @@ LEGAL = {
                "<p>Streaming Guides est une ressource gratuite et indépendante pour configurer des diffusions en direct sur les plateformes cam pour adultes avec <strong>SplitCam</strong> — un logiciel de streaming gratuit, sans filigrane, pour Windows et macOS.</p>"
                "<p>Nous couvrons 19 plateformes avec des guides pas à pas, des astuces de dépannage et les détails techniques à jour — de la recherche de votre clé de stream sur chaque site au choix du bon débit.</p>"
                "<p>Ce site n'est affilié à aucune des plateformes mentionnées. Tous les noms commerciaux et logos appartiennent à leurs propriétaires respectifs.</p>"),
+        "it": ("Chi siamo — Streaming Guides", "Chi siamo", "Chi siamo di Streaming Guides",
+               "<p>Streaming Guides è una risorsa gratuita e indipendente per configurare trasmissioni in diretta su piattaforme cam per adulti usando <strong>SplitCam</strong> — software di streaming gratuito, senza filigrana, per Windows e macOS.</p>"
+               "<p>Copriamo 19 piattaforme con guide passo dopo passo, consigli per risolvere i problemi e dettagli tecnici aggiornati — da dove trovare la tua stream key su ogni sito alla scelta del bitrate giusto.</p>"
+               "<p>Questo sito non è affiliato a nessuna delle piattaforme elencate. Tutti i marchi e i loghi appartengono ai rispettivi proprietari.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -692,6 +721,12 @@ LEGAL = {
                "<h2>Journaux serveur</h2><p>Les journaux standard du serveur peuvent enregistrer votre adresse IP et la page demandée, à des fins de sécurité. Nous ne lions pas ces journaux à une identité personnelle.</p>"
                "<h2>Vos droits</h2><p>Dans l'UE/au Royaume-Uni, vous bénéficiez de droits au titre du RGPD/UK GDPR. Comme nous ne conservons aucune donnée personnelle vous concernant, il n'y a généralement rien à consulter, corriger ou supprimer. Pour toute question, contactez-nous via la page Contact.</p>"
                "<h2>Modifications</h2><p>Cette page peut évoluer. La version la plus récente est toujours disponible à cette URL.</p>"),
+        "it": ("Privacy — Streaming Guides", "Privacy", "Informativa sulla privacy",
+               "<h2>Cosa raccogliamo</h2><p>Streaming Guides è un sito statico. Non usiamo cookie, account, moduli o strumenti di analisi che ti identifichino personalmente. Non pubblichiamo pubblicità né tracker di affiliazione.</p>"
+               "<h2>Servizi di terze parti</h2><p>Le pagine incorporano video YouTube (tramite il dominio a privacy migliorata youtube-nocookie.com) e caricano Google Fonts. Questi servizi possono impostare cookie propri e registrare indirizzi IP secondo le loro politiche.</p>"
+               "<h2>Log del server</h2><p>I log standard del server possono registrare il tuo indirizzo IP e la pagina richiesta, conservati a fini di sicurezza. Non colleghiamo questi log a un'identità personale.</p>"
+               "<h2>I tuoi diritti</h2><p>Se sei nell'UE/Regno Unito, hai diritti ai sensi del GDPR/UK GDPR. Poiché non conserviamo dati personali collegati a te, in genere non c'è nulla da accedere, correggere o cancellare. Per qualsiasi domanda contattaci tramite la pagina Contatti.</p>"
+               "<h2>Modifiche</h2><p>Questa pagina può cambiare. La versione più recente è sempre a questo URL.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -724,6 +759,12 @@ LEGAL = {
                "<h2>Aucune affiliation</h2><p>Ce site n'est ni affilié, ni recommandé, ni sponsorisé par les plateformes cam mentionnées. Toutes les marques appartiennent à leurs propriétaires respectifs et ne sont utilisées ici qu'à des fins d'identification.</p>"
                "<h2>SplitCam</h2><p>SplitCam est un produit distinct. Téléchargez-le uniquement depuis le site officiel <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                "<h2>Aucune garantie</h2><p>Ce site est fourni « en l'état » sans garantie d'aucune sorte. Nous ne sommes pas responsables des pertes résultant de l'utilisation des informations publiées ici.</p>"),
+        "it": ("Termini di utilizzo — Streaming Guides", "Termini di utilizzo", "Termini di utilizzo",
+               "<h2>Pubblico</h2><p><strong>Questo sito è destinato ad adulti (18+).</strong> Le guide trattano la trasmissione su piattaforme cam per adulti. Usando questo sito confermi di essere maggiorenne nella tua giurisdizione.</p>"
+               "<h2>Solo informazione</h2><p>Le guide sono fornite a scopo informativo. Non possiamo garantire l'accuratezza in ogni momento — le piattaforme cambiano interfacce, impostazioni e politiche. Verifica i passaggi nel centro assistenza ufficiale della piattaforma prima di fare affidamento.</p>"
+               "<h2>Nessuna affiliazione</h2><p>Questo sito non è affiliato, supportato né sponsorizzato da nessuna delle piattaforme cam menzionate. Tutti i marchi appartengono ai rispettivi proprietari e sono usati qui solo per identificazione.</p>"
+               "<h2>SplitCam</h2><p>SplitCam è un prodotto separato. Scaricalo solo dal sito ufficiale <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Nessuna garanzia</h2><p>Questo sito è fornito «così com'è» senza garanzie di alcun tipo. Non siamo responsabili per perdite derivanti dall'uso delle informazioni qui pubblicate.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -746,6 +787,10 @@ LEGAL = {
                "<p>Pour toute question, correction ou retour sur les guides, écrivez à <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                "<p>Nous ne gérons pas le support de compte ni le support technique des plateformes cam elles-mêmes — adressez-vous au support officiel de chaque plateforme.</p>"
                "<p>Pour le support du logiciel SplitCam, voir <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "it": ("Contatti — Streaming Guides", "Contatti", "Contatti",
+               "<p>Per domande, correzioni o feedback sulle guide, scrivici a <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Non gestiamo supporto account o tecnico per le piattaforme cam in sé — contatta il supporto ufficiale di ciascuna piattaforma per quello.</p>"
+               "<p>Per il supporto del software SplitCam, vedi <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
     },
 }
 
@@ -979,7 +1024,7 @@ def main():
     global LANGS_AVAIL
     from platforms_en import PLATFORMS_EN
     langs_data = {"en": PLATFORMS_EN}
-    for code in ("ru", "es", "de", "fr"):
+    for code in ("ru", "es", "de", "fr", "it"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
