@@ -90,7 +90,11 @@ margin-bottom:26px;position:relative;z-index:1}
 .collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
 .collab-logo{display:block;height:21px;width:auto;max-width:180px;
 object-fit:contain;object-position:left center}
-.collab-plat-mfc-alerts .collab-logo{max-width:130px}
+.collab-plat{width:56px;height:56px;padding:0;border-radius:50%;
+overflow:hidden;justify-content:center}
+.collab-plat::after{border-radius:50%}
+.collab-plat .collab-logo{width:100%;height:100%;max-width:none;
+object-fit:cover;border-radius:50%}
 .collab-wire{width:46px;height:4px;position:relative;flex-shrink:0;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.16))}
 .collab-dot{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 13px 2px var(--blue);transform:translateY(-50%);animation:collabflow 1.7s cubic-bezier(.55,0,.45,1) infinite}
 @keyframes collabflow{0%{left:-3px;opacity:0}14%{opacity:1}80%{opacity:1}100%{left:37px;opacity:0}}
