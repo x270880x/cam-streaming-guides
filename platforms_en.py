@@ -16,11 +16,8 @@ PLATFORMS_EN = [
     {
         "slug": "chaturbate", "name": "Chaturbate",
         "title": "How to Stream on Chaturbate with SplitCam — Token & RTMP Setup",
-        "desc": "Broadcast on Chaturbate with free SplitCam. Find your broadcast token via "
-                "Broadcast Yourself, route the external encoder through SplitCam — scenes, "
-                "overlays, no watermark.",
-        "kw": "how to stream on chaturbate, chaturbate broadcast token, chaturbate rtmp obs, "
-              "chaturbate external encoder, stream to chaturbate",
+        "desc": "How to stream on Chaturbate with free SplitCam — broadcast token, RTMP setup, multi-camera scenes and overlays. No watermark, no signup.",
+        "kw": "how to stream on chaturbate, chaturbate broadcast token, chaturbate rtmp obs, chaturbate external encoder, chaturbate live stream",
         "h1html": 'How to stream on <span class="accent">Chaturbate</span> with SplitCam',
         "h1short": "Stream on Chaturbate",
         "card": "Token-based external encoder setup for Chaturbate.",
@@ -87,11 +84,8 @@ PLATFORMS_EN = [
     {
         "slug": "cam4", "name": "CAM4",
         "title": "How to Stream on CAM4 with SplitCam — External Encoder Setup",
-        "desc": "Broadcast on CAM4 with free SplitCam. Open Broadcast & Earn Money, use the "
-                "External Encoder, Get Stream Key, set geo-restrictions — scenes and overlays, "
-                "no watermark.",
-        "kw": "how to stream on cam4, cam4 external encoder, cam4 get stream key, cam4 rtmp obs, "
-              "cam4 broadcast",
+        "desc": "How to stream on CAM4 with free SplitCam — External Encoder, stream key, geo-blocking and scene overlays. No watermark, free guide.",
+        "kw": "how to stream on cam4, cam4.com, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
         "h1html": 'How to stream on <span class="accent">CAM4</span> with SplitCam',
         "h1short": "Stream on CAM4",
         "card": "External Encoder setup for CAM4, with geo-controls.",
@@ -152,10 +146,8 @@ PLATFORMS_EN = [
     {
         "slug": "bongacams", "name": "BongaCams",
         "title": "How to Stream on BongaCams with SplitCam — External Encoder",
-        "desc": "Broadcast on BongaCams with free SplitCam. Open Broadcast settings → Select "
-                "Encoder → External Encoder. If the button is missing, support enables it.",
-        "kw": "bongacams, bongcams, how to stream on bongacams, bongacams external encoder, "
-              "bongacams rtmp obs, bongacams broadcast settings",
+        "desc": "How to stream on BongaCams with free SplitCam — External Encoder setup, multi-camera scenes, overlays and AI background. No watermark.",
+        "kw": "bongacams, bongcams, how to stream on bongacams, bongacams external encoder, bongacams rtmp obs, bongacams broadcast settings",
         "h1html": 'How to stream on <span class="accent">BongaCams</span> with SplitCam',
         "h1short": "Stream on BongaCams",
         "card": "External Encoder setup for BongaCams.",
@@ -214,11 +206,8 @@ PLATFORMS_EN = [
     {
         "slug": "stripchat", "name": "Stripchat",
         "title": "How to Stream on Stripchat with SplitCam — Strip Cam Setup",
-        "desc": "Broadcast on Stripchat — the strip cam platform — with free SplitCam. Switch "
-                "to external software, copy the token-based stream key, run scenes and overlays "
-                "for your live stream. No watermark.",
-        "kw": "strip cam, stripchat live stream, how to stream on stripchat, stripchat external "
-              "software, stripchat stream key, stripchat rtmp obs",
+        "desc": "How to stream on Stripchat — the strip cam platform — with free SplitCam. External software setup, token key, scenes and overlays.",
+        "kw": "strip cam, stripchat live stream, how to stream on stripchat, stripchat external software, stripchat stream key, stripchat rtmp obs",
         "h1html": 'How to stream on <span class="accent">Stripchat</span> with SplitCam',
         "h1short": "Stream on Stripchat",
         "card": "External-software setup for Stripchat broadcasts.",
@@ -278,11 +267,8 @@ PLATFORMS_EN = [
     {
         "slug": "onlyfans", "name": "OnlyFans",
         "title": "How to Go Live on OnlyFans with SplitCam — Authorization or Stream Key",
-        "desc": "Go live on OnlyFans with free SplitCam. Connect by Authorization (log in once "
-                "and the stream key syncs automatically) or paste the OBS Key by hand — scenes, "
-                "overlays, no watermark.",
-        "kw": "how to go live on onlyfans, onlyfans authorization splitcam, onlyfans obs key, "
-              "onlyfans live stream, onlyfans streaming software",
+        "desc": "How to go live on OnlyFans with free SplitCam — Authorization sign-in or OBS Key, multi-camera scenes and overlays. No watermark.",
+        "kw": "how to go live on onlyfans, onlyfans live stream, onlyfans authorization splitcam, onlyfans obs key, onlyfans streaming software",
         "h1html": 'How to go live on <span class="accent">OnlyFans</span> with SplitCam',
         "h1short": "Go live on OnlyFans",
         "card": "Authorize once or paste the key — go live on OnlyFans.",
@@ -353,10 +339,8 @@ PLATFORMS_EN = [
     {
         "slug": "camplace", "name": "CamPlace",
         "title": "How to Stream on CamPlace with SplitCam — Free Setup Guide",
-        "desc": "Broadcast on CamPlace with free SplitCam — external encoder, multi-camera "
-                "scenes, overlays and filters. Step-by-step, no watermark.",
-        "kw": "how to stream on camplace, camplace broadcasting software, camplace rtmp, "
-              "camplace external encoder",
+        "desc": "How to stream on CamPlace with free SplitCam — external encoder, RTMP key, scenes and overlays. Step-by-step guide, no watermark.",
+        "kw": "how to stream on camplace, camplace broadcasting software, camplace rtmp, camplace external encoder, camplace stream key",
         "h1html": 'How to stream on <span class="accent">CamPlace</span> with SplitCam',
         "h1short": "Stream on CamPlace",
         "card": "External encoder setup for CamPlace broadcasts.",
@@ -416,10 +400,8 @@ PLATFORMS_EN = [
     {
         "slug": "camsoda", "name": "CamSoda",
         "title": "How to Stream on CamSoda Live with SplitCam — Free Setup",
-        "desc": "Go CamSoda live with free SplitCam — external encoder, scenes, overlays and "
-                "filters. Video guide included, no watermark.",
-        "kw": "camsoda live, how to stream on camsoda, camsoda broadcasting software, "
-              "camsoda rtmp obs, camsoda live broadcast",
+        "desc": "How to go CamSoda live with free SplitCam — Use OBS Broadcaster, regional servers, scenes and overlays. No watermark, free guide.",
+        "kw": "camsoda live, how to stream on camsoda, camsoda obs broadcaster, camsoda rtmp obs, camsoda live broadcast",
         "h1html": 'How to stream on <span class="accent">CamSoda</span> with SplitCam',
         "h1short": "Stream on CamSoda",
         "card": "External encoder setup for CamSoda broadcasts.",
@@ -483,10 +465,8 @@ PLATFORMS_EN = [
     {
         "slug": "streamate", "name": "Streamate",
         "title": "How to Stream on Streamate with SplitCam — Built-in Channel Setup",
-        "desc": "Broadcast on Streamate with free SplitCam. Streamate is a built-in channel in "
-                "SplitCam — use SM Connect, copy the key, Add Channel → Streamate.",
-        "kw": "how to stream on streamate, streamate sm connect, streamate broadcasting "
-              "software, streamate rtmp, streamate add channel",
+        "desc": "How to stream on Streamate with free SplitCam — built-in channel, SM Connect key, scenes and overlays. No watermark, quick setup.",
+        "kw": "streamate, streamate sm connect, how to stream on streamate, streamate broadcasting software, streamate rtmp",
         "h1html": 'How to stream on <span class="accent">Streamate</span> with SplitCam',
         "h1short": "Stream on Streamate",
         "card": "Streamate is a built-in SplitCam channel — quick setup.",
@@ -546,10 +526,8 @@ PLATFORMS_EN = [
     {
         "slug": "streamray", "name": "StreamRay",
         "title": "How to Stream on StreamRay with SplitCam — URL-from-Chat Setup",
-        "desc": "Broadcast on StreamRay with free SplitCam. StreamRay posts the stream URL in "
-                "the chat window and uses no stream key — SplitCam handles the URL-only flow.",
-        "kw": "streamray, streamray cam, how to stream on streamray, streamray obs "
-              "broadcaster, streamray rtmp, streamray broadcast",
+        "desc": "How to stream on StreamRay cam with free SplitCam — URL from chat window, OBS Broadcaster mode, scenes and overlays. No watermark.",
+        "kw": "streamray, streamray cam, how to stream on streamray, streamray obs broadcaster, streamray rtmp",
         "h1html": 'How to stream on <span class="accent">StreamRay</span> with SplitCam',
         "h1short": "Stream on StreamRay",
         "card": "URL-from-chat external encoder setup for StreamRay.",
@@ -607,10 +585,8 @@ PLATFORMS_EN = [
     {
         "slug": "xlovecam", "name": "XLoveCam",
         "title": "How to Stream on XLoveCam with SplitCam — RTMP Link & Key Setup",
-        "desc": "Broadcast on XLoveCam with free SplitCam. Find the RTMP link and stream key "
-                "under My Account → settings, run scenes and overlays. No watermark.",
-        "kw": "how to stream on xlovecam, xlovecam rtmp link, xlovecam stream key, "
-              "x love cam, xlovecam broadcast",
+        "desc": "How to stream on XLoveCam with free SplitCam — RTMP link and key, regional servers, scenes and overlays. No watermark, free guide.",
+        "kw": "xlovecam, x love cam, how to stream on xlovecam, xlovecam rtmp link, xlovecam stream key",
         "h1html": 'How to stream on <span class="accent">XLoveCam</span> with SplitCam',
         "h1short": "Stream on XLoveCam",
         "card": "RTMP link + key setup for XLoveCam broadcasts.",
@@ -668,10 +644,8 @@ PLATFORMS_EN = [
     {
         "slug": "soulcams", "name": "SoulCams",
         "title": "How to Stream on SoulCams with SplitCam — OBS Settings Setup",
-        "desc": "Broadcast on SoulCams with free SplitCam. Go Online → Settings → OBS shows the "
-                "RTMP server and key together. Scenes, overlays, no watermark.",
-        "kw": "how to stream on soulcams, soulcams obs, soul cams, soulcams rtmp, "
-              "soulcams broadcast",
+        "desc": "How to stream on SoulCams with free SplitCam — OBS-settings setup, RTMP server and key, multi-camera scenes and overlays.",
+        "kw": "soul cams, soulcams, how to stream on soulcams, soulcams obs, soulcams rtmp, soulcams broadcast",
         "h1html": 'How to stream on <span class="accent">SoulCams</span> with SplitCam',
         "h1short": "Stream on SoulCams",
         "card": "RTMP setup for SoulCams broadcasts.",
@@ -728,11 +702,8 @@ PLATFORMS_EN = [
     {
         "slug": "imlive", "name": "ImLive",
         "title": "How to Stream on ImLive with SplitCam — Im Live Stream Setup",
-        "desc": "Im Live stream setup with free SplitCam. ImLive uses your webcam directly — "
-                "no RTMP — so connect SplitCam as a virtual camera and run scenes, overlays "
-                "and filters in the ImLive video chat.",
-        "kw": "im live stream, imlive splitcam, how to stream on imlive, imlive virtual camera, "
-              "imlive webcam, im live cam",
+        "desc": "Im Live stream setup with free SplitCam — ImLive uses webcam directly (no RTMP), connect SplitCam as virtual camera with scenes.",
+        "kw": "im live stream, imlive splitcam, how to stream on imlive, imlive virtual camera, imlive webcam, im live cam",
         "h1html": 'How to use <span class="accent">ImLive</span> with SplitCam',
         "h1short": "Use SplitCam on ImLive",
         "card": "Virtual-camera setup for ImLive — no RTMP needed.",
@@ -790,10 +761,8 @@ PLATFORMS_EN = [
     {
         "slug": "vxlive", "name": "VXLive",
         "title": "How to Stream on VXLive with SplitCam — Free Setup Guide",
-        "desc": "Broadcast on VXLive with free SplitCam — external encoder, scenes, overlays and "
-                "filters. Video guide included, no watermark.",
-        "kw": "how to stream on vxlive, vxlive broadcasting software, vxlive rtmp, "
-              "vxlive external encoder",
+        "desc": "How to stream on VXLive (VXModels / VISIT-X) with free SplitCam — official VISIT-X preset, server and key, scenes. No watermark.",
+        "kw": "vxlive, visit-x, vxmodels splitcam, how to stream on vxlive, visit-x stream, vxlive rtmp",
         "h1html": 'How to stream on <span class="accent">VXLive</span> with SplitCam',
         "h1short": "Stream on VXLive",
         "card": "External encoder setup for VXLive broadcasts.",
@@ -857,10 +826,8 @@ PLATFORMS_EN = [
     {
         "slug": "virtwish", "name": "VirtWish",
         "title": "How to Stream on VirtWish with SplitCam — Stream URL & Key Setup",
-        "desc": "Broadcast on VirtWish with free SplitCam. Profile → Start Broadcast → OBS "
-                "section gives the stream URL and key. Scenes, overlays, no watermark.",
-        "kw": "how to stream on virtwish, virtwish broadcasting software, virtwish rtmp, "
-              "virtwish stream key, virtwish obs",
+        "desc": "How to stream on VirtWish with free SplitCam — Profile → Start Broadcast OBS section, stream URL and key, scenes and overlays.",
+        "kw": "virtwish, how to stream on virtwish, virtwish broadcasting software, virtwish rtmp, virtwish stream key, virtwish obs",
         "h1html": 'How to stream on <span class="accent">VirtWish</span> with SplitCam',
         "h1short": "Stream on VirtWish",
         "card": "Stream URL + key setup for VirtWish broadcasts.",
@@ -917,10 +884,8 @@ PLATFORMS_EN = [
     {
         "slug": "xmodels", "name": "XModels",
         "title": "How to Stream on XModels with SplitCam — Free Setup Guide",
-        "desc": "Broadcast on XModels with free SplitCam — external encoder, scenes, overlays "
-                "and filters. Video guide included, no watermark.",
-        "kw": "how to stream on xmodels, xmodels broadcasting software, xmodels rtmp, "
-              "xmodels external encoder",
+        "desc": "How to stream on XModels with free SplitCam — external encoder option in model account settings, RTMP key, scenes and overlays.",
+        "kw": "xmodels, how to stream on xmodels, xmodels broadcasting software, xmodels rtmp, xmodels external encoder",
         "h1html": 'How to stream on <span class="accent">XModels</span> with SplitCam',
         "h1short": "Stream on XModels",
         "card": "External encoder setup for XModels broadcasts.",
@@ -977,10 +942,8 @@ PLATFORMS_EN = [
     {
         "slug": "flirt4free", "name": "Flirt4Free",
         "title": "How to Stream on Flirt4Free with SplitCam — Free Setup Guide",
-        "desc": "Broadcast on Flirt4Free with free SplitCam — external encoder, scenes, overlays "
-                "and filters. Video guide included, no watermark.",
-        "kw": "flirt for free cam, flirt 4 free cam, how to stream on flirt4free, "
-              "flirt4free broadcasting software, flirt4free rtmp",
+        "desc": "How to stream on Flirt for Free cam with free SplitCam — External Broadcast Form, RTMP URL and Stream Name, scenes and overlays.",
+        "kw": "flirt for free cam, flirt 4 free cam, flirt4free, how to stream on flirt4free, flirt4free external broadcast, flirt4free rtmp",
         "h1html": 'How to stream on <span class="accent">Flirt4Free</span> with SplitCam',
         "h1short": "Stream on Flirt4Free",
         "card": "External encoder setup for Flirt4Free broadcasts.",
@@ -1040,10 +1003,8 @@ PLATFORMS_EN = [
     {
         "slug": "mfc-alerts", "name": "MFC Alerts",
         "title": "How to Add MFC Alerts to Your Stream with SplitCam",
-        "desc": "Show animated tip alerts on your MyFreeCams stream. Add your mfcalerts.com URL "
-                "as a Browser layer in free SplitCam — keep it above the webcam.",
-        "kw": "mfc alerts, how to add mfc alerts, myfreecams tip alerts, mfcalerts splitcam, "
-              "myfreecams alerts overlay",
+        "desc": "Add MFC Alerts (MyFreeCams tip alerts) to your stream with free SplitCam — Browser layer setup, animated effects on viewer tips.",
+        "kw": "mfc alerts, myfreecams alerts, how to add mfc alerts, mfcalerts splitcam, myfreecams tip alerts, myfreecams alerts overlay",
         "h1html": 'How to add <span class="accent">MFC Alerts</span> to your stream',
         "h1short": "Add MFC Alerts",
         "card": "Show animated tip alerts on your MyFreeCams stream.",
@@ -1106,10 +1067,8 @@ PLATFORMS_EN = [
     {
         "slug": "lovense", "name": "Lovense",
         "title": "How to Add a Lovense Toy to Your Stream with SplitCam",
-        "desc": "Connect a Lovense interactive toy to your cam stream and show its status "
-                "on screen with free SplitCam. Step-by-step, no watermark.",
-        "kw": "how to add lovense to stream, lovense cam stream, lovense splitcam, "
-              "lovense interactive toy streaming",
+        "desc": "How to add a Lovense interactive toy to your stream with free SplitCam — Lovense SplitCam Toolset, on-screen tip alerts and reactions.",
+        "kw": "how to add lovense to stream, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense interactive toy streaming",
         "h1html": 'How to add a <span class="accent">Lovense toy</span> to your stream',
         "h1short": "Add a Lovense toy",
         "card": "Connect a Lovense interactive toy to your cam stream.",
@@ -1173,10 +1132,8 @@ PLATFORMS_EN = [
     {
         "slug": "multistream-cams", "name": "Multiple Cam Sites",
         "title": "How to Broadcast to Multiple Cam Sites at Once with SplitCam",
-        "desc": "Stream to MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat and more at the "
-                "same time with free SplitCam multistreaming. Step-by-step, no watermark.",
-        "kw": "broadcast to multiple cam sites, multistream cam sites, stream to chaturbate and "
-              "bongacams at once, cam multistreaming software",
+        "desc": "Broadcast to multiple cam sites at once with free SplitCam — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat. One click, no watermark.",
+        "kw": "broadcast to multiple cam sites, multistream cam sites, stream to chaturbate and bongacams at once, cam multistreaming software",
         "h1html": 'How to broadcast to <span class="accent">multiple cam sites</span> at once',
         "h1short": "Multistream cam sites",
         "card": "Broadcast to several cam sites simultaneously.",

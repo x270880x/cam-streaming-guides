@@ -10,11 +10,8 @@ PLATFORMS_ES = [
     {
         "slug": "chaturbate", "name": "Chaturbate",
         "title": "Cómo emitir en Chaturbate con SplitCam — token y RTMP",
-        "desc": "Emite en Chaturbate con SplitCam gratis. Consigue tu token de emisión en "
-                "Broadcast Yourself, enruta el codificador externo por SplitCam — escenas, "
-                "superposiciones, sin marca de agua.",
-        "kw": "cómo emitir en chaturbate, chaturbate broadcast token, chaturbate rtmp obs, "
-              "chaturbate codificador externo",
+        "desc": "Cómo emitir en Chaturbate con SplitCam gratis — token de emisión, RTMP, escenas multicámara y superposiciones. Sin marca de agua.",
+        "kw": "cómo emitir en chaturbate, chaturbate broadcast token, chaturbate rtmp obs, chaturbate codificador externo, chaturbate live stream",
         "h1html": 'Cómo emitir en <span class="accent">Chaturbate</span> con SplitCam',
         "h1short": "Emitir en Chaturbate",
         "card": "Configuración por token y codificador externo de Chaturbate.",
@@ -81,9 +78,8 @@ PLATFORMS_ES = [
     {
         "slug": "cam4", "name": "CAM4",
         "title": "Cómo emitir en CAM4 con SplitCam — codificador externo",
-        "desc": "Emite en CAM4 con SplitCam gratis. Abre Broadcast & Earn Money, External "
-                "Encoder, Get Stream Key, ajusta geo-restricciones — escenas y superposiciones.",
-        "kw": "cómo emitir en cam4, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+        "desc": "Cómo emitir en CAM4 con SplitCam gratis — External Encoder, clave de stream, geo-bloqueo y superposiciones. Sin marca de agua.",
+        "kw": "cómo emitir en cam4, cam4 external encoder, cam4 stream key, cam4 rtmp obs, cam4 broadcast",
         "h1html": 'Cómo emitir en <span class="accent">CAM4</span> con SplitCam',
         "h1short": "Emitir en CAM4",
         "card": "External Encoder de CAM4 con geo-controles.",
@@ -147,9 +143,8 @@ PLATFORMS_ES = [
     {
         "slug": "bongacams", "name": "BongaCams",
         "title": "Cómo emitir en BongaCams con SplitCam — codificador externo",
-        "desc": "Emite en BongaCams con SplitCam gratis. Broadcast settings → Select Encoder → "
-                "External Encoder. Si falta el botón, soporte lo activa.",
-        "kw": "cómo emitir en bongacams, bongacams external encoder, bongacams rtmp obs",
+        "desc": "Cómo emitir en BongaCams con SplitCam gratis — External Encoder, escenas multicámara y superposiciones, fondo IA. Sin marca de agua.",
+        "kw": "bongacams, bongcams, cómo emitir en bongacams, bongacams external encoder, bongacams rtmp obs",
         "h1html": 'Cómo emitir en <span class="accent">BongaCams</span> con SplitCam',
         "h1short": "Emitir en BongaCams",
         "card": "External Encoder de BongaCams.",
@@ -210,10 +205,8 @@ PLATFORMS_ES = [
     {
         "slug": "stripchat", "name": "Stripchat",
         "title": "Cómo emitir en Stripchat con SplitCam — software externo",
-        "desc": "Emite en Stripchat con SplitCam gratis. Switch to external software, copia la "
-                "clave-token, lleva escenas y superposiciones. Sin marca de agua.",
-        "kw": "cómo emitir en stripchat, stripchat external software, stripchat stream key, "
-              "stripchat rtmp obs",
+        "desc": "Cómo emitir en Stripchat — la plataforma strip cam — con SplitCam gratis. Software externo, clave-token, escenas y superposiciones.",
+        "kw": "strip cam, stripchat live, cómo emitir en stripchat, stripchat external software, stripchat stream key, stripchat rtmp obs",
         "h1html": 'Cómo emitir en <span class="accent">Stripchat</span> con SplitCam',
         "h1short": "Emitir en Stripchat",
         "card": "Configuración de software externo para Stripchat.",
@@ -273,11 +266,8 @@ PLATFORMS_ES = [
     {
         "slug": "onlyfans", "name": "OnlyFans",
         "title": "Cómo emitir en directo en OnlyFans con SplitCam — autorización o clave",
-        "desc": "Emite en directo en OnlyFans con SplitCam gratis. Conecta por autorización "
-                "(inicia sesión una vez y la clave se sincroniza sola) o pega la OBS Key a "
-                "mano — escenas, superposiciones, sin marca de agua.",
-        "kw": "cómo emitir en directo en onlyfans, onlyfans autorización splitcam, "
-              "onlyfans obs key, onlyfans software de emisión",
+        "desc": "Cómo emitir en directo en OnlyFans con SplitCam gratis — autorización con un clic o OBS Key, escenas multicámara y superposiciones.",
+        "kw": "cómo emitir en directo en onlyfans, onlyfans live, onlyfans autorización splitcam, onlyfans obs key, onlyfans software de emisión",
         "h1html": 'Cómo emitir en directo en <span class="accent">OnlyFans</span> con SplitCam',
         "h1short": "Directo en OnlyFans",
         "card": "Autoriza una vez o pega la clave — directo en OnlyFans.",
@@ -352,9 +342,8 @@ PLATFORMS_ES = [
     {
         "slug": "camplace", "name": "CamPlace",
         "title": "Cómo emitir en CamPlace con SplitCam — guía gratuita",
-        "desc": "Emite en CamPlace con SplitCam gratis — codificador externo, escenas con "
-                "varias cámaras, superposiciones y filtros. Paso a paso, sin marca de agua.",
-        "kw": "cómo emitir en camplace, camplace software de emisión, camplace rtmp",
+        "desc": "Cómo emitir en CamPlace con SplitCam gratis — codificador externo, clave RTMP, escenas y superposiciones. Sin marca de agua, paso a paso.",
+        "kw": "cómo emitir en camplace, camplace software de emisión, camplace rtmp, camplace external encoder",
         "h1html": 'Cómo emitir en <span class="accent">CamPlace</span> con SplitCam',
         "h1short": "Emitir en CamPlace",
         "card": "Configuración del codificador externo para CamPlace.",
@@ -417,9 +406,8 @@ PLATFORMS_ES = [
     {
         "slug": "camsoda", "name": "CamSoda",
         "title": "Cómo emitir en CamSoda con SplitCam — Use OBS Broadcaster",
-        "desc": "Emite en CamSoda con SplitCam gratis. Botón Use OBS Broadcaster, guía OBS "
-                "oficial en la wiki, servidores regionales. Sin marca de agua.",
-        "kw": "cómo emitir en camsoda, camsoda live, camsoda obs broadcaster, camsoda rtmp",
+        "desc": "Cómo emitir CamSoda live con SplitCam gratis — Use OBS Broadcaster, servidores regionales, escenas y superposiciones. Sin marca de agua.",
+        "kw": "camsoda live, cómo emitir en camsoda, camsoda obs broadcaster, camsoda rtmp, camsoda live broadcast",
         "h1html": 'Cómo emitir en <span class="accent">CamSoda</span> con SplitCam',
         "h1short": "Emitir en CamSoda",
         "card": "Configuración de emisión en CamSoda vía RTMP.",
@@ -484,10 +472,8 @@ PLATFORMS_ES = [
     {
         "slug": "streamate", "name": "Streamate",
         "title": "Cómo emitir en Streamate con SplitCam — canal integrado",
-        "desc": "Emite en Streamate con SplitCam gratis. Streamate es un canal integrado en "
-                "SplitCam: usa SM Connect, copia la clave, Add Channel → Streamate.",
-        "kw": "cómo emitir en streamate, streamate sm connect, streamate rtmp, "
-              "streamate software de emisión",
+        "desc": "Cómo emitir en Streamate con SplitCam gratis — canal integrado, clave SM Connect, escenas y superposiciones. Configuración rápida.",
+        "kw": "streamate, streamate sm connect, cómo emitir en streamate, streamate software de emisión, streamate rtmp",
         "h1html": 'Cómo emitir en <span class="accent">Streamate</span> con SplitCam',
         "h1short": "Emitir en Streamate",
         "card": "Streamate es un canal integrado de SplitCam — setup rápido.",
@@ -548,9 +534,8 @@ PLATFORMS_ES = [
     {
         "slug": "streamray", "name": "StreamRay",
         "title": "Cómo emitir en StreamRay con SplitCam — URL desde el chat",
-        "desc": "Emite en StreamRay con SplitCam gratis. StreamRay publica la URL del stream en "
-                "la ventana de chat y no usa clave — SplitCam maneja ese flujo.",
-        "kw": "cómo emitir en streamray, streamray obs broadcaster, streamray cam, streamray rtmp",
+        "desc": "Cómo emitir en StreamRay cam con SplitCam gratis — URL desde el chat, OBS Broadcaster, escenas y superposiciones. Sin marca de agua.",
+        "kw": "streamray, streamray cam, cómo emitir en streamray, streamray obs broadcaster, streamray rtmp",
         "h1html": 'Cómo emitir en <span class="accent">StreamRay</span> con SplitCam',
         "h1short": "Emitir en StreamRay",
         "card": "Configuración de StreamRay — la URL viene del chat.",
@@ -608,9 +593,8 @@ PLATFORMS_ES = [
     {
         "slug": "xlovecam", "name": "XLoveCam",
         "title": "Cómo emitir en XLoveCam con SplitCam — enlace RTMP y clave",
-        "desc": "Emite en XLoveCam con SplitCam gratis. Encuentra el enlace RTMP y la clave en "
-                "My Account → settings, servidores regionales. Sin marca de agua.",
-        "kw": "cómo emitir en xlovecam, xlovecam rtmp, xlovecam stream key, x love cam",
+        "desc": "Cómo emitir en XLoveCam con SplitCam gratis — enlace RTMP y clave, servidores regionales, escenas y superposiciones. Sin marca de agua.",
+        "kw": "xlovecam, x love cam, cómo emitir en xlovecam, xlovecam rtmp, xlovecam stream key",
         "h1html": 'Cómo emitir en <span class="accent">XLoveCam</span> con SplitCam',
         "h1short": "Emitir en XLoveCam",
         "card": "Enlace RTMP + clave para XLoveCam.",
@@ -668,9 +652,8 @@ PLATFORMS_ES = [
     {
         "slug": "soulcams", "name": "SoulCams",
         "title": "Cómo emitir en SoulCams con SplitCam — ajustes OBS",
-        "desc": "Emite en SoulCams con SplitCam gratis. Go Online → Settings → OBS muestra el "
-                "servidor RTMP y la clave juntos. Escenas, superposiciones.",
-        "kw": "cómo emitir en soulcams, soulcams obs, soul cams, soulcams rtmp",
+        "desc": "Cómo emitir en SoulCams con SplitCam gratis — ajustes OBS, servidor RTMP y clave, escenas multicámara y superposiciones.",
+        "kw": "soul cams, soulcams, cómo emitir en soulcams, soulcams obs, soulcams rtmp",
         "h1html": 'Cómo emitir en <span class="accent">SoulCams</span> con SplitCam',
         "h1short": "Emitir en SoulCams",
         "card": "Configuración de SoulCams vía RTMP.",
@@ -729,9 +712,8 @@ PLATFORMS_ES = [
     {
         "slug": "imlive", "name": "ImLive",
         "title": "Cómo usar SplitCam en ImLive — cámara virtual",
-        "desc": "ImLive usa tu webcam directamente — sin RTMP. Conecta SplitCam como cámara "
-                "virtual para que tus escenas, superposiciones y filtros salgan en ImLive.",
-        "kw": "cómo emitir en imlive, imlive splitcam, imlive cámara virtual, imlive webcam",
+        "desc": "Cómo usar SplitCam en ImLive — ImLive usa la webcam directamente (sin RTMP), conecta SplitCam como cámara virtual con escenas.",
+        "kw": "im live stream, imlive splitcam, cómo emitir en imlive, imlive cámara virtual, imlive webcam",
         "h1html": 'Cómo usar <span class="accent">ImLive</span> con SplitCam',
         "h1short": "Usar SplitCam en ImLive",
         "card": "Cámara virtual para ImLive — sin RTMP.",
@@ -794,9 +776,8 @@ PLATFORMS_ES = [
     {
         "slug": "vxlive", "name": "VXLive",
         "title": "Cómo emitir en VXLive con SplitCam — soporte oficial",
-        "desc": "VXLive (VXModels) admite oficialmente SplitCam: hay artículo de ayuda y preset "
-                "VISIT-X. Stream with third-party software, servidor + clave.",
-        "kw": "cómo emitir en vxlive, vxlive splitcam, vxmodels splitcam, visit-x splitcam",
+        "desc": "Cómo emitir en VXLive (VXModels / VISIT-X) con SplitCam gratis — preset VISIT-X oficial, servidor y clave, escenas. Sin marca de agua.",
+        "kw": "vxlive, visit-x, vxmodels splitcam, cómo emitir en vxlive, visit-x splitcam, vxlive rtmp",
         "h1html": 'Cómo emitir en <span class="accent">VXLive</span> con SplitCam',
         "h1short": "Emitir en VXLive",
         "card": "VXLive admite oficialmente SplitCam (preset VISIT-X).",
@@ -862,9 +843,8 @@ PLATFORMS_ES = [
     {
         "slug": "virtwish", "name": "VirtWish",
         "title": "Cómo emitir en VirtWish con SplitCam — URL del stream y clave",
-        "desc": "Emite en VirtWish con SplitCam gratis. Profile → Start Broadcast → la sección "
-                "OBS da la URL del stream y la clave. Escenas, superposiciones.",
-        "kw": "cómo emitir en virtwish, virtwish software de emisión, virtwish rtmp, virtwish obs",
+        "desc": "Cómo emitir en VirtWish con SplitCam gratis — Profile → Start Broadcast → sección OBS, URL del stream y clave, escenas y superposiciones.",
+        "kw": "virtwish, cómo emitir en virtwish, virtwish software de emisión, virtwish rtmp, virtwish stream key, virtwish obs",
         "h1html": 'Cómo emitir en <span class="accent">VirtWish</span> con SplitCam',
         "h1short": "Emitir en VirtWish",
         "card": "URL del stream + clave para VirtWish.",
@@ -923,9 +903,8 @@ PLATFORMS_ES = [
     {
         "slug": "xmodels", "name": "XModels",
         "title": "Cómo emitir en XModels con SplitCam — guía gratuita",
-        "desc": "Emite en XModels con SplitCam gratis. Opción de codificador externo en los "
-                "ajustes de la cuenta de modelo. Escenas, superposiciones, sin marca de agua.",
-        "kw": "cómo emitir en xmodels, xmodels software de emisión, xmodels rtmp",
+        "desc": "Cómo emitir en XModels con SplitCam gratis — opción de codificador externo en ajustes de la cuenta, clave RTMP, escenas y superposiciones.",
+        "kw": "xmodels, cómo emitir en xmodels, xmodels software de emisión, xmodels rtmp, xmodels codificador externo",
         "h1html": 'Cómo emitir en <span class="accent">XModels</span> con SplitCam',
         "h1short": "Emitir en XModels",
         "card": "Opción de codificador externo en la cuenta de XModels.",
@@ -986,9 +965,8 @@ PLATFORMS_ES = [
     {
         "slug": "flirt4free", "name": "Flirt4Free",
         "title": "Cómo emitir en Flirt4Free con SplitCam — External Broadcast Form",
-        "desc": "Emite en Flirt4Free con SplitCam gratis. El External Broadcast Form da RTMP "
-                "URL y Stream Name + campos de resolución/bitrate. Sin marca de agua.",
-        "kw": "cómo emitir en flirt4free, flirt4free external broadcast, flirt4free rtmp",
+        "desc": "Cómo emitir en Flirt for Free cam con SplitCam gratis — External Broadcast Form, RTMP URL y Stream Name, escenas y superposiciones.",
+        "kw": "flirt for free cam, flirt 4 free cam, flirt4free, cómo emitir en flirt4free, flirt4free external broadcast, flirt4free rtmp",
         "h1html": 'Cómo emitir en <span class="accent">Flirt4Free</span> con SplitCam',
         "h1short": "Emitir en Flirt4Free",
         "card": "Configuración vía External Broadcast Form de Flirt4Free.",
@@ -1050,9 +1028,8 @@ PLATFORMS_ES = [
     {
         "slug": "mfc-alerts", "name": "MFC Alerts",
         "title": "Cómo añadir MFC Alerts a tu emisión con SplitCam",
-        "desc": "Muestra alertas animadas de propinas en tu emisión de MyFreeCams. Añade tu URL "
-                "de mfcalerts.com como capa Browser en SplitCam — encima de la webcam.",
-        "kw": "mfc alerts, cómo añadir mfc alerts, myfreecams alertas de propinas, mfcalerts splitcam",
+        "desc": "Añade MFC Alerts (alertas de propinas de MyFreeCams) a tu emisión con SplitCam gratis — capa Browser, efectos animados con propinas.",
+        "kw": "mfc alerts, myfreecams alertas, cómo añadir mfc alerts, mfcalerts splitcam, myfreecams alertas de propinas",
         "h1html": 'Cómo añadir <span class="accent">MFC Alerts</span> a tu emisión',
         "h1short": "Añadir MFC Alerts",
         "card": "Muestra alertas animadas de propinas en tu emisión de MyFreeCams.",
@@ -1121,10 +1098,8 @@ PLATFORMS_ES = [
     {
         "slug": "lovense", "name": "Lovense",
         "title": "Cómo añadir un juguete Lovense a tu emisión con SplitCam",
-        "desc": "Conecta un juguete interactivo Lovense a tu emisión cam con SplitCam gratis. "
-                "Lovense tiene un Lovense SplitCam Toolset oficial.",
-        "kw": "cómo añadir lovense a la emisión, lovense splitcam toolset, lovense cam stream, "
-              "juguete interactivo lovense streaming",
+        "desc": "Cómo añadir un juguete Lovense interactivo a tu emisión con SplitCam gratis — Lovense SplitCam Toolset, alertas de propinas en pantalla.",
+        "kw": "cómo añadir lovense al stream, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense juguete interactivo streaming",
         "h1html": 'Cómo añadir un <span class="accent">juguete Lovense</span> a tu emisión',
         "h1short": "Añadir un juguete Lovense",
         "card": "Conecta un juguete interactivo Lovense a tu emisión cam.",
@@ -1190,10 +1165,8 @@ PLATFORMS_ES = [
     {
         "slug": "multistream-cams", "name": "Varios sitios cam",
         "title": "Cómo emitir en varios sitios cam a la vez con SplitCam",
-        "desc": "Emite en MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat y más al mismo "
-                "tiempo con la multiemisión gratuita de SplitCam. Sin marca de agua.",
-        "kw": "emitir en varios sitios cam, multiemisión cam, emitir en chaturbate y bongacams "
-              "a la vez, software de multiemisión cam",
+        "desc": "Emitir en varios sitios cam a la vez con SplitCam gratis — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat. Un clic, sin marca de agua.",
+        "kw": "emitir en varios sitios cam, multistream cam, emitir en chaturbate y bongacams a la vez, software de multiemisión cam",
         "h1html": 'Cómo emitir en <span class="accent">varios sitios cam</span> a la vez',
         "h1short": "Multiemisión cam",
         "card": "Emite en varios sitios cam simultáneamente.",

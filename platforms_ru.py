@@ -10,11 +10,8 @@ PLATFORMS_RU = [
     {
         "slug": "chaturbate", "name": "Chaturbate",
         "title": "Как вести трансляцию на Chaturbate через SplitCam — токен и RTMP",
-        "desc": "Вещание на Chaturbate через бесплатный SplitCam. Возьмите broadcast-токен в "
-                "Broadcast Yourself, направьте внешний кодировщик через SplitCam — сцены, "
-                "накладки, без водяного знака.",
-        "kw": "как вести трансляцию на chaturbate, chaturbate broadcast token, chaturbate rtmp obs, "
-              "chaturbate внешний кодировщик",
+        "desc": "Как вести трансляцию на Chaturbate через бесплатный SplitCam — broadcast-токен, RTMP, многокамерные сцены и накладки. Без водяного знака.",
+        "kw": "как вести трансляцию на chaturbate, chaturbate broadcast token, chaturbate rtmp obs, чатурбейт трансляция, chaturbate внешний кодировщик",
         "h1html": 'Как вести трансляцию на <span class="accent">Chaturbate</span> через SplitCam',
         "h1short": "Трансляция на Chaturbate",
         "card": "Настройка через токен и внешний кодировщик Chaturbate.",
@@ -81,9 +78,8 @@ PLATFORMS_RU = [
     {
         "slug": "cam4", "name": "CAM4",
         "title": "Как вести трансляцию на CAM4 через SplitCam — внешний кодировщик",
-        "desc": "Вещание на CAM4 через бесплатный SplitCam. Откройте Broadcast & Earn Money, "
-                "External Encoder, Get Stream Key, гео-настройки — сцены и накладки.",
-        "kw": "как вести трансляцию на cam4, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+        "desc": "Как стримить на CAM4 через бесплатный SplitCam — External Encoder, ключ трансляции, гео-настройки и накладки. Без водяного знака.",
+        "kw": "как вести трансляцию на cam4, cam4 external encoder, cam4 stream key, cam4 rtmp obs, cam4 трансляция",
         "h1html": 'Как вести трансляцию на <span class="accent">CAM4</span> через SplitCam',
         "h1short": "Трансляция на CAM4",
         "card": "External Encoder CAM4 + гео-настройки.",
@@ -146,9 +142,8 @@ PLATFORMS_RU = [
     {
         "slug": "bongacams", "name": "BongaCams",
         "title": "Как вести трансляцию на BongaCams через SplitCam — внешний кодировщик",
-        "desc": "Вещание на BongaCams через бесплатный SplitCam. Broadcast settings → Select "
-                "Encoder → External Encoder. Если кнопки нет — её включает поддержка.",
-        "kw": "как вести трансляцию на bongacams, bongacams external encoder, bongacams rtmp obs",
+        "desc": "Как вести трансляцию на BongaCams через бесплатный SplitCam — External Encoder, многокамерные сцены, накладки и AI-фон. Без водяного знака.",
+        "kw": "bongacams, bongcams, бонгакамс, как вести трансляцию на bongacams, bongacams external encoder, bongacams rtmp obs",
         "h1html": 'Как вести трансляцию на <span class="accent">BongaCams</span> через SplitCam',
         "h1short": "Трансляция на BongaCams",
         "card": "External Encoder BongaCams.",
@@ -207,10 +202,8 @@ PLATFORMS_RU = [
     {
         "slug": "stripchat", "name": "Stripchat",
         "title": "Как вести трансляцию на Stripchat через SplitCam — внешний софт",
-        "desc": "Вещание на Stripchat через бесплатный SplitCam. Switch to external software, "
-                "скопируйте ключ-токен, ведите сцены и накладки. Без водяного знака.",
-        "kw": "как вести трансляцию на stripchat, stripchat external software, stripchat ключ, "
-              "stripchat rtmp obs",
+        "desc": "Как стримить на Stripchat — стрип-кам платформа — через бесплатный SplitCam. Внешний софт, ключ-токен, сцены и накладки.",
+        "kw": "стрип кам, stripchat трансляция, как вести трансляцию на stripchat, stripchat external software, stripchat ключ, stripchat rtmp obs",
         "h1html": 'Как вести трансляцию на <span class="accent">Stripchat</span> через SplitCam',
         "h1short": "Трансляция на Stripchat",
         "card": "Настройка внешнего софта для Stripchat.",
@@ -271,11 +264,8 @@ PLATFORMS_RU = [
     {
         "slug": "onlyfans", "name": "OnlyFans",
         "title": "Как выйти в эфир на OnlyFans через SplitCam — авторизация или ключ",
-        "desc": "Прямой эфир на OnlyFans через бесплатный SplitCam. Подключение через "
-                "авторизацию (вошёл один раз — ключ синхронизируется сам) или вручную через "
-                "OBS Key — сцены, накладки, без водяного знака.",
-        "kw": "как выйти в эфир на onlyfans, onlyfans авторизация splitcam, onlyfans obs key, "
-              "onlyfans прямой эфир, onlyfans программа трансляции",
+        "desc": "Как выйти в эфир на OnlyFans через бесплатный SplitCam — авторизация одним входом или OBS Key, многокамерные сцены и накладки.",
+        "kw": "как выйти в эфир на onlyfans, onlyfans авторизация splitcam, onlyfans obs key, onlyfans прямой эфир, onlyfans программа трансляции",
         "h1html": 'Как выйти в эфир на <span class="accent">OnlyFans</span> через SplitCam',
         "h1short": "Эфир на OnlyFans",
         "card": "Авторизуйтесь один раз или вставьте ключ — эфир на OnlyFans.",
@@ -349,9 +339,8 @@ PLATFORMS_RU = [
     {
         "slug": "camplace", "name": "CamPlace",
         "title": "Как вести трансляцию на CamPlace через SplitCam — гайд",
-        "desc": "Вещание на CamPlace через бесплатный SplitCam — внешний кодировщик, сцены с "
-                "камерами, накладки и фильтры. Пошагово, без водяного знака.",
-        "kw": "как вести трансляцию на camplace, camplace программа трансляции, camplace rtmp",
+        "desc": "Как стримить на CamPlace через бесплатный SplitCam — внешний кодировщик, RTMP-ключ, сцены и накладки. Пошагово, без водяного знака.",
+        "kw": "как вести трансляцию на camplace, camplace программа трансляции, camplace rtmp, camplace внешний кодировщик, камплейс",
         "h1html": 'Как вести трансляцию на <span class="accent">CamPlace</span> через SplitCam',
         "h1short": "Трансляция на CamPlace",
         "card": "Настройка внешнего кодировщика для CamPlace.",
@@ -413,10 +402,8 @@ PLATFORMS_RU = [
     {
         "slug": "camsoda", "name": "CamSoda",
         "title": "Как вести трансляцию на CamSoda через SplitCam — гайд",
-        "desc": "Вещание на CamSoda через бесплатный SplitCam. Кнопка Use OBS Broadcaster, "
-                "официальный OBS-гайд в вики, региональные серверы. Без водяного знака.",
-        "kw": "как вести трансляцию на camsoda, camsoda live, camsoda obs broadcaster, "
-              "camsoda rtmp",
+        "desc": "Как стримить на CamSoda через бесплатный SplitCam — Use OBS Broadcaster, региональные серверы, сцены и накладки. Без водяного знака.",
+        "kw": "camsoda live, как вести трансляцию на camsoda, camsoda obs broadcaster, camsoda rtmp, camsoda трансляция",
         "h1html": 'Как вести трансляцию на <span class="accent">CamSoda</span> через SplitCam',
         "h1short": "Трансляция на CamSoda",
         "card": "Настройка вещания на CamSoda через RTMP.",
@@ -477,10 +464,8 @@ PLATFORMS_RU = [
     {
         "slug": "streamate", "name": "Streamate",
         "title": "Как вести трансляцию на Streamate через SplitCam — встроенный канал",
-        "desc": "Вещание на Streamate через бесплатный SplitCam. Streamate — встроенный канал в "
-                "SplitCam: SM Connect, скопируйте ключ, Add Channel → Streamate.",
-        "kw": "как вести трансляцию на streamate, streamate sm connect, streamate rtmp, "
-              "streamate программа трансляции",
+        "desc": "Как вести трансляцию на Streamate через бесплатный SplitCam — встроенный канал, ключ SM Connect, сцены и накладки. Быстрая настройка.",
+        "kw": "streamate, streamate sm connect, как вести трансляцию на streamate, streamate rtmp, streamate программа трансляции",
         "h1html": 'Как вести трансляцию на <span class="accent">Streamate</span> через SplitCam',
         "h1short": "Трансляция на Streamate",
         "card": "Streamate — встроенный канал SplitCam, быстрая настройка.",
@@ -542,10 +527,8 @@ PLATFORMS_RU = [
     {
         "slug": "streamray", "name": "StreamRay",
         "title": "Как вести трансляцию на StreamRay через SplitCam — URL из чата",
-        "desc": "Вещание на StreamRay через бесплатный SplitCam. StreamRay даёт URL потока в окне "
-                "чата и не использует ключ — SplitCam справляется с этим.",
-        "kw": "как вести трансляцию на streamray, streamray obs broadcaster, streamray cam, "
-              "streamray rtmp",
+        "desc": "Как стримить на StreamRay cam через бесплатный SplitCam — URL из окна чата, OBS Broadcaster, сцены и накладки. Без водяного знака.",
+        "kw": "streamray, streamray cam, как вести трансляцию на streamray, streamray obs broadcaster, streamray rtmp",
         "h1html": 'Как вести трансляцию на <span class="accent">StreamRay</span> через SplitCam',
         "h1short": "Трансляция на StreamRay",
         "card": "Настройка StreamRay — URL берётся из чата.",
@@ -604,9 +587,8 @@ PLATFORMS_RU = [
     {
         "slug": "xlovecam", "name": "XLoveCam",
         "title": "Как вести трансляцию на XLoveCam через SplitCam — RTMP-ссылка и ключ",
-        "desc": "Вещание на XLoveCam через бесплатный SplitCam. RTMP-ссылка и ключ в My Account "
-                "→ settings, региональные серверы. Без водяного знака.",
-        "kw": "как вести трансляцию на xlovecam, xlovecam rtmp, xlovecam ключ, x love cam",
+        "desc": "Как стримить на XLoveCam через бесплатный SplitCam — RTMP-ссылка и ключ, региональные серверы, сцены и накладки. Без водяного знака.",
+        "kw": "xlovecam, x love cam, как вести трансляцию на xlovecam, xlovecam rtmp, xlovecam ключ трансляции",
         "h1html": 'Как вести трансляцию на <span class="accent">XLoveCam</span> через SplitCam',
         "h1short": "Трансляция на XLoveCam",
         "card": "RTMP-ссылка и ключ для XLoveCam.",
@@ -662,9 +644,8 @@ PLATFORMS_RU = [
     {
         "slug": "soulcams", "name": "SoulCams",
         "title": "Как вести трансляцию на SoulCams через SplitCam — настройки OBS",
-        "desc": "Вещание на SoulCams через бесплатный SplitCam. Go Online → Settings → OBS "
-                "показывает RTMP-сервер и ключ вместе. Сцены, накладки.",
-        "kw": "как вести трансляцию на soulcams, soulcams obs, soul cams, soulcams rtmp",
+        "desc": "Как стримить на SoulCams через бесплатный SplitCam — OBS-настройки, RTMP-сервер и ключ, многокамерные сцены и накладки.",
+        "kw": "soul cams, soulcams, как вести трансляцию на soulcams, soulcams obs, soulcams rtmp, soul cams трансляция",
         "h1html": 'Как вести трансляцию на <span class="accent">SoulCams</span> через SplitCam',
         "h1short": "Трансляция на SoulCams",
         "card": "Настройка SoulCams через RTMP.",
@@ -721,10 +702,8 @@ PLATFORMS_RU = [
     {
         "slug": "imlive", "name": "ImLive",
         "title": "Как использовать SplitCam на ImLive — виртуальная камера",
-        "desc": "ImLive использует веб-камеру напрямую — без RTMP. Подключите SplitCam как "
-                "виртуальную камеру, чтобы сцены, накладки и фильтры были в видеочате ImLive.",
-        "kw": "как вести трансляцию на imlive, imlive splitcam, imlive виртуальная камера, "
-              "imlive веб-камера",
+        "desc": "Как использовать SplitCam на ImLive — ImLive работает через веб-камеру напрямую, подключите SplitCam как виртуальную камеру со сценами.",
+        "kw": "im live стрим, imlive splitcam, как вести трансляцию на imlive, imlive виртуальная камера, imlive веб-камера",
         "h1html": 'Как использовать <span class="accent">ImLive</span> со SplitCam',
         "h1short": "SplitCam на ImLive",
         "card": "Виртуальная камера для ImLive — RTMP не нужен.",
@@ -784,9 +763,8 @@ PLATFORMS_RU = [
     {
         "slug": "vxlive", "name": "VXLive",
         "title": "Как вести трансляцию на VXLive через SplitCam — официальная поддержка",
-        "desc": "VXLive (VXModels) официально поддерживает SplitCam: есть статья помощи и "
-                "пресет VISIT-X. Stream with third-party software, сервер + ключ.",
-        "kw": "как вести трансляцию на vxlive, vxlive splitcam, vxmodels splitcam, visit-x splitcam",
+        "desc": "Как стримить на VXLive (VXModels / VISIT-X) через бесплатный SplitCam — официальный пресет VISIT-X, сервер и ключ, сцены.",
+        "kw": "vxlive, visit-x, vxmodels splitcam, как вести трансляцию на vxlive, visit-x splitcam, vxlive rtmp",
         "h1html": 'Как вести трансляцию на <span class="accent">VXLive</span> через SplitCam',
         "h1short": "Трансляция на VXLive",
         "card": "VXLive официально поддерживает SplitCam (пресет VISIT-X).",
@@ -851,10 +829,8 @@ PLATFORMS_RU = [
     {
         "slug": "virtwish", "name": "VirtWish",
         "title": "Как вести трансляцию на VirtWish через SplitCam — URL потока и ключ",
-        "desc": "Вещание на VirtWish через бесплатный SplitCam. Profile → Start Broadcast → "
-                "раздел OBS даёт URL потока и ключ. Сцены, накладки, без водяного знака.",
-        "kw": "как вести трансляцию на virtwish, virtwish программа трансляции, virtwish rtmp, "
-              "virtwish obs",
+        "desc": "Как стримить на VirtWish через бесплатный SplitCam — Profile → Start Broadcast → раздел OBS, URL потока и ключ, сцены и накладки.",
+        "kw": "virtwish, как вести трансляцию на virtwish, virtwish программа трансляции, virtwish rtmp, virtwish ключ, virtwish obs",
         "h1html": 'Как вести трансляцию на <span class="accent">VirtWish</span> через SplitCam',
         "h1short": "Трансляция на VirtWish",
         "card": "URL потока и ключ для VirtWish.",
@@ -910,9 +886,8 @@ PLATFORMS_RU = [
     {
         "slug": "xmodels", "name": "XModels",
         "title": "Как вести трансляцию на XModels через SplitCam — гайд",
-        "desc": "Вещание на XModels через бесплатный SplitCam. Опция внешнего кодировщика в "
-                "настройках модельного аккаунта. Сцены, накладки, без водяного знака.",
-        "kw": "как вести трансляцию на xmodels, xmodels программа трансляции, xmodels rtmp",
+        "desc": "Как стримить на XModels через бесплатный SplitCam — опция внешнего кодировщика в настройках модели, RTMP-ключ, сцены и накладки.",
+        "kw": "xmodels, как вести трансляцию на xmodels, xmodels программа трансляции, xmodels rtmp, xmodels внешний кодировщик",
         "h1html": 'Как вести трансляцию на <span class="accent">XModels</span> через SplitCam',
         "h1short": "Трансляция на XModels",
         "card": "Опция внешнего кодировщика в аккаунте XModels.",
@@ -971,9 +946,8 @@ PLATFORMS_RU = [
     {
         "slug": "flirt4free", "name": "Flirt4Free",
         "title": "Как вести трансляцию на Flirt4Free через SplitCam — External Broadcast Form",
-        "desc": "Вещание на Flirt4Free через бесплатный SplitCam. External Broadcast Form даёт "
-                "RTMP URL и Stream Name + поля разрешения/битрейта. Без водяного знака.",
-        "kw": "как вести трансляцию на flirt4free, flirt4free external broadcast, flirt4free rtmp",
+        "desc": "Как стримить на Flirt4Free (flirt for free cam) через бесплатный SplitCam — External Broadcast Form, RTMP URL и Stream Name, сцены.",
+        "kw": "flirt for free cam, flirt 4 free cam, flirt4free, как вести трансляцию на flirt4free, flirt4free external broadcast, flirt4free rtmp",
         "h1html": 'Как вести трансляцию на <span class="accent">Flirt4Free</span> через SplitCam',
         "h1short": "Трансляция на Flirt4Free",
         "card": "Настройка через External Broadcast Form Flirt4Free.",
@@ -1031,9 +1005,8 @@ PLATFORMS_RU = [
     {
         "slug": "mfc-alerts", "name": "MFC Alerts",
         "title": "Как добавить MFC Alerts на трансляцию через SplitCam",
-        "desc": "Показывайте анимированные алерты о токенах на трансляции MyFreeCams. Добавьте "
-                "ваш URL с mfcalerts.com слоем Browser в SplitCam — выше веб-камеры.",
-        "kw": "mfc alerts, как добавить mfc alerts, myfreecams алерты токенов, mfcalerts splitcam",
+        "desc": "Как добавить MFC Alerts (алерты MyFreeCams) на трансляцию через бесплатный SplitCam — Browser-слой, анимированные эффекты на токены.",
+        "kw": "mfc alerts, myfreecams алерты, как добавить mfc alerts, mfcalerts splitcam, myfreecams алерты токенов",
         "h1html": 'Как добавить <span class="accent">MFC Alerts</span> на трансляцию',
         "h1short": "Добавить MFC Alerts",
         "card": "Анимированные алерты о токенах на трансляции MyFreeCams.",
@@ -1100,10 +1073,8 @@ PLATFORMS_RU = [
     {
         "slug": "lovense", "name": "Lovense",
         "title": "Как подключить игрушку Lovense к трансляции через SplitCam",
-        "desc": "Подключите интерактивную игрушку Lovense к кам-трансляции через бесплатный "
-                "SplitCam. У Lovense есть официальный Lovense SplitCam Toolset.",
-        "kw": "как подключить lovense к трансляции, lovense splitcam toolset, lovense кам, "
-              "интерактивная игрушка lovense стрим",
+        "desc": "Как подключить интерактивную игрушку Lovense к трансляции через бесплатный SplitCam — Lovense SplitCam Toolset, алерты о токенах.",
+        "kw": "как подключить lovense к трансляции, lovense splitcam, lovense splitcam toolset, lovense кам, lovense интерактивная игрушка стрим",
         "h1html": 'Как подключить <span class="accent">игрушку Lovense</span> к трансляции',
         "h1short": "Игрушка Lovense",
         "card": "Подключение интерактивной игрушки Lovense к эфиру.",
@@ -1169,10 +1140,8 @@ PLATFORMS_RU = [
     {
         "slug": "multistream-cams", "name": "Несколько кам-сайтов",
         "title": "Как вещать на несколько кам-сайтов одновременно через SplitCam",
-        "desc": "Трансляция на MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat и другие "
-                "одновременно через бесплатную мультитрансляцию SplitCam. Без водяного знака.",
-        "kw": "вещание на несколько кам-сайтов, мультитрансляция кам, трансляция на chaturbate и "
-              "bongacams одновременно",
+        "desc": "Вещание на несколько кам-сайтов одновременно через бесплатный SplitCam — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat. В один клик.",
+        "kw": "вещание на несколько кам-сайтов, мультистрим кам-сайты, трансляция на chaturbate и bongacams сразу, программа мультитрансляции кам",
         "h1html": 'Как вещать на <span class="accent">несколько кам-сайтов</span> одновременно',
         "h1short": "Мультитрансляция кам",
         "card": "Вещание на несколько кам-сайтов одновременно.",
