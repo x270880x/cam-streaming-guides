@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auf StreamRay Cam streamen mit SplitCam — URL aus dem Chat</title>
+<meta name="description" content="Auf StreamRay Cam senden mit kostenlosem SplitCam — URL aus dem Chat-Fenster, OBS-Broadcaster-Modus, Szenen und Overlays. Ohne Wasserzeichen.">
+<meta name="keywords" content="streamray, streamray cam, auf streamray streamen, streamray obs broadcaster, streamray rtmp">
+<link rel="canonical" href="https://camstreamguide.com/de/streamray/">
+<link rel="alternate" hreflang="en" href="https://camstreamguide.com/streamray/">
+<link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/streamray/">
+<link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/streamray/">
+<link rel="alternate" hreflang="de" href="https://camstreamguide.com/de/streamray/">
+<link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/streamray/">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<!-- <meta name="google-site-verification" content="YOUR-GSC-TOKEN"> -->
+<!-- <meta name="msvalidate.01" content="YOUR-BING-TOKEN"> -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-TOKEN"> -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://camstreamguide.com/de/streamray/">
+<meta property="og:title" content="Auf StreamRay Cam streamen mit SplitCam — URL aus dem Chat">
+<meta property="og:description" content="Auf StreamRay Cam senden mit kostenlosem SplitCam — URL aus dem Chat-Fenster, OBS-Broadcaster-Modus, Szenen und Overlays. Ohne Wasserzeichen.">
+<meta property="og:site_name" content="Streaming Guides">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://camstreamguide.com/assets/og/streamray.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Auf StreamRay Cam streamen mit SplitCam — URL aus dem Chat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auf StreamRay Cam streamen mit SplitCam — URL aus dem Chat">
+<meta name="twitter:description" content="Auf StreamRay Cam senden mit kostenlosem SplitCam — URL aus dem Chat-Fenster, OBS-Broadcaster-Modus, Szenen und Overlays. Ohne Wasserzeichen.">
+<meta name="twitter:image" content="https://camstreamguide.com/assets/og/streamray.png">
+<meta name="theme-color" content="#141420">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Anleitungen",
+     "item": "https://camstreamguide.com/de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "StreamRay",
+     "item": "https://camstreamguide.com/de/streamray/"
+    }
+   ]
+  },
+  {
+   "@type": "HowTo",
+   "name": "So streamst du auf StreamRay mit SplitCam",
+   "description": "Auf StreamRay Cam senden mit kostenlosem SplitCam — URL aus dem Chat-Fenster, OBS-Broadcaster-Modus, Szenen und Overlays. Ohne Wasserzeichen.",
+   "totalTime": "PT5M",
+   "inLanguage": "de",
+   "datePublished": "2026-05-21",
+   "dateModified": "2026-05-30",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Streaming Guides",
+    "url": "https://camstreamguide.com/"
+   },
+   "image": "https://camstreamguide.com/assets/og/streamray.png",
+   "step": [
+    {
+     "@type": "HowToStep",
+     "position": 1,
+     "name": "SplitCam herunterladen und installieren",
+     "text": "SplitCam ist eine kostenlose Streaming-Software für Windows und macOS. Lade sie herunter und führe den Installer aus — keine Registrierung, keine Kreditkarte, kein Wasserzeichen, kein Zeitlimit. SplitCam ist der Encoder, der dein Video an StreamRay sendet."
+    },
+    {
+     "@type": "HowToStep",
+     "position": 2,
+     "name": "Kamera und Szene einrichten",
+     "text": "Öffne SplitCam und füge deine Webcam hinzu. Baue die Szene, wie deine Zuschauer sie sehen sollen — Overlays, Text, eine zweite Kamera oder dein Handy, Beauty-Filter oder KI-Hintergrund. Alles wird live angewendet, bevor der Stream deinen PC verlässt."
+    },
+    {
+     "@type": "HowToStep",
+     "position": 3,
+     "name": "Hol dir deinen StreamRay-Stream-Key",
+     "text": "Auf StreamRay zweimal auf Broadcast Now klicken, das Other-Menü öffnen, OBS Broadcaster und Save and Close wählen. StreamRay postet deine Stream-URL ins Chat-Fenster — von dort kopieren. Das Stream-Key-Feld in SplitCam leer lassen; StreamRay authentifiziert nur über die URL."
+    },
+    {
+     "@type": "HowToStep",
+     "position": 4,
+     "name": "SplitCam mit StreamRay verbinden",
+     "text": "Öffne in SplitCam Stream Settings, füge die StreamRay-Server-URL und den Stream-Key in die Custom-RTMP-Felder ein. Bitrate: 3.500–6.000 Kbps für 1080p, 2.000–4.000 Kbps für 720p. Starte zuerst den eingebauten Speedtest."
+    },
+    {
+     "@type": "HowToStep",
+     "position": 5,
+     "name": "Auf Go Live klicken",
+     "text": "Drücke in SplitCam Go Live und starte dann die Übertragung auf StreamRay. In ~10 Sekunden ist deine Kamera live. Folgestreams sind ein Klick — SplitCam öffnen, Go Live."
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "de",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Wo ist die StreamRay-Stream-URL?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nach Aktivierung des OBS Broadcasters postet StreamRay die Stream-URL ins Chat-Fenster — von dort kopieren."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Warum gibt es keinen StreamRay-Stream-Key?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "StreamRay authentifiziert nur über die URL — SplitCams Stream-Key-Feld leer lassen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Bitrate für StreamRay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "StreamRay nennt keine offizielle Obergrenze — 3.500–6.000 Kbps bei 1080p anvisieren und den SplitCam-Speedtest laufen lassen, da der URL-only-Aufbau kein Bitrate-Feedback gibt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist SplitCam kostenlos für StreamRay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit, was zum URL-only-Workflow von StreamRay passt: einen Link einfügen und senden."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "SplitCam",
+   "applicationCategory": "MultimediaApplication",
+   "operatingSystem": "Windows, macOS",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--app-base:#141420;--app-panel:#1c1c2e;--app-surface:#22223a;
+--app-border:rgba(255,255,255,.08);--app-border2:rgba(255,255,255,.14);
+--blue:#2878fc;--blue-hover:#4d8eff;--blue-dim:rgba(40,120,252,.13);
+--purple:#9c5bff;--red:#ff5454;--green:#5ee572;
+--text:#eeeeff;--text-sub:#9090bb;--text-dim:#50506a}
+html{scroll-behavior:smooth;background:var(--app-base)}
+body{font-family:'Geist',sans-serif;background:var(--app-base);color:var(--text);
+line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;
+align-items:center;justify-content:space-between;padding:0 40px;
+background:rgba(20,20,32,.85);backdrop-filter:blur(16px);
+border-bottom:1px solid var(--app-border)}
+.nav-logo{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:700;letter-spacing:.3px}
+.nav-logo .dot{width:11px;height:11px;border-radius:50%;
+background:linear-gradient(135deg,var(--blue),var(--purple))}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--text)}
+.btn-primary{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;
+border-radius:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;transition:background .15s}
+.btn-primary:hover{background:var(--blue-hover)}
+.btn-ghost{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:8px;
+background:transparent;color:var(--text);border:1px solid var(--app-border2);
+font-size:13px;font-weight:600;transition:all .15s}
+.btn-lg{padding:13px 24px;font-size:14px;border-radius:10px}
+.dl{position:relative;display:inline-block}
+.dl>summary{list-style:none;cursor:pointer}
+.dl>summary::-webkit-details-marker{display:none}
+.dl>summary::marker{content:""}
+.dl-caret{display:inline-block;font-size:11px;transition:transform .15s}
+.dl[open] .dl-caret{transform:rotate(180deg)}
+.dl-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;
+background:var(--app-surface);border:1px solid var(--app-border2);border-radius:12px;
+padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.dl-menu a{display:block;padding:11px 14px;border-radius:8px;font-size:14px;
+font-weight:600;color:var(--text);transition:background .12s}
+.dl-menu a:hover{background:var(--blue-dim)}
+.lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
+.lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
+.lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+.lang-switch a.cur{background:var(--blue);color:#fff}
+.shot{margin:14px 0 2px;border:1px solid var(--app-border);border-radius:10px;overflow:hidden;background:var(--app-base)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:9px 14px;font-size:12.5px;color:var(--text-sub);background:var(--app-surface);border-top:1px solid var(--app-border)}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--app-border);background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
+.breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
+.breadcrumbs .sep{margin:0 8px}
+.hero{padding:32px 40px 50px;max-width:900px;margin:0 auto;position:relative}
+.hero-glow{position:absolute;top:-50px;right:-100px;width:480px;height:480px;
+background:radial-gradient(circle,rgba(156,91,255,.15),transparent 70%);pointer-events:none;z-index:0}
+.eyebrow{display:inline-block;padding:5px 12px;background:var(--blue-dim);color:var(--blue);
+font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+border-radius:99px;margin-bottom:18px;position:relative;z-index:1}
+.h1{font-size:clamp(32px,4.4vw,48px);font-weight:800;line-height:1.07;letter-spacing:-1.4px;
+margin-bottom:18px;max-width:760px;position:relative;z-index:1}
+.h1 .accent{background:linear-gradient(135deg,var(--blue),var(--purple));
+-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:18px;color:var(--text-sub);max-width:660px;line-height:1.55;
+margin-bottom:26px;position:relative;z-index:1}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.hero-inner{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center;position:relative;z-index:1}
+.collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.collab-flow{display:flex;align-items:center;justify-content:center}
+.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);white-space:nowrap;display:flex;align-items:center;gap:7px;line-height:1.1}
+.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2)}
+.collab-sc img{display:block;width:23px;height:23px}
+.collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
+.collab-logo{display:block;height:21px;width:auto;max-width:180px;
+object-fit:contain;object-position:left center}
+.collab-plat{padding:8px 15px}
+.collab-plat img{height:24px;width:24px;border-radius:50%;object-fit:cover}
+.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:nowrap}
+.hub-card-icon{width:32px;height:32px;flex-shrink:0;border-radius:50%;
+object-fit:cover;background:var(--app-surface)}
+.hub-grid .related-card{display:flex;align-items:center;gap:14px;
+padding:18px 20px}
+.hub-grid .related-card .hub-card-body{flex:1;min-width:0}
+.collab-wire{width:46px;height:4px;position:relative;flex-shrink:0;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.16))}
+.collab-dot{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 13px 2px var(--blue);transform:translateY(-50%);animation:collabflow 1.7s cubic-bezier(.55,0,.45,1) infinite}
+@keyframes collabflow{0%{left:-3px;opacity:0}14%{opacity:1}80%{opacity:1}100%{left:37px;opacity:0}}
+.collab-plat{position:relative}
+.collab-plat::after{content:"";position:absolute;inset:0;border-radius:13px;animation:collabrecv 1.7s ease-in-out infinite}
+@keyframes collabrecv{0%,52%{box-shadow:0 0 0 0 rgba(255,255,255,0)}70%{box-shadow:0 0 0 5px rgba(255,255,255,.25)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+.collab-label{font-size:11px;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+.section{padding:40px 40px;max-width:900px;margin:0 auto}
+.sec-h{font-size:30px;font-weight:700;letter-spacing:-.9px;line-height:1.15;margin-bottom:16px}
+.sec-p{font-size:16px;color:var(--text-sub);line-height:1.7;margin-bottom:26px;max-width:680px}
+.qa-box{padding:24px 28px;background:linear-gradient(135deg,rgba(40,120,252,.08),rgba(156,91,255,.05));
+border:1px solid rgba(40,120,252,.25);border-radius:14px}
+.qa-h{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:.6px;
+text-transform:uppercase;margin-bottom:12px}
+.qa-text{font-size:15.5px;line-height:1.7;color:var(--text)}
+.qa-text ol{margin:8px 0 0 22px}.qa-text li{margin-bottom:5px}
+.steps{display:flex;flex-direction:column;gap:16px}
+.step{display:flex;gap:22px;padding:22px 24px;background:var(--app-panel);
+border:1px solid var(--app-border);border-radius:14px}
+.step-num{flex:0 0 44px;height:44px;border-radius:11px;
+background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;display:flex;
+align-items:center;justify-content:center;font-weight:800;font-size:19px}
+.step-body{flex:1}
+.step-h{font-size:18px;font-weight:700;margin-bottom:7px;letter-spacing:-.3px}
+.step-p{font-size:14.5px;color:var(--text-sub);line-height:1.65}
+.step-p strong{color:var(--text)}
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tip-card{padding:20px;background:var(--app-panel);border:1px solid var(--app-border);border-radius:12px}
+.tip-card h3{font-size:15px;font-weight:700;margin-bottom:7px}
+.tip-card p{font-size:13.5px;color:var(--text-sub);line-height:1.6}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{padding:18px 22px;border:1px solid var(--app-border);border-radius:12px;
+background:var(--app-panel)}
+.faq-item summary{font-size:15.5px;font-weight:600;list-style:none;cursor:pointer;
+display:flex;justify-content:space-between;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
+.faq-item[open] summary::after{content:"\2013"}
+.faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.hub-grid .related-card{padding:20px 22px}
+.hub-grid .related-card h4{font-size:16.5px}
+.related-card{padding:16px 18px;background:var(--app-panel);border:1px solid var(--app-border);
+border-radius:11px;transition:all .16s}
+.related-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.related-card h4{font-size:14.5px;font-weight:700}
+.related-card p{font-size:12.5px;color:var(--text-sub);margin-top:3px}
+.cta-block{padding:52px 40px;background:linear-gradient(135deg,var(--app-panel),var(--app-surface));
+border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border);
+text-align:center;margin-top:44px}
+.cta-block h2{font-size:30px;font-weight:700;letter-spacing:-.8px;margin-bottom:12px}
+.cta-block p{font-size:15.5px;color:var(--text-sub);max-width:520px;margin:0 auto 24px;line-height:1.6}
+.meta-line{display:flex;align-items:center;gap:14px;padding:18px 20px 0;
+font-size:13px;color:var(--text-sub)}
+.age-tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:6px;
+background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.5px}
+.age-tag-sm{display:inline-block;padding:1px 6px;border-radius:4px;
+background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.3px;
+vertical-align:middle;margin-left:4px}
+footer{padding:36px 40px;border-top:1px solid var(--app-border);background:var(--app-panel)}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
+flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
+.footer-inner a{color:var(--text-sub)}.footer-inner a:hover{color:var(--text)}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+@media(max-width:900px){nav{padding:0 20px}.nav-links{display:none}
+.breadcrumbs{padding:80px 20px 0}.hero,.section{padding-left:20px;padding-right:20px}
+.cta-block{padding:44px 20px}.tips-grid,.related-grid,.hub-grid{grid-template-columns:1fr}
+.step{flex-direction:column;gap:10px}footer{padding:30px 20px}
+.footer-inner{flex-direction:column;text-align:center}
+.hero-inner{grid-template-columns:1fr;gap:24px}
+.collab{max-width:300px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="../../"><span class="dot"></span>Streaming Guides</a>
+  <ul class="nav-links">
+    <li><a href="../../">Alle Anleitungen</a></li>
+  </ul>
+  <div class="lang-switch"><a href="../../streamray/">EN</a><a href="../../ru/streamray/">RU</a><a href="../../es/streamray/">ES</a><a href="../../de/streamray/" class="cur">DE</a></div>
+</nav>
+<div class="breadcrumbs">
+  <a href="../../">Anleitungen</a><span class="sep">/</span><span>StreamRay</span>
+</div>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">StreamRay</span>
+      <h1 class="h1">So streamst du auf <span class="accent">StreamRay</span> mit SplitCam</h1>
+      <p class="sub">StreamRay hat ein ungewöhnliches External-Encoder-Setup — die Stream-URL kommt ins <strong style='color:var(--text)'>Broadcast-Chat-Fenster</strong> und es gibt keinen separaten Stream-Key. Kostenloses <strong style='color:var(--text)'>SplitCam</strong> kommt mit diesem Nur-URL-Workflow gut zurecht.</p>
+      <div class="hero-cta">
+        <details class="dl">
+          <summary class="btn-primary btn-lg">⬇ SplitCam herunterladen <span class="dl-caret">▾</span></summary>
+          <div class="dl-menu">
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">Windows</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">macOS</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">Android</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">iOS</a>
+          </div>
+        </details>
+        <a href="#steps" class="btn-ghost btn-lg">Zu den Schritten ↓</a>
+      </div>
+    </div>
+    <div class="collab" aria-hidden="true">
+      <div class="collab-flow">
+        <div class="collab-pill collab-sc"><img src="../../assets/splitcam.png" alt=""><span>splitcam</span></div>
+        <div class="collab-wire"><div class="collab-dot"></div></div>
+        <div class="collab-pill collab-plat collab-plat-streamray" style="background:#b03636"><img src="../../logos/round/streamray.png" alt=""><span>StreamRay</span></div>
+      </div>
+      <div class="collab-label">Setup-Anleitung</div>
+    </div>
+  </div>
+</section>
+<div class="section">
+  <div class="qa-box">
+    <div class="qa-h">Kurzantwort</div>
+    <div class="qa-text">Auf StreamRay mit SplitCam senden: SplitCam installieren, Szene bauen, auf StreamRay den OBS Broadcaster aktivieren, Stream-URL aus dem Chat-Fenster kopieren, in SplitCam einfügen (Key-Feld leer lassen), Go Live.</div>
+  </div>
+</div>
+<section class="section"><h2 class="sec-h">Video-Anleitung</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/i0CN1q-yLK4" title="So streamst du auf StreamRay mit SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
+<section class="section" id="steps">
+  <h2 class="sec-h">Schritt für Schritt</h2>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam herunterladen und installieren</div><p class="step-p">SplitCam ist eine kostenlose Streaming-Software für Windows und macOS. Lade sie herunter und führe den Installer aus — keine Registrierung, keine Kreditkarte, kein Wasserzeichen, kein Zeitlimit. SplitCam ist der Encoder, der dein Video an StreamRay sendet.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Kamera und Szene einrichten</div><p class="step-p">Öffne SplitCam und füge deine Webcam hinzu. Baue die Szene, wie deine Zuschauer sie sehen sollen — Overlays, Text, eine zweite Kamera oder dein Handy, Beauty-Filter oder KI-Hintergrund. Alles wird live angewendet, bevor der Stream deinen PC verlässt.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hol dir deinen StreamRay-Stream-Key</div><p class="step-p">Auf StreamRay zweimal auf <strong>Broadcast Now</strong> klicken, das <strong>Other</strong>-Menü öffnen, <strong>OBS Broadcaster</strong> und <strong>Save and Close</strong> wählen. StreamRay postet deine <strong>Stream-URL ins Chat-Fenster</strong> — von dort kopieren. Das Stream-Key-Feld in SplitCam <strong>leer</strong> lassen; StreamRay authentifiziert nur über die URL.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam mit StreamRay verbinden</div><p class="step-p">Öffne in SplitCam <strong>Stream Settings</strong>, füge die StreamRay-Server-URL und den Stream-Key in die Custom-RTMP-Felder ein. Bitrate: 3.500–6.000&nbsp;Kbps für 1080p, 2.000–4.000&nbsp;Kbps für 720p. Starte zuerst den eingebauten Speedtest.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Auf Go Live klicken</div><p class="step-p">Drücke in SplitCam <strong>Go Live</strong> und starte dann die Übertragung auf StreamRay. In ~10 Sekunden ist deine Kamera live. Folgestreams sind ein Klick — SplitCam öffnen, Go Live.</p></div></div></div>
+</section>
+<section class="section">
+  <h2 class="sec-h">Profi-Tipps</h2>
+  <div class="tips-grid"><div class="tip-card"><h3>Die URL ist im Chat</h3><p>StreamRay zeigt die Stream-URL nicht in einem Einstellungsfeld — sie wird ins Broadcast-Chat-Fenster gepostet. Dort kopieren.</p></div><div class="tip-card"><h3>Stream-Key leer lassen</h3><p>StreamRay verwendet keinen separaten Key — nur die URL. Das Key-Feld in SplitCam nicht ausfüllen.</p></div><div class="tip-card"><h3>Kabelverbindung</h3><p>Ethernet ist bei langen Streams zuverlässiger als WLAN — ein verlorenes Frame ist ein verlorener Tipp. Zieh ein Kabel zum Streaming-PC.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div>
+</section>
+<section class="section">
+  <h2 class="sec-h">FAQ</h2>
+  <div class="faq-list"><details class="faq-item"><summary>Wo ist die StreamRay-Stream-URL?</summary><p>Nach Aktivierung des OBS Broadcasters postet StreamRay die Stream-URL ins Chat-Fenster — von dort kopieren.</p></details><details class="faq-item"><summary>Warum gibt es keinen StreamRay-Stream-Key?</summary><p>StreamRay authentifiziert nur über die URL — SplitCams Stream-Key-Feld leer lassen.</p></details><details class="faq-item"><summary>Welche Bitrate für StreamRay?</summary><p>StreamRay nennt keine offizielle Obergrenze — 3.500–6.000 Kbps bei 1080p anvisieren und den SplitCam-Speedtest laufen lassen, da der URL-only-Aufbau kein Bitrate-Feedback gibt.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für StreamRay?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit, was zum URL-only-Workflow von StreamRay passt: einen Link einfügen und senden.</p></details></div>
+</section>
+<div class="section">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere Plattform-Anleitungen</h3>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Auf Chaturbate streamen</h4><p>Token-Setup für Chaturbate über externen Encoder.</p></a><a class="related-card" href="../cam4/"><h4>Auf CAM4 streamen</h4><p>External Encoder bei CAM4 mit Geo-Kontrollen.</p></a><a class="related-card" href="../bongacams/"><h4>Auf BongaCams streamen</h4><p>External-Encoder-Setup für BongaCams.</p></a></div>
+</div>
+<section class="cta-block">
+  <h2>Bereit für den Live-Stream?</h2>
+  <p>Kostenlose Software. Kein Wasserzeichen, keine Registrierung. Einmal einrichten, mit einem Klick live gehen.</p>
+  <a href="https://splitcam.com/download" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ SplitCam herunterladen</a>
+</section>
+<div class="section meta-line">
+  <span class="age-tag">18+</span>
+  <span>Zuletzt aktualisiert: <time datetime="2026-05-30">2026-05-30</time></span>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Streaming Guides · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="../../">Alle Anleitungen</a>
+      <a href="../../about/">Über uns</a>
+      <a href="../../contact/">Kontakt</a>
+      <a href="../../privacy/">Datenschutz</a>
+      <a href="../../terms/">Nutzungsbedingungen</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
