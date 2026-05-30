@@ -1,0 +1,538 @@
+# -*- coding: utf-8 -*-
+"""Croatian (hr) content for cam-streaming-guides."""
+
+_T_ETH = ("Koristi kabelsku vezu", "Ethernet pobjeđuje Wi-Fi u dugom streamu — izgubljeni frame je "
+          "izgubljen tip. Provuci kabel do stream računala.")
+_T_TEST = ("Prvo napravi privatni test", "Pokreni kratak test prijenos za kameru, zvuk, "
+           "kadriranje i preklapanja prije nego otvoriš sobu publici.")
+
+PLATFORMS_HR = [
+    {"slug": "chaturbate", "name": "Chaturbate",
+     "title": "Prijenos na Chaturbate sa SplitCamom — Token & RTMP",
+     "desc": "Prijenos na Chaturbate s besplatnim SplitCamom — broadcast token, RTMP, multi-kamera scene i preklapanja. Bez vodenog žiga.",
+     "kw": "chaturbate prijenos, chaturbate broadcast token, chaturbate rtmp obs, chaturbate external encoder, chaturbate live",
+     "h1html": 'Kako prenosiš na <span class="accent">Chaturbate</span>u sa SplitCamom',
+     "h1short": "Prijenos Chaturbate",
+     "card": "Token-bazirano podešavanje s vanjskim enkoderom na Chaturbateu.",
+     "intro": "Chaturbate je jedna od najvećih cam platformi, izgrađena na token ekonomiji. Browser broadcaster je ravan jedno-kamerni alat — prijelaz na <strong style='color:var(--text)'>vanjski enkoder</strong> s besplatnim <strong style='color:var(--text)'>SplitCamom</strong> otvara multi-kamera scene, preklapanja i filtere na istom token-baziranom streamu.",
+     "quick": "Prijenos na Chaturbateu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na Chaturbateu otvori <em>Broadcast Yourself → My Broadcast</em>, kopiraj broadcast token, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Kopiraj broadcast token s Chaturbatea.</li><li>Zalijepi u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na Chaturbateu klikni <strong>Broadcast Yourself</strong> za stranicu <strong>My Broadcast</strong>, zatim <strong>View RTMP/OBS broadcast information and stream key</strong>. Ključ se pojavljuje kao <strong>broadcast token</strong> — kopiraj. Tretiraj kao lozinku; nikad javno.",
+     "tips": [
+         ("Token je ključ", "Chaturbate koristi tvoj broadcast token umjesto generičkog stream keya. Tretiraj kao lozinku i resetiraj ako procuri."),
+         ("Dosta prostora", "Chaturbateov RTMP ingest prihvaća do 4K, 60 fps i visok bitrate — limit je tvoj upload, ne platforma. Keyframe svake 2 sekunde."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Dopušta li Chaturbate OBS / vanjske enkodere?", "Da — Chaturbate službeno podržava vanjske enkodere s vlastitim «How do I set up OBS?» člankom. Aktiviraj «Use External Encoder to Broadcast» u broadcast postavkama."),
+         ("Gdje je moj Chaturbate stream key?", "Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Ključ je tvoj broadcast token."),
+         ("Koji bitrate za Chaturbate?", "3500–6000 Kbps na 1080p je sasvim dovoljno. Chaturbateov plafon je visok — stvarni limit je tvoj upload; pokreni prvo SplitCamov test brzine."),
+         ("Je li SplitCam besplatan za Chaturbate?", "Da — potpuno besplatan, bez vodenog žiga i bez vremenskog ograničenja: enkoder ne jede tvoje zarade u tokenima."),
+     ]},
+    {"slug": "cam4", "name": "CAM4",
+     "title": "Prijenos na CAM4 sa SplitCamom — External Encoder",
+     "desc": "Prijenos na CAM4 s besplatnim SplitCamom — External Encoder, stream key, geo-blokada i preklapanja. Bez vodenog žiga.",
+     "kw": "cam4 prijenos, cam4.com, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+     "h1html": 'Kako prenosiš na <span class="accent">CAM4</span> sa SplitCamom',
+     "h1short": "Prijenos CAM4",
+     "card": "External Encoder na CAM4 s geo-kontrolama.",
+     "intro": "CAM4 je globalna cam-and-earn platforma s ugrađenim geo-kontrolama — možeš sakriti prijenos u odabranim zemljama. Prijenos preko besplatnog <strong style='color:var(--text)'>SplitCama</strong> kao vanjskog enkodera otvara promjene scene i preklapanja koje osnovni broadcaster ne radi.",
+     "quick": "Prijenos na CAM4 sa SplitCamom: instaliraj SplitCam, izgradi scenu, na CAM4 idi <em>Broadcast &amp; Earn Money → Start Broadcast → External Encoder</em>, Get Stream Key, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi stream key s CAM4.</li><li>Zalijepi u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na CAM4 klikni <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn Money</strong> → <strong>Start Broadcast</strong>, zatim <strong>External Encoder</strong> gore. Ispuni datum rođenja, spol i zemlju, koristi <strong>Get Stream Key</strong> i kopiraj. Zeleni slider u Stream Settings SplitCama potvrđuje vezu.",
+     "tips": [
+         ("Postavi geo-ograničenja", "CAM4 dopušta skrivanje prijenosa u određenim zemljama i regijama — podesi sa CAM4 strane prije go-livea."),
+         ("Prati zeleni slider", "CAM4 setup pokazuje zeleni slider u Stream Settings SplitCama kad je ključ prihvaćen — crveno = provjeri ključ."),
+         ("Niži bitrate nego inače", "CAM4 ingest ograničava video bitrate na oko 3000 Kbps — niže od većine cam sajtova. Ne guraj više."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li CAM4 OBS / vanjske enkodere službeno?", "Da — CAM4 ima službeni OBS Guide na support sajtu i preporučuje External Encoder za najbolje iskustvo. SplitCam koristi istu RTMP rutu."),
+         ("Mogu li geo-blokirati svoj CAM4 stream?", "Da — CAM4 ima ugrađeno geo-ograničenje za skrivanje prijenosa u određenim zemljama. Podesi u CAM4, ne u SplitCamu."),
+         ("Gdje je CAM4 stream key?", "Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key."),
+         ("Koji bitrate za CAM4?", "Niži od prosječnog — CAM4 ingest ograničava na ~3000 Kbps pri 30 fps s 1-sekundnim keyframeom. Službena tablica preporučuje da ne pređeš ~3000."),
+     ]},
+    {"slug": "bongacams", "name": "BongaCams",
+     "title": "Prijenos na BongaCams sa SplitCamom — External Encoder",
+     "desc": "Prijenos na BongaCams s besplatnim SplitCamom — External Encoder, multi-kamera scene, preklapanja i AI pozadina. Bez vodenog žiga.",
+     "kw": "bongacams, bongcams, bongacams prijenos, bongacams external encoder, bongacams rtmp obs",
+     "h1html": 'Kako prenosiš na <span class="accent">BongaCams</span>u sa SplitCamom',
+     "h1short": "Prijenos BongaCams",
+     "card": "External Encoder podešavanje za BongaCams.",
+     "intro": "BongaCams je globalna cam platforma. Prijenos preko vanjskog enkodera nije uvijek aktivan — jednom aktiviran, besplatni <strong style='color:var(--text)'>SplitCam</strong> vodi prijenos s multi-kamera scenama, preklapanjima i AI pozadinom.",
+     "quick": "Prijenos na BongaCamsu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na BongaCamsu idi <em>Options → Broadcast settings → Select Encoder → External Encoder</em>, kopiraj URL i ključ, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi URL i ključ s BongaCams.</li><li>Zalijepi u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na BongaCamsu otvori <strong>Options</strong> → <strong>Broadcast settings</strong> → <strong>Select Encoder</strong> → <strong>External Encoder</strong> i kopiraj prikazani server URL i stream key. <strong>Ako gumb External Encoder nedostaje</strong>, kontaktiraj BongaCams podršku i zatraži aktiviranje vanjskog kodiranja na računu.",
+     "tips": [
+         ("Nema External Encoder gumba? Podrška", "BongaCams aktivira vanjsko kodiranje po računu — ako opcija nedostaje u Broadcast settings, podrška je aktivira."),
+         ("Uskladi rezoluciju", "BongaCams preporučuje da rezolucija web kamere i prijenosa se poklapaju — npr. obje 1280×720."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Zašto se gumb External Encoder ne pojavljuje na BongaCamsu?", "Vanjsko kodiranje nije aktivno po defaultu na svakom računu — kontaktiraj BongaCams podršku da ga aktivira, i gumb će se pojaviti u Broadcast settings."),
+         ("Moram li verificirati BongaCams račun?", "Da — prijenos zahtijeva 18+, službeni ID za provjeru dobi i odobrenje računa prije uživo."),
+         ("Koji bitrate za BongaCams?", "BongaCams RTMP ingest ograničava video bitrate na oko 6000 Kbps s 2-sekundnim keyframeom — 3500–6000 na 1080p je idealna zona; testiraj upload prije."),
+         ("Je li SplitCam besplatan za BongaCams?", "Da — potpuno besplatan, bez vodenog žiga i bez vremenskog ograničenja, tako da enkoder ne smanjuje tvoje zarade u tokenima na BongaCamsu."),
+     ]},
+    {"slug": "stripchat", "name": "Stripchat",
+     "title": "Prijenos na Stripchatu sa SplitCamom — Strip Cam Setup",
+     "desc": "Prijenos na Stripchatu — strip cam platformi — s besplatnim SplitCamom. Vanjski softver, token ključ, scene i preklapanja.",
+     "kw": "strip cam, stripchat live stream, stripchat prijenos, stripchat external software, stripchat stream key, stripchat rtmp obs",
+     "h1html": 'Kako prenosiš na <span class="accent">Stripchatu</span> sa SplitCamom',
+     "h1short": "Prijenos Stripchat",
+     "card": "Vanjski softver za Stripchat streamove.",
+     "intro": "Stripchat je velika cam platforma s fokusom na interaktivnost. <em>External software</em> način ti daje token-bazirani ključ — stavi ga u besplatni <strong style='color:var(--text)'>SplitCam</strong> da prenosiš sa scenama, preklapanjima i filterima umjesto ravne kamere.",
+     "quick": "Prijenos na Stripchatu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na Stripchatu odaberi <em>Switch to external software</em>, kopiraj stream key, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi stream key sa Stripchata.</li><li>Zalijepi u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na Stripchatu odaberi <strong>Switch to external software</strong>, zatim <strong>Show external software settings for the stream</strong>. Kopiraj stream key — Stripchat ga pokazuje kao token. Čuvaj privatno.",
+     "tips": [
+         ("Uskladi rezoluciju sa stranicom", "Stripchat FAQ upozorava: rezolucija u tvom softveru mora se točno poklapati s onom na stranici, inače video pikselira. Postavi obje jednako."),
+         ("Pazi na 2 Mbps minimum", "Stripchat navodi 2 Mbps upload kao minimum — i kaže izravno da to nije dovoljno za OBS streaming ili multistreaming. Ciljaj puno više."),
+         ("Ključ je token", "Stripchatov stream key je token — kopiraj točno, nikad ne dijeli, resetiraj ako procuri."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Preporučuje li Stripchat OBS / vanjski softver?", "Da — službeni FAQ Stripchata preporučuje vanjski broadcast softver poput OBS-a «kako bi se postigla najbolja video i audio kvaliteta». SplitCam radi jednako."),
+         ("Kako prebaciti Stripchat na vanjski softver?", "U Broadcast Centru odaberi Switch to External Broadcast Software (OBS), zatim otvori external software settings da otkriješ stream key (token)."),
+         ("Koji bitrate za Stripchat?", "RTMP ingest prihvaća do ~6000 Kbps s 2-sekundnim keyframeom. 3500–6000 na 1080p je idealno — ali moraš biti dosta iznad 2 Mbps minimuma, posebno za OBS streaming."),
+         ("Je li SplitCam besplatan za Stripchat?", "Da — bez naknade za licencu, bez vodenog žiga, bez vremenskog ograničenja: čak i dugi interaktivni Stripchat showovi ne koštaju ništa sa strane enkodera."),
+     ]},
+    {"slug": "onlyfans", "name": "OnlyFans",
+     "title": "Uživo na OnlyFans sa SplitCamom — Autorizacija ili ključ",
+     "desc": "Uživo na OnlyFans s besplatnim SplitCamom — prijava autorizacijom ili OBS Key, multi-kamera scene, preklapanja. Bez vodenog žiga.",
+     "kw": "uživo onlyfans, onlyfans live stream, onlyfans autorizacija splitcam, onlyfans obs key, onlyfans streaming software",
+     "h1html": 'Kako ideš uživo na <span class="accent">OnlyFans</span>u sa SplitCamom',
+     "h1short": "Live OnlyFans",
+     "card": "Autoriziraj jednom ili zalijepi ključ — live na OnlyFansu.",
+     "intro": "OnlyFans live je za tvoje pretplatnike. SplitCam povezuje na <strong style='color:var(--text)'>dva načina</strong> — prijaviš se jednom s OnlyFans računom i SplitCam uzima stream key automatski i drži ga sinkroniziranim, ili zalijepiš OBS Key ručno. U oba slučaja prenosiš s multi-kamera scenama, preklapanjima i filterima.",
+     "quick": "Live na OnlyFans sa SplitCamom: instaliraj SplitCam, izgradi scenu, otvori Stream Settings &rarr; Add Channel &rarr; OnlyFans i odaberi <em>Autorizacija</em> — prijavi se s OnlyFans računom, SplitCam uzima ključ automatski — i pritisni Go Live. S povezanim računom možeš mijenjati parametre OnlyFans streama u SplitCamu, bez otvaranja OnlyFans stranice.",
+     "steps": [
+         ("Preuzmi i instaliraj SplitCam",
+          "SplitCam je besplatan streaming softver za Windows i macOS — bez registracije, kartice ili vodenog žiga. To je enkoder koji šalje tvoj video na OnlyFans."),
+         ("Podesi kameru i scenu",
+          "Otvori SplitCam i dodaj web kameru. Izgradi scenu koju će gledatelji vidjeti — preklapanja, tekst, druga kamera, beauty filteri ili AI pozadina, sve primijenjeno uživo."),
+         ("Povezivanje — Metoda 1: Autorizacija (preporučeno)",
+          "U SplitCamu otvori <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> i odaberi <strong>Autorizacija</strong>. Prijavi se s OnlyFans emailom i lozinkom. SplitCam povezuje račun, uzima stream key automatski i drži ga sinkroniziranim — i omogućuje ti upravljanje parametrima OnlyFans livea u SplitCamu, mijenjajući ih tijekom ili poslije prijenosa bez otvaranja OnlyFans stranice."),
+         ("Povezivanje — Metoda 2: Stream Key (ručno)",
+          "Više voliš da se ne prijaviš? Koristi ključ. Na OnlyFansu idi <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Other</strong> sekcija i kopiraj <strong>OBS Key</strong>. U SplitCamu, Add Channel &rarr; OnlyFans, zalijepi u polje za ključ. Taj ključ je statičan — za promjenu postavki kasnije vraćaš se na OnlyFans stranicu."),
+         ("Go Live",
+          "Bez obzira na metodu, pritisni <strong>Go Live</strong> u SplitCamu. S Metodom 1 možeš nastaviti podešavati OnlyFans parametre iz SplitCama u realnom vremenu; s Metodom 2 ključ ostaje točno kako si ga postavio."),
+     ],
+     "tips": [
+         ("Autorizacija vs Stream Key", "Dva načina povezivanja: <strong>Autorizacija</strong> (prijaviš se jednom, ključ se uzima i sinkronizira — najlakši put) ili <strong>Stream Key</strong> (kopiraš OBS Key na OnlyFans → Profile → Settings → Other i zalijepiš). Autorizacija štedi ručno kopiranje."),
+         ("Mijenjaj postavke bez napuštanja SplitCama", "S autorizacijom račun ostaje povezan, tako da podešavaš OnlyFans live parametre iz SplitCama tijekom ili poslije prijenosa — bez prolaska kroz OnlyFans stranicu."),
+         ("Skroman bitrate", "OnlyFans RTMP ingest ograničava video bitrate na oko 2500 Kbps — strože nego većina cam sajtova. Ciljaj 720p–1080p pri ~2000–2500."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Kako povezati OnlyFans sa SplitCamom?", "Na dva načina. <strong>Autorizacija</strong> — Stream Settings → Add Channel → OnlyFans → prijavi se s OnlyFans računom i SplitCam uzima ključ automatski. Ili <strong>Stream Key</strong> — kopiraj OBS Key na OnlyFans → Profile → Settings → Other i zalijepi."),
+         ("Mogu li mijenjati OnlyFans live postavke bez otvaranja stranice?", "Da — s Autorizacijskom metodom SplitCam ostaje povezan s tvojim OnlyFans računom, tako da ključ i postavke sinkroniziraju automatski. Mijenjaš sve iz SplitCama tijekom ili poslije prijenosa, bez posjeta onlyfans.com."),
+         ("Koji bitrate za OnlyFans?", "Skroman — OnlyFans RTMP ingest ograničava bitrate na oko 2500 Kbps, puno strože nego druge cam platforme. Ciljaj 720p–1080p oko 2000–2500 Kbps."),
+         ("Je li SplitCam besplatan za OnlyFans live?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Nema troškova sa strane enkodera."),
+     ]},
+    {"slug": "camplace", "name": "CamPlace",
+     "title": "Prijenos na CamPlaceu sa SplitCamom — Besplatan vodič",
+     "desc": "Prijenos na CamPlaceu s besplatnim SplitCamom — vanjski enkoder, RTMP ključ, scene i preklapanja. Korak po korak, bez vodenog žiga.",
+     "kw": "camplace prijenos, camplace broadcasting software, camplace rtmp, camplace external encoder, camplace stream key",
+     "h1html": 'Kako prenosiš na <span class="accent">CamPlaceu</span> sa SplitCamom',
+     "h1short": "Prijenos CamPlace",
+     "card": "Vanjski enkoder za CamPlace streamove.",
+     "intro": "CamPlace je cam-streaming platforma. Nema javnog OBS članka, pa je <strong style='color:var(--text)'>video vodič iznad</strong> tvoja referenca — besplatni <strong style='color:var(--text)'>SplitCam</strong> se povezuje preko standardnog RTMP-a i dodaje scene, preklapanja i AI pozadinu koje osnovna kamera ne radi.",
+     "quick": "Prijenos na CamPlaceu sa SplitCamom: instaliraj SplitCam, izgradi scenu, aktiviraj vanjsko/RTMP broadcasting na CamPlaceu, kopiraj server URL i stream key, zalijepi u SplitCam, Go Live. Prati video za trenutnu rutu."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi RTMP ključ s CamPlacea.</li><li>Zalijepi u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Prijavi se na CamPlace i otvori broadcasting postavke. Prebaci na vanjski enkoder / RTMP / OBS opciju da otkriješ <strong>server URL</strong> i <strong>stream key</strong>, kopiraj oboje. CamPlace ne objavljuje službenu OBS dokumentaciju — <strong>video iznad</strong> je najpouzdanija ruta korak po korak kroz trenutno sučelje.",
+     "tips": [
+         ("Nema službenog OBS vodiča — koristi video", "CamPlace nema javni članak o vanjskim enkoderima; video iznad je referenca za trenutnu rutu."),
+         ("Standardni RTMP radi", "Iako nedokumentirano, CamPlace prihvaća standardni RTMP server URL i ključ — SplitCam se povezuje kao prilagođena RTMP destinacija."),
+         ("Slaži preklapanja u SplitCamu", "Tip ciljevi, ime i social handles kao slojevi scene — CamPlaceova osnovna kamera ne dodaje takve."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Ima li CamPlace službeni OBS vodič?", "Nije pronađen javni članak o vanjskim enkoderima. CamPlace prihvaća standardni RTMP URL i ključ, tako da SplitCam radi — prati video."),
+         ("Podržava li CamPlace vanjske enkodere?", "Da — prihvaća standardni RTMP stream key, tako da se SplitCam povezuje kao prilagođena RTMP destinacija."),
+         ("Koji bitrate za CamPlace?", "CamPlace ne objavljuje službeni broj — koristi 3500–6000 Kbps na 1080p kao siguran raspon i pusti SplitCam test brzine da fiksira tvoj stvarni plafon."),
+         ("Je li SplitCam besplatan za CamPlace?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Kako CamPlace ne dolazi s vlastitim enkoderom, besplatan RTMP alat odrađuje posao."),
+     ]},
+    {"slug": "camsoda", "name": "CamSoda",
+     "title": "CamSoda live sa SplitCamom — Besplatno podešavanje",
+     "desc": "CamSoda live s besplatnim SplitCamom — Use OBS Broadcaster, regionalni serveri, scene i preklapanja. Bez vodenog žiga.",
+     "kw": "camsoda live, camsoda prijenos, camsoda obs broadcaster, camsoda rtmp obs, camsoda live broadcast",
+     "h1html": 'Kako prenosiš na <span class="accent">CamSodi</span> sa SplitCamom',
+     "h1short": "Prijenos CamSoda",
+     "card": "Use OBS Broadcaster podešavanje na CamSodi.",
+     "intro": "CamSoda je američka cam platforma poznata po interaktivnim i neuobičajenim show formatima. Podržava OBS streaming službeno — postoji gumb <strong style='color:var(--text)'>Use OBS Broadcaster</strong> na Go Live stranici i službeni OBS vodič na CamSoda wikiju. Besplatni <strong style='color:var(--text)'>SplitCam</strong> radi jednako.",
+     "quick": "Prijenos na CamSodi sa SplitCamom: instaliraj SplitCam, izgradi scenu, klikni Use OBS Broadcaster na CamSoda Go Live stranici, kopiraj server URL i stream key, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Klikni Use OBS Broadcaster na CamSodi.</li>"
+              "<li>Zalijepi server URL + ključ u SplitCam.</li><li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na CamSodinoj <strong>Go Live</strong> stranici klikni <strong>Use OBS Broadcaster</strong>. CamSoda prikazuje RTMP server URL i stream key — kopiraj oboje. Odaberi regionalni server (Sjeverna Amerika, Europa, Azija itd.) koji je najbliži. CamSoda wiki ima pun OBS vodič za detalje.",
+     "tips": [
+         ("Verificiraj se za tipove", "Na CamSodi svatko može prenositi, ali za primanje tipova moraš dovršiti CamSoda proces verifikacije."),
+         ("Odaberi najbliži regionalni server", "CamSoda nudi regionalne ingest servere — najbliži (NA / Europa / Azija / Južna Amerika / Oceanija) smanjuje kašnjenje i izgubljene frameove."),
+         ("Plafon na 1080p / 30 fps", "CamSoda ingest ide do oko 1080p, 30 fps i ~6000 Kbps — ne guraj više."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li CamSoda OBS / vanjske enkodere?", "Da — službeno. Postoji gumb Use OBS Broadcaster na Go Live stranici i OBS vodič na CamSoda wikiju, tako da SplitCam radi."),
+         ("Moram li se verificirati na CamSodi?", "Za prijenos, ne. Za primanje tipova, da — CamSoda zahtijeva prvo proces verifikacije dovršen."),
+         ("Koju rezoluciju podržava CamSoda?", "Do 1920×1080 pri 30 fps, oko 6000 Kbps maksimum na RTMP ingestu."),
+         ("Je li SplitCam besplatan za CamSodu?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Radi s besplatnim Use OBS Broadcaster načinom CamSode, tako da cijeli lanac ne košta ništa."),
+     ]},
+    {"slug": "streamate", "name": "Streamate",
+     "title": "Prijenos na Streamate sa SplitCamom — Integrirani kanal",
+     "desc": "Prijenos na Streamate s besplatnim SplitCamom — integrirani kanal, SM Connect ključ, scene i preklapanja. Bez vodenog žiga.",
+     "kw": "streamate, streamate sm connect, streamate prijenos, streamate broadcasting software, streamate rtmp",
+     "h1html": 'Kako prenosiš na <span class="accent">Streamate</span>u sa SplitCamom',
+     "h1short": "Prijenos Streamate",
+     "card": "Streamate je integrirani kanal u SplitCamu — brzo podešavanje.",
+     "intro": "Streamate je etablirana cam platforma — i jedna je od <strong style='color:var(--text)'>unaprijed konfiguriranih destinacija u SplitCamu</strong>, na listi kanala, tako da je podešavanje brže od ručnog RTMP unosa: odabereš Streamate, zalijepiš ključ, gotovo.",
+     "quick": "Prijenos na Streamate sa SplitCamom: instaliraj SplitCam, izgradi scenu, na Streamateu koristi <em>SM Connect → Start Show</em> i kopiraj ključ, zatim u SplitCamu otvori <em>Stream Settings → Add Channel → Streamate</em> i zalijepi."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi Streamate ključ preko SM Connect.</li>"
+              "<li>Add Channel → Streamate u SplitCamu.</li><li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na Streamateu otvori <strong>SM Connect</strong>, prihvati uvjete, klikni <strong>Start Show</strong> lijevo i zatvori otvoreni prozor — zatim kopiraj streaming ključ. U SplitCamu otvori <strong>Stream Settings</strong> → <strong>Add Channel</strong>, odaberi <strong>Streamate</strong> s liste i zalijepi ključ. Zeleni slider potvrđuje vezu.",
+     "tips": [
+         ("Streamate je integriran", "Bez ručnog RTMP URL-a — SplitCam ima Streamate na Add Channel listi; samo odabereš i zalijepiš ključ."),
+         ("Zatvori SM Connect popup", "Nakon Start Showa Streamate otvara prozor — zatvori ga; služio je samo za otkrivanje streaming ključa."),
+         ("Zaključaj rezoluciju na 1080p", "Polje Video Resolution u SM Connectu može tiho skočiti na 1440, što se u praksi ne isporučuje i snižava ti kvalitetu šutke — postavi ručno 1080p. Bitrate koji pada pri statičnoj slici je normalan: Streamate stream je adaptivan."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Je li Streamate integriran u SplitCam?", "Da — Streamate se pojavljuje u SplitCam Add Channel listi; odabereš umjesto da tipkaš RTMP URL ručno."),
+         ("Gdje je Streamate streaming ključ?", "SM Connect → prihvati uvjete → Start Show → zatvori popup → kopiraj ključ."),
+         ("Koji bitrate za Streamate?", "Streamate ne postavlja tvrd plafon — 3500–6000 Kbps na 1080p radi dobro. Stream je adaptivan, tako da je niži bitrate pri statičnoj slici normalan, ne bug."),
+         ("Je li SplitCam besplatan za Streamate?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja; i jer je Streamate integrirani kanal u SplitCamu, nema niti odvojenog troška enkodera."),
+     ]},
+    {"slug": "streamray", "name": "StreamRay",
+     "title": "Prijenos na StreamRay camu sa SplitCamom — Chat URL",
+     "desc": "Prijenos na StreamRay camu s besplatnim SplitCamom — URL postavljen u chatu, OBS Broadcaster način, scene i preklapanja. Bez vodenog žiga.",
+     "kw": "streamray, streamray cam, streamray prijenos, streamray obs broadcaster, streamray rtmp",
+     "h1html": 'Kako prenosiš na <span class="accent">StreamRayu</span> sa SplitCamom',
+     "h1short": "Prijenos StreamRay",
+     "card": "URL-u-chatu vanjski enkoder za StreamRay.",
+     "intro": "StreamRay ima neuobičajeno podešavanje vanjskog enkodera — isporučuje stream URL u <strong style='color:var(--text)'>chat prozoru prijenosa</strong> i ne koristi odvojen stream key. Besplatni <strong style='color:var(--text)'>SplitCam</strong> rukuje ovim samo-URL tokom.",
+     "quick": "Prijenos na StreamRayu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na StreamRayu aktiviraj OBS Broadcaster, kopiraj stream URL iz chat prozora, zalijepi u SplitCam (ostavi polje za ključ prazno), Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Kopiraj StreamRay URL iz chata.</li>"
+              "<li>Zalijepi URL u SplitCam.</li><li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na StreamRayu dvostruki klik <strong>Broadcast Now</strong>, otvori <strong>Other</strong> izbornik, odaberi <strong>OBS Broadcaster</strong> i <strong>Save and Close</strong>. StreamRay tada postavlja <strong>stream URL u chat prozor</strong> — kopiraj odande. Ostavi SplitCam polje za stream key <strong>prazno</strong>; StreamRay autenticira samo preko URL-a.",
+     "tips": [
+         ("URL je u chatu", "StreamRay ne prikazuje stream URL u kutiji postavki — postavlja ga u chat prozor prijenosa. Kopiraj odande."),
+         ("Ostavi polje za ključ prazno", "StreamRay ne koristi odvojen ključ — samo URL. Ne stavljaj ništa u SplitCam polje za ključ."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Gdje je StreamRay stream URL?", "Nakon aktiviranja OBS Broadcastera, StreamRay postavlja URL u chat prozor — kopiraj iz chata."),
+         ("Zašto nema stream keya na StreamRayu?", "StreamRay autenticira samo preko URL-a — ostavi SplitCam polje za ključ prazno."),
+         ("Koji bitrate za StreamRay?", "StreamRay ne deklarira službeni plafon — ciljaj 3500–6000 Kbps na 1080p i pokreni SplitCam test brzine, jer samo-URL tok ne daje povratnu informaciju o bitrateu."),
+         ("Je li SplitCam besplatan za StreamRay?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja, što se poklapa sa samo-URL tokom StreamRaya: zalijepiš link i uživo si."),
+     ]},
+    {"slug": "xlovecam", "name": "XLoveCam",
+     "title": "Prijenos na XLoveCamu sa SplitCamom — RTMP link & ključ",
+     "desc": "Prijenos na XLoveCamu s besplatnim SplitCamom — RTMP link i ključ, regionalni serveri, scene i preklapanja. Bez vodenog žiga.",
+     "kw": "xlovecam, x love cam, xlovecam prijenos, xlovecam rtmp link, xlovecam stream key",
+     "h1html": 'Kako prenosiš na <span class="accent">XLoveCamu</span> sa SplitCamom',
+     "h1short": "Prijenos XLoveCam",
+     "card": "RTMP link + ključ za XLoveCam.",
+     "intro": "XLoveCam je europska višejezična cam platforma. Postavke računa prikazuju i <strong style='color:var(--text)'>RTMP link</strong> i <strong style='color:var(--text)'>stream key</strong> — besplatni <strong style='color:var(--text)'>SplitCam</strong> uzima oboje i prenosi s punim scenama i preklapanjima.",
+     "quick": "Prijenos na XLoveCamu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na XLoveCamu otvori <em>My Account → settings</em>, kopiraj RTMP link i stream key, zalijepi oboje u SplitCam, započni show."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Kopiraj RTMP link + ključ s XLoveCama.</li><li>Zalijepi oboje u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na XLoveCamu otvori <strong>My Account</strong> → <strong>settings</strong>. Postavke prikazuju i <strong>RTMP link</strong> i <strong>stream key</strong> — kopiraj oboje u SplitCam polja za server URL i ključ, zatim <strong>Start your show</strong> na XLoveCamu.",
+     "tips": [
+         ("Kopiraj link I ključ", "XLoveCam ti daje RTMP link I odvojen stream key — trebaš oboje u SplitCamu, ne samo jedno."),
+         ("Višejezična publika", "XLoveCam je europski i višejezičan — jasno tekstno preklapanje na tvom jeziku pomaže gledateljima da te nađu."),
+         ("Odaberi najbliži server", "XLoveCam nudi regionalne RTMP servere — Europa, Sjeverna Amerika, Južna Amerika i Azija. Najbliži smanjuje kašnjenje i izgubljene frameove."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Gdje su XLoveCam RTMP podaci?", "My Account → settings — prikazuje i RTMP link i ključ."),
+         ("Podržava li XLoveCam vanjske enkodere?", "Da — pruža RTMP link i ključ, tako da SplitCam radi kao enkoder."),
+         ("Koji bitrate za XLoveCam?", "XLoveCam ne objavljuje fiksni limit; 3500–6000 Kbps na 1080p je idealno. Odabir najbližeg regionalnog servera broji jednako — smanjuje izgubljene frameove."),
+         ("Je li SplitCam besplatan za XLoveCam?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Dosezanje višejezične europske publike XLoveCama ne košta softver."),
+     ]},
+    {"slug": "soulcams", "name": "SoulCams",
+     "title": "Prijenos na SoulCams sa SplitCamom — OBS postavke",
+     "desc": "Prijenos na SoulCams s besplatnim SplitCamom — OBS postavke, RTMP server i ključ, multi-kamera scene i preklapanja.",
+     "kw": "soul cams, soulcams, soulcams prijenos, soulcams obs, soulcams rtmp, soulcams broadcast",
+     "h1html": 'Kako prenosiš na <span class="accent">SoulCams</span>u sa SplitCamom',
+     "h1short": "Prijenos SoulCams",
+     "card": "OBS postavke za SoulCams.",
+     "intro": "SoulCams je cam platforma čije OBS postavke prikazuju <strong style='color:var(--text)'>RTMP server i stream key zajedno</strong> u jednom prozoru. Zalijepi oboje u besplatni <strong style='color:var(--text)'>SplitCam</strong> da prenosiš s multi-kamera scenama i preklapanjima.",
+     "quick": "Prijenos na SoulCams sa SplitCamom: instaliraj SplitCam, izgradi scenu, na SoulCamsu klikni Go Online → Settings → OBS, kopiraj server i ključ, zalijepi oboje u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Otvori SoulCams Settings → OBS.</li><li>Zalijepi server + ključ u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na SoulCamsu prijavi se i klikni <strong>Go Online</strong>, zatim otvori <strong>Settings</strong> → <strong>OBS</strong>. OBS prozor prikazuje <strong>RTMP server</strong> i <strong>stream key</strong> zajedno — kopiraj oboje u SplitCam.",
+     "tips": [
+         ("Server i ključ jedan pored drugog", "SoulCams prikazuje RTMP server i ključ u istom OBS prozoru — uzimaš oboje u jednom potezu."),
+         ("Go Online prvo", "OBS postavke se pojavljuju tek nakon klika Go Online na SoulCamsu — napravi to prije nego tražiš podatke enkodera."),
+         ("Blokiraj neželjene regije", "SoulCams dopušta geo-blokiranje sa modelske strane — odaberi koje zemlje ne mogu vidjeti stream, prije pritiska Go Online."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Gdje su SoulCams OBS postavke?", "Prijavi se, klikni Go Online, zatim Settings → OBS — RTMP server i stream key prikazuju se zajedno."),
+         ("Podržava li SoulCams vanjske enkodere?", "Da — OBS postavke daju RTMP server i ključ, tako da SplitCam radi."),
+         ("Koji bitrate za SoulCams?", "SoulCams ne daje službeni broj — ciljaj 3500–6000 Kbps na 1080p i testiraj upload, jer OBS prozor ne pokazuje bitrate vodič."),
+         ("Je li SplitCam besplatan za SoulCams?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja, tako da cijeli SoulCams show s multi-kamera scenama i preklapanjima ne košta ništa sa strane enkodera."),
+     ]},
+    {"slug": "imlive", "name": "ImLive",
+     "title": "Prijenos na ImLiveu sa SplitCamom — Virtualna kamera",
+     "desc": "Im Live stream podešavanje s besplatnim SplitCamom — ImLive koristi web kameru izravno (nema RTMP), poveži SplitCam kao virtualnu kameru sa scenama.",
+     "kw": "im live stream, imlive splitcam, imlive prijenos, imlive virtualna kamera, imlive webcam, im live cam",
+     "h1html": 'Kako koristiš <span class="accent">ImLive</span> sa SplitCamom',
+     "h1short": "SplitCam na ImLiveu",
+     "card": "Virtualna kamera za ImLive — bez RTMP-a.",
+     "intro": "ImLive koristi web kameru izravno u pregledniku — <strong style='color:var(--text)'>nema ni RTMP ni stream key</strong>. Besplatni <strong style='color:var(--text)'>SplitCam</strong> se povezuje kao <strong style='color:var(--text)'>virtualna kamera</strong>: gradiš scenu u SplitCamu, zatim odabereš SplitCam kao kameru u ImLiveu.",
+     "quick": "Korištenje SplitCama s ImLiveom: instaliraj SplitCam, izgradi scenu s medijskim slojevima, otvori ImLive i započni video chat, u ImLive postavkama odaberi SplitCam kao web kameru i mikrofon."
+              "<ol><li>Instaliraj SplitCam.</li><li>Izgradi scenu u SplitCamu.</li>"
+              "<li>Započni video chat na ImLiveu.</li>"
+              "<li>Odaberi SplitCam kao ImLive kameru.</li><li>Započni chat.</li></ol>",
+     "steps": [
+         ("Instaliraj SplitCam",
+          "SplitCam je besplatan softver za Windows i macOS. Instaliraj — bez vodenog žiga, bez registracije. Za ImLive radi kao <strong>virtualna kamera</strong>, ne RTMP enkoder."),
+         ("Izgradi scenu u SplitCamu",
+          "Otvori SplitCam i koristi <strong>Media Layers +</strong> da dodaš web kameru plus bilo koja preklapanja, tekst, filtere ili AI pozadinu. Ta složena scena je ono što će ImLive vidjeti kao tvoju kameru."),
+         ("Započni video chat na ImLiveu",
+          "Prijavi se na ImLive stranicu i klikni <strong>Start Video Chat</strong>, zatim otvori <strong>Go To Settings</strong> da dođeš do opcija za kameru i mikrofon."),
+         ("Odaberi SplitCam kao kameru",
+          "U ImLive postavkama odaberi <strong>SplitCam</strong> kao web kameru I kao mikrofon. ImLive sada prikazuje tvoju punu SplitCam scenu umjesto ravne web kamere."),
+         ("Započni Free Live Chat",
+          "Klikni <strong>Free Live Chat</strong> na ImLiveu da budeš uživo. Za promjenu izgleda u sredini sesije, uredi scenu u SplitCamu — ImLive se ažurira odmah."),
+     ],
+     "tips": [
+         ("Nije potreban stream key", "ImLive nema RTMP — ne traži server URL ili ključ. SplitCam je samo odabran kao uređaj kamera."),
+         ("Postavi SplitCam i kao mikrofon", "Odaberi SplitCam za mikrofon uz kameru, da audio mix i redukcija buke također uđu u live."),
+         ("Izgradi scenu prije livea", "ImLive prikazuje ono što SplitCam šalje — složi slojeve prije nego započneš chat."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Koristi li ImLive RTMP ili stream key?", "Ne — ImLive koristi web kameru izravno kroz preglednik. SplitCam se povezuje kao virtualna kamera, nema ključa za kopiranje."),
+         ("Kako odabrati SplitCam na ImLiveu?", "Start Video Chat → Go To Settings → odaberi SplitCam kao web kameru i mikrofon."),
+         ("Mogu li koristiti preklapanja na ImLiveu?", "Da — gradiš ih u SplitCam sceni; ImLive prikazuje složeni rezultat."),
+         ("Je li SplitCam besplatan za ImLive?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Kao virtualna kamera za ImLive ne dodaje trošak ili brendiranje tvom video chatu."),
+     ]},
+    {"slug": "vxlive", "name": "VXLive",
+     "title": "Prijenos na VXLive sa SplitCamom — Službena podrška",
+     "desc": "Prijenos na VXLive (VXModels / VISIT-X) s besplatnim SplitCamom — službeni VISIT-X preset, server i ključ, scene. Bez vodenog žiga.",
+     "kw": "vxlive, visit-x, vxmodels splitcam, vxlive prijenos, visit-x stream, vxlive rtmp",
+     "h1html": 'Kako prenosiš na <span class="accent">VXLiveu</span> sa SplitCamom',
+     "h1short": "Prijenos VXLive",
+     "card": "VXLive podržava SplitCam službeno (VISIT-X preset).",
+     "intro": "VXLive (VXModels / VISIT-X) je cam platforma s njemačkog tržišta — i jedna od rijetkih koja <strong style='color:var(--text)'>podržava SplitCam službeno po imenu</strong>. VXModels ima namjenski članak pomoći za povezivanje <strong style='color:var(--text)'>SplitCama</strong> na VXLive, a SplitCam pruža VISIT-X kao gotov kanal preset.",
+     "quick": "Prijenos na VXLiveu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na VXLiveu odaberi «Stream with third-party software», kopiraj server URL i ključ, u SplitCamu odaberi VISIT-X preset i zalijepi, Go Live u SplitCamu, zatim GO ONLINE na VXLiveu."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi server URL + ključ s VXLivea.</li>"
+              "<li>Odaberi VISIT-X preset u SplitCamu, zalijepi.</li>"
+              "<li>Go Live, zatim GO ONLINE na VXLiveu.</li></ol>",
+     "key_how": "Na VXLiveu odaberi <strong>Stream with third-party software</strong> i odaberi opciju za <strong>OBS, SplitCam ili XSplit</strong>. VXLive pruža <strong>server URL</strong> i <strong>stream key</strong>. U SplitCamu odaberi <strong>VISIT-X</strong> kao streaming platformu, zalijepi oboje, pritisni <strong>Go Live</strong> u SplitCamu, zatim <strong>GO ONLINE</strong> na VXLiveu.",
+     "tips": [
+         ("VISIT-X je integriran preset", "Ne tipkaj sirovi RTMP URL — SplitCam ima VISIT-X na listi platformi; samo odabereš i zalijepiš server URL i ključ."),
+         ("Dvostepeni go-live", "Na VXLiveu pritisni Go Live u SplitCamu prvo, zatim GO ONLINE na VXLiveu — oboje, tim redom."),
+         ("Njemačko tržište", "Publika VXLivea je pretežno njemačkog govornog područja — njemačko tekstno preklapanje ili naslov pomaže povezivanju s gledateljima."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li VXLive SplitCam službeno?", "Da — VXModels (VXLive) održava namjenski službeni članak pomoći za SplitCam podešavanje i navodi SplitCam uz OBS i XSplit kao podržani broadcasting softver."),
+         ("Kako povezati SplitCam s VXLiveom?", "Na VXLiveu odabereš «Stream with third-party software», zatim u SplitCamu odabereš VISIT-X preset i zalijepiš server URL i stream key koje VXLive daje."),
+         ("Idem li uživo u SplitCamu ili na VXLiveu?", "Oboje — prvo Go Live u SplitCamu, zatim GO ONLINE na VXLiveu."),
+         ("Zašto VXModels preporučuje SplitCam?", "Službeni članak pomoći VXModelsa preporučuje SplitCam specifično za eliminiranje artefakata slike web kamere i pikselizacije i stabilizaciju veze — ne samo kao generički enkoder."),
+     ]},
+    {"slug": "virtwish", "name": "VirtWish",
+     "title": "Prijenos na VirtWish sa SplitCamom — Stream URL & ključ",
+     "desc": "Prijenos na VirtWish s besplatnim SplitCamom — Profile → Start Broadcast OBS sekcija, stream URL i ključ, scene i preklapanja.",
+     "kw": "virtwish, virtwish prijenos, virtwish broadcasting software, virtwish rtmp, virtwish stream key, virtwish obs",
+     "h1html": 'Kako prenosiš na <span class="accent">VirtWishu</span> sa SplitCamom',
+     "h1short": "Prijenos VirtWish",
+     "card": "Stream URL + ključ za VirtWish.",
+     "intro": "VirtWish je interaktivna cam platforma. Postavke prijenosa ti daju <strong style='color:var(--text)'>stream URL i odvojen stream key</strong> u OBS sekciji — besplatni <strong style='color:var(--text)'>SplitCam</strong> uzima oboje i vodi show sa scenama i preklapanjima.",
+     "quick": "Prijenos na VirtWishu sa SplitCamom: instaliraj SplitCam, izgradi scenu, na VirtWishu otvori <em>Profile → Start Broadcast</em> do OBS sekcije, kopiraj link i ključ, zalijepi oboje u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi URL + ključ s VirtWisha.</li><li>Zalijepi oboje u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "Na VirtWishu klikni na ikonu u gornjem desnom kutu → <strong>Profile</strong> → <strong>Start Broadcast</strong>, zatim <strong>Start Broadcast</strong> ponovno da dođeš do OBS sekcije. <strong>Kopiraj link iz prve linije</strong> u SplitCam polje Stream URL, a <strong>Stream Key</strong> odvojeno u polje za ključ.",
+     "tips": [
+         ("Link na prvoj liniji", "VirtWish OBS sekcija stavlja stream URL na prvu liniju — kopiraj u SplitCam Stream URL, zatim odvojeni ključ."),
+         ("Dva klika na Start Broadcast", "Pritisneš Start Broadcast dva puta na VirtWishu da dođeš do OBS sekcije — očekivano, ne bug."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Gdje su VirtWish RTMP podaci?", "Ikona gore desno → Profile → Start Broadcast dva puta → OBS sekcija prikazuje link i stream key."),
+         ("Podržava li VirtWish vanjske enkodere?", "Da — OBS sekcija pruža stream URL i ključ, tako da SplitCam radi."),
+         ("Koji bitrate za VirtWish?", "VirtWish ne objavljuje službeni plafon; 3500–6000 Kbps na 1080p je sigurno. Uskladi SplitCam rezoluciju s onom postavljenom na VirtWishu da izbjegneš rescaling."),
+         ("Je li SplitCam besplatan za VirtWish?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. VirtWish URL-i-ključ podešavanje košta samo minute koje su potrebne."),
+     ]},
+    {"slug": "xmodels", "name": "XModels",
+     "title": "Prijenos na XModelsu sa SplitCamom — Besplatan vodič",
+     "desc": "Prijenos na XModelsu s besplatnim SplitCamom — opcija vanjskog enkodera u postavkama model računa, RTMP ključ, scene i preklapanja.",
+     "kw": "xmodels, xmodels prijenos, xmodels broadcasting software, xmodels rtmp, xmodels external encoder",
+     "h1html": 'Kako prenosiš na <span class="accent">XModelsu</span> sa SplitCamom',
+     "h1short": "Prijenos XModels",
+     "card": "Vanjski enkoder za XModels streamove.",
+     "intro": "XModels je cam-streaming platforma s ugrađenom <strong style='color:var(--text)'>opcijom vanjskog enkodera</strong> u postavkama model računa. Besplatni <strong style='color:var(--text)'>SplitCam</strong> prenosi tamo s multi-kamera scenama, preklapanjima i filterima umjesto jedne ravne kamere.",
+     "quick": "Prijenos na XModelsu sa SplitCamom: instaliraj SplitCam, izgradi scenu, u XModels model računu aktiviraj opciju vanjskog enkodera, kopiraj server URL i stream key, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Aktiviraj vanjski enkoder u XModels postavkama.</li>"
+              "<li>Zalijepi server URL + ključ u SplitCam.</li><li>Pritisni Go Live.</li></ol>",
+     "key_how": "U XModels <strong>postavkama model računa</strong> aktiviraj opciju <strong>prijenos preko vanjskog enkodera</strong>. XModels pruža <strong>stream key</strong> — kopiraj u SplitCam. Ako opcija nije gdje očekuješ, XModels podrška je preko FAQ chata na stranici i <strong>info@xmodels.com</strong>; video iznad pokazuje i to.",
+     "tips": [
+         ("Nalazi se u postavkama računa", "XModels stavlja opciju vanjskog enkodera u postavke model računa, ne na odvojen broadcast zaslon."),
+         ("Podrška: chat + email", "XModels nema veliki javni help centar — site FAQ chat i info@xmodels.com su službeni kanali podrške."),
+         ("Slaži preklapanja u SplitCamu", "Tip ciljevi, ime i social handles kao slojevi scene — XModels osnovna kamera ne dodaje takve."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li XModels vanjske enkodere?", "Da — postavke model računa uključuju opciju broadcast preko vanjskog enkodera koja pruža stream key, tako da SplitCam radi."),
+         ("Gdje dobiti XModels pomoć?", "XModels podrška je preko FAQ chata na stranici i email info@xmodels.com — nema velikog javnog help centra."),
+         ("Koji bitrate za XModels?", "XModels ne dokumentira službeni broj — koristi 3500–6000 Kbps na 1080p i pokreni SplitCam test brzine, jer je XModels podrška samo chat i email."),
+         ("Je li SplitCam besplatan za XModels?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja, tako da prijenos na europsku mrežu XModelsa ne dodaje trošak softvera."),
+     ]},
+    {"slug": "flirt4free", "name": "Flirt4Free",
+     "title": "Prijenos na Flirt for Free camu sa SplitCamom — Besplatan vodič",
+     "desc": "Prijenos na Flirt for Free camu s besplatnim SplitCamom — External Broadcast Form, RTMP URL i Stream Name, scene i preklapanja.",
+     "kw": "flirt for free cam, flirt 4 free cam, flirt4free, flirt4free prijenos, flirt4free external broadcast, flirt4free rtmp",
+     "h1html": 'Kako prenosiš na <span class="accent">Flirt4Freeu</span> sa SplitCamom',
+     "h1short": "Prijenos Flirt4Free",
+     "card": "External Broadcast Form za Flirt4Free.",
+     "intro": "Flirt4Free je jedna od najstarijih cam platformi, u eteru od 90-ih. Podržava vanjski prijenos službeno preko <strong style='color:var(--text)'>External Broadcast Form</strong>-a — besplatni <strong style='color:var(--text)'>SplitCam</strong> šalje stream dok formular postavlja rezoluciju i bitrate.",
+     "quick": "Prijenos na Flirt4Freeu sa SplitCamom: instaliraj SplitCam, izgradi scenu, otvori Flirt4Free External Broadcast Form, kopiraj RTMP URL i Stream Name i postavi rezoluciju/bitrate, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Otvori Flirt4Free External Broadcast Form.</li>"
+              "<li>Zalijepi RTMP URL + Stream Name u SplitCam.</li>"
+              "<li>Pritisni Go Live.</li></ol>",
+     "key_how": "U Flirt4Free model području otvori <strong>External Broadcast Form</strong>. Za razliku od većine cam sajtova, Flirt4Free ti daje <strong>RTMP URL</strong> i <strong>Stream Name</strong> (ne «ključ»), plus polja za rezoluciju i bitrate koja ispunjavaš u samom formularu. Kopiraj URL i Stream Name u SplitCam polja za server i ključ.",
+     "tips": [
+         ("Stream Name, ne ključ", "Flirt4Free naziva credential Stream Name. Lijepiš ga u SplitCam polje za stream key — ista uloga."),
+         ("Postavi rezoluciju/bitrate u formularu", "Flirt4Free External Broadcast Form ima vlastita polja za rezoluciju i bitrate — poklapaj sa SplitCam postavkama da slika ne bude rescaled."),
+         ("Povijesna platforma", "Flirt4Free radi od 90-ih — model alati su zreli, i External Broadcast Form je dokumentiran dio toga."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li Flirt4Free vanjske enkodere?", "Da — službeno, preko External Broadcast Form, koji pruža RTMP URL i Stream Name. SplitCam radi kao enkoder."),
+         ("Gdje dobiti Flirt4Free RTMP podatke?", "Iz External Broadcast Form u model području — prikazuje RTMP URL, Stream Name i polja za rezoluciju/bitrate."),
+         ("Koji bitrate za Flirt4Free?", "3500–6000 Kbps na 1080p — postavi istu vrijednost u External Broadcast Form i u SplitCamu."),
+         ("Je li SplitCam besplatan za Flirt4Free?", "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja, što se poklapa s povijesnom platformom kao Flirt4Free gdje showovi mogu biti dugi."),
+     ]},
+    {"slug": "mfc-alerts", "name": "MFC Alerts",
+     "title": "Dodaj MFC Alerts na stream sa SplitCamom",
+     "desc": "Prikaži animirane tip alerts u MyFreeCams streamu — mfcalerts.com URL kao Browser sloj u besplatnom SplitCamu, iznad web kamere.",
+     "kw": "mfc alerts, myfreecams alerts, dodaj mfc alerts, mfcalerts splitcam, myfreecams tip alerts, myfreecams alerts overlay",
+     "h1html": 'Kako dodaš <span class="accent">MFC Alerts</span> na stream',
+     "h1short": "Dodaj MFC Alerts",
+     "card": "Prikaži animirane tip alerts u MyFreeCams streamu.",
+     "intro": "MFC Alerts prikazuje animirane efekte u tvom MyFreeCams streamu svaki put kada gledatelj pošalje tip. Radi kao <strong style='color:var(--text)'>Browser sloj</strong> u besplatnom <strong style='color:var(--text)'>SplitCamu</strong> — postaviš jednom i tipovi pokreću reakcije na zaslonu uživo.",
+     "quick": "Dodavanje MFC Alerts sa SplitCamom: instaliraj SplitCam, dodaj web kameru, otvori Browser tab i učitaj mfcalerts.com, kopiraj alerts URL, dodaj kao Browser sloj iznad web kamere, zatim testiraj test tipom."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj web kameru.</li>"
+              "<li>Uzmi URL s mfcalerts.com.</li>"
+              "<li>Dodaj kao Browser sloj iznad web kamere.</li>"
+              "<li>Pošalji test tip.</li></ol>",
+     "steps": [
+         ("Instaliraj SplitCam i dodaj web kameru",
+          "Instaliraj besplatni SplitCam za Windows ili macOS, zatim dodaj <strong>web kameru</strong> kao izvor. MFC Alerts sjedi kao sloj iznad te kamere."),
+         ("Otvori Browser tab i idi na mfcalerts.com",
+          "U SplitCamu otvori <strong>Browser</strong> tab i idi na <strong>www.mfcalerts.com</strong>. Prijavi se, ili registriraj ako još nemaš mfcalerts.com račun."),
+         ("Kopiraj alerts URL",
+          "Na mfcalerts.com koristi <strong>Copy to clipboard</strong> da kopiraš svoj osobni alerts URL — to je stranica koja renderira tip animacije."),
+         ("Dodaj URL kao Browser sloj — iznad web kamere",
+          "Zalijepi URL u SplitCam Browser prozor i klikni <strong>Add</strong>. Zatim presloži listu izvora tako da <strong>MFC Alerts bude iznad web kamere</strong> (3-točkasti izbornik → Move Up). Ako je ispod, efekti ostaju skriveni."),
+         ("Testiraj test tipom",
+          "Otvori <strong>Settings → Send test tip</strong> i potvrdi da se alert efekt pojavljuje iznad kamere. Zatim prenosi normalno na MyFreeCams — pravi tipovi sada pokreću animacije."),
+     ],
+     "tips": [
+         ("MFC Alerts mora biti iznad web kamere", "Najčešća greška: ako je MFC Alerts sloj ispod web kamere na listi izvora, efekti ostaju skriveni. Pomakni gore."),
+         ("Mfcalerts.com račun je potreban", "Alerts URL je osobni — registriraj se na mfcalerts.com prvo ako nemaš račun."),
+         ("Pošalji test tip prije livea", "Koristi Settings → Send test tip da potvrdiš da overlay radi — ne otkrivaj grešku u sredini showa."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Što je MFC Alerts?", "Sustav obavijesti za MyFreeCams koji prikazuje video efekte u tvom streamu kada gledatelji šalju tipove — dodaje se kao Browser overlay u SplitCamu."),
+         ("Zašto se moji MFC Alerts ne pojavljuju?", "Gotovo uvijek redoslijed slojeva — MFC Alerts Browser sloj mora biti iznad web kamere na listi izvora SplitCama."),
+         ("Trebam li račun za MFC Alerts?", "Da — registriraj se na mfcalerts.com da dobiješ svoj osobni alerts URL."),
+         ("Je li SplitCam besplatan za ovo?", "Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja, a MFC Alerts browser overlay radi u njemu bez dodatnih troškova."),
+     ]},
+    {"slug": "lovense", "name": "Lovense",
+     "title": "Dodaj Lovense igračku na stream sa SplitCamom",
+     "desc": "Poveži interaktivnu Lovense igračku s cam streamom pomoću besplatnog SplitCama — Lovense SplitCam Toolset, tip alerts na zaslonu, reakcije.",
+     "kw": "dodaj lovense na stream, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense interactive toy streaming",
+     "h1html": 'Kako dodaš <span class="accent">Lovense igračku</span> na stream',
+     "h1short": "Dodaj Lovense igračku",
+     "card": "Poveži interaktivnu Lovense igračku s cam streamom.",
+     "intro": "Pokrećeš cam stream preko besplatnog <strong style='color:var(--text)'>SplitCama</strong> i upariš <strong style='color:var(--text)'>Lovense</strong> igračku koja reagira na tokene. Lovense dokumentira službeni <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>, a SplitCam pruža službeni Lovense plugin — integracija je podržana s obje strane.",
+     "quick": "Za dodavanje Lovense igračke na stream: instaliraj SplitCam i Lovense softver, upari igračku, poveži Lovense na cam platformu, dodaj Lovense status kao Browser sloj u SplitCamu, zatim prenosi normalno."
+              "<ol><li>Instaliraj SplitCam.</li><li>Instaliraj Lovense softver i upari igračku.</li>"
+              "<li>Poveži Lovense na cam stranicu.</li>"
+              "<li>Dodaj Lovense overlay u SplitCam.</li><li>Pritisni Go Live.</li></ol>",
+     "steps": [
+         ("Instaliraj SplitCam",
+          "SplitCam je besplatan streaming softver za Windows i macOS — enkoder koji šalje tvoj video na cam platformu. Instaliraj; bez vodenog žiga."),
+         ("Instaliraj Lovense softver i upari igračku",
+          "Instaliraj Lovense Connect / Lovense Stream (službena desktop aplikacija). Uključi igračku i upari preko Bluetootha tako da aplikacija prikazuje povezano."),
+         ("Poveži Lovense na cam platformu",
+          "U Lovense aplikaciji poveži svoj cam račun tako da igračka reagira na gledateljeve tokene / tipove. Većina velikih cam platformi je podržana."),
+         ("Dodaj Lovense overlay u SplitCam",
+          "Lovense pruža overlay/widget URL. Dodaj kao <strong>Browser</strong> sloj u SplitCam scenu tako da gledatelji vide status igračke i nedavne tipove na zaslonu."),
+         ("Izgradi scenu i Go Live",
+          "Dodaj kameru i druga preklapanja, zalijepi RTMP ključ cam platforme u SplitCam i klikni <strong>Go Live</strong>. Igračka reagira na tipove u realnom vremenu."),
+     ],
+     "tips": [
+         ("Koristi službeni Lovense SplitCam Toolset", "Lovense objavljuje SplitCam-specifičan toolset s vlastitim vodičem instalacije — dodaje overlay aktivnosti igračke i tip alerts napravljene za SplitCam."),
+         ("Ažuriraj Lovense Cam Extension", "Toolset zahtijeva nedavnu Lovense Cam Extension (30.1.4 ili noviju) — ažuriraj prije livea."),
+         ("Drži igračku napunjenu", "Skoro prazna baterija u sredini showa ubija interaktivnu stranu — napuni potpuno prije livea."),
+         ("Testiraj reakciju na tokene", "Pošalji mali test tip da potvrdiš da igračka reagira prije nego otvoriš sobu."),
+         ("Provjeri zahtjeve verzije", "Lovense SplitCam Toolset zahtijeva SplitCam 10.4.5 ili noviji. Lovense Cam Extension pokriva službeno Chaturbate, Stripchat, BongaCams, MyFreeCams i CamSoda — za bilo koju drugu stranicu, koristi Lovense Generic URL integraciju."),
+     ],
+     "faq": [
+         ("Podržava li Lovense SplitCam službeno?", "Da — Lovense dokumentira službeni «Lovense SplitCam Toolset» s vlastitim vodičem instalacije, a SplitCam pruža službeni Lovense plugin. Integracija je podržana s obje strane."),
+         ("Povezuje li se igračka izravno sa SplitCamom?", "Ne — igračka se upari s Lovense aplikacijom; SplitCam prikazuje Lovense overlay i prenosi kameru."),
+         ("Koje cam stranice podržavaju Lovense?", "Lovense Cam Extension podržava službeno Chaturbate, Stripchat, BongaCams, MyFreeCams i CamSoda, s promjenjivom podrškom za druge — provjeri trenutnu listu u Lovense aplikaciji."),
+         ("Mogu li prikazati nedavne tipove na zaslonu?", "Da — dodaj URL Lovense widgeta kao Browser sloj u SplitCam."),
+     ]},
+    {"slug": "multistream-cams", "name": "Više cam stranica",
+     "title": "Prijenos na više cam stranica istovremeno sa SplitCamom",
+     "desc": "Prijenos na MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat i više istovremeno sa SplitCam besplatnim multistreamingom. Jedan klik, bez vodenog žiga.",
+     "kw": "prijenos na više cam stranica, multistream cam sites, prijenos na chaturbate i bongacams istovremeno, multistream cam softver",
+     "h1html": 'Kako prenosiš na <span class="accent">više cam stranica</span> istovremeno',
+     "h1short": "Cam multistreaming",
+     "card": "Prijenos na više cam stranica istovremeno.",
+     "intro": "Besplatni <strong style='color:var(--text)'>SplitCam</strong> može prenositi jedno kodiranje na <strong style='color:var(--text)'>više cam stranica istovremeno</strong> — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat i više. Bez vodenog žiga, jedan klik.",
+     "quick": "Za prijenos na više cam stranica odjednom: instaliraj SplitCam, izgradi scenu, uzmi RTMP server URL i stream key svake cam stranice, dodaj sve u SplitCam multistreaming postavke, klikni Go Live jednom."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi RTMP ključ sa svake cam stranice.</li>"
+              "<li>Dodaj sve ključeve u SplitCam multistream.</li>"
+              "<li>Pritisni Go Live jednom.</li></ol>",
+     "steps": [
+         ("Instaliraj SplitCam",
+          "SplitCam je besplatan streaming softver za Windows i macOS s ugrađenim multistreamingom. Instaliraj — bez vodenog žiga, bez registracije."),
+         ("Postavi kameru i scenu",
+          "Otvori SplitCam, dodaj web kameru i izgradi scenu s preklapanjima i filterima. Jedna scena hrani svaku destinaciju."),
+         ("Uzmi RTMP ključ sa svake cam stranice",
+          "Na svakoj cam platformi aktiviraj vanjsko / RTMP broadcasting i kopiraj <strong>server URL</strong> i <strong>stream key</strong>. Ponovi za svaku stranicu na koju želiš prenositi — pogledaj pojedinačne vodiče platformi za točne rute."),
+         ("Dodaj svaku destinaciju u SplitCam",
+          "Otvori <strong>Stream Settings</strong> i dodaj svaku cam stranicu kao prilagođenu RTMP destinaciju — zalijepi server URL i ključ. Označi sve što želiš uživo."),
+         ("Klikni Go Live jednom",
+          "Pritisni <strong>Go Live</strong>. SplitCam šalje stream na svaku odabranu cam stranicu istovremeno, peer-to-peer, iz jednog kodiranja — bez dodatne naknade."),
+     ],
+     "tips": [
+         ("Prati svoj upload", "Multistreaming množi upload opterećenje. Svaka destinacija troši vlastiti bitrate — uvjeri se da tvoja veza izdržava zbroj."),
+         ("Provjeri pravila platformi", "Neke cam stranice zabranjuju istovremen prijenos na drugo mjesto — potvrdi prije multistreaminga."),
+         ("Kabel — drops si ne možeš dopustiti ovdje", "Multistreaming množi upload opterećenje, tako da jedan wi-fi drop može oboriti sve destinacije odjednom. Kabel ovdje nije opcionalan."),
+         ("Prati health monitor", "SplitCam prikazuje status po destinaciji — ispusti stranicu ako upload ne izdržava."),
+     ],
+     "faq": [
+         ("Je li SplitCam multistreaming besplatan?", "Da — multistreaming je ugrađen i besplatan, bez naknade po destinaciji, bez vodenog žiga."),
+         ("Na koliko cam stranica mogu prenositi istovremeno?", "Koliko tvoja upload propusnost izdržava — svaka destinacija troši vlastiti bitrate."),
+         ("Koristi li cloud relay?", "Ne — SplitCam šalje streamove peer-to-peer izravno s PC-a na ingest svake platforme."),
+         ("Usporava li multistreaming moj PC?", "Kodiranje se radi jednom i ponovno koristi; hardversko kodiranje drži CPU opterećenje nisko. Upload propusnost je stvarni limit."),
+     ]},
+]
