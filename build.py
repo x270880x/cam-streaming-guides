@@ -781,7 +781,8 @@ def platform_logo(slug, depth, name):
 def lang_switch(cur, depth, slug=None):
     """Language switcher. slug set -> platform pages; slug None -> hub pages."""
     items = []
-    for L in LANGS_AVAIL:
+    # Sort alphabetically by native language name (Latin → Cyrillic → Greek → Arabic → Thai → CJK).
+    for L in sorted(LANGS_AVAIL, key=lambda x: LANG_NATIVE[x]):
         if slug:
             href = f"{depth}{LANG_PATH[L]}{slug}/"
         else:
