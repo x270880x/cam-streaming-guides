@@ -1,0 +1,538 @@
+# -*- coding: utf-8 -*-
+"""Norwegian (no - Bokmål) content for cam-streaming-guides."""
+
+_T_ETH = ("Bruk kabelforbindelse", "Ethernet slår Wi-Fi i en lang strøm — en tapt frame er "
+          "en tapt tip. Trekk en kabel til stream-PC-en.")
+_T_TEST = ("Gjør en privat test først", "Kjør en kort testsending for å sjekke kamera, lyd, "
+           "rammeverk og overlays før du åpner rommet for publikum.")
+
+PLATFORMS_NO = [
+    {"slug": "chaturbate", "name": "Chaturbate",
+     "title": "Sending på Chaturbate med SplitCam — Token & RTMP",
+     "desc": "Sending på Chaturbate med gratis SplitCam — broadcast token, RTMP, multi-kamera scener og overlays. Uten vannmerke.",
+     "kw": "chaturbate sending, chaturbate broadcast token, chaturbate rtmp obs, chaturbate external encoder, chaturbate live",
+     "h1html": 'Slik sender du på <span class="accent">Chaturbate</span> med SplitCam',
+     "h1short": "Sending Chaturbate",
+     "card": "Token-basert oppsett med ekstern enkoder på Chaturbate.",
+     "intro": "Chaturbate er en av de største cam-plattformene, bygget på token-økonomi. Nettleser-broadcasteren er et flatt en-kamera-verktøy — å bytte til <strong style='color:var(--text)'>ekstern enkoder</strong> med gratis <strong style='color:var(--text)'>SplitCam</strong> åpner multi-kamera scener, overlays og filtre på samme token-baserte strøm.",
+     "quick": "Sending på Chaturbate med SplitCam: installer SplitCam, bygg scenen, på Chaturbate åpne <em>Broadcast Yourself → My Broadcast</em>, kopier broadcast token, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Kopier broadcast token fra Chaturbate.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På Chaturbate klikk <strong>Broadcast Yourself</strong> for siden <strong>My Broadcast</strong>, deretter <strong>View RTMP/OBS broadcast information and stream key</strong>. Nøkkelen vises som <strong>broadcast token</strong> — kopier. Behandle som passord; aldri offentlig.",
+     "tips": [
+         ("Token er nøkkelen", "Chaturbate bruker broadcast token i stedet for generisk stream key. Behandle som passord og tilbakestill ved lekkasje."),
+         ("Mye plass", "Chaturbate's RTMP ingest aksepterer opptil 4K, 60 fps og høy bitrate — grensen er din opplastning, ikke plattformen. Keyframe hvert 2. sekund."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Tillater Chaturbate OBS / eksterne enkodere?", "Ja — Chaturbate støtter eksterne enkodere offisielt med egen «How do I set up OBS?»-artikkel. Aktiver med «Use External Encoder to Broadcast» i broadcast-innstillinger."),
+         ("Hvor er min Chaturbate stream key?", "Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Nøkkelen er din broadcast token."),
+         ("Hvilken bitrate til Chaturbate?", "3 500–6 000 Kbps ved 1080p er rikelig. Chaturbate's tak er høyt — den reelle grensen er opplastning; kjør først SplitCam's hastighetstest."),
+         ("Er SplitCam gratis for Chaturbate?", "Ja — helt gratis, uten vannmerke og uten tidsgrense: enkoderen spiser ikke token-inntektene dine."),
+     ]},
+    {"slug": "cam4", "name": "CAM4",
+     "title": "Sending på CAM4 med SplitCam — External Encoder",
+     "desc": "Sending på CAM4 med gratis SplitCam — External Encoder, stream key, geo-blokkering og overlays. Uten vannmerke.",
+     "kw": "cam4 sending, cam4.com, cam4 external encoder, cam4 stream key, cam4 rtmp obs",
+     "h1html": 'Slik sender du på <span class="accent">CAM4</span> med SplitCam',
+     "h1short": "Sending CAM4",
+     "card": "External Encoder på CAM4 med geo-kontroller.",
+     "intro": "CAM4 er en global cam-and-earn-plattform med innebygde geo-kontroller — du kan skjule sendingen i utvalgte land. Sending via gratis <strong style='color:var(--text)'>SplitCam</strong> som ekstern enkoder åpner scenebytter og overlays som basis-broadcasteren ikke gjør.",
+     "quick": "Sending på CAM4 med SplitCam: installer SplitCam, bygg scenen, på CAM4 gå til <em>Broadcast &amp; Earn Money → Start Broadcast → External Encoder</em>, Get Stream Key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent stream key fra CAM4.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På CAM4 klikk <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn Money</strong> → <strong>Start Broadcast</strong>, deretter <strong>External Encoder</strong> øverst. Fyll inn fødselsdato, kjønn og land, bruk <strong>Get Stream Key</strong> og kopier. En grønn slider i SplitCam's Stream Settings bekrefter tilkoblingen.",
+     "tips": [
+         ("Sett geo-restriksjoner", "CAM4 tillater skjul av sendingen i spesifikke land og regioner — sett opp på CAM4-siden før go-live."),
+         ("Følg den grønne slideren", "CAM4's oppsett viser grønn slider i SplitCam's Stream Settings når nøkkelen aksepteres — rød = sjekk nøkkelen."),
+         ("Lavere bitrate enn vanlig", "CAM4's ingest begrenser video-bitrate til omtrent 3 000 Kbps — lavere enn de fleste cam-sider. Press ikke høyere."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter CAM4 OBS / eksterne enkodere offisielt?", "Ja — CAM4 har offisiell OBS Guide på support-siden og anbefaler External Encoder for beste opplevelse. SplitCam bruker samme RTMP-rute."),
+         ("Kan jeg geo-blokkere CAM4-strømmen?", "Ja — CAM4 har innebygd geo-begrensning for å skjule sendingen i visse land. Still inn på CAM4, ikke i SplitCam."),
+         ("Hvor er CAM4's stream key?", "Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key."),
+         ("Hvilken bitrate til CAM4?", "Lavere enn gjennomsnittet — CAM4's ingest begrenser ved ~3 000 Kbps ved 30 fps med 1-sekunds keyframe. Den offisielle tabellen anbefaler ikke å overstige ~3 000."),
+     ]},
+    {"slug": "bongacams", "name": "BongaCams",
+     "title": "Sending på BongaCams med SplitCam — External Encoder",
+     "desc": "Sending på BongaCams med gratis SplitCam — External Encoder, multi-kamera scener, overlays og AI-bakgrunn. Uten vannmerke.",
+     "kw": "bongacams, bongcams, bongacams sending, bongacams external encoder, bongacams rtmp obs",
+     "h1html": 'Slik sender du på <span class="accent">BongaCams</span> med SplitCam',
+     "h1short": "Sending BongaCams",
+     "card": "External Encoder-oppsett for BongaCams.",
+     "intro": "BongaCams er en global cam-plattform. Ekstern enkoder-sending er ikke alltid aktivert — når aktivert, leder gratis <strong style='color:var(--text)'>SplitCam</strong> sendingen med multi-kamera scener, overlays og AI-bakgrunn.",
+     "quick": "Sending på BongaCams med SplitCam: installer SplitCam, bygg scenen, på BongaCams gå til <em>Options → Broadcast settings → Select Encoder → External Encoder</em>, kopier URL og nøkkel, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og nøkkel fra BongaCams.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På BongaCams åpne <strong>Options</strong> → <strong>Broadcast settings</strong> → <strong>Select Encoder</strong> → <strong>External Encoder</strong> og kopier vist server-URL og stream key. <strong>Hvis External Encoder-knappen mangler</strong>, kontakt BongaCams-support og be om aktivering av ekstern koding på kontoen.",
+     "tips": [
+         ("Ingen External Encoder-knapp? Support", "BongaCams aktiverer ekstern koding per konto — hvis valget mangler i Broadcast settings, aktiverer supporten det."),
+         ("Match oppløsningen", "BongaCams anbefaler at webkameraets oppløsning og sendingens oppløsning samsvarer — f.eks. begge 1280×720."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hvorfor vises ikke External Encoder-knappen på BongaCams?", "Ekstern koding er ikke aktiv som standard på hver konto — kontakt BongaCams-support for å aktivere den, og knappen vises i Broadcast settings."),
+         ("Må jeg verifisere BongaCams-kontoen?", "Ja — sending krever 18+, offisiell ID for aldersbekreftelse og kontogodkjenning før live."),
+         ("Hvilken bitrate til BongaCams?", "BongaCams' RTMP ingest begrenser video-bitrate til omtrent 6 000 Kbps med 2-sekunds keyframe — 3 500–6 000 ved 1080p er ideell sone; test opplastning først."),
+         ("Er SplitCam gratis for BongaCams?", "Ja — helt gratis, uten vannmerke og uten tidsgrense, så enkoderen reduserer ikke token-inntektene på BongaCams."),
+     ]},
+    {"slug": "stripchat", "name": "Stripchat",
+     "title": "Sending på Stripchat med SplitCam — Strip Cam Setup",
+     "desc": "Sending på Stripchat — strip cam-plattformen — med gratis SplitCam. Ekstern programvare, token-nøkkel, scener og overlays.",
+     "kw": "strip cam, stripchat live stream, stripchat sending, stripchat external software, stripchat stream key, stripchat rtmp obs",
+     "h1html": 'Slik sender du på <span class="accent">Stripchat</span> med SplitCam',
+     "h1short": "Sending Stripchat",
+     "card": "Ekstern programvare-oppsett for Stripchat-strømmer.",
+     "intro": "Stripchat er en stor cam-plattform med fokus på interaktivitet. <em>External software</em>-modus gir deg en token-basert nøkkel — sett den i gratis <strong style='color:var(--text)'>SplitCam</strong> for å sende med scener, overlays og filtre i stedet for et flatt kamera.",
+     "quick": "Sending på Stripchat med SplitCam: installer SplitCam, bygg scenen, på Stripchat velg <em>Switch to external software</em>, kopier stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent stream key fra Stripchat.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På Stripchat velg <strong>Switch to external software</strong>, deretter <strong>Show external software settings for the stream</strong>. Kopier stream key — Stripchat viser den som token. Hold privat.",
+     "tips": [
+         ("Match oppløsning med siden", "Stripchat's FAQ advarer: oppløsningen i programvaren må matche sidens nøyaktig, ellers pikselerer videoen. Sett begge likt."),
+         ("Vær obs på 2 Mbps minimum", "Stripchat oppgir 2 Mbps opplastning som minimum — og sier direkte at det ikke er nok for OBS-streaming eller multistreaming. Sikt mye høyere."),
+         ("Nøkkelen er en token", "Stripchat's stream key er en token — kopier nøyaktig, del aldri, tilbakestill ved lekkasje."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Anbefaler Stripchat OBS / ekstern programvare?", "Ja — Stripchat's offisielle FAQ anbefaler ekstern broadcast-programvare som OBS «for å oppnå best video- og lydkvalitet». SplitCam fungerer likt."),
+         ("Hvordan bytter jeg Stripchat til ekstern programvare?", "I Broadcast Center velg Switch to External Broadcast Software (OBS), åpne deretter external software settings for å avsløre stream key (token)."),
+         ("Hvilken bitrate til Stripchat?", "RTMP ingest aksepterer opptil ~6 000 Kbps med 2-sekunds keyframe. 3 500–6 000 ved 1080p er ideelt — men må være godt over 2 Mbps-minimum, særlig for OBS-streaming."),
+         ("Er SplitCam gratis for Stripchat?", "Ja — ingen lisensavgift, intet vannmerke, ingen tidsgrense: selv lange interaktive Stripchat-show koster ingenting på enkoder-siden."),
+     ]},
+    {"slug": "onlyfans", "name": "OnlyFans",
+     "title": "Gå live på OnlyFans med SplitCam — Autorisasjon eller nøkkel",
+     "desc": "Gå live på OnlyFans med gratis SplitCam — innlogging via autorisasjon eller OBS Key, multi-kamera scener, overlays. Uten vannmerke.",
+     "kw": "live onlyfans, onlyfans live stream, onlyfans autorisasjon splitcam, onlyfans obs key, onlyfans streaming software",
+     "h1html": 'Slik går du live på <span class="accent">OnlyFans</span> med SplitCam',
+     "h1short": "Live OnlyFans",
+     "card": "Autoriser én gang eller lim inn nøkkelen — live på OnlyFans.",
+     "intro": "OnlyFans live er for abonnentene dine. SplitCam kobler til på <strong style='color:var(--text)'>to måter</strong> — du logger inn én gang med OnlyFans-kontoen, og SplitCam henter stream key automatisk og holder den synkronisert, eller du limer inn OBS Key manuelt. I begge tilfeller sender du med multi-kamera scener, overlays og filtre.",
+     "quick": "Live på OnlyFans med SplitCam: installer SplitCam, bygg scenen, åpne Stream Settings &rarr; Add Channel &rarr; OnlyFans og velg <em>Autorisasjon</em> — logg inn med OnlyFans-konto, SplitCam henter nøkkelen automatisk — og trykk Go Live. Med tilkoblet konto kan du endre OnlyFans stream-parametere i SplitCam, uten å åpne OnlyFans-siden.",
+     "steps": [
+         ("Last ned og installer SplitCam",
+          "SplitCam er gratis streaming-programvare for Windows og macOS — uten registrering, kort eller vannmerke. Det er enkoderen som sender videoen til OnlyFans."),
+         ("Sett opp kamera og scene",
+          "Åpne SplitCam og legg til webkameraet. Bygg scenen seerne skal se — overlays, tekst, et ekstra kamera, beauty-filtre eller AI-bakgrunn, alt anvendt live."),
+         ("Tilkobling — Metode 1: Autorisasjon (anbefalt)",
+          "I SplitCam åpne <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> og velg <strong>Autorisasjon</strong>. Logg inn med OnlyFans e-post og passord. SplitCam kobler til kontoen, henter stream key automatisk og holder den synkronisert — og lar deg administrere OnlyFans live-parametere i SplitCam, endre dem under eller etter sendingen uten å åpne OnlyFans-siden."),
+         ("Tilkobling — Metode 2: Stream Key (manuelt)",
+          "Foretrekker du å ikke logge inn? Bruk nøkkelen. På OnlyFans gå til <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Other</strong>-seksjonen og kopier <strong>OBS Key</strong>. I SplitCam, Add Channel &rarr; OnlyFans, lim inn i nøkkelfeltet. Denne nøkkelen er statisk — for å endre innstillinger senere går du tilbake til OnlyFans-siden."),
+         ("Go Live",
+          "Uansett metode, trykk <strong>Go Live</strong> i SplitCam. Med Metode 1 kan du fortsette å justere OnlyFans-parametere fra SplitCam i sanntid; med Metode 2 forblir nøkkelen nøyaktig som du satte den."),
+     ],
+     "tips": [
+         ("Autorisasjon vs Stream Key", "To måter å koble til: <strong>Autorisasjon</strong> (logg inn én gang, nøkkelen hentes og synkroniseres — enkleste rute) eller <strong>Stream Key</strong> (kopier OBS Key på OnlyFans → Profile → Settings → Other og lim inn). Autorisasjon sparer manuell kopi-lim."),
+         ("Endre innstillinger uten å forlate SplitCam", "Med autorisasjon forblir kontoen tilkoblet, så du justerer OnlyFans live-parametere fra SplitCam under eller etter sendingen — uten å gå via OnlyFans-siden."),
+         ("Beskjeden bitrate", "OnlyFans' RTMP ingest begrenser video-bitrate til omtrent 2 500 Kbps — strammere enn de fleste cam-sider. Sikt mot 720p–1080p ved ~2 000–2 500."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hvordan kobler jeg OnlyFans til SplitCam?", "To måter. <strong>Autorisasjon</strong> — Stream Settings → Add Channel → OnlyFans → logg inn med OnlyFans-konto, og SplitCam henter nøkkelen automatisk. Eller <strong>Stream Key</strong> — kopier OBS Key på OnlyFans → Profile → Settings → Other og lim inn."),
+         ("Kan jeg endre OnlyFans live-innstillinger uten å åpne siden?", "Ja — med Autorisasjons-metoden forblir SplitCam tilkoblet OnlyFans-kontoen, så nøkkel og innstillinger synkroniserer automatisk. Du endrer alt fra SplitCam under eller etter sendingen uten å besøke onlyfans.com."),
+         ("Hvilken bitrate til OnlyFans?", "Beskjeden — OnlyFans' RTMP ingest begrenser bitrate til omtrent 2 500 Kbps, mye strammere enn andre cam-plattformer. Sikt mot 720p–1080p rundt 2 000–2 500 Kbps."),
+         ("Er SplitCam gratis for OnlyFans live?", "Ja — gratis, uten vannmerke og uten tidsgrense. Ingen kostnader på enkoder-siden."),
+     ]},
+    {"slug": "camplace", "name": "CamPlace",
+     "title": "Sending på CamPlace med SplitCam — Gratis guide",
+     "desc": "Sending på CamPlace med gratis SplitCam — ekstern enkoder, RTMP-nøkkel, scener og overlays. Trinn for trinn, uten vannmerke.",
+     "kw": "camplace sending, camplace broadcasting software, camplace rtmp, camplace external encoder, camplace stream key",
+     "h1html": 'Slik sender du på <span class="accent">CamPlace</span> med SplitCam',
+     "h1short": "Sending CamPlace",
+     "card": "Ekstern enkoder-oppsett for CamPlace-strømmer.",
+     "intro": "CamPlace er en cam-streaming-plattform. Det finnes ingen offentlig OBS-artikkel, så <strong style='color:var(--text)'>videoguiden ovenfor</strong> er referansen — gratis <strong style='color:var(--text)'>SplitCam</strong> kobler til via standard-RTMP og legger til scener, overlays og AI-bakgrunn som basis-kameraet ikke gjør.",
+     "quick": "Sending på CamPlace med SplitCam: installer SplitCam, bygg scenen, aktiver ekstern/RTMP-broadcasting på CamPlace, kopier server-URL og stream key, lim inn i SplitCam, Go Live. Følg videoen for nåværende rute."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent RTMP-nøkkel fra CamPlace.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på CamPlace og åpne broadcasting-innstillingene. Bytt til ekstern enkoder / RTMP / OBS-alternativ for å avsløre <strong>server-URL</strong> og <strong>stream key</strong>, kopier begge. CamPlace publiserer ikke offisiell OBS-dokumentasjon — <strong>videoen ovenfor</strong> er den mest pålitelige trinn-for-trinn ruten gjennom det nåværende grensesnittet.",
+     "tips": [
+         ("Ingen offisiell OBS-guide — bruk videoen", "CamPlace har ingen offentlig artikkel om eksterne enkodere; videoen ovenfor er referansen for nåværende rute."),
+         ("Standard-RTMP fungerer", "Selv om udokumentert, aksepterer CamPlace standard-RTMP server-URL og nøkkel — SplitCam kobler til som tilpasset RTMP-destinasjon."),
+         ("Stable overlays i SplitCam", "Tip-mål, navn og social-handles som scene-lag — CamPlace's basis-kamera legger ikke til slike."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Har CamPlace en offisiell OBS-guide?", "Ingen offentlig artikkel om eksterne enkodere funnet. CamPlace aksepterer standard-RTMP URL og nøkkel, så SplitCam fungerer — følg videoen."),
+         ("Støtter CamPlace eksterne enkodere?", "Ja — det aksepterer en standard-RTMP stream key, så SplitCam kobler til som tilpasset RTMP-destinasjon."),
+         ("Hvilken bitrate til CamPlace?", "CamPlace publiserer ikke et offisielt tall — bruk 3 500–6 000 Kbps ved 1080p som trygt område og la SplitCam's hastighetstest fastsette det reelle taket."),
+         ("Er SplitCam gratis for CamPlace?", "Ja — gratis, uten vannmerke og uten tidsgrense. Siden CamPlace ikke kommer med egen enkoder, gjør et gratis RTMP-verktøy jobben."),
+     ]},
+    {"slug": "camsoda", "name": "CamSoda",
+     "title": "CamSoda live med SplitCam — Gratis oppsett",
+     "desc": "CamSoda live med gratis SplitCam — Use OBS Broadcaster, regionale servere, scener og overlays. Uten vannmerke.",
+     "kw": "camsoda live, camsoda sending, camsoda obs broadcaster, camsoda rtmp obs, camsoda live broadcast",
+     "h1html": 'Slik sender du på <span class="accent">CamSoda</span> med SplitCam',
+     "h1short": "Sending CamSoda",
+     "card": "Use OBS Broadcaster-oppsett på CamSoda.",
+     "intro": "CamSoda er en amerikansk cam-plattform kjent for interaktive og uvanlige show-formater. Det støtter OBS-streaming offisielt — det er en <strong style='color:var(--text)'>Use OBS Broadcaster</strong>-knapp på Go Live-siden og en offisiell OBS-guide på CamSoda-wikien. Gratis <strong style='color:var(--text)'>SplitCam</strong> fungerer på samme måte.",
+     "quick": "Sending på CamSoda med SplitCam: installer SplitCam, bygg scenen, klikk Use OBS Broadcaster på CamSoda Go Live-siden, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Klikk Use OBS Broadcaster på CamSoda.</li>"
+              "<li>Lim inn server-URL + nøkkel i SplitCam.</li><li>Trykk Go Live.</li></ol>",
+     "key_how": "På CamSoda's <strong>Go Live</strong>-side klikk <strong>Use OBS Broadcaster</strong>. CamSoda viser RTMP-server-URL og stream key — kopier begge. Velg regional server (Nord-Amerika, Europa, Asia osv.) som er nærmest. CamSoda-wikien har full OBS-guide for detaljer.",
+     "tips": [
+         ("Verifiser for tips", "På CamSoda kan hvem som helst sende, men for å motta tips må du fullføre CamSoda's verifiseringsprosess."),
+         ("Velg nærmeste regionale server", "CamSoda tilbyr regionale ingest-servere — den nærmeste (NA / Europa / Asia / Sør-Amerika / Oseania) reduserer forsinkelse og tapte frames."),
+         ("Tak ved 1080p / 30 fps", "CamSoda's ingest går opp til omtrent 1080p, 30 fps og ~6 000 Kbps — press ikke høyere."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter CamSoda OBS / eksterne enkodere?", "Ja — offisielt. Det er en Use OBS Broadcaster-knapp på Go Live-siden og OBS-guide på CamSoda-wikien, så SplitCam fungerer."),
+         ("Må jeg verifisere meg på CamSoda?", "For å sende, nei. For å motta tips, ja — CamSoda krever først verifiseringsprosessen fullført."),
+         ("Hvilken oppløsning støtter CamSoda?", "Opptil 1920×1080 ved 30 fps, omtrent 6 000 Kbps maksimum på RTMP ingest."),
+         ("Er SplitCam gratis for CamSoda?", "Ja — gratis, uten vannmerke og uten tidsgrense. Fungerer med CamSoda's gratis Use OBS Broadcaster-modus, så hele kjeden koster ingenting."),
+     ]},
+    {"slug": "streamate", "name": "Streamate",
+     "title": "Sending på Streamate med SplitCam — Integrert kanal",
+     "desc": "Sending på Streamate med gratis SplitCam — integrert kanal, SM Connect-nøkkel, scener og overlays. Uten vannmerke.",
+     "kw": "streamate, streamate sm connect, streamate sending, streamate broadcasting software, streamate rtmp",
+     "h1html": 'Slik sender du på <span class="accent">Streamate</span> med SplitCam',
+     "h1short": "Sending Streamate",
+     "card": "Streamate er en integrert kanal i SplitCam — rask oppsett.",
+     "intro": "Streamate er en etablert cam-plattform — og er en av de <strong style='color:var(--text)'>forhåndskonfigurerte destinasjonene i SplitCam</strong>, i kanallisten, så oppsettet er raskere enn manuell RTMP-innskriving: du velger Streamate, limer inn nøkkelen, ferdig.",
+     "quick": "Sending på Streamate med SplitCam: installer SplitCam, bygg scenen, på Streamate bruk <em>SM Connect → Start Show</em> og kopier nøkkelen, deretter i SplitCam åpne <em>Stream Settings → Add Channel → Streamate</em> og lim inn."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent Streamate-nøkkel via SM Connect.</li>"
+              "<li>Add Channel → Streamate i SplitCam.</li><li>Trykk Go Live.</li></ol>",
+     "key_how": "På Streamate åpne <strong>SM Connect</strong>, godta vilkårene, klikk <strong>Start Show</strong> til venstre og lukk det åpnede vinduet — kopier deretter streaming-nøkkelen. I SplitCam åpne <strong>Stream Settings</strong> → <strong>Add Channel</strong>, velg <strong>Streamate</strong> fra listen og lim inn nøkkelen. En grønn slider bekrefter tilkoblingen.",
+     "tips": [
+         ("Streamate er integrert", "Ingen manuell RTMP-URL — SplitCam har Streamate i Add Channel-listen; bare velg og lim inn nøkkelen."),
+         ("Lukk SM Connect-popup", "Etter Start Show åpner Streamate et vindu — lukk det; det var bare for å avsløre streaming-nøkkelen."),
+         ("Lås oppløsning til 1080p", "Video Resolution-feltet i SM Connect kan stille hoppe til 1440, noe som faktisk ikke leveres og senker kvaliteten i stillhet — sett manuelt til 1080p. Bitrate som faller ved statisk bilde er normalt: Streamate's strøm er adaptiv."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Er Streamate integrert i SplitCam?", "Ja — Streamate vises i SplitCam's Add Channel-liste; du velger i stedet for å skrive inn RTMP-URL manuelt."),
+         ("Hvor er Streamate streaming-nøkkelen?", "SM Connect → godta vilkår → Start Show → lukk popup → kopier nøkkel."),
+         ("Hvilken bitrate til Streamate?", "Streamate setter ikke hardt tak — 3 500–6 000 Kbps ved 1080p fungerer bra. Strømmen er adaptiv, så lavere bitrate ved statisk bilde er normalt, ikke en feil."),
+         ("Er SplitCam gratis for Streamate?", "Ja — gratis, uten vannmerke og uten tidsgrense; og siden Streamate er en integrert kanal i SplitCam, finnes det heller ingen separat enkoder-kostnad."),
+     ]},
+    {"slug": "streamray", "name": "StreamRay",
+     "title": "Sending på StreamRay cam med SplitCam — Chat-URL",
+     "desc": "Sending på StreamRay cam med gratis SplitCam — URL postet i chat, OBS Broadcaster-modus, scener og overlays. Uten vannmerke.",
+     "kw": "streamray, streamray cam, streamray sending, streamray obs broadcaster, streamray rtmp",
+     "h1html": 'Slik sender du på <span class="accent">StreamRay</span> med SplitCam',
+     "h1short": "Sending StreamRay",
+     "card": "URL-i-chat ekstern enkoder-oppsett for StreamRay.",
+     "intro": "StreamRay har et uvanlig ekstern enkoder-oppsett — det leverer strøm-URL i <strong style='color:var(--text)'>chat-vinduet for sendingen</strong> og bruker ikke en separat stream key. Gratis <strong style='color:var(--text)'>SplitCam</strong> håndterer denne kun-URL flyten.",
+     "quick": "Sending på StreamRay med SplitCam: installer SplitCam, bygg scenen, på StreamRay aktiver OBS Broadcaster, kopier strøm-URL fra chat-vinduet, lim inn i SplitCam (la nøkkelfelt være tomt), Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Kopier StreamRay-URL fra chat.</li>"
+              "<li>Lim inn URL i SplitCam.</li><li>Trykk Go Live.</li></ol>",
+     "key_how": "På StreamRay dobbeltklikk <strong>Broadcast Now</strong>, åpne <strong>Other</strong>-menyen, velg <strong>OBS Broadcaster</strong> og <strong>Save and Close</strong>. StreamRay poster deretter <strong>strøm-URL i chat-vinduet</strong> — kopier derfra. La SplitCam's stream key-felt være <strong>tomt</strong>; StreamRay autentiserer kun via URL.",
+     "tips": [
+         ("URL er i chatten", "StreamRay viser ikke strøm-URL i en innstillingsboks — den postes i chat-vinduet for sendingen. Kopier derfra."),
+         ("La nøkkelfelt være tomt", "StreamRay bruker ikke separat nøkkel — kun URL. Ikke skriv noe i SplitCam's nøkkelfelt."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hvor er StreamRay strøm-URL?", "Etter aktivering av OBS Broadcaster poster StreamRay URL i chat-vinduet — kopier fra chat."),
+         ("Hvorfor er det ingen stream key på StreamRay?", "StreamRay autentiserer kun via URL — la SplitCam's nøkkelfelt være tomt."),
+         ("Hvilken bitrate til StreamRay?", "StreamRay oppgir ikke offisielt tak — sikt mot 3 500–6 000 Kbps ved 1080p og kjør SplitCam's hastighetstest, siden kun-URL flyten ikke gir bitrate-tilbakemelding."),
+         ("Er SplitCam gratis for StreamRay?", "Ja — gratis, uten vannmerke og uten tidsgrense, noe som passer StreamRay's kun-URL flyt: lim inn en lenke og du er live."),
+     ]},
+    {"slug": "xlovecam", "name": "XLoveCam",
+     "title": "Sending på XLoveCam med SplitCam — RTMP-lenke & nøkkel",
+     "desc": "Sending på XLoveCam med gratis SplitCam — RTMP-lenke og nøkkel, regionale servere, scener og overlays. Uten vannmerke.",
+     "kw": "xlovecam, x love cam, xlovecam sending, xlovecam rtmp link, xlovecam stream key",
+     "h1html": 'Slik sender du på <span class="accent">XLoveCam</span> med SplitCam',
+     "h1short": "Sending XLoveCam",
+     "card": "RTMP-lenke + nøkkel-oppsett for XLoveCam.",
+     "intro": "XLoveCam er en europeisk flerspråklig cam-plattform. Kontoinnstillingene viser både en <strong style='color:var(--text)'>RTMP-lenke</strong> og en <strong style='color:var(--text)'>stream key</strong> — gratis <strong style='color:var(--text)'>SplitCam</strong> tar begge og sender med fulle scener og overlays.",
+     "quick": "Sending på XLoveCam med SplitCam: installer SplitCam, bygg scenen, på XLoveCam åpne <em>My Account → settings</em>, kopier RTMP-lenke og stream key, lim inn begge i SplitCam, start showet."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Kopier RTMP-lenke + nøkkel fra XLoveCam.</li><li>Lim inn begge i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På XLoveCam åpne <strong>My Account</strong> → <strong>settings</strong>. Innstillingene viser både en <strong>RTMP-lenke</strong> og en <strong>stream key</strong> — kopier begge til SplitCam's server-URL- og nøkkelfelter, deretter <strong>Start your show</strong> på XLoveCam.",
+     "tips": [
+         ("Kopier lenke OG nøkkel", "XLoveCam gir deg en RTMP-lenke OG separat stream key — du trenger begge i SplitCam, ikke bare én."),
+         ("Flerspråklig publikum", "XLoveCam er europeisk og flerspråklig — en tydelig tekst-overlay på språket ditt hjelper seerne å finne deg."),
+         ("Velg nærmeste server", "XLoveCam tilbyr regionale RTMP-servere — Europa, Nord-Amerika, Sør-Amerika og Asia. Den nærmeste reduserer forsinkelse og tapte frames."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hvor er XLoveCam's RTMP-data?", "My Account → settings — viser både RTMP-lenke og nøkkel."),
+         ("Støtter XLoveCam eksterne enkodere?", "Ja — det leverer RTMP-lenke og nøkkel, så SplitCam fungerer som enkoder."),
+         ("Hvilken bitrate til XLoveCam?", "XLoveCam publiserer ingen fast grense; 3 500–6 000 Kbps ved 1080p er ideelt. Valg av nærmeste regionale server teller like mye — reduserer tapte frames."),
+         ("Er SplitCam gratis for XLoveCam?", "Ja — gratis, uten vannmerke og uten tidsgrense. Å nå XLoveCam's flerspråklige europeiske publikum koster ingen programvare."),
+     ]},
+    {"slug": "soulcams", "name": "SoulCams",
+     "title": "Sending på SoulCams med SplitCam — OBS-innstillinger",
+     "desc": "Sending på SoulCams med gratis SplitCam — OBS-innstillinger, RTMP-server og nøkkel, multi-kamera scener og overlays.",
+     "kw": "soul cams, soulcams, soulcams sending, soulcams obs, soulcams rtmp, soulcams broadcast",
+     "h1html": 'Slik sender du på <span class="accent">SoulCams</span> med SplitCam',
+     "h1short": "Sending SoulCams",
+     "card": "OBS-innstillinger for SoulCams.",
+     "intro": "SoulCams er en cam-plattform hvis OBS-innstillinger viser <strong style='color:var(--text)'>RTMP-server og stream key sammen</strong> i ett vindu. Lim inn begge i gratis <strong style='color:var(--text)'>SplitCam</strong> for å sende med multi-kamera scener og overlays.",
+     "quick": "Sending på SoulCams med SplitCam: installer SplitCam, bygg scenen, på SoulCams klikk Go Online → Settings → OBS, kopier serveren og nøkkelen, lim inn begge i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Åpne SoulCams Settings → OBS.</li><li>Lim inn server + nøkkel i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På SoulCams logg inn og klikk <strong>Go Online</strong>, åpne deretter <strong>Settings</strong> → <strong>OBS</strong>. OBS-vinduet viser <strong>RTMP-server</strong> og <strong>stream key</strong> sammen — kopier begge i SplitCam.",
+     "tips": [
+         ("Server og nøkkel side ved side", "SoulCams viser RTMP-server og nøkkel i samme OBS-vindu — du tar begge i ett trekk."),
+         ("Go Online først", "OBS-innstillinger vises først etter å ha klikket Go Online på SoulCams — gjør det før du leter etter enkoder-data."),
+         ("Blokker uønskede regioner", "SoulCams tillater geo-blokkering fra modellens side — velg hvilke land som ikke kan se strømmen før du trykker Go Online."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hvor er SoulCams' OBS-innstillinger?", "Logg inn, klikk Go Online, deretter Settings → OBS — RTMP-server og stream key vises sammen."),
+         ("Støtter SoulCams eksterne enkodere?", "Ja — OBS-innstillinger gir RTMP-server og nøkkel, så SplitCam fungerer."),
+         ("Hvilken bitrate til SoulCams?", "SoulCams gir ikke offisielt tall — sikt mot 3 500–6 000 Kbps ved 1080p og test opplastning, siden OBS-vinduet ikke viser bitrate-veiledning."),
+         ("Er SplitCam gratis for SoulCams?", "Ja — gratis, uten vannmerke og uten tidsgrense, så et fullt SoulCams-show med multi-kamera scener og overlays koster ingenting på enkoder-siden."),
+     ]},
+    {"slug": "imlive", "name": "ImLive",
+     "title": "Sending på ImLive med SplitCam — Virtuelt kamera",
+     "desc": "Im Live stream-oppsett med gratis SplitCam — ImLive bruker webkameraet direkte (ingen RTMP), koble SplitCam som virtuelt kamera med scener.",
+     "kw": "im live stream, imlive splitcam, imlive sending, imlive virtuelt kamera, imlive webcam, im live cam",
+     "h1html": 'Slik bruker du <span class="accent">ImLive</span> med SplitCam',
+     "h1short": "SplitCam på ImLive",
+     "card": "Virtuelt kamera for ImLive — ingen RTMP.",
+     "intro": "ImLive bruker webkameraet direkte i nettleseren — <strong style='color:var(--text)'>ingen RTMP og ingen stream key</strong>. Gratis <strong style='color:var(--text)'>SplitCam</strong> kobler til som <strong style='color:var(--text)'>virtuelt kamera</strong>: du bygger scenen i SplitCam, deretter velger SplitCam som kamera i ImLive.",
+     "quick": "Bruke SplitCam med ImLive: installer SplitCam, bygg scenen med medielag, åpne ImLive og start videosamtale, i ImLive-innstillinger velg SplitCam som webkamera og mikrofon."
+              "<ol><li>Installer SplitCam.</li><li>Bygg scene i SplitCam.</li>"
+              "<li>Start videosamtale på ImLive.</li>"
+              "<li>Velg SplitCam som ImLive-kamera.</li><li>Start samtalen.</li></ol>",
+     "steps": [
+         ("Installer SplitCam",
+          "SplitCam er gratis programvare for Windows og macOS. Installer — uten vannmerke, uten registrering. For ImLive fungerer det som <strong>virtuelt kamera</strong>, ikke RTMP-enkoder."),
+         ("Bygg scene i SplitCam",
+          "Åpne SplitCam og bruk <strong>Media Layers +</strong> til å legge til webkameraet pluss eventuelle overlays, tekst, filtre eller AI-bakgrunn. Denne sammensatte scenen er det ImLive vil se som kameraet ditt."),
+         ("Start videosamtale på ImLive",
+          "Logg inn på ImLive-siden og klikk <strong>Start Video Chat</strong>, åpne deretter <strong>Go To Settings</strong> for å nå kamera- og mikrofon-alternativer."),
+         ("Velg SplitCam som kamera",
+          "I ImLive-innstillinger velg <strong>SplitCam</strong> som webkamera OG som mikrofon. ImLive viser nå hele SplitCam-scenen i stedet for et flatt webkamera."),
+         ("Start Free Live Chat",
+          "Klikk <strong>Free Live Chat</strong> på ImLive for å gå live. For å endre utseendet midt i økten, rediger scenen i SplitCam — ImLive oppdateres umiddelbart."),
+     ],
+     "tips": [
+         ("Ingen stream key nødvendig", "ImLive har ingen RTMP — ikke se etter server-URL eller nøkkel. SplitCam velges bare som kamera-enhet."),
+         ("Sett SplitCam også som mikrofon", "Velg SplitCam for mikrofon i tillegg til kamera, så lydmix og støydemping også kommer i live."),
+         ("Bygg scenen før live", "ImLive viser det SplitCam sender — ordne lagene før du starter samtalen."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Bruker ImLive RTMP eller stream key?", "Nei — ImLive bruker webkameraet direkte gjennom nettleseren. SplitCam kobler til som virtuelt kamera, det er ingen nøkkel å kopiere."),
+         ("Hvordan velger jeg SplitCam på ImLive?", "Start Video Chat → Go To Settings → velg SplitCam som webkamera og mikrofon."),
+         ("Kan jeg bruke overlays på ImLive?", "Ja — du bygger dem i SplitCam-scenen; ImLive viser det sammensatte resultatet."),
+         ("Er SplitCam gratis for ImLive?", "Ja — gratis, uten vannmerke og uten tidsgrense. Som virtuelt kamera for ImLive legger det verken til kostnader eller branding i videosamtalen din."),
+     ]},
+    {"slug": "vxlive", "name": "VXLive",
+     "title": "Sending på VXLive med SplitCam — Offisiell støtte",
+     "desc": "Sending på VXLive (VXModels / VISIT-X) med gratis SplitCam — offisiell VISIT-X preset, server og nøkkel, scener. Uten vannmerke.",
+     "kw": "vxlive, visit-x, vxmodels splitcam, vxlive sending, visit-x stream, vxlive rtmp",
+     "h1html": 'Slik sender du på <span class="accent">VXLive</span> med SplitCam',
+     "h1short": "Sending VXLive",
+     "card": "VXLive støtter SplitCam offisielt (VISIT-X preset).",
+     "intro": "VXLive (VXModels / VISIT-X) er en cam-plattform fra det tyske markedet — og en av de få som <strong style='color:var(--text)'>støtter SplitCam offisielt ved navn</strong>. VXModels har en dedikert hjelpeartikkel for å koble <strong style='color:var(--text)'>SplitCam</strong> til VXLive, og SplitCam leverer VISIT-X som ferdig kanal-preset.",
+     "quick": "Sending på VXLive med SplitCam: installer SplitCam, bygg scenen, på VXLive velg «Stream with third-party software», kopier server-URL og nøkkel, i SplitCam velg VISIT-X preset og lim inn, Go Live i SplitCam, deretter GO ONLINE på VXLive."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent server-URL + nøkkel fra VXLive.</li>"
+              "<li>Velg VISIT-X preset i SplitCam, lim inn.</li>"
+              "<li>Go Live, deretter GO ONLINE på VXLive.</li></ol>",
+     "key_how": "På VXLive velg <strong>Stream with third-party software</strong> og velg alternativ for <strong>OBS, SplitCam eller XSplit</strong>. VXLive leverer <strong>server-URL</strong> og <strong>stream key</strong>. I SplitCam velg <strong>VISIT-X</strong> som streaming-plattform, lim inn begge, trykk <strong>Go Live</strong> i SplitCam, deretter <strong>GO ONLINE</strong> på VXLive.",
+     "tips": [
+         ("VISIT-X er integrert preset", "Ikke skriv inn rå RTMP-URL — SplitCam har VISIT-X i plattform-listen; bare velg og lim inn server-URL og nøkkel."),
+         ("To-trinns go-live", "På VXLive trykk Go Live i SplitCam først, deretter GO ONLINE på VXLive — begge, i den rekkefølgen."),
+         ("Tysk marked", "VXLive's publikum er overveiende tysktalende — en tysk tekst-overlay eller tittel hjelper å koble seg til seerne."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter VXLive SplitCam offisielt?", "Ja — VXModels (VXLive) opprettholder en dedikert offisiell hjelpeartikkel for SplitCam-oppsett og lister SplitCam ved siden av OBS og XSplit som støttet broadcasting-programvare."),
+         ("Hvordan kobler jeg SplitCam til VXLive?", "På VXLive velger du «Stream with third-party software», deretter i SplitCam velger du VISIT-X preset og limer inn server-URL og stream key fra VXLive."),
+         ("Går jeg live i SplitCam eller på VXLive?", "Begge — først Go Live i SplitCam, deretter GO ONLINE på VXLive."),
+         ("Hvorfor anbefaler VXModels SplitCam?", "VXModels' offisielle hjelpeartikkel anbefaler SplitCam spesifikt for å eliminere webkamera-bildeartefakter og pikselering og stabilisere tilkoblingen — ikke bare som generisk enkoder."),
+     ]},
+    {"slug": "virtwish", "name": "VirtWish",
+     "title": "Sending på VirtWish med SplitCam — Strøm-URL & nøkkel",
+     "desc": "Sending på VirtWish med gratis SplitCam — Profile → Start Broadcast OBS-seksjon, strøm-URL og nøkkel, scener og overlays.",
+     "kw": "virtwish, virtwish sending, virtwish broadcasting software, virtwish rtmp, virtwish stream key, virtwish obs",
+     "h1html": 'Slik sender du på <span class="accent">VirtWish</span> med SplitCam',
+     "h1short": "Sending VirtWish",
+     "card": "Strøm-URL + nøkkel for VirtWish.",
+     "intro": "VirtWish er en interaktiv cam-plattform. Broadcast-innstillingene gir deg <strong style='color:var(--text)'>strøm-URL og en separat stream key</strong> i en OBS-seksjon — gratis <strong style='color:var(--text)'>SplitCam</strong> tar begge og kjører showet med scener og overlays.",
+     "quick": "Sending på VirtWish med SplitCam: installer SplitCam, bygg scenen, på VirtWish åpne <em>Profile → Start Broadcast</em> til OBS-seksjonen, kopier lenke og nøkkel, lim inn begge i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL + nøkkel fra VirtWish.</li><li>Lim inn begge i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "På VirtWish klikk på ikonet øverst til høyre → <strong>Profile</strong> → <strong>Start Broadcast</strong>, deretter <strong>Start Broadcast</strong> igjen for å nå OBS-seksjonen. <strong>Kopier lenken på første linje</strong> til SplitCam's Stream URL-felt, og <strong>Stream Key</strong> separat i nøkkelfeltet.",
+     "tips": [
+         ("Lenke på første linje", "VirtWish's OBS-seksjon plasserer strøm-URL på første linje — kopier til SplitCam Stream URL, deretter den separate nøkkelen."),
+         ("To klikk på Start Broadcast", "Du klikker Start Broadcast to ganger på VirtWish for å nå OBS-seksjonen — forventet, ikke en feil."),
+         _T_ETH, _T_TEST,
+     ],
+     "faq": [
+         ("Hvor er VirtWish's RTMP-data?", "Ikon øverst høyre → Profile → Start Broadcast to ganger → OBS-seksjonen viser lenken og stream key."),
+         ("Støtter VirtWish eksterne enkodere?", "Ja — OBS-seksjonen leverer strøm-URL og nøkkel, så SplitCam fungerer."),
+         ("Hvilken bitrate til VirtWish?", "VirtWish publiserer ikke offisielt tak; 3 500–6 000 Kbps ved 1080p er trygt. Match SplitCam's oppløsning med den som er satt på VirtWish for å unngå rescaling."),
+         ("Er SplitCam gratis for VirtWish?", "Ja — gratis, uten vannmerke og uten tidsgrense. VirtWish's URL-og-nøkkel-oppsett koster bare de minuttene som kreves."),
+     ]},
+    {"slug": "xmodels", "name": "XModels",
+     "title": "Sending på XModels med SplitCam — Gratis guide",
+     "desc": "Sending på XModels med gratis SplitCam — ekstern enkoder-alternativ i modell-kontoinnstillinger, RTMP-nøkkel, scener og overlays.",
+     "kw": "xmodels, xmodels sending, xmodels broadcasting software, xmodels rtmp, xmodels external encoder",
+     "h1html": 'Slik sender du på <span class="accent">XModels</span> med SplitCam',
+     "h1short": "Sending XModels",
+     "card": "Ekstern enkoder for XModels-strømmer.",
+     "intro": "XModels er en cam-streaming-plattform med innebygd <strong style='color:var(--text)'>ekstern enkoder-alternativ</strong> i modell-kontoinnstillinger. Gratis <strong style='color:var(--text)'>SplitCam</strong> sender der med multi-kamera scener, overlays og filtre i stedet for et enkelt flatt kamera.",
+     "quick": "Sending på XModels med SplitCam: installer SplitCam, bygg scenen, i XModels-modellkonto aktiver ekstern enkoder-alternativ, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Aktiver ekstern enkoder i XModels-innstillinger.</li>"
+              "<li>Lim inn server-URL + nøkkel i SplitCam.</li><li>Trykk Go Live.</li></ol>",
+     "key_how": "I XModels <strong>modell-kontoinnstillinger</strong> aktiver alternativet <strong>sending via ekstern enkoder</strong>. XModels leverer en <strong>stream key</strong> — kopier til SplitCam. Hvis alternativet ikke er der du forventer, er XModels-support via FAQ-chat på siden og <strong>info@xmodels.com</strong>; videoen ovenfor viser det også.",
+     "tips": [
+         ("Det er i kontoinnstillinger", "XModels plasserer ekstern enkoder-alternativet i modell-kontoinnstillinger, ikke på en separat broadcast-skjerm."),
+         ("Support: chat + e-post", "XModels har ikke et stort offentlig hjelpesenter — site FAQ-chat og info@xmodels.com er de offisielle supportkanalene."),
+         ("Stable overlays i SplitCam", "Tip-mål, navn og social-handles som scene-lag — XModels' basis-kamera legger ikke til slike."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter XModels eksterne enkodere?", "Ja — modell-kontoinnstillinger inkluderer et ekstern enkoder-broadcast-alternativ som leverer en stream key, så SplitCam fungerer."),
+         ("Hvor får jeg XModels-hjelp?", "XModels-support er via FAQ-chat på siden og e-post info@xmodels.com — det er ingen stort offentlig hjelpesenter."),
+         ("Hvilken bitrate til XModels?", "XModels dokumenterer ikke offisielt tall — bruk 3 500–6 000 Kbps ved 1080p og kjør SplitCam's hastighetstest, siden XModels-support kun er chat og e-post."),
+         ("Er SplitCam gratis for XModels?", "Ja — gratis, uten vannmerke og uten tidsgrense, så sending til XModels' europeiske nettverk legger ikke til programvarekostnader."),
+     ]},
+    {"slug": "flirt4free", "name": "Flirt4Free",
+     "title": "Sending på Flirt for Free cam med SplitCam — Gratis guide",
+     "desc": "Sending på Flirt for Free cam med gratis SplitCam — External Broadcast Form, RTMP URL og Stream Name, scener og overlays.",
+     "kw": "flirt for free cam, flirt 4 free cam, flirt4free, flirt4free sending, flirt4free external broadcast, flirt4free rtmp",
+     "h1html": 'Slik sender du på <span class="accent">Flirt4Free</span> med SplitCam',
+     "h1short": "Sending Flirt4Free",
+     "card": "External Broadcast Form for Flirt4Free.",
+     "intro": "Flirt4Free er en av de eldste cam-plattformene, i drift siden 90-tallet. Det støtter ekstern sending offisielt via en <strong style='color:var(--text)'>External Broadcast Form</strong> — gratis <strong style='color:var(--text)'>SplitCam</strong> sender strømmen mens skjemaet setter oppløsning og bitrate.",
+     "quick": "Sending på Flirt4Free med SplitCam: installer SplitCam, bygg scenen, åpne Flirt4Free External Broadcast Form, kopier RTMP URL og Stream Name og still inn oppløsning/bitrate, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Åpne Flirt4Free External Broadcast Form.</li>"
+              "<li>Lim inn RTMP URL + Stream Name i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "I Flirt4Free-modellområdet åpne <strong>External Broadcast Form</strong>. I motsetning til de fleste cam-sider gir Flirt4Free deg en <strong>RTMP URL</strong> og et <strong>Stream Name</strong> (ikke en «nøkkel»), pluss oppløsnings- og bitrate-felter som du fyller ut i selve skjemaet. Kopier URL og Stream Name til SplitCam's server- og nøkkelfelter.",
+     "tips": [
+         ("Det er Stream Name, ikke nøkkel", "Flirt4Free kaller legitimasjonen Stream Name. Du limer den inn i SplitCam's stream key-felt — samme rolle."),
+         ("Still inn oppløsning/bitrate i skjemaet", "Flirt4Free's External Broadcast Form har egne oppløsnings- og bitrate-felter — juster med SplitCam's innstillinger så bildet ikke rescales."),
+         ("Historisk plattform", "Flirt4Free har kjørt siden 90-tallet — modellverktøy er modne, og External Broadcast Form er en dokumentert del av dem."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter Flirt4Free eksterne enkodere?", "Ja — offisielt, via External Broadcast Form, som leverer RTMP URL og Stream Name. SplitCam fungerer som enkoder."),
+         ("Hvor får jeg Flirt4Free's RTMP-data?", "Fra External Broadcast Form i modellområdet — viser RTMP URL, Stream Name og oppløsnings/bitrate-felter."),
+         ("Hvilken bitrate til Flirt4Free?", "3 500–6 000 Kbps ved 1080p — still inn samme verdi i External Broadcast Form og i SplitCam."),
+         ("Er SplitCam gratis for Flirt4Free?", "Ja — gratis, uten vannmerke og uten tidsgrense, noe som passer en historisk plattform som Flirt4Free hvor show kan være lange."),
+     ]},
+    {"slug": "mfc-alerts", "name": "MFC Alerts",
+     "title": "Legg til MFC Alerts i strømmen med SplitCam",
+     "desc": "Vis animerte tip alerts i MyFreeCams-strøm — mfcalerts.com-URL som Browser-lag i gratis SplitCam, over webkameraet.",
+     "kw": "mfc alerts, myfreecams alerts, legg til mfc alerts, mfcalerts splitcam, myfreecams tip alerts, myfreecams alerts overlay",
+     "h1html": 'Slik legger du <span class="accent">MFC Alerts</span> til strømmen',
+     "h1short": "Legg til MFC Alerts",
+     "card": "Vis animerte tip alerts i MyFreeCams-strømmen.",
+     "intro": "MFC Alerts viser animerte effekter i MyFreeCams-strømmen din hver gang en seer sender en tip. Kjører som <strong style='color:var(--text)'>Browser-lag</strong> i gratis <strong style='color:var(--text)'>SplitCam</strong> — du setter opp én gang, og tips utløser skjermreaksjoner live.",
+     "quick": "Legge til MFC Alerts med SplitCam: installer SplitCam, legg til webkameraet, åpne Browser-fanen og last mfcalerts.com, kopier alerts-URL, legg til som Browser-lag over webkameraet, test deretter med test-tip."
+              "<ol><li>Installer SplitCam.</li><li>Legg til webkameraet.</li>"
+              "<li>Hent URL på mfcalerts.com.</li>"
+              "<li>Legg til som Browser-lag over webkameraet.</li>"
+              "<li>Send test-tip.</li></ol>",
+     "steps": [
+         ("Installer SplitCam og legg til webkameraet",
+          "Installer gratis SplitCam for Windows eller macOS, legg deretter til <strong>webkameraet</strong> som kilde. MFC Alerts sitter som lag over dette kameraet."),
+         ("Åpne Browser-fanen og gå til mfcalerts.com",
+          "I SplitCam åpne <strong>Browser</strong>-fanen og naviger til <strong>www.mfcalerts.com</strong>. Logg inn, eller registrer deg hvis du ikke har en mfcalerts.com-konto ennå."),
+         ("Kopier alerts-URL",
+          "På mfcalerts.com bruk <strong>Copy to clipboard</strong> for å kopiere din personlige alerts-URL — det er siden som rendrer tip-animasjoner."),
+         ("Legg til URL som Browser-lag — over webkameraet",
+          "Lim inn URL-en i SplitCam's Browser-vindu og klikk <strong>Add</strong>. Omorganiser deretter kildelisten slik at <strong>MFC Alerts er over webkameraet</strong> (3-prikket meny → Move Up). Hvis den sitter under, forblir effektene skjult."),
+         ("Test med test-tip",
+          "Åpne <strong>Settings → Send test tip</strong> og bekreft at alert-effekten vises over kameraet. Send deretter normalt på MyFreeCams — ekte tips utløser nå animasjonene."),
+     ],
+     "tips": [
+         ("MFC Alerts må være over webkameraet", "Den vanligste feilen: hvis MFC Alerts-laget er under webkameraet på kildelisten, forblir effektene skjult. Flytt opp."),
+         ("Mfcalerts.com-konto kreves", "Alerts-URL er personlig — registrer deg på mfcalerts.com først hvis du ikke har en konto."),
+         ("Send test-tip før live", "Bruk Settings → Send test tip for å bekrefte at overlayen fungerer — ikke oppdag feilen midt i showet."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hva er MFC Alerts?", "Et varslingssystem for MyFreeCams som viser videoeffekter i strømmen din når seere sender tips — lagt til som Browser-overlay i SplitCam."),
+         ("Hvorfor vises ikke MFC Alerts?", "Nesten alltid lagrekkefølge — MFC Alerts Browser-laget må være over webkameraet på SplitCam's kildeliste."),
+         ("Trenger jeg konto for MFC Alerts?", "Ja — registrer deg på mfcalerts.com for å få din personlige alerts-URL."),
+         ("Er SplitCam gratis for dette?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense, og MFC Alerts browser-overlay kjører i den uten ekstra kostnader."),
+     ]},
+    {"slug": "lovense", "name": "Lovense",
+     "title": "Legg til et Lovense-leketøy i strømmen med SplitCam",
+     "desc": "Koble et interaktivt Lovense-leketøy til cam-strøm med gratis SplitCam — Lovense SplitCam Toolset, skjerm-tip alerts, reaksjoner.",
+     "kw": "legg til lovense i strøm, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense interactive toy streaming",
+     "h1html": 'Slik legger du til et <span class="accent">Lovense-leketøy</span> i strømmen',
+     "h1short": "Legg til Lovense-leketøy",
+     "card": "Koble et interaktivt Lovense-leketøy til cam-strømmen.",
+     "intro": "Du kjører cam-strømmen via gratis <strong style='color:var(--text)'>SplitCam</strong> og parer et <strong style='color:var(--text)'>Lovense</strong>-leketøy som reagerer på tokens. Lovense dokumenterer et offisielt <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>, og SplitCam leverer en offisiell Lovense-plugin — integrasjonen er støttet fra begge sider.",
+     "quick": "For å legge til et Lovense-leketøy i strømmen: installer SplitCam og Lovense-programvare, par leketøyet, link Lovense til cam-plattformen, legg til Lovense-status som Browser-lag i SplitCam, send deretter normalt."
+              "<ol><li>Installer SplitCam.</li><li>Installer Lovense-programvare og par leketøy.</li>"
+              "<li>Link Lovense til cam-siden.</li>"
+              "<li>Legg til Lovense-overlay i SplitCam.</li><li>Trykk Go Live.</li></ol>",
+     "steps": [
+         ("Installer SplitCam",
+          "SplitCam er gratis streaming-programvare for Windows og macOS — enkoderen som sender videoen til cam-plattformen. Installer; uten vannmerke."),
+         ("Installer Lovense-programvare og par leketøyet",
+          "Installer Lovense Connect / Lovense Stream (offisiell desktop-app). Slå på leketøyet og par via Bluetooth slik at appen viser tilkoblet."),
+         ("Link Lovense til cam-plattformen",
+          "I Lovense-appen link cam-kontoen din slik at leketøyet reagerer på seer-tokens / tips. De fleste store cam-plattformer støttes."),
+         ("Legg til Lovense-overlay i SplitCam",
+          "Lovense leverer en overlay/widget-URL. Legg til som <strong>Browser</strong>-lag i SplitCam-scenen slik at seerne ser leketøyets status og nylige tips på skjermen."),
+         ("Bygg scene og Go Live",
+          "Legg til kameraet og andre overlays, lim inn cam-plattformens RTMP-nøkkel i SplitCam og klikk <strong>Go Live</strong>. Leketøyet reagerer på tips i sanntid."),
+     ],
+     "tips": [
+         ("Bruk det offisielle Lovense SplitCam Toolset", "Lovense publiserer et SplitCam-spesifikt toolset med egen installasjonsveiledning — det legger til leketøys-aktivitets-overlay og tip alerts laget for SplitCam."),
+         ("Oppdater Lovense Cam Extension", "Toolsetet krever en nylig Lovense Cam Extension (30.1.4 eller nyere) — oppdater før live."),
+         ("Hold leketøyet ladet", "Nesten tomt batteri midt i showet dreper den interaktive siden — lad fullt før live."),
+         ("Test token-reaksjon", "Send en liten test-tip for å bekrefte at leketøyet reagerer før du åpner rommet."),
+         ("Sjekk versjonskrav", "Lovense SplitCam Toolset krever SplitCam 10.4.5 eller nyere. Lovense Cam Extension dekker offisielt Chaturbate, Stripchat, BongaCams, MyFreeCams og CamSoda — for andre sider bruk Lovense's Generic URL-integrasjon."),
+     ],
+     "faq": [
+         ("Støtter Lovense SplitCam offisielt?", "Ja — Lovense dokumenterer et offisielt «Lovense SplitCam Toolset» med egen installasjonsveiledning, og SplitCam leverer en offisiell Lovense-plugin. Integrasjonen er støttet fra begge sider."),
+         ("Kobler leketøyet direkte til SplitCam?", "Nei — leketøyet pares med Lovense-appen; SplitCam viser Lovense-overlay og sender kameraet."),
+         ("Hvilke cam-sider støtter Lovense?", "Lovense Cam Extension støtter offisielt Chaturbate, Stripchat, BongaCams, MyFreeCams og CamSoda, med varierende støtte for andre — sjekk gjeldende liste i Lovense-appen."),
+         ("Kan jeg vise nylige tips på skjermen?", "Ja — legg til Lovense widget-URL som Browser-lag i SplitCam."),
+     ]},
+    {"slug": "multistream-cams", "name": "Flere cam-sider",
+     "title": "Sending til flere cam-sider samtidig med SplitCam",
+     "desc": "Sending til MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat og flere samtidig med SplitCam's gratis multistreaming. Ett klikk, uten vannmerke.",
+     "kw": "sending til flere cam-sider, multistream cam sites, sending til chaturbate og bongacams samtidig, multistream cam programvare",
+     "h1html": 'Slik sender du til <span class="accent">flere cam-sider</span> samtidig',
+     "h1short": "Cam-multistreaming",
+     "card": "Sending til flere cam-sider samtidig.",
+     "intro": "Gratis <strong style='color:var(--text)'>SplitCam</strong> kan sende én koding til <strong style='color:var(--text)'>flere cam-sider samtidig</strong> — MyFreeCams, Chaturbate, BongaCams, CAM4, Stripchat og flere. Uten vannmerke, ett klikk.",
+     "quick": "For å sende til flere cam-sider på én gang: installer SplitCam, bygg scenen, hent RTMP-server-URL og stream key fra hver cam-side, legg til alle i SplitCam's multistreaming-innstillinger, klikk Go Live én gang."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent en RTMP-nøkkel fra hver cam-side.</li>"
+              "<li>Legg til alle nøkler i SplitCam multistream.</li>"
+              "<li>Trykk Go Live én gang.</li></ol>",
+     "steps": [
+         ("Installer SplitCam",
+          "SplitCam er gratis streaming-programvare for Windows og macOS med innebygd multistreaming. Installer — uten vannmerke, uten registrering."),
+         ("Sett opp kamera og scene",
+          "Åpne SplitCam, legg til webkameraet og bygg scenen med overlays og filtre. Én scene mater hver destinasjon."),
+         ("Hent en RTMP-nøkkel fra hver cam-side",
+          "På hver cam-plattform aktiver ekstern / RTMP-broadcasting og kopier <strong>server-URL</strong> og <strong>stream key</strong>. Gjenta for hver side du vil sende til — se de individuelle plattformguidene for nøyaktige ruter."),
+         ("Legg til hver destinasjon i SplitCam",
+          "Åpne <strong>Stream Settings</strong> og legg til hver cam-side som tilpasset RTMP-destinasjon — lim inn server-URL og nøkkel. Kryss av alt du vil ha live."),
+         ("Klikk Go Live én gang",
+          "Trykk <strong>Go Live</strong>. SplitCam sender strømmen til hver valgt cam-side samtidig, peer-to-peer, fra én koding — uten ekstra gebyr."),
+     ],
+     "tips": [
+         ("Følg opplastningen din", "Multistreaming multipliserer opplastnings-belastningen. Hver destinasjon forbruker sin egen bitrate — sørg for at tilkoblingen tåler summen."),
+         ("Sjekk plattformregler", "Noen cam-sider forbyr samtidig sending andre steder — bekreft før multistreaming."),
+         ("Kabel — drops kan du ikke tillate her", "Multistreaming multipliserer opplastnings-belastningen, så et enkelt wi-fi-drop kan velte alle destinasjoner samtidig. Kabel er ikke valgfritt her."),
+         ("Følg helsemonitoren", "SplitCam viser status per destinasjon — drop en side hvis opplastningen ikke tåler."),
+     ],
+     "faq": [
+         ("Er SplitCam multistreaming gratis?", "Ja — multistreaming er innebygd og gratis, ingen gebyr per destinasjon, ingen vannmerke."),
+         ("Til hvor mange cam-sider kan jeg sende samtidig?", "Så mange som opplastnings-båndbredden tåler — hver destinasjon forbruker sin egen bitrate."),
+         ("Bruker den cloud-relay?", "Nei — SplitCam sender strømmer peer-to-peer direkte fra PC-en til hver plattforms ingest."),
+         ("Senker multistreaming PC-en min?", "Koding skjer én gang og gjenbrukes; maskinvare-koding holder CPU-belastningen lav. Opplastnings-båndbredde er den reelle grensen."),
+     ]},
+]
