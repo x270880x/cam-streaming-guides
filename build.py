@@ -30,6 +30,28 @@ LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
                "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
                "zh", "ja", "ar", "th", "fil"]  # set by main() to those with platforms_<lang>.py
 RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
+
+
+# Inline JS that auto-redirects visitors to their browser-preferred language.
+# - Honours a saved choice in localStorage (set when the user clicks the lang-switch)
+# - Otherwise reads navigator.languages and redirects to the best matching locale
+# - Hides <html> during the redirect to avoid a flash of the wrong language
+LANG_REDIRECT_JS = """<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>"""
 PUBLISHER = {"@type": "Organization", "name": SITE_NAME, "url": f"{SITE}/"}
 
 # ---------------------------------------------------------------- CSS (shared)
@@ -745,7 +767,7 @@ def lang_switch(cur, depth, slug=None):
         else:
             href = f"{depth}{LANG_PATH[L]}" or "./"
         cls = ' class="cur"' if L == cur else ""
-        items.append(f'<a href="{href}"{cls}>{LANG_LABEL[L]}</a>')
+        items.append(f'<a href="{href}" data-lang="{L}"{cls}>{LANG_LABEL[L]}</a>')
     return '<div class="lang-switch">' + "".join(items) + "</div>"
 
 
@@ -858,6 +880,7 @@ def render(p, lang, all_platforms):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>
+{LANG_REDIRECT_JS}
 </head>
 <body>
 <nav>
@@ -1577,6 +1600,7 @@ def render_legal(slug, lang):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>
+{LANG_REDIRECT_JS}
 </head>
 <body>
 <nav>
@@ -1734,6 +1758,7 @@ def render_hub(platforms, lang):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>
+{LANG_REDIRECT_JS}
 </head>
 <body>
 <nav>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ro",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Toate ghidurile</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../multistream-cams/">EN</a><a href="../../ru/multistream-cams/">RU</a><a href="../../es/multistream-cams/">ES</a><a href="../../de/multistream-cams/">DE</a><a href="../../fr/multistream-cams/">FR</a><a href="../../it/multistream-cams/">IT</a><a href="../../pt/multistream-cams/">PT</a><a href="../../nl/multistream-cams/">NL</a><a href="../../ro/multistream-cams/" class="cur">RO</a><a href="../../bg/multistream-cams/">BG</a><a href="../../hu/multistream-cams/">HU</a><a href="../../el/multistream-cams/">EL</a><a href="../../fi/multistream-cams/">FI</a><a href="../../da/multistream-cams/">DA</a><a href="../../no/multistream-cams/">NO</a><a href="../../sr/multistream-cams/">SR</a><a href="../../hr/multistream-cams/">HR</a><a href="../../zh/multistream-cams/">中</a><a href="../../ja/multistream-cams/">日</a><a href="../../ar/multistream-cams/">ع</a><a href="../../th/multistream-cams/">ไทย</a><a href="../../fil/multistream-cams/">FIL</a></div>
+  <div class="lang-switch"><a href="../../multistream-cams/" data-lang="en">EN</a><a href="../../ru/multistream-cams/" data-lang="ru">RU</a><a href="../../es/multistream-cams/" data-lang="es">ES</a><a href="../../de/multistream-cams/" data-lang="de">DE</a><a href="../../fr/multistream-cams/" data-lang="fr">FR</a><a href="../../it/multistream-cams/" data-lang="it">IT</a><a href="../../pt/multistream-cams/" data-lang="pt">PT</a><a href="../../nl/multistream-cams/" data-lang="nl">NL</a><a href="../../ro/multistream-cams/" data-lang="ro" class="cur">RO</a><a href="../../bg/multistream-cams/" data-lang="bg">BG</a><a href="../../hu/multistream-cams/" data-lang="hu">HU</a><a href="../../el/multistream-cams/" data-lang="el">EL</a><a href="../../fi/multistream-cams/" data-lang="fi">FI</a><a href="../../da/multistream-cams/" data-lang="da">DA</a><a href="../../no/multistream-cams/" data-lang="no">NO</a><a href="../../sr/multistream-cams/" data-lang="sr">SR</a><a href="../../hr/multistream-cams/" data-lang="hr">HR</a><a href="../../zh/multistream-cams/" data-lang="zh">中</a><a href="../../ja/multistream-cams/" data-lang="ja">日</a><a href="../../ar/multistream-cams/" data-lang="ar">ع</a><a href="../../th/multistream-cams/" data-lang="th">ไทย</a><a href="../../fil/multistream-cams/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Ghiduri</a><span class="sep">/</span><span>Multiple Cam Sites</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Actualizat: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Actualizat: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

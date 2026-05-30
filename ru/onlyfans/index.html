@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ru",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Все гайды</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../onlyfans/">EN</a><a href="../../ru/onlyfans/" class="cur">RU</a><a href="../../es/onlyfans/">ES</a><a href="../../de/onlyfans/">DE</a><a href="../../fr/onlyfans/">FR</a><a href="../../it/onlyfans/">IT</a><a href="../../pt/onlyfans/">PT</a><a href="../../nl/onlyfans/">NL</a><a href="../../ro/onlyfans/">RO</a><a href="../../bg/onlyfans/">BG</a><a href="../../hu/onlyfans/">HU</a><a href="../../el/onlyfans/">EL</a><a href="../../fi/onlyfans/">FI</a><a href="../../da/onlyfans/">DA</a><a href="../../no/onlyfans/">NO</a><a href="../../sr/onlyfans/">SR</a><a href="../../hr/onlyfans/">HR</a><a href="../../zh/onlyfans/">中</a><a href="../../ja/onlyfans/">日</a><a href="../../ar/onlyfans/">ع</a><a href="../../th/onlyfans/">ไทย</a><a href="../../fil/onlyfans/">FIL</a></div>
+  <div class="lang-switch"><a href="../../onlyfans/" data-lang="en">EN</a><a href="../../ru/onlyfans/" data-lang="ru" class="cur">RU</a><a href="../../es/onlyfans/" data-lang="es">ES</a><a href="../../de/onlyfans/" data-lang="de">DE</a><a href="../../fr/onlyfans/" data-lang="fr">FR</a><a href="../../it/onlyfans/" data-lang="it">IT</a><a href="../../pt/onlyfans/" data-lang="pt">PT</a><a href="../../nl/onlyfans/" data-lang="nl">NL</a><a href="../../ro/onlyfans/" data-lang="ro">RO</a><a href="../../bg/onlyfans/" data-lang="bg">BG</a><a href="../../hu/onlyfans/" data-lang="hu">HU</a><a href="../../el/onlyfans/" data-lang="el">EL</a><a href="../../fi/onlyfans/" data-lang="fi">FI</a><a href="../../da/onlyfans/" data-lang="da">DA</a><a href="../../no/onlyfans/" data-lang="no">NO</a><a href="../../sr/onlyfans/" data-lang="sr">SR</a><a href="../../hr/onlyfans/" data-lang="hr">HR</a><a href="../../zh/onlyfans/" data-lang="zh">中</a><a href="../../ja/onlyfans/" data-lang="ja">日</a><a href="../../ar/onlyfans/" data-lang="ar">ع</a><a href="../../th/onlyfans/" data-lang="th">ไทย</a><a href="../../fil/onlyfans/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Гайды</a><span class="sep">/</span><span>OnlyFans</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Обновлено: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Обновлено: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "it",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Tutte le guide</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../streamate/">EN</a><a href="../../ru/streamate/">RU</a><a href="../../es/streamate/">ES</a><a href="../../de/streamate/">DE</a><a href="../../fr/streamate/">FR</a><a href="../../it/streamate/" class="cur">IT</a><a href="../../pt/streamate/">PT</a><a href="../../nl/streamate/">NL</a><a href="../../ro/streamate/">RO</a><a href="../../bg/streamate/">BG</a><a href="../../hu/streamate/">HU</a><a href="../../el/streamate/">EL</a><a href="../../fi/streamate/">FI</a><a href="../../da/streamate/">DA</a><a href="../../no/streamate/">NO</a><a href="../../sr/streamate/">SR</a><a href="../../hr/streamate/">HR</a><a href="../../zh/streamate/">中</a><a href="../../ja/streamate/">日</a><a href="../../ar/streamate/">ع</a><a href="../../th/streamate/">ไทย</a><a href="../../fil/streamate/">FIL</a></div>
+  <div class="lang-switch"><a href="../../streamate/" data-lang="en">EN</a><a href="../../ru/streamate/" data-lang="ru">RU</a><a href="../../es/streamate/" data-lang="es">ES</a><a href="../../de/streamate/" data-lang="de">DE</a><a href="../../fr/streamate/" data-lang="fr">FR</a><a href="../../it/streamate/" data-lang="it" class="cur">IT</a><a href="../../pt/streamate/" data-lang="pt">PT</a><a href="../../nl/streamate/" data-lang="nl">NL</a><a href="../../ro/streamate/" data-lang="ro">RO</a><a href="../../bg/streamate/" data-lang="bg">BG</a><a href="../../hu/streamate/" data-lang="hu">HU</a><a href="../../el/streamate/" data-lang="el">EL</a><a href="../../fi/streamate/" data-lang="fi">FI</a><a href="../../da/streamate/" data-lang="da">DA</a><a href="../../no/streamate/" data-lang="no">NO</a><a href="../../sr/streamate/" data-lang="sr">SR</a><a href="../../hr/streamate/" data-lang="hr">HR</a><a href="../../zh/streamate/" data-lang="zh">中</a><a href="../../ja/streamate/" data-lang="ja">日</a><a href="../../ar/streamate/" data-lang="ar">ع</a><a href="../../th/streamate/" data-lang="th">ไทย</a><a href="../../fil/streamate/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Guide</a><span class="sep">/</span><span>Streamate</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Aggiornato: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Aggiornato: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

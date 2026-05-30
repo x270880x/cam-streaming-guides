@@ -198,12 +198,28 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
   <a class="nav-logo" href="../"><span class="dot"></span>Streaming Guides</a>
   <ul class="nav-links"><li><a href="../">Alle gidsen</a></li></ul>
-  <div class="lang-switch"><a href="../">EN</a><a href="../ru/">RU</a><a href="../es/">ES</a><a href="../de/">DE</a><a href="../fr/">FR</a><a href="../it/">IT</a><a href="../pt/">PT</a><a href="../nl/" class="cur">NL</a><a href="../ro/">RO</a><a href="../bg/">BG</a><a href="../hu/">HU</a><a href="../el/">EL</a><a href="../fi/">FI</a><a href="../da/">DA</a><a href="../no/">NO</a><a href="../sr/">SR</a><a href="../hr/">HR</a><a href="../zh/">中</a><a href="../ja/">日</a><a href="../ar/">ع</a><a href="../th/">ไทย</a><a href="../fil/">FIL</a></div>
+  <div class="lang-switch"><a href="../" data-lang="en">EN</a><a href="../ru/" data-lang="ru">RU</a><a href="../es/" data-lang="es">ES</a><a href="../de/" data-lang="de">DE</a><a href="../fr/" data-lang="fr">FR</a><a href="../it/" data-lang="it">IT</a><a href="../pt/" data-lang="pt">PT</a><a href="../nl/" data-lang="nl" class="cur">NL</a><a href="../ro/" data-lang="ro">RO</a><a href="../bg/" data-lang="bg">BG</a><a href="../hu/" data-lang="hu">HU</a><a href="../el/" data-lang="el">EL</a><a href="../fi/" data-lang="fi">FI</a><a href="../da/" data-lang="da">DA</a><a href="../no/" data-lang="no">NO</a><a href="../sr/" data-lang="sr">SR</a><a href="../hr/" data-lang="hr">HR</a><a href="../zh/" data-lang="zh">中</a><a href="../ja/" data-lang="ja">日</a><a href="../ar/" data-lang="ar">ع</a><a href="../th/" data-lang="th">ไทย</a><a href="../fil/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../">Gidsen</a><span class="sep">/</span><span>Contact</span>
@@ -212,7 +228,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <h1 class="h1">Contact</h1>
   <div class="legal-body"><p>Voor vragen, correcties of feedback over de gidsen, mail naar <a href="mailto:hello@camstreamguide.com">hello@camstreamguide.com</a>.</p><p>We bieden geen account- of technische ondersteuning voor de cam-platforms zelf — neem voor zulke vragen contact op met de officiële support van het betreffende platform.</p><p>Voor SplitCam-softwaresupport, zie <a href="https://splitcam.com/support" rel="nofollow">splitcam.com/support</a>.</p></div>
   <p style="margin-top:32px;color:var(--text-sub);font-size:13px">
-    <span class="age-tag">18+</span> &nbsp; Laatst bijgewerkt: <time datetime="2026-05-30">2026-05-30</time>
+    <span class="age-tag">18+</span> &nbsp; Laatst bijgewerkt: <time datetime="2026-05-31">2026-05-31</time>
   </p>
 </section>
 <footer>

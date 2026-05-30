@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fi",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Kaikki oppaat</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../virtwish/">EN</a><a href="../../ru/virtwish/">RU</a><a href="../../es/virtwish/">ES</a><a href="../../de/virtwish/">DE</a><a href="../../fr/virtwish/">FR</a><a href="../../it/virtwish/">IT</a><a href="../../pt/virtwish/">PT</a><a href="../../nl/virtwish/">NL</a><a href="../../ro/virtwish/">RO</a><a href="../../bg/virtwish/">BG</a><a href="../../hu/virtwish/">HU</a><a href="../../el/virtwish/">EL</a><a href="../../fi/virtwish/" class="cur">FI</a><a href="../../da/virtwish/">DA</a><a href="../../no/virtwish/">NO</a><a href="../../sr/virtwish/">SR</a><a href="../../hr/virtwish/">HR</a><a href="../../zh/virtwish/">中</a><a href="../../ja/virtwish/">日</a><a href="../../ar/virtwish/">ع</a><a href="../../th/virtwish/">ไทย</a><a href="../../fil/virtwish/">FIL</a></div>
+  <div class="lang-switch"><a href="../../virtwish/" data-lang="en">EN</a><a href="../../ru/virtwish/" data-lang="ru">RU</a><a href="../../es/virtwish/" data-lang="es">ES</a><a href="../../de/virtwish/" data-lang="de">DE</a><a href="../../fr/virtwish/" data-lang="fr">FR</a><a href="../../it/virtwish/" data-lang="it">IT</a><a href="../../pt/virtwish/" data-lang="pt">PT</a><a href="../../nl/virtwish/" data-lang="nl">NL</a><a href="../../ro/virtwish/" data-lang="ro">RO</a><a href="../../bg/virtwish/" data-lang="bg">BG</a><a href="../../hu/virtwish/" data-lang="hu">HU</a><a href="../../el/virtwish/" data-lang="el">EL</a><a href="../../fi/virtwish/" data-lang="fi" class="cur">FI</a><a href="../../da/virtwish/" data-lang="da">DA</a><a href="../../no/virtwish/" data-lang="no">NO</a><a href="../../sr/virtwish/" data-lang="sr">SR</a><a href="../../hr/virtwish/" data-lang="hr">HR</a><a href="../../zh/virtwish/" data-lang="zh">中</a><a href="../../ja/virtwish/" data-lang="ja">日</a><a href="../../ar/virtwish/" data-lang="ar">ع</a><a href="../../th/virtwish/" data-lang="th">ไทย</a><a href="../../fil/virtwish/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Oppaat</a><span class="sep">/</span><span>VirtWish</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Päivitetty: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Päivitetty: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

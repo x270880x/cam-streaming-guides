@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "en",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../">All guides</a></li>
   </ul>
-  <div class="lang-switch"><a href="../mfc-alerts/" class="cur">EN</a><a href="../ru/mfc-alerts/">RU</a><a href="../es/mfc-alerts/">ES</a><a href="../de/mfc-alerts/">DE</a><a href="../fr/mfc-alerts/">FR</a><a href="../it/mfc-alerts/">IT</a><a href="../pt/mfc-alerts/">PT</a><a href="../nl/mfc-alerts/">NL</a><a href="../ro/mfc-alerts/">RO</a><a href="../bg/mfc-alerts/">BG</a><a href="../hu/mfc-alerts/">HU</a><a href="../el/mfc-alerts/">EL</a><a href="../fi/mfc-alerts/">FI</a><a href="../da/mfc-alerts/">DA</a><a href="../no/mfc-alerts/">NO</a><a href="../sr/mfc-alerts/">SR</a><a href="../hr/mfc-alerts/">HR</a><a href="../zh/mfc-alerts/">中</a><a href="../ja/mfc-alerts/">日</a><a href="../ar/mfc-alerts/">ع</a><a href="../th/mfc-alerts/">ไทย</a><a href="../fil/mfc-alerts/">FIL</a></div>
+  <div class="lang-switch"><a href="../mfc-alerts/" data-lang="en" class="cur">EN</a><a href="../ru/mfc-alerts/" data-lang="ru">RU</a><a href="../es/mfc-alerts/" data-lang="es">ES</a><a href="../de/mfc-alerts/" data-lang="de">DE</a><a href="../fr/mfc-alerts/" data-lang="fr">FR</a><a href="../it/mfc-alerts/" data-lang="it">IT</a><a href="../pt/mfc-alerts/" data-lang="pt">PT</a><a href="../nl/mfc-alerts/" data-lang="nl">NL</a><a href="../ro/mfc-alerts/" data-lang="ro">RO</a><a href="../bg/mfc-alerts/" data-lang="bg">BG</a><a href="../hu/mfc-alerts/" data-lang="hu">HU</a><a href="../el/mfc-alerts/" data-lang="el">EL</a><a href="../fi/mfc-alerts/" data-lang="fi">FI</a><a href="../da/mfc-alerts/" data-lang="da">DA</a><a href="../no/mfc-alerts/" data-lang="no">NO</a><a href="../sr/mfc-alerts/" data-lang="sr">SR</a><a href="../hr/mfc-alerts/" data-lang="hr">HR</a><a href="../zh/mfc-alerts/" data-lang="zh">中</a><a href="../ja/mfc-alerts/" data-lang="ja">日</a><a href="../ar/mfc-alerts/" data-lang="ar">ع</a><a href="../th/mfc-alerts/" data-lang="th">ไทย</a><a href="../fil/mfc-alerts/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../">Guides</a><span class="sep">/</span><span>MFC Alerts</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Last updated: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Last updated: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

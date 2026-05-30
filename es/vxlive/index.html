@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "es",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -338,6 +338,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -345,7 +361,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Todas las guías</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../vxlive/">EN</a><a href="../../ru/vxlive/">RU</a><a href="../../es/vxlive/" class="cur">ES</a><a href="../../de/vxlive/">DE</a><a href="../../fr/vxlive/">FR</a><a href="../../it/vxlive/">IT</a><a href="../../pt/vxlive/">PT</a><a href="../../nl/vxlive/">NL</a><a href="../../ro/vxlive/">RO</a><a href="../../bg/vxlive/">BG</a><a href="../../hu/vxlive/">HU</a><a href="../../el/vxlive/">EL</a><a href="../../fi/vxlive/">FI</a><a href="../../da/vxlive/">DA</a><a href="../../no/vxlive/">NO</a><a href="../../sr/vxlive/">SR</a><a href="../../hr/vxlive/">HR</a><a href="../../zh/vxlive/">中</a><a href="../../ja/vxlive/">日</a><a href="../../ar/vxlive/">ع</a><a href="../../th/vxlive/">ไทย</a><a href="../../fil/vxlive/">FIL</a></div>
+  <div class="lang-switch"><a href="../../vxlive/" data-lang="en">EN</a><a href="../../ru/vxlive/" data-lang="ru">RU</a><a href="../../es/vxlive/" data-lang="es" class="cur">ES</a><a href="../../de/vxlive/" data-lang="de">DE</a><a href="../../fr/vxlive/" data-lang="fr">FR</a><a href="../../it/vxlive/" data-lang="it">IT</a><a href="../../pt/vxlive/" data-lang="pt">PT</a><a href="../../nl/vxlive/" data-lang="nl">NL</a><a href="../../ro/vxlive/" data-lang="ro">RO</a><a href="../../bg/vxlive/" data-lang="bg">BG</a><a href="../../hu/vxlive/" data-lang="hu">HU</a><a href="../../el/vxlive/" data-lang="el">EL</a><a href="../../fi/vxlive/" data-lang="fi">FI</a><a href="../../da/vxlive/" data-lang="da">DA</a><a href="../../no/vxlive/" data-lang="no">NO</a><a href="../../sr/vxlive/" data-lang="sr">SR</a><a href="../../hr/vxlive/" data-lang="hr">HR</a><a href="../../zh/vxlive/" data-lang="zh">中</a><a href="../../ja/vxlive/" data-lang="ja">日</a><a href="../../ar/vxlive/" data-lang="ar">ع</a><a href="../../th/vxlive/" data-lang="th">ไทย</a><a href="../../fil/vxlive/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Guías</a><span class="sep">/</span><span>VXLive</span>
@@ -410,7 +426,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Actualizado: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Actualizado: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

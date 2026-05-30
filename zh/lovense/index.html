@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "zh",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">所有指南</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../lovense/">EN</a><a href="../../ru/lovense/">RU</a><a href="../../es/lovense/">ES</a><a href="../../de/lovense/">DE</a><a href="../../fr/lovense/">FR</a><a href="../../it/lovense/">IT</a><a href="../../pt/lovense/">PT</a><a href="../../nl/lovense/">NL</a><a href="../../ro/lovense/">RO</a><a href="../../bg/lovense/">BG</a><a href="../../hu/lovense/">HU</a><a href="../../el/lovense/">EL</a><a href="../../fi/lovense/">FI</a><a href="../../da/lovense/">DA</a><a href="../../no/lovense/">NO</a><a href="../../sr/lovense/">SR</a><a href="../../hr/lovense/">HR</a><a href="../../zh/lovense/" class="cur">中</a><a href="../../ja/lovense/">日</a><a href="../../ar/lovense/">ع</a><a href="../../th/lovense/">ไทย</a><a href="../../fil/lovense/">FIL</a></div>
+  <div class="lang-switch"><a href="../../lovense/" data-lang="en">EN</a><a href="../../ru/lovense/" data-lang="ru">RU</a><a href="../../es/lovense/" data-lang="es">ES</a><a href="../../de/lovense/" data-lang="de">DE</a><a href="../../fr/lovense/" data-lang="fr">FR</a><a href="../../it/lovense/" data-lang="it">IT</a><a href="../../pt/lovense/" data-lang="pt">PT</a><a href="../../nl/lovense/" data-lang="nl">NL</a><a href="../../ro/lovense/" data-lang="ro">RO</a><a href="../../bg/lovense/" data-lang="bg">BG</a><a href="../../hu/lovense/" data-lang="hu">HU</a><a href="../../el/lovense/" data-lang="el">EL</a><a href="../../fi/lovense/" data-lang="fi">FI</a><a href="../../da/lovense/" data-lang="da">DA</a><a href="../../no/lovense/" data-lang="no">NO</a><a href="../../sr/lovense/" data-lang="sr">SR</a><a href="../../hr/lovense/" data-lang="hr">HR</a><a href="../../zh/lovense/" data-lang="zh" class="cur">中</a><a href="../../ja/lovense/" data-lang="ja">日</a><a href="../../ar/lovense/" data-lang="ar">ع</a><a href="../../th/lovense/" data-lang="th">ไทย</a><a href="../../fil/lovense/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">指南</a><span class="sep">/</span><span>Lovense</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>最后更新: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>最后更新: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

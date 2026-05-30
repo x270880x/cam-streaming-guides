@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "de",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">Alle Anleitungen</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../flirt4free/">EN</a><a href="../../ru/flirt4free/">RU</a><a href="../../es/flirt4free/">ES</a><a href="../../de/flirt4free/" class="cur">DE</a><a href="../../fr/flirt4free/">FR</a><a href="../../it/flirt4free/">IT</a><a href="../../pt/flirt4free/">PT</a><a href="../../nl/flirt4free/">NL</a><a href="../../ro/flirt4free/">RO</a><a href="../../bg/flirt4free/">BG</a><a href="../../hu/flirt4free/">HU</a><a href="../../el/flirt4free/">EL</a><a href="../../fi/flirt4free/">FI</a><a href="../../da/flirt4free/">DA</a><a href="../../no/flirt4free/">NO</a><a href="../../sr/flirt4free/">SR</a><a href="../../hr/flirt4free/">HR</a><a href="../../zh/flirt4free/">中</a><a href="../../ja/flirt4free/">日</a><a href="../../ar/flirt4free/">ع</a><a href="../../th/flirt4free/">ไทย</a><a href="../../fil/flirt4free/">FIL</a></div>
+  <div class="lang-switch"><a href="../../flirt4free/" data-lang="en">EN</a><a href="../../ru/flirt4free/" data-lang="ru">RU</a><a href="../../es/flirt4free/" data-lang="es">ES</a><a href="../../de/flirt4free/" data-lang="de" class="cur">DE</a><a href="../../fr/flirt4free/" data-lang="fr">FR</a><a href="../../it/flirt4free/" data-lang="it">IT</a><a href="../../pt/flirt4free/" data-lang="pt">PT</a><a href="../../nl/flirt4free/" data-lang="nl">NL</a><a href="../../ro/flirt4free/" data-lang="ro">RO</a><a href="../../bg/flirt4free/" data-lang="bg">BG</a><a href="../../hu/flirt4free/" data-lang="hu">HU</a><a href="../../el/flirt4free/" data-lang="el">EL</a><a href="../../fi/flirt4free/" data-lang="fi">FI</a><a href="../../da/flirt4free/" data-lang="da">DA</a><a href="../../no/flirt4free/" data-lang="no">NO</a><a href="../../sr/flirt4free/" data-lang="sr">SR</a><a href="../../hr/flirt4free/" data-lang="hr">HR</a><a href="../../zh/flirt4free/" data-lang="zh">中</a><a href="../../ja/flirt4free/" data-lang="ja">日</a><a href="../../ar/flirt4free/" data-lang="ar">ع</a><a href="../../th/flirt4free/" data-lang="th">ไทย</a><a href="../../fil/flirt4free/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Anleitungen</a><span class="sep">/</span><span>Flirt4Free</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>Zuletzt aktualisiert: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>Zuletzt aktualisiert: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">

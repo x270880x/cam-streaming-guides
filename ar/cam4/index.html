@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ar",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-30",
+   "dateModified": "2026-05-31",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -330,6 +330,22 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
 </style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <nav>
@@ -337,7 +353,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
   <ul class="nav-links">
     <li><a href="../../">كل الأدلة</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../cam4/">EN</a><a href="../../ru/cam4/">RU</a><a href="../../es/cam4/">ES</a><a href="../../de/cam4/">DE</a><a href="../../fr/cam4/">FR</a><a href="../../it/cam4/">IT</a><a href="../../pt/cam4/">PT</a><a href="../../nl/cam4/">NL</a><a href="../../ro/cam4/">RO</a><a href="../../bg/cam4/">BG</a><a href="../../hu/cam4/">HU</a><a href="../../el/cam4/">EL</a><a href="../../fi/cam4/">FI</a><a href="../../da/cam4/">DA</a><a href="../../no/cam4/">NO</a><a href="../../sr/cam4/">SR</a><a href="../../hr/cam4/">HR</a><a href="../../zh/cam4/">中</a><a href="../../ja/cam4/">日</a><a href="../../ar/cam4/" class="cur">ع</a><a href="../../th/cam4/">ไทย</a><a href="../../fil/cam4/">FIL</a></div>
+  <div class="lang-switch"><a href="../../cam4/" data-lang="en">EN</a><a href="../../ru/cam4/" data-lang="ru">RU</a><a href="../../es/cam4/" data-lang="es">ES</a><a href="../../de/cam4/" data-lang="de">DE</a><a href="../../fr/cam4/" data-lang="fr">FR</a><a href="../../it/cam4/" data-lang="it">IT</a><a href="../../pt/cam4/" data-lang="pt">PT</a><a href="../../nl/cam4/" data-lang="nl">NL</a><a href="../../ro/cam4/" data-lang="ro">RO</a><a href="../../bg/cam4/" data-lang="bg">BG</a><a href="../../hu/cam4/" data-lang="hu">HU</a><a href="../../el/cam4/" data-lang="el">EL</a><a href="../../fi/cam4/" data-lang="fi">FI</a><a href="../../da/cam4/" data-lang="da">DA</a><a href="../../no/cam4/" data-lang="no">NO</a><a href="../../sr/cam4/" data-lang="sr">SR</a><a href="../../hr/cam4/" data-lang="hr">HR</a><a href="../../zh/cam4/" data-lang="zh">中</a><a href="../../ja/cam4/" data-lang="ja">日</a><a href="../../ar/cam4/" data-lang="ar" class="cur">ع</a><a href="../../th/cam4/" data-lang="th">ไทย</a><a href="../../fil/cam4/" data-lang="fil">FIL</a></div>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">الأدلة</a><span class="sep">/</span><span>CAM4</span>
@@ -402,7 +418,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 </section>
 <div class="section meta-line">
   <span class="age-tag">18+</span>
-  <span>آخر تحديث: <time datetime="2026-05-30">2026-05-30</time></span>
+  <span>آخر تحديث: <time datetime="2026-05-31">2026-05-31</time></span>
 </div>
 <footer>
   <div class="footer-inner">
