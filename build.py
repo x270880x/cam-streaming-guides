@@ -1724,7 +1724,7 @@ def render_hub(platforms, lang):
                + [p for p in avail if p["slug"] not in first])
     cards = "".join(
         f'<a class="related-card" href="{p["slug"]}/">'
-        f'<img class="hub-card-icon" src="logos/round/{p["slug"]}.png" alt="">'
+        f'<img class="hub-card-icon" src="{hub_depth}logos/round/{p["slug"]}.png" alt="" loading="lazy">'
         f'<div class="hub-card-body"><h4>{e(p[lang]["h1short"])}</h4>'
         f'<p>{e(p[lang]["card"])}</p></div></a>' for p in ordered)
     canon = f'{SITE}/{u["path"]}'
