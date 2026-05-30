@@ -95,10 +95,21 @@ padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5)}
 .dl-menu a{display:block;padding:11px 14px;border-radius:8px;font-size:14px;
 font-weight:600;color:var(--text);transition:background .12s}
 .dl-menu a:hover{background:var(--blue-dim)}
-.lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
-.lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
-.lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
-.lang-switch a.cur{background:var(--blue);color:#fff}
+.lang-dl{position:relative;display:inline-block;flex-shrink:0}
+.lang-dl>summary{list-style:none;cursor:pointer;padding:7px 11px;border:1px solid var(--app-border2);border-radius:8px;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--text);transition:background .15s;background:rgba(255,255,255,.02)}
+.lang-dl>summary:hover{background:rgba(255,255,255,.06)}
+.lang-dl>summary::-webkit-details-marker{display:none}
+.lang-dl>summary::marker{content:""}
+.lang-dl .lf{font-size:16px;line-height:1}
+.lang-dl>summary .dl-caret{font-size:10px;color:var(--text-sub);margin-left:2px}
+.lang-dl[open]>summary .dl-caret{transform:rotate(180deg)}
+.lang-dl-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:380px;max-height:75vh;overflow-y:auto;background:var(--app-surface);border:1px solid var(--app-border2);border-radius:12px;padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5);display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.lang-dl-menu a{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;font-size:13px;font-weight:600;color:var(--text);transition:background .12s}
+.lang-dl-menu a:hover{background:var(--blue-dim)}
+.lang-dl-menu a.cur{background:var(--blue);color:#fff}
+.lang-dl-menu .ln{font-size:13px}
+[dir="rtl"] .lang-dl-menu{right:auto;left:0}
+@media (max-width:640px){.lang-dl-menu{min-width:280px;grid-template-columns:1fr;max-height:60vh}.lang-dl>summary .lc{display:none}}
 .shot{margin:14px 0 2px;border:1px solid var(--app-border);border-radius:10px;overflow:hidden;background:var(--app-base)}
 .shot img{display:block;width:100%;height:auto}
 .shot figcaption{padding:9px 14px;font-size:12.5px;color:var(--text-sub);background:var(--app-surface);border-top:1px solid var(--app-border)}
@@ -688,6 +699,15 @@ LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": 
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
               "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL"}
+LANG_FLAG = {"en": "🇬🇧", "ru": "🇷🇺", "es": "🇪🇸", "de": "🇩🇪", "fr": "🇫🇷", "it": "🇮🇹",
+             "pt": "🇧🇷", "nl": "🇳🇱", "ro": "🇷🇴", "bg": "🇧🇬", "hu": "🇭🇺",
+             "el": "🇬🇷", "fi": "🇫🇮", "da": "🇩🇰", "no": "🇳🇴", "sr": "🇷🇸", "hr": "🇭🇷",
+             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭"}
+LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": "Deutsch",
+               "fr": "Français", "it": "Italiano", "pt": "Português", "nl": "Nederlands",
+               "ro": "Română", "bg": "Български", "hu": "Magyar", "el": "Ελληνικά",
+               "fi": "Suomi", "da": "Dansk", "no": "Norsk", "sr": "Српски", "hr": "Hrvatski",
+               "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
              "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
@@ -767,8 +787,19 @@ def lang_switch(cur, depth, slug=None):
         else:
             href = f"{depth}{LANG_PATH[L]}" or "./"
         cls = ' class="cur"' if L == cur else ""
-        items.append(f'<a href="{href}" data-lang="{L}"{cls}>{LANG_LABEL[L]}</a>')
-    return '<div class="lang-switch">' + "".join(items) + "</div>"
+        items.append(
+            f'<a href="{href}" data-lang="{L}"{cls}>'
+            f'<span class="lf">{LANG_FLAG[L]}</span>'
+            f'<span class="ln">{LANG_NATIVE[L]}</span></a>'
+        )
+    return (
+        '<details class="lang-dl">'
+        f'<summary aria-label="Language"><span class="lf">{LANG_FLAG[cur]}</span>'
+        f'<span class="lc">{LANG_LABEL[cur]}</span>'
+        '<span class="dl-caret">▾</span></summary>'
+        f'<div class="lang-dl-menu">{"".join(items)}</div>'
+        '</details>'
+    )
 
 
 def render(p, lang, all_platforms):

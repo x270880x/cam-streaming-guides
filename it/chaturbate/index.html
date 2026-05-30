@@ -215,10 +215,21 @@ padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5)}
 .dl-menu a{display:block;padding:11px 14px;border-radius:8px;font-size:14px;
 font-weight:600;color:var(--text);transition:background .12s}
 .dl-menu a:hover{background:var(--blue-dim)}
-.lang-switch{display:flex;border:1px solid var(--app-border2);border-radius:8px;overflow:hidden;flex-shrink:0}
-.lang-switch a{padding:7px 11px;font-size:12px;font-weight:600;color:var(--text-sub);transition:all .15s}
-.lang-switch a:hover{color:var(--text);background:rgba(255,255,255,.04)}
-.lang-switch a.cur{background:var(--blue);color:#fff}
+.lang-dl{position:relative;display:inline-block;flex-shrink:0}
+.lang-dl>summary{list-style:none;cursor:pointer;padding:7px 11px;border:1px solid var(--app-border2);border-radius:8px;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--text);transition:background .15s;background:rgba(255,255,255,.02)}
+.lang-dl>summary:hover{background:rgba(255,255,255,.06)}
+.lang-dl>summary::-webkit-details-marker{display:none}
+.lang-dl>summary::marker{content:""}
+.lang-dl .lf{font-size:16px;line-height:1}
+.lang-dl>summary .dl-caret{font-size:10px;color:var(--text-sub);margin-left:2px}
+.lang-dl[open]>summary .dl-caret{transform:rotate(180deg)}
+.lang-dl-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:380px;max-height:75vh;overflow-y:auto;background:var(--app-surface);border:1px solid var(--app-border2);border-radius:12px;padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5);display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.lang-dl-menu a{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;font-size:13px;font-weight:600;color:var(--text);transition:background .12s}
+.lang-dl-menu a:hover{background:var(--blue-dim)}
+.lang-dl-menu a.cur{background:var(--blue);color:#fff}
+.lang-dl-menu .ln{font-size:13px}
+[dir="rtl"] .lang-dl-menu{right:auto;left:0}
+@media (max-width:640px){.lang-dl-menu{min-width:280px;grid-template-columns:1fr;max-height:60vh}.lang-dl>summary .lc{display:none}}
 .shot{margin:14px 0 2px;border:1px solid var(--app-border);border-radius:10px;overflow:hidden;background:var(--app-base)}
 .shot img{display:block;width:100%;height:auto}
 .shot figcaption{padding:9px 14px;font-size:12.5px;color:var(--text-sub);background:var(--app-surface);border-top:1px solid var(--app-border)}
@@ -353,7 +364,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <ul class="nav-links">
     <li><a href="../../">Tutte le guide</a></li>
   </ul>
-  <div class="lang-switch"><a href="../../chaturbate/" data-lang="en">EN</a><a href="../../ru/chaturbate/" data-lang="ru">RU</a><a href="../../es/chaturbate/" data-lang="es">ES</a><a href="../../de/chaturbate/" data-lang="de">DE</a><a href="../../fr/chaturbate/" data-lang="fr">FR</a><a href="../../it/chaturbate/" data-lang="it" class="cur">IT</a><a href="../../pt/chaturbate/" data-lang="pt">PT</a><a href="../../nl/chaturbate/" data-lang="nl">NL</a><a href="../../ro/chaturbate/" data-lang="ro">RO</a><a href="../../bg/chaturbate/" data-lang="bg">BG</a><a href="../../hu/chaturbate/" data-lang="hu">HU</a><a href="../../el/chaturbate/" data-lang="el">EL</a><a href="../../fi/chaturbate/" data-lang="fi">FI</a><a href="../../da/chaturbate/" data-lang="da">DA</a><a href="../../no/chaturbate/" data-lang="no">NO</a><a href="../../sr/chaturbate/" data-lang="sr">SR</a><a href="../../hr/chaturbate/" data-lang="hr">HR</a><a href="../../zh/chaturbate/" data-lang="zh">中</a><a href="../../ja/chaturbate/" data-lang="ja">日</a><a href="../../ar/chaturbate/" data-lang="ar">ع</a><a href="../../th/chaturbate/" data-lang="th">ไทย</a><a href="../../fil/chaturbate/" data-lang="fil">FIL</a></div>
+  <details class="lang-dl"><summary aria-label="Language"><span class="lf">🇮🇹</span><span class="lc">IT</span><span class="dl-caret">▾</span></summary><div class="lang-dl-menu"><a href="../../chaturbate/" data-lang="en"><span class="lf">🇬🇧</span><span class="ln">English</span></a><a href="../../ru/chaturbate/" data-lang="ru"><span class="lf">🇷🇺</span><span class="ln">Русский</span></a><a href="../../es/chaturbate/" data-lang="es"><span class="lf">🇪🇸</span><span class="ln">Español</span></a><a href="../../de/chaturbate/" data-lang="de"><span class="lf">🇩🇪</span><span class="ln">Deutsch</span></a><a href="../../fr/chaturbate/" data-lang="fr"><span class="lf">🇫🇷</span><span class="ln">Français</span></a><a href="../../it/chaturbate/" data-lang="it" class="cur"><span class="lf">🇮🇹</span><span class="ln">Italiano</span></a><a href="../../pt/chaturbate/" data-lang="pt"><span class="lf">🇧🇷</span><span class="ln">Português</span></a><a href="../../nl/chaturbate/" data-lang="nl"><span class="lf">🇳🇱</span><span class="ln">Nederlands</span></a><a href="../../ro/chaturbate/" data-lang="ro"><span class="lf">🇷🇴</span><span class="ln">Română</span></a><a href="../../bg/chaturbate/" data-lang="bg"><span class="lf">🇧🇬</span><span class="ln">Български</span></a><a href="../../hu/chaturbate/" data-lang="hu"><span class="lf">🇭🇺</span><span class="ln">Magyar</span></a><a href="../../el/chaturbate/" data-lang="el"><span class="lf">🇬🇷</span><span class="ln">Ελληνικά</span></a><a href="../../fi/chaturbate/" data-lang="fi"><span class="lf">🇫🇮</span><span class="ln">Suomi</span></a><a href="../../da/chaturbate/" data-lang="da"><span class="lf">🇩🇰</span><span class="ln">Dansk</span></a><a href="../../no/chaturbate/" data-lang="no"><span class="lf">🇳🇴</span><span class="ln">Norsk</span></a><a href="../../sr/chaturbate/" data-lang="sr"><span class="lf">🇷🇸</span><span class="ln">Српски</span></a><a href="../../hr/chaturbate/" data-lang="hr"><span class="lf">🇭🇷</span><span class="ln">Hrvatski</span></a><a href="../../zh/chaturbate/" data-lang="zh"><span class="lf">🇨🇳</span><span class="ln">中文</span></a><a href="../../ja/chaturbate/" data-lang="ja"><span class="lf">🇯🇵</span><span class="ln">日本語</span></a><a href="../../ar/chaturbate/" data-lang="ar"><span class="lf">🇸🇦</span><span class="ln">العربية</span></a><a href="../../th/chaturbate/" data-lang="th"><span class="lf">🇹🇭</span><span class="ln">ไทย</span></a><a href="../../fil/chaturbate/" data-lang="fil"><span class="lf">🇵🇭</span><span class="ln">Filipino</span></a></div></details>
 </nav>
 <div class="breadcrumbs">
   <a href="../../">Guide</a><span class="sep">/</span><span>Chaturbate</span>
