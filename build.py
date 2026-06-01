@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 from obs_content import OBS_VS
-from model_content import MODEL_GUIDE
+from model_content import MODEL_GUIDE, EARNINGS_FAQ
 
 ROOT = Path(__file__).parent
 OBS_SLUG = "obs-alternative"
@@ -2117,6 +2117,10 @@ def render_model_guide(lang):
     """Render the 'how to become a cam model' top-funnel page (indexable SEO target)."""
     u = UI[lang]
     c = MODEL_GUIDE.get(lang) or MODEL_GUIDE["en"]
+    # Append the earnings FAQ (low-KD "how much do cam models make" cluster).
+    faq = list(c["faq"])
+    if lang in EARNINGS_FAQ:
+        faq.append(EARNINGS_FAQ[lang])
     depth = "../" if u["path"] else ""
     home = depth or "./"
     canon = f'{SITE}/{u["path"]}{MODEL_SLUG}/'
@@ -2134,7 +2138,7 @@ def render_model_guide(lang):
         for i, (head, body) in enumerate(c["steps"]))
     faq_html = "".join(
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
-        for q, a in c["faq"])
+        for q, a in faq)
 
     schema = {
         "@context": "https://schema.org",
@@ -2152,7 +2156,7 @@ def render_model_guide(lang):
             {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
                 {"@type": "Question", "name": q,
                  "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
-                for q, a in c["faq"]]},
+                for q, a in faq]},
         ],
     }
     return f"""<!DOCTYPE html>

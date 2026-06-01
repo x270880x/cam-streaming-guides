@@ -8,6 +8,56 @@ Localized H1/title use the Ahrefs-validated phrasing per market where known
 (ES "modelo webcam", DE "Camgirl werden", FR "devenir camgirl", …).
 """
 
+# Earnings FAQ — appended to each language's FAQ at render time. Targets the
+# low-KD "how much do cam models make / camgirls make" cluster (Ahrefs KD~4).
+# Honest and qualitative: no fabricated figures.
+EARNINGS_FAQ = {
+    "en": ("How much do cam models make?",
+           "It varies widely — from pocket money to a full-time income. Earnings depend on the platform, how many hours you stream, your niche and your audience, and every platform takes a commission, so your share of each token or tip differs. Top earners pull in thousands a month; most start small and grow. Check each platform's token value and payout split before you commit."),
+    "ru": ("Сколько зарабатывают вебкам-модели?",
+           "Очень по-разному — от карманных денег до полноценного дохода. Заработок зависит от платформы, числа часов в эфире, ниши и аудитории, и каждая платформа берёт комиссию, так что твоя доля с каждого токена или чаевых отличается. Топы получают тысячи в месяц; большинство начинает с малого и растёт. Сверь стоимость токена и процент выплат на каждой платформе заранее."),
+    "es": ("¿Cuánto gana una modelo webcam?",
+           "Varía mucho — desde dinero para gastos hasta un ingreso a tiempo completo. Las ganancias dependen de la plataforma, cuántas horas transmites, tu nicho y tu audiencia, y cada plataforma se lleva una comisión, así que tu parte de cada token o propina cambia. Las que más ganan sacan miles al mes; la mayoría empieza poco a poco y crece. Revisa el valor del token y el reparto de pagos de cada plataforma antes de comprometerte."),
+    "de": ("Wie viel verdient ein Camgirl?",
+           "Sehr unterschiedlich — von Taschengeld bis zu einem Vollzeiteinkommen. Der Verdienst hängt von der Plattform ab, wie viele Stunden du sendest, deiner Nische und deinem Publikum, und jede Plattform nimmt eine Provision, also unterscheidet sich dein Anteil pro Token oder Tip. Spitzenverdienerinnen holen Tausende im Monat; die meisten fangen klein an und wachsen. Prüfe Token-Wert und Auszahlungsanteil jeder Plattform, bevor du dich festlegst."),
+    "fr": ("Combien gagne une camgirl ?",
+           "Cela varie beaucoup — de l'argent de poche à un revenu à temps plein. Les gains dépendent de la plateforme, du nombre d'heures de diffusion, de ta niche et de ton public, et chaque plateforme prend une commission, donc ta part sur chaque jeton ou pourboire diffère. Les meilleures gagnent des milliers par mois ; la plupart commencent petit et progressent. Vérifie la valeur du jeton et le partage des paiements de chaque plateforme avant de t'engager."),
+    "it": ("Quanto guadagna una camgirl?",
+           "Varia molto — da soldi extra a un reddito a tempo pieno. I guadagni dipendono dalla piattaforma, da quante ore trasmetti, dalla tua nicchia e dal tuo pubblico, e ogni piattaforma prende una commissione, quindi la tua quota per ogni token o mancia cambia. Chi guadagna di più arriva a migliaia al mese; la maggior parte inizia piano e cresce. Controlla il valore del token e la ripartizione dei pagamenti di ogni piattaforma prima di impegnarti."),
+    "pt": ("Quanto ganha uma modelo de webcam?",
+           "Varia muito — de uma renda extra a um salário em tempo integral. Os ganhos dependem da plataforma, de quantas horas você transmite, do seu nicho e do seu público, e cada plataforma fica com uma comissão, então sua parte de cada token ou gorjeta muda. Quem mais ganha tira milhares por mês; a maioria começa pequena e cresce. Confira o valor do token e a divisão de pagamentos de cada plataforma antes de se comprometer."),
+    "nl": ("Hoeveel verdient een camgirl?",
+           "Het verschilt enorm — van zakgeld tot een fulltime inkomen. Verdiensten hangen af van het platform, hoeveel uur je uitzendt, je niche en je publiek, en elk platform neemt een commissie, dus jouw aandeel per token of tip verschilt. Topverdieners halen duizenden per maand; de meesten beginnen klein en groeien. Check de tokenwaarde en uitbetalingsverdeling van elk platform voor je je vastlegt."),
+    "ro": ("Cât câștigă un model webcam?",
+           "Variază mult — de la bani de buzunar până la un venit cu normă întreagă. Câștigurile depind de platformă, de câte ore transmiți, de nișa și publicul tău, și fiecare platformă ia un comision, deci partea ta din fiecare token sau bacșiș diferă. Cele care câștigă cel mai mult ajung la mii pe lună; majoritatea încep mic și cresc. Verifică valoarea tokenului și împărțirea plăților pe fiecare platformă înainte să te angajezi."),
+    "bg": ("Колко печели уебкам модел?",
+           "Варира много — от джобни пари до пълноценен доход. Печалбите зависят от платформата, колко часа излъчваш, нишата и аудиторията ти, и всяка платформа взима комисиона, така че твоят дял от всеки токен или бакшиш се различава. Най-печелившите изкарват хиляди на месец; повечето започват малко и растат. Провери стойността на токена и разпределението на плащанията на всяка платформа преди да се ангажираш."),
+    "hu": ("Mennyit keres egy camgirl?",
+           "Nagyon változó — a zsebpénztől a teljes munkaidős jövedelemig. A kereset a platformtól függ, hány órát adsz, a nichédtől és a közönségedtől, és minden platform jutalékot vesz le, így a részesedésed tokenenként vagy tippenként eltér. A legtöbbet keresők havi ezreket hoznak; a többség kicsiben kezd és növekszik. Ellenőrizd a token-értéket és a kifizetési arányt minden platformon, mielőtt elköteleződsz."),
+    "el": ("Πόσα βγάζει ένα cam model;",
+           "Ποικίλλει πολύ — από χαρτζιλίκι μέχρι εισόδημα πλήρους απασχόλησης. Τα κέρδη εξαρτώνται από την πλατφόρμα, πόσες ώρες μεταδίδεις, τη θεματική και το κοινό σου, και κάθε πλατφόρμα κρατά προμήθεια, οπότε το μερίδιό σου ανά token ή φιλοδώρημα διαφέρει. Οι κορυφαίες βγάζουν χιλιάδες τον μήνα· οι περισσότερες ξεκινούν μικρά και μεγαλώνουν. Έλεγξε την αξία του token και τη διανομή πληρωμών κάθε πλατφόρμας πριν δεσμευτείς."),
+    "fi": ("Paljonko cam-malli tienaa?",
+           "Vaihtelee paljon — taskurahasta kokopäiväiseen tuloon. Tienestit riippuvat alustasta, kuinka monta tuntia striimaat, kapeikostasi ja yleisöstäsi, ja jokainen alusta ottaa komission, joten osuutesi kustakin tokenista tai tipistä vaihtelee. Eniten tienaavat saavat tuhansia kuukaudessa; useimmat aloittavat pienestä ja kasvavat. Tarkista kunkin alustan tokenin arvo ja maksunjako ennen kuin sitoudut."),
+    "da": ("Hvor meget tjener en cam-model?",
+           "Det varierer meget — fra lommepenge til en fuldtidsindkomst. Indtjeningen afhænger af platformen, hvor mange timer du sender, din niche og dit publikum, og hver platform tager en kommission, så din andel af hver token eller tip er forskellig. Topnavne henter tusinder om måneden; de fleste starter småt og vokser. Tjek tokenværdi og udbetalingsfordeling på hver platform, før du forpligter dig."),
+    "no": ("Hvor mye tjener en cam-modell?",
+           "Det varierer mye — fra lommepenger til en fulltidsinntekt. Inntjeningen avhenger av plattformen, hvor mange timer du sender, nisjen og publikumet ditt, og hver plattform tar en kommisjon, så andelen din per token eller tips varierer. De som tjener mest henter tusenvis i måneden; de fleste starter smått og vokser. Sjekk tokenverdi og utbetalingsfordeling på hver plattform før du forplikter deg."),
+    "sr": ("Колико зарађује кам модел?",
+           "Варира много — од џепарца до пуноправног прихода. Зарада зависи од платформе, колико сати преносиш, твоје нише и публике, и свака платформа узима провизију, па се твој део по сваком токену или напојници разликује. Они који највише зарађују узимају хиљаде месечно; већина почиње мало и расте. Провери вредност токена и расподелу исплата на свакој платформи пре него се обавежеш."),
+    "hr": ("Koliko zarađuje cam model?",
+           "Varira jako — od džeparca do prihoda s punim radnim vremenom. Zarada ovisi o platformi, koliko sati prenosiš, tvojoj niši i publici, i svaka platforma uzima proviziju, pa se tvoj udio po svakom tokenu ili napojnici razlikuje. Oni koji najviše zarađuju uzimaju tisuće mjesečno; većina počinje malo i raste. Provjeri vrijednost tokena i raspodjelu isplata na svakoj platformi prije nego se obvežeš."),
+    "zh": ("cam 模特能赚多少钱？",
+           "差异很大——从零花钱到全职收入。收入取决于平台、你直播的时长、你的细分领域和受众，而且每个平台都抽取佣金，所以你从每个代币或小费中分到的比例各不相同。顶级主播每月能赚数千；大多数人从小做起逐步成长。在投入前先核对每个平台的代币价值和分成比例。"),
+    "ja": ("camモデルはどれくらい稼げますか？",
+           "大きく変わります — お小遣い程度からフルタイムの収入まで。収入はプラットフォーム、配信時間、ニッチ、視聴者によって決まり、どのプラットフォームも手数料を取るので、トークンやチップごとの取り分は異なります。トップ層は月に数千ドル稼ぎますが、大半は小さく始めて成長します。決める前に各プラットフォームのトークン価値と報酬分配を確認しましょう。"),
+    "ar": ("كم تربح عارضة cam؟",
+           "يتفاوت كثيراً — من مصروف جيب إلى دخل بدوام كامل. تعتمد الأرباح على المنصة، وعدد ساعات بثك، ومجالك وجمهورك، وكل منصة تأخذ عمولة، لذا تختلف حصتك من كل رمز أو إكرامية. أعلى المربحات يجنين الآلاف شهرياً؛ معظمهن يبدأن صغيراً ثم ينمين. تحقق من قيمة الرمز وتوزيع المدفوعات على كل منصة قبل أن تلتزم."),
+    "th": ("cam model ทำเงินได้เท่าไหร่?",
+           "แตกต่างกันมาก — ตั้งแต่เงินติดกระเป๋าไปจนถึงรายได้เต็มเวลา รายได้ขึ้นอยู่กับแพลตฟอร์ม จำนวนชั่วโมงที่คุณสตรีม กลุ่มเฉพาะและผู้ชมของคุณ และทุกแพลตฟอร์มหักค่าคอมมิชชัน ดังนั้นส่วนแบ่งของคุณต่อโทเค็นหรือทิปแต่ละครั้งจึงต่างกัน คนที่ทำเงินสูงสุดได้หลายพันต่อเดือน ส่วนใหญ่เริ่มจากน้อยแล้วเติบโต ตรวจสอบมูลค่าโทเค็นและการแบ่งจ่ายของแต่ละแพลตฟอร์มก่อนตัดสินใจ"),
+    "fil": ("Magkano ang kita ng isang cam model?",
+            "Malaki ang pagkakaiba — mula sa pang-gastos hanggang sa full-time na kita. Ang kita ay depende sa platform, kung ilang oras kang nag-stream, ang iyong niche at audience, at bawat platform ay kumukuha ng komisyon, kaya iba-iba ang bahagi mo sa bawat token o tip. Ang mga top earner ay kumikita ng libu-libo kada buwan; karamihan ay nagsisimula sa maliit at lumalago. Tingnan ang halaga ng token at payout split ng bawat platform bago ka mag-commit."),
+}
+
 MODEL_GUIDE = {
     "en": {
         "title": "How to Become a Cam Model — Beginner's Getting-Started Guide",
