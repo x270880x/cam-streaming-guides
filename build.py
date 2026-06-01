@@ -12,7 +12,21 @@ import html
 import json
 from pathlib import Path
 
+from obs_content import OBS_VS
+
 ROOT = Path(__file__).parent
+OBS_SLUG = "obs-alternative"
+# Short localized footer label for the SplitCam-vs-OBS page (falls back to "SplitCam vs OBS").
+OBS_NAV = {
+    "en": "SplitCam vs OBS", "ru": "SplitCam vs OBS", "es": "SplitCam vs OBS",
+    "de": "SplitCam vs OBS", "fr": "SplitCam vs OBS", "it": "SplitCam vs OBS",
+    "pt": "SplitCam vs OBS", "nl": "SplitCam vs OBS", "ro": "SplitCam vs OBS",
+    "bg": "SplitCam vs OBS", "hu": "SplitCam vs OBS", "el": "SplitCam vs OBS",
+    "fi": "SplitCam vs OBS", "da": "SplitCam vs OBS", "no": "SplitCam vs OBS",
+    "sr": "SplitCam vs OBS", "hr": "SplitCam vs OBS", "zh": "SplitCam vs OBS",
+    "ja": "SplitCam vs OBS", "ar": "SplitCam مقابل OBS", "th": "SplitCam vs OBS",
+    "fil": "SplitCam vs OBS",
+}
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
 SITE_NAME = "Streaming Guides"
@@ -207,6 +221,17 @@ display:flex;justify-content:space-between;gap:16px}
 .sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
 .sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
 .sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
+.cmp-wrap{overflow-x:auto;border:1px solid var(--app-border2);border-radius:14px;margin-top:8px}
+.cmp{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+.cmp th,.cmp td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--app-border)}
+[dir="rtl"] .cmp th,[dir="rtl"] .cmp td{text-align:right}
+.cmp thead th{background:var(--app-surface);font-weight:700;font-size:13.5px}
+.cmp thead th:nth-child(2){color:var(--blue)}
+.cmp tbody tr:last-child td{border-bottom:none}
+.cmp td:first-child{color:var(--text-sub);font-weight:500}
+.cmp td:nth-child(2){font-weight:600}
+.cmp .ok{color:var(--green)}
+.cmp-verdict{margin-top:22px;padding:22px 24px;background:linear-gradient(135deg,rgba(40,120,252,.08),rgba(156,91,255,.05));border:1px solid var(--app-border2);border-radius:14px;font-size:15px;line-height:1.65}
 .sticky-dl{position:fixed;right:20px;bottom:20px;z-index:90;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}
 .sticky-dl.show{opacity:1;transform:none;pointer-events:auto}
 .sticky-dl a{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;box-shadow:0 10px 30px rgba(40,120,252,.45);white-space:nowrap}
@@ -1407,6 +1432,7 @@ def render(p, lang, all_platforms):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="{home}">{u['home']}</a>
+      <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="{depth}about/">{u['about']}</a>
       <a href="{depth}contact/">{u['contact']}</a>
       <a href="{depth}privacy/">{u['privacy']}</a>
@@ -2070,6 +2096,7 @@ def render_legal(slug, lang):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="{home}">{u['home']}</a>
+      <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="{depth}about/">{u['about']}</a>
       <a href="{depth}contact/">{u['contact']}</a>
       <a href="{depth}privacy/">{u['privacy']}</a>
@@ -2077,6 +2104,128 @@ def render_legal(slug, lang):
     </div>
   </div>
 </footer>
+</body>
+</html>
+"""
+
+
+def render_obs_vs(lang):
+    """Render the SplitCam-vs-OBS / OBS-alternative comparison page (indexable, SEO target)."""
+    u = UI[lang]
+    c = OBS_VS.get(lang) or OBS_VS["en"]
+    depth = "../" if u["path"] else ""
+    home = depth or "./"
+    canon = f'{SITE}/{u["path"]}{OBS_SLUG}/'
+    og_image = f'{SITE}/assets/og/hub-{lang}.png'
+    hreflang_html = "\n".join(
+        f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}{OBS_SLUG}/">'
+        for L in LANGS_AVAIL
+    ) + f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{OBS_SLUG}/">'
+
+    rows_html = "".join(
+        f'<tr><td>{e(feat)}</td><td>{e(sc)}</td><td>{e(obs)}</td></tr>'
+        for feat, sc, obs in c["rows"])
+    faq_html = "".join(
+        f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
+        for q, a in c["faq"])
+
+    schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": u["crumb_home"],
+                 "item": f'{SITE}/{u["path"]}'},
+                {"@type": "ListItem", "position": 2, "name": c["h1short"], "item": canon}]},
+            {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
+                {"@type": "Question", "name": q,
+                 "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
+                for q, a in c["faq"]]},
+            {"@type": "WebPage", "name": c["title"], "description": c["desc"],
+             "url": canon, "inLanguage": lang, "datePublished": PUBLISHED_DATE,
+             "dateModified": MODIFIED_DATE, "publisher": PUBLISHER},
+        ],
+    }
+    return f"""<!DOCTYPE html>
+<html lang="{u['lang']}"{" dir=\"rtl\"" if u['lang'] in RTL_LANGS else ""}>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{e(c['title'])}</title>
+<meta name="description" content="{e(c['desc'])}">
+<link rel="canonical" href="{canon}">
+{hreflang_html}
+<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
+<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{canon}">
+<meta property="og:title" content="{e(c['title'])}">
+<meta property="og:description" content="{e(c['desc'])}">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:locale" content="{OG_LOCALE[lang]}">
+<meta property="og:image" content="{og_image}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#141420">
+<script type="application/ld+json">
+{json.dumps(schema, ensure_ascii=False, indent=1)}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>{CSS}</style>
+{LANG_REDIRECT_JS}
+{AHREFS_JS}
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
+  <ul class="nav-links"><li><a href="{home}">{u['home']}</a></li></ul>
+  {lang_switch(lang, depth)}
+</nav>
+<div class="breadcrumbs">
+  <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(c['h1short'])}</span>
+</div>
+<section class="hero" style="padding-top:24px">
+  <div class="hero-glow"></div>
+  <h1 class="h1">{c['h1html']}</h1>
+  <p class="sub">{c['intro']}</p>
+  <div class="hero-cta">
+    <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
+    <a href="{home}" class="btn-ghost btn-lg">{u['home']}</a>
+  </div>
+</section>
+<section class="section">
+  <h2 class="sec-h">{e(c['table_h'])}</h2>
+  <div class="cmp-wrap"><table class="cmp">
+    <thead><tr><th></th><th>{e(c['col_sc'])}</th><th>{e(c['col_obs'])}</th></tr></thead>
+    <tbody>{rows_html}</tbody>
+  </table></div>
+  <div class="cmp-verdict"><strong style="display:block;font-size:17px;margin-bottom:8px">{e(c['verdict_h'])}</strong>{c['verdict']}</div>
+</section>
+<section class="section">
+  <h2 class="sec-h">{u['faq_h']}</h2>
+  <div class="faq-list">{faq_html}</div>
+</section>
+<section class="cta-block">
+  <h2>{u['cta_h']}</h2>
+  <p>{u['cta_p']}</p>
+  <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="{home}">{u['home']}</a>
+      <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
+      <a href="{depth}about/">{u['about']}</a>
+      <a href="{depth}contact/">{u['contact']}</a>
+      <a href="{depth}privacy/">{u['privacy']}</a>
+      <a href="{depth}terms/">{u['terms']}</a>
+    </div>
+  </div>
+</footer>
+<div class="sticky-dl" id="stickyDl"><a href="{e(DOWNLOAD_URL)}" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a></div>
+{STICKY_DL_JS}
 </body>
 </html>
 """
@@ -2229,6 +2378,7 @@ def render_hub(platforms, lang):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="./">{u['home']}</a>
+      <a href="{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="about/">{u['about']}</a>
       <a href="contact/">{u['contact']}</a>
       <a href="privacy/">{u['privacy']}</a>
@@ -2289,6 +2439,12 @@ def main():
             (legaldir / "index.html").write_text(render_legal(slug, lang), encoding="utf-8")
             count += 1
 
+        # OBS-alternative comparison page (indexable SEO target)
+        obsdir = ROOT / u["path"] / OBS_SLUG
+        obsdir.mkdir(parents=True, exist_ok=True)
+        (obsdir / "index.html").write_text(render_obs_vs(lang), encoding="utf-8")
+        count += 1
+
     # 404 page (root)
     (ROOT / "404.html").write_text(render_404(), encoding="utf-8")
 
@@ -2319,6 +2475,11 @@ def main():
             urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
                         f'    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n'
                         f'{alt_links(slug)}\n  </url>')
+        # OBS-alternative comparison page
+        loc = f'{SITE}/{LANG_PATH[lang]}{OBS_SLUG}/'
+        urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
+                    f'    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n'
+                    f'{alt_links(OBS_SLUG)}\n  </url>')
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
