@@ -2117,6 +2117,10 @@ def render_obs_vs(lang):
     home = depth or "./"
     canon = f'{SITE}/{u["path"]}{OBS_SLUG}/'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
+    # Keywords grounded in Ahrefs data: "obs alternative" (2300 global) + brand cluster.
+    obs_kw = (f"obs alternative, splitcam vs obs, free obs alternative, {c['h1short']}, "
+              "splitcam, obs studio alternative, obs alternative for cam streaming, "
+              "multistream software")
     hreflang_html = "\n".join(
         f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}{OBS_SLUG}/">'
         for L in LANGS_AVAIL
@@ -2152,6 +2156,7 @@ def render_obs_vs(lang):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{e(c['title'])}</title>
 <meta name="description" content="{e(c['desc'])}">
+<meta name="keywords" content="{e(obs_kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
 <link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
@@ -2294,6 +2299,10 @@ def render_hub(platforms, lang):
         f'<p>{e(p[lang]["card"])}</p></div></a>' for p in ordered)
     canon = f'{SITE}/{u["path"]}'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
+    # Keywords: localized lead phrase (from H1) + universal brand/tech terms.
+    hub_kw = (f"{_strip(hb['h1'])}, splitcam, obs alternative, "
+              "chaturbate, onlyfans, stripchat, bongacams, cam4, streamate, "
+              "myfreecams, cam streaming")
     hreflang_html = "\n".join(
         f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}">'
         for L in LANGS_AVAIL
@@ -2325,6 +2334,7 @@ def render_hub(platforms, lang):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{e(hb['title'])}</title>
 <meta name="description" content="{e(hb['desc'])}">
+<meta name="keywords" content="{e(hub_kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
 <meta name="robots" content="noindex, nofollow">
