@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "zh",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "是 — 完全免费、无水印、无时间限制：编码器不会吃掉您的代币收入。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "您的 Chaturbate 直播卡顿或缓冲",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000 Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Chaturbate 直播期间丢帧",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "丢帧意味着数据包未能及时到达 Chaturbate — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黑屏 — 观众在 Chaturbate 上看不到视频",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Chaturbate 拒绝直播密钥或无法连接",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 Chaturbate 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Chaturbate 上没有声音或声音不同步",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>令牌就是密钥</h3><p>Chaturbate 使用您的广播令牌而不是通用直播密钥。像密码一样对待并在泄露时重置。</p></div><div class="tip-card"><h3>空间很大</h3><p>Chaturbate 的 RTMP 摄取接受高达 4K、60 fps 和高比特率 — 限制是您的上传，不是平台。每 2 秒一个关键帧。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div><div class="tip-card"><h3>先做个私密测试</h3><p>正式开播前运行一个简短的测试直播，检查摄像头、音频、构图和叠加层。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 Chaturbate 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>Chaturbate 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 Chaturbate — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 Chaturbate 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>Chaturbate 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 Chaturbate 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>Chaturbate 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>Chaturbate 允许 OBS / 外部编码器吗？</summary><p>是 — Chaturbate 官方支持外部编码器，有自己的「How do I set up OBS?」文章。在广播设置中通过「Use External Encoder to Broadcast」激活。</p></details><details class="faq-item"><summary>我的 Chaturbate 直播密钥在哪里？</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key。密钥是您的广播令牌。</p></details><details class="faq-item"><summary>Chaturbate 用什么比特率？</summary><p>1080p 用 3,500–6,000 Kbps 完全够用。Chaturbate 上限很高 — 真正的限制是您的上传；先运行 SplitCam 内置速度测试。</p></details><details class="faq-item"><summary>SplitCam 对 Chaturbate 免费吗？</summary><p>是 — 完全免费、无水印、无时间限制：编码器不会吃掉您的代币收入。</p></details></div>

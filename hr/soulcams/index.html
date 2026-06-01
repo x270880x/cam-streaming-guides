@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja, tako da cijeli SoulCams show s multi-kamera scenama i preklapanjima ne košta ništa sa strane enkodera."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tvoj prijenos na SoulCams lagira ili buffera",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000 Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Izgubljeni frameovi tijekom prijenosa na SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Izgubljeni frameovi znače da paketi ne stižu do SoulCams na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Crni ekran — gledatelji ne vide video na SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams odbija stream ključ ili se ne povezuje",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje SoulCams i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nema zvuka ili zvuk nije sinkroniziran na SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Savjeti</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Server i ključ jedan pored drugog</h3><p>SoulCams prikazuje RTMP server i ključ u istom OBS prozoru — uzimaš oboje u jednom potezu.</p></div><div class="tip-card"><h3>Go Online prvo</h3><p>OBS postavke se pojavljuju tek nakon klika Go Online na SoulCamsu — napravi to prije nego tražiš podatke enkodera.</p></div><div class="tip-card"><h3>Blokiraj neželjene regije</h3><p>SoulCams dopušta geo-blokiranje sa modelske strane — odaberi koje zemlje ne mogu vidjeti stream, prije pritiska Go Online.</p></div><div class="tip-card"><h3>Koristi kabelsku vezu</h3><p>Ethernet pobjeđuje Wi-Fi u dugom streamu — izgubljeni frame je izgubljen tip. Provuci kabel do stream računala.</p></div><div class="tip-card"><h3>Prvo napravi privatni test</h3><p>Pokreni kratak test prijenos za kameru, zvuk, kadriranje i preklapanja prije nego otvoriš sobu publici.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na SoulCams lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na SoulCams</summary><p>Izgubljeni frameovi znače da paketi ne stižu do SoulCams na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na SoulCams</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>SoulCams odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje SoulCams i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na SoulCams</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Česta pitanja</h2>
   <div class="faq-list"><details class="faq-item"><summary>Gdje su SoulCams OBS postavke?</summary><p>Prijavi se, klikni Go Online, zatim Settings → OBS — RTMP server i stream key prikazuju se zajedno.</p></details><details class="faq-item"><summary>Podržava li SoulCams vanjske enkodere?</summary><p>Da — OBS postavke daju RTMP server i ključ, tako da SplitCam radi.</p></details><details class="faq-item"><summary>Koji bitrate za SoulCams?</summary><p>SoulCams ne daje službeni broj — ciljaj 3500–6000 Kbps na 1080p i testiraj upload, jer OBS prozor ne pokazuje bitrate vodič.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za SoulCams?</summary><p>Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja, tako da cijeli SoulCams show s multi-kamera scenama i preklapanjima ne košta ništa sa strane enkodera.</p></details></div>

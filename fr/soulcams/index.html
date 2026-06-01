@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oui — gratuit, sans filigrane ni limite de temps, donc un show complet sur SoulCams avec scènes multi-caméras et overlays ne coûte rien à encoder."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ton stream SoulCams rame ou met en mémoire tampon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000 Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Images perdues pendant la diffusion sur SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les images perdues signifient que les paquets n'atteignent pas SoulCams à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Écran noir — les spectateurs ne voient pas de vidéo sur SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams refuse la clé de stream ou ne se connecte pas",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par SoulCams et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pas de son ou son désynchronisé sur SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Astuces</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Serveur et clé côte à côte</h3><p>SoulCams affiche serveur RTMP et clé dans la même fenêtre OBS — récupérez-les ensemble d'un coup.</p></div><div class="tip-card"><h3>Go Online d&#x27;abord</h3><p>Les paramètres OBS n'apparaissent qu'après avoir cliqué sur Go Online sur SoulCams — faites-le avant de chercher les détails d'encodeur.</p></div><div class="tip-card"><h3>Bloquez les régions non désirées</h3><p>SoulCams permet le blocage par pays côté modèle — choisissez quels pays ne peuvent pas voir votre diffusion avant de cliquer Go Online.</p></div><div class="tip-card"><h3>Connexion filaire</h3><p>L'Ethernet est plus fiable que le Wi-Fi pour un long live — une trame perdue, c'est un tip perdu. Tire un câble jusqu'au PC de stream.</p></div><div class="tip-card"><h3>Test privé d&#x27;abord</h3><p>Fais une courte diffusion de test pour vérifier caméra, son, cadrage et overlays avant d'ouvrir la salle au public.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Dépannage</h2><div class="faq-list"><details class="faq-item"><summary>Ton stream SoulCams rame ou met en mémoire tampon</summary><p>La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion.</p></details><details class="faq-item"><summary>Images perdues pendant la diffusion sur SoulCams</summary><p>Les images perdues signifient que les paquets n'atteignent pas SoulCams à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas.</p></details><details class="faq-item"><summary>Écran noir — les spectateurs ne voient pas de vidéo sur SoulCams</summary><p>Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live.</p></details><details class="faq-item"><summary>SoulCams refuse la clé de stream ou ne se connecte pas</summary><p>Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par SoulCams et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide.</p></details><details class="faq-item"><summary>Pas de son ou son désynchronisé sur SoulCams</summary><p>Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Où sont les paramètres OBS SoulCams ?</summary><p>Connectez-vous, cliquez sur Go Online, puis Settings → OBS — serveur RTMP et clé de stream sont affichés ensemble.</p></details><details class="faq-item"><summary>SoulCams prend-il en charge les encodeurs externes ?</summary><p>Oui — ses paramètres OBS fournissent serveur RTMP et clé, donc SplitCam fonctionne.</p></details><details class="faq-item"><summary>Quel débit pour SoulCams ?</summary><p>SoulCams ne donne pas de chiffre officiel — visez 3 500 à 6 000 Kbps en 1080p et testez votre upload d'abord, puisque la fenêtre OBS n'affiche aucune indication de débit.</p></details><details class="faq-item"><summary>SplitCam est-il gratuit pour SoulCams ?</summary><p>Oui — gratuit, sans filigrane ni limite de temps, donc un show complet sur SoulCams avec scènes multi-caméras et overlays ne coûte rien à encoder.</p></details></div>

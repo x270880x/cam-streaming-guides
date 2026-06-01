@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ja",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "はい — 無料、透かしなし、時間制限なし、マルチカメラシーンとオーバーレイ付きの完全なSoulCamsショーがエンコーダー側で費用ゼロ。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams の配信がカクつく・バッファリングする",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000 Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams 配信中のフレーム落ち",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "フレーム落ちはパケットが SoulCams に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黒い画面 — SoulCams で視聴者に映像が映らない",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams がストリームキーを拒否する・接続しない",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが SoulCams の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams で音声がない・音ズレする",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">プロのヒント</h2>
   <div class="tips-grid"><div class="tip-card"><h3>サーバーとキーが並んでいる</h3><p>SoulCamsはRTMPサーバーとキーを同じOBSウィンドウに表示 — 一度に両方を取る。</p></div><div class="tip-card"><h3>先にGo Online</h3><p>OBS設定はSoulCamsでGo Onlineをクリックした後にのみ表示 — エンコーダーデータを探す前に行う。</p></div><div class="tip-card"><h3>不要な地域をブロック</h3><p>SoulCamsはモデル側からの地域ブロックを許可 — Go Liveを押す前にどの国がストリームを見れないか選択。</p></div><div class="tip-card"><h3>有線接続を使用</h3><p>長い配信ではEthernetがWi-Fiに勝つ — 失われたフレームは失われたチップ。配信PCまでケーブルを引きましょう。</p></div><div class="tip-card"><h3>まず非公開テストを実施</h3><p>観客に部屋を開く前に、カメラ、音声、構図、オーバーレイをチェックする短いテスト配信を実行。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">トラブルシューティング</h2><div class="faq-list"><details class="faq-item"><summary>SoulCams の配信がカクつく・バッファリングする</summary><p>ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。</p></details><details class="faq-item"><summary>SoulCams 配信中のフレーム落ち</summary><p>フレーム落ちはパケットが SoulCams に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。</p></details><details class="faq-item"><summary>黒い画面 — SoulCams で視聴者に映像が映らない</summary><p>カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。</p></details><details class="faq-item"><summary>SoulCams がストリームキーを拒否する・接続しない</summary><p>ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが SoulCams の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。</p></details><details class="faq-item"><summary>SoulCams で音声がない・音ズレする</summary><p>SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">よくある質問</h2>
   <div class="faq-list"><details class="faq-item"><summary>SoulCamsのOBS設定はどこ？</summary><p>ログイン、Go Liveをクリック、その後Settings → OBS — RTMPサーバーとストリームキーが一緒に表示。</p></details><details class="faq-item"><summary>SoulCamsは外部エンコーダーをサポート？</summary><p>はい — OBS設定はRTMPサーバーとキーを提供、SplitCamは動作。</p></details><details class="faq-item"><summary>SoulCamsのビットレートは？</summary><p>SoulCamsは公式数値を提供しない — 1080pで3,500–6,000 Kbpsを狙ってアップロードをテスト、OBSウィンドウはビットレートガイダンスを表示しないため。</p></details><details class="faq-item"><summary>SplitCamはSoulCamsで無料？</summary><p>はい — 無料、透かしなし、時間制限なし、マルチカメラシーンとオーバーレイ付きの完全なSoulCamsショーがエンコーダー側で費用ゼロ。</p></details></div>

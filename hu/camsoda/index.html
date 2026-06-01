@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hu",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Működik a CamSoda ingyenes Use OBS Broadcaster módjával, így a teljes lánc semmibe sem kerül."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A CamSoda streamed akadozik vagy pufferel",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000 Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Eldobott képkockák a CamSoda adás közben",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a CamSoda platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fekete képernyő — a nézők nem látnak videót a CamSoda platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A CamSoda elutasítja a stream kulcsot vagy nem csatlakozik",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a CamSoda által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nincs hang vagy a hang nincs szinkronban a CamSoda platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Verifikáld magad a tipekért</h3><p>A CamSoda-n bárki adhat, de a tipek fogadásához be kell fejezned a CamSoda verifikációs folyamatát.</p></div><div class="tip-card"><h3>Válaszd a legközelebbi regionális szervert</h3><p>A CamSoda regionális ingest szervereket kínál — a legközelebbi (NA / Európa / Ázsia / Dél-Amerika / Óceánia) csökkenti a késleltetést és az eldobott frame-eket.</p></div><div class="tip-card"><h3>Plafon 1080p / 30 fps-en</h3><p>A CamSoda ingestje kb. 1080p-ig, 30 fps-ig és ~6000 Kbps-ig megy — ne erőltesd magasabbra.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A CamSoda streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a CamSoda adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a CamSoda platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a CamSoda platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A CamSoda elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a CamSoda által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a CamSoda platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Támogat a CamSoda OBS-t / külső enkódereket?</summary><p>Igen — hivatalosan. Van egy Use OBS Broadcaster gomb a Go Live oldalon és OBS útmutató a CamSoda wikin, így a SplitCam működik.</p></details><details class="faq-item"><summary>Verifikálnom kell magam a CamSoda-n?</summary><p>Adáshoz, nem. Tipek fogadásához, igen — a CamSoda előbb megköveteli a verifikációs folyamat befejezését.</p></details><details class="faq-item"><summary>Milyen felbontást támogat a CamSoda?</summary><p>1920×1080-ig 30 fps-en, kb. 6000 Kbps maximum az RTMP ingesten.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a CamSoda-hoz?</summary><p>Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Működik a CamSoda ingyenes Use OBS Broadcaster módjával, így a teljes lánc semmibe sem kerül.</p></details></div>

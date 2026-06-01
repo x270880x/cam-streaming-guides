@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "nl",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Lager dan gemiddeld — CAM4's ingest beperkt op ~3.000 Kbps bij 30 fps met 1-seconde keyframe. De officiële snelheidstest-tabel adviseert niet boven ~3.000 te gaan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je CAM4-stream hapert of buffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000 Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames tijdens de CAM4-uitzending",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames betekenen dat pakketten CAM4 niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Zwart scherm — kijkers zien geen video op CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CAM4 weigert de stream key of maakt geen verbinding",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die CAM4 toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Geen geluid of geluid loopt niet synchroon op CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Stel geo-restricties in</h3><p>CAM4 staat toe je stream in specifieke landen en regio's te verbergen — stel dit aan de CAM4-kant in vóór go-live.</p></div><div class="tip-card"><h3>Let op de groene slider</h3><p>CAM4's setup toont een groene slider in SplitCam's Stream Settings zodra de sleutel klopt — rood betekent: sleutel opnieuw checken.</p></div><div class="tip-card"><h3>Lagere bitrate dan gewoonlijk</h3><p>CAM4's ingest beperkt videobitrate tot ongeveer 3.000 Kbps — lager dan de meeste cam-sites. Duw niet hoger.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je CAM4-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de CAM4-uitzending</summary><p>Dropped frames betekenen dat pakketten CAM4 niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op CAM4</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>CAM4 weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die CAM4 toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op CAM4</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Ondersteunt CAM4 OBS / externe encoders officieel?</summary><p>Ja — CAM4 heeft een officiële OBS Guide op de support-site en raadt External Encoder aan voor de beste ervaring. SplitCam gebruikt dezelfde RTMP-route.</p></details><details class="faq-item"><summary>Kan ik mijn CAM4-stream geo-blokkeren?</summary><p>Ja — CAM4 heeft ingebouwde geo-restrictie om je stream in bepaalde landen te verbergen. Stel in op CAM4, niet in SplitCam.</p></details><details class="faq-item"><summary>Waar is mijn CAM4 stream key?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>Welke bitrate voor CAM4?</summary><p>Lager dan gemiddeld — CAM4's ingest beperkt op ~3.000 Kbps bij 30 fps met 1-seconde keyframe. De officiële snelheidstest-tabel adviseert niet boven ~3.000 te gaan.</p></details></div>

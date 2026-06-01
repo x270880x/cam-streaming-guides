@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ro",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — SplitCam e gratuit, fără filigran și fără limită de timp, iar overlay-ul browser MFC Alerts rulează în el fără cost suplimentar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stream-ul tău pe MFC Alerts are lag sau se blochează la buffering",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000 Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Frame-uri pierdute în timpul transmisiunii pe MFC Alerts",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Frame-urile pierdute înseamnă că pachetele nu ajung la MFC Alerts la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ecran negru — spectatorii nu văd video pe MFC Alerts",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "MFC Alerts respinge cheia de stream sau nu se conectează",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de MFC Alerts și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fără audio sau audio desincronizat pe MFC Alerts",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts trebuie deasupra webcam-ului</h3><p>Greșeala cea mai frecventă: dacă stratul MFC Alerts e dedesubtul webcam-ului în lista de surse, efectele rămân ascunse. Urcă-l.</p></div><div class="tip-card"><h3>Cont mfcalerts.com necesar</h3><p>URL-ul de alerts e personal — înregistrează-te pe mfcalerts.com întâi dacă nu ai cont.</p></div><div class="tip-card"><h3>Trimite tip de test înainte de live</h3><p>Folosește Settings → Send test tip pentru a confirma că overlay-ul funcționează — nu descoperi greșeala în mijlocul show-ului.</p></div><div class="tip-card"><h3>Folosește conexiune prin cablu</h3><p>Ethernet bate Wi-Fi într-un stream lung — un frame pierdut e un tip pierdut. Trage un cablu până la PC-ul de stream.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe MFC Alerts are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe MFC Alerts</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la MFC Alerts la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe MFC Alerts</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>MFC Alerts respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de MFC Alerts și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe MFC Alerts</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Ce e MFC Alerts?</summary><p>Un sistem de notificări pentru MyFreeCams care afișează efecte video în streamul tău când spectatorii trimit tip-uri — adăugat ca overlay Browser în SplitCam.</p></details><details class="faq-item"><summary>De ce nu apar MFC Alerts?</summary><p>Aproape întotdeauna ordinea straturilor — stratul Browser MFC Alerts trebuie să fie deasupra webcam-ului în lista de surse SplitCam.</p></details><details class="faq-item"><summary>Am nevoie de cont pentru MFC Alerts?</summary><p>Da — înregistrează-te pe mfcalerts.com pentru a obține URL-ul tău personal de alerts.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru asta?</summary><p>Da — SplitCam e gratuit, fără filigran și fără limită de timp, iar overlay-ul browser MFC Alerts rulează în el fără cost suplimentar.</p></details></div>

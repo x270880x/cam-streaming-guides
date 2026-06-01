@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "da",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — tilføj Lovense widget-URL som Browser-lag i SplitCam."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dit Lovense-stream hakker eller buffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000 Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tabte frames under Lovense-udsendelsen",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tabte frames betyder, at pakkerne ikke når frem til Lovense i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sort skærm — seerne ser ingen video på Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Lovense afviser stream key eller vil ikke forbinde",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Lovense viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ingen lyd eller lyd ude af sync på Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Brug det officielle Lovense SplitCam Toolset</h3><p>Lovense udgiver et SplitCam-specifikt toolset med egen installationsguide — det tilføjer legetøjs-aktivitets-overlay og tip alerts lavet til SplitCam.</p></div><div class="tip-card"><h3>Opdater Lovense Cam Extension</h3><p>Toolset'et kræver en nylig Lovense Cam Extension (30.1.4 eller nyere) — opdater før live.</p></div><div class="tip-card"><h3>Hold legetøjet opladet</h3><p>Næsten tomt batteri midt i showet dræber den interaktive side — oplad fuldt før live.</p></div><div class="tip-card"><h3>Test token-reaktion</h3><p>Send en lille test-tip for at bekræfte, at legetøjet reagerer, før du åbner rummet.</p></div><div class="tip-card"><h3>Tjek versions-krav</h3><p>Lovense SplitCam Toolset kræver SplitCam 10.4.5 eller nyere. Lovense Cam Extension dækker officielt Chaturbate, Stripchat, BongaCams, MyFreeCams og CamSoda — for andre sites brug Lovense's Generic URL-integration.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit Lovense-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under Lovense-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til Lovense i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på Lovense</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>Lovense afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Lovense viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på Lovense</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Understøtter Lovense SplitCam officielt?</summary><p>Ja — Lovense dokumenterer et officielt «Lovense SplitCam Toolset» med egen installationsguide, og SplitCam leverer en officiel Lovense-plugin. Integrationen er understøttet fra begge sider.</p></details><details class="faq-item"><summary>Forbinder legetøjet direkte til SplitCam?</summary><p>Nej — legetøjet parres med Lovense-appen; SplitCam viser Lovense-overlay og udsender kameraet.</p></details><details class="faq-item"><summary>Hvilke cam-sites understøtter Lovense?</summary><p>Lovense Cam Extension understøtter officielt Chaturbate, Stripchat, BongaCams, MyFreeCams og CamSoda, med varierende understøttelse for andre — tjek den aktuelle liste i Lovense-appen.</p></details><details class="faq-item"><summary>Kan jeg vise seneste tips på skærmen?</summary><p>Ja — tilføj Lovense widget-URL som Browser-lag i SplitCam.</p></details></div>

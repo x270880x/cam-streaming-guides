@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "no",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Koding skjer én gang og gjenbrukes; maskinvare-koding holder CPU-belastningen lav. Opplastnings-båndbredde er den reelle grensen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Multiple Cam Sites-strømmen din henger eller bufrer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000 Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tapte frames under Multiple Cam Sites-sendingen",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tapte frames betyr at pakkene ikke når Multiple Cam Sites i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Svart skjerm — seerne ser ingen video på Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Multiple Cam Sites avviser strømnøkkelen eller kobler ikke til",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den Multiple Cam Sites viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ingen lyd eller lyd ute av synk på Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Følg opplastningen din</h3><p>Multistreaming multipliserer opplastnings-belastningen. Hver destinasjon forbruker sin egen bitrate — sørg for at tilkoblingen tåler summen.</p></div><div class="tip-card"><h3>Sjekk plattformregler</h3><p>Noen cam-sider forbyr samtidig sending andre steder — bekreft før multistreaming.</p></div><div class="tip-card"><h3>Kabel — drops kan du ikke tillate her</h3><p>Multistreaming multipliserer opplastnings-belastningen, så et enkelt wi-fi-drop kan velte alle destinasjoner samtidig. Kabel er ikke valgfritt her.</p></div><div class="tip-card"><h3>Følg helsemonitoren</h3><p>SplitCam viser status per destinasjon — drop en side hvis opplastningen ikke tåler.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Feilsøking</h2><div class="faq-list"><details class="faq-item"><summary>Multiple Cam Sites-strømmen din henger eller bufrer</summary><p>Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000&nbsp;Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din.</p></details><details class="faq-item"><summary>Tapte frames under Multiple Cam Sites-sendingen</summary><p>Tapte frames betyr at pakkene ikke når Multiple Cam Sites i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge.</p></details><details class="faq-item"><summary>Svart skjerm — seerne ser ingen video på Multiple Cam Sites</summary><p>Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live.</p></details><details class="faq-item"><summary>Multiple Cam Sites avviser strømnøkkelen eller kobler ikke til</summary><p>Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den Multiple Cam Sites viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ute av synk på Multiple Cam Sites</summary><p>Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Er SplitCam multistreaming gratis?</summary><p>Ja — multistreaming er innebygd og gratis, ingen gebyr per destinasjon, ingen vannmerke.</p></details><details class="faq-item"><summary>Til hvor mange cam-sider kan jeg sende samtidig?</summary><p>Så mange som opplastnings-båndbredden tåler — hver destinasjon forbruker sin egen bitrate.</p></details><details class="faq-item"><summary>Bruker den cloud-relay?</summary><p>Nei — SplitCam sender strømmer peer-to-peer direkte fra PC-en til hver plattforms ingest.</p></details><details class="faq-item"><summary>Senker multistreaming PC-en min?</summary><p>Koding skjer én gang og gjenbrukes; maskinvare-koding holder CPU-belastningen lav. Opplastnings-båndbredde er den reelle grensen.</p></details></div>

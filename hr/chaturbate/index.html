@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — potpuno besplatan, bez vodenog žiga i bez vremenskog ograničenja: enkoder ne jede tvoje zarade u tokenima."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tvoj prijenos na Chaturbate lagira ili buffera",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000 Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Izgubljeni frameovi tijekom prijenosa na Chaturbate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Izgubljeni frameovi znače da paketi ne stižu do Chaturbate na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Crni ekran — gledatelji ne vide video na Chaturbate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Chaturbate odbija stream ključ ili se ne povezuje",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje Chaturbate i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nema zvuka ili zvuk nije sinkroniziran na Chaturbate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Savjeti</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Token je ključ</h3><p>Chaturbate koristi tvoj broadcast token umjesto generičkog stream keya. Tretiraj kao lozinku i resetiraj ako procuri.</p></div><div class="tip-card"><h3>Dosta prostora</h3><p>Chaturbateov RTMP ingest prihvaća do 4K, 60 fps i visok bitrate — limit je tvoj upload, ne platforma. Keyframe svake 2 sekunde.</p></div><div class="tip-card"><h3>Koristi kabelsku vezu</h3><p>Ethernet pobjeđuje Wi-Fi u dugom streamu — izgubljeni frame je izgubljen tip. Provuci kabel do stream računala.</p></div><div class="tip-card"><h3>Prvo napravi privatni test</h3><p>Pokreni kratak test prijenos za kameru, zvuk, kadriranje i preklapanja prije nego otvoriš sobu publici.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na Chaturbate lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na Chaturbate</summary><p>Izgubljeni frameovi znače da paketi ne stižu do Chaturbate na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na Chaturbate</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>Chaturbate odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje Chaturbate i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na Chaturbate</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Česta pitanja</h2>
   <div class="faq-list"><details class="faq-item"><summary>Dopušta li Chaturbate OBS / vanjske enkodere?</summary><p>Da — Chaturbate službeno podržava vanjske enkodere s vlastitim «How do I set up OBS?» člankom. Aktiviraj «Use External Encoder to Broadcast» u broadcast postavkama.</p></details><details class="faq-item"><summary>Gdje je moj Chaturbate stream key?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Ključ je tvoj broadcast token.</p></details><details class="faq-item"><summary>Koji bitrate za Chaturbate?</summary><p>3500–6000 Kbps na 1080p je sasvim dovoljno. Chaturbateov plafon je visok — stvarni limit je tvoj upload; pokreni prvo SplitCamov test brzine.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za Chaturbate?</summary><p>Da — potpuno besplatan, bez vodenog žiga i bez vremenskog ograničenja: enkoder ne jede tvoje zarade u tokenima.</p></details></div>

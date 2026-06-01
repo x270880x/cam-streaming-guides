@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Plus bas que la moyenne — l'ingest CAM4 plafonne autour de 3 000 Kbps à 30 fps avec un keyframe de 1 seconde. Le tableau officiel basé sur le test de vitesse recommande de ne pas dépasser ~3 000."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ton stream CAM4 rame ou met en mémoire tampon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000 Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Images perdues pendant la diffusion sur CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les images perdues signifient que les paquets n'atteignent pas CAM4 à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Écran noir — les spectateurs ne voient pas de vidéo sur CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CAM4 refuse la clé de stream ou ne se connecte pas",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par CAM4 et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pas de son ou son désynchronisé sur CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Astuces</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Définissez vos géo-restrictions</h3><p>CAM4 vous laisse masquer la diffusion dans des pays et régions précis — réglez ça côté CAM4 avant le live si besoin.</p></div><div class="tip-card"><h3>Surveillez le slider vert</h3><p>Le setup CAM4 affiche un slider vert dans les Stream Settings de SplitCam dès que la clé est acceptée — rouge signifie : re-vérifier la clé.</p></div><div class="tip-card"><h3>Débit plus bas que la moyenne</h3><p>L'ingest CAM4 plafonne le débit vidéo autour de 3 000 Kbps — plus bas que la plupart des sites cam. Ne pousse pas au-delà.</p></div><div class="tip-card"><h3>Connexion filaire</h3><p>L'Ethernet est plus fiable que le Wi-Fi pour un long live — une trame perdue, c'est un tip perdu. Tire un câble jusqu'au PC de stream.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Dépannage</h2><div class="faq-list"><details class="faq-item"><summary>Ton stream CAM4 rame ou met en mémoire tampon</summary><p>La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion.</p></details><details class="faq-item"><summary>Images perdues pendant la diffusion sur CAM4</summary><p>Les images perdues signifient que les paquets n'atteignent pas CAM4 à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas.</p></details><details class="faq-item"><summary>Écran noir — les spectateurs ne voient pas de vidéo sur CAM4</summary><p>Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live.</p></details><details class="faq-item"><summary>CAM4 refuse la clé de stream ou ne se connecte pas</summary><p>Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par CAM4 et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide.</p></details><details class="faq-item"><summary>Pas de son ou son désynchronisé sur CAM4</summary><p>Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>CAM4 prend-il officiellement en charge OBS / les encodeurs externes ?</summary><p>Oui — CAM4 a un OBS Guide officiel sur son site de support et recommande l'option External Encoder pour la meilleure expérience. SplitCam utilise le même chemin RTMP.</p></details><details class="faq-item"><summary>Puis-je géo-bloquer ma diffusion CAM4 ?</summary><p>Oui — CAM4 a une géo-restriction intégrée pour masquer la diffusion dans certains pays. Le réglage se fait sur CAM4, pas dans SplitCam.</p></details><details class="faq-item"><summary>Où est la clé de stream CAM4 ?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>Quel débit pour CAM4 ?</summary><p>Plus bas que la moyenne — l'ingest CAM4 plafonne autour de 3 000 Kbps à 30 fps avec un keyframe de 1 seconde. Le tableau officiel basé sur le test de vitesse recommande de ne pas dépasser ~3 000.</p></details></div>

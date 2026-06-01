@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "zh",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "是 — 免费、无水印、无时间限制，因此向 XModels 的欧洲网络直播不会增加软件成本。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "您的 XModels 直播卡顿或缓冲",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000 Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "XModels 直播期间丢帧",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "丢帧意味着数据包未能及时到达 XModels — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黑屏 — 观众在 XModels 上看不到视频",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "XModels 拒绝直播密钥或无法连接",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 XModels 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "XModels 上没有声音或声音不同步",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>它在账户设置中</h3><p>XModels 将外部编码器选项放在模特账户设置中，不在单独的广播屏幕上。</p></div><div class="tip-card"><h3>支持：聊天 + 电子邮件</h3><p>XModels 没有大型公共帮助中心 — 网站 FAQ 聊天和 info@xmodels.com 是官方支持渠道。</p></div><div class="tip-card"><h3>在 SplitCam 中堆叠叠加层</h3><p>小费目标、姓名和社交媒体作为场景层 — XModels 的基础摄像头不会添加此类。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 XModels 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>XModels 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 XModels — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 XModels 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>XModels 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 XModels 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>XModels 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>XModels 支持外部编码器吗？</summary><p>是 — 模特账户设置包括一个外部编码器广播选项，提供直播密钥，因此 SplitCam 工作。</p></details><details class="faq-item"><summary>我在哪里获得 XModels 帮助？</summary><p>XModels 支持通过网站上的 FAQ 聊天和 info@xmodels.com 电子邮件 — 没有大型公共帮助中心。</p></details><details class="faq-item"><summary>XModels 用什么比特率？</summary><p>XModels 没有记录官方数字 — 使用 1080p 下 3,500–6,000 Kbps 并运行 SplitCam 速度测试，因为 XModels 支持只是聊天和电子邮件。</p></details><details class="faq-item"><summary>SplitCam 对 XModels 免费吗？</summary><p>是 — 免费、无水印、无时间限制，因此向 XModels 的欧洲网络直播不会增加软件成本。</p></details></div>

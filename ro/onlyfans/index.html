@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ro",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — gratuit, fără filigran și fără limită de timp. Niciun cost la nivelul encoderului."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stream-ul tău pe OnlyFans are lag sau se blochează la buffering",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000 Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Frame-uri pierdute în timpul transmisiunii pe OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Frame-urile pierdute înseamnă că pachetele nu ajung la OnlyFans la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ecran negru — spectatorii nu văd video pe OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "OnlyFans respinge cheia de stream sau nu se conectează",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de OnlyFans și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fără audio sau audio desincronizat pe OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Autorizare vs Stream Key</h3><p>Două moduri de conectare: <strong>Autorizare</strong> (te loghezi o dată, cheia se ia și se menține sincronizată — cea mai ușoară rută) sau <strong>Stream Key</strong> (copiezi OBS Key din OnlyFans → Profile → Settings → Other și lipești). Autorizarea scutește copy-paste-ul manual.</p></div><div class="tip-card"><h3>Schimbă setări fără să părăsești SplitCam</h3><p>Cu autorizare, contul rămâne legat, deci ajustezi parametrii live OnlyFans din SplitCam în timpul sau după transmisie — fără să treci prin site-ul OnlyFans.</p></div><div class="tip-card"><h3>Bitrate modest</h3><p>Ingestul RTMP OnlyFans limitează bitrate-ul video la circa 2.500 Kbps — mai strâns decât majoritatea cam-site-urilor. Țintește 720p–1080p la ~2.000–2.500.</p></div><div class="tip-card"><h3>Folosește conexiune prin cablu</h3><p>Ethernet bate Wi-Fi într-un stream lung — un frame pierdut e un tip pierdut. Trage un cablu până la PC-ul de stream.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe OnlyFans are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe OnlyFans</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la OnlyFans la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe OnlyFans</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>OnlyFans respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de OnlyFans și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe OnlyFans</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Cum conectez OnlyFans la SplitCam?</summary><p>Două moduri. <strong>Autorizare</strong> — Stream Settings → Add Channel → OnlyFans → loghezi cu contul OnlyFans și SplitCam ia cheia automat. Sau <strong>Stream Key</strong> — copiezi OBS Key din OnlyFans → Profile → Settings → Other și lipești.</p></details><details class="faq-item"><summary>Pot schimba setări live OnlyFans fără să deschid site-ul?</summary><p>Da — cu metoda Autorizare SplitCam rămâne conectat la contul tău OnlyFans, deci cheia și setările sincronizează automat. Schimbi totul din SplitCam în timpul sau după transmisie, fără să vizitezi onlyfans.com.</p></details><details class="faq-item"><summary>Ce bitrate pentru OnlyFans?</summary><p>Modest — ingestul RTMP OnlyFans limitează bitrate-ul la circa 2.500 Kbps, mult mai strâns decât alte platforme cam. Țintește 720p–1080p în jur de 2.000–2.500 Kbps.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru live OnlyFans?</summary><p>Da — gratuit, fără filigran și fără limită de timp. Niciun cost la nivelul encoderului.</p></details></div>

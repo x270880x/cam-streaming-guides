@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "zh",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "是 — 免费、无水印、无时间限制；并且由于 Streamate 是 SplitCam 中的集成通道，也没有单独的编码器成本。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "您的 Streamate 直播卡顿或缓冲",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000 Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Streamate 直播期间丢帧",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "丢帧意味着数据包未能及时到达 Streamate — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黑屏 — 观众在 Streamate 上看不到视频",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Streamate 拒绝直播密钥或无法连接",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 Streamate 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Streamate 上没有声音或声音不同步",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Streamate 已集成</h3><p>无需手动 RTMP URL — SplitCam 的 Add Channel 列表中有 Streamate；只需选择并粘贴密钥。</p></div><div class="tip-card"><h3>关闭 SM Connect 弹出窗口</h3><p>Start Show 后 Streamate 打开一个窗口 — 关闭它；它只是为了显示直播密钥。</p></div><div class="tip-card"><h3>将分辨率锁定到 1080p</h3><p>SM Connect 中的 Video Resolution 字段可能会悄悄跳到 1440，实际上不会传送，并会悄悄降低您的质量 — 手动设置为 1080p。静态图像下比特率下降是正常的：Streamate 流是自适应的。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 Streamate 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>Streamate 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 Streamate — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 Streamate 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>Streamate 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 Streamate 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>Streamate 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>Streamate 在 SplitCam 中集成了吗？</summary><p>是 — Streamate 出现在 SplitCam 的 Add Channel 列表中；您选择而不是手动输入 RTMP URL。</p></details><details class="faq-item"><summary>Streamate 直播密钥在哪里？</summary><p>SM Connect → 接受条款 → Start Show → 关闭弹出窗口 → 复制密钥。</p></details><details class="faq-item"><summary>Streamate 用什么比特率？</summary><p>Streamate 没有硬性上限 — 1080p 下 3,500–6,000 Kbps 工作良好。流是自适应的，因此静态图像下的较低比特率是正常的，不是 bug。</p></details><details class="faq-item"><summary>SplitCam 对 Streamate 免费吗？</summary><p>是 — 免费、无水印、无时间限制；并且由于 Streamate 是 SplitCam 中的集成通道，也没有单独的编码器成本。</p></details></div>

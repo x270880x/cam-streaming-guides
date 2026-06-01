@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "zh",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "是 — SplitCam 免费、无水印、无时间限制，MFC Alerts 浏览器叠加层在其中运行而无需额外成本。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "您的 MFC Alerts 直播卡顿或缓冲",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000 Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "MFC Alerts 直播期间丢帧",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "丢帧意味着数据包未能及时到达 MFC Alerts — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黑屏 — 观众在 MFC Alerts 上看不到视频",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "MFC Alerts 拒绝直播密钥或无法连接",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 MFC Alerts 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "MFC Alerts 上没有声音或声音不同步",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts 必须在网络摄像头上方</h3><p>最常见的错误：如果 MFC Alerts 层在源列表中的网络摄像头下方，效果将保持隐藏。向上移动。</p></div><div class="tip-card"><h3>需要 mfcalerts.com 账户</h3><p>alerts URL 是个人的 — 如果您没有账户，请先在 mfcalerts.com 注册。</p></div><div class="tip-card"><h3>在直播前发送测试小费</h3><p>使用 Settings → Send test tip 确认叠加层正在工作 — 不要在节目中途发现错误。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 MFC Alerts 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>MFC Alerts 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 MFC Alerts — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 MFC Alerts 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>MFC Alerts 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 MFC Alerts 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>MFC Alerts 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>什么是 MFC Alerts？</summary><p>MyFreeCams 的通知系统，在观众发送小费时在您的直播中显示视频效果 — 在 SplitCam 中作为浏览器叠加层添加。</p></details><details class="faq-item"><summary>为什么我的 MFC Alerts 不出现？</summary><p>几乎总是层顺序 — MFC Alerts 浏览器层必须在 SplitCam 源列表中的网络摄像头上方。</p></details><details class="faq-item"><summary>我需要 MFC Alerts 的账户吗？</summary><p>是 — 在 mfcalerts.com 注册以获取您的个人 alerts URL。</p></details><details class="faq-item"><summary>SplitCam 对此免费吗？</summary><p>是 — SplitCam 免费、无水印、无时间限制，MFC Alerts 浏览器叠加层在其中运行而无需额外成本。</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ro",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — gratuit, fără filigran și fără limită de timp; și pentru că Streamate e canal integrat în SplitCam, nu există nici cost separat de encoder."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stream-ul tău pe Streamate are lag sau se blochează la buffering",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000 Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Frame-uri pierdute în timpul transmisiunii pe Streamate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Frame-urile pierdute înseamnă că pachetele nu ajung la Streamate la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ecran negru — spectatorii nu văd video pe Streamate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Streamate respinge cheia de stream sau nu se conectează",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de Streamate și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fără audio sau audio desincronizat pe Streamate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Streamate e integrat</h3><p>Fără URL RTMP manual — SplitCam are Streamate în lista Add Channel; doar selectezi și lipești cheia.</p></div><div class="tip-card"><h3>Închide popup-ul SM Connect</h3><p>După Start Show Streamate deschide o fereastră — închide-o; era doar pentru a dezvălui streaming key-ul.</p></div><div class="tip-card"><h3>Fixează rezoluția la 1080p</h3><p>Câmpul Video Resolution în SM Connect poate sări la 1440 pe tăcute, ceea ce nu se livrează efectiv și îți reduce calitatea silențios — setează manual la 1080p. Bitrate care scade la imagine statică e normal: streamul Streamate e adaptiv.</p></div><div class="tip-card"><h3>Folosește conexiune prin cablu</h3><p>Ethernet bate Wi-Fi într-un stream lung — un frame pierdut e un tip pierdut. Trage un cablu până la PC-ul de stream.</p></div><div class="tip-card"><h3>Fă mai întâi un test privat</h3><p>Rulează o transmisiune scurtă de test pentru cameră, audio, încadrare și overlay-uri înainte să deschizi camera publicului.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe Streamate are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe Streamate</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la Streamate la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe Streamate</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>Streamate respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de Streamate și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe Streamate</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Streamate e integrat în SplitCam?</summary><p>Da — Streamate apare în lista Add Channel SplitCam; selectezi în loc să tastezi un URL RTMP.</p></details><details class="faq-item"><summary>Unde e streaming key Streamate?</summary><p>SM Connect → accept termeni → Start Show → închizi popup → copiezi cheia.</p></details><details class="faq-item"><summary>Ce bitrate pentru Streamate?</summary><p>Streamate nu fixează plafon dur — 3.500–6.000 Kbps la 1080p funcționează bine. Streamul e adaptiv, deci bitrate mai mic la imagine statică e normal, nu bug.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru Streamate?</summary><p>Da — gratuit, fără filigran și fără limită de timp; și pentru că Streamate e canal integrat în SplitCam, nu există nici cost separat de encoder.</p></details></div>

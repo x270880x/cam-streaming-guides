@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oui — gratuit, sans filigrane et sans limite de temps. Il fonctionne aux côtés du mode Use OBS Broadcaster gratuit de CamSoda, donc toute la chaîne ne coûte rien."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ton stream CamSoda rame ou met en mémoire tampon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000 Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Images perdues pendant la diffusion sur CamSoda",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les images perdues signifient que les paquets n'atteignent pas CamSoda à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Écran noir — les spectateurs ne voient pas de vidéo sur CamSoda",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CamSoda refuse la clé de stream ou ne se connecte pas",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par CamSoda et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pas de son ou son désynchronisé sur CamSoda",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Astuces</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Faites-vous vérifier pour les tips</h3><p>Sur CamSoda tout le monde peut diffuser, mais il faut compléter la procédure de vérification CamSoda avant de pouvoir recevoir des tips.</p></div><div class="tip-card"><h3>Choisissez le serveur régional le plus proche</h3><p>CamSoda propose des serveurs d'ingest régionaux — choisir le plus proche (NA / Europe / Asie / Amérique du Sud / Océanie) réduit la latence et les frames perdues.</p></div><div class="tip-card"><h3>Plafond à 1080p / 30 fps</h3><p>L'ingest CamSoda culmine vers 1080p, 30 fps et ~6 000 Kbps — inutile de monter plus haut.</p></div><div class="tip-card"><h3>Connexion filaire</h3><p>L'Ethernet est plus fiable que le Wi-Fi pour un long live — une trame perdue, c'est un tip perdu. Tire un câble jusqu'au PC de stream.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Dépannage</h2><div class="faq-list"><details class="faq-item"><summary>Ton stream CamSoda rame ou met en mémoire tampon</summary><p>La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion.</p></details><details class="faq-item"><summary>Images perdues pendant la diffusion sur CamSoda</summary><p>Les images perdues signifient que les paquets n'atteignent pas CamSoda à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas.</p></details><details class="faq-item"><summary>Écran noir — les spectateurs ne voient pas de vidéo sur CamSoda</summary><p>Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live.</p></details><details class="faq-item"><summary>CamSoda refuse la clé de stream ou ne se connecte pas</summary><p>Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par CamSoda et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide.</p></details><details class="faq-item"><summary>Pas de son ou son désynchronisé sur CamSoda</summary><p>Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>CamSoda prend-il en charge OBS / les encodeurs externes ?</summary><p>Oui — officiellement. Il y a un bouton Use OBS Broadcaster sur la page Go Live et un guide OBS dans le wiki CamSoda, donc SplitCam fonctionne.</p></details><details class="faq-item"><summary>Faut-il se faire vérifier sur CamSoda ?</summary><p>Pour diffuser, non. Pour recevoir des tips, oui — CamSoda exige d'avoir complété sa procédure de vérification.</p></details><details class="faq-item"><summary>Quelle résolution CamSoda prend-il en charge ?</summary><p>Jusqu'à 1920×1080 à 30 fps, environ 6 000 Kbps maximum sur son ingest RTMP.</p></details><details class="faq-item"><summary>SplitCam est-il gratuit pour CamSoda ?</summary><p>Oui — gratuit, sans filigrane et sans limite de temps. Il fonctionne aux côtés du mode Use OBS Broadcaster gratuit de CamSoda, donc toute la chaîne ne coûte rien.</p></details></div>

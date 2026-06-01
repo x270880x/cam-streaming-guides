@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Kao virtualna kamera za ImLive ne dodaje trošak ili brendiranje tvom video chatu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tvoj prijenos na ImLive lagira ili buffera",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000 Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Izgubljeni frameovi tijekom prijenosa na ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Izgubljeni frameovi znače da paketi ne stižu do ImLive na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Crni ekran — gledatelji ne vide video na ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive odbija stream ključ ili se ne povezuje",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje ImLive i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nema zvuka ili zvuk nije sinkroniziran na ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Savjeti</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Nije potreban stream key</h3><p>ImLive nema RTMP — ne traži server URL ili ključ. SplitCam je samo odabran kao uređaj kamera.</p></div><div class="tip-card"><h3>Postavi SplitCam i kao mikrofon</h3><p>Odaberi SplitCam za mikrofon uz kameru, da audio mix i redukcija buke također uđu u live.</p></div><div class="tip-card"><h3>Izgradi scenu prije livea</h3><p>ImLive prikazuje ono što SplitCam šalje — složi slojeve prije nego započneš chat.</p></div><div class="tip-card"><h3>Prvo napravi privatni test</h3><p>Pokreni kratak test prijenos za kameru, zvuk, kadriranje i preklapanja prije nego otvoriš sobu publici.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na ImLive lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na ImLive</summary><p>Izgubljeni frameovi znače da paketi ne stižu do ImLive na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na ImLive</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>ImLive odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje ImLive i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na ImLive</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Česta pitanja</h2>
   <div class="faq-list"><details class="faq-item"><summary>Koristi li ImLive RTMP ili stream key?</summary><p>Ne — ImLive koristi web kameru izravno kroz preglednik. SplitCam se povezuje kao virtualna kamera, nema ključa za kopiranje.</p></details><details class="faq-item"><summary>Kako odabrati SplitCam na ImLiveu?</summary><p>Start Video Chat → Go To Settings → odaberi SplitCam kao web kameru i mikrofon.</p></details><details class="faq-item"><summary>Mogu li koristiti preklapanja na ImLiveu?</summary><p>Da — gradiš ih u SplitCam sceni; ImLive prikazuje složeni rezultat.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za ImLive?</summary><p>Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Kao virtualna kamera za ImLive ne dodaje trošak ili brendiranje tvom video chatu.</p></details></div>

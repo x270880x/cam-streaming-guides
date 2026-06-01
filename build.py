@@ -702,6 +702,300 @@ def build_steps(p, lang):
     return out
 
 
+# Localized "Troubleshooting" heading per language.
+TROUBLE_H = {
+    "en": "Troubleshooting", "ru": "Решение проблем", "es": "Solución de problemas",
+    "de": "Fehlerbehebung", "fr": "Dépannage", "it": "Risoluzione dei problemi",
+    "pt": "Solução de problemas", "nl": "Problemen oplossen", "ro": "Depanare",
+    "bg": "Решаване на проблеми", "hu": "Hibaelhárítás", "el": "Αντιμετώπιση προβλημάτων",
+    "fi": "Vianmääritys", "da": "Fejlfinding", "no": "Feilsøking", "sr": "Решавање проблема",
+    "hr": "Rješavanje problema", "zh": "故障排除", "ja": "トラブルシューティング",
+    "ar": "استكشاف الأخطاء وإصلاحها", "th": "การแก้ไขปัญหา", "fil": "Pag-troubleshoot",
+}
+
+# Common encoder-level streaming problems and fixes. {name} = platform name.
+# Each entry is (problem, solution). Universal across platforms; the platform
+# name is woven in so every page stays unique.
+TROUBLE_TMPL = {
+    "en": [
+        ("Your {name} stream lags or buffers",
+         "Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection."),
+        ("Dropped frames during the {name} broadcast",
+         "Dropped frames mean packets aren't reaching {name} in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up."),
+        ("Black screen — viewers see no video on {name}",
+         "Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live."),
+        ("{name} rejects the stream key or won't connect",
+         "Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one {name} shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key."),
+        ("No audio or audio is out of sync on {name}",
+         "Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames."),
+    ],
+    "ru": [
+        ("Трансляция на {name} лагает или буферизует",
+         "Почти всегда битрейт выше, чем тянет ваш аплоад. Запустите встроенный тест скорости SplitCam и выставьте битрейт примерно на 75% от измеренного аплоада — 3500–6000&nbsp;Кбит/с для 1080p, ниже для 720p. Лаги уходят, как только энкодер перестаёт обгонять соединение."),
+        ("Потеря кадров во время эфира на {name}",
+         "Потеря кадров значит, что пакеты не доходят до {name} вовремя — обычно нестабильный Wi-Fi. Перейдите на проводной Ethernet, закройте программы, жрущие канал, и чуть снизьте битрейт. Единичный скачок — норма; устойчивый рост значит, что соединение не справляется."),
+        ("Чёрный экран — зрители не видят видео на {name}",
+         "Камера не выбрана активным источником в SplitCam, или её держит другая программа. Закройте Zoom, Skype или OBS, выберите веб-камеру заново в списке источников SplitCam и убедитесь, что превью показывает картинку до нажатия Go Live."),
+        ("{name} не принимает ключ трансляции или не подключается",
+         "Скопируйте ключ заново — обычно причина в лишнем пробеле или старом, уже сброшенном ключе. Проверьте, что URL сервера совпадает с показанным в {name} и что вещание через внешний энкодер включено на аккаунте. Зелёный слайдер в Настройках трансляции SplitCam подтверждает валидный ключ."),
+        ("Нет звука или звук рассинхронизирован на {name}",
+         "Выберите SplitCam и как камеру, и как микрофон, а внутри SplitCam укажите ваш реальный микрофон источником звука. Если звук отстаёт от видео, снизьте разрешение на ступень — энкодер перегружен и звук ждёт опаздывающие кадры."),
+    ],
+    "es": [
+        ("Tu emisión en {name} va con lag o se entrecorta",
+         "Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000&nbsp;Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión."),
+        ("Fotogramas perdidos durante la emisión en {name}",
+         "Los fotogramas perdidos significan que los paquetes no llegan a tiempo a {name} — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto."),
+        ("Pantalla negra — los espectadores no ven vídeo en {name}",
+         "Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live."),
+        ("{name} rechaza la clave de stream o no conecta",
+         "Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra {name} y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida."),
+        ("Sin audio o audio desincronizado en {name}",
+         "Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde."),
+    ],
+    "de": [
+        ("Dein {name}-Stream ruckelt oder puffert",
+         "Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt."),
+        ("Dropped Frames während der {name}-Übertragung",
+         "Dropped Frames bedeuten, dass Pakete {name} nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit."),
+        ("Schwarzer Bildschirm — Zuschauer sehen kein Video auf {name}",
+         "Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst."),
+        ("{name} lehnt den Stream-Key ab oder verbindet nicht",
+         "Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von {name} angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key."),
+        ("Kein Ton oder Ton asynchron auf {name}",
+         "Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames."),
+    ],
+    "fr": [
+        ("Ton stream {name} rame ou met en mémoire tampon",
+         "La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion."),
+        ("Images perdues pendant la diffusion sur {name}",
+         "Les images perdues signifient que les paquets n'atteignent pas {name} à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas."),
+        ("Écran noir — les spectateurs ne voient pas de vidéo sur {name}",
+         "Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live."),
+        ("{name} refuse la clé de stream ou ne se connecte pas",
+         "Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par {name} et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide."),
+        ("Pas de son ou son désynchronisé sur {name}",
+         "Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard."),
+    ],
+    "it": [
+        ("Lo stream su {name} va a scatti o si blocca in buffering",
+         "Quasi sempre il bitrate è più alto di quanto regge il tuo upload. Esegui lo speed test integrato di SplitCam e imposta il bitrate a circa il 75% dell'upload misurato — 3.500–6.000&nbsp;Kbps per 1080p, meno per 720p. Il lag sparisce appena l'encoder smette di superare la tua connessione."),
+        ("Frame persi durante la trasmissione su {name}",
+         "I frame persi significano che i pacchetti non arrivano a {name} in tempo — di solito Wi-Fi instabile. Passa a una connessione Ethernet via cavo, chiudi le app che consumano banda e abbassa un po' il bitrate. Un picco isolato va bene; una salita costante vuol dire che la connessione non tiene il passo."),
+        ("Schermo nero — gli spettatori non vedono il video su {name}",
+         "La camera non è selezionata come sorgente attiva in SplitCam, o un'altra app la sta usando. Chiudi Zoom, Skype o OBS, riseleziona la webcam nella lista sorgenti di SplitCam e verifica che l'anteprima mostri il tuo flusso prima di premere Go Live."),
+        ("{name} rifiuta la stream key o non si connette",
+         "Ricopia la stream key — uno spazio finale o una chiave vecchia già rigenerata è la causa più comune. Verifica che l'URL del server corrisponda a quello mostrato da {name} e che la trasmissione via encoder esterno sia attiva sul tuo account. Uno slider verde nelle Stream Settings di SplitCam conferma una chiave valida."),
+        ("Niente audio o audio fuori sync su {name}",
+         "Scegli SplitCam come camera e come microfono, e seleziona il tuo microfono reale dentro la sorgente audio di SplitCam. Se l'audio resta indietro rispetto al video, abbassa la risoluzione di un livello — l'encoder è sovraccarico e l'audio aspetta i frame in ritardo."),
+    ],
+    "pt": [
+        ("Sua transmissão no {name} trava ou fica em buffer",
+         "Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão."),
+        ("Frames perdidos durante a transmissão no {name}",
+         "Frames perdidos significam que os pacotes não chegam ao {name} a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta."),
+        ("Tela preta — os espectadores não veem vídeo no {name}",
+         "Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live."),
+        ("{name} rejeita a stream key ou não conecta",
+         "Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo {name} e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida."),
+        ("Sem áudio ou áudio fora de sincronia no {name}",
+         "Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados."),
+    ],
+    "nl": [
+        ("Je {name}-stream hapert of buffert",
+         "Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft."),
+        ("Dropped frames tijdens de {name}-uitzending",
+         "Dropped frames betekenen dat pakketten {name} niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt."),
+        ("Zwart scherm — kijkers zien geen video op {name}",
+         "Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt."),
+        ("{name} weigert de stream key of maakt geen verbinding",
+         "Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die {name} toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key."),
+        ("Geen geluid of geluid loopt niet synchroon op {name}",
+         "Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames."),
+    ],
+    "ro": [
+        ("Stream-ul tău pe {name} are lag sau se blochează la buffering",
+         "Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea."),
+        ("Frame-uri pierdute în timpul transmisiunii pe {name}",
+         "Frame-urile pierdute înseamnă că pachetele nu ajung la {name} la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față."),
+        ("Ecran negru — spectatorii nu văd video pe {name}",
+         "Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live."),
+        ("{name} respinge cheia de stream sau nu se conectează",
+         "Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de {name} și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă."),
+        ("Fără audio sau audio desincronizat pe {name}",
+         "Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate."),
+    ],
+    "bg": [
+        ("Излъчването на {name} лагва или буферира",
+         "Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката."),
+        ("Изпуснати кадри по време на излъчване на {name}",
+         "Изпуснатите кадри значат, че пакетите не стигат до {name} навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва."),
+        ("Черен екран — зрителите не виждат видео на {name}",
+         "Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live."),
+        ("{name} отхвърля стрийм ключа или не се свързва",
+         "Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от {name} и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ."),
+        ("Няма звук или звукът е разсинхронизиран на {name}",
+         "Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри."),
+    ],
+    "hu": [
+        ("A {name} streamed akadozik vagy pufferel",
+         "Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat."),
+        ("Eldobott képkockák a {name} adás közben",
+         "Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a {name} platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja."),
+        ("Fekete képernyő — a nézők nem látnak videót a {name} platformon",
+         "A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot."),
+        ("A {name} elutasítja a stream kulcsot vagy nem csatlakozik",
+         "Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a {name} által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez."),
+        ("Nincs hang vagy a hang nincs szinkronban a {name} platformon",
+         "Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár."),
+    ],
+    "el": [
+        ("Το stream σου στο {name} κολλάει ή κάνει buffering",
+         "Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000&nbsp;Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου."),
+        ("Χαμένα frames κατά τη μετάδοση στο {name}",
+         "Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο {name} εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει."),
+        ("Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο {name}",
+         "Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live."),
+        ("Το {name} απορρίπτει το stream key ή δεν συνδέεται",
+         "Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το {name} και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key."),
+        ("Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο {name}",
+         "Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames."),
+    ],
+    "fi": [
+        ("{name}-striimisi pätkii tai puskuroi",
+         "Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi."),
+        ("Pudonneita ruutuja {name}-lähetyksen aikana",
+         "Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle {name} ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä."),
+        ("Musta ruutu — katsojat eivät näe videota alustalla {name}",
+         "Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live."),
+        ("{name} hylkää striimiavaimen tai ei yhdistä",
+         "Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan {name} näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen."),
+        ("Ei ääntä tai ääni ei ole synkassa alustalla {name}",
+         "Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja."),
+    ],
+    "da": [
+        ("Dit {name}-stream hakker eller buffer",
+         "Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse."),
+        ("Tabte frames under {name}-udsendelsen",
+         "Tabte frames betyder, at pakkerne ikke når frem til {name} i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med."),
+        ("Sort skærm — seerne ser ingen video på {name}",
+         "Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live."),
+        ("{name} afviser stream key eller vil ikke forbinde",
+         "Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, {name} viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle."),
+        ("Ingen lyd eller lyd ude af sync på {name}",
+         "Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames."),
+    ],
+    "no": [
+        ("{name}-strømmen din henger eller bufrer",
+         "Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000&nbsp;Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din."),
+        ("Tapte frames under {name}-sendingen",
+         "Tapte frames betyr at pakkene ikke når {name} i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge."),
+        ("Svart skjerm — seerne ser ingen video på {name}",
+         "Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live."),
+        ("{name} avviser strømnøkkelen eller kobler ikke til",
+         "Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den {name} viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel."),
+        ("Ingen lyd eller lyd ute av synk på {name}",
+         "Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames."),
+    ],
+    "sr": [
+        ("Твој пренос на {name} лагује или баферује",
+         "Готово увек је битрејт виши него што твој аплоуд издржава. Покрени уграђени тест брзине SplitCam-а и постави битрејт на око 75% измереног аплоуда — 3500–6000&nbsp;Kbps за 1080p, мање за 720p. Лаг нестаје чим енкодер престане да престиже твоју везу."),
+        ("Изгубљени фрејмови током преноса на {name}",
+         "Изгубљени фрејмови значе да пакети не стижу до {name} на време — обично нестабилан Wi-Fi. Пређи на кабловску Ethernet везу, затвори апликације које троше проток и мало смањи битрејт. Један скок је у реду; стални пораст значи да веза не може да испрати."),
+        ("Црн екран — гледаоци не виде видео на {name}",
+         "Камера није изабрана као активни извор у SplitCam-у, или је друга апликација држи. Затвори Zoom, Skype или OBS, поново изабери веб камеру у листи извора SplitCam-а и потврди да преглед приказује слику пре него притиснеш Go Live."),
+        ("{name} одбија стрим кључ или се не повезује",
+         "Поново копирај стрим кључ — сувишан размак или стар, већ ресетован кључ је честа узрок. Потврди да се URL сервера поклапа са оним који приказује {name} и да је пренос преко спољног енкодера укључен на налогу. Зелени слајдер у Stream Settings SplitCam-а потврђује важећи кључ."),
+        ("Нема звука или звук није синхронизован на {name}",
+         "Изабери SplitCam и као камеру и као микрофон, и постави свој прави микрофон као аудио извор у SplitCam-у. Ако звук касни за видеом, смањи резолуцију за једну степеницу — енкодер је преоптерећен и звук чека закаснеле фрејмове."),
+    ],
+    "hr": [
+        ("Tvoj prijenos na {name} lagira ili buffera",
+         "Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu."),
+        ("Izgubljeni frameovi tijekom prijenosa na {name}",
+         "Izgubljeni frameovi znače da paketi ne stižu do {name} na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti."),
+        ("Crni ekran — gledatelji ne vide video na {name}",
+         "Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live."),
+        ("{name} odbija stream ključ ili se ne povezuje",
+         "Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje {name} i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ."),
+        ("Nema zvuka ili zvuk nije sinkroniziran na {name}",
+         "Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove."),
+    ],
+    "zh": [
+        ("您的 {name} 直播卡顿或缓冲",
+         "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"),
+        ("{name} 直播期间丢帧",
+         "丢帧意味着数据包未能及时到达 {name} — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"),
+        ("黑屏 — 观众在 {name} 上看不到视频",
+         "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"),
+        ("{name} 拒绝直播密钥或无法连接",
+         "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 {name} 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"),
+        ("{name} 上没有声音或声音不同步",
+         "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"),
+    ],
+    "ja": [
+        ("{name} の配信がカクつく・バッファリングする",
+         "ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。"),
+        ("{name} 配信中のフレーム落ち",
+         "フレーム落ちはパケットが {name} に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。"),
+        ("黒い画面 — {name} で視聴者に映像が映らない",
+         "カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。"),
+        ("{name} がストリームキーを拒否する・接続しない",
+         "ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが {name} の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。"),
+        ("{name} で音声がない・音ズレする",
+         "SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。"),
+    ],
+    "ar": [
+        ("بث {name} لديك يتقطع أو يخزّن مؤقتاً",
+         "في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك."),
+        ("إطارات مفقودة أثناء البث على {name}",
+         "الإطارات المفقودة تعني أن الحزم لا تصل إلى {name} في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب."),
+        ("شاشة سوداء — المشاهدون لا يرون فيديو على {name}",
+         "الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live."),
+        ("{name} يرفض مفتاح البث أو لا يتصل",
+         "انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه {name} وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً."),
+        ("لا يوجد صوت أو الصوت غير متزامن على {name}",
+         "اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة."),
+    ],
+    "th": [
+        ("สตรีม {name} ของคุณกระตุกหรือบัฟเฟอร์",
+         "เกือบทุกครั้งบิตเรตสูงกว่าที่อัปโหลดของคุณรับไหว รันการทดสอบความเร็วในตัวของ SplitCam แล้วตั้งบิตเรตที่ประมาณ 75% ของอัปโหลดที่วัดได้ — 3,500–6,000&nbsp;Kbps สำหรับ 1080p ต่ำกว่าสำหรับ 720p อาการกระตุกจะหายไปเมื่อ encoder หยุดวิ่งแซงการเชื่อมต่อของคุณ"),
+        ("เฟรมหลุดระหว่างการถ่ายทอดบน {name}",
+         "เฟรมหลุดหมายความว่าแพ็กเก็ตไปไม่ถึง {name} ทันเวลา — มักเป็น Wi-Fi ไม่เสถียร เปลี่ยนเป็นการเชื่อมต่อ Ethernet แบบมีสาย ปิดแอปที่กินแบนด์วิดท์ และลดบิตเรตลงเล็กน้อย พีคครั้งเดียวไม่เป็นไร แต่การเพิ่มขึ้นต่อเนื่องหมายความว่าการเชื่อมต่อตามไม่ทัน"),
+        ("จอดำ — ผู้ชมไม่เห็นวิดีโอบน {name}",
+         "กล้องของคุณไม่ได้ถูกเลือกเป็นแหล่งที่ใช้งานใน SplitCam หรือมีแอปอื่นยึดไว้ ปิด Zoom, Skype หรือ OBS เลือกเว็บแคมใหม่ในรายการแหล่งของ SplitCam และยืนยันว่าตัวอย่างแสดงภาพของคุณก่อนกด Go Live"),
+        ("{name} ปฏิเสธสตรีมคีย์หรือไม่เชื่อมต่อ",
+         "คัดลอกสตรีมคีย์ใหม่ — ช่องว่างที่ท้ายหรือคีย์เก่าที่หมุนเปลี่ยนแล้วเป็นสาเหตุปกติ ยืนยันว่า URL เซิร์ฟเวอร์ตรงกับที่ {name} แสดง และเปิดใช้งานการถ่ายทอดผ่าน encoder ภายนอกในบัญชีของคุณแล้ว แถบเลื่อนสีเขียวใน Stream Settings ของ SplitCam ยืนยันว่าคีย์ถูกต้อง"),
+        ("ไม่มีเสียงหรือเสียงไม่ตรงกับภาพบน {name}",
+         "เลือก SplitCam เป็นทั้งกล้องและไมโครโฟน และเลือกไมโครโฟนจริงของคุณในแหล่งเสียงของ SplitCam หากเสียงตามหลังวิดีโอ ลดความละเอียดลงหนึ่งระดับ — encoder ทำงานหนักเกินไปและเสียงกำลังรอเฟรมที่มาช้า"),
+    ],
+    "fil": [
+        ("Ang {name} stream mo ay nag-lalag o nag-bubuffer",
+         "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."),
+        ("Dropped frames habang nag-bo-broadcast sa {name}",
+         "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa {name} sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."),
+        ("Black screen — walang nakikitang video ang viewers sa {name}",
+         "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."),
+        ("Tinatanggihan ng {name} ang stream key o ayaw kumonekta",
+         "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng {name} at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."),
+        ("Walang audio o hindi sync ang audio sa {name}",
+         "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."),
+    ],
+}
+
+
+def render_trouble(slug, name, lang):
+    """Render the troubleshooting section for a platform page."""
+    rows = TROUBLE_TMPL.get(lang) or TROUBLE_TMPL["en"]
+    items = "".join(
+        f'<details class="faq-item"><summary>{e(prob.replace("{name}", name))}</summary>'
+        f'<p>{sol.replace("{name}", name)}</p></details>'
+        for prob, sol in rows)
+    heading = TROUBLE_H.get(lang, TROUBLE_H["en"])
+    return (f'<section class="section"><h2 class="sec-h">{heading}</h2>'
+            f'<div class="faq-list">{items}</div></section>')
+
+
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
@@ -938,6 +1232,8 @@ def render(p, lang, all_platforms):
         for q, a in d["faq"])
 
     support_html = render_support(p["slug"], name, lang)
+    trouble_html = render_trouble(p["slug"], name, lang)
+    trouble_rows = TROUBLE_TMPL.get(lang) or TROUBLE_TMPL["en"]
 
     canon = f'{SITE}/{u["path"]}{p["slug"]}/'
     og_image = f'{SITE}/assets/og/{p["slug"]}.png'
@@ -962,7 +1258,11 @@ def render(p, lang, all_platforms):
             {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
                 {"@type": "Question", "name": q,
                  "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
-                for q, a in d["faq"]]},
+                for q, a in d["faq"]] + [
+                {"@type": "Question", "name": prob.replace("{name}", name),
+                 "acceptedAnswer": {"@type": "Answer",
+                                    "text": html.unescape(_strip(sol.replace("{name}", name)))}}
+                for prob, sol in trouble_rows]},
             {"@type": "SoftwareApplication", "name": "SplitCam",
              "applicationCategory": "MultimediaApplication",
              "operatingSystem": "Windows, macOS",
@@ -1067,6 +1367,7 @@ def render(p, lang, all_platforms):
   <h2 class="sec-h">{u['tips_h']}</h2>
   <div class="tips-grid">{tips_html}</div>
 </section>
+{trouble_html}
 <section class="section">
   <h2 class="sec-h">{u['faq_h']}</h2>
   <div class="faq-list">{faq_html}</div>

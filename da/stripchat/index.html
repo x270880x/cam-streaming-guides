@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "da",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — ingen licensafgift, intet vandmærke, ingen tidsbegrænsning: selv lange interaktive Stripchat-shows koster intet på encoder-siden."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dit Stripchat-stream hakker eller buffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000 Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tabte frames under Stripchat-udsendelsen",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tabte frames betyder, at pakkerne ikke når frem til Stripchat i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sort skærm — seerne ser ingen video på Stripchat",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat afviser stream key eller vil ikke forbinde",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Stripchat viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ingen lyd eller lyd ude af sync på Stripchat",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Match opløsning med sitet</h3><p>Stripchat's FAQ advarer: opløsningen i din software skal matche sitets præcist, ellers pixelerer videoen. Indstil begge ens.</p></div><div class="tip-card"><h3>Pas på 2 Mbps minimum</h3><p>Stripchat angiver 2 Mbps upload som minimum — og siger direkte, det ikke er nok til OBS-streaming eller multistreaming. Sigt meget højere.</p></div><div class="tip-card"><h3>Nøglen er en token</h3><p>Stripchat's stream key er en token — kopiér præcist, del aldrig, nulstil ved lækage.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit Stripchat-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under Stripchat-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til Stripchat i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på Stripchat</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>Stripchat afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Stripchat viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på Stripchat</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Anbefaler Stripchat OBS / ekstern software?</summary><p>Ja — Stripchat's officielle FAQ anbefaler ekstern broadcast-software som OBS «for at opnå den bedste video- og lydkvalitet». SplitCam virker på samme måde.</p></details><details class="faq-item"><summary>Hvordan skifter jeg Stripchat til ekstern software?</summary><p>I Broadcast Center vælg Switch to External Broadcast Software (OBS), åbn derefter external software settings for at afsløre stream key (token).</p></details><details class="faq-item"><summary>Hvilken bitrate til Stripchat?</summary><p>RTMP ingest accepterer op til ~6.000 Kbps med 2-sekunds keyframe. 3.500–6.000 ved 1080p er ideelt — men skal være godt over 2 Mbps-minimum, især til OBS-streaming.</p></details><details class="faq-item"><summary>Er SplitCam gratis til Stripchat?</summary><p>Ja — ingen licensafgift, intet vandmærke, ingen tidsbegrænsning: selv lange interaktive Stripchat-shows koster intet på encoder-siden.</p></details></div>

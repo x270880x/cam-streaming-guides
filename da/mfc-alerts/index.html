@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "da",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning, og MFC Alerts browser-overlay kører i den uden ekstra omkostninger."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dit MFC Alerts-stream hakker eller buffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000 Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tabte frames under MFC Alerts-udsendelsen",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tabte frames betyder, at pakkerne ikke når frem til MFC Alerts i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sort skærm — seerne ser ingen video på MFC Alerts",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "MFC Alerts afviser stream key eller vil ikke forbinde",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, MFC Alerts viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ingen lyd eller lyd ude af sync på MFC Alerts",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts skal være over webkameraet</h3><p>Den mest almindelige fejl: hvis MFC Alerts-laget er under webkameraet på kildelisten, forbliver effekterne skjult. Flyt op.</p></div><div class="tip-card"><h3>Mfcalerts.com-konto påkrævet</h3><p>Alerts-URL er personlig — registrér dig på mfcalerts.com først, hvis du ikke har en konto.</p></div><div class="tip-card"><h3>Send test-tip før live</h3><p>Brug Settings → Send test tip til at bekræfte, at overlay'et virker — opdag ikke fejlen midt i showet.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit MFC Alerts-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under MFC Alerts-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til MFC Alerts i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på MFC Alerts</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>MFC Alerts afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, MFC Alerts viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på MFC Alerts</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hvad er MFC Alerts?</summary><p>Et notifikationssystem til MyFreeCams, der viser videoeffekter i din stream, når seere sender tips — tilføjet som Browser-overlay i SplitCam.</p></details><details class="faq-item"><summary>Hvorfor vises mine MFC Alerts ikke?</summary><p>Næsten altid lagorden — MFC Alerts Browser-laget skal være over webkameraet på SplitCam's kildeliste.</p></details><details class="faq-item"><summary>Skal jeg have en konto til MFC Alerts?</summary><p>Ja — registrér dig på mfcalerts.com for at få din personlige alerts-URL.</p></details><details class="faq-item"><summary>Er SplitCam gratis til dette?</summary><p>Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning, og MFC Alerts browser-overlay kører i den uden ekstra omkostninger.</p></details></div>

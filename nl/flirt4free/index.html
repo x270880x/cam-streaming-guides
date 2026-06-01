@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "nl",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — gratis, geen watermerk en geen tijdslimiet, wat goed past bij een historisch platform als Flirt4Free waar shows lang kunnen duren."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je Flirt4Free-stream hapert of buffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000 Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames tijdens de Flirt4Free-uitzending",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames betekenen dat pakketten Flirt4Free niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Zwart scherm — kijkers zien geen video op Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Flirt4Free weigert de stream key of maakt geen verbinding",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die Flirt4Free toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Geen geluid of geluid loopt niet synchroon op Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Het is Stream Name, geen sleutel</h3><p>Flirt4Free noemt de credential Stream Name. In SplitCam's stream key-veld plakken — vervult dezelfde rol.</p></div><div class="tip-card"><h3>Stel resolutie/bitrate in het formulier in</h3><p>Flirt4Free's External Broadcast Form heeft eigen resolutie- en bitrate-velden — align met SplitCam's instellingen zodat het beeld niet wordt herschaald.</p></div><div class="tip-card"><h3>Historisch platform</h3><p>Flirt4Free draait sinds de jaren '90 — model-tools zijn volwassen en het External Broadcast Form is daar een gedocumenteerd onderdeel van.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je Flirt4Free-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de Flirt4Free-uitzending</summary><p>Dropped frames betekenen dat pakketten Flirt4Free niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op Flirt4Free</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>Flirt4Free weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die Flirt4Free toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op Flirt4Free</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Ondersteunt Flirt4Free externe encoders?</summary><p>Ja — officieel, via het External Broadcast Form dat RTMP URL en Stream Name levert. SplitCam werkt als encoder.</p></details><details class="faq-item"><summary>Waar krijg ik Flirt4Free&#x27;s RTMP-gegevens?</summary><p>Uit het External Broadcast Form in de model area — toont RTMP URL, Stream Name en resolutie/bitrate-velden.</p></details><details class="faq-item"><summary>Welke bitrate voor Flirt4Free?</summary><p>3.500–6.000 Kbps op 1080p — stel dezelfde waarde in het External Broadcast Form als in SplitCam.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor Flirt4Free?</summary><p>Ja — gratis, geen watermerk en geen tijdslimiet, wat goed past bij een historisch platform als Flirt4Free waar shows lang kunnen duren.</p></details></div>

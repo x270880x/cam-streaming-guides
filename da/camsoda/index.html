@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "da",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — gratis, uden vandmærke og uden tidsbegrænsning. Virker med CamSoda's gratis Use OBS Broadcaster-tilstand, så hele kæden koster intet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dit CamSoda-stream hakker eller buffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000 Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tabte frames under CamSoda-udsendelsen",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tabte frames betyder, at pakkerne ikke når frem til CamSoda i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sort skærm — seerne ser ingen video på CamSoda",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CamSoda afviser stream key eller vil ikke forbinde",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, CamSoda viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ingen lyd eller lyd ude af sync på CamSoda",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Verificér for tips</h3><p>På CamSoda kan alle udsende, men for at modtage tips skal du gennemføre CamSoda's verificeringsproces.</p></div><div class="tip-card"><h3>Vælg den nærmeste regionale server</h3><p>CamSoda tilbyder regionale ingest-servere — den nærmeste (NA / Europa / Asien / Sydamerika / Oceanien) reducerer latens og mistede frames.</p></div><div class="tip-card"><h3>Loft ved 1080p / 30 fps</h3><p>CamSoda's ingest går op til omkring 1080p, 30 fps og ~6.000 Kbps — tving ikke højere.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit CamSoda-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under CamSoda-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til CamSoda i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på CamSoda</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>CamSoda afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, CamSoda viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på CamSoda</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Understøtter CamSoda OBS / eksterne encodere?</summary><p>Ja — officielt. Der er en Use OBS Broadcaster-knap på Go Live-siden og en OBS-guide på CamSoda-wikien, så SplitCam virker.</p></details><details class="faq-item"><summary>Skal jeg verificere mig på CamSoda?</summary><p>For at udsende, nej. For at modtage tips, ja — CamSoda kræver først verificeringsprocessen gennemført.</p></details><details class="faq-item"><summary>Hvilken opløsning understøtter CamSoda?</summary><p>Op til 1920×1080 ved 30 fps, omkring 6.000 Kbps maksimum på RTMP ingest.</p></details><details class="faq-item"><summary>Er SplitCam gratis til CamSoda?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning. Virker med CamSoda's gratis Use OBS Broadcaster-tilstand, så hele kæden koster intet.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "nl",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — volledig gratis, geen watermerk en geen tijdslimiet, dus de encoder vreet niet aan je token-inkomsten op BongaCams."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je BongaCams-stream hapert of buffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000 Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames tijdens de BongaCams-uitzending",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames betekenen dat pakketten BongaCams niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Zwart scherm — kijkers zien geen video op BongaCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "BongaCams weigert de stream key of maakt geen verbinding",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die BongaCams toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Geen geluid of geluid loopt niet synchroon op BongaCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Geen External Encoder-knop? Support</h3><p>BongaCams schakelt externe codering per account in — als de optie niet in Broadcast settings staat, activeert de support hem.</p></div><div class="tip-card"><h3>Match de resolutie</h3><p>BongaCams raadt aan dat de resolutie van je webcam en je stream gelijk zijn — bijvoorbeeld beide 1280×720.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div><div class="tip-card"><h3>Doe eerst een privé-test</h3><p>Run een korte teststream om camera, audio, framing en overlays te checken voordat je de room voor publiek opent.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je BongaCams-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de BongaCams-uitzending</summary><p>Dropped frames betekenen dat pakketten BongaCams niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op BongaCams</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>BongaCams weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die BongaCams toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op BongaCams</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Waarom verschijnt de External Encoder-knop niet op BongaCams?</summary><p>Externe codering staat niet standaard aan op elk account — neem contact op met BongaCams-support om hem te activeren; daarna verschijnt de knop in Broadcast settings.</p></details><details class="faq-item"><summary>Moet ik mijn BongaCams-account verifiëren?</summary><p>Ja — streamen vereist 18+, een officieel ID voor leeftijdscontrole en account-goedkeuring voordat je live gaat.</p></details><details class="faq-item"><summary>Welke bitrate voor BongaCams?</summary><p>BongaCams' RTMP ingest beperkt videobitrate tot ongeveer 6.000 Kbps met 2-seconde keyframe — 3.500–6.000 op 1080p is de sweet spot; test je upload vooraf.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor BongaCams?</summary><p>Ja — volledig gratis, geen watermerk en geen tijdslimiet, dus de encoder vreet niet aan je token-inkomsten op BongaCams.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fil",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oo — libre, walang watermark at walang time limit. Dahil hindi nagdadala ng sariling encoder ang CamPlace, gumagawa ng trabaho ang libreng RTMP tool."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ang CamPlace stream mo ay nag-lalag o nag-bubuffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000 Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames habang nag-bo-broadcast sa CamPlace",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa CamPlace sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — walang nakikitang video ang viewers sa CamPlace",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tinatanggihan ng CamPlace ang stream key o ayaw kumonekta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng CamPlace at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Walang audio o hindi sync ang audio sa CamPlace",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Walang opisyal na OBS guide — gamitin ang video</h3><p>Walang public article ang CamPlace tungkol sa external encoders; ang video sa itaas ang sanggunian para sa kasalukuyang ruta.</p></div><div class="tip-card"><h3>Gumagana ang standard RTMP</h3><p>Bagama't hindi dokumentado, tinatanggap ng CamPlace ang standard RTMP server URL at key — kumokonekta ang SplitCam bilang custom RTMP destination.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div><div class="tip-card"><h3>Gumawa muna ng private test</h3><p>Magpatakbo ng maikling test broadcast para suriin ang camera, audio, framing at overlays bago buksan ang room para sa publiko.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang CamPlace stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa CamPlace</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa CamPlace sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa CamPlace</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng CamPlace ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng CamPlace at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa CamPlace</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>May opisyal na OBS guide ba ang CamPlace?</summary><p>Walang nakitang public article tungkol sa external encoders. Tinatanggap ng CamPlace ang standard RTMP URL at key, kaya gumagana ang SplitCam — sundan ang video.</p></details><details class="faq-item"><summary>Sinusuportahan ba ng CamPlace ang external encoders?</summary><p>Oo — tinatanggap nito ang standard RTMP stream key, kaya kumokonekta ang SplitCam bilang custom RTMP destination.</p></details><details class="faq-item"><summary>Anong bitrate para sa CamPlace?</summary><p>Hindi naglalathala ang CamPlace ng opisyal na numero — gamitin ang 3,500–6,000 Kbps sa 1080p bilang safe range at hayaan ang speed test ng SplitCam na ayusin ang tunay mong ceiling.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa CamPlace?</summary><p>Oo — libre, walang watermark at walang time limit. Dahil hindi nagdadala ng sariling encoder ang CamPlace, gumagawa ng trabaho ang libreng RTMP tool.</p></details></div>

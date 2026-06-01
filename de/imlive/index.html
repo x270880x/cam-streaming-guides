@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "de",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Als virtuelle Kamera für ImLive bringt es weder Kosten noch Branding in deinen Videochat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dein ImLive-Stream ruckelt oder puffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000 Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped Frames während der ImLive-Übertragung",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped Frames bedeuten, dass Pakete ImLive nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Schwarzer Bildschirm — Zuschauer sehen kein Video auf ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive lehnt den Stream-Key ab oder verbindet nicht",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von ImLive angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kein Ton oder Ton asynchron auf ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Kein Stream-Key nötig</h3><p>ImLive hat kein RTMP — such keine Server-URL oder Key. SplitCam wird einfach als Kamera-Gerät ausgewählt.</p></div><div class="tip-card"><h3>SplitCam auch als Mikro setzen</h3><p>SplitCam auch als Mikrofon wählen, damit dein Audio-Mix und die Rauschunterdrückung mit übertragen werden.</p></div><div class="tip-card"><h3>Szene vor dem Live-Gehen bauen</h3><p>ImLive zeigt, was SplitCam ausgibt — die Layer vor dem Chat-Start anordnen.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein ImLive-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der ImLive-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete ImLive nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf ImLive</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>ImLive lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von ImLive angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf ImLive</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Nutzt ImLive RTMP oder einen Stream-Key?</summary><p>Nein — ImLive nutzt deine Webcam direkt über den Browser. SplitCam verbindet sich als virtuelle Kamera, es gibt keinen Key zu kopieren.</p></details><details class="faq-item"><summary>Wie wähle ich SplitCam auf ImLive?</summary><p>Start Video Chat → Go To Settings → SplitCam als Webcam und Mikrofon wählen.</p></details><details class="faq-item"><summary>Kann ich Overlays auf ImLive nutzen?</summary><p>Ja — sie in die SplitCam-Szene einbauen; ImLive zeigt das komponierte Ergebnis.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für ImLive?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Als virtuelle Kamera für ImLive bringt es weder Kosten noch Branding in deinen Videochat.</p></details></div>

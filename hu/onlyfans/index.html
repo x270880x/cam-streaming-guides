@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hu",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Nincs költség az enkóder oldalán."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A OnlyFans streamed akadozik vagy pufferel",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000 Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Eldobott képkockák a OnlyFans adás közben",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a OnlyFans platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fekete képernyő — a nézők nem látnak videót a OnlyFans platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A OnlyFans elutasítja a stream kulcsot vagy nem csatlakozik",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a OnlyFans által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nincs hang vagy a hang nincs szinkronban a OnlyFans platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Authorizáció vs Stream Key</h3><p>Két csatlakozási mód: <strong>Authorizáció</strong> (egyszer bejelentkezel, a kulcs lekérve és szinkronizálva — a legkönnyebb út) vagy <strong>Stream Key</strong> (másolod az OBS Keyt OnlyFans → Profile → Settings → Other-ből és beilleszted). Az authorizáció megkíméli a kézi copy-paste-tól.</p></div><div class="tip-card"><h3>Beállítások módosítása a SplitCam elhagyása nélkül</h3><p>Authorizációval a fiók összekapcsolva marad, így az OnlyFans live paramétereit a SplitCamből módosítod adás közben vagy után — az OnlyFans oldalon átmenni nélkül.</p></div><div class="tip-card"><h3>Szerény bitráta</h3><p>Az OnlyFans RTMP ingestje kb. 2500 Kbps-re korlátozza a videó bitrátát — szűkebb, mint a legtöbb cam site. Célozz 720p–1080p-re ~2000–2500-on.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A OnlyFans streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a OnlyFans adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a OnlyFans platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a OnlyFans platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A OnlyFans elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a OnlyFans által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a OnlyFans platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hogyan csatlakoztatom az OnlyFanst a SplitCamhez?</summary><p>Két módon. <strong>Authorizáció</strong> — Stream Settings → Add Channel → OnlyFans → bejelentkezel OnlyFans fiókkal és a SplitCam automatikusan lekéri a kulcsot. Vagy <strong>Stream Key</strong> — másolod az OBS Keyt OnlyFans → Profile → Settings → Other-ből és beilleszted.</p></details><details class="faq-item"><summary>Módosíthatom az OnlyFans live beállításokat az oldal megnyitása nélkül?</summary><p>Igen — Authorizáció módszerrel a SplitCam összekapcsolva marad az OnlyFans fiókoddal, így a kulcs és a beállítások automatikusan szinkronizálnak. Mindent a SplitCamből módosítasz adás közben vagy után, az onlyfans.com meglátogatása nélkül.</p></details><details class="faq-item"><summary>Milyen bitráta az OnlyFanshez?</summary><p>Szerény — az OnlyFans RTMP ingestje kb. 2500 Kbps-re korlátozza a bitrátát, sokkal szűkebb, mint más cam platformok. Célozz 720p–1080p-re 2000–2500 Kbps körül.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam az OnlyFans live-hoz?</summary><p>Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Nincs költség az enkóder oldalán.</p></details></div>

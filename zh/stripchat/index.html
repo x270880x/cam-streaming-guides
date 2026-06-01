@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "zh",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "是 — 无许可费、无水印、无时间限制：即使是长时间的 Stripchat 互动节目，编码器端也没有任何费用。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "您的 Stripchat 直播卡顿或缓冲",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000 Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat 直播期间丢帧",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "丢帧意味着数据包未能及时到达 Stripchat — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黑屏 — 观众在 Stripchat 上看不到视频",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat 拒绝直播密钥或无法连接",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 Stripchat 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat 上没有声音或声音不同步",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>与网站匹配分辨率</h3><p>Stripchat 的 FAQ 警告：您软件中的分辨率必须与网站完全匹配，否则视频会像素化。两者设置相同。</p></div><div class="tip-card"><h3>注意 2 Mbps 最低限</h3><p>Stripchat 将 2 Mbps 上传列为最低 — 并直接表示这对 OBS 直播或多平台直播不够。瞄准更高。</p></div><div class="tip-card"><h3>密钥是令牌</h3><p>Stripchat 的直播密钥是令牌 — 准确复制，永远不要分享，泄露时重置。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 Stripchat 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>Stripchat 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 Stripchat — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 Stripchat 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>Stripchat 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 Stripchat 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>Stripchat 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>Stripchat 推荐 OBS / 外部软件吗？</summary><p>是 — Stripchat 的官方 FAQ 推荐外部广播软件如 OBS「以达到最佳视频和音频质量」。SplitCam 工作相同。</p></details><details class="faq-item"><summary>如何将 Stripchat 切换到外部软件？</summary><p>在 Broadcast Center 选择 Switch to External Broadcast Software (OBS)，然后打开 external software settings 以显示直播密钥（令牌）。</p></details><details class="faq-item"><summary>Stripchat 用什么比特率？</summary><p>RTMP 摄取接受高达约 6,000 Kbps，2 秒关键帧。1080p 下 3,500–6,000 理想 — 但必须远高于 2 Mbps 最低限，特别是 OBS 直播。</p></details><details class="faq-item"><summary>SplitCam 对 Stripchat 免费吗？</summary><p>是 — 无许可费、无水印、无时间限制：即使是长时间的 Stripchat 互动节目，编码器端也没有任何费用。</p></details></div>

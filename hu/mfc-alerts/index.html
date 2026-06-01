@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hu",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Igen — a SplitCam ingyenes, vízjel nélkül és időkorlát nélkül, és az MFC Alerts browser overlay benne fut többletköltség nélkül."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A MFC Alerts streamed akadozik vagy pufferel",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000 Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Eldobott képkockák a MFC Alerts adás közben",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a MFC Alerts platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fekete képernyő — a nézők nem látnak videót a MFC Alerts platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A MFC Alerts elutasítja a stream kulcsot vagy nem csatlakozik",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a MFC Alerts által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nincs hang vagy a hang nincs szinkronban a MFC Alerts platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Az MFC Alerts-nek a webkamera felett kell lennie</h3><p>A leggyakoribb hiba: ha az MFC Alerts réteg a webkamera alatt van a forrás listában, az effektek rejtve maradnak. Mozgasd felfelé.</p></div><div class="tip-card"><h3>Mfcalerts.com fiók szükséges</h3><p>Az alerts URL személyes — regisztrálj az mfcalerts.com-on először, ha nincs fiókod.</p></div><div class="tip-card"><h3>Küldj teszt tipet a live előtt</h3><p>Használd Settings → Send test tip-et, hogy megerősítsd az overlay működését — ne a show közepén fedezd fel a hibát.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A MFC Alerts streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a MFC Alerts adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a MFC Alerts platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a MFC Alerts platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A MFC Alerts elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a MFC Alerts által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a MFC Alerts platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Mi az MFC Alerts?</summary><p>Egy értesítési rendszer a MyFreeCams számára, ami videó effekteket jelenít meg a streamedben, amikor a nézők tipet küldenek — Browser overlayként hozzáadva a SplitCamben.</p></details><details class="faq-item"><summary>Miért nem jelennek meg az MFC Alerts-eim?</summary><p>Szinte mindig a réteg sorrend — az MFC Alerts Browser rétegnek a webkamera felett kell lennie a SplitCam forrás listában.</p></details><details class="faq-item"><summary>Kell-e fiók az MFC Alerts-hez?</summary><p>Igen — regisztrálj az mfcalerts.com-on, hogy megkapd a személyes alerts URL-ed.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam ehhez?</summary><p>Igen — a SplitCam ingyenes, vízjel nélkül és időkorlát nélkül, és az MFC Alerts browser overlay benne fut többletköltség nélkül.</p></details></div>

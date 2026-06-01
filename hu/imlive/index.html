@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hu",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Virtuális kameraként az ImLive-hoz nem ad költséget vagy brandinget a video chatedhez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A ImLive streamed akadozik vagy pufferel",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000 Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Eldobott képkockák a ImLive adás közben",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a ImLive platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fekete képernyő — a nézők nem látnak videót a ImLive platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A ImLive elutasítja a stream kulcsot vagy nem csatlakozik",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a ImLive által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nincs hang vagy a hang nincs szinkronban a ImLive platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Nincs szükség stream key-re</h3><p>Az ImLive nem rendelkezik RTMP-vel — ne keress szerver URL-t vagy kulcsot. A SplitCam csak kamera eszközként van kiválasztva.</p></div><div class="tip-card"><h3>Állítsd be a SplitCamet mikrofonnak is</h3><p>Válaszd a SplitCamet mikrofonnak a kamera mellett, hogy az audio mix és zajszűrés is bejusson a live-ba.</p></div><div class="tip-card"><h3>Építsd fel a jelenetet a live előtt</h3><p>Az ImLive azt jeleníti meg, amit a SplitCam küld — rendezd el a rétegeket a chat indítása előtt.</p></div><div class="tip-card"><h3>Először csinálj privát tesztet</h3><p>Futtass egy rövid teszt-adást a kamerára, hangra, kompozícióra és overlay-ekre, mielőtt a szobát megnyitod a közönségnek.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A ImLive streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a ImLive adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a ImLive platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a ImLive platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A ImLive elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a ImLive által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a ImLive platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Az ImLive RTMP-t vagy stream key-t használ?</summary><p>Nem — az ImLive közvetlenül használja a webkamerát a böngészőn keresztül. A SplitCam virtuális kameraként csatlakozik, nincs kulcs másolásra.</p></details><details class="faq-item"><summary>Hogyan választom ki a SplitCamet az ImLive-on?</summary><p>Start Video Chat → Go To Settings → válaszd a SplitCamet webkameraként és mikrofonként.</p></details><details class="faq-item"><summary>Használhatok overlay-eket az ImLive-on?</summary><p>Igen — a SplitCam jelenetben építed őket; az ImLive az összetett eredményt mutatja.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam az ImLive-hoz?</summary><p>Igen — ingyenes, vízjel nélkül és időkorlát nélkül. Virtuális kameraként az ImLive-hoz nem ad költséget vagy brandinget a video chatedhez.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ja",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "VXModelsの公式ヘルプ記事はウェブカメラの画像アーティファクトとピクセル化を排除し接続を安定させるために特にSplitCamを推奨 — 単なる汎用エンコーダーではない。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VXLive の配信がカクつく・バッファリングする",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000 Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VXLive 配信中のフレーム落ち",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "フレーム落ちはパケットが VXLive に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黒い画面 — VXLive で視聴者に映像が映らない",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VXLive がストリームキーを拒否する・接続しない",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが VXLive の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VXLive で音声がない・音ズレする",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">プロのヒント</h2>
   <div class="tips-grid"><div class="tip-card"><h3>VISIT-Xは統合プリセット</h3><p>生RTMP URLを入力しない — SplitCamのプラットフォームリストにVISIT-Xがある；選択してサーバーURLとキーを貼り付けるだけ。</p></div><div class="tip-card"><h3>2段階のgo-live</h3><p>VXLiveではSplitCamでGo Liveを最初に押し、その後VXLiveでGO ONLINE — この順序で両方。</p></div><div class="tip-card"><h3>ドイツ市場</h3><p>VXLive視聴者は主にドイツ語圏 — ドイツ語のテキストオーバーレイやタイトルは視聴者とのつながりに役立つ。</p></div><div class="tip-card"><h3>有線接続を使用</h3><p>長い配信ではEthernetがWi-Fiに勝つ — 失われたフレームは失われたチップ。配信PCまでケーブルを引きましょう。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">トラブルシューティング</h2><div class="faq-list"><details class="faq-item"><summary>VXLive の配信がカクつく・バッファリングする</summary><p>ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。</p></details><details class="faq-item"><summary>VXLive 配信中のフレーム落ち</summary><p>フレーム落ちはパケットが VXLive に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。</p></details><details class="faq-item"><summary>黒い画面 — VXLive で視聴者に映像が映らない</summary><p>カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。</p></details><details class="faq-item"><summary>VXLive がストリームキーを拒否する・接続しない</summary><p>ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが VXLive の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。</p></details><details class="faq-item"><summary>VXLive で音声がない・音ズレする</summary><p>SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">よくある質問</h2>
   <div class="faq-list"><details class="faq-item"><summary>VXLiveはSplitCamを公式サポート？</summary><p>はい — VXModels（VXLive）はSplitCam設定専用の公式ヘルプ記事を維持し、SplitCamをOBSとXSplitと並んでサポートする配信ソフトウェアとしてリスト。</p></details><details class="faq-item"><summary>SplitCamをVXLiveに接続する方法は？</summary><p>VXLiveで「Stream with third-party software」を選択、その後SplitCamでVISIT-XプリセットとVXLiveが提供するサーバーURLとストリームキーを貼り付け。</p></details><details class="faq-item"><summary>SplitCamまたはVXLiveでライブに行く？</summary><p>両方 — まずSplitCamでGo Live、その後VXLiveでGO ONLINE。</p></details><details class="faq-item"><summary>VXModelsがSplitCamを推奨する理由は？</summary><p>VXModelsの公式ヘルプ記事はウェブカメラの画像アーティファクトとピクセル化を排除し接続を安定させるために特にSplitCamを推奨 — 単なる汎用エンコーダーではない。</p></details></div>

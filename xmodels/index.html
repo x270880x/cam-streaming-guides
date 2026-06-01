@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "en",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "XModels documents no official figure — use 3,500–6,000 Kbps at 1080p and run SplitCam's speed test, since XModels' support is chat and email only."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Your XModels stream lags or buffers",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000 Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames during the XModels broadcast",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames mean packets aren't reaching XModels in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — viewers see no video on XModels",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "XModels rejects the stream key or won't connect",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one XModels shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "No audio or audio is out of sync on XModels",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>It&#x27;s in the account settings</h3><p>XModels puts the external-encoder option inside the model account settings, not a separate broadcast screen.</p></div><div class="tip-card"><h3>Support is chat + email</h3><p>XModels has no large public help center — its FAQ chat on-site and info@xmodels.com are the official support routes.</p></div><div class="tip-card"><h3>Layer overlays in SplitCam</h3><p>Tip goals, your name and socials as scene layers — XModels' basic camera can't add them.</p></div><div class="tip-card"><h3>Run a wired connection</h3><p>XModels support is chat-and-email only — a stable Ethernet link spares you a slow support round-trip if the stream drops.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your XModels stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the XModels broadcast</summary><p>Dropped frames mean packets aren't reaching XModels in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on XModels</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>XModels rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one XModels shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on XModels</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Does XModels support external encoders?</summary><p>Yes — the model account settings include a broadcast-from-external-encoder option that supplies a stream key, so SplitCam works.</p></details><details class="faq-item"><summary>Where do I get help with XModels?</summary><p>XModels support is via its in-site FAQ chat and email at info@xmodels.com — there is no large public help center.</p></details><details class="faq-item"><summary>Is SplitCam free for XModels?</summary><p>Yes — free, no watermark, no time limit, so broadcasting to XModels' European network adds no software cost.</p></details><details class="faq-item"><summary>What bitrate for XModels?</summary><p>XModels documents no official figure — use 3,500–6,000 Kbps at 1080p and run SplitCam's speed test, since XModels' support is chat and email only.</p></details></div>

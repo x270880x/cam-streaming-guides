@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ar",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "أقل من المتوسط — CAM4 ingest يحد عند ~3000 Kbps عند 30 fps مع keyframe 1 ثانية. الجدول الرسمي يوصي بعدم تجاوز ~3000."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "بث CAM4 لديك يتقطع أو يخزّن مؤقتاً",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000 Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "إطارات مفقودة أثناء البث على CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الإطارات المفقودة تعني أن الحزم لا تصل إلى CAM4 في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "شاشة سوداء — المشاهدون لا يرون فيديو على CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CAM4 يرفض مفتاح البث أو لا يتصل",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه CAM4 وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "لا يوجد صوت أو الصوت غير متزامن على CAM4",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">نصائح احترافية</h2>
   <div class="tips-grid"><div class="tip-card"><h3>اضبط القيود الجغرافية</h3><p>CAM4 يسمح بإخفاء البث في دول ومناطق محددة — اضبط على جانب CAM4 قبل البث المباشر.</p></div><div class="tip-card"><h3>راقب الشريط الأخضر</h3><p>إعداد CAM4 يُظهر شريطاً أخضر في Stream Settings SplitCam عند قبول المفتاح — أحمر = تحقق من المفتاح.</p></div><div class="tip-card"><h3>معدل بت أقل من المعتاد</h3><p>CAM4 ingest يحد من معدل بت الفيديو عند حوالي 3000 Kbps — أقل من معظم مواقع cam. لا تدفع أعلى.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث CAM4 لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على CAM4</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى CAM4 في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على CAM4</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>CAM4 يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه CAM4 وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على CAM4</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
   <div class="faq-list"><details class="faq-item"><summary>هل CAM4 يدعم OBS / المُشفِّرات الخارجية رسمياً؟</summary><p>نعم — لدى CAM4 OBS Guide رسمي على موقع الدعم ويوصي بـ External Encoder للحصول على أفضل تجربة. SplitCam يستخدم نفس مسار RTMP.</p></details><details class="faq-item"><summary>هل يمكنني الحجب الجغرافي لبث CAM4؟</summary><p>نعم — لدى CAM4 تقييد جغرافي مدمج لإخفاء البث في بلدان معينة. اضبط في CAM4، ليس في SplitCam.</p></details><details class="faq-item"><summary>أين stream key الخاص بـ CAM4؟</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>ما معدل البت لـ CAM4؟</summary><p>أقل من المتوسط — CAM4 ingest يحد عند ~3000 Kbps عند 30 fps مع keyframe 1 ثانية. الجدول الرسمي يوصي بعدم تجاوز ~3000.</p></details></div>

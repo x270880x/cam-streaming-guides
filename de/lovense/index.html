@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "de",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — die Lovense-Widget-URL als Browser-Layer in SplitCam einfügen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dein Lovense-Stream ruckelt oder puffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000 Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped Frames während der Lovense-Übertragung",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped Frames bedeuten, dass Pakete Lovense nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Schwarzer Bildschirm — Zuschauer sehen kein Video auf Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Lovense lehnt den Stream-Key ab oder verbindet nicht",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Lovense angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kein Ton oder Ton asynchron auf Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Offizielles Lovense SplitCam Toolset nutzen</h3><p>Lovense veröffentlicht ein SplitCam-spezifisches Toolset mit eigener Installationsanleitung — es bringt das Toy-Aktivitäts- und Tipp-Alert-Overlay, das für SplitCam gemacht ist.</p></div><div class="tip-card"><h3>Lovense Cam Extension aktualisieren</h3><p>Das Toolset braucht eine aktuelle Lovense Cam Extension (30.1.4 oder neuer) — vor dem Live-Gehen updaten.</p></div><div class="tip-card"><h3>Toy geladen halten</h3><p>Eine leere Batterie mitten in der Show beendet den interaktiven Teil — vor dem Live-Gehen voll laden.</p></div><div class="tip-card"><h3>Token-Reaktion testen</h3><p>Einen kleinen Test-Tipp senden, um vor dem Öffnen des Raums zu prüfen, dass das Toy reagiert.</p></div><div class="tip-card"><h3>Versionsanforderungen beachten</h3><p>Das Lovense SplitCam Toolset benötigt SplitCam 10.4.5 oder neuer. Die Lovense Cam Extension deckt offiziell Chaturbate, Stripchat, BongaCams, MyFreeCams und CamSoda ab — für andere Seiten Lovenses Generic-URL-Integration nutzen.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein Lovense-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der Lovense-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete Lovense nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf Lovense</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>Lovense lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Lovense angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf Lovense</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Unterstützt Lovense SplitCam offiziell?</summary><p>Ja — Lovense dokumentiert ein offizielles «Lovense SplitCam Toolset» mit eigener Installationsanleitung, und SplitCam liefert ein offizielles Lovense-Plugin. Die Integration wird beidseitig unterstützt.</p></details><details class="faq-item"><summary>Verbindet sich das Toy direkt mit SplitCam?</summary><p>Nein — das Toy koppelt sich mit der Lovense-App; SplitCam zeigt das Lovense-Overlay an und überträgt deine Kamera.</p></details><details class="faq-item"><summary>Welche Cam-Seiten unterstützen Lovense?</summary><p>Lovenses Cam Extension unterstützt offiziell Chaturbate, Stripchat, BongaCams, MyFreeCams und CamSoda, mit unterschiedlicher Unterstützung für andere — aktuelle Liste in der Lovense-App.</p></details><details class="faq-item"><summary>Kann ich aktuelle Tipps am Bildschirm zeigen?</summary><p>Ja — die Lovense-Widget-URL als Browser-Layer in SplitCam einfügen.</p></details></div>

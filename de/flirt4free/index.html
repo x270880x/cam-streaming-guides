@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "de",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit, was zu einer altgedienten Plattform wie Flirt4Free passt, bei der die Shows lang sein können."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dein Flirt4Free-Stream ruckelt oder puffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000 Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped Frames während der Flirt4Free-Übertragung",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped Frames bedeuten, dass Pakete Flirt4Free nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Schwarzer Bildschirm — Zuschauer sehen kein Video auf Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Flirt4Free lehnt den Stream-Key ab oder verbindet nicht",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Flirt4Free angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kein Ton oder Ton asynchron auf Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Stream Name, nicht Key</h3><p>Flirt4Free nennt die Anmeldedaten Stream Name. In SplitCams Stream-Key-Feld einfügen — er erfüllt dieselbe Rolle.</p></div><div class="tip-card"><h3>Auflösung/Bitrate im Formular setzen</h3><p>Das External Broadcast Form von Flirt4Free hat eigene Auflösungs- und Bitrate-Felder — an deine SplitCam-Einstellungen angleichen, damit das Bild nicht skaliert wird.</p></div><div class="tip-card"><h3>Etablierte Plattform</h3><p>Flirt4Free läuft seit den 1990ern — die Model-Tools sind ausgereift und das External Broadcast Form ist ein dokumentierter Teil davon.</p></div><div class="tip-card"><h3>Kabelverbindung</h3><p>Ethernet ist bei langen Streams zuverlässiger als WLAN — ein verlorenes Frame ist ein verlorener Tipp. Zieh ein Kabel zum Streaming-PC.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein Flirt4Free-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der Flirt4Free-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete Flirt4Free nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf Flirt4Free</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>Flirt4Free lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Flirt4Free angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf Flirt4Free</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Unterstützt Flirt4Free externe Encoder?</summary><p>Ja — offiziell, über das External Broadcast Form, das eine RTMP-URL und einen Stream-Namen liefert. SplitCam funktioniert als Encoder.</p></details><details class="faq-item"><summary>Wo bekomme ich die Flirt4Free-RTMP-Daten?</summary><p>Aus dem External Broadcast Form im Modelbereich — es zeigt RTMP-URL, Stream-Namen und Auflösungs-/Bitrate-Felder.</p></details><details class="faq-item"><summary>Welche Bitrate für Flirt4Free?</summary><p>3.500–6.000 Kbps bei 1080p — denselben Wert im External Broadcast Form und in SplitCam setzen.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für Flirt4Free?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit, was zu einer altgedienten Plattform wie Flirt4Free passt, bei der die Shows lang sein können.</p></details></div>

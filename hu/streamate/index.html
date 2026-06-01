@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hu",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Igen — ingyenes, vízjel nélkül és időkorlát nélkül; és mivel a Streamate integrált csatorna a SplitCamben, nincs külön enkóder költség sem."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Streamate streamed akadozik vagy pufferel",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000 Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Eldobott képkockák a Streamate adás közben",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a Streamate platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fekete képernyő — a nézők nem látnak videót a Streamate platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Streamate elutasítja a stream kulcsot vagy nem csatlakozik",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a Streamate által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nincs hang vagy a hang nincs szinkronban a Streamate platformon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>A Streamate integrált</h3><p>Nincs kézi RTMP URL — a SplitCamnek van Streamate-je az Add Channel listában; csak kiválasztod és beilleszted a kulcsot.</p></div><div class="tip-card"><h3>Zárd be az SM Connect popup-ot</h3><p>Start Show után a Streamate megnyit egy ablakot — zárd be; csak a streaming kulcs felfedésére szolgált.</p></div><div class="tip-card"><h3>Rögzítsd a felbontást 1080p-re</h3><p>Az SM Connect Video Resolution mezője csendesen 1440-re ugorhat, ami valójában nem kerül leszállításra és csendesen csökkenti a minőséged — kézzel állítsd 1080p-re. Bitráta, ami csökken statikus képen, normális: a Streamate streamje adaptív.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div><div class="tip-card"><h3>Először csinálj privát tesztet</h3><p>Futtass egy rövid teszt-adást a kamerára, hangra, kompozícióra és overlay-ekre, mielőtt a szobát megnyitod a közönségnek.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A Streamate streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a Streamate adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a Streamate platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a Streamate platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A Streamate elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a Streamate által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a Streamate platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Integrált a Streamate a SplitCamben?</summary><p>Igen — a Streamate megjelenik a SplitCam Add Channel listájában; választod, ahelyett hogy RTMP URL-t gépelnél kézzel.</p></details><details class="faq-item"><summary>Hol a Streamate streaming kulcs?</summary><p>SM Connect → fogadd el a feltételeket → Start Show → zárd be a popupot → másold a kulcsot.</p></details><details class="faq-item"><summary>Milyen bitráta a Streamate-hez?</summary><p>A Streamate nem rögzít kemény plafont — 3500–6000 Kbps 1080p-n jól működik. A stream adaptív, így alacsonyabb bitráta statikus képen normális, nem bug.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a Streamate-hez?</summary><p>Igen — ingyenes, vízjel nélkül és időkorlát nélkül; és mivel a Streamate integrált csatorna a SplitCamben, nincs külön enkóder költség sem.</p></details></div>

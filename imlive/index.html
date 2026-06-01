@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "en",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Yes — build them into the SplitCam scene; ImLive shows the composed result."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Your ImLive stream lags or buffers",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000 Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames during the ImLive broadcast",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames mean packets aren't reaching ImLive in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — viewers see no video on ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive rejects the stream key or won't connect",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one ImLive shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "No audio or audio is out of sync on ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>No stream key needed</h3><p>ImLive has no RTMP — don't look for a server URL or key. SplitCam is just selected as the camera device.</p></div><div class="tip-card"><h3>Set SplitCam as mic too</h3><p>Pick SplitCam for the microphone as well as the camera so your audio mix and noise suppression carry through.</p></div><div class="tip-card"><h3>Build the scene before going live</h3><p>ImLive shows whatever SplitCam outputs — arrange your layers before starting the chat.</p></div><div class="tip-card"><h3>Test the virtual camera first</h3><p>Before starting an ImLive chat, confirm the SplitCam virtual camera works — check it in ImLive's settings preview.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your ImLive stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the ImLive broadcast</summary><p>Dropped frames mean packets aren't reaching ImLive in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on ImLive</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>ImLive rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one ImLive shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on ImLive</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Does ImLive use RTMP or a stream key?</summary><p>No — ImLive uses your webcam directly. SplitCam connects as a virtual camera, so there's no key to copy.</p></details><details class="faq-item"><summary>How do I pick SplitCam on ImLive?</summary><p>Start Video Chat → Go To Settings → choose SplitCam as the webcam and microphone.</p></details><details class="faq-item"><summary>Is SplitCam free for ImLive?</summary><p>Yes — free, no watermark, no time limit. As a virtual camera for ImLive it adds no cost and no branding to your video chat.</p></details><details class="faq-item"><summary>Can I use overlays on ImLive?</summary><p>Yes — build them into the SplitCam scene; ImLive shows the composed result.</p></details></div>

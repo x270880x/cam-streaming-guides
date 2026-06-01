@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "nl",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — gratis, geen watermerk en geen tijdslimiet, dus streamen naar XModels' Europese netwerk voegt geen software-kosten toe."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je XModels-stream hapert of buffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000 Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames tijdens de XModels-uitzending",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames betekenen dat pakketten XModels niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Zwart scherm — kijkers zien geen video op XModels",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "XModels weigert de stream key of maakt geen verbinding",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die XModels toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Geen geluid of geluid loopt niet synchroon op XModels",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Het zit in accountinstellingen</h3><p>XModels plaatst de externe encoder-optie in modelaccountinstellingen, niet op een aparte broadcast-pagina.</p></div><div class="tip-card"><h3>Support: chat + e-mail</h3><p>XModels heeft geen groot publiek help-center — FAQ-chat op de site en info@xmodels.com zijn de officiële supportkanalen.</p></div><div class="tip-card"><h3>Stapel overlays in SplitCam</h3><p>Tip-doelen, naam en social handles als scènelagen — XModels' basiscamera voegt zoiets niet toe.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je XModels-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de XModels-uitzending</summary><p>Dropped frames betekenen dat pakketten XModels niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op XModels</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>XModels weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die XModels toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op XModels</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Ondersteunt XModels externe encoders?</summary><p>Ja — modelaccountinstellingen bevatten een externe-encoder broadcast-optie die een stream key levert, dus SplitCam werkt.</p></details><details class="faq-item"><summary>Waar krijg ik XModels-hulp?</summary><p>XModels' support is via FAQ-chat op de site en info@xmodels.com e-mail — er is geen groot publiek help-center.</p></details><details class="faq-item"><summary>Welke bitrate voor XModels?</summary><p>XModels documenteert geen officieel getal — gebruik 3.500–6.000 Kbps op 1080p en draai SplitCam's snelheidstest, want XModels-support is alleen chat en e-mail.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor XModels?</summary><p>Ja — gratis, geen watermerk en geen tijdslimiet, dus streamen naar XModels' Europese netwerk voegt geen software-kosten toe.</p></details></div>

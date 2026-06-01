@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fil",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oo — libre, walang watermark at walang time limit. Bilang virtual camera para sa ImLive, hindi ito nagdadagdag ng gastos o branding sa video chat mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ang ImLive stream mo ay nag-lalag o nag-bubuffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000 Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames habang nag-bo-broadcast sa ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa ImLive sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — walang nakikitang video ang viewers sa ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tinatanggihan ng ImLive ang stream key o ayaw kumonekta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng ImLive at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Walang audio o hindi sync ang audio sa ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Walang kailangang stream key</h3><p>Walang RTMP ang ImLive — huwag maghanap ng server URL o key. Pinipili lang ang SplitCam bilang camera device.</p></div><div class="tip-card"><h3>I-set din ang SplitCam bilang microphone</h3><p>Piliin ang SplitCam para sa microphone bukod sa camera, para makapasok din ang audio mix at noise suppression sa live.</p></div><div class="tip-card"><h3>Buuin ang scene bago mag-live</h3><p>Pinapakita ng ImLive ang ipinapadala ng SplitCam — ayusin ang layers bago simulan ang chat.</p></div><div class="tip-card"><h3>Gumawa muna ng private test</h3><p>Magpatakbo ng maikling test broadcast para suriin ang camera, audio, framing at overlays bago buksan ang room para sa publiko.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang ImLive stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa ImLive</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa ImLive sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa ImLive</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng ImLive ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng ImLive at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa ImLive</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Gumagamit ba ang ImLive ng RTMP o stream key?</summary><p>Hindi — direktang ginagamit ng ImLive ang webcam sa pamamagitan ng browser. Kumokonekta ang SplitCam bilang virtual camera, walang key na kokopyahin.</p></details><details class="faq-item"><summary>Paano pipiliin ang SplitCam sa ImLive?</summary><p>Start Video Chat → Go To Settings → piliin ang SplitCam bilang webcam at microphone.</p></details><details class="faq-item"><summary>Maaari ba akong gumamit ng overlays sa ImLive?</summary><p>Oo — buuin sa SplitCam scene; pinapakita ng ImLive ang composed result.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa ImLive?</summary><p>Oo — libre, walang watermark at walang time limit. Bilang virtual camera para sa ImLive, hindi ito nagdadagdag ng gastos o branding sa video chat mo.</p></details></div>

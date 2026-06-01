@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "sr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Да — без лиценцне накнаде, без воденог жига, без временског ограничења: чак и дугачки интерактивни Stripchat шоу-и не коштају ништа са стране енкодера."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Твој пренос на Stripchat лагује или баферује",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Готово увек је битрејт виши него што твој аплоуд издржава. Покрени уграђени тест брзине SplitCam-а и постави битрејт на око 75% измереног аплоуда — 3500–6000 Kbps за 1080p, мање за 720p. Лаг нестаје чим енкодер престане да престиже твоју везу."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Изгубљени фрејмови током преноса на Stripchat",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Изгубљени фрејмови значе да пакети не стижу до Stripchat на време — обично нестабилан Wi-Fi. Пређи на кабловску Ethernet везу, затвори апликације које троше проток и мало смањи битрејт. Један скок је у реду; стални пораст значи да веза не може да испрати."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Црн екран — гледаоци не виде видео на Stripchat",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Камера није изабрана као активни извор у SplitCam-у, или је друга апликација држи. Затвори Zoom, Skype или OBS, поново изабери веб камеру у листи извора SplitCam-а и потврди да преглед приказује слику пре него притиснеш Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat одбија стрим кључ или се не повезује",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Поново копирај стрим кључ — сувишан размак или стар, већ ресетован кључ је честа узрок. Потврди да се URL сервера поклапа са оним који приказује Stripchat и да је пренос преко спољног енкодера укључен на налогу. Зелени слајдер у Stream Settings SplitCam-а потврђује важећи кључ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Нема звука или звук није синхронизован на Stripchat",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Изабери SplitCam и као камеру и као микрофон, и постави свој прави микрофон као аудио извор у SplitCam-у. Ако звук касни за видеом, смањи резолуцију за једну степеницу — енкодер је преоптерећен и звук чека закаснеле фрејмове."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Савети</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Усклади резолуцију са сајтом</h3><p>Stripchat FAQ упозорава: резолуција у твом софтверу мора тачно да се поклапа са оном на сајту, иначе видео пикселише. Постави обе једнако.</p></div><div class="tip-card"><h3>Пажња на 2 Mbps минимум</h3><p>Stripchat наводи 2 Mbps аплоуд као минимум — и каже директно да то није довољно за OBS streaming или multistreaming. Циљај много више.</p></div><div class="tip-card"><h3>Кључ је token</h3><p>Stripchat-ов stream key је token — копирај тачно, никад не дели, ресетуј при цурењу.</p></div><div class="tip-card"><h3>Користи каблену везу</h3><p>Етернет туче Wi-Fi у дугом стриму — изгубљени фрејм је изгубљен тип. Провуци кабл до стрим рачунара.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Решавање проблема</h2><div class="faq-list"><details class="faq-item"><summary>Твој пренос на Stripchat лагује или баферује</summary><p>Готово увек је битрејт виши него што твој аплоуд издржава. Покрени уграђени тест брзине SplitCam-а и постави битрејт на око 75% измереног аплоуда — 3500–6000&nbsp;Kbps за 1080p, мање за 720p. Лаг нестаје чим енкодер престане да престиже твоју везу.</p></details><details class="faq-item"><summary>Изгубљени фрејмови током преноса на Stripchat</summary><p>Изгубљени фрејмови значе да пакети не стижу до Stripchat на време — обично нестабилан Wi-Fi. Пређи на кабловску Ethernet везу, затвори апликације које троше проток и мало смањи битрејт. Један скок је у реду; стални пораст значи да веза не може да испрати.</p></details><details class="faq-item"><summary>Црн екран — гледаоци не виде видео на Stripchat</summary><p>Камера није изабрана као активни извор у SplitCam-у, или је друга апликација држи. Затвори Zoom, Skype или OBS, поново изабери веб камеру у листи извора SplitCam-а и потврди да преглед приказује слику пре него притиснеш Go Live.</p></details><details class="faq-item"><summary>Stripchat одбија стрим кључ или се не повезује</summary><p>Поново копирај стрим кључ — сувишан размак или стар, већ ресетован кључ је честа узрок. Потврди да се URL сервера поклапа са оним који приказује Stripchat и да је пренос преко спољног енкодера укључен на налогу. Зелени слајдер у Stream Settings SplitCam-а потврђује важећи кључ.</p></details><details class="faq-item"><summary>Нема звука или звук није синхронизован на Stripchat</summary><p>Изабери SplitCam и као камеру и као микрофон, и постави свој прави микрофон као аудио извор у SplitCam-у. Ако звук касни за видеом, смањи резолуцију за једну степеницу — енкодер је преоптерећен и звук чека закаснеле фрејмове.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Честа питања</h2>
   <div class="faq-list"><details class="faq-item"><summary>Препоручује ли Stripchat OBS / спољни софтвер?</summary><p>Да — Stripchat-ов званични FAQ препоручује спољни broadcast софтвер као OBS «за постизање најбољег видео и аудио квалитета». SplitCam ради на исти начин.</p></details><details class="faq-item"><summary>Како да пребацим Stripchat на спољни софтвер?</summary><p>У Broadcast Center изабери Switch to External Broadcast Software (OBS), затим отвори external software settings да откријеш stream key (token).</p></details><details class="faq-item"><summary>Који битрејт за Stripchat?</summary><p>RTMP ingest прихвата до ~6000 Kbps са 2-секундним keyframe. 3500–6000 на 1080p је идеално — али мораш бити доста изнад 2 Mbps минимума, посебно за OBS streaming.</p></details><details class="faq-item"><summary>Је ли SplitCam бесплатан за Stripchat?</summary><p>Да — без лиценцне накнаде, без воденог жига, без временског ограничења: чак и дугачки интерактивни Stripchat шоу-и не коштају ништа са стране енкодера.</p></details></div>

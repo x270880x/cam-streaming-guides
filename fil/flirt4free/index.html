@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fil",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oo — libre, walang watermark at walang time limit, na bumabagay sa historikal na platform tulad ng Flirt4Free kung saan ang shows ay maaaring mahaba."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ang Flirt4Free stream mo ay nag-lalag o nag-bubuffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000 Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames habang nag-bo-broadcast sa Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Flirt4Free sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — walang nakikitang video ang viewers sa Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tinatanggihan ng Flirt4Free ang stream key o ayaw kumonekta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Flirt4Free at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Walang audio o hindi sync ang audio sa Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Stream Name ito, hindi key</h3><p>Tinatawag ng Flirt4Free ang credential bilang Stream Name. I-paste mo ito sa SplitCam stream key field — parehong tungkulin.</p></div><div class="tip-card"><h3>I-set ang resolution/bitrate sa form</h3><p>Ang External Broadcast Form ng Flirt4Free ay may sariling resolution at bitrate fields — i-align sa SplitCam settings para hindi ma-rescale ang image.</p></div><div class="tip-card"><h3>Historikal na platform</h3><p>Tumatakbo ang Flirt4Free simula noong 90s — mature ang model tools, at ang External Broadcast Form ay documented bahagi nito.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang Flirt4Free stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa Flirt4Free</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Flirt4Free sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa Flirt4Free</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng Flirt4Free ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Flirt4Free at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa Flirt4Free</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng Flirt4Free ang external encoders?</summary><p>Oo — opisyal, sa pamamagitan ng External Broadcast Form, na nagbibigay ng RTMP URL at Stream Name. Gumagana ang SplitCam bilang encoder.</p></details><details class="faq-item"><summary>Saan ako kukuha ng Flirt4Free RTMP data?</summary><p>Mula sa External Broadcast Form sa model area — nagpapakita ng RTMP URL, Stream Name at resolution/bitrate fields.</p></details><details class="faq-item"><summary>Anong bitrate para sa Flirt4Free?</summary><p>3,500–6,000 Kbps sa 1080p — i-set ang parehong halaga sa External Broadcast Form at sa SplitCam.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa Flirt4Free?</summary><p>Oo — libre, walang watermark at walang time limit, na bumabagay sa historikal na platform tulad ng Flirt4Free kung saan ang shows ay maaaring mahaba.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oui — gratuit, sans filigrane, sans limite de temps. Aucun coût côté encodeur."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ton stream OnlyFans rame ou met en mémoire tampon",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000 Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Images perdues pendant la diffusion sur OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les images perdues signifient que les paquets n'atteignent pas OnlyFans à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Écran noir — les spectateurs ne voient pas de vidéo sur OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "OnlyFans refuse la clé de stream ou ne se connecte pas",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par OnlyFans et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pas de son ou son désynchronisé sur OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Astuces</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Autorisation vs Stream Key</h3><p>Deux façons de se connecter : <strong>Autorisation</strong> (se connecter une fois, la clé est récupérée et synchronisée — le plus simple) ou <strong>Stream Key</strong> (copier l'OBS Key depuis OnlyFans → Profile → Settings → Other et la coller). L'autorisation évite le copier-coller manuel.</p></div><div class="tip-card"><h3>Modifier les paramètres sans quitter SplitCam</h3><p>Avec l'autorisation, le compte reste connecté : vous ajustez les paramètres du live OnlyFans depuis SplitCam pendant ou après le stream — sans détour par le site OnlyFans.</p></div><div class="tip-card"><h3>Restez modeste sur le débit</h3><p>L'ingest RTMP d'OnlyFans plafonne le débit vidéo autour de 2 500 Kbps — plus strict que la plupart des sites cam. Visez 720p–1080p à ~2 000–2 500.</p></div><div class="tip-card"><h3>Connexion filaire</h3><p>L'Ethernet est plus fiable que le Wi-Fi pour un long live — une trame perdue, c'est un tip perdu. Tire un câble jusqu'au PC de stream.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Dépannage</h2><div class="faq-list"><details class="faq-item"><summary>Ton stream OnlyFans rame ou met en mémoire tampon</summary><p>La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion.</p></details><details class="faq-item"><summary>Images perdues pendant la diffusion sur OnlyFans</summary><p>Les images perdues signifient que les paquets n'atteignent pas OnlyFans à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas.</p></details><details class="faq-item"><summary>Écran noir — les spectateurs ne voient pas de vidéo sur OnlyFans</summary><p>Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live.</p></details><details class="faq-item"><summary>OnlyFans refuse la clé de stream ou ne se connecte pas</summary><p>Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par OnlyFans et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide.</p></details><details class="faq-item"><summary>Pas de son ou son désynchronisé sur OnlyFans</summary><p>Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Comment connecter OnlyFans à SplitCam ?</summary><p>Deux façons. <strong>Autorisation</strong> — Stream Settings → Add Channel → OnlyFans → se connecter avec son compte OnlyFans, et SplitCam récupère la clé automatiquement. Ou <strong>Stream Key</strong> — copier l'OBS Key depuis OnlyFans → Profile → Settings → Other et la coller.</p></details><details class="faq-item"><summary>Puis-je changer les paramètres du live OnlyFans sans ouvrir le site ?</summary><p>Oui — avec la méthode Autorisation, SplitCam reste connecté à votre compte OnlyFans, donc la clé et les réglages se synchronisent automatiquement. Vous pouvez les modifier dans SplitCam pendant ou après le stream, sans visiter onlyfans.com.</p></details><details class="faq-item"><summary>Quel débit pour OnlyFans ?</summary><p>Restez modeste — l'ingest RTMP d'OnlyFans plafonne le débit vidéo autour de 2 500 Kbps, bien plus strict que la plupart des plateformes cam. Visez 720p–1080p autour de 2 000–2 500 Kbps.</p></details><details class="faq-item"><summary>SplitCam est-il gratuit pour les lives OnlyFans ?</summary><p>Oui — gratuit, sans filigrane, sans limite de temps. Aucun coût côté encodeur.</p></details></div>

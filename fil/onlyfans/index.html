@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fil",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oo — libre, walang watermark at walang time limit. Walang gastos sa encoder side."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ang OnlyFans stream mo ay nag-lalag o nag-bubuffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000 Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames habang nag-bo-broadcast sa OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa OnlyFans sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — walang nakikitang video ang viewers sa OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tinatanggihan ng OnlyFans ang stream key o ayaw kumonekta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng OnlyFans at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Walang audio o hindi sync ang audio sa OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Authorization vs Stream Key</h3><p>Dalawang paraan ng pagkonekta: <strong>Authorization</strong> (mag-log in minsan, kinukuha at sync ang key — pinakamadaling ruta) o <strong>Stream Key</strong> (kopyahin ang OBS Key sa OnlyFans → Profile → Settings → Other at i-paste).</p></div><div class="tip-card"><h3>Baguhin ang settings nang hindi umaalis sa SplitCam</h3><p>Sa authorization manatili ang account na connected, kaya nag-aadjust ng OnlyFans live parameters mula sa SplitCam sa panahon o pagkatapos ng broadcast — nang hindi dumadaan sa OnlyFans site.</p></div><div class="tip-card"><h3>Katamtamang bitrate</h3><p>Nililimitahan ng OnlyFans RTMP ingest ang video bitrate sa mga 2,500 Kbps — mas mahigpit kaysa sa karamihan ng cam sites. Tumira sa 720p–1080p sa ~2,000–2,500.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang OnlyFans stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa OnlyFans</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa OnlyFans sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa OnlyFans</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng OnlyFans ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng OnlyFans at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa OnlyFans</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Paano ko ikokonekta ang OnlyFans sa SplitCam?</summary><p>Sa dalawang paraan. <strong>Authorization</strong> — Stream Settings → Add Channel → OnlyFans → mag-log in gamit ang OnlyFans account at automatic na kinukuha ng SplitCam ang key. O <strong>Stream Key</strong> — kopyahin ang OBS Key sa OnlyFans → Profile → Settings → Other at i-paste.</p></details><details class="faq-item"><summary>Maaari ko bang baguhin ang OnlyFans live settings nang hindi binubuksan ang site?</summary><p>Oo — sa Authorization method ang SplitCam ay nananatiling connected sa OnlyFans account mo, kaya sync ang key at settings automatically.</p></details><details class="faq-item"><summary>Anong bitrate para sa OnlyFans?</summary><p>Katamtaman — nililimitahan ng OnlyFans RTMP ingest ang bitrate sa mga 2,500 Kbps, mas mahigpit kaysa sa ibang cam platforms. Tumira sa 720p–1080p sa paligid ng 2,000–2,500 Kbps.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa OnlyFans live?</summary><p>Oo — libre, walang watermark at walang time limit. Walang gastos sa encoder side.</p></details></div>

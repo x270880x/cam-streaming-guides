@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "en",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "VirtWish publishes no official cap; 3,500–6,000 Kbps at 1080p is a safe range. Match SplitCam's resolution to the one set on VirtWish to avoid rescaling."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Your VirtWish stream lags or buffers",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000 Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames during the VirtWish broadcast",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames mean packets aren't reaching VirtWish in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — viewers see no video on VirtWish",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VirtWish rejects the stream key or won't connect",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one VirtWish shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "No audio or audio is out of sync on VirtWish",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Link is in the first line</h3><p>VirtWish's OBS section puts the stream URL on the first line — copy that into SplitCam's Stream URL, then the key separately.</p></div><div class="tip-card"><h3>Two clicks of Start Broadcast</h3><p>You click Start Broadcast twice on VirtWish to reach the OBS section — that's expected, not a glitch.</p></div><div class="tip-card"><h3>Use a wired connection</h3><p>VirtWish gives a separate URL and key — a wired link avoids a reconnect that would send you back through the two Start Broadcast clicks.</p></div><div class="tip-card"><h3>Test before going live</h3><p>Run a short private VirtWish broadcast to confirm the URL and key landed in the right SplitCam fields.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your VirtWish stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the VirtWish broadcast</summary><p>Dropped frames mean packets aren't reaching VirtWish in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on VirtWish</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>VirtWish rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one VirtWish shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on VirtWish</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Where are the VirtWish RTMP details?</summary><p>Top-right icon → Profile → Start Broadcast twice → the OBS section shows the link and stream key.</p></details><details class="faq-item"><summary>Does VirtWish support external encoders?</summary><p>Yes — its OBS section provides a stream URL and key, so SplitCam works.</p></details><details class="faq-item"><summary>Is SplitCam free for VirtWish?</summary><p>Yes — free, no watermark, no time limit, so VirtWish's stream-URL-and-key setup costs nothing beyond the few minutes it takes.</p></details><details class="faq-item"><summary>What bitrate for VirtWish?</summary><p>VirtWish publishes no official cap; 3,500–6,000 Kbps at 1080p is a safe range. Match SplitCam's resolution to the one set on VirtWish to avoid rescaling.</p></details></div>

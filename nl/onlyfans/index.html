@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "nl",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ja — gratis, geen watermerk en geen tijdslimiet. Geen kosten aan de encoder-kant."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je OnlyFans-stream hapert of buffert",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000 Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames tijdens de OnlyFans-uitzending",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames betekenen dat pakketten OnlyFans niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Zwart scherm — kijkers zien geen video op OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "OnlyFans weigert de stream key of maakt geen verbinding",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die OnlyFans toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Geen geluid of geluid loopt niet synchroon op OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Authorisatie vs Stream Key</h3><p>Twee manieren om te verbinden: <strong>Authorisatie</strong> (één keer inloggen, sleutel wordt opgehaald en gesynchroniseerd — gemakkelijkste route) of <strong>Stream Key</strong> (kopieer de OBS Key op OnlyFans → Profile → Settings → Other en plak). Authorisatie scheelt het handmatige kopiëren.</p></div><div class="tip-card"><h3>Instellingen wijzigen zonder SplitCam te verlaten</h3><p>Met authorisatie blijft je account gekoppeld, dus pas OnlyFans live-parameters aan binnen SplitCam tijdens of na de stream — zonder via de OnlyFans-site te gaan.</p></div><div class="tip-card"><h3>Houd de bitrate bescheiden</h3><p>OnlyFans' RTMP ingest beperkt videobitrate tot ongeveer 2.500 Kbps — krapper dan de meeste cam-sites. Mik op 720p–1080p bij ~2.000–2.500.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je OnlyFans-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de OnlyFans-uitzending</summary><p>Dropped frames betekenen dat pakketten OnlyFans niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op OnlyFans</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>OnlyFans weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die OnlyFans toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op OnlyFans</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hoe verbind ik OnlyFans met SplitCam?</summary><p>Twee manieren. <strong>Authorisatie</strong> — Stream Settings → Add Channel → OnlyFans → inloggen met je OnlyFans-account, SplitCam haalt de sleutel automatisch op. Of <strong>Stream Key</strong> — kopieer de OBS Key op OnlyFans → Profile → Settings → Other en plak.</p></details><details class="faq-item"><summary>Kan ik OnlyFans live-instellingen wijzigen zonder de site te openen?</summary><p>Ja — met de authorisatie-methode blijft SplitCam gekoppeld aan je OnlyFans-account, zodat sleutel en instellingen automatisch synchroniseren. Wijzig alles binnen SplitCam tijdens of na de stream, zonder onlyfans.com te bezoeken.</p></details><details class="faq-item"><summary>Welke bitrate voor OnlyFans?</summary><p>Bescheiden — OnlyFans' RTMP ingest beperkt bitrate tot ongeveer 2.500 Kbps, krapper dan andere cam-platforms. Mik op 720p–1080p rond 2.000–2.500 Kbps.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor OnlyFans live?</summary><p>Ja — gratis, geen watermerk en geen tijdslimiet. Geen kosten aan de encoder-kant.</p></details></div>

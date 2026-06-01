@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ar",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "نعم — مجاني، بدون علامة مائية وبدون حد زمني. ككاميرا افتراضية لـ ImLive لا يضيف تكلفة أو علامة تجارية لمحادثة الفيديو الخاصة بك."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "بث ImLive لديك يتقطع أو يخزّن مؤقتاً",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000 Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "إطارات مفقودة أثناء البث على ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الإطارات المفقودة تعني أن الحزم لا تصل إلى ImLive في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "شاشة سوداء — المشاهدون لا يرون فيديو على ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive يرفض مفتاح البث أو لا يتصل",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه ImLive وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "لا يوجد صوت أو الصوت غير متزامن على ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">نصائح احترافية</h2>
   <div class="tips-grid"><div class="tip-card"><h3>لا حاجة لـ stream key</h3><p>ImLive لا يحتوي على RTMP — لا تبحث عن URL خادم أو مفتاح. SplitCam مختار فقط كجهاز كاميرا.</p></div><div class="tip-card"><h3>اضبط SplitCam كميكروفون أيضاً</h3><p>اختر SplitCam للميكروفون إلى جانب الكاميرا، حتى يدخل مزج الصوت وقمع الضوضاء أيضاً إلى البث المباشر.</p></div><div class="tip-card"><h3>أنشئ المشهد قبل البث المباشر</h3><p>ImLive يعرض ما يرسله SplitCam — رتب الطبقات قبل بدء المحادثة.</p></div><div class="tip-card"><h3>قم باختبار خاص أولاً</h3><p>شغّل بثاً تجريبياً قصيراً للتحقق من الكاميرا والصوت والتأطير والتراكبات قبل فتح الغرفة للجمهور.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث ImLive لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على ImLive</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى ImLive في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على ImLive</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>ImLive يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه ImLive وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على ImLive</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
   <div class="faq-list"><details class="faq-item"><summary>هل ImLive يستخدم RTMP أم stream key؟</summary><p>لا — ImLive يستخدم كاميرا الويب مباشرة عبر المتصفح. SplitCam يتصل ككاميرا افتراضية، لا يوجد مفتاح للنسخ.</p></details><details class="faq-item"><summary>كيف أختار SplitCam على ImLive؟</summary><p>Start Video Chat → Go To Settings → اختر SplitCam ككاميرا ويب وميكروفون.</p></details><details class="faq-item"><summary>هل يمكنني استخدام التراكبات على ImLive؟</summary><p>نعم — أنشئها في مشهد SplitCam؛ ImLive يعرض النتيجة المركبة.</p></details><details class="faq-item"><summary>هل SplitCam مجاني لـ ImLive؟</summary><p>نعم — مجاني، بدون علامة مائية وبدون حد زمني. ككاميرا افتراضية لـ ImLive لا يضيف تكلفة أو علامة تجارية لمحادثة الفيديو الخاصة بك.</p></details></div>

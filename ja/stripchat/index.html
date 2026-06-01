@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ja",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "はい — ライセンス料なし、透かしなし、時間制限なし：長いインタラクティブなStripchatショーでもエンコーダー側で何もコストがない。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat の配信がカクつく・バッファリングする",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000 Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat 配信中のフレーム落ち",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "フレーム落ちはパケットが Stripchat に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黒い画面 — Stripchat で視聴者に映像が映らない",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat がストリームキーを拒否する・接続しない",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが Stripchat の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stripchat で音声がない・音ズレする",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">プロのヒント</h2>
   <div class="tips-grid"><div class="tip-card"><h3>サイトと解像度を一致</h3><p>StripchatのFAQは警告：ソフトウェアの解像度はサイトと正確に一致しないと動画がピクセル化。両方同じに設定。</p></div><div class="tip-card"><h3>2 Mbps最低限に注意</h3><p>Stripchatは2 Mbpsアップロードを最低限と記載 — そしてOBS配信やマルチ配信には不十分と明言。もっと高く狙う。</p></div><div class="tip-card"><h3>キーはトークン</h3><p>Stripchatのストリームキーはトークン — 正確にコピー、共有しない、漏洩したらリセット。</p></div><div class="tip-card"><h3>有線接続を使用</h3><p>長い配信ではEthernetがWi-Fiに勝つ — 失われたフレームは失われたチップ。配信PCまでケーブルを引きましょう。</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">トラブルシューティング</h2><div class="faq-list"><details class="faq-item"><summary>Stripchat の配信がカクつく・バッファリングする</summary><p>ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。</p></details><details class="faq-item"><summary>Stripchat 配信中のフレーム落ち</summary><p>フレーム落ちはパケットが Stripchat に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。</p></details><details class="faq-item"><summary>黒い画面 — Stripchat で視聴者に映像が映らない</summary><p>カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。</p></details><details class="faq-item"><summary>Stripchat がストリームキーを拒否する・接続しない</summary><p>ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが Stripchat の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。</p></details><details class="faq-item"><summary>Stripchat で音声がない・音ズレする</summary><p>SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">よくある質問</h2>
   <div class="faq-list"><details class="faq-item"><summary>StripchatはOBS / 外部ソフトウェアを推奨？</summary><p>はい — Stripchat公式FAQはOBSのような外部ブロードキャストソフトウェアを「最高のビデオ・オーディオ品質を達成するため」推奨。SplitCamも同様に動作。</p></details><details class="faq-item"><summary>Stripchatを外部ソフトウェアに切り替える方法は？</summary><p>Broadcast CenterでSwitch to External Broadcast Software (OBS)を選択、その後external software settingsを開いてストリームキー（トークン）を表示。</p></details><details class="faq-item"><summary>Stripchatのビットレートは？</summary><p>RTMP ingestは2秒キーフレームで~6,000 Kbpsまで受け入れ。1080pで3,500–6,000が理想 — ただし2 Mbps最低限を大きく超える必要があり、特にOBS配信。</p></details><details class="faq-item"><summary>SplitCamはStripchatで無料？</summary><p>はい — ライセンス料なし、透かしなし、時間制限なし：長いインタラクティブなStripchatショーでもエンコーダー側で何もコストがない。</p></details></div>

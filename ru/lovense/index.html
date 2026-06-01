@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ru",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Да — добавьте URL виджета Lovense слоем Browser в SplitCam."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Трансляция на Lovense лагает или буферизует",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Почти всегда битрейт выше, чем тянет ваш аплоад. Запустите встроенный тест скорости SplitCam и выставьте битрейт примерно на 75% от измеренного аплоада — 3500–6000 Кбит/с для 1080p, ниже для 720p. Лаги уходят, как только энкодер перестаёт обгонять соединение."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Потеря кадров во время эфира на Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Потеря кадров значит, что пакеты не доходят до Lovense вовремя — обычно нестабильный Wi-Fi. Перейдите на проводной Ethernet, закройте программы, жрущие канал, и чуть снизьте битрейт. Единичный скачок — норма; устойчивый рост значит, что соединение не справляется."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Чёрный экран — зрители не видят видео на Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Камера не выбрана активным источником в SplitCam, или её держит другая программа. Закройте Zoom, Skype или OBS, выберите веб-камеру заново в списке источников SplitCam и убедитесь, что превью показывает картинку до нажатия Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Lovense не принимает ключ трансляции или не подключается",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Скопируйте ключ заново — обычно причина в лишнем пробеле или старом, уже сброшенном ключе. Проверьте, что URL сервера совпадает с показанным в Lovense и что вещание через внешний энкодер включено на аккаунте. Зелёный слайдер в Настройках трансляции SplitCam подтверждает валидный ключ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Нет звука или звук рассинхронизирован на Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Выберите SplitCam и как камеру, и как микрофон, а внутри SplitCam укажите ваш реальный микрофон источником звука. Если звук отстаёт от видео, снизьте разрешение на ступень — энкодер перегружен и звук ждёт опаздывающие кадры."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Советы</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Используйте официальный Lovense SplitCam Toolset</h3><p>Lovense выпускает отдельный тулсет под SplitCam со своим гайдом установки — он добавляет накладку активности игрушки и алертов о токенах, сделанную для SplitCam.</p></div><div class="tip-card"><h3>Обновите Lovense Cam Extension</h3><p>Тулсету нужен свежий Lovense Cam Extension (30.1.4 или новее) — обновите его до эфира.</p></div><div class="tip-card"><h3>Заряжайте игрушку</h3><p>Севшая посреди эфира батарея убивает интерактив — заряжайте полностью перед эфиром.</p></div><div class="tip-card"><h3>Проверьте реакцию</h3><p>Отправьте небольшой тестовый токен, чтобы убедиться, что игрушка реагирует, до открытия комнаты.</p></div><div class="tip-card"><h3>Учтите требования к версиям</h3><p>Lovense SplitCam Toolset требует SplitCam 10.4.5 или новее. Lovense Cam Extension официально охватывает Chaturbate, Stripchat, BongaCams, MyFreeCams и CamSoda — для любого другого сайта используйте интеграцию Lovense через Generic URL.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Решение проблем</h2><div class="faq-list"><details class="faq-item"><summary>Трансляция на Lovense лагает или буферизует</summary><p>Почти всегда битрейт выше, чем тянет ваш аплоад. Запустите встроенный тест скорости SplitCam и выставьте битрейт примерно на 75% от измеренного аплоада — 3500–6000&nbsp;Кбит/с для 1080p, ниже для 720p. Лаги уходят, как только энкодер перестаёт обгонять соединение.</p></details><details class="faq-item"><summary>Потеря кадров во время эфира на Lovense</summary><p>Потеря кадров значит, что пакеты не доходят до Lovense вовремя — обычно нестабильный Wi-Fi. Перейдите на проводной Ethernet, закройте программы, жрущие канал, и чуть снизьте битрейт. Единичный скачок — норма; устойчивый рост значит, что соединение не справляется.</p></details><details class="faq-item"><summary>Чёрный экран — зрители не видят видео на Lovense</summary><p>Камера не выбрана активным источником в SplitCam, или её держит другая программа. Закройте Zoom, Skype или OBS, выберите веб-камеру заново в списке источников SplitCam и убедитесь, что превью показывает картинку до нажатия Go Live.</p></details><details class="faq-item"><summary>Lovense не принимает ключ трансляции или не подключается</summary><p>Скопируйте ключ заново — обычно причина в лишнем пробеле или старом, уже сброшенном ключе. Проверьте, что URL сервера совпадает с показанным в Lovense и что вещание через внешний энкодер включено на аккаунте. Зелёный слайдер в Настройках трансляции SplitCam подтверждает валидный ключ.</p></details><details class="faq-item"><summary>Нет звука или звук рассинхронизирован на Lovense</summary><p>Выберите SplitCam и как камеру, и как микрофон, а внутри SplitCam укажите ваш реальный микрофон источником звука. Если звук отстаёт от видео, снизьте разрешение на ступень — энкодер перегружен и звук ждёт опаздывающие кадры.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Вопросы и ответы</h2>
   <div class="faq-list"><details class="faq-item"><summary>Lovense официально поддерживает SplitCam?</summary><p>Да — у Lovense есть официальный «Lovense SplitCam Toolset» со своим гайдом установки, а в SplitCam есть официальный плагин Lovense. Интеграция поддержана с обеих сторон.</p></details><details class="faq-item"><summary>Игрушка подключается прямо к SplitCam?</summary><p>Нет — игрушка подключается к приложению Lovense; SplitCam показывает накладку Lovense и вещает камеру.</p></details><details class="faq-item"><summary>Какие кам-сайты поддерживают Lovense?</summary><p>Cam Extension Lovense официально поддерживает Chaturbate, Stripchat, BongaCams, MyFreeCams и CamSoda, с разной поддержкой прочих — актуальный список в приложении Lovense.</p></details><details class="faq-item"><summary>Можно показывать недавние чаевые на экране?</summary><p>Да — добавьте URL виджета Lovense слоем Browser в SplitCam.</p></details></div>

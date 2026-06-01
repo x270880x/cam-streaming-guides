@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "bg",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Да — безплатен, без воден знак и без времево ограничение, което съвпада с историческа платформа като Flirt4Free, където шоутата могат да са дълги."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Излъчването на Flirt4Free лагва или буферира",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000 Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Изпуснати кадри по време на излъчване на Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Изпуснатите кадри значат, че пакетите не стигат до Flirt4Free навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Черен екран — зрителите не виждат видео на Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Flirt4Free отхвърля стрийм ключа или не се свързва",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от Flirt4Free и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Няма звук или звукът е разсинхронизиран на Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Съвети</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Stream Name, не ключ</h3><p>Flirt4Free нарича удостоверението Stream Name. Поставяш го в полето stream key на SplitCam — играе същата роля.</p></div><div class="tip-card"><h3>Задай резолюция/битрейт във формуляра</h3><p>External Broadcast Form на Flirt4Free има собствени полета за резолюция и битрейт — изравни с настройките на SplitCam, за да не се прави rescaling на образа.</p></div><div class="tip-card"><h3>Историческа платформа</h3><p>Flirt4Free работи от 90-те — модел инструментите са зрели и External Broadcast Form е документирана част от тях.</p></div><div class="tip-card"><h3>Използвай кабелна връзка</h3><p>Ethernet бие Wi-Fi в дълъг стрийм — загубен кадър е загубен тип. Прокарай кабел до стрийм компютъра.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на Flirt4Free лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на Flirt4Free</summary><p>Изпуснатите кадри значат, че пакетите не стигат до Flirt4Free навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на Flirt4Free</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>Flirt4Free отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от Flirt4Free и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на Flirt4Free</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Често задавани въпроси</h2>
   <div class="faq-list"><details class="faq-item"><summary>Поддържа ли Flirt4Free външни енкодери?</summary><p>Да — официално, чрез External Broadcast Form, която предоставя RTMP URL и Stream Name. SplitCam работи като енкодер.</p></details><details class="faq-item"><summary>Откъде вземам RTMP данните на Flirt4Free?</summary><p>От External Broadcast Form в модел зоната — показва RTMP URL, Stream Name и полета за резолюция/битрейт.</p></details><details class="faq-item"><summary>Какъв битрейт за Flirt4Free?</summary><p>3500–6000 Kbps на 1080p — задай същата стойност в External Broadcast Form и в SplitCam.</p></details><details class="faq-item"><summary>SplitCam безплатен ли е за Flirt4Free?</summary><p>Да — безплатен, без воден знак и без времево ограничение, което съвпада с историческа платформа като Flirt4Free, където шоутата могат да са дълги.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "es",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Streamate no fija un techo duro — 3.500–6.000 Kbps a 1080p funciona bien. El feed es adaptativo, así que un bitrate más bajo en una imagen fija es normal, no un fallo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tu emisión en Streamate va con lag o se entrecorta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000 Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fotogramas perdidos durante la emisión en Streamate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Los fotogramas perdidos significan que los paquetes no llegan a tiempo a Streamate — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pantalla negra — los espectadores no ven vídeo en Streamate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Streamate rechaza la clave de stream o no conecta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra Streamate y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sin audio o audio desincronizado en Streamate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Consejos</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Streamate es un canal integrado</h3><p>No necesitas una URL RTMP manual — SplitCam tiene Streamate en su lista Add Channel, solo selecciónalo y pega la clave.</p></div><div class="tip-card"><h3>Cierra la ventana de SM Connect</h3><p>Tras Start Show, Streamate abre una ventana — ciérrala; solo la necesitabas para ver la clave.</p></div><div class="tip-card"><h3>Fija la resolución en 1080p</h3><p>El campo Video Resolution de SM Connect puede saltar a 1440, que en realidad no se entrega y baja tu calidad sin avisar — ponlo en 1080p a mano. Que el bitrate caiga en una imagen fija es normal: el feed de Streamate es adaptativo.</p></div><div class="tip-card"><h3>Usa conexión por cable</h3><p>El feed de Streamate ya baja el bitrate bajo presión — no añadas encima la inestabilidad del Wi-Fi; lleva un cable Ethernet.</p></div><div class="tip-card"><h3>Prueba primero con SM Connect</h3><p>Inicia un show privado corto vía SM Connect para confirmar el slider verde y tu escena antes de salir en público.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Solución de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Tu emisión en Streamate va con lag o se entrecorta</summary><p>Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000&nbsp;Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión.</p></details><details class="faq-item"><summary>Fotogramas perdidos durante la emisión en Streamate</summary><p>Los fotogramas perdidos significan que los paquetes no llegan a tiempo a Streamate — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto.</p></details><details class="faq-item"><summary>Pantalla negra — los espectadores no ven vídeo en Streamate</summary><p>Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live.</p></details><details class="faq-item"><summary>Streamate rechaza la clave de stream o no conecta</summary><p>Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra Streamate y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida.</p></details><details class="faq-item"><summary>Sin audio o audio desincronizado en Streamate</summary><p>Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Preguntas frecuentes</h2>
   <div class="faq-list"><details class="faq-item"><summary>¿Streamate está integrado en SplitCam?</summary><p>Sí — Streamate aparece en la lista Add Channel de SplitCam, lo seleccionas en vez de escribir una URL RTMP.</p></details><details class="faq-item"><summary>¿Dónde está la clave de stream de Streamate?</summary><p>SM Connect → aceptar términos → Start Show → cerrar la ventana → copiar la clave.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para Streamate?</summary><p>Sí — gratis, sin marca de agua ni límite de tiempo; y como Streamate es un canal integrado de SplitCam, tampoco hay coste de codificador aparte.</p></details><details class="faq-item"><summary>¿Qué bitrate para Streamate?</summary><p>Streamate no fija un techo duro — 3.500–6.000 Kbps a 1080p funciona bien. El feed es adaptativo, así que un bitrate más bajo en una imagen fija es normal, no un fallo.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "el",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, οπότε ένα πλήρες show SoulCams με multi-camera σκηνές και overlays δεν κοστίζει τίποτα από την πλευρά του encoder."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Το stream σου στο SoulCams κολλάει ή κάνει buffering",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000 Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Χαμένα frames κατά τη μετάδοση στο SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο SoulCams εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Το SoulCams απορρίπτει το stream key ή δεν συνδέεται",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το SoulCams και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Συμβουλές</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Server και κλειδί δίπλα-δίπλα</h3><p>Το SoulCams δείχνει RTMP server και κλειδί στο ίδιο παράθυρο OBS — τα παίρνεις και τα δύο μονομιάς.</p></div><div class="tip-card"><h3>Πρώτα Go Online</h3><p>Οι ρυθμίσεις OBS εμφανίζονται μόνο αφού κάνεις κλικ Go Online στο SoulCams — κάν' το πριν ψάξεις για τα δεδομένα encoder.</p></div><div class="tip-card"><h3>Φράξε ανεπιθύμητες περιοχές</h3><p>Το SoulCams επιτρέπει γεω-φραγή από την πλευρά του μοντέλου — επίλεξε ποιες χώρες δεν μπορούν να δουν τη μετάδοση πριν πατήσεις Go Online.</p></div><div class="tip-card"><h3>Χρησιμοποίησε ενσύρματη σύνδεση</h3><p>Το Ethernet νικάει το Wi-Fi σε ένα μακρύ stream — ένα χαμένο frame είναι ένα χαμένο tip. Τράβα καλώδιο στο stream PC.</p></div><div class="tip-card"><h3>Κάνε πρώτα ιδιωτικό τεστ</h3><p>Τρέξε μια σύντομη δοκιμαστική μετάδοση για κάμερα, ήχο, καδράρισμα και overlays πριν ανοίξεις τη room στο κοινό.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Αντιμετώπιση προβλημάτων</h2><div class="faq-list"><details class="faq-item"><summary>Το stream σου στο SoulCams κολλάει ή κάνει buffering</summary><p>Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000&nbsp;Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου.</p></details><details class="faq-item"><summary>Χαμένα frames κατά τη μετάδοση στο SoulCams</summary><p>Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο SoulCams εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει.</p></details><details class="faq-item"><summary>Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο SoulCams</summary><p>Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live.</p></details><details class="faq-item"><summary>Το SoulCams απορρίπτει το stream key ή δεν συνδέεται</summary><p>Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το SoulCams και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key.</p></details><details class="faq-item"><summary>Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο SoulCams</summary><p>Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Συχνές ερωτήσεις</h2>
   <div class="faq-list"><details class="faq-item"><summary>Πού είναι οι ρυθμίσεις OBS του SoulCams;</summary><p>Συνδέσου, κλικ Go Online, μετά Settings → OBS — RTMP server και stream key εμφανίζονται μαζί.</p></details><details class="faq-item"><summary>Υποστηρίζει το SoulCams εξωτερικούς encoders;</summary><p>Ναι — οι ρυθμίσεις OBS δίνουν RTMP server και κλειδί, οπότε ο SplitCam δουλεύει.</p></details><details class="faq-item"><summary>Τι bitrate για SoulCams;</summary><p>Το SoulCams δεν δίνει επίσημο αριθμό — στόχευσε 3.500–6.000 Kbps στα 1080p και δοκίμασε το upload, καθώς το παράθυρο OBS δεν δείχνει οδηγία bitrate.</p></details><details class="faq-item"><summary>Είναι ο SplitCam δωρεάν για SoulCams;</summary><p>Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο, οπότε ένα πλήρες show SoulCams με multi-camera σκηνές και overlays δεν κοστίζει τίποτα από την πλευρά του encoder.</p></details></div>

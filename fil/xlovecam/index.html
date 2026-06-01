@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fil",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Oo — libre, walang watermark at walang time limit. Walang gastos sa software para abutin ang multilingual European audience ng XLoveCam."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ang XLoveCam stream mo ay nag-lalag o nag-bubuffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000 Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames habang nag-bo-broadcast sa XLoveCam",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa XLoveCam sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — walang nakikitang video ang viewers sa XLoveCam",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tinatanggihan ng XLoveCam ang stream key o ayaw kumonekta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng XLoveCam at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Walang audio o hindi sync ang audio sa XLoveCam",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Kopyahin ang link AT key</h3><p>Nagbibigay ang XLoveCam ng RTMP link AT separate stream key — kailangan mo pareho sa SplitCam, hindi lang isa.</p></div><div class="tip-card"><h3>Multilingual audience</h3><p>European at multilingual ang XLoveCam — malinaw na text overlay sa wika mo ay tumutulong sa mga viewers na mahanap ka.</p></div><div class="tip-card"><h3>Piliin ang pinakamalapit na server</h3><p>Nag-aalok ang XLoveCam ng regional RTMP servers — Europe, North America, South America at Asia. Ang pinakamalapit ay nagbabawas ng latency at dropped frames.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang XLoveCam stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa XLoveCam</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa XLoveCam sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa XLoveCam</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng XLoveCam ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng XLoveCam at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa XLoveCam</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Saan ang XLoveCam RTMP data?</summary><p>My Account → settings — nagpapakita ng parehong RTMP link at key.</p></details><details class="faq-item"><summary>Sinusuportahan ba ng XLoveCam ang external encoders?</summary><p>Oo — nagbibigay ito ng RTMP link at key, kaya gumagana ang SplitCam bilang encoder.</p></details><details class="faq-item"><summary>Anong bitrate para sa XLoveCam?</summary><p>Hindi naglalathala ng fixed limit ang XLoveCam; 3,500–6,000 Kbps sa 1080p ang ideal. Ang pagpili ng pinakamalapit na regional server ay pantay-pantay ang importansya — nagbabawas ng dropped frames.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa XLoveCam?</summary><p>Oo — libre, walang watermark at walang time limit. Walang gastos sa software para abutin ang multilingual European audience ng XLoveCam.</p></details></div>

@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "el",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ναι — εντελώς δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο: ο encoder δεν τρώει από τα κέρδη σου σε tokens."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Το stream σου στο Chaturbate κολλάει ή κάνει buffering",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000 Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Χαμένα frames κατά τη μετάδοση στο Chaturbate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο Chaturbate εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο Chaturbate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Το Chaturbate απορρίπτει το stream key ή δεν συνδέεται",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το Chaturbate και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο Chaturbate",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Συμβουλές</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Το token είναι το κλειδί</h3><p>Το Chaturbate χρησιμοποιεί το broadcast token σου αντί για γενικό stream key. Αντιμετώπισέ το σαν password και κάνε reset αν διαρρεύσει.</p></div><div class="tip-card"><h3>Πολλά περιθώρια</h3><p>Το RTMP ingest του Chaturbate δέχεται έως 4K, 60 fps και υψηλό bitrate — το όριο είναι το upload σου, όχι η πλατφόρμα. Keyframe ανά 2 δευτερόλεπτα.</p></div><div class="tip-card"><h3>Χρησιμοποίησε ενσύρματη σύνδεση</h3><p>Το Ethernet νικάει το Wi-Fi σε ένα μακρύ stream — ένα χαμένο frame είναι ένα χαμένο tip. Τράβα καλώδιο στο stream PC.</p></div><div class="tip-card"><h3>Κάνε πρώτα ιδιωτικό τεστ</h3><p>Τρέξε μια σύντομη δοκιμαστική μετάδοση για κάμερα, ήχο, καδράρισμα και overlays πριν ανοίξεις τη room στο κοινό.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Αντιμετώπιση προβλημάτων</h2><div class="faq-list"><details class="faq-item"><summary>Το stream σου στο Chaturbate κολλάει ή κάνει buffering</summary><p>Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000&nbsp;Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου.</p></details><details class="faq-item"><summary>Χαμένα frames κατά τη μετάδοση στο Chaturbate</summary><p>Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο Chaturbate εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει.</p></details><details class="faq-item"><summary>Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο Chaturbate</summary><p>Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live.</p></details><details class="faq-item"><summary>Το Chaturbate απορρίπτει το stream key ή δεν συνδέεται</summary><p>Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το Chaturbate και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key.</p></details><details class="faq-item"><summary>Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο Chaturbate</summary><p>Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Συχνές ερωτήσεις</h2>
   <div class="faq-list"><details class="faq-item"><summary>Επιτρέπει το Chaturbate OBS / εξωτερικούς encoders;</summary><p>Ναι — το Chaturbate υποστηρίζει εξωτερικούς encoders επίσημα με δικό του άρθρο «How do I set up OBS?». Ενεργοποίηση μέσω «Use External Encoder to Broadcast» στις ρυθμίσεις μετάδοσης.</p></details><details class="faq-item"><summary>Πού είναι το Chaturbate stream key μου;</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Το κλειδί είναι το broadcast token.</p></details><details class="faq-item"><summary>Τι bitrate για Chaturbate;</summary><p>3.500–6.000 Kbps στα 1080p αρκούν. Το ταβάνι του Chaturbate είναι υψηλό — το πραγματικό όριο είναι το upload· τρέξε πρώτα το ενσωματωμένο speed test του SplitCam.</p></details><details class="faq-item"><summary>Είναι ο SplitCam δωρεάν για Chaturbate;</summary><p>Ναι — εντελώς δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο: ο encoder δεν τρώει από τα κέρδη σου σε tokens.</p></details></div>

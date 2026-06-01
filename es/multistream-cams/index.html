@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "es",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "La codificación se hace una vez y se reutiliza; la codificación por hardware mantiene baja la carga de CPU."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tu emisión en Multiple Cam Sites va con lag o se entrecorta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000 Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fotogramas perdidos durante la emisión en Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Los fotogramas perdidos significan que los paquetes no llegan a tiempo a Multiple Cam Sites — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pantalla negra — los espectadores no ven vídeo en Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Multiple Cam Sites rechaza la clave de stream o no conecta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra Multiple Cam Sites y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sin audio o audio desincronizado en Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Consejos</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Cuida tu subida</h3><p>La multiemisión multiplica la carga de subida. Cada destino consume su propio bitrate — asegúrate de que tu conexión soporta el total.</p></div><div class="tip-card"><h3>Revisa las reglas de cada sitio</h3><p>Algunos sitios cam restringen emitir a la vez en otro lado — confírmalo antes de multiemitir.</p></div><div class="tip-card"><h3>Por cable — aquí no puedes permitirte una caída</h3><p>La multiemisión multiplica la carga de subida, así que un solo bajón de Wi-Fi puede parar todos los destinos a la vez. La conexión por cable no es opcional aquí.</p></div><div class="tip-card"><h3>Monitor de estado</h3><p>SplitCam muestra el estado por destino — quita un sitio si tu subida no da abasto.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Solución de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Tu emisión en Multiple Cam Sites va con lag o se entrecorta</summary><p>Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000&nbsp;Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión.</p></details><details class="faq-item"><summary>Fotogramas perdidos durante la emisión en Multiple Cam Sites</summary><p>Los fotogramas perdidos significan que los paquetes no llegan a tiempo a Multiple Cam Sites — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto.</p></details><details class="faq-item"><summary>Pantalla negra — los espectadores no ven vídeo en Multiple Cam Sites</summary><p>Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live.</p></details><details class="faq-item"><summary>Multiple Cam Sites rechaza la clave de stream o no conecta</summary><p>Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra Multiple Cam Sites y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida.</p></details><details class="faq-item"><summary>Sin audio o audio desincronizado en Multiple Cam Sites</summary><p>Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Preguntas frecuentes</h2>
   <div class="faq-list"><details class="faq-item"><summary>¿La multiemisión es gratis en SplitCam?</summary><p>Sí — la multiemisión está integrada y es gratis, sin coste por destino ni marca de agua.</p></details><details class="faq-item"><summary>¿A cuántos sitios cam puedo emitir a la vez?</summary><p>A tantos como soporte tu ancho de banda de subida — cada destino consume su propio bitrate.</p></details><details class="faq-item"><summary>¿Usa un relé en la nube?</summary><p>No — SplitCam envía los streams peer-to-peer directamente desde tu PC al servidor de cada plataforma.</p></details><details class="faq-item"><summary>¿La multiemisión ralentiza mi PC?</summary><p>La codificación se hace una vez y se reutiliza; la codificación por hardware mantiene baja la carga de CPU.</p></details></div>

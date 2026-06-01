@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "en",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -162,6 +162,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "VXModels' official help article recommends SplitCam specifically to clear up webcam image artifacts and pixelation and to stabilise the connection — not just as a generic encoder."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Your VXLive stream lags or buffers",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000 Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames during the VXLive broadcast",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dropped frames mean packets aren't reaching VXLive in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — viewers see no video on VXLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VXLive rejects the stream key or won't connect",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one VXLive shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "No audio or audio is out of sync on VXLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames."
      }
     }
    ]
@@ -429,6 +469,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>VISIT-X is a built-in preset</h3><p>You don't enter a raw RTMP URL — SplitCam has VISIT-X in its platform list, so select it and just paste the server URL and key.</p></div><div class="tip-card"><h3>Two-step go-live</h3><p>On VXLive you press Go Live in SplitCam first, then GO ONLINE in VXLive — both, in that order.</p></div><div class="tip-card"><h3>German-market platform</h3><p>VXLive's audience is largely German-speaking — a German text overlay or title helps you connect with viewers.</p></div><div class="tip-card"><h3>Use a wired connection</h3><p>VXLive's two-step go-live means a mid-show drop costs you both reconnections — a wired link makes that far less likely.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your VXLive stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the VXLive broadcast</summary><p>Dropped frames mean packets aren't reaching VXLive in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on VXLive</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>VXLive rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one VXLive shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on VXLive</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Does VXLive officially support SplitCam?</summary><p>Yes — VXModels (VXLive) has a dedicated official help article on setting up SplitCam, and lists SplitCam alongside OBS and XSplit as supported broadcasting software.</p></details><details class="faq-item"><summary>How do I connect SplitCam to VXLive?</summary><p>In VXLive choose "Stream with third-party software", then in SplitCam select the VISIT-X preset and paste the server URL and stream key VXLive gives you.</p></details><details class="faq-item"><summary>Do I go live in SplitCam or VXLive?</summary><p>Both — press Go Live in SplitCam first, then GO ONLINE in VXLive.</p></details><details class="faq-item"><summary>Is SplitCam free for VXLive?</summary><p>Yes — free, no watermark, no time limit. VXModels lists SplitCam as supported software, so it is both free and officially recognised.</p></details><details class="faq-item"><summary>Why does VXModels recommend SplitCam?</summary><p>VXModels' official help article recommends SplitCam specifically to clear up webcam image artifacts and pixelation and to stabilise the connection — not just as a generic encoder.</p></details></div>

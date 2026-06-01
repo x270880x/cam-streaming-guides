@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fil",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Ginagawa nang minsan ang encoding at na-reuse; pinananatiling mababa ng hardware encoding ang CPU load. Ang upload bandwidth ang totoong limit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ang Multiple Cam Sites stream mo ay nag-lalag o nag-bubuffer",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000 Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dropped frames habang nag-bo-broadcast sa Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Multiple Cam Sites sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Black screen — walang nakikitang video ang viewers sa Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tinatanggihan ng Multiple Cam Sites ang stream key o ayaw kumonekta",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Multiple Cam Sites at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Walang audio o hindi sync ang audio sa Multiple Cam Sites",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Bantayan ang upload mo</h3><p>Pinaparami ng multistreaming ang upload load. Ang bawat destination ay gumagamit ng sariling bitrate — siguraduhing kaya ng koneksyon mo ang kabuuan.</p></div><div class="tip-card"><h3>Suriin ang patakaran ng platform</h3><p>Ang ilang cam sites ay nagbabawal ng sabay-sabay na broadcasting sa ibang lugar — kumpirmahin bago mag-multistream.</p></div><div class="tip-card"><h3>Cable — hindi mo kayang tiisin ang drops dito</h3><p>Pinaparami ng multistreaming ang upload load, kaya ang isang wi-fi drop ay maaaring pumatay sa lahat ng destinations nang sabay-sabay. Hindi opsyonal ang cable dito.</p></div><div class="tip-card"><h3>Bantayan ang health monitor</h3><p>Pinapakita ng SplitCam ang status sa bawat destination — i-drop ang isang site kung hindi kaya ng upload.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang Multiple Cam Sites stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa Multiple Cam Sites</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Multiple Cam Sites sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa Multiple Cam Sites</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng Multiple Cam Sites ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Multiple Cam Sites at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa Multiple Cam Sites</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Libre ba ang SplitCam multistreaming?</summary><p>Oo — built-in at libre ang multistreaming, walang per-destination fee, walang watermark.</p></details><details class="faq-item"><summary>Ilang cam sites ang puwede kong i-broadcast nang sabay-sabay?</summary><p>Kasingdami ng kaya ng upload bandwidth mo — ang bawat destination ay gumagamit ng sariling bitrate.</p></details><details class="faq-item"><summary>Gumagamit ba ito ng cloud relay?</summary><p>Hindi — nagpapadala ang SplitCam ng streams peer-to-peer direkta mula sa PC patungo sa ingest ng bawat platform.</p></details><details class="faq-item"><summary>Pinabagal ba ng multistreaming ang PC ko?</summary><p>Ginagawa nang minsan ang encoding at na-reuse; pinananatiling mababa ng hardware encoding ang CPU load. Ang upload bandwidth ang totoong limit.</p></details></div>

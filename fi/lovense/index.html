@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fi",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Kyllä — lisää Lovensen widget-URL Browser-kerroksena SplitCamiin."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Lovense-striimisi pätkii tai puskuroi",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000 Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pudonneita ruutuja Lovense-lähetyksen aikana",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle Lovense ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Musta ruutu — katsojat eivät näe videota alustalla Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Lovense hylkää striimiavaimen tai ei yhdistä",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan Lovense näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ei ääntä tai ääni ei ole synkassa alustalla Lovense",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Käytä virallista Lovense SplitCam Toolsetia</h3><p>Lovense julkaisee SplitCam-spesifisen toolsetin omalla asennusohjeellaan — se lisää lelun aktiivisuus-overlayn ja SplitCamille tehdyt tip-alertit.</p></div><div class="tip-card"><h3>Päivitä Lovense Cam Extension</h3><p>Toolset vaatii tuoreen Lovense Cam Extensionin (30.1.4 tai uudempi) — päivitä ennen liveä.</p></div><div class="tip-card"><h3>Pidä lelu ladattuna</h3><p>Lähes tyhjä akku show:n keskellä tappaa interaktiivisen puolen — lataa täyteen ennen liveä.</p></div><div class="tip-card"><h3>Testaa reaktio tokeneihin</h3><p>Lähetä pieni testi-tip vahvistaaksesi, että lelu reagoi, ennen huoneen avaamista.</p></div><div class="tip-card"><h3>Tarkista versiovaatimukset</h3><p>Lovense SplitCam Toolset vaatii SplitCam 10.4.5:n tai uudemman. Lovense Cam Extension kattaa virallisesti Chaturbaten, Stripchatin, BongaCamsin, MyFreeCamsin ja CamSoda:n — muiden sivustojen kohdalla käytä Lovensen Generic URL -integraatiota.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>Lovense-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja Lovense-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle Lovense ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla Lovense</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>Lovense hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan Lovense näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla Lovense</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Tukeeko Lovense SplitCamia virallisesti?</summary><p>Kyllä — Lovense dokumentoi virallisen «Lovense SplitCam Toolsetin» omalla asennusohjeellaan, ja SplitCam tarjoaa virallisen Lovense-pluginin. Integraatio on tuettu molemmilta puolilta.</p></details><details class="faq-item"><summary>Yhdistyykö lelu suoraan SplitCamiin?</summary><p>Ei — lelu paritetaan Lovense-appin kanssa; SplitCam näyttää Lovense-overlayn ja lähettää kameran.</p></details><details class="faq-item"><summary>Mitkä cam-sivut tukevat Lovenseä?</summary><p>Lovense Cam Extension tukee virallisesti Chaturbatea, Stripchatia, BongaCamsia, MyFreeCamsia ja CamSoda:ta, vaihtelevalla tuella muille — tarkista nykyinen lista Lovense-appista.</p></details><details class="faq-item"><summary>Voinko näyttää viimeisimmät tipit ruudulla?</summary><p>Kyllä — lisää Lovensen widget-URL Browser-kerroksena SplitCamiin.</p></details></div>

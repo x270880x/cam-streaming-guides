@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ar",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "نعم — مجاني، بدون علامة مائية وبدون حد زمني، لذا عرض SoulCams كامل بمشاهد متعددة الكاميرات وتراكبات لا يكلف شيئاً على جانب المُشفِّر."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "بث SoulCams لديك يتقطع أو يخزّن مؤقتاً",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000 Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "إطارات مفقودة أثناء البث على SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الإطارات المفقودة تعني أن الحزم لا تصل إلى SoulCams في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "شاشة سوداء — المشاهدون لا يرون فيديو على SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SoulCams يرفض مفتاح البث أو لا يتصل",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه SoulCams وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "لا يوجد صوت أو الصوت غير متزامن على SoulCams",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">نصائح احترافية</h2>
   <div class="tips-grid"><div class="tip-card"><h3>الخادم والمفتاح جنباً إلى جنب</h3><p>SoulCams يعرض خادم RTMP والمفتاح في نفس نافذة OBS — تأخذ كليهما في خطوة واحدة.</p></div><div class="tip-card"><h3>Go Online أولاً</h3><p>تظهر إعدادات OBS فقط بعد النقر على Go Online في SoulCams — افعل ذلك قبل البحث عن بيانات المُشفِّر.</p></div><div class="tip-card"><h3>احجب المناطق غير المرغوب فيها</h3><p>SoulCams يسمح بالحجب الجغرافي من جانب العارضة — اختر البلدان التي لا يمكنها رؤية البث قبل الضغط على Go Online.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div><div class="tip-card"><h3>قم باختبار خاص أولاً</h3><p>شغّل بثاً تجريبياً قصيراً للتحقق من الكاميرا والصوت والتأطير والتراكبات قبل فتح الغرفة للجمهور.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث SoulCams لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على SoulCams</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى SoulCams في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على SoulCams</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>SoulCams يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه SoulCams وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على SoulCams</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
   <div class="faq-list"><details class="faq-item"><summary>أين إعدادات OBS في SoulCams؟</summary><p>سجل الدخول، انقر Go Online، ثم Settings → OBS — يتم عرض خادم RTMP وstream key معاً.</p></details><details class="faq-item"><summary>هل SoulCams يدعم المُشفِّرات الخارجية؟</summary><p>نعم — إعدادات OBS تعطي خادم RTMP ومفتاح، لذا SplitCam يعمل.</p></details><details class="faq-item"><summary>ما معدل البت لـ SoulCams؟</summary><p>SoulCams لا يعطي رقماً رسمياً — استهدف 3500–6000 Kbps في 1080p واختبر الرفع، لأن نافذة OBS لا تعرض إرشادات معدل البت.</p></details><details class="faq-item"><summary>هل SplitCam مجاني لـ SoulCams؟</summary><p>نعم — مجاني، بدون علامة مائية وبدون حد زمني، لذا عرض SoulCams كامل بمشاهد متعددة الكاميرات وتراكبات لا يكلف شيئاً على جانب المُشفِّر.</p></details></div>

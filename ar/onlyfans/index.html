@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ar",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "نعم — مجاني، بدون علامة مائية وبدون حد زمني. لا توجد تكاليف على جانب المُشفِّر."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "بث OnlyFans لديك يتقطع أو يخزّن مؤقتاً",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000 Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "إطارات مفقودة أثناء البث على OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الإطارات المفقودة تعني أن الحزم لا تصل إلى OnlyFans في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "شاشة سوداء — المشاهدون لا يرون فيديو على OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "OnlyFans يرفض مفتاح البث أو لا يتصل",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه OnlyFans وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "لا يوجد صوت أو الصوت غير متزامن على OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">نصائح احترافية</h2>
   <div class="tips-grid"><div class="tip-card"><h3>التفويض vs Stream Key</h3><p>طريقتان للاتصال: <strong>التفويض</strong> (تسجيل دخول مرة واحدة، يتم الحصول على المفتاح ومزامنته — أسهل طريق) أو <strong>Stream Key</strong> (انسخ OBS Key على OnlyFans → Profile → Settings → Other والصقه).</p></div><div class="tip-card"><h3>غيّر الإعدادات دون مغادرة SplitCam</h3><p>مع التفويض يبقى الحساب متصلاً، لذا تضبط معلمات OnlyFans المباشرة من SplitCam أثناء البث أو بعده — دون المرور عبر موقع OnlyFans.</p></div><div class="tip-card"><h3>معدل بت متواضع</h3><p>OnlyFans RTMP ingest يحد من معدل بت الفيديو عند حوالي 2500 Kbps — أكثر صرامة من معظم مواقع cam. استهدف 720p–1080p عند ~2000–2500.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث OnlyFans لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على OnlyFans</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى OnlyFans في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على OnlyFans</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>OnlyFans يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه OnlyFans وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على OnlyFans</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
   <div class="faq-list"><details class="faq-item"><summary>كيف أربط OnlyFans بـ SplitCam؟</summary><p>بطريقتين. <strong>تفويض</strong> — Stream Settings → Add Channel → OnlyFans → سجل الدخول بحساب OnlyFans وSplitCam يحصل على المفتاح تلقائياً. أو <strong>Stream Key</strong> — انسخ OBS Key على OnlyFans → Profile → Settings → Other والصقه.</p></details><details class="faq-item"><summary>هل يمكنني تغيير إعدادات OnlyFans المباشرة دون فتح الموقع؟</summary><p>نعم — مع طريقة التفويض يبقى SplitCam متصلاً بحساب OnlyFans، لذا يتزامن المفتاح والإعدادات تلقائياً.</p></details><details class="faq-item"><summary>ما معدل البت لـ OnlyFans؟</summary><p>متواضع — OnlyFans RTMP ingest يحد من معدل البت عند حوالي 2500 Kbps، أكثر صرامة من منصات cam الأخرى. استهدف 720p–1080p حوالي 2000–2500 Kbps.</p></details><details class="faq-item"><summary>هل SplitCam مجاني لـ OnlyFans live؟</summary><p>نعم — مجاني، بدون علامة مائية وبدون حد زمني. لا توجد تكاليف على جانب المُشفِّر.</p></details></div>

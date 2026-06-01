@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "hr",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Nema troškova sa strane enkodera."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tvoj prijenos na OnlyFans lagira ili buffera",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000 Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Izgubljeni frameovi tijekom prijenosa na OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Izgubljeni frameovi znače da paketi ne stižu do OnlyFans na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Crni ekran — gledatelji ne vide video na OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "OnlyFans odbija stream ključ ili se ne povezuje",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje OnlyFans i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nema zvuka ili zvuk nije sinkroniziran na OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Savjeti</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Autorizacija vs Stream Key</h3><p>Dva načina povezivanja: <strong>Autorizacija</strong> (prijaviš se jednom, ključ se uzima i sinkronizira — najlakši put) ili <strong>Stream Key</strong> (kopiraš OBS Key na OnlyFans → Profile → Settings → Other i zalijepiš). Autorizacija štedi ručno kopiranje.</p></div><div class="tip-card"><h3>Mijenjaj postavke bez napuštanja SplitCama</h3><p>S autorizacijom račun ostaje povezan, tako da podešavaš OnlyFans live parametre iz SplitCama tijekom ili poslije prijenosa — bez prolaska kroz OnlyFans stranicu.</p></div><div class="tip-card"><h3>Skroman bitrate</h3><p>OnlyFans RTMP ingest ograničava video bitrate na oko 2500 Kbps — strože nego većina cam sajtova. Ciljaj 720p–1080p pri ~2000–2500.</p></div><div class="tip-card"><h3>Koristi kabelsku vezu</h3><p>Ethernet pobjeđuje Wi-Fi u dugom streamu — izgubljeni frame je izgubljen tip. Provuci kabel do stream računala.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na OnlyFans lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na OnlyFans</summary><p>Izgubljeni frameovi znače da paketi ne stižu do OnlyFans na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na OnlyFans</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>OnlyFans odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje OnlyFans i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na OnlyFans</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Česta pitanja</h2>
   <div class="faq-list"><details class="faq-item"><summary>Kako povezati OnlyFans sa SplitCamom?</summary><p>Na dva načina. <strong>Autorizacija</strong> — Stream Settings → Add Channel → OnlyFans → prijavi se s OnlyFans računom i SplitCam uzima ključ automatski. Ili <strong>Stream Key</strong> — kopiraj OBS Key na OnlyFans → Profile → Settings → Other i zalijepi.</p></details><details class="faq-item"><summary>Mogu li mijenjati OnlyFans live postavke bez otvaranja stranice?</summary><p>Da — s Autorizacijskom metodom SplitCam ostaje povezan s tvojim OnlyFans računom, tako da ključ i postavke sinkroniziraju automatski. Mijenjaš sve iz SplitCama tijekom ili poslije prijenosa, bez posjeta onlyfans.com.</p></details><details class="faq-item"><summary>Koji bitrate za OnlyFans?</summary><p>Skroman — OnlyFans RTMP ingest ograničava bitrate na oko 2500 Kbps, puno strože nego druge cam platforme. Ciljaj 720p–1080p oko 2000–2500 Kbps.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za OnlyFans live?</summary><p>Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja. Nema troškova sa strane enkodera.</p></details></div>

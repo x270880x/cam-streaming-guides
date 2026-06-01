@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "ro",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Da — gratuit, fără filigran și fără limită de timp. Ca cameră virtuală pentru ImLive nu adaugă cost sau branding la video chat-ul tău."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stream-ul tău pe ImLive are lag sau se blochează la buffering",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000 Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Frame-uri pierdute în timpul transmisiunii pe ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Frame-urile pierdute înseamnă că pachetele nu ajung la ImLive la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ecran negru — spectatorii nu văd video pe ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive respinge cheia de stream sau nu se conectează",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de ImLive și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fără audio sau audio desincronizat pe ImLive",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Nu e nevoie de stream key</h3><p>ImLive nu are RTMP — nu căuta URL de server sau cheie. SplitCam e doar selectat ca dispozitiv de cameră.</p></div><div class="tip-card"><h3>Setează SplitCam și ca mic</h3><p>Alege SplitCam pentru microfon pe lângă cameră, ca mixul audio și suprimarea zgomotului să treacă și ele în live.</p></div><div class="tip-card"><h3>Construiește scena înainte de live</h3><p>ImLive afișează ce emite SplitCam — aranjează straturile înainte de a începe chat-ul.</p></div><div class="tip-card"><h3>Fă mai întâi un test privat</h3><p>Rulează o transmisiune scurtă de test pentru cameră, audio, încadrare și overlay-uri înainte să deschizi camera publicului.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe ImLive are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe ImLive</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la ImLive la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe ImLive</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>ImLive respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de ImLive și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe ImLive</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>ImLive folosește RTMP sau stream key?</summary><p>Nu — ImLive folosește webcam-ul direct prin browser. SplitCam conectează ca cameră virtuală, nu există cheie de copiat.</p></details><details class="faq-item"><summary>Cum aleg SplitCam pe ImLive?</summary><p>Start Video Chat → Go To Settings → alegi SplitCam ca webcam și microfon.</p></details><details class="faq-item"><summary>Pot folosi overlay-uri pe ImLive?</summary><p>Da — le construiești în scena SplitCam; ImLive afișează rezultatul compus.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru ImLive?</summary><p>Da — gratuit, fără filigran și fără limită de timp. Ca cameră virtuală pentru ImLive nu adaugă cost sau branding la video chat-ul tău.</p></details></div>

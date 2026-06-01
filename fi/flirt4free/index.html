@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fi",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Kyllä — ilmainen, ilman vesileimaa ja ilman aikarajaa, mikä sopii historialliseen alustaan kuten Flirt4Free, jossa shokit voivat olla pitkiä."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Flirt4Free-striimisi pätkii tai puskuroi",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000 Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pudonneita ruutuja Flirt4Free-lähetyksen aikana",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle Flirt4Free ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Musta ruutu — katsojat eivät näe videota alustalla Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Flirt4Free hylkää striimiavaimen tai ei yhdistä",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan Flirt4Free näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ei ääntä tai ääni ei ole synkassa alustalla Flirt4Free",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Se on Stream Name, ei avain</h3><p>Flirt4Free kutsuu kredentiaalia Stream Nameksi. Liität sen SplitCamin stream key -kenttään — sama rooli.</p></div><div class="tip-card"><h3>Aseta resoluutio/bitrate lomakkeessa</h3><p>Flirt4Freen External Broadcast Formilla on omat resoluutio- ja bitrate-kentät — kohdista SplitCamin asetusten kanssa, jotta kuvaa ei muunneta uudelleen.</p></div><div class="tip-card"><h3>Historiallinen alusta</h3><p>Flirt4Free on toiminut 90-luvulta — mallityökalut ovat kypsiä, ja External Broadcast Form on niiden dokumentoitu osa.</p></div><div class="tip-card"><h3>Käytä kaapeliyhteyttä</h3><p>Ethernet voittaa Wi-Fin pitkässä striimissä — kadonnut frame on menetetty tip. Vedä kaapeli stream-PC:lle.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>Flirt4Free-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja Flirt4Free-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle Flirt4Free ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla Flirt4Free</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>Flirt4Free hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan Flirt4Free näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla Flirt4Free</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Tukeeko Flirt4Free ulkoisia enkoodereita?</summary><p>Kyllä — virallisesti, External Broadcast Form:in kautta, joka tarjoaa RTMP URL:n ja Stream Namen. SplitCam toimii enkooderina.</p></details><details class="faq-item"><summary>Mistä saan Flirt4Freen RTMP-tiedot?</summary><p>External Broadcast Form:ista malli-alueella — näyttää RTMP URL:n, Stream Namen ja resoluutio/bitrate-kentät.</p></details><details class="faq-item"><summary>Mikä bitrate Flirt4Freelle?</summary><p>3 500–6 000 Kbps 1080p:ssä — aseta sama arvo External Broadcast Form:issa ja SplitCamissa.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen Flirt4Freelle?</summary><p>Kyllä — ilmainen, ilman vesileimaa ja ilman aikarajaa, mikä sopii historialliseen alustaan kuten Flirt4Free, jossa shokit voivat olla pitkiä.</p></details></div>

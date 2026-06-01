@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "fi",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Kyllä — ilmainen, ilman vesileimaa ja ilman aikarajaa. Koska CamPlace ei tuo omaa enkooderia, ilmainen RTMP-työkalu hoitaa työn."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CamPlace-striimisi pätkii tai puskuroi",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000 Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pudonneita ruutuja CamPlace-lähetyksen aikana",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle CamPlace ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Musta ruutu — katsojat eivät näe videota alustalla CamPlace",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CamPlace hylkää striimiavaimen tai ei yhdistä",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan CamPlace näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ei ääntä tai ääni ei ole synkassa alustalla CamPlace",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja."
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Ei virallista OBS-opasta — käytä videota</h3><p>CamPlace:llä ei ole julkista artikkelia ulkoisista enkoodereista; yllä oleva video on viite nykyiselle reitille.</p></div><div class="tip-card"><h3>Vakio-RTMP toimii</h3><p>Vaikka dokumentoimatonta, CamPlace hyväksyy vakio-RTMP-palvelin-URL:n ja avaimen — SplitCam yhdistää mukautettuna RTMP-kohteena.</p></div><div class="tip-card"><h3>Pinota overlayt SplitCamissa</h3><p>Tip-tavoitteet, nimi ja sosiaalisen median tunnisteet näkymäkerroksina — CamPlace:n peruskamera ei lisää tällaisia.</p></div><div class="tip-card"><h3>Käytä kaapeliyhteyttä</h3><p>Ethernet voittaa Wi-Fin pitkässä striimissä — kadonnut frame on menetetty tip. Vedä kaapeli stream-PC:lle.</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>CamPlace-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja CamPlace-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle CamPlace ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla CamPlace</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>CamPlace hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan CamPlace näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla CamPlace</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Onko CamPlace:llä virallinen OBS-opas?</summary><p>Julkista artikkelia ulkoisista enkoodereista ei löytynyt. CamPlace hyväksyy vakio-RTMP-URL:n ja avaimen, joten SplitCam toimii — seuraa videota.</p></details><details class="faq-item"><summary>Tukeeko CamPlace ulkoisia enkoodereita?</summary><p>Kyllä — se hyväksyy vakio-RTMP stream keyn, joten SplitCam yhdistää mukautettuna RTMP-kohteena.</p></details><details class="faq-item"><summary>Mikä bitrate CamPlace:lle?</summary><p>CamPlace ei julkaise virallista numeroa — käytä 3 500–6 000 Kbps:ää 1080p:ssä turvallisena alueena ja anna SplitCamin nopeustestin määrittää todellinen kattosi.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen CamPlace:lle?</summary><p>Kyllä — ilmainen, ilman vesileimaa ja ilman aikarajaa. Koska CamPlace ei tuo omaa enkooderia, ilmainen RTMP-työkalu hoitaa työn.</p></details></div>

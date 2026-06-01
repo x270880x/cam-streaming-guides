@@ -80,7 +80,7 @@
    "totalTime": "PT5M",
    "inLanguage": "th",
    "datePublished": "2026-05-21",
-   "dateModified": "2026-05-31",
+   "dateModified": "2026-06-01",
    "publisher": {
     "@type": "Organization",
     "name": "Streaming Guides",
@@ -154,6 +154,46 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "ใช่ — ฟรี ไม่มีลายน้ำและไม่จำกัดเวลา ไม่มีค่าใช้จ่ายฝั่ง encoder"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "สตรีม OnlyFans ของคุณกระตุกหรือบัฟเฟอร์",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "เกือบทุกครั้งบิตเรตสูงกว่าที่อัปโหลดของคุณรับไหว รันการทดสอบความเร็วในตัวของ SplitCam แล้วตั้งบิตเรตที่ประมาณ 75% ของอัปโหลดที่วัดได้ — 3,500–6,000 Kbps สำหรับ 1080p ต่ำกว่าสำหรับ 720p อาการกระตุกจะหายไปเมื่อ encoder หยุดวิ่งแซงการเชื่อมต่อของคุณ"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "เฟรมหลุดระหว่างการถ่ายทอดบน OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "เฟรมหลุดหมายความว่าแพ็กเก็ตไปไม่ถึง OnlyFans ทันเวลา — มักเป็น Wi-Fi ไม่เสถียร เปลี่ยนเป็นการเชื่อมต่อ Ethernet แบบมีสาย ปิดแอปที่กินแบนด์วิดท์ และลดบิตเรตลงเล็กน้อย พีคครั้งเดียวไม่เป็นไร แต่การเพิ่มขึ้นต่อเนื่องหมายความว่าการเชื่อมต่อตามไม่ทัน"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "จอดำ — ผู้ชมไม่เห็นวิดีโอบน OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "กล้องของคุณไม่ได้ถูกเลือกเป็นแหล่งที่ใช้งานใน SplitCam หรือมีแอปอื่นยึดไว้ ปิด Zoom, Skype หรือ OBS เลือกเว็บแคมใหม่ในรายการแหล่งของ SplitCam และยืนยันว่าตัวอย่างแสดงภาพของคุณก่อนกด Go Live"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "OnlyFans ปฏิเสธสตรีมคีย์หรือไม่เชื่อมต่อ",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "คัดลอกสตรีมคีย์ใหม่ — ช่องว่างที่ท้ายหรือคีย์เก่าที่หมุนเปลี่ยนแล้วเป็นสาเหตุปกติ ยืนยันว่า URL เซิร์ฟเวอร์ตรงกับที่ OnlyFans แสดง และเปิดใช้งานการถ่ายทอดผ่าน encoder ภายนอกในบัญชีของคุณแล้ว แถบเลื่อนสีเขียวใน Stream Settings ของ SplitCam ยืนยันว่าคีย์ถูกต้อง"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ไม่มีเสียงหรือเสียงไม่ตรงกับภาพบน OnlyFans",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "เลือก SplitCam เป็นทั้งกล้องและไมโครโฟน และเลือกไมโครโฟนจริงของคุณในแหล่งเสียงของ SplitCam หากเสียงตามหลังวิดีโอ ลดความละเอียดลงหนึ่งระดับ — encoder ทำงานหนักเกินไปและเสียงกำลังรอเฟรมที่มาช้า"
      }
     }
    ]
@@ -421,6 +461,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">เคล็ดลับ</h2>
   <div class="tips-grid"><div class="tip-card"><h3>การอนุญาต vs Stream Key</h3><p>สองวิธีในการเชื่อมต่อ: <strong>การอนุญาต</strong> (เข้าสู่ระบบครั้งเดียว คีย์ถูกดึงและซิงค์ — เส้นทางที่ง่ายที่สุด) หรือ <strong>Stream Key</strong> (คัดลอก OBS Key บน OnlyFans → Profile → Settings → Other และวาง)</p></div><div class="tip-card"><h3>เปลี่ยนการตั้งค่าโดยไม่ออกจาก SplitCam</h3><p>ด้วยการอนุญาต บัญชียังคงเชื่อมต่ออยู่ ดังนั้นปรับพารามิเตอร์ OnlyFans live จาก SplitCam ระหว่างหรือหลังการถ่ายทอด — โดยไม่ต้องผ่านไซต์ OnlyFans</p></div><div class="tip-card"><h3>บิตเรตปานกลาง</h3><p>OnlyFans RTMP ingest จำกัดบิตเรตวิดีโอที่ประมาณ 2,500 Kbps — เข้มงวดกว่าไซต์ cam ส่วนใหญ่ เล็ง 720p–1080p ที่ ~2,000–2,500</p></div><div class="tip-card"><h3>ใช้การเชื่อมต่อแบบมีสาย</h3><p>อีเทอร์เน็ตชนะ Wi-Fi ในการสตรีมที่ยาว — เฟรมที่หายคือทิปที่หาย ลากสายไปยังพีซีสตรีม</p></div></div>
 </section>
+<section class="section"><h2 class="sec-h">การแก้ไขปัญหา</h2><div class="faq-list"><details class="faq-item"><summary>สตรีม OnlyFans ของคุณกระตุกหรือบัฟเฟอร์</summary><p>เกือบทุกครั้งบิตเรตสูงกว่าที่อัปโหลดของคุณรับไหว รันการทดสอบความเร็วในตัวของ SplitCam แล้วตั้งบิตเรตที่ประมาณ 75% ของอัปโหลดที่วัดได้ — 3,500–6,000&nbsp;Kbps สำหรับ 1080p ต่ำกว่าสำหรับ 720p อาการกระตุกจะหายไปเมื่อ encoder หยุดวิ่งแซงการเชื่อมต่อของคุณ</p></details><details class="faq-item"><summary>เฟรมหลุดระหว่างการถ่ายทอดบน OnlyFans</summary><p>เฟรมหลุดหมายความว่าแพ็กเก็ตไปไม่ถึง OnlyFans ทันเวลา — มักเป็น Wi-Fi ไม่เสถียร เปลี่ยนเป็นการเชื่อมต่อ Ethernet แบบมีสาย ปิดแอปที่กินแบนด์วิดท์ และลดบิตเรตลงเล็กน้อย พีคครั้งเดียวไม่เป็นไร แต่การเพิ่มขึ้นต่อเนื่องหมายความว่าการเชื่อมต่อตามไม่ทัน</p></details><details class="faq-item"><summary>จอดำ — ผู้ชมไม่เห็นวิดีโอบน OnlyFans</summary><p>กล้องของคุณไม่ได้ถูกเลือกเป็นแหล่งที่ใช้งานใน SplitCam หรือมีแอปอื่นยึดไว้ ปิด Zoom, Skype หรือ OBS เลือกเว็บแคมใหม่ในรายการแหล่งของ SplitCam และยืนยันว่าตัวอย่างแสดงภาพของคุณก่อนกด Go Live</p></details><details class="faq-item"><summary>OnlyFans ปฏิเสธสตรีมคีย์หรือไม่เชื่อมต่อ</summary><p>คัดลอกสตรีมคีย์ใหม่ — ช่องว่างที่ท้ายหรือคีย์เก่าที่หมุนเปลี่ยนแล้วเป็นสาเหตุปกติ ยืนยันว่า URL เซิร์ฟเวอร์ตรงกับที่ OnlyFans แสดง และเปิดใช้งานการถ่ายทอดผ่าน encoder ภายนอกในบัญชีของคุณแล้ว แถบเลื่อนสีเขียวใน Stream Settings ของ SplitCam ยืนยันว่าคีย์ถูกต้อง</p></details><details class="faq-item"><summary>ไม่มีเสียงหรือเสียงไม่ตรงกับภาพบน OnlyFans</summary><p>เลือก SplitCam เป็นทั้งกล้องและไมโครโฟน และเลือกไมโครโฟนจริงของคุณในแหล่งเสียงของ SplitCam หากเสียงตามหลังวิดีโอ ลดความละเอียดลงหนึ่งระดับ — encoder ทำงานหนักเกินไปและเสียงกำลังรอเฟรมที่มาช้า</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">คำถามที่พบบ่อย</h2>
   <div class="faq-list"><details class="faq-item"><summary>ฉันจะเชื่อม OnlyFans กับ SplitCam อย่างไร?</summary><p>สองวิธี <strong>การอนุญาต</strong> — Stream Settings → Add Channel → OnlyFans → เข้าสู่ระบบด้วยบัญชี OnlyFans และ SplitCam ดึงคีย์อัตโนมัติ หรือ <strong>Stream Key</strong> — คัดลอก OBS Key บน OnlyFans → Profile → Settings → Other และวาง</p></details><details class="faq-item"><summary>ฉันสามารถเปลี่ยนการตั้งค่า OnlyFans live โดยไม่เปิดไซต์ได้หรือไม่?</summary><p>ใช่ — ด้วยวิธีการอนุญาต SplitCam ยังคงเชื่อมต่อกับบัญชี OnlyFans ดังนั้นคีย์และการตั้งค่าจะซิงค์อัตโนมัติ</p></details><details class="faq-item"><summary>บิตเรตสำหรับ OnlyFans?</summary><p>ปานกลาง — OnlyFans RTMP ingest จำกัดบิตเรตที่ประมาณ 2,500 Kbps เข้มงวดกว่าแพลตฟอร์ม cam อื่นๆ มาก เล็ง 720p–1080p ที่ประมาณ 2,000–2,500 Kbps</p></details><details class="faq-item"><summary>SplitCam ฟรีสำหรับ OnlyFans live หรือไม่?</summary><p>ใช่ — ฟรี ไม่มีลายน้ำและไม่จำกัดเวลา ไม่มีค่าใช้จ่ายฝั่ง encoder</p></details></div>
