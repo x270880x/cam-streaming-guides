@@ -63,6 +63,8 @@ if(s&&!ctaVis)el.classList.add("show");else el.classList.remove("show");}
 if(window.IntersectionObserver&&cta){new IntersectionObserver(function(e){ctaVis=e[0].isIntersecting;upd();},{rootMargin:"0px 0px -10% 0px"}).observe(cta);}
 window.addEventListener("scroll",upd,{passive:true});upd();})();
 </script>"""
+# Ahrefs Web Analytics (free, cookieless). Loaded async in every <head>.
+AHREFS_JS = '<script src="https://analytics.ahrefs.com/analytics.js" data-key="xKzNuGcNdMMVQ1gW3UJZOw" async></script>'
 PUBLISHER = {"@type": "Organization", "name": SITE_NAME, "url": f"{SITE}/"}
 
 # ---------------------------------------------------------------- CSS (shared)
@@ -1327,6 +1329,7 @@ def render(p, lang, all_platforms):
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 {LANG_REDIRECT_JS}
+{AHREFS_JS}
 </head>
 <body>
 <nav>
@@ -2047,6 +2050,7 @@ def render_legal(slug, lang):
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 {LANG_REDIRECT_JS}
+{AHREFS_JS}
 </head>
 <body>
 <nav>
@@ -2095,6 +2099,7 @@ def render_404():
 .err-msg{{font-size:22px;color:var(--text);margin:18px 0 8px}}
 .err-sub{{color:var(--text-sub);font-size:15px;max-width:480px;margin-bottom:28px}}
 </style>
+{AHREFS_JS}
 </head>
 <body>
 <nav>
@@ -2202,6 +2207,7 @@ def render_hub(platforms, lang):
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 {LANG_REDIRECT_JS}
+{AHREFS_JS}
 </head>
 <body>
 <nav>
