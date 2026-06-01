@@ -355,6 +355,12 @@ display:flex;justify-content:space-between;gap:16px}
 .sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
 .sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
 .sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
+.sticky-dl{position:fixed;right:20px;bottom:20px;z-index:90;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+.sticky-dl.show{opacity:1;transform:none;pointer-events:auto}
+.sticky-dl a{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;box-shadow:0 10px 30px rgba(40,120,252,.45);white-space:nowrap}
+.sticky-dl a:hover{background:var(--blue-hover)}
+[dir="rtl"] .sticky-dl{right:auto;left:20px}
+@media (max-width:640px){.sticky-dl{right:12px;left:12px;bottom:12px}[dir="rtl"] .sticky-dl{right:12px;left:12px}.sticky-dl a{justify-content:center;width:100%}}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
 .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .hub-grid .related-card{padding:20px 22px}
@@ -433,5 +439,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </footer>
+<div class="sticky-dl" id="stickyDl"><a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">⬇ Descargar SplitCam</a></div>
+<script>
+(function(){var el=document.getElementById("stickyDl");if(!el)return;
+var cta=document.querySelector(".cta-block"),ctaVis=false;
+function upd(){var s=(window.scrollY||document.documentElement.scrollTop)>500;
+if(s&&!ctaVis)el.classList.add("show");else el.classList.remove("show");}
+if(window.IntersectionObserver&&cta){new IntersectionObserver(function(e){ctaVis=e[0].isIntersecting;upd();},{rootMargin:"0px 0px -10% 0px"}).observe(cta);}
+window.addEventListener("scroll",upd,{passive:true});upd();})();
+</script>
 </body>
 </html>
