@@ -13,9 +13,11 @@ import json
 from pathlib import Path
 
 from obs_content import OBS_VS
+from model_content import MODEL_GUIDE
 
 ROOT = Path(__file__).parent
 OBS_SLUG = "obs-alternative"
+MODEL_SLUG = "become-a-cam-model"
 # Short localized footer label for the SplitCam-vs-OBS page (falls back to "SplitCam vs OBS").
 OBS_NAV = {
     "en": "SplitCam vs OBS", "ru": "SplitCam vs OBS", "es": "SplitCam vs OBS",
@@ -1432,6 +1434,7 @@ def render(p, lang, all_platforms):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="{home}">{u['home']}</a>
+      <a href="{depth}{MODEL_SLUG}/">{e(MODEL_GUIDE.get(lang, MODEL_GUIDE["en"])["h1short"])}</a>
       <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="{depth}about/">{u['about']}</a>
       <a href="{depth}contact/">{u['contact']}</a>
@@ -2096,6 +2099,7 @@ def render_legal(slug, lang):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="{home}">{u['home']}</a>
+      <a href="{depth}{MODEL_SLUG}/">{e(MODEL_GUIDE.get(lang, MODEL_GUIDE["en"])["h1short"])}</a>
       <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="{depth}about/">{u['about']}</a>
       <a href="{depth}contact/">{u['contact']}</a>
@@ -2104,6 +2108,132 @@ def render_legal(slug, lang):
     </div>
   </div>
 </footer>
+</body>
+</html>
+"""
+
+
+def render_model_guide(lang):
+    """Render the 'how to become a cam model' top-funnel page (indexable SEO target)."""
+    u = UI[lang]
+    c = MODEL_GUIDE.get(lang) or MODEL_GUIDE["en"]
+    depth = "../" if u["path"] else ""
+    home = depth or "./"
+    canon = f'{SITE}/{u["path"]}{MODEL_SLUG}/'
+    og_image = f'{SITE}/assets/og/hub-{lang}.png'
+    kw = (f"{c['h1short']}, cam model, webcam model, camgirl, "
+          "how to become a cam model, cam model for beginners, splitcam")
+    hreflang_html = "\n".join(
+        f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}{MODEL_SLUG}/">'
+        for L in LANGS_AVAIL
+    ) + f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{MODEL_SLUG}/">'
+
+    steps_html = "".join(
+        f'<div class="step"><div class="step-num">{i+1}</div><div class="step-body">'
+        f'<div class="step-h">{e(head)}</div><p class="step-p">{body}</p></div></div>'
+        for i, (head, body) in enumerate(c["steps"]))
+    faq_html = "".join(
+        f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
+        for q, a in c["faq"])
+
+    schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": u["crumb_home"],
+                 "item": f'{SITE}/{u["path"]}'},
+                {"@type": "ListItem", "position": 2, "name": c["h1short"], "item": canon}]},
+            {"@type": "HowTo", "name": _strip(c["h1html"]), "description": c["desc"],
+             "inLanguage": lang, "datePublished": PUBLISHED_DATE, "dateModified": MODIFIED_DATE,
+             "publisher": PUBLISHER,
+             "step": [{"@type": "HowToStep", "position": i+1, "name": head,
+                       "text": html.unescape(_strip(body))}
+                      for i, (head, body) in enumerate(c["steps"])]},
+            {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
+                {"@type": "Question", "name": q,
+                 "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
+                for q, a in c["faq"]]},
+        ],
+    }
+    return f"""<!DOCTYPE html>
+<html lang="{u['lang']}"{" dir=\"rtl\"" if u['lang'] in RTL_LANGS else ""}>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{e(c['title'])}</title>
+<meta name="description" content="{e(c['desc'])}">
+<meta name="keywords" content="{e(kw)}">
+<link rel="canonical" href="{canon}">
+{hreflang_html}
+<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
+<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{canon}">
+<meta property="og:title" content="{e(c['title'])}">
+<meta property="og:description" content="{e(c['desc'])}">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:locale" content="{OG_LOCALE[lang]}">
+<meta property="og:image" content="{og_image}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#141420">
+<script type="application/ld+json">
+{json.dumps(schema, ensure_ascii=False, indent=1)}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>{CSS}</style>
+{LANG_REDIRECT_JS}
+{AHREFS_JS}
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
+  <ul class="nav-links"><li><a href="{home}">{u['home']}</a></li></ul>
+  {lang_switch(lang, depth)}
+</nav>
+<div class="breadcrumbs">
+  <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(c['h1short'])}</span>
+</div>
+<section class="hero" style="padding-top:24px">
+  <div class="hero-glow"></div>
+  <h1 class="h1">{c['h1html']}</h1>
+  <p class="sub">{c['intro']}</p>
+  <div class="hero-cta">
+    <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
+    <a href="{home}" class="btn-ghost btn-lg">{u['home']}</a>
+  </div>
+</section>
+<section class="section" id="steps">
+  <h2 class="sec-h">{e(c['steps_h'])}</h2>
+  <div class="steps">{steps_html}</div>
+</section>
+<section class="section">
+  <h2 class="sec-h">{u['faq_h']}</h2>
+  <div class="faq-list">{faq_html}</div>
+</section>
+<section class="cta-block">
+  <h2>{u['cta_h']}</h2>
+  <p>{u['cta_p']}</p>
+  <a href="{e(DOWNLOAD_URL)}" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="{home}">{u['home']}</a>
+      <a href="{depth}{MODEL_SLUG}/">{e(c['h1short'])}</a>
+      <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
+      <a href="{depth}about/">{u['about']}</a>
+      <a href="{depth}contact/">{u['contact']}</a>
+      <a href="{depth}privacy/">{u['privacy']}</a>
+      <a href="{depth}terms/">{u['terms']}</a>
+    </div>
+  </div>
+</footer>
+<div class="sticky-dl" id="stickyDl"><a href="{e(DOWNLOAD_URL)}" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a></div>
+{STICKY_DL_JS}
 </body>
 </html>
 """
@@ -2221,6 +2351,7 @@ def render_obs_vs(lang):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="{home}">{u['home']}</a>
+      <a href="{depth}{MODEL_SLUG}/">{e(MODEL_GUIDE.get(lang, MODEL_GUIDE["en"])["h1short"])}</a>
       <a href="{depth}{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="{depth}about/">{u['about']}</a>
       <a href="{depth}contact/">{u['contact']}</a>
@@ -2388,6 +2519,7 @@ def render_hub(platforms, lang):
     <div>© 2026 {SITE_NAME} · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="./">{u['home']}</a>
+      <a href="{MODEL_SLUG}/">{e(MODEL_GUIDE.get(lang, MODEL_GUIDE["en"])["h1short"])}</a>
       <a href="{OBS_SLUG}/">{OBS_NAV.get(lang, "SplitCam vs OBS")}</a>
       <a href="about/">{u['about']}</a>
       <a href="contact/">{u['contact']}</a>
@@ -2455,6 +2587,12 @@ def main():
         (obsdir / "index.html").write_text(render_obs_vs(lang), encoding="utf-8")
         count += 1
 
+        # "How to become a cam model" top-funnel page (indexable SEO target)
+        modeldir = ROOT / u["path"] / MODEL_SLUG
+        modeldir.mkdir(parents=True, exist_ok=True)
+        (modeldir / "index.html").write_text(render_model_guide(lang), encoding="utf-8")
+        count += 1
+
     # 404 page (root)
     (ROOT / "404.html").write_text(render_404(), encoding="utf-8")
 
@@ -2490,6 +2628,11 @@ def main():
         urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
                     f'    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n'
                     f'{alt_links(OBS_SLUG)}\n  </url>')
+        # become-a-cam-model top-funnel page
+        loc = f'{SITE}/{LANG_PATH[lang]}{MODEL_SLUG}/'
+        urls.append(f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>\n'
+                    f'    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n'
+                    f'{alt_links(MODEL_SLUG)}\n  </url>')
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
