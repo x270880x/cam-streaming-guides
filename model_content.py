@@ -60,6 +60,8 @@ EARNINGS_FAQ = {
            "Çok değişir — cep harçlığından tam zamanlı gelire kadar. Kazanç platforma, kaç saat yayın yaptığına, nişine ve kitlene bağlıdır ve her platform komisyon alır, yani her token veya bahşişten payın değişir. En çok kazananlar ayda binlerce kazanır; çoğu küçük başlar ve büyür. Bağlanmadan önce her platformun token değerini ve ödeme bölüşümünü kontrol et."),
     "id": ("Berapa penghasilan seorang cam model?",
            "Sangat bervariasi — dari uang jajan hingga penghasilan penuh waktu. Penghasilan tergantung platform, berapa jam kamu siaran, niche dan audiensmu, dan tiap platform mengambil komisi, jadi bagianmu dari tiap token atau tip berbeda. Yang berpenghasilan tertinggi meraih ribuan per bulan; kebanyakan mulai kecil dan berkembang. Cek nilai token dan bagi hasil pembayaran tiap platform sebelum berkomitmen."),
+    "vi": ("Một cam model kiếm được bao nhiêu?",
+           "Rất khác nhau — từ tiền tiêu vặt đến thu nhập toàn thời gian. Thu nhập tùy nền tảng, số giờ bạn phát, ngách và khán giả của bạn, và mỗi nền tảng lấy hoa hồng, nên phần của bạn từ mỗi token hay tip sẽ khác. Người kiếm cao nhất thu hàng nghìn mỗi tháng; phần lớn bắt đầu nhỏ rồi tăng dần. Kiểm tra giá trị token và tỷ lệ chia chi trả của từng nền tảng trước khi cam kết."),
 }
 
 MODEL_GUIDE = {
@@ -523,6 +525,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "vi": {
+        "title": "Cách trở thành cam model — hướng dẫn cho người mới từ đầu",
+        "desc": "Cách trở thành cam model: yêu cầu, xác minh tuổi, chọn nền tảng, thanh toán và cách lên sóng. Hướng dẫn khởi đầu rõ ràng, rồi phát sóng miễn phí với SplitCam.",
+        "h1html": 'Cách trở thành <span class="accent">cam model</span>',
+        "h1short": "Làm cam model",
+        "intro": "Đang cân nhắc làm cam model? Đây là hướng dẫn khởi đầu rõ ràng từ con số không: bạn thực sự cần gì, xác minh tuổi và thanh toán hoạt động ra sao, và cách lên sóng. Khi thiết lập xong, bạn phát sóng miễn phí với <strong style='color:var(--text)'>SplitCam</strong> — và chúng tôi có hướng dẫn từng bước cho mọi nền tảng lớn.",
+        "steps_h": "Từ con số không tới lên sóng — từng bước",
+        "steps": [
+            ("Kiểm tra yêu cầu", "Bạn phải <strong>từ 18 tuổi trở lên</strong> và chứng minh được điều đó. Mọi nền tảng cam hợp pháp đều yêu cầu xác minh tuổi bằng giấy tờ tùy thân có ảnh chính thức trước khi phát — giấy tờ của bạn chỉ dùng để xác minh, không hiển thị cho người xem. Bạn cũng cần webcam và kết nối ổn định."),
+            ("Chọn nền tảng", "Site cam khác nhau nghĩa là khán giả, tỷ lệ chi trả và quy tắc khác nhau. Xem hướng dẫn nền tảng của chúng tôi để so sánh Chaturbate, Stripchat, BongaCams, CAM4, OnlyFans và hơn nữa, rồi tạo tài khoản người mẫu ở nơi phù hợp với bạn."),
+            ("Đăng ký và xác minh", "Đăng ký làm broadcaster/người mẫu, tải giấy tờ để xác minh tuổi, và chờ phê duyệt tài khoản — thường nhanh. Chọn tên người mẫu bạn sẽ dùng và đọc quy tắc nền tảng để không vấp về sau."),
+            ("Thiết lập thanh toán", "Chọn cách nhận tiền (chuyển khoản ngân hàng, ví điện tử, crypto ở một số site) và ghi nhớ mức chi trả tối thiểu cùng lịch trình. Mỗi nền tảng trả khác nhau — giá trị token và tỷ lệ chia hoa hồng thay đổi, nên hãy kiểm tra con số trước khi cam kết."),
+            ("Chuẩn bị buổi phát và lên sóng", "Cài <strong>SplitCam</strong> miễn phí, dựng cảnh (camera, overlay, bộ lọc làm đẹp), rồi dán stream key của nền tảng và nhấn Go Live. Theo hướng dẫn cho nền tảng bạn chọn — bạn lên sóng trong vài phút."),
+        ],
+        "faq": [
+            ("Tôi cần gì để bắt đầu làm cam?", "Những thứ cơ bản: từ 18 tuổi, giấy tờ tùy thân có ảnh chính thức để xác minh tuổi, webcam, kết nối ổn định, tài khoản trên một nền tảng cam, và phần mềm bộ mã hóa miễn phí như SplitCam để gửi video của bạn tới site."),
+            ("Tôi có phải trình giấy tờ tùy thân không?", "Có — mọi nền tảng hợp pháp đều yêu cầu xác minh tuổi và danh tính trước khi phát. Giấy tờ của bạn chỉ dùng để xác nhận bạn đủ tuổi; không hiển thị cho người xem."),
+            ("Cần thiết bị gì?", "Webcam 1080p, ánh sáng tử tế và kết nối có dây ổn định đáp ứng phần cơ bản. Micro rời thì có ích. SplitCam (miễn phí) là bộ mã hóa dựng cảnh và gửi tới nền tảng."),
+            ("Tôi thực sự lên sóng thế nào?", "Cài SplitCam, mở hướng dẫn nền tảng của bạn, sao chép stream key từ site, dán vào SplitCam và nhấn Go Live. Toàn bộ thiết lập mất vài phút lần đầu, sau đó chỉ một cú nhấp."),
         ],
     },
     "id": {

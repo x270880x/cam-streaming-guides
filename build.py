@@ -27,7 +27,7 @@ OBS_NAV = {
     "fi": "SplitCam vs OBS", "da": "SplitCam vs OBS", "no": "SplitCam vs OBS",
     "sr": "SplitCam vs OBS", "hr": "SplitCam vs OBS", "zh": "SplitCam vs OBS",
     "ja": "SplitCam vs OBS", "ar": "SplitCam مقابل OBS", "th": "SplitCam vs OBS",
-    "fil": "SplitCam vs OBS", "tr": "SplitCam vs OBS", "id": "SplitCam vs OBS",
+    "fil": "SplitCam vs OBS", "tr": "SplitCam vs OBS", "id": "SplitCam vs OBS", "vi": "SplitCam vs OBS",
 }
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
@@ -41,10 +41,10 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "el": "el_GR", "fi": "fi_FI", "da": "da_DK",
              "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR",
              "zh": "zh_CN", "ja": "ja_JP", "ar": "ar_AR",
-             "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID"}
+             "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID", "vi": "vi_VN"}
 LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
                "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-               "zh", "ja", "ar", "th", "fil", "tr", "id"]  # set by main() to those with platforms_<lang>.py
+               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi"]  # set by main() to those with platforms_<lang>.py
 RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
 
 
@@ -469,6 +469,14 @@ UI = {
            "updated": "Terakhir diperbarui", "about": "Tentang", "contact": "Kontak",
            "privacy": "Privasi", "terms": "Ketentuan",
            "path": "id/", "lang": "id"},
+    "vi": {"home": "Tất cả hướng dẫn", "download": "Tải SplitCam", "crumb_home": "Hướng dẫn",
+           "skip": "Tới các bước", "related": "Hướng dẫn nền tảng khác",
+           "quick": "Trả lời nhanh", "steps_h": "Từng bước",
+           "tips_h": "Mẹo chuyên nghiệp", "faq_h": "Câu hỏi thường gặp", "cta_h": "Sẵn sàng lên sóng?",
+           "cta_p": "Phần mềm miễn phí. Không watermark, không đăng ký. Cài một lần, live bằng một cú nhấp.",
+           "updated": "Cập nhật lần cuối", "about": "Giới thiệu", "contact": "Liên hệ",
+           "privacy": "Quyền riêng tư", "terms": "Điều khoản",
+           "path": "vi/", "lang": "vi"},
 }
 
 def e(s):
@@ -763,6 +771,17 @@ STEP_TMPL = {
         ("Klik Go Live",
          "Tekan <strong>Go Live</strong> di SplitCam, lalu mulai siaran di {name}. Dalam ~10 detik feed kameramu live. Siaran berikutnya cukup satu klik — buka SplitCam, Go Live."),
     ],
+    "vi": [
+        ("Tải và cài SplitCam",
+         "SplitCam là phần mềm live-streaming miễn phí cho Windows và macOS. Tải và chạy trình cài đặt — không đăng ký, không thẻ, không watermark, không giới hạn thời gian. Đây là bộ mã hóa gửi video của bạn tới {name}."),
+        ("Thiết lập camera và cảnh",
+         "Mở SplitCam và thêm webcam. Dựng cảnh theo cách bạn muốn người xem thấy — overlay, chữ, camera thứ hai hoặc điện thoại, bộ lọc làm đẹp hoặc nền AI. Tất cả áp dụng trực tiếp trước khi luồng rời PC."),
+        ("Lấy stream key {name}", "{key}"),
+        ("Kết nối SplitCam với {name}",
+         "Trong SplitCam mở <strong>Stream Settings</strong>, dán URL máy chủ và stream key của {name} vào ô RTMP tùy chỉnh. Đặt bitrate 3.500–6.000&nbsp;Kbps cho 1080p, 2.000–4.000&nbsp;Kbps cho 720p, và chạy bài test tốc độ tích hợp trước."),
+        ("Nhấn Go Live",
+         "Nhấn <strong>Go Live</strong> trong SplitCam, rồi bắt đầu phát trên {name}. Trong ~10 giây camera của bạn đã lên sóng. Những buổi sau chỉ một cú nhấp — mở SplitCam, Go Live."),
+    ],
 }
 
 
@@ -797,6 +816,7 @@ TROUBLE_H = {
     "ar": "استكشاف الأخطاء وإصلاحها", "th": "การแก้ไขปัญหา", "fil": "Pag-troubleshoot",
     "tr": "Sorun giderme",
     "id": "Pemecahan masalah",
+    "vi": "Khắc phục sự cố",
 }
 
 # Common encoder-level streaming problems and fixes. {name} = platform name.
@@ -1091,6 +1111,18 @@ TROUBLE_TMPL = {
         ("Tidak ada audio atau audio tidak sinkron di {name}",
          "Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon aslimu di dalam sumber audio SplitCam. Jika audio tertinggal dari video, turunkan resolusi satu tingkat — encoder kelebihan beban dan audio menunggu frame yang terlambat."),
     ],
+    "vi": [
+        ("Buổi phát {name} giật hoặc buffering",
+         "Hầu như luôn do bitrate đặt cao hơn mức đường upload gánh được. Chạy bài test tốc độ tích hợp của SplitCam, rồi đặt bitrate khoảng 75% upload đo được — 3.500–6.000&nbsp;Kbps cho 1080p, thấp hơn cho 720p. Giật sẽ hết khi bộ mã hóa thôi vượt quá kết nối của bạn."),
+        ("Frame rơi khi phát {name}",
+         "Frame rơi nghĩa là gói tin không tới {name} đúng lúc — thường là Wi-Fi không ổn định. Chuyển sang Ethernet có dây, đóng các ứng dụng ngốn băng thông và hạ bitrate một chút. Một lần nhảy thì không sao; tăng liên tục nghĩa là kết nối không theo kịp."),
+        ("Màn hình đen — người xem không thấy video trên {name}",
+         "Camera của bạn không được chọn làm nguồn hoạt động trong SplitCam, hoặc ứng dụng khác đang giữ nó. Đóng Zoom, Skype hoặc OBS, chọn lại webcam trong danh sách nguồn của SplitCam, và chắc chắn preview hiện hình bạn trước khi nhấn Go Live."),
+        ("{name} từ chối stream key hoặc không kết nối",
+         "Sao chép lại stream key — khoảng trắng ở cuối hoặc khóa cũ đã reset là nguyên nhân phổ biến nhất. Chắc chắn URL máy chủ khớp với cái {name} hiển thị và phát sóng bộ mã hóa ngoài đã bật trên tài khoản. Thanh trượt xanh trong Stream Settings của SplitCam xác nhận khóa hợp lệ."),
+        ("Không có âm thanh hoặc âm thanh lệch trên {name}",
+         "Chọn SplitCam làm cả camera VÀ micro, và chọn micro thật của bạn bên trong nguồn âm thanh của SplitCam. Nếu âm thanh trễ so với video, hạ độ phân giải một mức — bộ mã hóa quá tải và âm thanh đang chờ các frame trễ."),
+    ],
 }
 
 
@@ -1109,21 +1141,21 @@ def render_trouble(slug, name, lang):
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
-              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID"}
+              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI"}
 LANG_FLAG = {"en": "🇬🇧", "ru": "🇷🇺", "es": "🇪🇸", "de": "🇩🇪", "fr": "🇫🇷", "it": "🇮🇹",
              "pt": "🇧🇷", "nl": "🇳🇱", "ro": "🇷🇴", "bg": "🇧🇬", "hu": "🇭🇺",
              "el": "🇬🇷", "fi": "🇫🇮", "da": "🇩🇰", "no": "🇳🇴", "sr": "🇷🇸", "hr": "🇭🇷",
-             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩"}
+             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳"}
 LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": "Deutsch",
                "fr": "Français", "it": "Italiano", "pt": "Português", "nl": "Nederlands",
                "ro": "Română", "bg": "Български", "hu": "Magyar", "el": "Ελληνικά",
                "fi": "Suomi", "da": "Dansk", "no": "Norsk", "sr": "Српски", "hr": "Hrvatski",
                "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino",
-               "tr": "Türkçe", "id": "Bahasa Indonesia"}
+               "tr": "Türkçe", "id": "Bahasa Indonesia", "vi": "Tiếng Việt"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
              "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
-             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/"}
+             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -1143,7 +1175,8 @@ VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en ví
            "el": "Οδηγός βίντεο", "fi": "Video-opas", "da": "Videoguide",
            "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič",
            "zh": "视频指南", "ja": "ビデオガイド", "ar": "دليل الفيديو",
-           "th": "คู่มือวิดีโอ", "fil": "Gabay sa video", "tr": "Video rehberi", "id": "Panduan video"}
+           "th": "คู่มือวิดีโอ", "fil": "Gabay sa video", "tr": "Video rehberi", "id": "Panduan video",
+           "vi": "Video hướng dẫn"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
                 "pt": "Guia de configuração", "nl": "Installatiegids",
@@ -1152,7 +1185,8 @@ COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "
                 "fi": "Asennusohje", "da": "Opsætningsguide", "no": "Oppsettsguide",
                 "sr": "Водич за подешавање", "hr": "Vodič za postavljanje",
                 "zh": "设置指南", "ja": "セットアップガイド", "ar": "دليل الإعداد",
-                "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup", "tr": "Kurulum rehberi", "id": "Panduan setup"}
+                "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup", "tr": "Kurulum rehberi", "id": "Panduan setup",
+                "vi": "Hướng dẫn thiết lập"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -1218,6 +1252,7 @@ SUPPORT_LABELS = {
     "fil": ("Opisyal na suporta", "Kami ay isang independyenteng gabay. Para sa mga isyu sa account, bayad o teknikal, direktang kontakin ang opisyal na suporta ng platform."),
     "tr": ("Resmi destek", "Biz bağımsız bir rehberiz. Hesap, ödeme veya teknik sorunlar için doğrudan platformun resmi desteğiyle iletişime geç."),
     "id": ("Dukungan resmi", "Kami panduan independen. Untuk masalah akun, pembayaran, atau teknis, hubungi langsung dukungan resmi platform."),
+    "vi": ("Hỗ trợ chính thức", "Chúng tôi là hướng dẫn độc lập. Với vấn đề tài khoản, thanh toán hoặc kỹ thuật, hãy liên hệ trực tiếp hỗ trợ chính thức của nền tảng."),
 }
 
 
@@ -1667,6 +1702,12 @@ HUB = {
            "sub": "Setup langkah demi langkah untuk siaran di platform cam mana pun dengan SplitCam "
                   "gratis — encoder eksternal, scene, overlay, tanpa watermark.",
            "pick": "Pilih platform-mu"},
+    "vi": {"title": "Hướng dẫn phát sóng — phát cam với SplitCam",
+           "desc": "Hướng dẫn miễn phí từng bước để phát sóng trên mọi nền tảng cam với SplitCam.",
+           "h1": 'Hướng dẫn <span class="accent">phát sóng cam</span> miễn phí',
+           "sub": "Thiết lập từng bước để phát sóng trên mọi nền tảng cam với SplitCam miễn phí — "
+                  "bộ mã hóa ngoài, cảnh, overlay, không watermark.",
+           "pick": "Chọn nền tảng của bạn"},
 }
 
 
@@ -1768,6 +1809,10 @@ LEGAL = {
                "<p>Streaming Guides adalah sumber gratis dan independen untuk menyiapkan siaran langsung di platform cam dewasa dengan <strong>SplitCam</strong> — software streaming gratis tanpa watermark untuk Windows dan macOS.</p>"
                "<p>Kami mencakup 19 platform dengan panduan langkah demi langkah, tips pemecahan masalah, dan detail teknis terkini — dari menemukan stream key-mu di tiap situs hingga memilih bitrate yang tepat.</p>"
                "<p>Situs ini tidak berafiliasi dengan platform mana pun yang tercantum. Semua nama merek dan logo adalah milik pemiliknya masing-masing.</p>"),
+        "vi": ("Giới thiệu — Streaming Guides", "Giới thiệu", "Giới thiệu Streaming Guides",
+               "<p>Streaming Guides là nguồn miễn phí, độc lập để thiết lập phát sóng trực tiếp trên các nền tảng cam người lớn với <strong>SplitCam</strong> — phần mềm phát sóng miễn phí không watermark cho Windows và macOS.</p>"
+               "<p>Chúng tôi bao quát 19 nền tảng với hướng dẫn từng bước, mẹo khắc phục sự cố và chi tiết kỹ thuật cập nhật — từ tìm stream key ở mỗi site đến chọn bitrate phù hợp.</p>"
+               "<p>Trang này không liên kết với bất kỳ nền tảng nào được liệt kê. Mọi tên thương hiệu và logo thuộc về chủ sở hữu tương ứng.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -1914,6 +1959,12 @@ LEGAL = {
                "<h2>Log server</h2><p>Log server web standar dapat mencatat alamat IP dan halaman yang diminta, disimpan untuk tujuan keamanan. Kami tidak mengaitkan log ini dengan identitas pribadi apa pun.</p>"
                "<h2>Hak Anda</h2><p>Jika kamu di UE/Inggris, kamu punya hak berdasarkan GDPR. Karena kami tidak menyimpan data pribadi yang terkait denganmu, umumnya tidak ada yang perlu diakses, dikoreksi, atau dihapus. Hubungi kami lewat halaman Kontak untuk pertanyaan apa pun.</p>"
                "<h2>Perubahan</h2><p>Halaman ini dapat berubah. Versi terbaru selalu ada di URL ini.</p>"),
+        "vi": ("Quyền riêng tư — Streaming Guides", "Quyền riêng tư", "Chính sách quyền riêng tư",
+               "<h2>Chúng tôi thu thập gì</h2><p>Streaming Guides là website tĩnh. Chúng tôi không dùng cookie, tài khoản, biểu mẫu hay phân tích nhận dạng bạn cá nhân. Chúng tôi không chạy quảng cáo hay trình theo dõi liên kết.</p>"
+               "<h2>Dịch vụ bên thứ ba</h2><p>Các trang nhúng video YouTube (qua tên miền youtube-nocookie.com tăng cường quyền riêng tư) và tải Google Fonts. Các dịch vụ này có thể đặt cookie riêng và ghi địa chỉ IP theo chính sách riêng của họ.</p>"
+               "<h2>Nhật ký máy chủ</h2><p>Nhật ký máy chủ web tiêu chuẩn có thể ghi địa chỉ IP và trang được yêu cầu, lưu vì mục đích an ninh. Chúng tôi không liên kết các nhật ký này với bất kỳ danh tính cá nhân nào.</p>"
+               "<h2>Quyền của bạn</h2><p>Nếu bạn ở EU/Anh, bạn có các quyền theo GDPR. Vì chúng tôi không lưu dữ liệu cá nhân gắn với bạn, thường không có gì để truy cập, sửa hay xóa. Liên hệ chúng tôi qua trang Liên hệ cho mọi thắc mắc.</p>"
+               "<h2>Thay đổi</h2><p>Trang này có thể thay đổi. Phiên bản mới nhất luôn ở URL này.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -2060,6 +2111,12 @@ LEGAL = {
                "<h2>Tanpa afiliasi</h2><p>Situs ini tidak berafiliasi, didukung, atau disponsori oleh platform cam mana pun yang dirujuk. Semua merek dagang adalah milik pemiliknya masing-masing dan dipakai di sini hanya untuk identifikasi.</p>"
                "<h2>SplitCam</h2><p>SplitCam adalah produk terpisah. Unduh hanya dari situs resmi <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                "<h2>Tanpa jaminan</h2><p>Situs ini disediakan «apa adanya» tanpa jaminan apa pun. Kami tidak bertanggung jawab atas kerugian apa pun akibat penggunaan informasi yang dipublikasikan di sini.</p>"),
+        "vi": ("Điều khoản — Streaming Guides", "Điều khoản", "Điều khoản sử dụng",
+               "<h2>Đối tượng</h2><p><strong>Trang này dành cho người lớn (18+).</strong> Hướng dẫn bao quát việc phát sóng trên các nền tảng cam người lớn. Khi dùng trang này, bạn xác nhận đã đủ tuổi hợp pháp tại khu vực của mình.</p>"
+               "<h2>Chỉ để tham khảo</h2><p>Hướng dẫn được cung cấp nhằm mục đích thông tin. Chúng tôi không thể đảm bảo độ chính xác mọi lúc — các nền tảng thay đổi giao diện, cài đặt và chính sách. Hãy xác minh các bước tại trung tâm trợ giúp chính thức của nền tảng trước khi dựa vào chúng.</p>"
+               "<h2>Không liên kết</h2><p>Trang này không liên kết, không được chứng thực hay tài trợ bởi bất kỳ nền tảng cam nào được nhắc tới. Mọi nhãn hiệu thuộc về chủ sở hữu tương ứng và được dùng ở đây chỉ để nhận dạng.</p>"
+               "<h2>SplitCam</h2><p>SplitCam là sản phẩm riêng biệt. Chỉ tải từ site chính thức <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Không bảo hành</h2><p>Trang này được cung cấp «nguyên trạng» không kèm bảo hành nào. Chúng tôi không chịu trách nhiệm cho mọi tổn thất phát sinh từ việc dùng thông tin đăng tại đây.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -2158,6 +2215,10 @@ LEGAL = {
                "<p>Untuk pertanyaan, koreksi, atau masukan tentang panduan, tulis ke <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                "<p>Kami tidak menangani dukungan akun atau teknis untuk platform cam itu sendiri — hubungi dukungan resmi tiap platform untuk itu.</p>"
                "<p>Untuk dukungan software SplitCam, lihat <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "vi": ("Liên hệ — Streaming Guides", "Liên hệ", "Liên hệ",
+               "<p>Với câu hỏi, đính chính hoặc góp ý về các hướng dẫn, hãy viết tới <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Chúng tôi không xử lý hỗ trợ tài khoản hay kỹ thuật cho chính các nền tảng cam — hãy liên hệ hỗ trợ chính thức của từng nền tảng cho việc đó.</p>"
+               "<p>Để được hỗ trợ phần mềm SplitCam, xem <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
     },
 }
 
@@ -2664,7 +2725,7 @@ def main():
     langs_data = {"en": PLATFORMS_EN}
     for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
                  "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-                 "zh", "ja", "ar", "th", "fil", "tr", "id"):
+                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
