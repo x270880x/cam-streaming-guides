@@ -27,7 +27,7 @@ OBS_NAV = {
     "fi": "SplitCam vs OBS", "da": "SplitCam vs OBS", "no": "SplitCam vs OBS",
     "sr": "SplitCam vs OBS", "hr": "SplitCam vs OBS", "zh": "SplitCam vs OBS",
     "ja": "SplitCam vs OBS", "ar": "SplitCam مقابل OBS", "th": "SplitCam vs OBS",
-    "fil": "SplitCam vs OBS",
+    "fil": "SplitCam vs OBS", "tr": "SplitCam vs OBS",
 }
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
@@ -41,10 +41,10 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "el": "el_GR", "fi": "fi_FI", "da": "da_DK",
              "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR",
              "zh": "zh_CN", "ja": "ja_JP", "ar": "ar_AR",
-             "th": "th_TH", "fil": "fil_PH"}
+             "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR"}
 LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
                "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-               "zh", "ja", "ar", "th", "fil"]  # set by main() to those with platforms_<lang>.py
+               "zh", "ja", "ar", "th", "fil", "tr"]  # set by main() to those with platforms_<lang>.py
 RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
 
 
@@ -453,6 +453,14 @@ UI = {
             "updated": "Huling na-update", "about": "Tungkol sa", "contact": "Kontakin",
             "privacy": "Privacy", "terms": "Mga tuntunin",
             "path": "fil/", "lang": "fil"},
+    "tr": {"home": "Tüm rehberler", "download": "SplitCam'i indir", "crumb_home": "Rehberler",
+           "skip": "Adımlara geç", "related": "Diğer platform rehberleri",
+           "quick": "Kısa cevap", "steps_h": "Adım adım",
+           "tips_h": "Profesyonel ipuçları", "faq_h": "SSS", "cta_h": "Canlı yayına hazır mısın?",
+           "cta_p": "Ücretsiz yazılım. Filigran yok, kayıt yok. Bir kez kur, tek tıkla canlıya geç.",
+           "updated": "Son güncelleme", "about": "Hakkında", "contact": "İletişim",
+           "privacy": "Gizlilik", "terms": "Koşullar",
+           "path": "tr/", "lang": "tr"},
 }
 
 def e(s):
@@ -725,6 +733,17 @@ STEP_TMPL = {
         ("I-click ang Go Live",
          "Pindutin ang <strong>Go Live</strong> sa SplitCam, pagkatapos ay simulan ang broadcast sa {name}. Sa loob ng ~10 segundo, live na ang iyong camera. Ang mga susunod na stream ay isang click lang — buksan ang SplitCam, Go Live."),
     ],
+    "tr": [
+        ("SplitCam'i indir ve kur",
+         "SplitCam, Windows ve macOS için ücretsiz bir canlı yayın yazılımıdır. İndir ve kurulumu çalıştır — kayıt yok, kart yok, filigran yok, süre sınırı yok. Videonu {name}'e gönderen kodlayıcıdır."),
+        ("Kamera ve sahneni ayarla",
+         "SplitCam'i aç ve web kameranı ekle. Sahneyi izleyicilerin görmesini istediğin gibi oluştur — katmanlar, metin, ikinci kamera veya telefonun, güzellik filtreleri veya AI arka plan. Hepsi yayın PC'den çıkmadan önce canlı uygulanır."),
+        ("{name} yayın anahtarını al", "{key}"),
+        ("SplitCam'i {name}'e bağla",
+         "SplitCam'de <strong>Stream Settings</strong>'i aç, {name} sunucu URL'sini ve yayın anahtarını özel RTMP alanlarına yapıştır. Bitrate: 1080p için 3.500–6.000&nbsp;Kbps, 720p için 2.000–4.000&nbsp;Kbps. Önce yerleşik hız testini çalıştır."),
+        ("Go Live'a tıkla",
+         "SplitCam'de <strong>Go Live</strong>'a bas, sonra {name}'de yayını başlat. ~10 saniye içinde kameran canlıda. Sonraki yayınlar tek tık — SplitCam'i aç, Go Live."),
+    ],
 }
 
 
@@ -757,6 +776,7 @@ TROUBLE_H = {
     "fi": "Vianmääritys", "da": "Fejlfinding", "no": "Feilsøking", "sr": "Решавање проблема",
     "hr": "Rješavanje problema", "zh": "故障排除", "ja": "トラブルシューティング",
     "ar": "استكشاف الأخطاء وإصلاحها", "th": "การแก้ไขปัญหา", "fil": "Pag-troubleshoot",
+    "tr": "Sorun giderme",
 }
 
 # Common encoder-level streaming problems and fixes. {name} = platform name.
@@ -1027,6 +1047,18 @@ TROUBLE_TMPL = {
         ("Walang audio o hindi sync ang audio sa {name}",
          "Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame."),
     ],
+    "tr": [
+        ("{name} yayının takılıyor veya tamponluyor",
+         "Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer."),
+        ("{name} yayını sırasında kare kaybı",
+         "Kare kaybı, paketlerin {name}'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir."),
+        ("Siyah ekran — izleyiciler {name}'de video görmüyor",
+         "Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula."),
+        ("{name} yayın anahtarını reddediyor veya bağlanmıyor",
+         "Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin {name}'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar."),
+        ("{name}'de ses yok veya ses senkron dışı",
+         "SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor."),
+    ],
 }
 
 
@@ -1045,20 +1077,21 @@ def render_trouble(slug, name, lang):
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
-              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL"}
+              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR"}
 LANG_FLAG = {"en": "🇬🇧", "ru": "🇷🇺", "es": "🇪🇸", "de": "🇩🇪", "fr": "🇫🇷", "it": "🇮🇹",
              "pt": "🇧🇷", "nl": "🇳🇱", "ro": "🇷🇴", "bg": "🇧🇬", "hu": "🇭🇺",
              "el": "🇬🇷", "fi": "🇫🇮", "da": "🇩🇰", "no": "🇳🇴", "sr": "🇷🇸", "hr": "🇭🇷",
-             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭"}
+             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷"}
 LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": "Deutsch",
                "fr": "Français", "it": "Italiano", "pt": "Português", "nl": "Nederlands",
                "ro": "Română", "bg": "Български", "hu": "Magyar", "el": "Ελληνικά",
                "fi": "Suomi", "da": "Dansk", "no": "Norsk", "sr": "Српски", "hr": "Hrvatski",
-               "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino"}
+               "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino",
+               "tr": "Türkçe"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
              "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
-             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/"}
+             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -1078,7 +1111,7 @@ VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en ví
            "el": "Οδηγός βίντεο", "fi": "Video-opas", "da": "Videoguide",
            "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič",
            "zh": "视频指南", "ja": "ビデオガイド", "ar": "دليل الفيديو",
-           "th": "คู่มือวิดีโอ", "fil": "Gabay sa video"}
+           "th": "คู่มือวิดีโอ", "fil": "Gabay sa video", "tr": "Video rehberi"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
                 "pt": "Guia de configuração", "nl": "Installatiegids",
@@ -1087,7 +1120,7 @@ COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "
                 "fi": "Asennusohje", "da": "Opsætningsguide", "no": "Oppsettsguide",
                 "sr": "Водич за подешавање", "hr": "Vodič za postavljanje",
                 "zh": "设置指南", "ja": "セットアップガイド", "ar": "دليل الإعداد",
-                "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup"}
+                "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup", "tr": "Kurulum rehberi"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -1151,6 +1184,7 @@ SUPPORT_LABELS = {
     "ar":  ("الدعم الرسمي", "نحن دليل مستقل. لمشاكل الحساب أو الدفع أو الفنية، تواصل مباشرة مع الدعم الرسمي للمنصة."),
     "th":  ("ฝ่ายสนับสนุนอย่างเป็นทางการ", "เราคือคู่มืออิสระ สำหรับปัญหาเกี่ยวกับบัญชี การชำระเงิน หรือปัญหาทางเทคนิค โปรดติดต่อฝ่ายสนับสนุนอย่างเป็นทางการของแพลตฟอร์มโดยตรง"),
     "fil": ("Opisyal na suporta", "Kami ay isang independyenteng gabay. Para sa mga isyu sa account, bayad o teknikal, direktang kontakin ang opisyal na suporta ng platform."),
+    "tr": ("Resmi destek", "Biz bağımsız bir rehberiz. Hesap, ödeme veya teknik sorunlar için doğrudan platformun resmi desteğiyle iletişime geç."),
 }
 
 
@@ -1588,6 +1622,12 @@ HUB = {
             "sub": "Hakbang-hakbang na setup para mag-broadcast sa anumang cam platform gamit ang libreng "
                    "SplitCam — external encoder, scenes, overlays, walang watermark.",
             "pick": "Piliin ang iyong platform"},
+    "tr": {"title": "Yayın rehberleri — SplitCam ile cam yayınları",
+           "desc": "SplitCam ile herhangi bir cam platformunda yayın yapmak için ücretsiz adım adım rehberler.",
+           "h1": 'Ücretsiz <span class="accent">cam yayın rehberleri</span>',
+           "sub": "Ücretsiz SplitCam ile herhangi bir cam platformunda yayın için adım adım kurulum — "
+                  "harici kodlayıcı, sahneler, katmanlar, filigran yok.",
+           "pick": "Platformunu seç"},
 }
 
 
@@ -1681,6 +1721,10 @@ LEGAL = {
                 "<p>Ang Streaming Guides ay isang libreng, malayang pinagkukunan para sa pag-set up ng live broadcasts sa adult cam platforms gamit ang <strong>SplitCam</strong> — libreng, walang-watermark na streaming software para sa Windows at macOS.</p>"
                 "<p>Sinasaklaw namin ang 19 platforms na may hakbang-hakbang na gabay, mga tip sa troubleshooting at kasalukuyang mga teknikal na detalye — mula sa paghahanap ng iyong stream key sa bawat site hanggang sa pagpili ng tamang bitrate.</p>"
                 "<p>Ang site na ito ay hindi kaakibat sa anumang nakalistang platform. Ang lahat ng brand name at logo ay pag-aari ng kani-kanilang may-ari.</p>"),
+        "tr": ("Hakkında — Streaming Guides", "Hakkında", "Streaming Guides Hakkında",
+               "<p>Streaming Guides, yetişkin cam platformlarında <strong>SplitCam</strong> — Windows ve macOS için ücretsiz, filigransız yayın yazılımı — kullanarak canlı yayın kurmak için ücretsiz ve bağımsız bir kaynaktır.</p>"
+               "<p>19 platformu adım adım rehberler, sorun giderme ipuçları ve güncel teknik detaylarla kapsıyoruz — her sitede yayın anahtarını bulmaktan doğru bitrate'i seçmeye kadar.</p>"
+               "<p>Bu site, listelenen platformların hiçbiriyle bağlantılı değildir. Tüm marka adları ve logolar ilgili sahiplerine aittir.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -1815,6 +1859,12 @@ LEGAL = {
                 "<h2>Mga server log</h2><p>Maaaring i-record ng mga standard web server log ang iyong IP address at ang hiniling na pahina, pinananatili para sa mga layuning pang-seguridad. Hindi namin ini-link ang mga log na ito sa anumang personal na pagkakakilanlan.</p>"
                 "<h2>Ang iyong mga karapatan</h2><p>Kung ikaw ay nasa EU/UK, may mga karapatan ka sa ilalim ng GDPR. Dahil hindi kami humahawak ng personal na data na nakatali sa iyo, sa pangkalahatan ay walang ma-access, itama, o tanggalin. Makipag-ugnayan sa amin sa pamamagitan ng pahina ng Kontak para sa anumang mga tanong.</p>"
                 "<h2>Mga pagbabago</h2><p>Ang pahinang ito ay maaaring magbago. Ang pinakabagong bersyon ay palaging nasa URL na ito.</p>"),
+        "tr": ("Gizlilik — Streaming Guides", "Gizlilik", "Gizlilik Politikası",
+               "<h2>Ne topluyoruz</h2><p>Streaming Guides statik bir web sitesidir. Seni kişisel olarak tanımlayan çerez, hesap, form veya analiz kullanmıyoruz. Reklam veya ortaklık izleyicisi çalıştırmıyoruz.</p>"
+               "<h2>Üçüncü taraf hizmetleri</h2><p>Sayfalar YouTube videoları gömer (gizliliği artırılmış youtube-nocookie.com alan adı üzerinden) ve Google Fonts yükler. Bu hizmetler kendi gizlilik politikalarına göre kendi çerezlerini ayarlayabilir ve IP adreslerini kaydedebilir.</p>"
+               "<h2>Sunucu günlükleri</h2><p>Standart web sunucusu günlükleri güvenlik amacıyla IP adresini ve istenen sayfayı kaydedebilir. Bu günlükleri herhangi bir kişisel kimlikle ilişkilendirmiyoruz.</p>"
+               "<h2>Haklarınız</h2><p>AB/Birleşik Krallık'taysan GDPR kapsamında haklara sahipsin. Sana bağlı kişisel veri tutmadığımız için genellikle erişilecek, düzeltilecek veya silinecek bir şey yoktur. Sorular için İletişim sayfasından bize ulaş.</p>"
+               "<h2>Değişiklikler</h2><p>Bu sayfa değişebilir. En güncel sürüm her zaman bu URL'dedir.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -1949,6 +1999,12 @@ LEGAL = {
                 "<h2>Walang kaakibatan</h2><p>Ang site na ito ay hindi kaakibat, hindi inendorso, at hindi sponsor ng anumang sinangguni na cam platform. Ang lahat ng trademark ay pag-aari ng kani-kanilang may-ari at ginagamit dito para lamang sa pagkakakilanlan.</p>"
                 "<h2>SplitCam</h2><p>Ang SplitCam ay isang hiwalay na produkto. I-download lamang ito mula sa opisyal na website na <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                 "<h2>Walang warranty</h2><p>Ang site na ito ay ibinibigay «as is» nang walang anumang warranty. Hindi kami mananagot sa anumang pagkalugi na dulot ng paggamit ng impormasyong inilathala dito.</p>"),
+        "tr": ("Kullanım Koşulları — Streaming Guides", "Kullanım Koşulları", "Kullanım Koşulları",
+               "<h2>Kitle</h2><p><strong>Bu site yetişkinler (18+) içindir.</strong> Rehberler yetişkin cam platformlarında yayın yapmayı kapsar. Bu siteyi kullanarak kendi yargı bölgende reşit olduğunu onaylarsın.</p>"
+               "<h2>Yalnızca bilgi</h2><p>Rehberler bilgilendirme amaçlıdır. Her zaman doğruluğu garanti edemeyiz — platformlar arayüzlerini, ayarlarını ve politikalarını değiştirir. Güvenmeden önce adımları platformun resmi yardım merkezinde doğrula.</p>"
+               "<h2>Bağlantı yok</h2><p>Bu site, atıfta bulunulan cam platformlarının hiçbiriyle bağlantılı, onaylı veya sponsorlu değildir. Tüm ticari markalar ilgili sahiplerine aittir ve burada yalnızca tanımlama için kullanılır.</p>"
+               "<h2>SplitCam</h2><p>SplitCam ayrı bir üründür. Yalnızca resmi <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a> sitesinden indir.</p>"
+               "<h2>Garanti yok</h2><p>Bu site herhangi bir garanti olmadan «olduğu gibi» sunulur. Burada yayınlanan bilgilerin kullanımından doğan kayıplardan sorumlu değiliz.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -2039,6 +2095,10 @@ LEGAL = {
                 "<p>Para sa mga tanong, pagwawasto, o feedback tungkol sa mga gabay, sumulat sa <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                 "<p>Hindi kami humahawak ng suporta sa account o teknikal na suporta para sa mga cam platform mismo — kontakin ang opisyal na suporta ng bawat platform para diyan.</p>"
                 "<p>Para sa suporta sa software ng SplitCam, tingnan ang <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "tr": ("İletişim — Streaming Guides", "İletişim", "İletişim",
+               "<p>Rehberlerle ilgili sorular, düzeltmeler veya geri bildirim için <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a> adresine yaz.</p>"
+               "<p>Cam platformlarının kendileri için hesap veya teknik destek sağlamıyoruz — bunun için her platformun resmi desteğine başvur.</p>"
+               "<p>SplitCam yazılım desteği için <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>'a bak.</p>"),
     },
 }
 
@@ -2545,7 +2605,7 @@ def main():
     langs_data = {"en": PLATFORMS_EN}
     for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
                  "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-                 "zh", "ja", "ar", "th", "fil"):
+                 "zh", "ja", "ar", "th", "fil", "tr"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")

@@ -56,6 +56,8 @@ EARNINGS_FAQ = {
            "แตกต่างกันมาก — ตั้งแต่เงินติดกระเป๋าไปจนถึงรายได้เต็มเวลา รายได้ขึ้นอยู่กับแพลตฟอร์ม จำนวนชั่วโมงที่คุณสตรีม กลุ่มเฉพาะและผู้ชมของคุณ และทุกแพลตฟอร์มหักค่าคอมมิชชัน ดังนั้นส่วนแบ่งของคุณต่อโทเค็นหรือทิปแต่ละครั้งจึงต่างกัน คนที่ทำเงินสูงสุดได้หลายพันต่อเดือน ส่วนใหญ่เริ่มจากน้อยแล้วเติบโต ตรวจสอบมูลค่าโทเค็นและการแบ่งจ่ายของแต่ละแพลตฟอร์มก่อนตัดสินใจ"),
     "fil": ("Magkano ang kita ng isang cam model?",
             "Malaki ang pagkakaiba — mula sa pang-gastos hanggang sa full-time na kita. Ang kita ay depende sa platform, kung ilang oras kang nag-stream, ang iyong niche at audience, at bawat platform ay kumukuha ng komisyon, kaya iba-iba ang bahagi mo sa bawat token o tip. Ang mga top earner ay kumikita ng libu-libo kada buwan; karamihan ay nagsisimula sa maliit at lumalago. Tingnan ang halaga ng token at payout split ng bawat platform bago ka mag-commit."),
+    "tr": ("Bir cam model ne kadar kazanır?",
+           "Çok değişir — cep harçlığından tam zamanlı gelire kadar. Kazanç platforma, kaç saat yayın yaptığına, nişine ve kitlene bağlıdır ve her platform komisyon alır, yani her token veya bahşişten payın değişir. En çok kazananlar ayda binlerce kazanır; çoğu küçük başlar ve büyür. Bağlanmadan önce her platformun token değerini ve ödeme bölüşümünü kontrol et."),
 }
 
 MODEL_GUIDE = {
@@ -519,6 +521,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "tr": {
+        "title": "Nasıl cam model olunur — sıfırdan yeni başlayan rehberi",
+        "desc": "Nasıl cam model olunur: gereksinimler, yaş doğrulaması, platform seçimi, ödemeler ve canlı yayına geçme. Net bir başlangıç rehberi, sonra SplitCam ile ücretsiz yayın.",
+        "h1html": 'Nasıl <span class="accent">cam model</span> olunur',
+        "h1short": "Cam model ol",
+        "intro": "Cam model olmayı mı düşünüyorsun? Bu, sıfırdan net bir başlangıç rehberi: gerçekte neye ihtiyacın var, yaş doğrulaması ve ödemeler nasıl işler ve nasıl canlıya geçilir. Kurulum bitince <strong style='color:var(--text)'>SplitCam</strong> ile ücretsiz yayın yaparsın — ve her büyük platform için adım adım rehberimiz var.",
+        "steps_h": "Sıfırdan canlıya — adım adım",
+        "steps": [
+            ("Gereksinimleri kontrol et", "<strong>18 yaşında veya daha büyük</strong> olmalı ve bunu kanıtlayabilmelisin. Her meşru cam platformu yayından önce resmi fotoğraflı kimlikle yaş doğrulaması ister — kimliğin yalnızca doğrulama için kullanılır, izleyicilere gösterilmez. Ayrıca web kamerası ve kararlı bir bağlantı gerekir."),
+            ("Bir platform seç", "Farklı cam siteleri farklı kitle, ödeme oranı ve kural demektir. Chaturbate, Stripchat, BongaCams, CAM4, OnlyFans ve daha fazlasını karşılaştırmak için platform rehberlerimize göz at, sonra sana uygun olanda model hesabı oluştur."),
+            ("Kaydol ve doğrulan", "Yayıncı/model olarak kaydol, yaş doğrulaması için kimliğini yükle ve hesap onayını bekle — genelde hızlıdır. Tutacağın bir model adı seç ve sonradan takılmamak için platformun kurallarını oku."),
+            ("Ödemelerini ayarla", "Nasıl ödeme alacağını seç (banka havalesi, e-cüzdan, bazı sitelerde kripto) ve minimum ödeme ile takvimi not et. Her platform farklı öder — token değeri ve komisyon payı değişir, bu yüzden bağlanmadan önce rakamları kontrol et."),
+            ("Yayınını ayarla ve canlıya geç", "Ücretsiz <strong>SplitCam</strong>'i kur, sahneni oluştur (kamera, katmanlar, güzellik filtreleri), sonra platformun yayın anahtarını yapıştır ve Go Live'a bas. Seçtiğin platformun rehberini izle — dakikalar içinde canlı olursun."),
+        ],
+        "faq": [
+            ("Cam'e başlamak için neye ihtiyacım var?", "Temel olanlar: 18+ olmak, yaş doğrulaması için resmi fotoğraflı kimlik, web kamerası, kararlı bağlantı, bir cam platformunda hesap ve videonu siteye gönderecek SplitCam gibi ücretsiz kodlayıcı yazılımı."),
+            ("Kimliğimi göstermek zorunda mıyım?", "Evet — her meşru platform yayından önce yaş ve kimlik doğrulaması ister. Kimliğin yalnızca reşit olduğunu onaylamak için kullanılır; izleyicilere gösterilmez."),
+            ("Hangi ekipman gerekir?", "1080p web kamerası, düzgün ışık ve kararlı kablolu bağlantı temeli karşılar. Ayrı bir mikrofon yardımcı olur. SplitCam (ücretsiz) sahneni oluşturan ve platforma gönderen kodlayıcıdır."),
+            ("Aslında nasıl canlıya geçerim?", "SplitCam'i kur, platformunun rehberini aç, yayın anahtarını siteden kopyala, SplitCam'e yapıştır ve Go Live'a bas. Tüm kurulum ilk seferde birkaç dakika sürer, sonra tek tık."),
         ],
     },
 }
