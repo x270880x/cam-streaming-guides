@@ -74,6 +74,8 @@ EARNINGS_FAQ = {
            "Veľmi sa to líši — od vreckového po plnohodnotný príjem. Zárobok závisí od platformy, koľko hodín vysielate, vašej niky a publika, a každá platforma si berie províziu, takže váš podiel z každého tokenu alebo tipu je iný. Najlepšie zarábajúce berú tisíce mesačne; väčšina začína po malom a rastie. Skontrolujte hodnotu tokenu a rozdelenie výplat každej platformy, než sa do toho pustíte."),
     "sv": ("Hur mycket tjänar en cam-modell?",
            "Det varierar mycket — från fickpengar till heltidsinkomst. Intäkten beror på plattformen, hur många timmar du sänder, din nisch och publik, och varje plattform tar provision, så din andel av varje token eller tips skiljer sig. De som tjänar mest drar in tusentals per månad; de flesta börjar smått och växer. Kolla varje plattforms token-värde och utbetalningsdelning innan du binder dig."),
+    "ms": ("Berapa banyak model cam mendapat?",
+           "Sangat berbeza — daripada wang saku hingga pendapatan sepenuh masa. Pendapatan bergantung pada platform, berapa jam anda menyiar, niche dan penonton anda, dan setiap platform mengambil komisen, jadi bahagian anda daripada setiap token atau tip berbeza. Yang berpendapatan tertinggi memperoleh ribuan sebulan; kebanyakan bermula kecil dan berkembang. Semak nilai token dan pembahagian bayaran setiap platform sebelum komited."),
 }
 
 MODEL_GUIDE = {
@@ -537,6 +539,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "ms": {
+        "title": "Cara menjadi model cam — panduan pemula dari awal",
+        "desc": "Cara menjadi model cam: keperluan, pengesahan umur, memilih platform, pembayaran dan cara go live. Panduan permulaan jelas, kemudian siaran percuma dengan SplitCam.",
+        "h1html": 'Cara menjadi <span class="accent">model cam</span>',
+        "h1short": "Jadi model cam",
+        "intro": "Mempertimbangkan untuk menjadi model cam? Ini panduan permulaan jelas dari awal: apa yang anda sebenarnya perlukan, bagaimana pengesahan umur dan pembayaran berfungsi, dan cara go live. Apabila persediaan selesai, anda menyiar percuma dengan <strong style='color:var(--text)'>SplitCam</strong> — dan kami ada panduan langkah demi langkah untuk setiap platform besar.",
+        "steps_h": "Dari awal ke live — langkah demi langkah",
+        "steps": [
+            ("Semak keperluan", "Anda mesti berumur <strong>18 tahun atau lebih</strong> dan boleh membuktikannya. Setiap platform cam yang sah memerlukan pengesahan umur dengan ID berfoto rasmi sebelum siaran — ID anda hanya digunakan untuk pengesahan, tidak ditunjukkan kepada penonton. Anda juga perlukan kamera web dan sambungan stabil."),
+            ("Pilih platform", "Tapak cam berbeza bermakna penonton, kadar bayaran dan peraturan berbeza. Lihat panduan platform kami untuk membandingkan Chaturbate, Stripchat, BongaCams, CAM4, OnlyFans dan lain-lain, kemudian buka akaun model di tempat yang sesuai untuk anda."),
+            ("Daftar dan sahkan", "Daftar sebagai penyiar/model, muat naik ID untuk pengesahan umur, dan tunggu kelulusan akaun — biasanya pantas. Pilih nama model yang akan anda guna dan baca peraturan platform supaya tidak tersandung kemudian."),
+            ("Tetapkan pembayaran anda", "Pilih cara dibayar (pindahan bank, e-dompet, kripto di sesetengah tapak) dan catat bayaran minimum serta jadual. Setiap platform membayar berbeza — nilai token dan pembahagian komisen berbeza, jadi semak angkanya sebelum komited."),
+            ("Sediakan siaran dan go live", "Pasang <strong>SplitCam</strong> percuma, bina adegan anda (kamera, tindihan, penapis kecantikan), kemudian tampal kunci strim platform dan tekan Go Live. Ikut panduan untuk platform pilihan anda — anda live dalam beberapa minit."),
+        ],
+        "faq": [
+            ("Apa yang saya perlukan untuk mula camming?", "Asasnya: berumur 18+, ID berfoto rasmi untuk pengesahan umur, kamera web, sambungan stabil, akaun di platform cam, dan perisian pengekod percuma seperti SplitCam untuk menghantar video anda ke tapak."),
+            ("Perlukah saya tunjukkan ID?", "Ya — setiap platform sah memerlukan pengesahan umur dan identiti sebelum siaran. ID anda hanya digunakan untuk mengesahkan anda cukup umur; tidak ditunjukkan kepada penonton."),
+            ("Peralatan apa yang diperlukan?", "Kamera web 1080p, pencahayaan yang baik dan sambungan berwayar stabil memenuhi asasnya. Mikrofon berasingan membantu. SplitCam (percuma) ialah pengekod yang membina adegan anda dan menghantarnya ke platform."),
+            ("Bagaimana saya sebenarnya go live?", "Pasang SplitCam, buka panduan platform anda, salin kunci strim dari tapak, tampal ke SplitCam dan tekan Go Live. Seluruh persediaan mengambil beberapa minit pada kali pertama, kemudian hanya satu klik."),
         ],
     },
     "sv": {
