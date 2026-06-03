@@ -241,6 +241,7 @@ HUB_OG = {
     "ko": ("무료 캠 스트리밍 소프트웨어", "멀티스트리밍 · 뷰티 효과", "19개 플랫폼 설정 가이드 · 워터마크 없음"),
     "uk": ("Безкоштовна програма для cam", "Мультистрим · beauty-ефекти", "Посібники для 19 платформ · без водяного знака"),
     "cs": ("Bezplatný software pro cam", "Multistream · beauty efekty", "Návody pro 19 platforem · bez vodoznaku"),
+    "sk": ("Bezplatný softvér pre cam", "Multistream · beauty efekty", "Návody pre 19 platforiem · bez vodoznaku"),
 }
 
 

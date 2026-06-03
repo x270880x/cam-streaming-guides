@@ -70,6 +70,8 @@ EARNINGS_FAQ = {
            "Дуже по-різному — від кишенькових грошей до повноцінного доходу. Заробіток залежить від платформи, скільки годин ви транслюєте, вашої ніші й аудиторії, а кожна платформа бере комісію, тож ваша частка з кожного токена чи чайових різна. Найкращі заробляють тисячі на місяць; більшість починає з малого й росте. Перевірте вартість токена й розподіл виплат кожної платформи перед тим, як братися."),
     "cs": ("Kolik vydělá cam modelka?",
            "Velmi se to liší — od kapesného po plnohodnotný příjem. Výdělek závisí na platformě, kolik hodin vysíláte, vaší nice a publiku, a každá platforma si bere provizi, takže váš podíl z každého tokenu nebo tipu je jiný. Nejlépe vydělávající berou tisíce měsíčně; většina začíná po malém a roste. Zkontrolujte hodnotu tokenu a rozdělení výplat každé platformy, než se do toho pustíte."),
+    "sk": ("Koľko zarobí cam modelka?",
+           "Veľmi sa to líši — od vreckového po plnohodnotný príjem. Zárobok závisí od platformy, koľko hodín vysielate, vašej niky a publika, a každá platforma si berie províziu, takže váš podiel z každého tokenu alebo tipu je iný. Najlepšie zarábajúce berú tisíce mesačne; väčšina začína po malom a rastie. Skontrolujte hodnotu tokenu a rozdelenie výplat každej platformy, než sa do toho pustíte."),
 }
 
 MODEL_GUIDE = {
@@ -533,6 +535,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "sk": {
+        "title": "Ako sa stať cam modelkou — sprievodca pre začiatočníkov od nuly",
+        "desc": "Ako sa stať cam modelkou: požiadavky, overenie veku, výber platformy, výplaty a ako ísť naživo. Jasný úvodný sprievodca, potom vysielanie zadarmo so SplitCam.",
+        "h1html": 'Ako sa stať <span class="accent">cam modelkou</span>',
+        "h1short": "Stať sa cam modelkou",
+        "intro": "Zvažujete kariéru cam modelky? Toto je jasný úvodný sprievodca od nuly: čo naozaj potrebujete, ako funguje overenie veku a výplaty a ako ísť naživo. Keď je nastavenie hotové, vysielate zadarmo so <strong style='color:var(--text)'>SplitCam</strong> — a máme návody krok za krokom pre každú veľkú platformu.",
+        "steps_h": "Od nuly k živému vysielaniu — krok za krokom",
+        "steps": [
+            ("Skontrolujte požiadavky", "Musí vám byť <strong>18 rokov alebo viac</strong> a musíte to vedieť doložiť. Každá legálna cam platforma vyžaduje pred vysielaním overenie veku oficiálnym dokladom s fotkou — váš doklad sa používa len na overenie, divákom sa nezobrazuje. Potrebujete tiež webkameru a stabilné pripojenie."),
+            ("Vyberte platformu", "Rôzne cam stránky znamenajú rôzne publikum, sadzby výplat a pravidlá. Pozrite si naše návody platforiem a porovnajte Chaturbate, Stripchat, BongaCams, CAM4, OnlyFans a ďalšie, potom si vytvorte účet modelky tam, kde vám to sedí."),
+            ("Zaregistrujte sa a overte", "Zaregistrujte sa ako vysielajúci/modelka, nahrajte doklad na overenie veku a počkajte na schválenie účtu — zvyčajne rýchlo. Vyberte si meno modelky, ktoré budete používať, a prečítajte si pravidlá platformy, aby ste neskôr nenarazili."),
+            ("Nastavte si výplaty", "Vyberte spôsob výplaty (bankový prevod, e-peňaženka, krypto na niektorých stránkach) a poznačte si minimálnu výplatu a harmonogram. Každá platforma platí inak — hodnota tokenu a rozdelenie provízie sa líši, takže si čísla skontrolujte, než sa do toho pustíte."),
+            ("Pripravte vysielanie a choďte naživo", "Nainštalujte si <strong>SplitCam</strong> zadarmo, zostavte scénu (kamera, prekrytia, beauty filtre), potom vložte stream key platformy a stlačte Go Live. Postupujte podľa návodu pre vybranú platformu — budete naživo za pár minút."),
+        ],
+        "faq": [
+            ("Čo potrebujem, aby som mohla začať camovať?", "Základy: 18+, oficiálny doklad s fotkou na overenie veku, webkameru, stabilné pripojenie, účet na cam platforme a bezplatný kodér ako SplitCam, ktorý posiela vaše video na stránku."),
+            ("Musím ukázať doklad?", "Áno — každá legálna platforma vyžaduje pred vysielaním overenie veku a identity. Váš doklad sa používa len na potvrdenie plnoletosti; divákom sa nezobrazuje."),
+            ("Aké vybavenie potrebujem?", "Webkamera 1080p, slušné osvetlenie a stabilné drôtové pripojenie pokryjú základy. Samostatný mikrofón pomôže. SplitCam (zadarmo) je kodér, ktorý zostaví vašu scénu a pošle ju na platformu."),
+            ("Ako vlastne idem naživo?", "Nainštalujte SplitCam, otvorte návod svojej platformy, skopírujte stream key zo stránky, vložte do SplitCam a stlačte Go Live. Celé nastavenie zaberie pár minút prvýkrát, potom je to jedno kliknutie."),
         ],
     },
     "cs": {
