@@ -28,7 +28,7 @@ OBS_NAV = {
     "sr": "SplitCam vs OBS", "hr": "SplitCam vs OBS", "zh": "SplitCam vs OBS",
     "ja": "SplitCam vs OBS", "ar": "SplitCam مقابل OBS", "th": "SplitCam vs OBS",
     "fil": "SplitCam vs OBS", "tr": "SplitCam vs OBS", "id": "SplitCam vs OBS", "vi": "SplitCam vs OBS",
-    "pl": "SplitCam vs OBS",
+    "pl": "SplitCam vs OBS", "ko": "SplitCam vs OBS",
 }
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
@@ -42,10 +42,11 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "el": "el_GR", "fi": "fi_FI", "da": "da_DK",
              "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR",
              "zh": "zh_CN", "ja": "ja_JP", "ar": "ar_AR",
-             "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID", "vi": "vi_VN", "pl": "pl_PL"}
+             "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID", "vi": "vi_VN", "pl": "pl_PL",
+             "ko": "ko_KR"}
 LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
                "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl"]  # set by main() to those with platforms_<lang>.py
+               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko"]  # set by main() to those with platforms_<lang>.py
 RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
 
 
@@ -486,6 +487,14 @@ UI = {
            "updated": "Ostatnia aktualizacja", "about": "O nas", "contact": "Kontakt",
            "privacy": "Prywatność", "terms": "Regulamin",
            "path": "pl/", "lang": "pl"},
+    "ko": {"home": "모든 가이드", "download": "SplitCam 다운로드", "crumb_home": "가이드",
+           "skip": "단계로 건너뛰기", "related": "다른 플랫폼 가이드",
+           "quick": "빠른 답변", "steps_h": "단계별 안내",
+           "tips_h": "프로 팁", "faq_h": "자주 묻는 질문", "cta_h": "라이브 방송 준비됐나요?",
+           "cta_p": "무료 소프트웨어. 워터마크 없음, 가입 없음. 한 번 설정하고 한 번 클릭으로 라이브.",
+           "updated": "마지막 업데이트", "about": "소개", "contact": "문의",
+           "privacy": "개인정보", "terms": "이용약관",
+           "path": "ko/", "lang": "ko"},
 }
 
 def e(s):
@@ -802,6 +811,17 @@ STEP_TMPL = {
         ("Kliknij Go Live",
          "Naciśnij <strong>Go Live</strong> w SplitCam, potem rozpocznij transmisję na {name}. W ~10 sekund twój obraz jest na żywo. Kolejne transmisje to jedno kliknięcie — otwórz SplitCam, Go Live."),
     ],
+    "ko": [
+        ("SplitCam 다운로드 및 설치",
+         "SplitCam은 Windows와 macOS용 무료 라이브 방송 소프트웨어입니다. 다운로드하고 설치 프로그램을 실행하세요 — 가입 없음, 카드 없음, 워터마크 없음, 시간 제한 없음. 당신의 영상을 {name}로 보내는 인코더입니다."),
+        ("카메라와 장면 설정",
+         "SplitCam을 열고 웹캠을 추가하세요. 시청자가 볼 모습대로 장면을 구성하세요 — 오버레이, 텍스트, 두 번째 카메라나 휴대폰, 뷰티 필터나 AI 배경. 스트림이 PC를 떠나기 전에 모두 실시간 적용됩니다."),
+        ("{name} 스트림 키 받기", "{key}"),
+        ("SplitCam을 {name}에 연결",
+         "SplitCam에서 <strong>Stream Settings</strong>를 열고 {name} 서버 URL과 스트림 키를 커스텀 RTMP 칸에 붙여넣으세요. 비트레이트는 1080p에 3,500–6,000&nbsp;Kbps, 720p에 2,000–4,000&nbsp;Kbps로 설정하고 먼저 내장 속도 테스트를 돌리세요."),
+        ("Go Live 클릭",
+         "SplitCam에서 <strong>Go Live</strong>를 누른 뒤 {name}에서 방송을 시작하세요. ~10초 안에 카메라가 라이브됩니다. 이후 방송은 한 번 클릭 — SplitCam 열고 Go Live."),
+    ],
 }
 
 
@@ -838,6 +858,7 @@ TROUBLE_H = {
     "id": "Pemecahan masalah",
     "vi": "Khắc phục sự cố",
     "pl": "Rozwiązywanie problemów",
+    "ko": "문제 해결",
 }
 
 # Common encoder-level streaming problems and fixes. {name} = platform name.
@@ -1156,6 +1177,18 @@ TROUBLE_TMPL = {
         ("Brak dźwięku lub dźwięk niezsynchronizowany na {name}",
          "Wybierz SplitCam jako kamerę I mikrofon, a w źródle dźwięku SplitCam wybierz swój prawdziwy mikrofon. Jeśli dźwięk opóźnia się względem wideo, obniż rozdzielczość o jeden poziom — enkoder jest przeciążony i dźwięk czeka na spóźnione klatki."),
     ],
+    "ko": [
+        ("{name} 방송이 끊기거나 버퍼링됨",
+         "거의 항상 비트레이트가 업로드가 감당할 수 있는 것보다 높게 설정된 경우입니다. SplitCam 내장 속도 테스트를 돌린 뒤 비트레이트를 측정된 업로드의 약 75%로 설정하세요 — 1080p에 3,500–6,000&nbsp;Kbps, 720p는 더 낮게. 인코더가 회선을 초과하지 않으면 끊김이 사라집니다."),
+        ("{name} 방송 중 프레임 끊김",
+         "프레임 끊김은 패킷이 {name}에 제때 도착하지 못한다는 뜻입니다 — 보통 불안정한 와이파이. 유선 이더넷으로 바꾸고 대역폭을 먹는 앱을 닫고 비트레이트를 약간 낮추세요. 한 번 튀는 건 괜찮지만 계속 늘면 회선이 못 따라가는 것입니다."),
+        ("검은 화면 — 시청자가 {name}에서 영상을 못 봄",
+         "카메라가 SplitCam에서 활성 소스로 선택되지 않았거나 다른 앱이 잡고 있습니다. Zoom, Skype, OBS를 닫고 SplitCam 소스 목록에서 웹캠을 다시 고르고 Go Live 전에 미리보기에 영상이 나오는지 확인하세요."),
+        ("{name}이 스트림 키를 거부하거나 연결되지 않음",
+         "스트림 키를 다시 복사하세요 — 끝의 공백이나 재설정된 오래된 키가 가장 흔한 원인입니다. 서버 URL이 {name}이 표시한 것과 일치하고 계정에 외부 인코더 방송이 켜져 있는지 확인하세요. SplitCam Stream Settings의 초록 슬라이더가 유효한 키를 확인해 줍니다."),
+        ("{name}에서 소리가 없거나 음성이 어긋남",
+         "SplitCam을 카메라 그리고 마이크로 모두 선택하고 SplitCam 오디오 소스 안에서 진짜 마이크를 고르세요. 오디오가 영상보다 뒤처지면 해상도를 한 단계 낮추세요 — 인코더가 과부하라 오디오가 늦은 프레임을 기다리는 것입니다."),
+    ],
 }
 
 
@@ -1174,21 +1207,21 @@ def render_trouble(slug, name, lang):
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
-              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI", "pl": "PL"}
+              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI", "pl": "PL", "ko": "KO"}
 LANG_FLAG = {"en": "🇬🇧", "ru": "🇷🇺", "es": "🇪🇸", "de": "🇩🇪", "fr": "🇫🇷", "it": "🇮🇹",
              "pt": "🇧🇷", "nl": "🇳🇱", "ro": "🇷🇴", "bg": "🇧🇬", "hu": "🇭🇺",
              "el": "🇬🇷", "fi": "🇫🇮", "da": "🇩🇰", "no": "🇳🇴", "sr": "🇷🇸", "hr": "🇭🇷",
-             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳", "pl": "🇵🇱"}
+             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳", "pl": "🇵🇱", "ko": "🇰🇷"}
 LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": "Deutsch",
                "fr": "Français", "it": "Italiano", "pt": "Português", "nl": "Nederlands",
                "ro": "Română", "bg": "Български", "hu": "Magyar", "el": "Ελληνικά",
                "fi": "Suomi", "da": "Dansk", "no": "Norsk", "sr": "Српски", "hr": "Hrvatski",
                "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino",
-               "tr": "Türkçe", "id": "Bahasa Indonesia", "vi": "Tiếng Việt", "pl": "Polski"}
+               "tr": "Türkçe", "id": "Bahasa Indonesia", "vi": "Tiếng Việt", "pl": "Polski", "ko": "한국어"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
              "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
-             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/", "pl": "pl/"}
+             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/", "pl": "pl/", "ko": "ko/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -1209,7 +1242,7 @@ VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en ví
            "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič",
            "zh": "视频指南", "ja": "ビデオガイド", "ar": "دليل الفيديو",
            "th": "คู่มือวิดีโอ", "fil": "Gabay sa video", "tr": "Video rehberi", "id": "Panduan video",
-           "vi": "Video hướng dẫn", "pl": "Poradnik wideo"}
+           "vi": "Video hướng dẫn", "pl": "Poradnik wideo", "ko": "영상 가이드"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
                 "pt": "Guia de configuração", "nl": "Installatiegids",
@@ -1219,7 +1252,7 @@ COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "
                 "sr": "Водич за подешавање", "hr": "Vodič za postavljanje",
                 "zh": "设置指南", "ja": "セットアップガイド", "ar": "دليل الإعداد",
                 "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup", "tr": "Kurulum rehberi", "id": "Panduan setup",
-                "vi": "Hướng dẫn thiết lập", "pl": "Poradnik konfiguracji"}
+                "vi": "Hướng dẫn thiết lập", "pl": "Poradnik konfiguracji", "ko": "설정 가이드"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -1287,6 +1320,7 @@ SUPPORT_LABELS = {
     "id": ("Dukungan resmi", "Kami panduan independen. Untuk masalah akun, pembayaran, atau teknis, hubungi langsung dukungan resmi platform."),
     "vi": ("Hỗ trợ chính thức", "Chúng tôi là hướng dẫn độc lập. Với vấn đề tài khoản, thanh toán hoặc kỹ thuật, hãy liên hệ trực tiếp hỗ trợ chính thức của nền tảng."),
     "pl": ("Oficjalne wsparcie", "Jesteśmy niezależnym poradnikiem. W sprawach konta, płatności lub problemów technicznych skontaktuj się bezpośrednio z oficjalnym wsparciem platformy."),
+    "ko": ("공식 지원", "저희는 독립 가이드입니다. 계정, 결제, 기술 문제는 플랫폼의 공식 지원에 직접 문의하세요."),
 }
 
 
@@ -1748,6 +1782,12 @@ HUB = {
            "sub": "Konfiguracja krok po kroku do nadawania na dowolnej platformie cam z darmowym "
                   "SplitCam — enkoder zewnętrzny, sceny, nakładki, bez znaku wodnego.",
            "pick": "Wybierz swoją platformę"},
+    "ko": {"title": "방송 가이드 — SplitCam으로 캠 방송하기",
+           "desc": "SplitCam으로 어떤 캠 플랫폼에서든 방송하는 무료 단계별 가이드.",
+           "h1": '무료 <span class="accent">캠 방송 가이드</span>',
+           "sub": "무료 SplitCam으로 어떤 캠 플랫폼에서든 방송하는 단계별 설정 — "
+                  "외부 인코더, 장면, 오버레이, 워터마크 없음.",
+           "pick": "플랫폼을 고르세요"},
 }
 
 
@@ -1857,6 +1897,10 @@ LEGAL = {
                "<p>Streaming Guides to darmowe, niezależne źródło wiedzy o konfiguracji transmisji na żywo na platformach cam dla dorosłych z <strong>SplitCam</strong> — darmowym oprogramowaniem do streamingu bez znaku wodnego dla Windows i macOS.</p>"
                "<p>Obejmujemy 19 platform poradnikami krok po kroku, wskazówkami rozwiązywania problemów i aktualnymi szczegółami technicznymi — od znalezienia klucza streamu w każdym serwisie po wybór odpowiedniego bitrate.</p>"
                "<p>Ta strona nie jest powiązana z żadną z wymienionych platform. Wszystkie nazwy marek i logo należą do ich właścicieli.</p>"),
+        "ko": ("소개 — Streaming Guides", "소개", "Streaming Guides 소개",
+               "<p>Streaming Guides는 <strong>SplitCam</strong> — Windows와 macOS용 무료, 워터마크 없는 방송 소프트웨어 — 으로 성인 캠 플랫폼에서 라이브 방송을 설정하기 위한 무료·독립 자료입니다.</p>"
+               "<p>저희는 19개 플랫폼을 단계별 가이드, 문제 해결 팁, 최신 기술 세부사항으로 다룹니다 — 각 사이트에서 스트림 키 찾기부터 적절한 비트레이트 고르기까지.</p>"
+               "<p>이 사이트는 나열된 어떤 플랫폼과도 제휴하지 않습니다. 모든 브랜드명과 로고는 각 소유자의 자산입니다.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -2015,6 +2059,12 @@ LEGAL = {
                "<h2>Logi serwera</h2><p>Standardowe logi serwera mogą rejestrować adres IP i żądaną stronę, przechowywane w celach bezpieczeństwa. Nie łączymy tych logów z żadną osobistą tożsamością.</p>"
                "<h2>Twoje prawa</h2><p>Jeśli jesteś w UE/Wielkiej Brytanii, masz prawa wynikające z RODO. Ponieważ nie przechowujemy danych osobowych powiązanych z tobą, zwykle nie ma czego udostępniać, poprawiać ani usuwać. Skontaktuj się z nami przez stronę Kontakt w razie pytań.</p>"
                "<h2>Zmiany</h2><p>Ta strona może się zmieniać. Najnowsza wersja jest zawsze pod tym adresem URL.</p>"),
+        "ko": ("개인정보 — Streaming Guides", "개인정보", "개인정보 처리방침",
+               "<h2>수집하는 정보</h2><p>Streaming Guides는 정적 웹사이트입니다. 당신을 개인적으로 식별하는 쿠키, 계정, 양식, 분석을 사용하지 않습니다. 광고나 제휴 추적기를 운영하지 않습니다.</p>"
+               "<h2>제3자 서비스</h2><p>페이지는 YouTube 영상을 임베드하고(개인정보 강화 youtube-nocookie.com 도메인 경유) Google Fonts를 로드합니다. 이 서비스들은 각자의 개인정보 방침에 따라 자체 쿠키를 설정하고 IP 주소를 기록할 수 있습니다.</p>"
+               "<h2>서버 로그</h2><p>표준 웹 서버 로그는 보안 목적으로 IP 주소와 요청된 페이지를 기록할 수 있습니다. 저희는 이 로그를 어떤 개인 신원과도 연결하지 않습니다.</p>"
+               "<h2>귀하의 권리</h2><p>EU/영국에 거주한다면 GDPR에 따른 권리가 있습니다. 저희는 당신과 연결된 개인정보를 보유하지 않으므로 일반적으로 접근·정정·삭제할 것이 없습니다. 문의는 문의 페이지로 연락하세요.</p>"
+               "<h2>변경</h2><p>이 페이지는 변경될 수 있습니다. 최신 버전은 항상 이 URL에 있습니다.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -2173,6 +2223,12 @@ LEGAL = {
                "<h2>Brak powiązań</h2><p>Ta strona nie jest powiązana, wspierana ani sponsorowana przez żadną z przywołanych platform cam. Wszystkie znaki towarowe należą do ich właścicieli i są tu używane wyłącznie do identyfikacji.</p>"
                "<h2>SplitCam</h2><p>SplitCam to osobny produkt. Pobieraj go wyłącznie z oficjalnej strony <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                "<h2>Brak gwarancji</h2><p>Ta strona jest udostępniana «tak jak jest» bez jakiejkolwiek gwarancji. Nie ponosimy odpowiedzialności za jakiekolwiek straty wynikłe z korzystania z opublikowanych tu informacji.</p>"),
+        "ko": ("이용약관 — Streaming Guides", "이용약관", "이용약관",
+               "<h2>대상</h2><p><strong>이 사이트는 성인(18세 이상)용입니다.</strong> 가이드는 성인 캠 플랫폼에서의 방송을 다룹니다. 이 사이트를 이용함으로써 귀하가 거주 관할권에서 법적 성인임을 확인합니다.</p>"
+               "<h2>정보 제공 목적</h2><p>가이드는 정보 제공 목적으로 제공됩니다. 항상 정확성을 보장할 수 없습니다 — 플랫폼은 인터페이스, 설정, 정책을 바꿉니다. 의존하기 전에 플랫폼 공식 고객센터에서 단계를 확인하세요.</p>"
+               "<h2>제휴 없음</h2><p>이 사이트는 언급된 어떤 캠 플랫폼과도 제휴·보증·후원 관계가 없습니다. 모든 상표는 각 소유자의 자산이며 여기서는 식별 목적으로만 사용됩니다.</p>"
+               "<h2>SplitCam</h2><p>SplitCam은 별개의 제품입니다. 공식 사이트 <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>에서만 다운로드하세요.</p>"
+               "<h2>보증 없음</h2><p>이 사이트는 어떤 보증도 없이 «있는 그대로» 제공됩니다. 여기 게시된 정보의 사용으로 인한 손실에 대해 책임지지 않습니다.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -2279,6 +2335,10 @@ LEGAL = {
                "<p>W sprawie pytań, poprawek lub opinii o poradnikach pisz na <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                "<p>Nie zajmujemy się wsparciem konta ani technicznym dla samych platform cam — w tej sprawie skontaktuj się z oficjalnym wsparciem każdej platformy.</p>"
                "<p>W sprawie wsparcia oprogramowania SplitCam zobacz <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "ko": ("문의 — Streaming Guides", "문의", "문의",
+               "<p>가이드에 대한 질문, 정정, 의견은 <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>으로 보내주세요.</p>"
+               "<p>저희는 캠 플랫폼 자체의 계정·기술 지원을 처리하지 않습니다 — 그건 각 플랫폼의 공식 지원에 문의하세요.</p>"
+               "<p>SplitCam 소프트웨어 지원은 <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>를 참고하세요.</p>"),
     },
 }
 
@@ -2785,7 +2845,7 @@ def main():
     langs_data = {"en": PLATFORMS_EN}
     for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
                  "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl"):
+                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
