@@ -55,7 +55,7 @@ FONTS = {
 }
 SCRIPT_LANG = {"ko": "ko", "zh": "zh", "ja": "ja", "th": "th", "ar": "ar"}
 # Latin-script langs whose glyphs Arial Black does not fully cover → use the "wide" bold font
-WIDE_LANG = {"vi", "ru", "bg", "sr", "el"}
+WIDE_LANG = {"vi", "ru", "bg", "sr", "el", "uk"}
 RTL = {"ar"}
 
 
@@ -239,6 +239,7 @@ HUB_OG = {
     "vi": ("Phần mềm phát cam miễn phí", "Đa nền tảng · hiệu ứng làm đẹp", "Hướng dẫn cho 19 nền tảng · không watermark"),
     "pl": ("Darmowy program do cam streamingu", "Multistream · efekty beauty", "Poradniki dla 19 platform · bez znaku wodnego"),
     "ko": ("무료 캠 스트리밍 소프트웨어", "멀티스트리밍 · 뷰티 효과", "19개 플랫폼 설정 가이드 · 워터마크 없음"),
+    "uk": ("Безкоштовна програма для cam", "Мультистрим · beauty-ефекти", "Посібники для 19 платформ · без водяного знака"),
 }
 
 

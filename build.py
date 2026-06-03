@@ -28,7 +28,7 @@ OBS_NAV = {
     "sr": "SplitCam vs OBS", "hr": "SplitCam vs OBS", "zh": "SplitCam vs OBS",
     "ja": "SplitCam vs OBS", "ar": "SplitCam مقابل OBS", "th": "SplitCam vs OBS",
     "fil": "SplitCam vs OBS", "tr": "SplitCam vs OBS", "id": "SplitCam vs OBS", "vi": "SplitCam vs OBS",
-    "pl": "SplitCam vs OBS", "ko": "SplitCam vs OBS",
+    "pl": "SplitCam vs OBS", "ko": "SplitCam vs OBS", "uk": "SplitCam проти OBS",
 }
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
@@ -43,10 +43,10 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR",
              "zh": "zh_CN", "ja": "ja_JP", "ar": "ar_AR",
              "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID", "vi": "vi_VN", "pl": "pl_PL",
-             "ko": "ko_KR"}
+             "ko": "ko_KR", "uk": "uk_UA"}
 LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
                "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko"]  # set by main() to those with platforms_<lang>.py
+               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk"]  # set by main() to those with platforms_<lang>.py
 RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
 
 
@@ -495,6 +495,14 @@ UI = {
            "updated": "마지막 업데이트", "about": "소개", "contact": "문의",
            "privacy": "개인정보", "terms": "이용약관",
            "path": "ko/", "lang": "ko"},
+    "uk": {"home": "Усі посібники", "download": "Завантажити SplitCam", "crumb_home": "Посібники",
+           "skip": "До кроків", "related": "Посібники для інших платформ",
+           "quick": "Швидка відповідь", "steps_h": "Покроково",
+           "tips_h": "Поради для профі", "faq_h": "Часті питання", "cta_h": "Готові вийти наживо?",
+           "cta_p": "Безкоштовна програма. Без водяного знака, без реєстрації. Налаштуйте раз, вийдіть наживо одним кліком.",
+           "updated": "Останнє оновлення", "about": "Про нас", "contact": "Контакти",
+           "privacy": "Приватність", "terms": "Умови",
+           "path": "uk/", "lang": "uk"},
 }
 
 def e(s):
@@ -822,6 +830,17 @@ STEP_TMPL = {
         ("Go Live 클릭",
          "SplitCam에서 <strong>Go Live</strong>를 누른 뒤 {name}에서 방송을 시작하세요. ~10초 안에 카메라가 라이브됩니다. 이후 방송은 한 번 클릭 — SplitCam 열고 Go Live."),
     ],
+    "uk": [
+        ("Завантажте та встановіть SplitCam",
+         "SplitCam — безкоштовна програма для трансляцій на Windows і macOS. Завантажте й запустіть інсталятор — без реєстрації, без картки, без водяного знака, без обмеження часу. Це кодувальник, що надсилає ваше відео на {name}."),
+        ("Налаштуйте камеру й сцену",
+         "Відкрийте SplitCam і додайте вебкамеру. Зберіть сцену так, як хочете, щоб її бачили глядачі — оверлеї, текст, друга камера чи телефон, beauty-фільтри або AI-фон. Усе застосовується наживо, перш ніж стрим покине ваш ПК."),
+        ("Отримайте ключ трансляції {name}", "{key}"),
+        ("Під'єднайте SplitCam до {name}",
+         "У SplitCam відкрийте <strong>Stream Settings</strong>, вставте URL сервера й ключ трансляції {name} у поля кастомного RTMP. Задайте бітрейт 3500–6000&nbsp;Кбіт/с для 1080p, 2000–4000&nbsp;Кбіт/с для 720p і спершу запустіть вбудований тест швидкості."),
+        ("Натисніть Go Live",
+         "Натисніть <strong>Go Live</strong> у SplitCam, далі почніть трансляцію на {name}. За ~10 секунд ваша камера наживо. Наступні трансляції — один клік: відкрийте SplitCam, Go Live."),
+    ],
 }
 
 
@@ -859,6 +878,7 @@ TROUBLE_H = {
     "vi": "Khắc phục sự cố",
     "pl": "Rozwiązywanie problemów",
     "ko": "문제 해결",
+    "uk": "Усунення несправностей",
 }
 
 # Common encoder-level streaming problems and fixes. {name} = platform name.
@@ -1189,6 +1209,18 @@ TROUBLE_TMPL = {
         ("{name}에서 소리가 없거나 음성이 어긋남",
          "SplitCam을 카메라 그리고 마이크로 모두 선택하고 SplitCam 오디오 소스 안에서 진짜 마이크를 고르세요. 오디오가 영상보다 뒤처지면 해상도를 한 단계 낮추세요 — 인코더가 과부하라 오디오가 늦은 프레임을 기다리는 것입니다."),
     ],
+    "uk": [
+        ("Трансляція {name} гальмує або буферизується",
+         "Майже завжди бітрейт заданий вище, ніж витримає ваш аплоуд. Запустіть вбудований тест швидкості SplitCam, далі задайте бітрейт приблизно 75% від виміряного аплоуду — 3500–6000&nbsp;Кбіт/с для 1080p, нижче для 720p. Гальмування зникає, коли кодувальник перестає перевищувати ваш канал."),
+        ("Втрата кадрів під час трансляції {name}",
+         "Втрата кадрів означає, що пакети не доходять до {name} вчасно — зазвичай нестабільний Wi-Fi. Перейдіть на дротовий Ethernet, закрийте застосунки, що з'їдають канал, і трохи знизьте бітрейт. Один стрибок — це нічого; постійне зростання означає, що канал не встигає."),
+        ("Чорний екран — глядачі не бачать відео на {name}",
+         "Ваша камера не вибрана як активне джерело у SplitCam, або її тримає інший застосунок. Закрийте Zoom, Skype чи OBS, виберіть вебкамеру знову у списку джерел SplitCam і переконайтеся, що попередній перегляд показує ваше зображення, перш ніж натиснути Go Live."),
+        ("{name} відхиляє ключ трансляції або не під'єднується",
+         "Скопіюйте ключ трансляції знову — пробіл у кінці чи старий, скинутий ключ — найчастіші причини. Переконайтеся, що URL сервера збігається з тим, що показує {name}, і що трансляція зовнішнім кодувальником увімкнена на акаунті. Зелений повзунок у Stream Settings SplitCam підтверджує дійсний ключ."),
+        ("Немає звуку або звук розсинхронізований на {name}",
+         "Виберіть SplitCam камерою І мікрофоном, а в джерелі звуку SplitCam виберіть свій справжній мікрофон. Якщо звук відстає від відео, знизьте роздільну здатність на один рівень — кодувальник перевантажений, і звук чекає на запізнілі кадри."),
+    ],
 }
 
 
@@ -1207,21 +1239,22 @@ def render_trouble(slug, name, lang):
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
-              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI", "pl": "PL", "ko": "KO"}
+              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI", "pl": "PL", "ko": "KO", "uk": "UK"}
 LANG_FLAG = {"en": "🇬🇧", "ru": "🇷🇺", "es": "🇪🇸", "de": "🇩🇪", "fr": "🇫🇷", "it": "🇮🇹",
              "pt": "🇧🇷", "nl": "🇳🇱", "ro": "🇷🇴", "bg": "🇧🇬", "hu": "🇭🇺",
              "el": "🇬🇷", "fi": "🇫🇮", "da": "🇩🇰", "no": "🇳🇴", "sr": "🇷🇸", "hr": "🇭🇷",
-             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳", "pl": "🇵🇱", "ko": "🇰🇷"}
+             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳", "pl": "🇵🇱", "ko": "🇰🇷", "uk": "🇺🇦"}
 LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": "Deutsch",
                "fr": "Français", "it": "Italiano", "pt": "Português", "nl": "Nederlands",
                "ro": "Română", "bg": "Български", "hu": "Magyar", "el": "Ελληνικά",
                "fi": "Suomi", "da": "Dansk", "no": "Norsk", "sr": "Српски", "hr": "Hrvatski",
                "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino",
-               "tr": "Türkçe", "id": "Bahasa Indonesia", "vi": "Tiếng Việt", "pl": "Polski", "ko": "한국어"}
+               "tr": "Türkçe", "id": "Bahasa Indonesia", "vi": "Tiếng Việt", "pl": "Polski", "ko": "한국어",
+               "uk": "Українська"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
              "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
-             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/", "pl": "pl/", "ko": "ko/"}
+             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/", "pl": "pl/", "ko": "ko/", "uk": "uk/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -1242,7 +1275,7 @@ VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en ví
            "no": "Videoguide", "sr": "Видео водич", "hr": "Video vodič",
            "zh": "视频指南", "ja": "ビデオガイド", "ar": "دليل الفيديو",
            "th": "คู่มือวิดีโอ", "fil": "Gabay sa video", "tr": "Video rehberi", "id": "Panduan video",
-           "vi": "Video hướng dẫn", "pl": "Poradnik wideo", "ko": "영상 가이드"}
+           "vi": "Video hướng dẫn", "pl": "Poradnik wideo", "ko": "영상 가이드", "uk": "Відеопосібник"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
                 "pt": "Guia de configuração", "nl": "Installatiegids",
@@ -1252,7 +1285,7 @@ COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "
                 "sr": "Водич за подешавање", "hr": "Vodič za postavljanje",
                 "zh": "设置指南", "ja": "セットアップガイド", "ar": "دليل الإعداد",
                 "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup", "tr": "Kurulum rehberi", "id": "Panduan setup",
-                "vi": "Hướng dẫn thiết lập", "pl": "Poradnik konfiguracji", "ko": "설정 가이드"}
+                "vi": "Hướng dẫn thiết lập", "pl": "Poradnik konfiguracji", "ko": "설정 가이드", "uk": "Посібник з налаштування"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -1321,6 +1354,7 @@ SUPPORT_LABELS = {
     "vi": ("Hỗ trợ chính thức", "Chúng tôi là hướng dẫn độc lập. Với vấn đề tài khoản, thanh toán hoặc kỹ thuật, hãy liên hệ trực tiếp hỗ trợ chính thức của nền tảng."),
     "pl": ("Oficjalne wsparcie", "Jesteśmy niezależnym poradnikiem. W sprawach konta, płatności lub problemów technicznych skontaktuj się bezpośrednio z oficjalnym wsparciem platformy."),
     "ko": ("공식 지원", "저희는 독립 가이드입니다. 계정, 결제, 기술 문제는 플랫폼의 공식 지원에 직접 문의하세요."),
+    "uk": ("Офіційна підтримка", "Ми незалежний посібник. З питань акаунта, платежів чи технічних проблем звертайтеся напряму до офіційної підтримки платформи."),
 }
 
 
@@ -1788,6 +1822,12 @@ HUB = {
            "sub": "무료 SplitCam으로 어떤 캠 플랫폼에서든 방송하는 단계별 설정 — "
                   "외부 인코더, 장면, 오버레이, 워터마크 없음.",
            "pick": "플랫폼을 고르세요"},
+    "uk": {"title": "Посібники з трансляцій — кам-ефір зі SplitCam",
+           "desc": "Безкоштовні покрокові посібники для трансляцій на будь-якій кам-платформі зі SplitCam.",
+           "h1": 'Безкоштовні посібники з <span class="accent">кам-трансляцій</span>',
+           "sub": "Покрокове налаштування для трансляцій на будь-якій кам-платформі з безкоштовним "
+                  "SplitCam — зовнішній кодувальник, сцени, оверлеї, без водяного знака.",
+           "pick": "Виберіть свою платформу"},
 }
 
 
@@ -1901,6 +1941,10 @@ LEGAL = {
                "<p>Streaming Guides는 <strong>SplitCam</strong> — Windows와 macOS용 무료, 워터마크 없는 방송 소프트웨어 — 으로 성인 캠 플랫폼에서 라이브 방송을 설정하기 위한 무료·독립 자료입니다.</p>"
                "<p>저희는 19개 플랫폼을 단계별 가이드, 문제 해결 팁, 최신 기술 세부사항으로 다룹니다 — 각 사이트에서 스트림 키 찾기부터 적절한 비트레이트 고르기까지.</p>"
                "<p>이 사이트는 나열된 어떤 플랫폼과도 제휴하지 않습니다. 모든 브랜드명과 로고는 각 소유자의 자산입니다.</p>"),
+        "uk": ("Про нас — Streaming Guides", "Про нас", "Про Streaming Guides",
+               "<p>Streaming Guides — безкоштовний незалежний ресурс про налаштування трансляцій наживо на дорослих кам-платформах зі <strong>SplitCam</strong> — безкоштовною програмою для стримінгу без водяного знака для Windows і macOS.</p>"
+               "<p>Ми охоплюємо 19 платформ покроковими посібниками, порадами з усунення несправностей та актуальними технічними деталями — від пошуку ключа трансляції на кожному сайті до вибору правильного бітрейту.</p>"
+               "<p>Цей сайт не пов'язаний із жодною з перелічених платформ. Усі назви брендів і логотипи належать їхнім власникам.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -2065,6 +2109,12 @@ LEGAL = {
                "<h2>서버 로그</h2><p>표준 웹 서버 로그는 보안 목적으로 IP 주소와 요청된 페이지를 기록할 수 있습니다. 저희는 이 로그를 어떤 개인 신원과도 연결하지 않습니다.</p>"
                "<h2>귀하의 권리</h2><p>EU/영국에 거주한다면 GDPR에 따른 권리가 있습니다. 저희는 당신과 연결된 개인정보를 보유하지 않으므로 일반적으로 접근·정정·삭제할 것이 없습니다. 문의는 문의 페이지로 연락하세요.</p>"
                "<h2>변경</h2><p>이 페이지는 변경될 수 있습니다. 최신 버전은 항상 이 URL에 있습니다.</p>"),
+        "uk": ("Приватність — Streaming Guides", "Приватність", "Політика приватності",
+               "<h2>Що ми збираємо</h2><p>Streaming Guides — статичний вебсайт. Ми не використовуємо файли cookie, акаунти, форми чи аналітику, що ідентифікує вас особисто. Ми не показуємо рекламу й не використовуємо афілійовані трекери.</p>"
+               "<h2>Сторонні сервіси</h2><p>Сторінки вбудовують відео YouTube (через домен youtube-nocookie.com, що посилює приватність) і завантажують Google Fonts. Ці сервіси можуть встановлювати власні cookie й записувати IP-адреси згідно з власними політиками приватності.</p>"
+               "<h2>Логи сервера</h2><p>Стандартні логи вебсервера можуть записувати IP-адресу й запитану сторінку, що зберігаються з міркувань безпеки. Ми не пов'язуємо ці логи з жодною особистою ідентичністю.</p>"
+               "<h2>Ваші права</h2><p>Якщо ви в ЄС/Великій Британії, ви маєте права за GDPR. Оскільки ми не зберігаємо персональних даних, пов'язаних з вами, зазвичай немає чого надавати, виправляти чи видаляти. Звертайтеся через сторінку Контакти з будь-якими питаннями.</p>"
+               "<h2>Зміни</h2><p>Ця сторінка може змінюватися. Найновіша версія завжди за цим URL.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -2229,6 +2279,12 @@ LEGAL = {
                "<h2>제휴 없음</h2><p>이 사이트는 언급된 어떤 캠 플랫폼과도 제휴·보증·후원 관계가 없습니다. 모든 상표는 각 소유자의 자산이며 여기서는 식별 목적으로만 사용됩니다.</p>"
                "<h2>SplitCam</h2><p>SplitCam은 별개의 제품입니다. 공식 사이트 <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>에서만 다운로드하세요.</p>"
                "<h2>보증 없음</h2><p>이 사이트는 어떤 보증도 없이 «있는 그대로» 제공됩니다. 여기 게시된 정보의 사용으로 인한 손실에 대해 책임지지 않습니다.</p>"),
+        "uk": ("Умови — Streaming Guides", "Умови", "Умови використання",
+               "<h2>Аудиторія</h2><p><strong>Цей сайт для дорослих (18+).</strong> Посібники охоплюють трансляції на дорослих кам-платформах. Користуючись цим сайтом, ви підтверджуєте, що досягли повноліття у своїй юрисдикції.</p>"
+               "<h2>Лише інформація</h2><p>Посібники надаються в інформаційних цілях. Ми не можемо гарантувати точність повсякчас — платформи змінюють інтерфейси, налаштування й політики. Перевіряйте кроки в офіційному центрі допомоги платформи, перш ніж покладатися на них.</p>"
+               "<h2>Без зв'язків</h2><p>Цей сайт не пов'язаний, не схвалений і не спонсорований жодною зі згаданих кам-платформ. Усі торгові марки належать їхнім власникам і використовуються тут лише для ідентифікації.</p>"
+               "<h2>SplitCam</h2><p>SplitCam — окремий продукт. Завантажуйте його лише з офіційного сайту <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>Без гарантій</h2><p>Цей сайт надається «як є» без жодних гарантій. Ми не несемо відповідальності за будь-які збитки, спричинені використанням опублікованої тут інформації.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -2339,6 +2395,10 @@ LEGAL = {
                "<p>가이드에 대한 질문, 정정, 의견은 <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>으로 보내주세요.</p>"
                "<p>저희는 캠 플랫폼 자체의 계정·기술 지원을 처리하지 않습니다 — 그건 각 플랫폼의 공식 지원에 문의하세요.</p>"
                "<p>SplitCam 소프트웨어 지원은 <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>를 참고하세요.</p>"),
+        "uk": ("Контакти — Streaming Guides", "Контакти", "Контакти",
+               "<p>З питань, виправлень чи відгуків про посібники пишіть на <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>Ми не займаємося підтримкою акаунтів чи технічною підтримкою самих кам-платформ — з цим звертайтеся до офіційної підтримки кожної платформи.</p>"
+               "<p>Щодо підтримки програми SplitCam дивіться <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
     },
 }
 
@@ -2845,7 +2905,7 @@ def main():
     langs_data = {"en": PLATFORMS_EN}
     for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
                  "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko"):
+                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
