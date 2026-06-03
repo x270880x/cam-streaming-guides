@@ -242,6 +242,7 @@ HUB_OG = {
     "uk": ("Безкоштовна програма для cam", "Мультистрим · beauty-ефекти", "Посібники для 19 платформ · без водяного знака"),
     "cs": ("Bezplatný software pro cam", "Multistream · beauty efekty", "Návody pro 19 platforem · bez vodoznaku"),
     "sk": ("Bezplatný softvér pre cam", "Multistream · beauty efekty", "Návody pre 19 platforiem · bez vodoznaku"),
+    "sv": ("Gratis cam-sändningsmjukvara", "Multistream · skönhetsfilter", "Guider för 19 plattformar · ingen vattenstämpel"),
 }
 
 
