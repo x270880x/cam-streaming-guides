@@ -68,6 +68,8 @@ EARNINGS_FAQ = {
            "크게 다릅니다 — 용돈벌이부터 전업 수입까지. 수입은 플랫폼, 방송 시간, 분야와 시청자에 따라 다르고 플랫폼마다 수수료를 떼므로 토큰이나 팁당 당신 몫이 달라집니다. 최고 수입자는 월 수천을 벌고, 대부분은 작게 시작해 키워갑니다. 시작 전에 각 플랫폼의 토큰 가치와 정산 분배를 확인하세요."),
     "uk": ("Скільки заробляє кам-модель?",
            "Дуже по-різному — від кишенькових грошей до повноцінного доходу. Заробіток залежить від платформи, скільки годин ви транслюєте, вашої ніші й аудиторії, а кожна платформа бере комісію, тож ваша частка з кожного токена чи чайових різна. Найкращі заробляють тисячі на місяць; більшість починає з малого й росте. Перевірте вартість токена й розподіл виплат кожної платформи перед тим, як братися."),
+    "cs": ("Kolik vydělá cam modelka?",
+           "Velmi se to liší — od kapesného po plnohodnotný příjem. Výdělek závisí na platformě, kolik hodin vysíláte, vaší nice a publiku, a každá platforma si bere provizi, takže váš podíl z každého tokenu nebo tipu je jiný. Nejlépe vydělávající berou tisíce měsíčně; většina začíná po malém a roste. Zkontrolujte hodnotu tokenu a rozdělení výplat každé platformy, než se do toho pustíte."),
 }
 
 MODEL_GUIDE = {
@@ -531,6 +533,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "cs": {
+        "title": "Jak se stát cam modelkou — průvodce pro začátečníky od nuly",
+        "desc": "Jak se stát cam modelkou: požadavky, ověření věku, výběr platformy, výplaty a jak jít živě. Jasný úvodní průvodce, poté vysílání zdarma se SplitCam.",
+        "h1html": 'Jak se stát <span class="accent">cam modelkou</span>',
+        "h1short": "Stát se cam modelkou",
+        "intro": "Zvažujete kariéru cam modelky? Tohle je jasný úvodní průvodce od nuly: co opravdu potřebujete, jak funguje ověření věku a výplaty a jak jít živě. Když je nastavení hotové, vysíláte zdarma se <strong style='color:var(--text)'>SplitCam</strong> — a máme návody krok za krokem pro každou velkou platformu.",
+        "steps_h": "Od nuly k živému vysílání — krok za krokem",
+        "steps": [
+            ("Zkontrolujte požadavky", "Musí vám být <strong>18 let nebo více</strong> a musíte to umět doložit. Každá legální cam platforma vyžaduje před vysíláním ověření věku oficiálním dokladem s fotkou — váš doklad se používá jen k ověření, divákům se nezobrazuje. Potřebujete také webkameru a stabilní připojení."),
+            ("Vyberte platformu", "Různé cam stránky znamenají různé publikum, sazby výplat a pravidla. Podívejte se do našich návodů platforem a porovnejte Chaturbate, Stripchat, BongaCams, CAM4, OnlyFans a další, poté si vytvořte účet modelky tam, kde vám to sedí."),
+            ("Zaregistrujte se a ověřte", "Zaregistrujte se jako vysílající/modelka, nahrajte doklad k ověření věku a počkejte na schválení účtu — obvykle rychle. Vyberte si jméno modelky, které budete používat, a přečtěte si pravidla platformy, abyste později nenarazili."),
+            ("Nastavte si výplaty", "Vyberte způsob výplaty (bankovní převod, e-peněženka, krypto na některých stránkách) a poznamenejte si minimální výplatu a harmonogram. Každá platforma platí jinak — hodnota tokenu a rozdělení provize se liší, takže si čísla zkontrolujte, než se do toho pustíte."),
+            ("Připravte vysílání a jděte živě", "Nainstalujte si <strong>SplitCam</strong> zdarma, sestavte scénu (kamera, překryvy, beauty filtry), poté vložte stream key platformy a stiskněte Go Live. Postupujte podle návodu pro vybranou platformu — budete živě za pár minut."),
+        ],
+        "faq": [
+            ("Co potřebuji, abych mohla začít camovat?", "Základy: 18+, oficiální doklad s fotkou k ověření věku, webkameru, stabilní připojení, účet na cam platformě a bezplatný kodér jako SplitCam, který posílá vaše video na stránku."),
+            ("Musím ukázat doklad?", "Ano — každá legální platforma vyžaduje před vysíláním ověření věku a identity. Váš doklad se používá jen k potvrzení plnoletosti; divákům se nezobrazuje."),
+            ("Jaké vybavení potřebuji?", "Webkamera 1080p, slušné osvětlení a stabilní drátové připojení pokryjí základy. Samostatný mikrofon pomůže. SplitCam (zdarma) je kodér, který sestaví vaši scénu a pošle ji na platformu."),
+            ("Jak vlastně jdu živě?", "Nainstalujte SplitCam, otevřete návod své platformy, zkopírujte stream key ze stránky, vložte do SplitCam a stiskněte Go Live. Celé nastavení zabere pár minut poprvé, pak je to jedno kliknutí."),
         ],
     },
     "uk": {
