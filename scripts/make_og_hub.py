@@ -53,10 +53,12 @@ FONTS = {
     "th": [(SF + "Silom.ttf", 0), ("/Library/Fonts/Arial Unicode.ttf", 0)],
     "ar": [("/Library/Fonts/Arial Unicode.ttf", 0), (SF + "Arial Unicode.ttf", 0)],
 }
-SCRIPT_LANG = {"ko": "ko", "zh": "zh", "ja": "ja", "th": "th", "ar": "ar"}
+SCRIPT_LANG = {"ko": "ko", "zh": "zh", "ja": "ja", "th": "th", "ar": "ar",
+               "he": "ar",  # Hebrew uses Arial Unicode (same font list as ar)
+               "fa": "ar"}  # Farsi also uses Arial Unicode
 # Latin-script langs whose glyphs Arial Black does not fully cover → use the "wide" bold font
 WIDE_LANG = {"vi", "ru", "bg", "sr", "el", "uk"}
-RTL = {"ar"}
+RTL = {"ar", "he", "fa"}
 
 
 def _load(key, size):
@@ -244,6 +246,7 @@ HUB_OG = {
     "sk": ("Bezplatný softvér pre cam", "Multistream · beauty efekty", "Návody pre 19 platforiem · bez vodoznaku"),
     "sv": ("Gratis cam-sändningsmjukvara", "Multistream · skönhetsfilter", "Guider för 19 plattformar · ingen vattenstämpel"),
     "ms": ("Perisian siaran cam percuma", "Multistream · penapis kecantikan", "Panduan untuk 19 platform · tiada tera air"),
+    "he": ("תוכנת שידור קאם חינמית", "מולטיסטרים · מסנני יופי", "מדריכים ל-19 פלטפורמות · ללא סימן מים"),
 }
 
 

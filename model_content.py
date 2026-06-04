@@ -76,6 +76,8 @@ EARNINGS_FAQ = {
            "Det varierar mycket — från fickpengar till heltidsinkomst. Intäkten beror på plattformen, hur många timmar du sänder, din nisch och publik, och varje plattform tar provision, så din andel av varje token eller tips skiljer sig. De som tjänar mest drar in tusentals per månad; de flesta börjar smått och växer. Kolla varje plattforms token-värde och utbetalningsdelning innan du binder dig."),
     "ms": ("Berapa banyak model cam mendapat?",
            "Sangat berbeza — daripada wang saku hingga pendapatan sepenuh masa. Pendapatan bergantung pada platform, berapa jam anda menyiar, niche dan penonton anda, dan setiap platform mengambil komisen, jadi bahagian anda daripada setiap token atau tip berbeza. Yang berpendapatan tertinggi memperoleh ribuan sebulan; kebanyakan bermula kecil dan berkembang. Semak nilai token dan pembahagian bayaran setiap platform sebelum komited."),
+    "he": ("כמה מרוויחה דוגמנית קאם?",
+           "מאוד משתנה — מדמי כיס ועד הכנסה במשרה מלאה. ההכנסה תלויה בפלטפורמה, בכמה שעות אתם משדרים, בנישה ובקהל שלכם, וכל פלטפורמה לוקחת עמלה, כך שהחלק שלכם מכל טוקן או טיפ שונה. המרוויחות הגדולות מכניסות אלפים בחודש; רובן מתחילות בקטן וגדלות. בדקו את ערך הטוקן וחלוקת התשלומים של כל פלטפורמה לפני שתתחייבו."),
 }
 
 MODEL_GUIDE = {
@@ -539,6 +541,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "he": {
+        "title": "איך להפוך לדוגמנית קאם — מדריך למתחילים מאפס",
+        "desc": "איך להפוך לדוגמנית קאם: דרישות, אימות גיל, בחירת פלטפורמה, תשלומים ואיך לעלות ללייב. מדריך התחלה ברור, ואז שידור חינמי עם SplitCam.",
+        "h1html": 'איך להפוך ל<span class="accent">דוגמנית קאם</span>',
+        "h1short": "להפוך לדוגמנית קאם",
+        "intro": "שוקלים להפוך לדוגמנית קאם? זה מדריך התחלה ברור מאפס: מה אתם באמת צריכים, איך עובדים אימות גיל ותשלומים, ואיך לעלות ללייב. כשההגדרה מוכנה, אתם משדרים בחינם עם <strong style='color:var(--text)'>SplitCam</strong> — ויש לנו מדריכים שלב אחר שלב לכל פלטפורמה גדולה.",
+        "steps_h": "מאפס ללייב — שלב אחר שלב",
+        "steps": [
+            ("בדקו את הדרישות", "עליכם להיות <strong>בני 18 ומעלה</strong> ולהיות מסוגלים להוכיח זאת. כל פלטפורמת קאם חוקית דורשת אימות גיל עם תעודה מזהה רשמית עם תמונה לפני השידור — התעודה משמשת רק לאימות, לא מוצגת לצופים. צריך גם מצלמת אינטרנט וחיבור יציב."),
+            ("בחרו פלטפורמה", "אתרי קאם שונים פירושם קהל, תעריפי תשלום וכללים שונים. עיינו במדריכי הפלטפורמות שלנו כדי להשוות בין Chaturbate, Stripchat, BongaCams, CAM4, OnlyFans ועוד, ואז פתחו חשבון דוגמנית במקום שמתאים לכם."),
+            ("הירשמו ואמתו", "הירשמו כמשדרת/דוגמנית, העלו תעודה מזהה לאימות גיל וחכו לאישור החשבון — בדרך כלל מהיר. בחרו שם דוגמנית שתשתמשו בו וקראו את כללי הפלטפורמה כדי לא להיתקל מאוחר יותר."),
+            ("הגדירו את התשלומים", "בחרו איך לקבל תשלום (העברה בנקאית, ארנק דיגיטלי, קריפטו בחלק מהאתרים) ושימו לב לתשלום המינימלי וללוח הזמנים. כל פלטפורמה משלמת אחרת — ערך הטוקן וחלוקת העמלה משתנים, אז בדקו את המספרים לפני שתתחייבו."),
+            ("הכינו את השידור ועלו ללייב", "התקינו את <strong>SplitCam</strong> החינמי, בנו את הסצנה (מצלמה, שכבות, מסנני יופי), ואז הדביקו את מפתח השידור של הפלטפורמה ולחצו Go Live. עקבו אחרי המדריך לפלטפורמה שבחרתם — תהיו בלייב תוך דקות."),
+        ],
+        "faq": [
+            ("מה אני צריכה כדי להתחיל קאם?", "היסודות: גיל 18+, תעודה מזהה רשמית עם תמונה לאימות גיל, מצלמת אינטרנט, חיבור יציב, חשבון בפלטפורמת קאם ותוכנת מקודד חינמית כמו SplitCam כדי לשלוח את הווידאו לאתר."),
+            ("האם אני חייבת להראות תעודה מזהה?", "כן — כל פלטפורמה חוקית דורשת אימות גיל וזהות לפני השידור. התעודה משמשת רק לאישור שאתם בגיל המתאים; היא לא מוצגת לצופים."),
+            ("איזה ציוד צריך?", "מצלמת אינטרנט 1080p, תאורה סבירה וחיבור קווי יציב מכסים את היסודות. מיקרופון נפרד עוזר. SplitCam (חינמי) הוא המקודד שבונה את הסצנה ושולח אותה לפלטפורמה."),
+            ("איך אני בעצם עולה ללייב?", "התקינו SplitCam, פתחו את המדריך לפלטפורמה שלכם, העתיקו את מפתח השידור מהאתר, הדביקו ב-SplitCam ולחצו Go Live. כל ההגדרה לוקחת כמה דקות בפעם הראשונה, ואז זו לחיצה אחת."),
         ],
     },
     "ms": {

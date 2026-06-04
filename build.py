@@ -29,7 +29,7 @@ OBS_NAV = {
     "ja": "SplitCam vs OBS", "ar": "SplitCam مقابل OBS", "th": "SplitCam vs OBS",
     "fil": "SplitCam vs OBS", "tr": "SplitCam vs OBS", "id": "SplitCam vs OBS", "vi": "SplitCam vs OBS",
     "pl": "SplitCam vs OBS", "ko": "SplitCam vs OBS", "uk": "SplitCam проти OBS", "cs": "SplitCam vs OBS",
-    "sk": "SplitCam vs OBS", "sv": "SplitCam vs OBS", "ms": "SplitCam vs OBS",
+    "sk": "SplitCam vs OBS", "sv": "SplitCam vs OBS", "ms": "SplitCam vs OBS", "he": "SplitCam מול OBS",
 }
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
@@ -44,11 +44,12 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "no": "nb_NO", "sr": "sr_RS", "hr": "hr_HR",
              "zh": "zh_CN", "ja": "ja_JP", "ar": "ar_AR",
              "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID", "vi": "vi_VN", "pl": "pl_PL",
-             "ko": "ko_KR", "uk": "uk_UA", "cs": "cs_CZ", "sk": "sk_SK", "sv": "sv_SE", "ms": "ms_MY"}
+             "ko": "ko_KR", "uk": "uk_UA", "cs": "cs_CZ", "sk": "sk_SK", "sv": "sv_SE", "ms": "ms_MY",
+             "he": "he_IL"}
 LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
                "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk", "cs", "sk", "sv", "ms"]  # set by main() to those with platforms_<lang>.py
-RTL_LANGS = {"ar"}  # languages that need dir="rtl" on <html>
+               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk", "cs", "sk", "sv", "ms", "he"]  # set by main() to those with platforms_<lang>.py
+RTL_LANGS = {"ar", "he", "fa"}  # languages that need dir="rtl" on <html>
 
 
 # Inline JS that auto-redirects visitors to their browser-preferred language.
@@ -536,6 +537,14 @@ UI = {
            "updated": "Kemas kini terakhir", "about": "Tentang", "contact": "Hubungi",
            "privacy": "Privasi", "terms": "Terma",
            "path": "ms/", "lang": "ms"},
+    "he": {"home": "כל המדריכים", "download": "הורדת SplitCam", "crumb_home": "מדריכים",
+           "skip": "דלגו לשלבים", "related": "מדריכים לפלטפורמות אחרות",
+           "quick": "תשובה מהירה", "steps_h": "שלב אחר שלב",
+           "tips_h": "טיפים מקצועיים", "faq_h": "שאלות נפוצות", "cta_h": "מוכנים לעלות ללייב?",
+           "cta_p": "תוכנה חינמית. ללא סימן מים, ללא הרשמה. הגדירו פעם אחת, עלו ללייב בלחיצה אחת.",
+           "updated": "עודכן לאחרונה", "about": "אודות", "contact": "צור קשר",
+           "privacy": "פרטיות", "terms": "תנאים",
+           "path": "he/", "lang": "he"},
 }
 
 def e(s):
@@ -918,6 +927,17 @@ STEP_TMPL = {
         ("Klik Go Live",
          "Tekan <strong>Go Live</strong> dalam SplitCam, kemudian mula siaran di {name}. Dalam ~10 saat suapan kamera anda live. Siaran seterusnya hanya satu klik — buka SplitCam, Go Live."),
     ],
+    "he": [
+        ("הורידו והתקינו SplitCam",
+         "‏SplitCam היא תוכנת שידור חי חינמית ל-Windows ו-macOS. הורידו והריצו את ההתקנה — ללא הרשמה, ללא כרטיס, ללא סימן מים, ללא הגבלת זמן. זה המקודד ששולח את הווידאו שלכם ל-{name}."),
+        ("הגדירו מצלמה וסצנה",
+         "פתחו SplitCam והוסיפו את המצלמה. בנו את הסצנה כפי שאתם רוצים שהצופים יראו — שכבות, טקסט, מצלמה שנייה או טלפון, מסנני יופי או רקע AI. הכול מוחל בזמן אמת לפני שהזרם עוזב את המחשב."),
+        ("קבלו מפתח שידור של {name}", "{key}"),
+        ("חברו את SplitCam ל-{name}",
+         "ב-SplitCam פתחו <strong>Stream Settings</strong>, הדביקו את URL השרת ומפתח השידור של {name} בשדות ה-RTMP המותאם. הגדירו ביטרייט 3,500–6,000&nbsp;Kbps ל-1080p, 2,000–4,000&nbsp;Kbps ל-720p, והריצו קודם את בדיקת המהירות המובנית."),
+        ("לחצו Go Live",
+         "לחצו <strong>Go Live</strong> ב-SplitCam, ואז התחילו את השידור ב-{name}. תוך ~10 שניות המצלמה שלכם בלייב. השידורים הבאים בלחיצה אחת — פתחו SplitCam, Go Live."),
+    ],
 }
 
 
@@ -960,6 +980,7 @@ TROUBLE_H = {
     "sk": "Riešenie problémov",
     "sv": "Felsökning",
     "ms": "Penyelesaian masalah",
+    "he": "פתרון בעיות",
 }
 
 # Common encoder-level streaming problems and fixes. {name} = platform name.
@@ -1350,6 +1371,18 @@ TROUBLE_TMPL = {
         ("Tiada audio atau audio tak segerak di {name}",
          "Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon sebenar anda dalam sumber audio SplitCam. Jika audio ketinggalan daripada video, turunkan resolusi satu peringkat — pengekod terlebih beban dan audio menunggu bingkai yang lewat."),
     ],
+    "he": [
+        ("השידור ב-{name} נתקע או באפרינג",
+         "כמעט תמיד הביטרייט מוגדר גבוה ממה שההעלאה שלכם נושאת. הריצו את בדיקת המהירות המובנית של SplitCam, ואז הגדירו ביטרייט לכ-75% מההעלאה הנמדדת — 3,500–6,000&nbsp;Kbps ל-1080p, נמוך יותר ל-720p. התקיעות נעלמת ברגע שהמקודד מפסיק לחרוג מהקו שלכם."),
+        ("פריימים שאבדו במהלך שידור {name}",
+         "פריימים שאבדו פירושם שחבילות לא מגיעות ל-{name} בזמן — בדרך כלל Wi-Fi לא יציב. עברו ל-Ethernet קווי, סגרו אפליקציות שאוכלות רוחב פס והורידו מעט את הביטרייט. קפיצה בודדת לא נורא; עלייה מתמשכת פירושה שהקו לא עומד בקצב."),
+        ("מסך שחור — הצופים לא רואים וידאו ב-{name}",
+         "המצלמה שלכם לא נבחרה כמקור פעיל ב-SplitCam, או שאפליקציה אחרת מחזיקה אותה. סגרו Zoom, Skype או OBS, בחרו שוב את המצלמה ברשימת המקורות של SplitCam וודאו שהתצוגה המקדימה מציגה את התמונה לפני לחיצה על Go Live."),
+        ("{name} דוחה את מפתח השידור או לא מתחבר",
+         "העתיקו שוב את מפתח השידור — רווח בסוף או מפתח ישן שאופס הם הסיבות הנפוצות. ודאו ש-URL השרת תואם למה ש-{name} מציג וששידור במקודד חיצוני מופעל בחשבון. המחוון הירוק ב-Stream Settings של SplitCam מאשר מפתח תקף."),
+        ("אין אודיו או אודיו לא מסונכרן ב-{name}",
+         "בחרו SplitCam גם כמצלמה וגם כמיקרופון, ובחרו את המיקרופון האמיתי שלכם בתוך מקור האודיו של SplitCam. אם האודיו מפגר אחרי הווידאו, הורידו את הרזולוציה ברמה אחת — המקודד עמוס מדי והאודיו מחכה לפריימים מאוחרים."),
+    ],
 }
 
 
@@ -1368,11 +1401,11 @@ def render_trouble(slug, name, lang):
 LANG_LABEL = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "fr": "FR", "it": "IT",
               "pt": "PT", "nl": "NL", "ro": "RO", "bg": "BG", "hu": "HU",
               "el": "EL", "fi": "FI", "da": "DA", "no": "NO", "sr": "SR", "hr": "HR",
-              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI", "pl": "PL", "ko": "KO", "uk": "UK", "cs": "CS", "sk": "SK", "sv": "SV", "ms": "MS"}
+              "zh": "中", "ja": "日", "ar": "ع", "th": "ไทย", "fil": "FIL", "tr": "TR", "id": "ID", "vi": "VI", "pl": "PL", "ko": "KO", "uk": "UK", "cs": "CS", "sk": "SK", "sv": "SV", "ms": "MS", "he": "עב"}
 LANG_FLAG = {"en": "🇬🇧", "ru": "🇷🇺", "es": "🇪🇸", "de": "🇩🇪", "fr": "🇫🇷", "it": "🇮🇹",
              "pt": "🇧🇷", "nl": "🇳🇱", "ro": "🇷🇴", "bg": "🇧🇬", "hu": "🇭🇺",
              "el": "🇬🇷", "fi": "🇫🇮", "da": "🇩🇰", "no": "🇳🇴", "sr": "🇷🇸", "hr": "🇭🇷",
-             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳", "pl": "🇵🇱", "ko": "🇰🇷", "uk": "🇺🇦", "cs": "🇨🇿", "sk": "🇸🇰", "sv": "🇸🇪", "ms": "🇲🇾"}
+             "zh": "🇨🇳", "ja": "🇯🇵", "ar": "🇸🇦", "th": "🇹🇭", "fil": "🇵🇭", "tr": "🇹🇷", "id": "🇮🇩", "vi": "🇻🇳", "pl": "🇵🇱", "ko": "🇰🇷", "uk": "🇺🇦", "cs": "🇨🇿", "sk": "🇸🇰", "sv": "🇸🇪", "ms": "🇲🇾", "he": "🇮🇱"}
 LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": "Deutsch",
                "fr": "Français", "it": "Italiano", "pt": "Português", "nl": "Nederlands",
                "ro": "Română", "bg": "Български", "hu": "Magyar", "el": "Ελληνικά",
@@ -1380,11 +1413,11 @@ LANG_NATIVE = {"en": "English", "ru": "Русский", "es": "Español", "de": 
                "zh": "中文", "ja": "日本語", "ar": "العربية", "th": "ไทย", "fil": "Filipino",
                "tr": "Türkçe", "id": "Bahasa Indonesia", "vi": "Tiếng Việt", "pl": "Polski", "ko": "한국어",
                "uk": "Українська", "cs": "Čeština", "sk": "Slovenčina", "sv": "Svenska",
-               "ms": "Bahasa Melayu"}
+               "ms": "Bahasa Melayu", "he": "עברית"}
 LANG_PATH = {"en": "", "ru": "ru/", "es": "es/", "de": "de/", "fr": "fr/", "it": "it/",
              "pt": "pt/", "nl": "nl/", "ro": "ro/", "bg": "bg/", "hu": "hu/",
              "el": "el/", "fi": "fi/", "da": "da/", "no": "no/", "sr": "sr/", "hr": "hr/",
-             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/", "pl": "pl/", "ko": "ko/", "uk": "uk/", "cs": "cs/", "sk": "sk/", "sv": "sv/", "ms": "ms/"}
+             "zh": "zh/", "ja": "ja/", "ar": "ar/", "th": "th/", "fil": "fil/", "tr": "tr/", "id": "id/", "vi": "vi/", "pl": "pl/", "ko": "ko/", "uk": "uk/", "cs": "cs/", "sk": "sk/", "sv": "sv/", "ms": "ms/", "he": "he/"}
 
 
 # YouTube video IDs per platform (one tutorial video each, language-agnostic).
@@ -1406,7 +1439,8 @@ VIDEO_H = {"en": "Video guide", "ru": "Видео-гайд", "es": "Guía en ví
            "zh": "视频指南", "ja": "ビデオガイド", "ar": "دليل الفيديو",
            "th": "คู่มือวิดีโอ", "fil": "Gabay sa video", "tr": "Video rehberi", "id": "Panduan video",
            "vi": "Video hướng dẫn", "pl": "Poradnik wideo", "ko": "영상 가이드", "uk": "Відеопосібник",
-           "cs": "Videonávod", "sk": "Videonávod", "sv": "Videoguide", "ms": "Panduan video"}
+           "cs": "Videonávod", "sk": "Videonávod", "sv": "Videoguide", "ms": "Panduan video",
+           "he": "מדריך וידאו"}
 COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "es": "Guía de configuración",
                 "de": "Setup-Anleitung", "fr": "Guide d'installation", "it": "Guida alla configurazione",
                 "pt": "Guia de configuração", "nl": "Installatiegids",
@@ -1417,7 +1451,8 @@ COLLAB_LABEL = {"en": "Setup guide", "ru": "Гайд по настройке", "
                 "zh": "设置指南", "ja": "セットアップガイド", "ar": "دليل الإعداد",
                 "th": "คู่มือการตั้งค่า", "fil": "Gabay sa setup", "tr": "Kurulum rehberi", "id": "Panduan setup",
                 "vi": "Hướng dẫn thiết lập", "pl": "Poradnik konfiguracji", "ko": "설정 가이드", "uk": "Посібник з налаштування",
-                "cs": "Návod k nastavení", "sk": "Návod na nastavenie", "sv": "Installationsguide", "ms": "Panduan persediaan"}
+                "cs": "Návod k nastavení", "sk": "Návod na nastavenie", "sv": "Installationsguide", "ms": "Panduan persediaan",
+                "he": "מדריך הגדרה"}
 
 # Brand-ish accent colour per platform — used for the hero collab badge.
 BRAND = {
@@ -1491,6 +1526,7 @@ SUPPORT_LABELS = {
     "sk": ("Oficiálna podpora", "Sme nezávislý sprievodca. S problémami s účtom, platbami alebo technikou sa obráťte priamo na oficiálnu podporu platformy."),
     "sv": ("Officiell support", "Vi är en oberoende guide. För konto-, betalnings- eller tekniska problem, kontakta plattformens officiella support direkt."),
     "ms": ("Sokongan rasmi", "Kami panduan bebas. Untuk isu akaun, pembayaran atau teknikal, hubungi sokongan rasmi platform secara terus."),
+    "he": ("תמיכה רשמית", "אנחנו מדריך עצמאי. לבעיות חשבון, תשלום או טכניות, פנו ישירות לתמיכה הרשמית של הפלטפורמה."),
 }
 
 
@@ -1988,6 +2024,12 @@ HUB = {
            "sub": "Persediaan langkah demi langkah untuk menyiar di mana-mana platform cam dengan SplitCam "
                   "percuma — pengekod luaran, adegan, tindihan, tiada tera air.",
            "pick": "Pilih platform anda"},
+    "he": {"title": "מדריכי שידור — שידור קאם עם SplitCam",
+           "desc": "מדריכים חינמיים שלב אחר שלב לשידור בכל פלטפורמת קאם עם SplitCam.",
+           "h1": 'מדריכי <span class="accent">שידור קאם</span> חינמיים',
+           "sub": "הגדרה שלב אחר שלב לשידור בכל פלטפורמת קאם עם SplitCam "
+                  "החינמי — מקודד חיצוני, סצנות, שכבות, ללא סימן מים.",
+           "pick": "בחרו את הפלטפורמה שלכם"},
 }
 
 
@@ -2121,6 +2163,10 @@ LEGAL = {
                "<p>Streaming Guides ialah sumber percuma dan bebas tentang cara menyediakan siaran langsung di platform cam dewasa dengan <strong>SplitCam</strong> — perisian penstriman percuma tanpa tera air untuk Windows dan macOS.</p>"
                "<p>Kami merangkumi 19 platform dengan panduan langkah demi langkah, petua penyelesaian masalah dan butiran teknikal terkini — daripada mencari kunci strim anda di setiap tapak hingga memilih bitrate yang betul.</p>"
                "<p>Tapak ini tidak bergabung dengan mana-mana platform yang disenaraikan. Semua nama jenama dan logo milik pemilik masing-masing.</p>"),
+        "he": ("אודות — Streaming Guides", "אודות", "אודות Streaming Guides",
+               "<p>Streaming Guides הוא מקור חינמי ועצמאי על הגדרת שידורים חיים בפלטפורמות קאם למבוגרים עם <strong>SplitCam</strong> — תוכנת שידור חינמית ללא סימן מים ל-Windows ו-macOS.</p>"
+               "<p>אנחנו מכסים 19 פלטפורמות במדריכים שלב אחר שלב, טיפים לפתרון בעיות ופרטים טכניים עדכניים — ממציאת מפתח השידור בכל אתר ועד בחירת הביטרייט הנכון.</p>"
+               "<p>אתר זה אינו מסונף לאף אחת מהפלטפורמות המופיעות. כל שמות המותגים והלוגואים שייכים לבעליהם.</p>"),
     },
     "privacy": {
         "en": ("Privacy Policy — Streaming Guides", "Privacy Policy", "Privacy Policy",
@@ -2315,6 +2361,12 @@ LEGAL = {
                "<h2>Log pelayan</h2><p>Log pelayan web standard mungkin merekod alamat IP dan halaman yang diminta, disimpan untuk tujuan keselamatan. Kami tidak mengaitkan log ini dengan sebarang identiti peribadi.</p>"
                "<h2>Hak anda</h2><p>Jika anda di EU/UK, anda mempunyai hak di bawah GDPR. Kerana kami tidak menyimpan data peribadi yang dikaitkan dengan anda, biasanya tiada apa-apa untuk diakses, dibetulkan atau dipadam. Hubungi kami melalui halaman Hubungi untuk sebarang pertanyaan.</p>"
                "<h2>Perubahan</h2><p>Halaman ini boleh berubah. Versi terkini sentiasa di URL ini.</p>"),
+        "he": ("פרטיות — Streaming Guides", "פרטיות", "מדיניות פרטיות",
+               "<h2>מה אנחנו אוספים</h2><p>Streaming Guides הוא אתר סטטי. איננו משתמשים בעוגיות, חשבונות, טפסים או אנליטיקה שמזהים אתכם אישית. איננו מפעילים פרסומות או עוקבי שותפים.</p>"
+               "<h2>שירותי צד שלישי</h2><p>הדפים מטמיעים סרטוני YouTube (דרך הדומיין youtube-nocookie.com משפר הפרטיות) וטוענים Google Fonts. שירותים אלה עשויים להגדיר עוגיות משלהם ולתעד כתובות IP לפי מדיניות הפרטיות שלהם.</p>"
+               "<h2>יומני שרת</h2><p>יומני שרת אינטרנט סטנדרטיים עשויים לתעד את כתובת ה-IP ואת הדף המבוקש, נשמרים למטרות אבטחה. איננו מקשרים יומנים אלה לשום זהות אישית.</p>"
+               "<h2>הזכויות שלכם</h2><p>אם אתם באיחוד האירופי/בריטניה, יש לכם זכויות לפי GDPR. מכיוון שאיננו שומרים נתונים אישיים הקשורים אליכם, בדרך כלל אין מה לגשת אליו, לתקן או למחוק. צרו קשר דרך עמוד צור קשר לכל שאלה.</p>"
+               "<h2>שינויים</h2><p>דף זה עשוי להשתנות. הגרסה העדכנית ביותר תמיד בכתובת זו.</p>"),
     },
     "terms": {
         "en": ("Terms of Use — Streaming Guides", "Terms of Use", "Terms of Use",
@@ -2509,6 +2561,12 @@ LEGAL = {
                "<h2>Tiada gabungan</h2><p>Tapak ini tidak bergabung, disokong atau ditaja oleh mana-mana platform cam yang dirujuk. Semua tanda dagangan milik pemilik masing-masing dan digunakan di sini hanya untuk pengenalan.</p>"
                "<h2>SplitCam</h2><p>SplitCam ialah produk berasingan. Muat turun hanya dari tapak rasmi <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
                "<h2>Tiada jaminan</h2><p>Tapak ini disediakan «sebagaimana adanya» tanpa sebarang jaminan. Kami tidak bertanggungjawab atas sebarang kerugian akibat penggunaan maklumat yang diterbitkan di sini.</p>"),
+        "he": ("תנאים — Streaming Guides", "תנאים", "תנאי שימוש",
+               "<h2>קהל</h2><p><strong>אתר זה מיועד למבוגרים (18+).</strong> המדריכים מכסים שידור בפלטפורמות קאם למבוגרים. בשימוש באתר זה אתם מאשרים שאתם בגיל חוקי בתחום השיפוט שלכם.</p>"
+               "<h2>מידע בלבד</h2><p>המדריכים מסופקים למטרות מידע. איננו יכולים להבטיח דיוק בכל עת — הפלטפורמות משנות ממשקים, הגדרות ומדיניות. אמתו את השלבים במרכז העזרה הרשמי של הפלטפורמה לפני שתסתמכו עליהם.</p>"
+               "<h2>ללא קשרים</h2><p>אתר זה אינו מסונף, מאושר או ממומן על ידי אף אחת מפלטפורמות הקאם המוזכרות. כל הסימנים המסחריים שייכים לבעליהם ומשמשים כאן לזיהוי בלבד.</p>"
+               "<h2>SplitCam</h2><p>SplitCam הוא מוצר נפרד. הורידו אותו רק מהאתר הרשמי <a href='https://splitcam.com/' rel='nofollow'>splitcam.com</a>.</p>"
+               "<h2>ללא אחריות</h2><p>אתר זה מסופק «כפי שהוא» ללא כל אחריות. איננו אחראים לכל אובדן שנגרם משימוש במידע המתפרסם כאן.</p>"),
     },
     "contact": {
         "en": ("Contact — Streaming Guides", "Contact", "Contact",
@@ -2639,6 +2697,10 @@ LEGAL = {
                "<p>Untuk pertanyaan, pembetulan atau maklum balas tentang panduan, tulis ke <a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
                "<p>Kami tidak mengendalikan sokongan akaun atau teknikal untuk platform cam itu sendiri — hubungi sokongan rasmi setiap platform untuk itu.</p>"
                "<p>Untuk sokongan perisian SplitCam, lihat <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
+        "he": ("צור קשר — Streaming Guides", "צור קשר", "צור קשר",
+               "<p>לשאלות, תיקונים או משוב על המדריכים, כתבו ל-<a href=\"mailto:hello@camstreamguide.com\">hello@camstreamguide.com</a>.</p>"
+               "<p>איננו מטפלים בתמיכת חשבון או תמיכה טכנית לפלטפורמות הקאם עצמן — פנו לתמיכה הרשמית של כל פלטפורמה לשם כך.</p>"
+               "<p>לתמיכה בתוכנת SplitCam, ראו <a href=\"https://splitcam.com/support\" rel=\"nofollow\">splitcam.com/support</a>.</p>"),
     },
 }
 
@@ -3145,7 +3207,7 @@ def main():
     langs_data = {"en": PLATFORMS_EN}
     for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
                  "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk", "cs", "sk", "sv", "ms"):
+                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk", "cs", "sk", "sv", "ms", "he"):
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
