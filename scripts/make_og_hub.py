@@ -52,10 +52,12 @@ FONTS = {
     "ja": [(SYS + "Hiragino Sans GB.ttc", 1), (SYS + "Hiragino Sans GB.ttc", 0), ("/Library/Fonts/Arial Unicode.ttf", 0)],
     "th": [(SF + "Silom.ttf", 0), ("/Library/Fonts/Arial Unicode.ttf", 0)],
     "ar": [("/Library/Fonts/Arial Unicode.ttf", 0), (SF + "Arial Unicode.ttf", 0)],
+    "hi": [(SYS + "Kohinoor.ttc", 1), (SYS + "Kohinoor.ttc", 0), ("/Library/Fonts/Arial Unicode.ttf", 0)],
 }
 SCRIPT_LANG = {"ko": "ko", "zh": "zh", "ja": "ja", "th": "th", "ar": "ar",
                "he": "ar",  # Hebrew uses Arial Unicode (same font list as ar)
-               "fa": "ar"}  # Farsi also uses Arial Unicode
+               "fa": "ar",  # Farsi also uses Arial Unicode
+               "hi": "hi"}  # Hindi uses Kohinoor Devanagari
 # Latin-script langs whose glyphs Arial Black does not fully cover → use the "wide" bold font
 WIDE_LANG = {"vi", "ru", "bg", "sr", "el", "uk"}
 RTL = {"ar", "he", "fa"}
@@ -248,6 +250,7 @@ HUB_OG = {
     "ms": ("Perisian siaran cam percuma", "Multistream · penapis kecantikan", "Panduan untuk 19 platform · tiada tera air"),
     "he": ("תוכנת שידור קאם חינמית", "מולטיסטרים · מסנני יופי", "מדריכים ל-19 פלטפורמות · ללא סימן מים"),
     "fa": ("نرم‌افزار پخش کم رایگان", "مولتی‌استریم · فیلترهای زیبایی", "راهنما برای ۱۹ پلتفرم · بدون واترمارک"),
+    "hi": ("मुफ़्त कैम स्ट्रीमिंग सॉफ़्टवेयर", "मल्टीस्ट्रीम · ब्यूटी इफ़ेक्ट", "19 प्लेटफ़ॉर्म के लिए गाइड · कोई वॉटरमार्क नहीं"),
 }
 
 
