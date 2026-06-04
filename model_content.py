@@ -76,6 +76,8 @@ EARNINGS_FAQ = {
            "Det varierar mycket — från fickpengar till heltidsinkomst. Intäkten beror på plattformen, hur många timmar du sänder, din nisch och publik, och varje plattform tar provision, så din andel av varje token eller tips skiljer sig. De som tjänar mest drar in tusentals per månad; de flesta börjar smått och växer. Kolla varje plattforms token-värde och utbetalningsdelning innan du binder dig."),
     "ms": ("Berapa banyak model cam mendapat?",
            "Sangat berbeza — daripada wang saku hingga pendapatan sepenuh masa. Pendapatan bergantung pada platform, berapa jam anda menyiar, niche dan penonton anda, dan setiap platform mengambil komisen, jadi bahagian anda daripada setiap token atau tip berbeza. Yang berpendapatan tertinggi memperoleh ribuan sebulan; kebanyakan bermula kecil dan berkembang. Semak nilai token dan pembahagian bayaran setiap platform sebelum komited."),
+    "fa": ("یک مدل کم چقدر درمی‌آورد؟",
+           "بسیار متفاوت است — از پول توجیبی تا درآمد تمام‌وقت. درآمد به پلتفرم، تعداد ساعات پخش، حوزه و مخاطبان شما بستگی دارد، و هر پلتفرم کمیسیون می‌گیرد. قبل از تعهد ارزش توکن و تقسیم پرداخت هر پلتفرم را بررسی کنید."),
     "he": ("כמה מרוויחה דוגמנית קאם?",
            "מאוד משתנה — מדמי כיס ועד הכנסה במשרה מלאה. ההכנסה תלויה בפלטפורמה, בכמה שעות אתם משדרים, בנישה ובקהל שלכם, וכל פלטפורמה לוקחת עמלה, כך שהחלק שלכם מכל טוקן או טיפ שונה. המרוויחות הגדולות מכניסות אלפים בחודש; רובן מתחילות בקטן וגדלות. בדקו את ערך הטוקן וחלוקת התשלומים של כל פלטפורמה לפני שתתחייבו."),
 }
@@ -541,6 +543,27 @@ MODEL_GUIDE = {
             ("Kailangan ko bang ipakita ang ID ko?", "Oo — bawat lehitimong platform ay nangangailangan ng age at identity verification bago ka makapag-broadcast. Ang ID mo ay ginagamit lang para kumpirmahing nasa legal na edad ka; hindi ito ipinapakita sa mga viewer."),
             ("Anong equipment ang kailangan ko?", "Isang 1080p webcam, maayos na ilaw at stable na wired na koneksyon ang sumasaklaw sa basics. Nakakatulong ang hiwalay na mikropono. Ang SplitCam (libre) ang encoder na bumubuo ng scene mo at nagpapadala nito sa platform."),
             ("Paano ba talaga mag-live?", "I-install ang SplitCam, buksan ang gabay para sa platform mo, kopyahin ang stream key mula sa site, i-paste sa SplitCam at pindutin ang Go Live. Ang buong setup ay ilang minuto sa unang pagkakataon, tapos isang click na lang."),
+        ],
+    },
+    "fa": {
+        "title": "چگونه مدل کم شویم — راهنمای مبتدیان از صفر",
+        "desc": "چگونه مدل کم شویم: الزامات، تأیید سن، انتخاب پلتفرم، پرداخت‌ها و نحوه پخش زنده. راهنمای شروع واضح، سپس پخش رایگان با SplitCam.",
+        "h1html": 'چگونه <span class="accent">مدل کم</span> شویم',
+        "h1short": "مدل کم شوید",
+        "intro": "به مدل کم شدن فکر می‌کنید؟ این یک راهنمای شروع واضح از صفر است: واقعاً به چه چیزی نیاز دارید، تأیید سن و پرداخت‌ها چگونه کار می‌کند، و چگونه پخش زنده کنید. پس از اتمام تنظیمات، با <strong style='color:var(--text)'>SplitCam</strong> رایگان پخش می‌کنید.",
+        "steps_h": "از صفر تا پخش زنده — گام‌به‌گام",
+        "steps": [
+            ("الزامات را بررسی کنید", "باید <strong>۱۸ ساله یا بالاتر</strong> باشید و بتوانید آن را اثبات کنید. هر پلتفرم کم قانونی قبل از پخش تأیید سن با مدرک رسمی عکس‌دار می‌خواهد — مدرک شما فقط برای تأیید استفاده می‌شود، به بینندگان نشان داده نمی‌شود. همچنین به وب‌کم و اتصال پایدار نیاز دارید."),
+            ("پلتفرم انتخاب کنید", "سایت‌های کم مختلف به معنای مخاطبان، نرخ‌های پرداخت و قوانین مختلف هستند. راهنماهای پلتفرم ما را برای مقایسه Chaturbate، Stripchat، BongaCams، CAM4، OnlyFans و بیشتر ببینید."),
+            ("ثبت‌نام و تأیید کنید", "به عنوان پخش‌کننده/مدل ثبت‌نام کنید، مدرک را برای تأیید سن آپلود کنید و منتظر تأیید حساب بمانید — معمولاً سریع است."),
+            ("پرداخت‌هایتان را تنظیم کنید", "روش دریافت پرداخت را انتخاب کنید (انتقال بانکی، کیف پول الکترونیکی، رمزارز در برخی سایت‌ها) و حداقل پرداخت و برنامه را یادداشت کنید."),
+            ("پخش را آماده کرده و پخش زنده کنید", "<strong>SplitCam</strong> رایگان را نصب کنید، صحنه خود را بسازید (دوربین، پوشش‌ها، فیلترهای زیبایی)، سپس کلید جریان پلتفرم را جای‌گذاری کنید و Go Live را فشار دهید."),
+        ],
+        "faq": [
+            ("برای شروع کم چه چیزی نیاز دارم؟", "اصول: ۱۸+، مدرک رسمی عکس‌دار برای تأیید سن، وب‌کم، اتصال پایدار، حساب در یک پلتفرم کم و نرم‌افزار رمزگذار رایگان مثل SplitCam."),
+            ("آیا باید مدرک نشان دهم؟", "بله — هر پلتفرم قانونی قبل از پخش تأیید سن و هویت می‌خواهد. مدرک شما فقط برای تأیید بلوغ استفاده می‌شود؛ به بینندگان نشان داده نمی‌شود."),
+            ("چه تجهیزاتی لازم است؟", "وب‌کم ۱۰۸۰p، نور مناسب و اتصال سیمی پایدار اصول را پوشش می‌دهد. میکروفون جداگانه کمک می‌کند. SplitCam (رایگان) رمزگذاری است که صحنه شما را می‌سازد و به پلتفرم ارسال می‌کند."),
+            ("چطور واقعاً پخش زنده می‌کنم؟", "SplitCam را نصب کنید، راهنمای پلتفرم خود را باز کنید، کلید جریان را از سایت کپی کنید، در SplitCam جای‌گذاری کنید و Go Live را فشار دهید."),
         ],
     },
     "he": {

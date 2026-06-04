@@ -247,6 +247,7 @@ HUB_OG = {
     "sv": ("Gratis cam-sändningsmjukvara", "Multistream · skönhetsfilter", "Guider för 19 plattformar · ingen vattenstämpel"),
     "ms": ("Perisian siaran cam percuma", "Multistream · penapis kecantikan", "Panduan untuk 19 platform · tiada tera air"),
     "he": ("תוכנת שידור קאם חינמית", "מולטיסטרים · מסנני יופי", "מדריכים ל-19 פלטפורמות · ללא סימן מים"),
+    "fa": ("نرم‌افزار پخش کم رایگان", "مولتی‌استریم · فیلترهای زیبایی", "راهنما برای ۱۹ پلتفرم · بدون واترمارک"),
 }
 
 
