@@ -733,4 +733,103 @@ PLATFORMS_RO = [
          ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online din Performer Dashboard. În ~10 secunde stream-ul ajunge la Camversity."),
      ],
     },
+    {"slug": "skyprivate", "name": "SkyPrivate",
+     "title": "Cum folosești SkyPrivate cu SplitCam — apeluri cam private prin Skype",
+     "desc": "Folosește SkyPrivate cu SplitCam gratuit ca virtual camera — apeluri cam private prin Skype cu plată pe minut, scene multi-cameră, beauty filters. Fără filigran, fără înregistrare.",
+     "kw": "skyprivate, sky private cam, skype cam private, skyprivate splitcam, skyprivate virtual camera, cam plată pe minut",
+     "h1html": 'Cum folosești <span class="accent">SkyPrivate</span> cu SplitCam',
+     "h1short": "SplitCam pe SkyPrivate",
+     "card": "Setup virtual camera pentru apelurile cam prin Skype ale SkyPrivate.",
+     "intro": "SkyPrivate e o platformă cam aparte — în loc de transmisie RTMP, monetizează <strong>apeluri cam private prin Skype, cu plată pe minut</strong>. Clienții rezervă și plătesc pe minut în marketplace-ul SkyPrivate, apoi apelul video efectiv rulează prin Skype. <strong style='color:var(--text)'>SplitCam</strong> gratuit se conectează ca <strong>virtual camera</strong>: îți construiești scena în SplitCam, apoi alegi SplitCam ca cameră în Skype înainte să răspunzi unui apel rezervat prin SkyPrivate.",
+     "quick": "Folosește SkyPrivate cu SplitCam: instalezi SplitCam, construiești scena, instalezi Skype cu add-on-ul SkyPrivate, în <em>Video Settings</em> din Skype selectezi SplitCam ca cameră și microfon, apoi răspunzi apelurilor rezervate prin SkyPrivate — Skype livrează clientului scena compusă."
+              "<ol><li>Instalează SplitCam.</li><li>Construiește scena în SplitCam.</li>"
+              "<li>Instalează Skype + add-on SkyPrivate.</li><li>Selectează SplitCam ca cameră în Skype.</li>"
+              "<li>Răspunde apelurilor.</li></ol>",
+     "key_how": "SkyPrivate nu folosește RTMP sau stream key — folosește Skype ca transport video cu un add-on de facturare pe minut. Instalează Skype, instalează add-on-ul de browser/desktop SkyPrivate, apoi în Skype deschide <strong>Settings → Audio &amp; Video → Camera</strong> și selectează <strong>SplitCam</strong> în locul webcam-ului. Scena compusă în SplitCam (overlay-uri, multi-cameră, beauty filters) devine ce vede clientul SkyPrivate prin Skype.",
+     "tips": [
+         ("Fără RTMP — flux de virtual camera", "Nu căuta URL server sau stream key. SkyPrivate rulează prin Skype, iar Skype vede SplitCam doar ca un webcam. Construiește scena în SplitCam, apoi alege SplitCam în setările camerei din Skype."),
+         ("Setează SplitCam și ca microfon", "În setările Audio din Skype selectează SplitCam și ca microfon, nu doar ca cameră — așa noise-suppression, audio mixat și muzica de intro ajung toate la client."),
+         ("Adaugă un test de apel prin Skype", "Înainte de primul apel SkyPrivate plătit, fă un apel gratuit de test prin Skype (Echo / Sound Test Service) ca să confirmi că SplitCam e camera activă și că scena ta e compusă corect."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Folosește SkyPrivate RTMP sau stream key?", "Niciuna. SkyPrivate gestionează facturarea și rezervările; video-ul efectiv rulează prin Skype. Nu ai nevoie de URL server RTMP sau stream key — doar configurezi SplitCam ca cameră în Skype."),
+         ("Cum selectez SplitCam în Skype pentru SkyPrivate?", "Deschide Skype Settings → Audio &amp; Video → Camera, alege SplitCam din listă. Fă la fel pentru Microphone. Apelurile SkyPrivate ajung apoi ca apeluri Skype normale, cu scena ta din SplitCam ca feed de cameră."),
+         ("Pot folosi overlay-uri și beauty filters cu SkyPrivate?", "Da — construiește-le în scena ta din SplitCam. Skype primește doar rezultatul compus ca un singur feed de cameră, deci tot ce compune SplitCam (overlay-uri, beauty filters, fundal AI, scene multi-cameră) e vizibil pentru clientul SkyPrivate."),
+         ("SplitCam e gratuit pentru SkyPrivate?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Ca virtual camera pentru apeluri SkyPrivate prin Skype, nu adaugă cost sau branding la apel."),
+     ],
+     "steps": [
+         ("Instalează SplitCam", "SplitCam e gratuit pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Pentru SkyPrivate, funcționează ca <strong>virtual camera</strong> pe care Skype o vede ca pe orice webcam."),
+         ("Construiește scena în SplitCam", "Deschide SplitCam și folosește <strong>Media Layers +</strong> pentru a adăuga webcam-ul plus orice overlay-uri, text, beauty filters sau fundal AI. Această scenă compusă e ce Skype va livra clientului SkyPrivate."),
+         ("Instalează Skype și add-on-ul SkyPrivate", "Instalează Skype pe același PC, autentifică-te, apoi instalează add-on-ul / aplicația desktop SkyPrivate urmând onboarding-ul SkyPrivate. Add-on-ul gestionează facturarea pe minut pe partea SkyPrivate."),
+         ("Selectează SplitCam ca cameră și mic în Skype", "În Skype deschide <strong>Settings → Audio &amp; Video</strong>. Setează <strong>Camera = SplitCam</strong> și <strong>Microphone = SplitCam</strong>. Rulează un apel rapid de test prin Skype (Echo / Sound Test Service) ca să confirmi că scena arată și sună corect."),
+         ("Răspunde la apeluri SkyPrivate", "Când un client SkyPrivate rezervă un apel plătit, acesta ajunge ca apel Skype — răspunde. Clientul vede scena ta compusă în SplitCam; SkyPrivate facturează pe minut. Ajustează scena în timpul apelului editând-o în SplitCam — Skype actualizează instant."),
+     ],
+    },
+    {"slug": "manyvids", "name": "ManyVids",
+     "title": "Cum transmiți pe MV Live (ManyVids) cu SplitCam — setup Creator Studio",
+     "desc": "Transmite pe MV Live de la ManyVids cu SplitCam gratuit — Creator Studio external encoder, economie de creatori în stil OnlyFans, scene multi-cameră. Fără filigran, fără înregistrare.",
+     "kw": "transmisie manyvids, mv live, transmisie live manyvids, manyvids obs, mv live external encoder, manyvids stream key, manyvids creator",
+     "h1html": 'Cum transmiți pe <span class="accent">MV Live</span> cu SplitCam',
+     "h1short": "Transmisie pe MV Live",
+     "card": "Setup cu encoder extern pentru Creator Studio MV Live de la ManyVids.",
+     "intro": "ManyVids e o platformă de tip creator-economy — vânzări de clipuri, video-uri custom, abonamente fan club și produsul de live-streaming <strong>MV Live</strong>. Broadcasterul implicit din Creator Studio rulează în browser, dar expune și o cale standard de <strong>external encoder</strong> la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel transmiți cu scene multi-cameră, overlay-uri și filtre pe aceeași platformă prietenoasă cu creatorii.",
+     "quick": "Transmisie pe MV Live cu SplitCam: instalezi SplitCam, construiești scena, în Creator Studio deschizi <em>MV Live → Broadcast Settings → External Encoder</em>, copiezi URL-ul serverului și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Creator Studio.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de creator ManyVids, deschide <strong>Creator Studio</strong> și mergi la <strong>MV Live → Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Conturile de creator trebuie să fie complet verificate (ID + taxe) înainte ca MV Live să fie disponibil.",
+     "tips": [
+         ("Creator-economy, nu doar live", "ManyVids nu e o platformă cam pură — MV Live e doar o sursă de venit alături de vânzări de clipuri, video-uri custom și abonamente fan club. Folosește stream-urile live pentru a aduce vizitatori spre celelalte forme de monetizare."),
+         ("Tipping cu tokeni în MV Live", "MV Live are propriul sistem de tipping cu tokeni în camera live. Planifică meniuri de obiective și reward triggers similar cu Chaturbate / Stripchat — convertesc bine cu audiența existentă ManyVids."),
+         ("Browser vs encoder extern", "Broadcasterul integrat în browser din Creator Studio e single-cameră. SplitCam prin External Encoder deblochează scene multi-cameră, overlay-uri și filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă MV Live (ManyVids) encodere externe precum SplitCam?", "Da — secțiunea MV Live din Creator Studio include opțiunea External Encoder sub Broadcast Settings. URL server RTMP standard și stream key; OBS, SplitCam, vMix se conectează."),
+         ("Unde îmi iau stream key-ul pentru MV Live?", "Creator Studio → MV Live → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo — copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru MV Live?", "Împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru MV Live?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder de la ManyVids e gratuită în Creator Studio."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau fundal AI — perfect pentru build-uri MV Live cu goal-reveal și reward triggers."),
+         ("Obține URL și stream key MV Live", "Loghează-te în contul tău de creator ManyVids, deschide <strong>Creator Studio</strong>, navighează la <strong>MV Live → Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> unică. Copiază ambele."),
+         ("Conectează SplitCam la MV Live", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului MV Live și stream key-ul în câmpurile RTMP custom. Setează bitrate la 3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi pornește transmisia MV Live din Creator Studio. În ~10 secunde stream-ul tău ajunge la audiența MV Live."),
+     ],
+    },
+    {"slug": "fansly", "name": "Fansly",
+     "title": "Cum transmiți pe Fansly Live cu SplitCam — Creator Dashboard external encoder",
+     "desc": "Transmite pe Fansly Live cu SplitCam gratuit — Creator Dashboard external encoder, competitor OnlyFans, scene multi-cameră, beauty filters. Fără filigran, fără înregistrare.",
+     "kw": "transmisie fansly, fansly live, transmisie live fansly, fansly obs, fansly external encoder, fansly rtmp, fansly stream key, fansly creator",
+     "h1html": 'Cum transmiți pe <span class="accent">Fansly Live</span> cu SplitCam',
+     "h1short": "Transmisie pe Fansly",
+     "card": "Setup cu encoder extern pentru Creator Dashboard-ul Fansly.",
+     "intro": "Fansly e un competitor direct al OnlyFans, cu reguli de conținut mai relaxate și o bază de creatori în creștere — abonamente, conținut pay-per-view și produsul de live-streaming <strong>Fansly Live</strong>. Broadcasterul implicit merge în browser, dar <strong>Creator Dashboard</strong> expune și o cale standard de <strong>external encoder</strong>, la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel transmiți cu scene multi-cameră, overlay-uri și filtre către baza ta de abonați.",
+     "quick": "Transmisie pe Fansly Live cu SplitCam: instalezi SplitCam, construiești scena, în Creator Dashboard deschizi <em>Live → Broadcast Settings → External Encoder</em>, copiezi URL-ul serverului și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Creator Dashboard.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de creator Fansly, deschide <strong>Creator Dashboard</strong> și navighează la <strong>Live → Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Conturile de creator au nevoie de verificare ID înainte ca Fansly Live să fie activat.",
+     "tips": [
+         ("Audiență subscriber-first", "Audiența Fansly e bazată pe abonament — stream-ul tău live ajunge la oameni care deja te plătesc lunar. Planifică conținut care răsplătește loialitatea (Q&amp;A exclusiv, behind-the-scenes, obiective de tip custom) în loc să vânezi metrici din camere publice."),
+         ("Tip-uri alături de abonamente", "Fansly Live suportă tipping în stream în plus față de abonamentele de bază. Venitul combinat poate depăși tipping-ul de pe platformele cam pure pentru creatorii consacrați."),
+         ("Browser broadcaster vs extern", "Broadcasterul implicit din browser e single-source. SplitCam prin External Encoder deblochează multi-cameră, overlay-uri, beauty filters și fundal AI care se ridică la nivelul conținutului premium pentru abonați."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă Fansly Live encodere externe precum SplitCam?", "Da — secțiunea Live din Creator Dashboard include opțiunea External Encoder sub Broadcast Settings. URL server RTMP standard și stream key; OBS, SplitCam, vMix se conectează."),
+         ("Unde îmi iau stream key-ul pentru Fansly?", "Creator Dashboard → Live → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo. Copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru Fansly Live?", "Împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru Fansly?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder de la Fansly e gratuită în Creator Dashboard."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — scene îngrijite care se potrivesc cu așteptările premium ale abonaților."),
+         ("Obține URL și stream key Fansly", "Loghează-te în contul tău de creator Fansly, deschide <strong>Creator Dashboard</strong>, navighează la <strong>Live → Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> unică. Copiază ambele."),
+         ("Conectează SplitCam la Fansly", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului Fansly și stream key-ul în câmpurile RTMP custom. Setează bitrate la 3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi pornește transmisia Fansly Live din Creator Dashboard. În ~10 secunde stream-ul tău ajunge la abonații Fansly."),
+     ],
+    },
 ]

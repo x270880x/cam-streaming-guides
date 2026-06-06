@@ -733,4 +733,103 @@ PLATFORMS_HR = [
          ("Klikni Go Live", "Pritisni <strong>Go Live</strong> u SplitCamu, zatim idi online iz Performer Dashboarda. Unutar ~10 sekundi stream stiže do Camversityja."),
      ],
     },
+    {"slug": "skyprivate", "name": "SkyPrivate",
+     "title": "Kako koristiti SkyPrivate sa SplitCamom — privatni cam pozivi po minuti preko Skypea",
+     "desc": "Koristi SkyPrivate s besplatnim SplitCamom kao virtualnom kamerom — privatni cam pozivi naplaćivani po minuti preko Skypea, multi-kamera scene, beauty filteri. Bez vodenog žiga, bez registracije.",
+     "kw": "skyprivate, sky private cam, skype cam private, skyprivate splitcam, skyprivate virtualna kamera, cam po minuti",
+     "h1html": 'Kako koristiti <span class="accent">SkyPrivate</span> sa SplitCamom',
+     "h1short": "SplitCam na SkyPrivateu",
+     "card": "Podešavanje virtualne kamere za Skype-bazirane SkyPrivate pozive.",
+     "intro": "SkyPrivate je netipična cam platforma — umjesto RTMP prijenosa, monetizira <strong>privatne cam pozive preko Skypea naplaćivane po minuti</strong>. Klijenti rezerviraju i plaćaju po minuti preko SkyPrivate marketplacea, a sam video poziv ide preko Skypea. Besplatni <strong style='color:var(--text)'>SplitCam</strong> se spaja kao <strong>virtualna kamera</strong>: izgradiš scenu u SplitCamu, a zatim u Skypeu odabereš SplitCam kao kameru prije nego javiš poziv rezerviran preko SkyPrivatea.",
+     "quick": "Koristi SkyPrivate sa SplitCamom: instaliraj SplitCam, izgradi scenu, instaliraj Skype sa SkyPrivate dodatkom, u Skypeovim <em>Video Settings</em> odaberi SplitCam kao kameru i mikrofon, javljaj pozive rezervirane preko SkyPrivatea — Skype isporučuje tvoju složenu scenu klijentu."
+              "<ol><li>Instaliraj SplitCam.</li><li>Izgradi scenu u SplitCamu.</li>"
+              "<li>Instaliraj Skype + SkyPrivate dodatak.</li>"
+              "<li>Odaberi SplitCam kao kameru u Skypeu.</li><li>Javljaj pozive.</li></ol>",
+     "key_how": "SkyPrivate ne koristi RTMP ni stream key — koristi Skype kao video transport s dodatkom za naplatu po minuti. Instaliraj Skype, instaliraj SkyPrivate browser ili desktop dodatak, zatim u Skypeu otvori <strong>Settings → Audio &amp; Video → Camera</strong> i odaberi <strong>SplitCam</strong> umjesto webkamere. Složena scena iz SplitCama (preklapanja, multi-kamera, beauty filteri) postaje ono što SkyPrivate klijent vidi kroz Skype.",
+     "tips": [
+         ("Bez RTMP-a — logika virtualne kamere", "Nemoj tražiti server URL ili stream key. SkyPrivate ide preko Skypea, a Skype vidi SplitCam samo kao webkameru. Izgradi scenu u SplitCamu, a zatim odaberi SplitCam u Skypeovim postavkama kamere."),
+         ("Postavi SplitCam i kao mikrofon", "U Skypeovim audio postavkama odaberi SplitCam kao mikrofon uz kameru — tako noise suppression, miksani audio i intro glazba stignu do klijenta."),
+         ("Probni Skype poziv prije svega", "Prije prvog plaćenog SkyPrivate poziva napravi besplatni Skype test poziv (Echo / Sound Test Service) — potvrdiš da je SplitCam aktivna kamera i da je scena pravilno složena."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Koristi li SkyPrivate RTMP ili stream key?", "Ni jedno ni drugo. SkyPrivate vodi naplatu i rezervacije; sam video ide preko Skypea. Ne treba ti RTMP server URL ni stream key — samo postavi SplitCam kao kameru u Skypeu."),
+         ("Kako odabrati SplitCam u Skypeu za SkyPrivate?", "Otvori Skype Settings → Audio &amp; Video → Camera, odaberi SplitCam s liste. Isto napravi i za mikrofon. SkyPrivate pozivi stižu kao obični Skype pozivi s tvojom SplitCam scenom kao izvorom kamere."),
+         ("Mogu li koristiti preklapanja i beauty filtere sa SkyPrivate?", "Da — izgradi ih unutar SplitCam scene. Skype prima samo složeni rezultat kao jedan kamera feed, pa sve što SplitCam slaže (preklapanja, beauty filteri, AI pozadina, multi-kamera scene) vidi SkyPrivate klijent."),
+         ("Je li SplitCam besplatan za SkyPrivate?", "Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja. Kao virtualna kamera za Skype-bazirane SkyPrivate pozive ne dodaje nikakav trošak ni brendiranje."),
+     ],
+     "steps": [
+         ("Instaliraj SplitCam", "SplitCam je besplatan za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga. Za SkyPrivate djeluje kao <strong>virtualna kamera</strong> koju Skype prepoznaje kao bilo koju webkameru."),
+         ("Izgradi scenu u SplitCamu", "Otvori SplitCam i koristi <strong>Media Layers +</strong> kako bi dodao webkameru plus preklapanja, tekst, beauty filtere ili AI pozadinu. Ta složena scena je ono što Skype isporučuje SkyPrivate klijentu."),
+         ("Instaliraj Skype i SkyPrivate dodatak", "Instaliraj Skype na isto računalo, prijavi se, zatim instaliraj SkyPrivate dodatak ili desktop aplikaciju prateći SkyPrivate onboarding. Dodatak rješava naplatu po minuti na SkyPrivate strani."),
+         ("Odaberi SplitCam kao kameru i mikrofon u Skypeu", "U Skypeu otvori <strong>Settings → Audio &amp; Video</strong>. Postavi <strong>Camera = SplitCam</strong> i <strong>Microphone = SplitCam</strong>. Napravi brzi Skype test poziv (Echo / Sound Test Service) i potvrdi da scena dobro izgleda i zvuči."),
+         ("Javljaj SkyPrivate pozive", "Kad SkyPrivate klijent rezervira plaćeni poziv, stiže kao Skype poziv — javi ga. Klijent vidi tvoju složenu SplitCam scenu; SkyPrivate naplaćuje po minuti. Scenu mijenjaš tijekom poziva izravno u SplitCamu — Skype se ažurira odmah."),
+     ],
+    },
+    {"slug": "manyvids", "name": "ManyVids",
+     "title": "Prijenos na MV Live (ManyVids) sa SplitCamom — Creator Studio podešavanje",
+     "desc": "Prijenos na ManyVids MV Live s besplatnim SplitCamom — Creator Studio vanjski enkoder, OnlyFans-style creator economy, multi-kamera scene. Bez vodenog žiga, bez registracije.",
+     "kw": "manyvids prijenos, mv live, manyvids live broadcast, manyvids obs, mv live vanjski enkoder, manyvids stream key, manyvids creator",
+     "h1html": 'Kako prenosiš na <span class="accent">MV Live</span> sa SplitCamom',
+     "h1short": "Prijenos MV Live",
+     "card": "Podešavanje vanjskog enkodera za ManyVids MV Live Creator Studio.",
+     "intro": "ManyVids je creator-economy platforma — prodaja klipova, custom videa, fan club pretplate i live streaming proizvod <strong>MV Live</strong>. Standardni Creator Studio broadcaster radi u pregledniku, ali također otkriva standardnu rutu <strong>vanjskog enkodera</strong> na koju se besplatni <strong style='color:var(--text)'>SplitCam</strong> spaja — omogućujući streaming s multi-kamera scenama, preklapanjima i filterima na istoj creator-friendly platformi.",
+     "quick": "Prijenos na MV Live sa SplitCamom: instaliraj SplitCam, izgradi scenu, u Creator Studiju otvori <em>MV Live → Broadcast Settings → External Encoder</em>, kopiraj server URL i stream key, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi URL i stream key iz Creator Studija.</li>"
+              "<li>Zalijepi u SplitCam.</li><li>Pritisni Go Live.</li></ol>",
+     "key_how": "Prijavi se na svoj ManyVids creator račun, otvori <strong>Creator Studio</strong> i kreni na <strong>MV Live → Broadcast Settings → External Encoder</strong>. Stranica otkriva <strong>server URL</strong> i <strong>stream key</strong> vezane uz tvoj račun — kopiraj oboje u SplitCamova custom RTMP polja. Creator računi moraju biti potpuno verificirani (ID + porezni podaci) prije nego MV Live postane dostupan.",
+     "tips": [
+         ("Creator economy, ne samo live", "ManyVids nije čista cam platforma — MV Live je jedan tok prihoda uz prodaju klipova, custom videa i fan club pretplate. Koristi live streamove da gledatelje usmjeriš prema ostalim načinima monetizacije."),
+         ("Token tipping unutar MV Livea", "MV Live ima vlastiti sustav token tippinga unutar live sobe. Planiraj goal menije i nagradne trigere u stilu Chaturbatea / Stripchata — dobro konvertiraju kod postojeće ManyVids publike."),
+         ("Preglednik vs vanjski enkoder", "Ugrađeni preglednički broadcaster u Creator Studiju je jednokameran. SplitCam preko External Encodera otključava multi-kamera scene, preklapanja i filtere."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li MV Live (ManyVids) vanjske enkodere poput SplitCama?", "Da — MV Live sekcija u Creator Studiju uključuje opciju External Encoder pod Broadcast Settings. Standardni RTMP server URL i stream key; OBS, SplitCam, vMix svi se spajaju."),
+         ("Gdje dobivam svoj MV Live stream key?", "Creator Studio → MV Live → Broadcast Settings → External Encoder. I server URL i stream key pojavljuju se tamo — kopiraj oboje u SplitCamova custom RTMP polja."),
+         ("Koji bitrate koristiti za MV Live?", "Ciljaj 1920×1080 na 30 fps, 3500–6000 Kbps s razmakom keyframea od 2 sekunde. Pokreni ugrađeni test brzine u SplitCamu prvo."),
+         ("Je li SplitCam besplatan za MV Live?", "Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja. ManyVidsova opcija vanjskog enkodera je besplatna u Creator Studiju."),
+     ],
+     "steps": [
+         ("Preuzmi i instaliraj SplitCam", "SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga."),
+         ("Izgradi svoju scenu", "Otvori SplitCam i dodaj webkameru. Naslagaj preklapanja, tekst, drugu kameru ili mobitel, beauty filtere ili AI pozadinu — savršeno za MV Live goal-reveal postavke i nagradne trigere."),
+         ("Uzmi svoj MV Live URL i stream key", "Prijavi se na ManyVids creator račun, otvori <strong>Creator Studio</strong>, kreni na <strong>MV Live → Broadcast Settings → External Encoder</strong>. Stranica otkriva <strong>server URL</strong> i jedinstveni <strong>stream key</strong>. Kopiraj oboje."),
+         ("Spoji SplitCam na MV Live", "U SplitCamu otvori <strong>Stream Settings</strong>, zalijepi MV Live server URL i stream key u custom RTMP polja. Postavi bitrate na 3500–6000 Kbps na 1920×1080, 30 fps, s 2-sekundnim keyframeom."),
+         ("Klikni Go Live", "Pritisni <strong>Go Live</strong> u SplitCamu, zatim pokreni MV Live prijenos iz Creator Studija. Unutar ~10 sekundi stream stiže do MV Live publike."),
+     ],
+    },
+    {"slug": "fansly", "name": "Fansly",
+     "title": "Prijenos na Fansly Live sa SplitCamom — Creator Dashboard vanjski enkoder",
+     "desc": "Prijenos na Fansly Live s besplatnim SplitCamom — Creator Dashboard vanjski enkoder, OnlyFans konkurent, multi-kamera scene, beauty filteri. Bez vodenog žiga, bez registracije.",
+     "kw": "fansly prijenos, fansly live, fansly broadcast, fansly obs, fansly vanjski enkoder, fansly rtmp, fansly stream key, fansly creator",
+     "h1html": 'Kako prenosiš na <span class="accent">Fansly Live</span> sa SplitCamom',
+     "h1short": "Prijenos Fansly",
+     "card": "Podešavanje vanjskog enkodera za Fansly Creator Dashboard.",
+     "intro": "Fansly je izravni OnlyFans konkurent s opuštenijim pravilima sadržaja i rastućom bazom creatora — pretplate, pay-per-view sadržaj i live streaming proizvod <strong>Fansly Live</strong>. Standardni broadcaster radi u pregledniku, ali <strong>Creator Dashboard</strong> također otkriva standardnu rutu <strong>vanjskog enkodera</strong> na koju se besplatni <strong style='color:var(--text)'>SplitCam</strong> spaja — omogućujući streaming s multi-kamera scenama, preklapanjima i filterima prema tvojoj bazi pretplatnika.",
+     "quick": "Prijenos na Fansly Live sa SplitCamom: instaliraj SplitCam, izgradi scenu, u Creator Dashboardu otvori <em>Live → Broadcast Settings → External Encoder</em>, kopiraj server URL i stream key, zalijepi u SplitCam, Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Uzmi URL i stream key iz Creator Dashboarda.</li>"
+              "<li>Zalijepi u SplitCam.</li><li>Pritisni Go Live.</li></ol>",
+     "key_how": "Prijavi se na svoj Fansly creator račun, otvori <strong>Creator Dashboard</strong> i kreni na <strong>Live → Broadcast Settings → External Encoder</strong>. Stranica otkriva <strong>server URL</strong> i <strong>stream key</strong> vezane uz tvoj račun — kopiraj oboje u SplitCamova custom RTMP polja. Creator računi trebaju ID verifikaciju prije nego se Fansly Live aktivira.",
+     "tips": [
+         ("Publika orijentirana na pretplatnike", "Fansly publika je pretplatnička — tvoj live stream dolazi do ljudi koji ti već mjesečno plaćaju. Planiraj sadržaj koji nagrađuje lojalnost (ekskluzivni Q&amp;A, behind-the-scenes, custom tip goalovi) umjesto da loviš javne metrike."),
+         ("Napojnice uz pretplate", "Fansly Live podržava in-stream tipping uz osnovne pretplate. Kombinirani prihod kod uhodanih creatora može nadmašiti čisti cam-platforma tipping."),
+         ("Preglednik vs vanjski broadcaster", "Standardni preglednički broadcaster je jednoizvorni. SplitCam preko External Encodera otključava multi-kameru, preklapanja, beauty filtere i AI pozadinu koji odgovaraju razini plaćenog pretplatničkog sadržaja."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Podržava li Fansly Live vanjske enkodere poput SplitCama?", "Da — Live sekcija u Creator Dashboardu uključuje opciju External Encoder pod Broadcast Settings. Standardni RTMP server URL i stream key; OBS, SplitCam, vMix svi se spajaju."),
+         ("Gdje dobivam svoj Fansly stream key?", "Creator Dashboard → Live → Broadcast Settings → External Encoder. I server URL i stream key pojavljuju se tamo. Kopiraj oboje u SplitCamova custom RTMP polja."),
+         ("Koji bitrate koristiti za Fansly Live?", "Ciljaj 1920×1080 na 30 fps, 3500–6000 Kbps s razmakom keyframea od 2 sekunde. Pokreni ugrađeni test brzine u SplitCamu prvo."),
+         ("Je li SplitCam besplatan za Fansly?", "Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja. Fanslyjeva opcija vanjskog enkodera je besplatna u Creator Dashboardu."),
+     ],
+     "steps": [
+         ("Preuzmi i instaliraj SplitCam", "SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga."),
+         ("Izgradi svoju scenu", "Otvori SplitCam i dodaj webkameru. Naslagaj preklapanja, tekst, drugu kameru ili mobitel, beauty filtere ili AI pozadinu — uglađene scene odgovaraju premium očekivanjima pretplatnika koji plaćaju."),
+         ("Uzmi svoj Fansly URL i stream key", "Prijavi se na Fansly creator račun, otvori <strong>Creator Dashboard</strong>, kreni na <strong>Live → Broadcast Settings → External Encoder</strong>. Stranica otkriva <strong>server URL</strong> i jedinstveni <strong>stream key</strong>. Kopiraj oboje."),
+         ("Spoji SplitCam na Fansly", "U SplitCamu otvori <strong>Stream Settings</strong>, zalijepi Fansly server URL i stream key u custom RTMP polja. Postavi bitrate na 3500–6000 Kbps na 1920×1080, 30 fps, s 2-sekundnim keyframeom."),
+         ("Klikni Go Live", "Pritisni <strong>Go Live</strong> u SplitCamu, zatim pokreni Fansly Live prijenos iz Creator Dashboarda. Unutar ~10 sekundi stream stiže do tvojih Fansly pretplatnika."),
+     ],
+    },
 ]

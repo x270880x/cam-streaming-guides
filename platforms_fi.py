@@ -733,4 +733,103 @@ PLATFORMS_FI = [
          ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Performer Dashboardista. Noin 10 sekunnissa striimi saavuttaa Camversityn."),
      ],
     },
+    {"slug": "skyprivate", "name": "SkyPrivate",
+     "title": "SkyPrivaten käyttö SplitCamin kanssa — Skype-pohjaiset minuuttihinnoitellut privaattipuhelut",
+     "desc": "Käytä SkyPrivatea ilmaisen SplitCamin kanssa virtuaalikamerana — minuuttihinnoitellut privaatit Skype-kamerapuhelut, monikamera-näkymät, kauneussuotimet. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "skyprivate, sky private cam, skype cam private, skyprivate splitcam, skyprivate virtuaalikamera, minuuttihinnoiteltu cam",
+     "h1html": 'SkyPrivaten käyttö <span class="accent">SplitCamin</span> kanssa',
+     "h1short": "SplitCam SkyPrivatessa",
+     "card": "Virtuaalikameran asetus SkyPrivaten Skype-pohjaisiin puheluihin.",
+     "intro": "SkyPrivate on poikkeuksellinen cam-alusta — RTMP-lähetyksen sijaan se monetisoi <strong>minuuttihinnoiteltuja privaatteja kamerapuheluita Skypen kautta</strong>. Asiakkaat varaavat ja maksavat minuuteittain SkyPrivaten kauppapaikalla, ja itse videopuhelu kulkee Skypen yli. Ilmainen <strong style='color:var(--text)'>SplitCam</strong> kytkeytyy <strong>virtuaalikamerana</strong>: rakennat näkymäsi SplitCamissa ja valitset Skypen kamera-asetuksissa SplitCamin ennen kuin vastaat SkyPrivaten kautta varattuun puheluun.",
+     "quick": "Käytä SkyPrivatea SplitCamin kanssa: asenna SplitCam, rakenna näkymä, asenna Skype ja SkyPrivate-lisäosa, valitse Skypen <em>Video Settings</em> -kohdassa SplitCam kameraksi ja mikrofoniksi, vastaa SkyPrivaten kautta varattuihin puheluihin — Skype toimittaa kootun näkymän asiakkaalle."
+              "<ol><li>Asenna SplitCam.</li><li>Rakenna näkymä SplitCamissa.</li>"
+              "<li>Asenna Skype + SkyPrivate-lisäosa.</li>"
+              "<li>Valitse SplitCam Skypen kameraksi.</li><li>Vastaa puheluihin.</li></ol>",
+     "key_how": "SkyPrivate ei käytä RTMP:tä eikä stream keytä — se käyttää Skypeä videon kuljettajana ja minuuttihinnoiteltua laskutuslisäosaa. Asenna Skype, asenna SkyPrivaten selain- tai työpöytälisäosa, ja avaa sitten Skypessä <strong>Settings → Audio &amp; Video → Camera</strong> ja valitse webkamerasi tilalle <strong>SplitCam</strong>. SplitCamin koostama näkymä (overlayt, monikamera, kauneussuotimet) on se, minkä SkyPrivaten asiakas näkee Skypen kautta.",
+     "tips": [
+         ("Ei RTMP:tä — virtuaalikameran logiikka", "Älä etsi server URL:ää tai stream keytä. SkyPrivate kulkee Skypen yli, ja Skype näkee SplitCamin pelkkänä webkameralaitteena. Rakenna näkymä SplitCamissa ja valitse SplitCam Skypen kamera-asetuksissa."),
+         ("Aseta SplitCam myös mikrofoniksi", "Valitse Skypen ääniasetuksissa SplitCam mikrofoniksi kameran lisäksi — silloin kohinanvaimennus, miksattu ääni ja intromusiikki pääsevät asiakkaalle asti."),
+         ("Tee Skype-testipuhelu ensin", "Ennen ensimmäistä maksullista SkyPrivate-puhelua tee ilmainen Skype-testipuhelu (Echo / Sound Test Service) — varmistat että SplitCam on aktiivinen kamera ja näkymä koottu oikein."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Käyttääkö SkyPrivate RTMP:tä tai stream keytä?", "Ei kumpaakaan. SkyPrivate hoitaa laskutuksen ja varaukset; itse video kulkee Skypen yli. Et tarvitse RTMP server URL:ää tai stream keytä — määritä vain SplitCam kameraksi Skypessä."),
+         ("Miten valitsen SplitCamin Skypessä SkyPrivatea varten?", "Avaa Skype Settings → Audio &amp; Video → Camera ja valitse SplitCam listalta. Tee sama mikrofonille. SkyPrivate-puhelut saapuvat sen jälkeen normaaleina Skype-puheluina, ja SplitCam-näkymäsi on kamerasyöte."),
+         ("Voinko käyttää overlayta ja kauneussuotimia SkyPrivatessa?", "Kyllä — rakenna ne SplitCam-näkymääsi. Skype vastaanottaa koostetun lopputuloksen yhtenä kamerasyötteenä, joten kaikki minkä SplitCam koostaa (overlayt, kauneussuotimet, AI-tausta, monikamera-näkymät) näkyy SkyPrivaten asiakkaalle."),
+         ("Onko SplitCam ilmainen SkyPrivatelle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Skype-pohjaisten SkyPrivate-puheluiden virtuaalikamerana se ei lisää kustannuksia eikä brändäystä."),
+     ],
+     "steps": [
+         ("Asenna SplitCam", "SplitCam on ilmainen Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. SkyPrivaten kohdalla se toimii <strong>virtuaalikamerana</strong>, jonka Skype poimii kuin minkä tahansa webkameran."),
+         ("Rakenna näkymäsi SplitCamissa", "Avaa SplitCam ja käytä <strong>Media Layers +</strong> -kohtaa lisätäksesi webkameran sekä overlayt, tekstit, kauneussuotimet tai AI-taustan. Tämä koottu näkymä on se, minkä Skype toimittaa SkyPrivaten asiakkaalle."),
+         ("Asenna Skype ja SkyPrivate-lisäosa", "Asenna Skype samalle tietokoneelle, kirjaudu sisään ja asenna sen jälkeen SkyPrivaten lisäosa tai työpöytäsovellus SkyPrivaten ohjeiden mukaan. Lisäosa hoitaa minuuttihinnoittelun SkyPrivaten päässä."),
+         ("Valitse SplitCam kameraksi ja mikrofoniksi Skypessä", "Avaa Skypessä <strong>Settings → Audio &amp; Video</strong>. Aseta <strong>Camera = SplitCam</strong> ja <strong>Microphone = SplitCam</strong>. Tee nopea Skype-testipuhelu (Echo / Sound Test Service) varmistaaksesi että näkymä näyttää ja kuulostaa oikealta."),
+         ("Vastaa SkyPrivate-puheluihin", "Kun SkyPrivate-asiakas varaa maksullisen puhelun, se saapuu Skype-puheluna — vastaa. Asiakas näkee koostetun SplitCam-näkymäsi; SkyPrivate laskuttaa minuuteittain. Säädä näkymää kesken puhelun muokkaamalla sitä SplitCamissa — Skype päivittyy heti."),
+     ],
+    },
+    {"slug": "manyvids", "name": "ManyVids",
+     "title": "Lähetys MV Livessä (ManyVids) SplitCamilla — Creator Studio -asetukset",
+     "desc": "Lähetys ManyVidsin MV Livessä ilmaisella SplitCamilla — Creator Studion ulkoinen enkooderi, OnlyFans-tyylinen creator economy, monikamera-näkymät. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "manyvids lähetys, mv live, manyvids live broadcast, manyvids obs, mv live ulkoinen enkooderi, manyvids stream key, manyvids creator",
+     "h1html": 'Miten lähetät <span class="accent">MV Livessä</span> SplitCamilla',
+     "h1short": "Lähetys MV Live",
+     "card": "Ulkoisen enkooderin asetus ManyVidsin MV Live Creator Studioon.",
+     "intro": "ManyVids on creator-economy-alusta — klippien myynti, custom-videot, fan club -tilaukset ja live-stream-tuote <strong>MV Live</strong>. Oletusbroadcaster Creator Studiossa pyörii selaimessa, mutta se avaa myös standardin <strong>ulkoisen enkooderin</strong> reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat striimattua monikamera-näkymillä, overlayilla ja suotimilla samalla creator-ystävällisellä alustalla.",
+     "quick": "Lähetys MV Livessä SplitCamilla: asenna SplitCam, rakenna näkymä, Creator Studiossa avaa <em>MV Live → Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Creator Studiosta.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu ManyVidsin creator-tiliisi, avaa <strong>Creator Studio</strong> ja siirry kohtaan <strong>MV Live → Broadcast Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. Creator-tilit on oltava täysin verifioitu (ID + verotiedot) ennen kuin MV Live on käytettävissä.",
+     "tips": [
+         ("Creator economy, ei pelkkä live", "ManyVids ei ole puhdas cam-alusta — MV Live on yksi tulonlähde klippien myynnin, custom-videoiden ja fan club -tilausten rinnalla. Käytä live-striimejä ohjaamaan katsojia muihin monetisointitapoihin."),
+         ("Token-tippaus MV Liven sisällä", "MV Livessä on oma token-tippausjärjestelmä live-huoneen sisällä. Suunnittele goal-valikot ja palkkiotriggerit Chaturbaten / Stripchatin tapaan — ne konvertoivat hyvin ManyVidsin valmiilla yleisöllä."),
+         ("Selain vs ulkoinen enkooderi", "Creator Studion sisäänrakennettu selainbroadcaster on yksikamera. SplitCam External Encoderin kautta avaa monikamera-näkymät, overlayt ja suotimet."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko MV Live (ManyVids) ulkoisia enkoodereita kuten SplitCamia?", "Kyllä — Creator Studion MV Live -osio sisältää External Encoder -vaihtoehdon Broadcast Settings -kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam, vMix kaikki yhdistyvät."),
+         ("Mistä saan MV Liven stream keyni?", "Creator Studio → MV Live → Broadcast Settings → External Encoder. Sekä server URL että stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin."),
+         ("Mikä bitrate MV Livelle?", "Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen MV Livelle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. ManyVidsin ulkoisen enkooderin vaihtoehto on ilmainen Creator Studiossa."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — sopii erinomaisesti MV Liven goal-reveal-rakennelmiin ja palkkiotriggereihin."),
+         ("Hae MV Liven URL ja stream key", "Kirjaudu ManyVidsin creator-tilillesi, avaa <strong>Creator Studio</strong>, siirry kohtaan <strong>MV Live → Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam MV Liveen", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä MV Liven server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten käynnistä MV Live -lähetys Creator Studiosta. Noin 10 sekunnissa striimi saavuttaa MV Liven yleisön."),
+     ],
+    },
+    {"slug": "fansly", "name": "Fansly",
+     "title": "Lähetys Fansly Livessä SplitCamilla — Creator Dashboardin ulkoinen enkooderi",
+     "desc": "Lähetys Fansly Livessä ilmaisella SplitCamilla — Creator Dashboardin ulkoinen enkooderi, OnlyFans-kilpailija, monikamera-näkymät, kauneussuotimet. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "fansly lähetys, fansly live, fansly broadcast, fansly obs, fansly ulkoinen enkooderi, fansly rtmp, fansly stream key, fansly creator",
+     "h1html": 'Miten lähetät <span class="accent">Fansly Livessä</span> SplitCamilla',
+     "h1short": "Lähetys Fansly",
+     "card": "Ulkoisen enkooderin asetus Fanslyn Creator Dashboardiin.",
+     "intro": "Fansly on suora OnlyFans-kilpailija löyhemmillä sisältösäännöillä ja kasvavalla creator-pohjalla — tilaukset, pay-per-view-sisältö ja live-stream-tuote <strong>Fansly Live</strong>. Oletusbroadcaster toimii selaimessa, mutta <strong>Creator Dashboard</strong> avaa myös standardin <strong>ulkoisen enkooderin</strong> reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat striimattua monikamera-näkymillä, overlayilla ja suotimilla tilaajakuntaasi.",
+     "quick": "Lähetys Fansly Livessä SplitCamilla: asenna SplitCam, rakenna näkymä, Creator Dashboardissa avaa <em>Live → Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Creator Dashboardista.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu Fanslyn creator-tiliisi, avaa <strong>Creator Dashboard</strong> ja siirry kohtaan <strong>Live → Broadcast Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. Creator-tilit tarvitsevat ID-verifioinnin ennen kuin Fansly Live aktivoituu.",
+     "tips": [
+         ("Tilaajapainoinen yleisö", "Fanslyn yleisö perustuu tilauksiin — live-striimisi tavoittaa ihmisiä, jotka maksavat sinulle jo kuukausittain. Suunnittele sisältöä, joka palkitsee uskollisuutta (eksklusiiviset Q&amp;A, behind-the-scenes, custom tip goalit) sen sijaan että jahtaisit julkisen huoneen metriikoita."),
+         ("Tipit tilausten päälle", "Fansly Live tukee in-stream-tippausta perustilausten lisäksi. Yhteistulot voivat ohittaa puhtaan cam-alustan tippauksen vakiintuneilla creatoreilla."),
+         ("Selainbroadcaster vs ulkoinen", "Oletuksena toimiva selainbroadcaster on yksilähteinen. SplitCam External Encoderin kautta avaa monikameran, overlayt, kauneussuotimet ja AI-taustan, jotka vastaavat maksavan tilaussisällön viimeisteltyä tasoa."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko Fansly Live ulkoisia enkoodereita kuten SplitCamia?", "Kyllä — Creator Dashboardin Live-osio sisältää External Encoder -vaihtoehdon Broadcast Settings -kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam, vMix kaikki yhdistyvät."),
+         ("Mistä saan Fanslyn stream keyni?", "Creator Dashboard → Live → Broadcast Settings → External Encoder. Sekä server URL että stream key näkyvät siellä. Kopioi molemmat SplitCamin custom RTMP -kenttiin."),
+         ("Mikä bitrate Fansly Livelle?", "Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen Fanslylle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Fanslyn ulkoisen enkooderin vaihtoehto on ilmainen Creator Dashboardissa."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — viimeistellyt näkymät vastaavat maksavien tilaajien premium-odotuksia."),
+         ("Hae Fanslyn URL ja stream key", "Kirjaudu Fanslyn creator-tilillesi, avaa <strong>Creator Dashboard</strong>, siirry kohtaan <strong>Live → Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam Fanslyyn", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä Fanslyn server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten käynnistä Fansly Live -lähetys Creator Dashboardista. Noin 10 sekunnissa striimi saavuttaa Fansly-tilaajasi."),
+     ],
+    },
 ]

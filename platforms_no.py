@@ -727,4 +727,100 @@ PLATFORMS_NO = [
          ("Koble SplitCam til Camversity", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn Camversity-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
          ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra Performer Dashboard. Innen ~10 sekunder når strømmen Camversity."),
      ]},
+    {"slug": "skyprivate", "name": "SkyPrivate",
+     "title": "Slik bruker du SkyPrivate med SplitCam — Skype-baserte private cam-samtaler",
+     "desc": "Bruk SkyPrivate med gratis SplitCam som virtuelt kamera — pay-per-minute Skype-cam-samtaler, multi-kamera scener, beauty-filtre. Uten vannmerke, uten registrering.",
+     "kw": "skyprivate, sky private cam, skype cam private, skyprivate splitcam, skyprivate virtuelt kamera, pay-per-minute cam",
+     "h1html": 'Slik bruker du <span class="accent">SkyPrivate</span> med SplitCam',
+     "h1short": "SplitCam på SkyPrivate",
+     "card": "Virtuelt-kamera-oppsett for SkyPrivates Skype-baserte cam-samtaler.",
+     "intro": "SkyPrivate er en spesiell cam-plattform — i stedet for RTMP-sending avregnes <strong>pay-per-minute private cam-samtaler via Skype</strong>. Kunder bestiller og betaler per minutt via SkyPrivate-markedsplassen, og selve videosamtalen går over Skype. Gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på som <strong>virtuelt kamera</strong>: bygg scenen i SplitCam, og velg deretter SplitCam som kamera i Skype før du tar en SkyPrivate-bestilt samtale.",
+     "quick": "Bruk SkyPrivate med SplitCam: installer SplitCam, bygg scenen, installer Skype med SkyPrivate-tillegget, velg i Skypes <em>video-innstillinger</em> SplitCam som kamera og mikrofon, og ta deretter SkyPrivate-bestilte samtaler — Skype leverer den komponerte scenen til kunden."
+              "<ol><li>Installer SplitCam.</li><li>Bygg scenen i SplitCam.</li>"
+              "<li>Installer Skype + SkyPrivate-tillegget.</li><li>Velg SplitCam som kamera i Skype.</li>"
+              "<li>Ta imot samtaler.</li></ol>",
+     "key_how": "SkyPrivate bruker verken RTMP eller stream key — Skype fungerer som videotransport, og SkyPrivate-tillegget tar seg av avregning per minutt. Installer Skype, installer SkyPrivate-nettleser-/desktop-tillegget, åpne så i Skype <strong>Innstillinger → Audio &amp; Video → Kamera</strong> og velg <strong>SplitCam</strong> i stedet for webkameraet. Den komponerte SplitCam-scenen (overlays, multi-kamera, beauty-filtre) er nøyaktig det SkyPrivate-kunden ser via Skype.",
+     "tips": [
+         ("Ingen RTMP — virtuelt-kamera-flyt", "Ikke let etter en server-URL eller stream key. SkyPrivate går over Skype, og Skype ser bare SplitCam som en webkamera-enhet. Bygg scenen i SplitCam, og velg deretter SplitCam i Skypes kamera-innstillinger."),
+         ("Sett SplitCam også som mikrofon", "Velg i Skypes lyd-innstillinger SplitCam som mikrofon i tillegg til kamera — slik når støyreduksjon, mikset lyd og intro-musikk også frem til kunden."),
+         ("Gjør en Skype-testsamtale først", "Før din første betalte SkyPrivate-samtale: gjør en gratis Skype-testsamtale (Echo / Sound Test Service) for å bekrefte at SplitCam er det aktive kameraet, og at scenen er riktig komponert."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Bruker SkyPrivate RTMP eller en stream key?", "Ingen av delene. SkyPrivate håndterer avregning og bestilling; selve videosamtalen går over Skype. Du trenger verken RTMP-server-URL eller stream key — du konfigurerer bare SplitCam som kamera inne i Skype."),
+         ("Hvordan velger jeg SplitCam i Skype for SkyPrivate?", "Åpne Skype-innstillinger → Audio &amp; Video → Kamera, velg SplitCam fra listen. Gjør det samme for mikrofon. SkyPrivate-samtaler kommer da inn som vanlige Skype-anrop med SplitCam-scenen som kamerafeed."),
+         ("Fungerer overlays og beauty-filtre med SkyPrivate?", "Ja — du bygger dem inne i SplitCam-scenen. Skype mottar bare det komponerte resultatet som én kamerafeed, så alt SplitCam komponerer (overlays, beauty-filtre, AI-bakgrunn, multi-kamera scener) er synlig for SkyPrivate-kunden."),
+         ("Er SplitCam gratis til SkyPrivate?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. Som virtuelt kamera for Skype-baserte SkyPrivate-samtaler gir det ingen ekstra kostnader eller branding i bildet."),
+     ],
+     "steps": [
+         ("Installer SplitCam", "SplitCam er gratis for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. For SkyPrivate fungerer det som <strong>virtuelt kamera</strong> som Skype plukker opp som hvilket som helst webkamera."),
+         ("Bygg scenen i SplitCam", "Åpne SplitCam og bruk <strong>Media Layers +</strong> til å legge til webkameraet pluss overlays, tekst, beauty-filtre eller en AI-bakgrunn. Det er denne komponerte scenen Skype videresender til SkyPrivate-kunden."),
+         ("Installer Skype og SkyPrivate-tillegget", "Installer Skype på samme pc, logg inn, og installer deretter SkyPrivate-tillegget / desktop-appen i henhold til SkyPrivates onboarding. Tillegget tar seg av avregning per minutt på SkyPrivate-siden."),
+         ("Velg SplitCam som kamera og mikrofon i Skype", "I Skype åpne <strong>Innstillinger → Audio &amp; Video</strong>. Sett <strong>Kamera = SplitCam</strong> og <strong>Mikrofon = SplitCam</strong>. Gjør en rask Skype-testsamtale (Echo / Sound Test Service) for å sjekke at scenen ser og høres riktig ut."),
+         ("Ta SkyPrivate-samtaler", "Når en SkyPrivate-kunde bestiller en betalt samtale, kommer den inn som et Skype-anrop — bare svar. Kunden ser den komponerte SplitCam-scenen; SkyPrivate avregner per minutt. Endre scenen midt i samtalen ved å redigere i SplitCam — Skype oppdaterer umiddelbart."),
+     ]},
+    {"slug": "manyvids", "name": "ManyVids",
+     "title": "Slik sender du på MV Live (ManyVids) med SplitCam — Creator Studio-oppsett",
+     "desc": "Send på ManyVids' MV Live med gratis SplitCam — Creator Studio external encoder, OnlyFans-lignende creator economy, multi-kamera scener. Uten vannmerke, uten registrering.",
+     "kw": "manyvids sending, mv live, manyvids live broadcast, manyvids obs, mv live external encoder, manyvids stream key, manyvids creator",
+     "h1html": 'Slik sender du på <span class="accent">MV Live</span> med SplitCam',
+     "h1short": "Sending MV Live",
+     "card": "External-encoder-oppsett for ManyVids' MV Live i Creator Studio.",
+     "intro": "ManyVids er en creator-economy-plattform — klippsalg, custom-videoer, fan club-abonnementer og live-streaming-produktet <strong>MV Live</strong>. Standardbroadcasteren i Creator Studio går i nettleseren, men det finnes også en klassisk <strong>external encoder</strong>-vei, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — for multi-kamera scener, overlays og filtre på den samme creator-vennlige plattformen.",
+     "quick": "Send på MV Live med SplitCam: installer SplitCam, bygg scenen, i Creator Studio åpne <em>MV Live → Broadcast Settings → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Creator Studio.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på ManyVids-creator-kontoen din, åpne <strong>Creator Studio</strong> og naviger til <strong>MV Live → Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. Creator-kontoer må være fullt verifisert (ID + skatt) før MV Live er tilgjengelig.",
+     "tips": [
+         ("Creator economy, ikke bare live", "ManyVids er ingen ren cam-plattform — MV Live er én av flere inntektskilder ved siden av klippsalg, custom-videoer og fan club-abonnementer. Bruk live-strømmer til å lede seere videre til andre inntektsformer."),
+         ("Token-tipping i MV Live", "MV Live har sitt eget token-tipping-system inne i live-rommet. Planlegg goal-menyer og reward-triggere som på Chaturbate / Stripchat — de konverterer godt blant ManyVids-publikum."),
+         ("Nettleser vs. external encoder", "Den innebygde nettleser-broadcasteren i Creator Studio er single-kamera. SplitCam via External Encoder åpner for multi-kamera scener, overlays og filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter MV Live (ManyVids) eksterne enkodere som SplitCam?", "Ja — MV Live-seksjonen i Creator Studio har External Encoder-valget under Broadcast Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam og vMix kan alle kobles til."),
+         ("Hvor finner jeg min MV Live stream key?", "Creator Studio → MV Live → Broadcast Settings → External Encoder. Både server-URL og stream key dukker opp der — kopier begge inn i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til MV Live?", "Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps med 2 sekunders keyframe-intervall. Kjør først SplitCams innebygde hastighetstest."),
+         ("Er SplitCam gratis å bruke med MV Live?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Encoder-valget hos ManyVids er gratis i Creator Studio."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — perfekt for MV Live goal reveals og reward-triggere."),
+         ("Hent MV Live-URL og stream key", "Logg inn på ManyVids-creator-kontoen din, åpne <strong>Creator Studio</strong>, naviger til <strong>MV Live → Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til MV Live", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn MV Live-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og start deretter MV Live-sendingen fra Creator Studio. Innen ~10 sekunder når strømmen MV Lives publikum."),
+     ]},
+    {"slug": "fansly", "name": "Fansly",
+     "title": "Slik sender du på Fansly Live med SplitCam — Creator Dashboard External Encoder",
+     "desc": "Send på Fansly Live med gratis SplitCam — Creator Dashboard external encoder, OnlyFans-konkurrent, multi-kamera scener, beauty-filtre. Uten vannmerke, uten registrering.",
+     "kw": "fansly sending, fansly live, fansly broadcast, fansly obs, fansly external encoder, fansly rtmp, fansly stream key, fansly creator",
+     "h1html": 'Slik sender du på <span class="accent">Fansly Live</span> med SplitCam',
+     "h1short": "Sending Fansly",
+     "card": "External-encoder-oppsett for Fanslys Creator Dashboard.",
+     "intro": "Fansly er en direkte OnlyFans-konkurrent med løsere innholdsregler og en voksende creator-base — abonnementer, pay-per-view-innhold og live-streaming-produktet <strong>Fansly Live</strong>. Standardbroadcasteren går i nettleseren, men <strong>Creator Dashboard</strong> tilbyr også en klassisk <strong>external encoder</strong>-vei, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — for multi-kamera scener, overlays og filtre rett til abonnentene dine.",
+     "quick": "Send på Fansly Live med SplitCam: installer SplitCam, bygg scenen, i Creator Dashboard åpne <em>Live → Broadcast Settings → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Creator Dashboard.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på Fansly-creator-kontoen din, åpne <strong>Creator Dashboard</strong> og naviger til <strong>Live → Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. Creator-kontoer må gjennomføre ID-verifisering før Fansly Live aktiveres.",
+     "tips": [
+         ("Abonnent-først publikum", "Fanslys publikum er abonnement-basert — live-strømmen din når folk som allerede betaler deg månedlig. Planlegg innhold som belønner lojalitet (eksklusive Q&amp;A, behind-the-scenes, custom tip goals) i stedet for å jakte på public-room-metrikker."),
+         ("Tips ved siden av abonnementer", "Fansly Live støtter in-stream-tipping i tillegg til basis-abonnementet. For etablerte creators kan den kombinerte inntjeningen overgå ren cam-plattform-tipping."),
+         ("Nettleser-broadcaster vs. external", "Standard nettleser-broadcasteren er single-kilde. SplitCam via External Encoder åpner for multi-kamera, overlays, beauty-filtre og AI-bakgrunn — som matcher poleringen i betalt abonnent-innhold."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter Fansly Live eksterne enkodere som SplitCam?", "Ja — Live-seksjonen i Creator Dashboard har External Encoder-valget under Broadcast Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam og vMix kan alle kobles til."),
+         ("Hvor finner jeg min Fansly stream key?", "Creator Dashboard → Live → Broadcast Settings → External Encoder. Både server-URL og stream key dukker opp der. Kopier begge inn i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til Fansly Live?", "Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps med 2 sekunders keyframe-intervall. Kjør først SplitCams innebygde hastighetstest."),
+         ("Er SplitCam gratis å bruke med Fansly?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Encoder-valget hos Fansly er gratis i Creator Dashboard."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — polerte scener matcher premium-forventningen til betalende abonnenter."),
+         ("Hent Fansly-URL og stream key", "Logg inn på Fansly-creator-kontoen din, åpne <strong>Creator Dashboard</strong>, naviger til <strong>Live → Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til Fansly", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn Fansly-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og start deretter Fansly Live-sendingen fra Creator Dashboard. Innen ~10 sekunder når strømmen Fansly-abonnentene dine."),
+     ]},
 ]

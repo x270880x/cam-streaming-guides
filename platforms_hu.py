@@ -733,4 +733,103 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Performer Dashboardból. Kb. 10 másodperc alatt eléri a stream a Camversityt."),
      ],
     },
+    {"slug": "skyprivate", "name": "SkyPrivate",
+     "title": "Hogyan használd a SkyPrivate-et SplitCammel — Skype-alapú privát cam hívások",
+     "desc": "Használd a SkyPrivate-et ingyenes SplitCammel mint virtual camera — perc alapú fizetős privát Skype cam hívások, multi-kamera jelenetek, beauty filters. Nincs vízjel, nincs regisztráció.",
+     "kw": "skyprivate, sky private cam, skype cam private, skyprivate splitcam, skyprivate virtual camera, perc alapú fizetős cam",
+     "h1html": 'Hogyan használd a <span class="accent">SkyPrivate</span>-et SplitCammel',
+     "h1short": "SplitCam a SkyPrivate-en",
+     "card": "Virtual camera beállítás a SkyPrivate Skype-alapú cam hívásaihoz.",
+     "intro": "A SkyPrivate egyedi cam platform — RTMP adás helyett <strong>perc alapú fizetős privát cam hívásokkal monetizál Skype-on keresztül</strong>. Az ügyfelek a SkyPrivate piactéren foglalnak és fizetnek percenként, majd a tényleges videohívás Skype-on fut. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> <strong>virtual camera</strong>-ként csatlakozik: megépíted a jelenetet a SplitCamben, majd a SplitCamet választod kameraként a Skype-on, mielőtt felvennéd a SkyPrivate-en foglalt hívást.",
+     "quick": "Használd a SkyPrivate-et SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, telepíted a Skype-ot a SkyPrivate add-onnal, a Skype <em>Video Settings</em>-ben kiválasztod a SplitCamet kameraként és mikrofonként, majd felveszed a SkyPrivate-en foglalt hívásokat — a Skype kézbesíti az ügyfélnek a komponált jelenetet."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Építsd meg a jelenetet a SplitCamben.</li>"
+              "<li>Telepítsd a Skype-ot + SkyPrivate add-ont.</li><li>Válaszd a SplitCamet kameraként a Skype-on.</li>"
+              "<li>Vedd fel a hívásokat.</li></ol>",
+     "key_how": "A SkyPrivate nem használ RTMP-t vagy stream key-t — a Skype-ot használja video transportként egy perc alapú számlázó add-onnal. Telepítsd a Skype-ot, telepítsd a SkyPrivate böngésző/desktop add-onját, majd a Skype-on nyisd meg <strong>Settings → Audio &amp; Video → Camera</strong> és válaszd a <strong>SplitCamet</strong> a webkamerád helyett. A SplitCamben komponált jelenet (overlay-ek, multi-kamera, beauty filters) lesz az, amit a SkyPrivate ügyfél lát a Skype-on keresztül.",
+     "tips": [
+         ("Nincs RTMP — virtual camera folyamat", "Ne keress server URL-t vagy stream key-t. A SkyPrivate Skype-on fut, és a Skype csak egy webkamera eszközként látja a SplitCamet. Építsd meg a jelenetet a SplitCamben, majd válaszd a SplitCamet a Skype kamera-beállításaiban."),
+         ("Állítsd be a SplitCamet mikrofonként is", "A Skype Audio beállításaiban válaszd a SplitCamet mikrofonként is, ne csak kameraként — így a noise-suppression, a kevert hang és a bevezető zene mind eljut az ügyfélhez."),
+         ("Adj hozzá egy Skype kimenő hívás tesztet", "Az első fizetős SkyPrivate hívás előtt csinálj egy ingyenes Skype teszt hívást (Echo / Sound Test Service), hogy ellenőrizd, a SplitCam az aktív kamera, és a jeleneted helyesen van komponálva."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Használ a SkyPrivate RTMP-t vagy stream key-t?", "Egyiket sem. A SkyPrivate a számlázást és foglalást intézi; a tényleges videó Skype-on fut. Nincs szükséged RTMP server URL-re vagy stream key-re — csak állítsd be a SplitCamet kameraként a Skype-on."),
+         ("Hogyan válasszam ki a SplitCamet a Skype-on SkyPrivate-hez?", "Nyisd meg Skype Settings → Audio &amp; Video → Camera, válaszd a SplitCamet a listából. Ugyanezt csináld a Microphone-nal. A SkyPrivate hívások ezután normál Skype hívásként érkeznek, a SplitCam jelenettel kamera feedként."),
+         ("Használhatok overlay-eket és beauty filtereket a SkyPrivate-tel?", "Igen — építsd őket a SplitCam jelenetedbe. A Skype csak a komponált eredményt kapja meg egy kamera feedként, így minden, amit a SplitCam komponál (overlay-ek, beauty filters, AI háttér, multi-kamera jelenetek), látható a SkyPrivate ügyfélnek."),
+         ("Ingyenes a SplitCam a SkyPrivate-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Mint virtual camera a Skype-alapú SkyPrivate hívásokhoz, nem ad költséget vagy brandinget a híváshoz."),
+     ],
+     "steps": [
+         ("Telepítsd a SplitCamet", "A SplitCam ingyenes Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. A SkyPrivate-hez <strong>virtual camera</strong>-ként működik, amit a Skype úgy lát, mint bármely más webkamerát."),
+         ("Építsd meg a jelenetet a SplitCamben", "Nyisd meg a SplitCamet és használd a <strong>Media Layers +</strong>-t, hogy hozzáadd a webkamerád plusz overlay-eket, szöveget, beauty filtereket vagy AI hátteret. Ez a komponált jelenet az, amit a Skype kézbesít a SkyPrivate ügyfélnek."),
+         ("Telepítsd a Skype-ot és a SkyPrivate add-ont", "Telepítsd a Skype-ot ugyanarra a PC-re, jelentkezz be, majd telepítsd a SkyPrivate add-ont / desktop alkalmazást a SkyPrivate onboarding-ját követve. Az add-on intézi a perc alapú számlázást a SkyPrivate oldalán."),
+         ("Válaszd a SplitCamet kameraként és mikrofonként a Skype-on", "A Skype-on nyisd meg <strong>Settings → Audio &amp; Video</strong>. Állítsd be <strong>Camera = SplitCam</strong> és <strong>Microphone = SplitCam</strong>. Futtass egy gyors Skype teszt hívást (Echo / Sound Test Service), hogy ellenőrizd, a jeleneted jól néz ki és jól szól."),
+         ("Vegyél fel SkyPrivate hívásokat", "Amikor egy SkyPrivate ügyfél lefoglal egy fizetős hívást, az Skype hívásként érkezik — vedd fel. Ő a komponált SplitCam jelenetedet látja; a SkyPrivate percenként számláz. Állítsd a jelenetet hívás közben a SplitCamben szerkesztve — a Skype azonnal frissít."),
+     ],
+    },
+    {"slug": "manyvids", "name": "ManyVids",
+     "title": "Hogyan adj az MV Live-on (ManyVids) SplitCammel — Creator Studio beállítás",
+     "desc": "Adj a ManyVids MV Live-ján ingyenes SplitCammel — Creator Studio external encoder, OnlyFans-stílusú creator-gazdaság, multi-kamera jelenetek. Nincs vízjel, nincs regisztráció.",
+     "kw": "manyvids adás, mv live, manyvids élő adás, manyvids obs, mv live external encoder, manyvids stream key, manyvids creator",
+     "h1html": 'Hogyan adsz az <span class="accent">MV Live</span>-on SplitCammel',
+     "h1short": "Adás az MV Live-on",
+     "card": "Külső enkóder beállítás a ManyVids MV Live Creator Studiójához.",
+     "intro": "A ManyVids creator-gazdaság platform — klip eladások, custom videók, fan club előfizetések és a live-streaming termék, az <strong>MV Live</strong>. Az alapértelmezett Creator Studio broadcaster böngészőben fut, de expose-olja a standard <strong>external encoder</strong> útvonalat is, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel adhatsz ugyanazon a creator-barát platformon.",
+     "quick": "Adás az MV Live-on SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Creator Studióban megnyitod <em>MV Live → Broadcast Settings → External Encoder</em>, kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Creator Studióból.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a ManyVids creator fiókodba, nyisd meg a <strong>Creator Studio</strong>-t és menj az <strong>MV Live → Broadcast Settings → External Encoder</strong> alá. Az oldal felfedi a fiókodhoz kötött <strong>server URL</strong>-t és <strong>stream key</strong>-t — másold mindkettőt a SplitCam egyéni RTMP mezőibe. A creator fiókoknak teljesen verifikáltnak kell lenniük (ID + adó), mielőtt az MV Live elérhető lesz.",
+     "tips": [
+         ("Creator-gazdaság, nem csak live", "A ManyVids nem tisztán cam platform — az MV Live csak egy bevételi forrás a klip eladások, custom videók és fan club előfizetések mellett. Használd a live streameket, hogy a nézőket a többi monetizációs lehetőséged felé tereld."),
+         ("Token tipping az MV Live-on belül", "Az MV Live-nak saját token tipping rendszere van a live szobán belül. Tervezz goal menüket és reward triggereket Chaturbate / Stripchat stílusban — jól konvertálnak a meglévő ManyVids közönséggel."),
+         ("Böngésző vs külső enkóder", "A Creator Studio beépített böngésző broadcastere single-kamera. A SplitCam az External Encoderen keresztül kioldja a multi-kamera jeleneteket, overlay-eket és szűrőket."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja az MV Live (ManyVids) a külső enkódereket, mint a SplitCam?", "Igen — a Creator Studio MV Live szekciója tartalmaz egy External Encoder opciót a Broadcast Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak."),
+         ("Honnan kapom meg a stream key-emet az MV Live-hoz?", "Creator Studio → MV Live → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg — másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak az MV Live-hoz?", "Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam az MV Live-hoz?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A ManyVids External Encoder opciója ingyenes a Creator Studióban."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — tökéletes MV Live goal-reveal buildekhez és reward triggerekhez."),
+         ("Szerezd meg az MV Live URL-t és stream key-t", "Jelentkezz be a ManyVids creator fiókodba, nyisd meg a <strong>Creator Studio</strong>-t, navigálj az <strong>MV Live → Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a <strong>server URL</strong>-t és az egyedi <strong>stream key</strong>-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet az MV Live-val", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be az MV Live server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 3 500–6 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd indítsd el az MV Live adást a Creator Studióból. Kb. 10 másodperc alatt eléri a streamed az MV Live közönségét."),
+     ],
+    },
+    {"slug": "fansly", "name": "Fansly",
+     "title": "Hogyan adj a Fansly Live-on SplitCammel — Creator Dashboard external encoder",
+     "desc": "Adj a Fansly Live-on ingyenes SplitCammel — Creator Dashboard external encoder, OnlyFans versenytárs, multi-kamera jelenetek, beauty filters. Nincs vízjel, nincs regisztráció.",
+     "kw": "fansly adás, fansly live, fansly élő adás, fansly obs, fansly external encoder, fansly rtmp, fansly stream key, fansly creator",
+     "h1html": 'Hogyan adsz a <span class="accent">Fansly Live</span>-on SplitCammel',
+     "h1short": "Adás a Fansly-n",
+     "card": "Külső enkóder beállítás a Fansly Creator Dashboardjához.",
+     "intro": "A Fansly közvetlen OnlyFans versenytárs, lazább tartalmi szabályokkal és növekvő creator bázissal — előfizetések, pay-per-view tartalom és a live-streaming termék, a <strong>Fansly Live</strong>. Az alapértelmezett broadcaster böngészőben működik, de a <strong>Creator Dashboard</strong> expose-olja a standard <strong>external encoder</strong> útvonalat is, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel adhatsz az előfizetői bázisodnak.",
+     "quick": "Adás a Fansly Live-on SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Creator Dashboardban megnyitod <em>Live → Broadcast Settings → External Encoder</em>, kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Creator Dashboardból.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a Fansly creator fiókodba, nyisd meg a <strong>Creator Dashboard</strong>-ot és navigálj a <strong>Live → Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a fiókodhoz kötött <strong>server URL</strong>-t és <strong>stream key</strong>-t — másold mindkettőt a SplitCam egyéni RTMP mezőibe. A creator fiókoknak ID verifikációra van szükségük, mielőtt a Fansly Live engedélyezésre kerülne.",
+     "tips": [
+         ("Előfizető-első közönség", "A Fansly közönsége előfizetés-alapú — a live streamed olyan embereket ér el, akik már fizetnek neked havonta. Tervezz tartalmat, ami jutalmazza a lojalitást (exkluzív Q&amp;A, behind-the-scenes, custom tip célok), ahelyett, hogy nyilvános szoba metrikákat hajtanál."),
+         ("Tipek az előfizetések mellett", "A Fansly Live támogatja a streamen belüli tippelést az alap előfizetések mellett. A kombinált bevétel meghaladhatja a tisztán cam platformok tippelését a befutott creator-oknak."),
+         ("Böngésző broadcaster vs külső", "Az alapértelmezett böngésző broadcaster single-source. A SplitCam az External Encoderen keresztül kioldja a multi-kamerát, overlay-eket, beauty filtereket és AI hátteret, ami illik a fizetős előfizetői tartalom polírozottságához."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja a Fansly Live a külső enkódereket, mint a SplitCam?", "Igen — a Creator Dashboard Live szekciója tartalmaz egy External Encoder opciót a Broadcast Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak."),
+         ("Honnan kapom meg a stream key-emet a Fansly-hez?", "Creator Dashboard → Live → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg. Másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak a Fansly Live-hoz?", "Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam a Fansly-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Fansly External Encoder opciója ingyenes a Creator Dashboardban."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — polírozott jelenetek, amik illenek a fizető előfizetők prémium elvárásaihoz."),
+         ("Szerezd meg a Fansly URL-t és stream key-t", "Jelentkezz be a Fansly creator fiókodba, nyisd meg a <strong>Creator Dashboard</strong>-ot, navigálj a <strong>Live → Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a <strong>server URL</strong>-t és az egyedi <strong>stream key</strong>-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet a Fansly-val", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a Fansly server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 3 500–6 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd indítsd el a Fansly Live adást a Creator Dashboardból. Kb. 10 másodperc alatt eléri a streamed a Fansly előfizetőidet."),
+     ],
+    },
 ]

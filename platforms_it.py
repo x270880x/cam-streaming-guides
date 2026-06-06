@@ -814,4 +814,124 @@ PLATFORMS_IT = [
              "Premi <strong>Go Live</strong> in SplitCam, poi vai online dal Performer Dashboard. In ~10 secondi il tuo flusso raggiunge Camversity."),
         ],
     },
+    {
+        "slug": "skyprivate", "name": "SkyPrivate",
+        "title": "Come usare SkyPrivate con SplitCam — chiamate cam private via Skype",
+        "desc": "Usa SkyPrivate con SplitCam gratuito come camera virtuale — chiamate cam private pay-per-minute via Skype, scene multicamera, filtri beauty. Senza filigrana, senza registrazione.",
+        "kw": "skyprivate, sky private cam, skype cam privato, skyprivate splitcam, skyprivate camera virtuale, cam pay per minute",
+        "h1html": 'Come usare <span class="accent">SkyPrivate</span> con SplitCam',
+        "h1short": "SplitCam su SkyPrivate",
+        "card": "Setup camera virtuale per le chiamate cam SkyPrivate basate su Skype.",
+        "intro": "SkyPrivate è una piattaforma cam atipica — invece di un broadcast RTMP monetizza <strong>chiamate cam private pay-per-minute via Skype</strong>. Il cliente prenota e paga al minuto dal marketplace SkyPrivate, e la videochiamata vera e propria passa su Skype. <strong style='color:var(--text)'>SplitCam</strong> gratuito si collega come <strong>camera virtuale</strong>: componi la scena in SplitCam, poi scegli SplitCam come camera dentro Skype prima di rispondere a una chiamata prenotata via SkyPrivate.",
+        "quick": "Per usare SkyPrivate con SplitCam: installa SplitCam, componi la scena, installa Skype con l'add-on SkyPrivate, in <em>Video Settings</em> di Skype seleziona SplitCam come camera e microfono, e rispondi alle chiamate prenotate via SkyPrivate — Skype consegna la tua scena composta al cliente."
+                 "<ol><li>Installa SplitCam.</li><li>Componi la scena in SplitCam.</li>"
+                 "<li>Installa Skype + add-on SkyPrivate.</li>"
+                 "<li>Seleziona SplitCam come camera in Skype.</li>"
+                 "<li>Rispondi alle chiamate.</li></ol>",
+        "key_how": "SkyPrivate non usa RTMP né stream key — usa Skype come trasporto video con un add-on per la fatturazione al minuto. Installa Skype, installa l'add-on browser/desktop SkyPrivate, poi in Skype apri <strong>Settings → Audio &amp; Video → Camera</strong> e seleziona <strong>SplitCam</strong> al posto della tua webcam. La scena composta da SplitCam (overlay, multicamera, filtri beauty) è ciò che vede il cliente SkyPrivate via Skype.",
+        "tips": [
+            ("Niente RTMP — flusso camera virtuale", "Non cercare URL del server né stream key. SkyPrivate passa da Skype, e Skype vede SplitCam come una semplice webcam. Componi la scena in SplitCam, poi scegli SplitCam nelle impostazioni camera di Skype."),
+            ("Imposta SplitCam anche come microfono", "Nelle impostazioni Audio di Skype scegli SplitCam come microfono oltre che come camera — così la riduzione rumore, l'audio mixato e la musica d'intro arrivano al cliente."),
+            ("Fai una chiamata di test su Skype", "Prima della tua prima chiamata SkyPrivate a pagamento, fai una chiamata di test gratuita su Skype (Echo / Sound Test Service) per verificare che SplitCam sia la camera attiva e che la scena sia composta bene."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("SkyPrivate usa RTMP o una stream key?", "Nessuno dei due. SkyPrivate gestisce prenotazione e fatturazione; il video vero e proprio passa da Skype. Non ti serve URL del server RTMP né stream key — basta configurare SplitCam come camera dentro Skype."),
+            ("Come seleziono SplitCam in Skype per SkyPrivate?", "Apri Skype Settings → Audio &amp; Video → Camera, scegli SplitCam dalla lista. Fai lo stesso per Microphone. Le chiamate SkyPrivate arrivano poi come normali chiamate Skype con la tua scena SplitCam come feed camera."),
+            ("Posso usare overlay e filtri beauty con SkyPrivate?", "Sì — componili dentro la scena SplitCam. Skype riceve solo il risultato composto come unico feed camera, quindi tutto ciò che SplitCam compone (overlay, filtri beauty, sfondo IA, scene multicamera) è visibile al cliente SkyPrivate."),
+            ("SplitCam è gratuito per SkyPrivate?", "Sì — SplitCam è gratuito, senza filigrana e senza limite di tempo. Come camera virtuale per le chiamate SkyPrivate via Skype non aggiunge costi né branding alla chiamata."),
+        ],
+        "steps": [
+            ("Installa SplitCam",
+             "SplitCam è gratuito per Windows e macOS — senza registrazione, senza carta, senza filigrana. Per SkyPrivate fa da <strong>camera virtuale</strong> che Skype riconosce come una webcam qualsiasi."),
+            ("Componi la scena in SplitCam",
+             "Apri SplitCam e usa <strong>Media Layers +</strong> per aggiungere la webcam più overlay, testo, filtri beauty o sfondo IA. Questa scena composta è ciò che Skype consegnerà al cliente SkyPrivate."),
+            ("Installa Skype e l'add-on SkyPrivate",
+             "Installa Skype sullo stesso PC, accedi, poi installa l'add-on / app desktop SkyPrivate seguendo l'onboarding di SkyPrivate. L'add-on gestisce la fatturazione al minuto sul lato SkyPrivate."),
+            ("Seleziona SplitCam come camera e mic in Skype",
+             "In Skype apri <strong>Settings → Audio &amp; Video</strong>. Imposta <strong>Camera = SplitCam</strong> e <strong>Microphone = SplitCam</strong>. Lancia una chiamata di test rapida su Skype (Echo / Sound Test Service) per verificare resa video e audio."),
+            ("Rispondi alle chiamate SkyPrivate",
+             "Quando un cliente SkyPrivate prenota una chiamata a pagamento, arriva come chiamata Skype — rispondi. Vede la tua scena composta SplitCam; SkyPrivate fattura al minuto. Puoi modificare la scena durante la chiamata editandola in SplitCam — Skype aggiorna all'istante."),
+        ],
+    },
+    {
+        "slug": "manyvids", "name": "ManyVids",
+        "title": "Come trasmettere su MV Live (ManyVids) con SplitCam — Creator Studio",
+        "desc": "Trasmettere su MV Live di ManyVids con SplitCam gratuito — encoder esterno del Creator Studio, economia del creator stile OnlyFans, scene multicamera. Senza filigrana, senza registrazione.",
+        "kw": "trasmettere manyvids, mv live, manyvids live broadcast, manyvids obs, mv live external encoder, manyvids stream key, manyvids creator",
+        "h1html": 'Come trasmettere su <span class="accent">MV Live</span> con SplitCam',
+        "h1short": "Trasmettere su MV Live",
+        "card": "Setup dell'encoder esterno per il Creator Studio MV Live di ManyVids.",
+        "intro": "ManyVids è una piattaforma di economia del creator — vendita di clip, video personalizzati, abbonamenti fan club e il prodotto live <strong>MV Live</strong>. Il broadcaster di default del Creator Studio funziona da browser, ma viene esposta anche una via standard <strong>External Encoder</strong> a cui si collega <strong style='color:var(--text)'>SplitCam</strong> gratuito — così trasmetti con scene multicamera, overlay e filtri sulla stessa piattaforma creator-friendly.",
+        "quick": "Per trasmettere su MV Live con SplitCam: installare SplitCam, comporre la scena, nel Creator Studio aprire <em>MV Live → Broadcast Settings → External Encoder</em>, copiare URL del server e stream key, incollare in SplitCam, premere Go Live."
+                 "<ol><li>Installare SplitCam.</li><li>Aggiungere camera + scena.</li>"
+                 "<li>Prendere URL e stream key dal Creator Studio.</li>"
+                 "<li>Incollare in SplitCam.</li>"
+                 "<li>Premere Go Live.</li></ol>",
+        "key_how": "Accedi al tuo account creator di ManyVids, apri il <strong>Creator Studio</strong> e vai in <strong>MV Live → Broadcast Settings → External Encoder</strong>. La pagina mostra una <strong>URL del server</strong> e una <strong>stream key</strong> legate al tuo account — copia entrambe nei campi RTMP personalizzato di SplitCam. Gli account creator devono essere completamente verificati (ID + fiscale) prima che MV Live sia disponibile.",
+        "tips": [
+            ("Economia del creator, non solo live", "ManyVids non è una piattaforma cam pura — MV Live è una via di reddito affiancata a vendita di clip, video personalizzati e abbonamenti fan club. Usa il live per spingere il pubblico verso le altre monetizzazioni."),
+            ("Tipping con token dentro MV Live", "MV Live ha il suo sistema di tipping con token dentro la stanza. Pianifica menu di obiettivi e trigger di reward stile Chaturbate / Stripchat — convertono bene sul pubblico esistente di ManyVids."),
+            ("Browser vs encoder esterno", "Il broadcaster integrato browser del Creator Studio è a singola camera. SplitCam via External Encoder sblocca multicamera, overlay e filtri."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("MV Live (ManyVids) supporta encoder esterni come SplitCam?", "Sì — la sezione MV Live del Creator Studio include l'opzione External Encoder in Broadcast Settings. URL del server RTMP standard e stream key; OBS, SplitCam, vMix si collegano."),
+            ("Dove prendo la mia stream key di MV Live?", "Creator Studio → MV Live → Broadcast Settings → External Encoder. URL del server e stream key compaiono lì — copia entrambe nei campi RTMP personalizzato di SplitCam."),
+            ("Che bitrate uso per MV Live?", "Spingi 1920×1080 a 30 fps, 3.500–6.000 Kbps con keyframe ogni 2 secondi. Lancia prima lo speed test integrato di SplitCam."),
+            ("SplitCam è gratis con MV Live?", "Sì — SplitCam è gratis, senza filigrana e senza limite di tempo. L'opzione encoder esterno di ManyVids è gratis nel Creator Studio."),
+        ],
+        "steps": [
+            ("Scarica e installa SplitCam",
+             "SplitCam è un software di live streaming gratuito per Windows e macOS — senza registrazione, senza carta, senza filigrana."),
+            ("Componi la scena",
+             "Apri SplitCam e aggiungi la webcam. Sovrapponi overlay, testo, una seconda camera o il telefono, filtri beauty o sfondo IA — perfetto per i menu di obiettivi e i trigger di reward di MV Live."),
+            ("Prendi URL e stream key di MV Live",
+             "Accedi al tuo account creator di ManyVids, apri il <strong>Creator Studio</strong> e vai in <strong>MV Live → Broadcast Settings → External Encoder</strong>. La pagina mostra una <strong>URL del server</strong> e una <strong>stream key</strong> unica. Copia entrambe."),
+            ("Collega SplitCam a MV Live",
+             "In SplitCam apri <strong>Stream Settings</strong>, incolla URL del server di MV Live e stream key nei campi RTMP personalizzato. Imposta il bitrate a 3.500–6.000 Kbps a 1920×1080, 30 fps, con keyframe ogni 2 secondi."),
+            ("Clicca Go Live",
+             "Premi <strong>Go Live</strong> in SplitCam, poi avvia la trasmissione MV Live dal Creator Studio. In ~10 secondi il tuo flusso raggiunge il pubblico di MV Live."),
+        ],
+    },
+    {
+        "slug": "fansly", "name": "Fansly",
+        "title": "Come trasmettere su Fansly Live con SplitCam — encoder esterno del Creator Dashboard",
+        "desc": "Trasmettere su Fansly Live con SplitCam gratuito — encoder esterno del Creator Dashboard, concorrente diretto di OnlyFans, scene multicamera e filtri beauty. Senza filigrana, senza registrazione.",
+        "kw": "trasmettere fansly, fansly live, fansly broadcast, fansly obs, fansly encoder esterno, fansly rtmp, fansly stream key, fansly creator",
+        "h1html": 'Come trasmettere su <span class="accent">Fansly Live</span> con SplitCam',
+        "h1short": "Trasmettere su Fansly",
+        "card": "Setup dell'encoder esterno per il Creator Dashboard di Fansly.",
+        "intro": "Fansly è un concorrente diretto di OnlyFans con regole sui contenuti più permissive e una base di creator in crescita — abbonamenti, pay-per-view e il prodotto live <strong>Fansly Live</strong>. Il broadcaster di default funziona da browser, ma il <strong>Creator Dashboard</strong> espone anche una via standard <strong>External Encoder</strong> a cui si collega <strong style='color:var(--text)'>SplitCam</strong> gratuito — per trasmettere con scene multicamera, overlay e filtri verso la tua base di abbonati.",
+        "quick": "Per trasmettere su Fansly Live con SplitCam: installare SplitCam, comporre la scena, nel Creator Dashboard aprire <em>Live → Broadcast Settings → External Encoder</em>, copiare URL del server e stream key, incollare in SplitCam, premere Go Live."
+                 "<ol><li>Installare SplitCam.</li><li>Aggiungere camera + scena.</li>"
+                 "<li>Prendere URL e stream key dal Creator Dashboard.</li>"
+                 "<li>Incollare in SplitCam.</li>"
+                 "<li>Premere Go Live.</li></ol>",
+        "key_how": "Accedi al tuo account creator di Fansly, apri il <strong>Creator Dashboard</strong> e vai in <strong>Live → Broadcast Settings → External Encoder</strong>. La pagina mostra una <strong>URL del server</strong> e una <strong>stream key</strong> legate al tuo account — copia entrambe nei campi RTMP personalizzato di SplitCam. Gli account creator devono passare una verifica ID prima che Fansly Live venga abilitato.",
+        "tips": [
+            ("Pubblico in abbonamento, prima di tutto", "Il pubblico di Fansly è in abbonamento — il tuo live raggiunge gente che già ti paga ogni mese. Pianifica contenuti che premino la fedeltà (Q&amp;A esclusivi, dietro le quinte, obiettivi di mancia personalizzati) invece di rincorrere metriche da stanza pubblica."),
+            ("Mance oltre agli abbonamenti", "Fansly Live supporta le mance in diretta oltre all'abbonamento base. Per creator già avviati i ricavi combinati possono superare il tipping puro delle piattaforme cam."),
+            ("Broadcaster browser vs esterno", "Il broadcaster browser di default è a sorgente singola. SplitCam via External Encoder sblocca multicamera, overlay, filtri beauty e sfondo IA che eguagliano la cura dei contenuti a pagamento per gli abbonati."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Fansly Live supporta encoder esterni come SplitCam?", "Sì — la sezione Live del Creator Dashboard include l'opzione External Encoder in Broadcast Settings. URL del server RTMP standard e stream key; OBS, SplitCam, vMix si collegano."),
+            ("Dove prendo la mia stream key di Fansly?", "Creator Dashboard → Live → Broadcast Settings → External Encoder. URL del server e stream key compaiono lì. Copia entrambe nei campi RTMP personalizzato di SplitCam."),
+            ("Che bitrate uso per Fansly Live?", "Spingi 1920×1080 a 30 fps, 3.500–6.000 Kbps con keyframe ogni 2 secondi. Lancia prima lo speed test integrato di SplitCam."),
+            ("SplitCam è gratis con Fansly?", "Sì — SplitCam è gratis, senza filigrana e senza limite di tempo. L'opzione encoder esterno di Fansly è gratis nel Creator Dashboard."),
+        ],
+        "steps": [
+            ("Scarica e installa SplitCam",
+             "SplitCam è un software di live streaming gratuito per Windows e macOS — senza registrazione, senza carta, senza filigrana."),
+            ("Componi la scena",
+             "Apri SplitCam e aggiungi la webcam. Sovrapponi overlay, testo, una seconda camera o il telefono, filtri beauty o sfondo IA — una scena curata è all'altezza delle aspettative premium dei tuoi abbonati a pagamento."),
+            ("Prendi URL e stream key di Fansly",
+             "Accedi al tuo account creator di Fansly, apri il <strong>Creator Dashboard</strong> e vai in <strong>Live → Broadcast Settings → External Encoder</strong>. La pagina mostra una <strong>URL del server</strong> e una <strong>stream key</strong> unica. Copia entrambe."),
+            ("Collega SplitCam a Fansly",
+             "In SplitCam apri <strong>Stream Settings</strong>, incolla URL del server di Fansly e stream key nei campi RTMP personalizzato. Imposta il bitrate a 3.500–6.000 Kbps a 1920×1080, 30 fps, con keyframe ogni 2 secondi."),
+            ("Clicca Go Live",
+             "Premi <strong>Go Live</strong> in SplitCam, poi avvia la trasmissione Fansly Live dal Creator Dashboard. In ~10 secondi il tuo flusso raggiunge i tuoi abbonati Fansly."),
+        ],
+    },
 ]
