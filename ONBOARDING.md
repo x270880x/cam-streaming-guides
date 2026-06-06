@@ -1,6 +1,6 @@
 # cam-streaming-guides — Project Onboarding
 
-*Last updated: 2026-05-21. Open this at the start of any new chat about this project.*
+*Last updated: 2026-06-07. Open this at the start of any new chat about this project.*
 
 ## What this is
 Adult-cam how-to guides — "how to stream on &lt;platform&gt; with SplitCam". Built to move the
@@ -14,18 +14,25 @@ adult = revenue, so it gets its own domain + 301 redirects, not deletion).
 - Sister project: the main SplitCam site (`../splitcam/`).
 
 ## Current state
-- **60 pages**: 19 platforms × EN/RU/ES + 3 language hubs.
+- **1330 pages**: ~62 platforms × 35 languages + per-language hubs, legal, OBS-alternative
+  and become-a-cam-model pages.
 - All pages are `noindex` — this is staging, not the production domain yet.
-- Platforms: chaturbate, cam4, bongacams, stripchat, onlyfans, camplace, camsoda, streamate,
-  streamray, xlovecam, soulcams, imlive, vxlive, virtwish, xmodels, flirt4free, mfc-alerts,
-  lovense, multistream-cams.
+- Platforms now include the original 19 plus the "14 parent expansion" batch
+  (livejasmin, myfreecams, cherry-tv, amateurtv, camster, camversity, skyprivate, manyvids,
+  fansly, ifriends, babestation, adultwork, …). Adult-platform batch 2 = ifriends + babestation
+  + adultwork (10-12/14), live across all 35 languages.
 
 ## How it's built — STATIC GENERATOR
 Do not hand-edit the HTML. Edit data, then regenerate.
 
-- `build.py` — the generator (shared dark-theme template, all CSS, page render).
-- `platforms_en.py` / `platforms_ru.py` / `platforms_es.py` — per-platform content, one dict each.
-- Run: `python3 build.py` → writes `<slug>/index.html`, `ru/<slug>/`, `es/<slug>/` + 3 hubs.
+- `build.py` — the generator (shared dark-theme template, all CSS, page render). `main()`
+  imports every `platforms_<code>.py` (35 of them) and merges by slug; a platform is rendered
+  for a language only if it exists in that language's file.
+- `platforms_<lang>.py` — one file per language (35 total: en, ru, es, de, fr, it, … ja, ar, th,
+  he, fa, hi). Each holds a `PLATFORMS_<LANG>` list, one dict per platform. Some files use a
+  `_p(...)` helper-constructor style instead of raw dicts — match whatever the file already uses.
+- Run: `python3 build.py` → writes `<slug>/index.html` (EN) + `<lang>/<slug>/` for every language,
+  plus per-language hubs, legal, OBS-alt and cam-model pages, sitemap.xml, robots.txt.
 
 Each generated page: hero with platform×SplitCam collab logo (variant C, animated dot flowing
 SplitCam→platform), quick answer, YouTube video guide, 5-step guide, pro tips, FAQ,
@@ -39,8 +46,8 @@ full meta (OG + Twitter cards).
 - `assets/splitcam.png` — the official SplitCam logo (already present).
 
 ## Rules
-- **Multi-language sync:** any content added/changed in one language must be replicated to
-  all three — keep `platforms_en/ru/es.py` in sync, regenerate, verify counts match.
+- **Multi-language sync:** any platform added/changed must be replicated to **all 35**
+  `platforms_<lang>.py` files (not just en/ru/es), regenerate, verify each platform has 35 dirs.
 - **Uniqueness:** pages must stay genuinely distinct (target: no EN pair >65% body similarity)
   so Google indexes each. Current: EN max ~58%, RU ~68%, ES ~53%.
 - After meaningful edits: commit + push immediately (GitHub Pages auto-deploys).
