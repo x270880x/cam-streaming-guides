@@ -631,4 +631,100 @@ PLATFORMS_DA = [
          ("Forbind SplitCam med Cherry.tv", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt Cherry.tv server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps."),
          ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Streamer Dashboard på Cherry.tv."),
      ]},
+    {"slug": "amateurtv", "name": "AmateurTV",
+     "title": "Udsend på AmateurTV med SplitCam — spansktalende cam-netværk",
+     "desc": "Udsend på AmateurTV med gratis SplitCam — Model Panel External Encoder, spansktalende cam-netværk for Spanien og LatAm, multi-kamera scener. Intet vandmærke, ingen tilmelding.",
+     "kw": "amateurtv udsend, amateur.tv obs, amateurtv external encoder, amateurtv rtmp, amateurtv stream key, modelos amateur tv",
+     "h1html": 'Sådan udsender du på <span class="accent">AmateurTV</span> med SplitCam',
+     "h1short": "Udsend AmateurTV",
+     "card": "External-encoder-opsætning til det spansktalende netværk AmateurTV.",
+     "intro": "AmateurTV er det førende spansktalende cam-netværk — stærkt publikum i Spanien, Mexico, Argentina og hele LatAm. Standardbroadcasteren i Model Panel kører i browseren, men platformen har også en officiel <strong>External Encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på — så du kan streame med multi-kamera scener, beauty-filtre og overlays til et hispanofont publikum, som de US-tunge netværk dårligt betjener.",
+     "quick": "Udsend på AmateurTV med SplitCam: installér SplitCam, byg scenen, i Model Panel åbn <em>Broadcast Settings → External Encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Model Panel.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din AmateurTV-model-konto, åbn <strong>Model Panel</strong> og naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. Nye model-konti skal gennemføre ID-verifikation, før de kan gå live.",
+     "tips": [
+         ("Hispanofont publikum først", "Trafikken på AmateurTV er overvejende spansktalende — Spanien om dagen, LatAm i amerikansk aftentid. Streamtitler, scenetekst og overlays på spansk performer markant bedre end ren engelsk."),
+         ("LatAm-tidszone er prime time", "Peak-trafikken følger LatAm-aftenen (UTC-3 til UTC-6). Er du fleksibel, rammer sen CET-aften / tidlig asiatisk morgen både Spaniens og LatAms toppe."),
+         ("Solide mid-tier-udbetalinger", "Ikke branchens højeste RPM, men stabilt — AmateurTV betaler pålideligt, og den hispanofone niche har mindre konkurrence end de største US-netværk."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter AmateurTV officielt eksterne encodere som SplitCam?", "Ja — Model Panel har External Encoder-valget under Broadcast Settings. AmateurTV leverer en standard RTMP-server-URL og stream key; OBS, SplitCam, vMix og andre RTMP-encodere kan alle forbinde."),
+         ("Hvor finder jeg min AmateurTV stream key?", "Model Panel → Broadcast Settings → External Encoder. Både server-URL og stream key dukker op der. Kopiér begge ind i SplitCams custom RTMP-felter. Nøglen er bundet til kontoen."),
+         ("Hvilken bitrate til AmateurTV?", "Standard cam-kvalitet — sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps og keyframe hvert 2. sekund. Kør først SplitCams indbyggede hastighedstest."),
+         ("Er SplitCam gratis at bruge med AmateurTV?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. External Encoder-valget på AmateurTV er gratis at aktivere."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det er den encoder, der sender din video til AmateurTV."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå. Brug spansk overlay-tekst til AmateurTVs hispanofone publikum."),
+         ("Hent AmateurTV-URL og stream key", "Log ind på din AmateurTV-model-konto, åbn <strong>Model Panel</strong>, naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopiér begge."),
+         ("Forbind SplitCam med AmateurTV", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt AmateurTV-server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe. Kør først den indbyggede hastighedstest."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Model Panel på AmateurTV. Inden for ~10 sekunder når strømmen netværket. Næste gang er det ét klik — åbn SplitCam, Go Live."),
+     ]},
+    {"slug": "camster", "name": "Camster",
+     "title": "Udsend på Camster med SplitCam — Model Hub External Encoder",
+     "desc": "Udsend på Camster med gratis SplitCam — Model Hub External Encoder, etableret mid-tier cam-platform, multi-kamera scener og overlays. Intet vandmærke, ingen tilmelding.",
+     "kw": "camster udsend, camster.com obs, camster external encoder, camster rtmp, camster stream key, camster model hub",
+     "h1html": 'Sådan udsender du på <span class="accent">Camster</span> med SplitCam',
+     "h1short": "Udsend Camster",
+     "card": "External-encoder-opsætning til Camsters Model Hub.",
+     "intro": "Camster er en etableret mid-tier cam-platform — mindre end Chaturbate eller LiveJasmin, men med en loyal brugerbase og rimelige udbetalinger. Standardbroadcasteren i Model Hub kører i browseren, men platformen har også en officiel <strong>External Encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på — for multi-kamera scener, overlays og filtre, som den indbyggede broadcaster ikke kan levere.",
+     "quick": "Udsend på Camster med SplitCam: installér SplitCam, byg scenen, i Model Hub åbn <em>Broadcast Settings → External Encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Model Hub.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din Camster-model-konto, åbn <strong>Model Hub</strong> og naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. Nøglen er kontobundet; behandl den som en adgangskode.",
+     "tips": [
+         ("Mid-tier betyder mindre konkurrence", "Camster har stabil trafik, men færre broadcastere end de største netværk — med en poleret scene og en fast tidsplan er det lettere at lande på forsiden."),
+         ("Browser-broadcaster vs. external", "Standard browser-broadcasteren er single-kilde. SplitCam via External Encoder åbner for multi-kamera scener, overlays, beauty-filtre og AI-baggrund."),
+         ("Stabile udbetalinger, fair split", "Camsters revenue split er fair for mid-tier — ikke branchens højeste, men pålidelige månedlige udbetalinger og få modelklager over betalingsforsinkelser."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter Camster officielt eksterne encodere som SplitCam?", "Ja — Model Hub har External Encoder-valget under Broadcast Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam og andre RTMP-encodere kan alle forbinde."),
+         ("Hvor finder jeg min Camster stream key?", "Model Hub → Broadcast Settings → External Encoder. Både server-URL og stream key dukker op der. Kopiér begge ind i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til Camster?", "Standard cam-kvalitet — sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps og keyframe hvert 2. sekund. Kør først SplitCams indbyggede hastighedstest."),
+         ("Er SplitCam gratis at bruge med Camster?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. External Encoder-valget på Camster er gratis."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå — alt anvendt live."),
+         ("Hent Camster-URL og stream key", "Log ind på din Camster-model-konto, åbn <strong>Model Hub</strong>, naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopiér begge."),
+         ("Forbind SplitCam med Camster", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt Camster-server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe. Kør først den indbyggede hastighedstest."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Model Hub på Camster. Inden for ~10 sekunder når strømmen Camster."),
+     ]},
+    {"slug": "camversity", "name": "Camversity",
+     "title": "Udsend på Camversity med SplitCam — Performer Dashboard External Encoder",
+     "desc": "Udsend på Camversity med gratis SplitCam — Performer Dashboard External Encoder, voksende uafhængig cam-platform, multi-kamera scener. Intet vandmærke, ingen tilmelding.",
+     "kw": "camversity udsend, camversity obs, camversity external encoder, camversity rtmp, camversity stream key, camversity performer",
+     "h1html": 'Sådan udsender du på <span class="accent">Camversity</span> med SplitCam',
+     "h1short": "Udsend Camversity",
+     "card": "External-encoder-opsætning til Camversitys Performer Dashboard.",
+     "intro": "Camversity er en voksende uafhængig cam-platform med fokus på performer-venlige værktøjer og lavere kommission end legacy-netværkene. Standardbroadcasteren i Performer Dashboard kører i browseren, men platformen har også en officiel <strong>External Encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på — for multi-kamera scener, overlays og filtre.",
+     "quick": "Udsend på Camversity med SplitCam: installér SplitCam, byg scenen, i Performer Dashboard åbn <em>Stream Settings → External Encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Performer Dashboard.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din Camversity-performer-konto, åbn <strong>Performer Dashboard</strong> og naviger til <strong>Stream Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. Nye konti skal gennemføre en standard ID-verifikation, før de kan gå live.",
+     "tips": [
+         ("Performer-venlig split", "Camversitys revenue split er mere fordelagtig for performere end legacy-netværkenes — værd at sammenligne med din nuværende hovedplatform, hvis du er tidligt i din cam-karriere."),
+         ("Lettere onboarding end Docler", "Verifikationen hos Camversity går hurtigere end LiveJasmins 48–72-timers godkendelse og er stadig seriøs (ingen tilfældige / uverificerede modeller). God mellemvej."),
+         ("Byg en scene, ikke bare et webkamera", "Standardbroadcasteren i Performer Dashboard er single-kilde. SplitCam via External Encoder åbner for multi-kamera, overlays og beauty-filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter Camversity officielt eksterne encodere som SplitCam?", "Ja — Performer Dashboard har External Encoder-valget under Stream Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam, vMix kan alle forbinde."),
+         ("Hvor finder jeg min Camversity stream key?", "Performer Dashboard → Stream Settings → External Encoder. Både server-URL og stream key dukker op der."),
+         ("Hvilken bitrate til Camversity?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams indbyggede hastighedstest."),
+         ("Er SplitCam gratis at bruge med Camversity?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. External Encoder-valget på Camversity er gratis."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent Camversity-URL og stream key", "Log ind på din Camversity-performer-konto, åbn <strong>Performer Dashboard</strong>, naviger til <strong>Stream Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopiér begge."),
+         ("Forbind SplitCam med Camversity", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt Camversity-server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Performer Dashboard. Inden for ~10 sekunder når strømmen Camversity."),
+     ]},
 ]

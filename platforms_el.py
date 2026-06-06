@@ -634,4 +634,103 @@ PLATFORMS_EL = [
          ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά μπες online από το Streamer Dashboard. Μέσα σε δευτερόλεπτα εμφανίζεσαι στις λίστες του Cherry.tv. Οι επόμενες μεταδόσεις είναι ένα κλικ."),
      ],
     },
+    {"slug": "amateurtv", "name": "AmateurTV",
+     "title": "Μετάδοση στο AmateurTV με SplitCam — ισπανόφωνο cam network",
+     "desc": "Μετάδοση στο AmateurTV με δωρεάν SplitCam — Model Panel external encoder, ισπανόφωνο cam network (Ισπανία + LatAm), multi-camera σκηνές. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση amateurtv, amateur.tv obs, amateurtv external encoder, amateurtv rtmp, amateurtv stream key, modelos amateur tv",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">AmateurTV</span> με SplitCam',
+     "h1short": "Μετάδοση AmateurTV",
+     "card": "Ρύθμιση external encoder για το ισπανόφωνο network AmateurTV.",
+     "intro": "Το AmateurTV είναι το ηγετικό ισπανόφωνο cam network — ισχυρό κοινό σε Ισπανία, Μεξικό, Αργεντινή και σε όλη τη Λατινική Αμερική. Ο προεπιλεγμένος broadcaster του Model Panel δουλεύει στον browser, αλλά εκθέτει και ένα standard μονοπάτι <strong>external encoder</strong>, στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — έτσι κάνεις stream με multi-camera σκηνές, beauty filters και overlays σε ένα ισπανόφωνο κοινό που τα US-centric networks δεν εξυπηρετούν καλά.",
+     "quick": "Μετάδοση στο AmateurTV με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Model Panel ανοίγεις <em>Broadcast Settings → External Encoder</em>, αντιγράφεις server URL και stream key, επικολλάς στον SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε URL και stream key από το Model Panel.</li><li>Επικόλλησε στον SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον model λογαριασμό σου στο AmateurTV, άνοιξε <strong>Model Panel → Broadcast Settings → External Encoder</strong>. Εμφανίζονται ένα <strong>server URL</strong> και ένα <strong>stream key</strong> δεμένα με τον λογαριασμό σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Οι νέοι model λογαριασμοί χρειάζονται ID verification πριν πάνε ζωντανά.",
+     "tips": [
+         ("Ισπανόφωνο κοινό πρώτο", "Η κίνηση του AmateurTV είναι συντριπτικά ισπανόφωνη — Ισπανία κατά τη διάρκεια της ημέρας, LatAm στις βραδινές US ώρες. Τίτλοι stream, κείμενο σκηνής και overlays στα ισπανικά υπερτερούν εντυπωσιακά του μόνο-στα-αγγλικά σε αυτό το network."),
+         ("Η ζώνη LatAm είναι το prime time σου", "Η αιχμή της κίνησης συσχετίζεται με τις βραδινές ώρες LatAm (UTC-3 έως UTC-6). Αν έχεις ευελιξία, μετάδοση αργά το βράδυ CET / νωρίς το πρωί ασιατικής ώρας πιάνει τόσο την αιχμή της Ισπανίας όσο και της LatAm."),
+         ("Σταθερές mid-tier πληρωμές", "Όχι το υψηλότερο RPM στη βιομηχανία, αλλά σταθερό — το AmateurTV πληρώνει συνεπώς και το ισπανόφωνο niche έχει λιγότερο ανταγωνισμό από τα κορυφαία US networks."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει επίσημα το AmateurTV external encoders όπως ο SplitCam;", "Ναι — το Model Panel περιλαμβάνει επιλογή External Encoder κάτω από Broadcast Settings. Το AmateurTV παρέχει standard RTMP server URL και stream key· OBS, SplitCam, vMix και άλλοι RTMP encoders συνδέονται όλοι."),
+         ("Από πού παίρνω το stream key μου για το AmateurTV;", "Model Panel → Broadcast Settings → External Encoder. Τόσο το server URL όσο και το stream key εμφανίζονται εκεί. Αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Το key είναι δεμένο με τον λογαριασμό."),
+         ("Τι bitrate να χρησιμοποιήσω για το AmateurTV;", "Standard cam-quality ρυθμίσεις — push 1920×1080 στα 30 fps, 3.500–6.000 Kbps με keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test του SplitCam."),
+         ("Είναι δωρεάν ο SplitCam για το AmateurTV;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η επιλογή External Encoder του AmateurTV ενεργοποιείται δωρεάν."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Είναι ο encoder που στέλνει το video σου στο AmateurTV."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background. Χρησιμοποίησε ισπανικό κείμενο στα overlays για το ισπανόφωνο κοινό του AmateurTV."),
+         ("Πάρε URL και stream key AmateurTV", "Στον model λογαριασμό σου άνοιξε <strong>Model Panel → Broadcast Settings → External Encoder</strong>. Αντίγραψε το server URL και το μοναδικό stream key."),
+         ("Σύνδεσε τον SplitCam με το AmateurTV", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του AmateurTV και το stream key στα custom RTMP πεδία. Bitrate 3.500–6.000 Kbps στα 1920×1080, 30 fps, keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά μπες online από το Model Panel στο AmateurTV. Μέσα σε ~10 δευτερόλεπτα το stream φτάνει στο network. Οι επόμενες μεταδόσεις είναι ένα κλικ — ανοίγεις SplitCam, Go Live."),
+     ],
+    },
+    {"slug": "camster", "name": "Camster",
+     "title": "Μετάδοση στο Camster με SplitCam — Model Hub external encoder",
+     "desc": "Μετάδοση στο Camster με δωρεάν SplitCam — Model Hub external encoder, εδραιωμένη mid-tier cam πλατφόρμα, multi-camera σκηνές και overlays. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση camster, camster.com obs, camster external encoder, camster rtmp, camster stream key, camster model hub",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Camster</span> με SplitCam',
+     "h1short": "Μετάδοση Camster",
+     "card": "Ρύθμιση external encoder για το Model Hub του Camster.",
+     "intro": "Το Camster είναι μια εδραιωμένη mid-tier cam πλατφόρμα — μικρότερη από Chaturbate ή LiveJasmin, αλλά με πιστή βάση χρηστών και δίκαιες πληρωμές. Ο προεπιλεγμένος broadcaster του Model Hub δουλεύει στον browser, αλλά εκθέτει και ένα standard μονοπάτι <strong>external encoder</strong>, στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — έτσι κάνεις stream με multi-camera σκηνές, overlays και φίλτρα που ο ενσωματωμένος broadcaster δεν μπορεί να προσφέρει.",
+     "quick": "Μετάδοση στο Camster με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Model Hub ανοίγεις <em>Broadcast Settings → External Encoder</em>, αντιγράφεις server URL και stream key, επικολλάς στον SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε URL και stream key από το Model Hub.</li><li>Επικόλλησε στον SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον model λογαριασμό σου στο Camster, άνοιξε <strong>Model Hub → Broadcast Settings → External Encoder</strong>. Εμφανίζονται ένα <strong>server URL</strong> και ένα <strong>stream key</strong> δεμένα με τον λογαριασμό σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Το key είναι δεμένο με τον λογαριασμό· φέρσου του σαν password.",
+     "tips": [
+         ("Mid-tier σημαίνει λιγότερος ανταγωνισμός", "Το Camster έχει σταθερή κίνηση αλλά λιγότερους broadcasters από τα top-tier networks — πιο εύκολο να φτάσεις στην πρώτη σελίδα με μια καλοδουλεμένη σκηνή και σταθερό πρόγραμμα."),
+         ("Browser broadcaster vs external", "Ο προεπιλεγμένος browser broadcaster είναι single-source. Ο SplitCam μέσω External Encoder ξεκλειδώνει multi-camera σκηνές, overlays, beauty filters και AI background."),
+         ("Σταθερές πληρωμές, δίκαια splits", "Το split εσόδων του Camster είναι δίκαιο για το mid-tier — όχι το υψηλότερο της βιομηχανίας, αλλά αξιόπιστες μηνιαίες πληρωμές και ελάχιστα παράπονα μοντέλων για καθυστερήσεις."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει επίσημα το Camster external encoders όπως ο SplitCam;", "Ναι — το Model Hub περιλαμβάνει επιλογή External Encoder κάτω από Broadcast Settings. Standard RTMP server URL και stream key· OBS, SplitCam και άλλοι RTMP encoders συνδέονται όλοι."),
+         ("Από πού παίρνω το stream key μου για το Camster;", "Model Hub → Broadcast Settings → External Encoder. Τόσο το server URL όσο και το stream key εμφανίζονται εκεί. Αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Τι bitrate να χρησιμοποιήσω για το Camster;", "Standard cam-quality ρυθμίσεις — push 1920×1080 στα 30 fps, 3.500–6.000 Kbps με keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test του SplitCam."),
+         ("Είναι δωρεάν ο SplitCam για το Camster;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η επιλογή External Encoder του Camster είναι δωρεάν."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — όλα εφαρμοσμένα live."),
+         ("Πάρε URL και stream key Camster", "Στον model λογαριασμό σου άνοιξε <strong>Model Hub → Broadcast Settings → External Encoder</strong>. Αντίγραψε το server URL και το μοναδικό stream key."),
+         ("Σύνδεσε τον SplitCam με το Camster", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του Camster και το stream key στα custom RTMP πεδία. Bitrate 3.500–6.000 Kbps στα 1920×1080, 30 fps, keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά μπες online από το Model Hub στο Camster. Μέσα σε ~10 δευτερόλεπτα το stream φτάνει στο Camster."),
+     ],
+    },
+    {"slug": "camversity", "name": "Camversity",
+     "title": "Μετάδοση στο Camversity με SplitCam — Performer Dashboard external encoder",
+     "desc": "Μετάδοση στο Camversity με δωρεάν SplitCam — Performer Dashboard external encoder, αναπτυσσόμενη ανεξάρτητη cam πλατφόρμα, multi-camera σκηνές. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση camversity, camversity obs, camversity external encoder, camversity rtmp, camversity stream key, camversity performer",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Camversity</span> με SplitCam',
+     "h1short": "Μετάδοση Camversity",
+     "card": "Ρύθμιση external encoder για το Performer Dashboard του Camversity.",
+     "intro": "Το Camversity είναι μια αναπτυσσόμενη ανεξάρτητη cam πλατφόρμα με έμφαση σε performer-friendly εργαλεία και χαμηλότερες προμήθειες από τα παραδοσιακά networks. Ο προεπιλεγμένος broadcaster του Performer Dashboard δουλεύει στον browser, αλλά εκθέτει και ένα standard μονοπάτι <strong>external encoder</strong>, στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — έτσι κάνεις stream με multi-camera σκηνές, overlays και φίλτρα.",
+     "quick": "Μετάδοση στο Camversity με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Performer Dashboard ανοίγεις <em>Stream Settings → External Encoder</em>, αντιγράφεις server URL και stream key, επικολλάς στον SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε URL και stream key από το Performer Dashboard.</li><li>Επικόλλησε στον SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον performer λογαριασμό σου στο Camversity, άνοιξε <strong>Performer Dashboard → Stream Settings → External Encoder</strong>. Εμφανίζονται ένα <strong>server URL</strong> και ένα <strong>stream key</strong> δεμένα με τον λογαριασμό σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Οι νέοι λογαριασμοί χρειάζονται standard ID verification πριν πάνε ζωντανά.",
+     "tips": [
+         ("Performer-friendly splits", "Το split εσόδων του Camversity είναι πιο ευνοϊκό για τους performers από τα παραδοσιακά networks — αξίζει να το συγκρίνεις με την κύρια πλατφόρμα σου αν είσαι στην αρχή της cam καριέρας."),
+         ("Πιο ελαφρύ onboarding από Docler", "Η verification του Camversity είναι πιο γρήγορη από την έγκριση 48–72 ωρών της LiveJasmin, ενώ παραμένει legitimate (χωρίς random / unverified μοντέλα). Καλό middle ground."),
+         ("Χτίσε σκηνή, όχι απλώς webcam", "Ο προεπιλεγμένος broadcaster του Performer Dashboard στο Camversity είναι single-source. Ο SplitCam μέσω External Encoder ξεκλειδώνει multi-camera, overlays, beauty filters."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει επίσημα το Camversity external encoders όπως ο SplitCam;", "Ναι — το Performer Dashboard περιλαμβάνει επιλογή External Encoder κάτω από Stream Settings. Standard RTMP server URL και stream key· OBS, SplitCam, vMix συνδέονται όλοι."),
+         ("Από πού παίρνω το stream key μου για το Camversity;", "Performer Dashboard → Stream Settings → External Encoder. Τόσο το server URL όσο και το stream key εμφανίζονται εκεί."),
+         ("Τι bitrate να χρησιμοποιήσω για το Camversity;", "Push 1920×1080 στα 30 fps, 3.500–6.000 Kbps με keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test του SplitCam."),
+         ("Είναι δωρεάν ο SplitCam για το Camversity;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η επιλογή External Encoder του Camversity είναι δωρεάν."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background."),
+         ("Πάρε URL και stream key Camversity", "Στον performer λογαριασμό σου άνοιξε <strong>Performer Dashboard → Stream Settings → External Encoder</strong>. Αντίγραψε το server URL και το μοναδικό stream key."),
+         ("Σύνδεσε τον SplitCam με το Camversity", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του Camversity και το stream key στα custom RTMP πεδία. Bitrate 3.500–6.000 Kbps στα 1920×1080, 30 fps, keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά μπες online από το Performer Dashboard. Μέσα σε ~10 δευτερόλεπτα το stream φτάνει στο Camversity."),
+     ],
+    },
 ]

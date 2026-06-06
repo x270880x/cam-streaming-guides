@@ -694,4 +694,124 @@ PLATFORMS_FR = [
              "Appuyez sur <strong>Go Live</strong> dans SplitCam, puis passez en ligne depuis le Streamer Dashboard sur Cherry.tv. En ~10 secondes votre flux atteint Cherry.tv. Les diffusions suivantes se font en un clic — ouvrez SplitCam, Go Live, puis passez en ligne sur Cherry.tv."),
         ],
     },
+    {
+        "slug": "amateurtv", "name": "AmateurTV",
+        "title": "Comment diffuser sur AmateurTV avec SplitCam — réseau cam hispanophone",
+        "desc": "Diffuser sur AmateurTV avec SplitCam gratuit — encodeur externe du Model Panel, réseau cam hispanophone (Espagne et LatAm), scènes multicaméras. Sans filigrane, sans inscription.",
+        "kw": "diffuser amateurtv, amateur.tv obs, amateurtv encodeur externe, amateurtv rtmp, amateurtv stream key, modèles amateur tv",
+        "h1html": 'Comment diffuser sur <span class="accent">AmateurTV</span> avec SplitCam',
+        "h1short": "Diffuser sur AmateurTV",
+        "card": "Configuration de l'encodeur externe pour le réseau hispanophone d'AmateurTV.",
+        "intro": "AmateurTV est LE réseau cam hispanophone — gros trafic en Espagne, au Mexique, en Argentine et dans toute la LatAm. Le broadcaster par défaut du Model Panel passe par navigateur, mais une voie standard <strong>External Encoder</strong> est aussi exposée, et <strong style='color:var(--text)'>SplitCam</strong> gratuit s'y connecte — pour diffuser avec scènes multicaméras, filtres beauté et overlays auprès d'un public hispanophone que les réseaux US-centric servent mal.",
+        "quick": "Pour diffuser sur AmateurTV avec SplitCam : installer SplitCam, composer la scène, dans le Model Panel ouvrir <em>Broadcast Settings → External Encoder</em>, copier l'URL serveur et la stream key, les coller dans SplitCam, Go Live."
+                 "<ol><li>Installer SplitCam.</li><li>Ajouter caméra + scène.</li>"
+                 "<li>Récupérer URL et stream key depuis le Model Panel.</li>"
+                 "<li>Coller dans SplitCam.</li>"
+                 "<li>Appuyer sur Go Live.</li></ol>",
+        "key_how": "Connectez-vous à votre compte modèle AmateurTV, ouvrez le <strong>Model Panel</strong> et allez dans <strong>Broadcast Settings → External Encoder</strong>. La page affiche une <strong>URL serveur</strong> et une <strong>stream key</strong> liées à votre compte — copiez les deux dans les champs RTMP personnalisé de SplitCam. Les nouveaux comptes doivent passer une vérification d'identité avant de passer en ligne.",
+        "tips": [
+            ("Public hispanophone d'abord", "Le trafic AmateurTV est massivement hispanophone — l'Espagne en journée, la LatAm sur les heures de soirée US. Titres de salle, textes en surimpression et overlays en espagnol convertissent largement mieux que de l'anglais seul."),
+            ("Le fuseau LatAm est votre prime time", "Le pic de trafic correspond au soir LatAm (UTC-3 à UTC-6). Si vous êtes souple, diffuser fin de soirée CET / matinée Asie touche Espagne et LatAm en même temps."),
+            ("Payouts mid-tier solides", "Pas le RPM le plus élevé du secteur, mais AmateurTV paie régulièrement, et le créneau hispanophone est nettement moins saturé que les top réseaux US."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("AmateurTV supporte-t-il officiellement les encodeurs externes comme SplitCam ?", "Oui — le Model Panel inclut une option External Encoder dans Broadcast Settings. AmateurTV fournit une URL serveur RTMP standard et une stream key ; OBS, SplitCam, vMix et les autres encodeurs RTMP s'y connectent."),
+            ("Où je récupère ma stream key AmateurTV ?", "Model Panel → Broadcast Settings → External Encoder. L'URL serveur et la stream key apparaissent là. Copiez les deux dans les champs RTMP personnalisé de SplitCam. La clé est liée au compte."),
+            ("Quel bitrate utiliser pour AmateurTV ?", "Réglages cam-quality standards — poussez du 1920×1080 à 30 fps, 3 500–6 000 Kbps avec un keyframe de 2 secondes. Lancez d'abord le speed test intégré de SplitCam."),
+            ("SplitCam est-il gratuit avec AmateurTV ?", "Oui — SplitCam est gratuit, sans filigrane et sans limite de temps. L'option encodeur externe d'AmateurTV est gratuite à activer."),
+        ],
+        "steps": [
+            ("Téléchargez et installez SplitCam",
+             "SplitCam est un logiciel de streaming gratuit pour Windows et macOS — pas d'inscription, pas de carte, pas de filigrane. C'est l'encodeur qui envoie votre vidéo vers AmateurTV."),
+            ("Composez votre scène",
+             "Ouvrez SplitCam et ajoutez votre webcam. Empilez overlays, texte, une deuxième caméra ou votre téléphone, filtres beauté ou fond IA. Mettez vos textes d'overlay en espagnol — le public hispanophone d'AmateurTV le remarque."),
+            ("Récupérez votre URL et stream key AmateurTV",
+             "Connectez-vous à votre compte modèle AmateurTV, ouvrez le <strong>Model Panel</strong> et allez dans <strong>Broadcast Settings → External Encoder</strong>. La page révèle une <strong>URL serveur</strong> et une <strong>stream key</strong> unique. Copiez les deux."),
+            ("Connectez SplitCam à AmateurTV",
+             "Dans SplitCam ouvrez <strong>Stream Settings</strong>, collez l'URL serveur AmateurTV et la stream key dans les champs RTMP personnalisé. Réglez le bitrate à 3 500–6 000 Kbps en 1920×1080, 30 fps, keyframe 2 secondes. Lancez d'abord le speed test intégré."),
+            ("Cliquez Go Live",
+             "Appuyez sur <strong>Go Live</strong> dans SplitCam, puis passez en ligne depuis le Model Panel sur AmateurTV. En ~10 secondes votre flux atteint le réseau. Les diffusions suivantes se font en un clic — ouvrez SplitCam, Go Live."),
+        ],
+    },
+    {
+        "slug": "camster", "name": "Camster",
+        "title": "Comment diffuser sur Camster avec SplitCam — encodeur externe du Model Hub",
+        "desc": "Diffuser sur Camster avec SplitCam gratuit — encodeur externe du Model Hub, plateforme cam mid-tier établie, scènes multicaméras et overlays. Sans filigrane, sans inscription.",
+        "kw": "diffuser camster, camster.com obs, camster encodeur externe, camster rtmp, camster stream key, camster model hub",
+        "h1html": 'Comment diffuser sur <span class="accent">Camster</span> avec SplitCam',
+        "h1short": "Diffuser sur Camster",
+        "card": "Configuration de l'encodeur externe pour le Model Hub de Camster.",
+        "intro": "Camster est une plateforme cam mid-tier établie — plus petite que Chaturbate ou LiveJasmin, mais avec une base d'utilisateurs fidèle et des payouts corrects. Le broadcaster par défaut du Model Hub passe par navigateur, mais une voie standard <strong>External Encoder</strong> est aussi exposée, et <strong style='color:var(--text)'>SplitCam</strong> gratuit s'y connecte — pour diffuser avec scènes multicaméras, overlays et filtres que le broadcaster natif ne sait pas faire.",
+        "quick": "Pour diffuser sur Camster avec SplitCam : installer SplitCam, composer la scène, dans le Model Hub ouvrir <em>Broadcast Settings → External Encoder</em>, copier l'URL serveur et la stream key, les coller dans SplitCam, Go Live."
+                 "<ol><li>Installer SplitCam.</li><li>Ajouter caméra + scène.</li>"
+                 "<li>Récupérer URL et stream key depuis le Model Hub.</li>"
+                 "<li>Coller dans SplitCam.</li>"
+                 "<li>Appuyer sur Go Live.</li></ol>",
+        "key_how": "Connectez-vous à votre compte modèle Camster, ouvrez le <strong>Model Hub</strong> et allez dans <strong>Broadcast Settings → External Encoder</strong>. La page affiche une <strong>URL serveur</strong> et une <strong>stream key</strong> liées à votre compte — copiez les deux dans les champs RTMP personnalisé de SplitCam. La clé est liée au compte ; traitez-la comme un mot de passe.",
+        "tips": [
+            ("Mid-tier = moins de concurrence", "Camster a un trafic stable mais nettement moins de broadcasters que les réseaux du haut — plus facile de remonter en page d'accueil avec une scène soignée et un planning régulier."),
+            ("Broadcaster navigateur vs externe", "Le broadcaster du navigateur est mono-source. SplitCam via External Encoder débloque scènes multicaméras, overlays, filtres beauté et fond IA."),
+            ("Payouts stables, split correct", "Le split de Camster est correct pour du mid-tier — pas le plus élevé du marché, mais des paiements mensuels fiables et peu de plaintes côté retards de versement."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Camster supporte-t-il officiellement les encodeurs externes comme SplitCam ?", "Oui — le Model Hub propose une option External Encoder dans Broadcast Settings. URL serveur RTMP standard et stream key ; OBS, SplitCam et les autres encodeurs RTMP s'y connectent."),
+            ("Où je récupère ma stream key Camster ?", "Model Hub → Broadcast Settings → External Encoder. L'URL serveur et la stream key apparaissent là. Copiez les deux dans les champs RTMP personnalisé de SplitCam."),
+            ("Quel bitrate utiliser pour Camster ?", "Réglages cam-quality standards — poussez du 1920×1080 à 30 fps, 3 500–6 000 Kbps avec un keyframe de 2 secondes. Lancez d'abord le speed test intégré de SplitCam."),
+            ("SplitCam est-il gratuit avec Camster ?", "Oui — SplitCam est gratuit, sans filigrane et sans limite de temps. L'option encodeur externe de Camster est gratuite."),
+        ],
+        "steps": [
+            ("Téléchargez et installez SplitCam",
+             "SplitCam est un logiciel de streaming gratuit pour Windows et macOS — pas d'inscription, pas de carte, pas de filigrane."),
+            ("Composez votre scène",
+             "Ouvrez SplitCam et ajoutez votre webcam. Empilez overlays, texte, une deuxième caméra ou votre téléphone, filtres beauté ou fond IA — tout est appliqué en live."),
+            ("Récupérez votre URL et stream key Camster",
+             "Connectez-vous à votre compte modèle Camster, ouvrez le <strong>Model Hub</strong> et allez dans <strong>Broadcast Settings → External Encoder</strong>. La page révèle une <strong>URL serveur</strong> et une <strong>stream key</strong> unique. Copiez les deux."),
+            ("Connectez SplitCam à Camster",
+             "Dans SplitCam ouvrez <strong>Stream Settings</strong>, collez l'URL serveur Camster et la stream key dans les champs RTMP personnalisé. Réglez le bitrate à 3 500–6 000 Kbps en 1920×1080, 30 fps, keyframe 2 secondes. Lancez d'abord le speed test intégré."),
+            ("Cliquez Go Live",
+             "Appuyez sur <strong>Go Live</strong> dans SplitCam, puis passez en ligne depuis le Model Hub. En ~10 secondes votre flux atteint Camster."),
+        ],
+    },
+    {
+        "slug": "camversity", "name": "Camversity",
+        "title": "Comment diffuser sur Camversity avec SplitCam — encodeur externe du Performer Dashboard",
+        "desc": "Diffuser sur Camversity avec SplitCam gratuit — encodeur externe du Performer Dashboard, plateforme cam indépendante en croissance, scènes multicaméras. Sans filigrane, sans inscription.",
+        "kw": "diffuser camversity, camversity obs, camversity encodeur externe, camversity rtmp, camversity stream key, camversity performer",
+        "h1html": 'Comment diffuser sur <span class="accent">Camversity</span> avec SplitCam',
+        "h1short": "Diffuser sur Camversity",
+        "card": "Configuration de l'encodeur externe pour le Performer Dashboard de Camversity.",
+        "intro": "Camversity est une plateforme cam indépendante en croissance, focalisée sur des outils favorables au performer et des commissions plus basses que les réseaux historiques. Le broadcaster par défaut du Performer Dashboard passe par navigateur, mais une voie standard <strong>External Encoder</strong> est aussi exposée, et <strong style='color:var(--text)'>SplitCam</strong> gratuit s'y connecte — pour diffuser avec scènes multicaméras, overlays et filtres.",
+        "quick": "Pour diffuser sur Camversity avec SplitCam : installer SplitCam, composer la scène, dans le Performer Dashboard ouvrir <em>Stream Settings → External Encoder</em>, copier l'URL serveur et la stream key, les coller dans SplitCam, Go Live."
+                 "<ol><li>Installer SplitCam.</li><li>Ajouter caméra + scène.</li>"
+                 "<li>Récupérer URL et stream key depuis le Performer Dashboard.</li>"
+                 "<li>Coller dans SplitCam.</li>"
+                 "<li>Appuyer sur Go Live.</li></ol>",
+        "key_how": "Connectez-vous à votre compte performer Camversity, ouvrez le <strong>Performer Dashboard</strong> et allez dans <strong>Stream Settings → External Encoder</strong>. La page affiche une <strong>URL serveur</strong> et une <strong>stream key</strong> liées à votre compte — copiez les deux dans les champs RTMP personnalisé de SplitCam. Les nouveaux comptes passent une vérification d'identité standard avant de passer en ligne.",
+        "tips": [
+            ("Split favorable au performer", "Le split de Camversity est plus favorable au performer que celui des réseaux historiques — utile à comparer à votre plateforme principale si vous débutez en cam."),
+            ("Onboarding plus léger que Docler", "La vérification Camversity est plus rapide que les 48–72 h de LiveJasmin, tout en restant sérieuse (pas de modèles non vérifiés). Bon entre-deux."),
+            ("Composez une scène, pas juste une webcam", "Le broadcaster par défaut du Performer Dashboard est mono-source. SplitCam via External Encoder débloque multicaméras, overlays, filtres beauté."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Camversity supporte-t-il officiellement les encodeurs externes comme SplitCam ?", "Oui — le Performer Dashboard propose une option External Encoder dans Stream Settings. URL serveur RTMP standard et stream key ; OBS, SplitCam, vMix s'y connectent."),
+            ("Où je récupère ma stream key Camversity ?", "Performer Dashboard → Stream Settings → External Encoder. L'URL serveur et la stream key apparaissent là."),
+            ("Quel bitrate utiliser pour Camversity ?", "Poussez du 1920×1080 à 30 fps, 3 500–6 000 Kbps avec un keyframe de 2 secondes. Lancez d'abord le speed test intégré de SplitCam."),
+            ("SplitCam est-il gratuit avec Camversity ?", "Oui — SplitCam est gratuit, sans filigrane et sans limite de temps. L'option encodeur externe de Camversity est gratuite."),
+        ],
+        "steps": [
+            ("Téléchargez et installez SplitCam",
+             "SplitCam est un logiciel de streaming gratuit pour Windows et macOS — pas d'inscription, pas de carte, pas de filigrane."),
+            ("Composez votre scène",
+             "Ouvrez SplitCam et ajoutez votre webcam. Empilez overlays, texte, une deuxième caméra ou votre téléphone, filtres beauté ou fond IA."),
+            ("Récupérez votre URL et stream key Camversity",
+             "Connectez-vous à votre compte performer Camversity, ouvrez le <strong>Performer Dashboard</strong> et allez dans <strong>Stream Settings → External Encoder</strong>. La page révèle une <strong>URL serveur</strong> et une <strong>stream key</strong> unique. Copiez les deux."),
+            ("Connectez SplitCam à Camversity",
+             "Dans SplitCam ouvrez <strong>Stream Settings</strong>, collez l'URL serveur Camversity et la stream key dans les champs RTMP personnalisé. Réglez le bitrate à 3 500–6 000 Kbps en 1920×1080, 30 fps, keyframe 2 secondes."),
+            ("Cliquez Go Live",
+             "Appuyez sur <strong>Go Live</strong> dans SplitCam, puis passez en ligne depuis le Performer Dashboard. En ~10 secondes votre flux atteint Camversity."),
+        ],
+    },
 ]

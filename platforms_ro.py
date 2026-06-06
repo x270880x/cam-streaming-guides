@@ -634,4 +634,103 @@ PLATFORMS_RO = [
          ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online din Streamer Dashboard. În câteva secunde apari în listele Cherry.tv. Transmisiile următoare sunt un singur clic."),
      ],
     },
+    {"slug": "amateurtv", "name": "AmateurTV",
+     "title": "Transmisie pe AmateurTV cu SplitCam — rețeaua cam de limbă spaniolă",
+     "desc": "Transmite pe AmateurTV cu SplitCam gratuit — Model Panel external encoder, rețea cam de limbă spaniolă (Spania + LatAm), scene multi-cameră. Fără filigran, fără înregistrare.",
+     "kw": "transmisie amateurtv, amateur.tv obs, amateurtv external encoder, amateurtv rtmp, amateurtv stream key, modelos amateur tv",
+     "h1html": 'Cum transmiți pe <span class="accent">AmateurTV</span> cu SplitCam',
+     "h1short": "Transmisie AmateurTV",
+     "card": "Setup cu encoder extern pentru rețeaua de limbă spaniolă AmateurTV.",
+     "intro": "AmateurTV e rețeaua cam lider în spațiul hispanofon — audiență puternică în Spania, Mexic, Argentina și prin toată America Latină. Broadcasterul implicit din Model Panel merge în browser, dar expune și calea standard de <strong>external encoder</strong>, la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel transmiți cu scene multi-cameră, beauty filters și overlay-uri către o audiență hispanofonă pe care rețelele US-centric nu o servesc bine.",
+     "quick": "Transmisie pe AmateurTV cu SplitCam: instalezi SplitCam, construiești scena, în Model Panel deschizi <em>Broadcast Settings → External Encoder</em>, copiezi URL-ul și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Model Panel.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de model AmateurTV, deschide <strong>Model Panel → Broadcast Settings → External Encoder</strong>. Apar un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Conturile noi trec mai întâi prin verificarea ID-ului înainte de a transmite.",
+     "tips": [
+         ("Audiența hispanofonă pe primul loc", "Traficul AmateurTV e covârșitor de limbă spaniolă — Spania pe timpul zilei, LatAm pe seara orei US. Titlurile, textul din scenă și overlay-urile în spaniolă bat clar varianta doar-în-engleză pe această rețea."),
+         ("Fusul LatAm e prime time-ul tău", "Vârful de trafic corelează cu serile LatAm (UTC-3 la UTC-6). Dacă ești flexibil, transmisia târziu seara CET / dimineața devreme oră asiatică prinde și vârful Spaniei și pe cel LatAm."),
+         ("Payout-uri mid-tier stabile", "Nu cel mai mare RPM din industrie, dar stabil — AmateurTV plătește constant, iar nișa hispanofonă are concurență mai mică decât rețelele top US."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă AmateurTV oficial encodere externe precum SplitCam?", "Da — Model Panel include opțiunea External Encoder sub Broadcast Settings. AmateurTV furnizează URL server RTMP standard și stream key; OBS, SplitCam, vMix și alte encodere RTMP se conectează."),
+         ("Unde îmi iau stream key-ul pentru AmateurTV?", "Model Panel → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo. Copiază ambele în câmpurile RTMP custom ale SplitCam. Cheia e legată de cont."),
+         ("Ce bitrate folosesc pentru AmateurTV?", "Setări standard de cam-quality — împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru AmateurTV?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder a AmateurTV se activează gratuit."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. E encoderul care trimite video către AmateurTV."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI. Folosește text în spaniolă pe overlay-uri pentru audiența hispanofonă a AmateurTV."),
+         ("Obține URL și stream key AmateurTV", "În contul tău de model deschide <strong>Model Panel → Broadcast Settings → External Encoder</strong>. Copiază URL-ul serverului și stream key-ul unic."),
+         ("Conectează SplitCam la AmateurTV", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului AmateurTV și stream key-ul în câmpurile RTMP custom. Bitrate 3.500–6.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Rulează întâi speed test-ul integrat."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online din Model Panel pe AmateurTV. În ~10 secunde stream-ul ajunge la rețea. Transmisiile următoare sunt un singur clic — deschizi SplitCam, Go Live."),
+     ],
+    },
+    {"slug": "camster", "name": "Camster",
+     "title": "Transmisie pe Camster cu SplitCam — Model Hub external encoder",
+     "desc": "Transmite pe Camster cu SplitCam gratuit — Model Hub external encoder, platformă cam mid-tier consacrată, scene multi-cameră și overlay-uri. Fără filigran, fără înregistrare.",
+     "kw": "transmisie camster, camster.com obs, camster external encoder, camster rtmp, camster stream key, camster model hub",
+     "h1html": 'Cum transmiți pe <span class="accent">Camster</span> cu SplitCam',
+     "h1short": "Transmisie Camster",
+     "card": "Setup cu encoder extern pentru Model Hub-ul Camster.",
+     "intro": "Camster e o platformă cam mid-tier consacrată — mai mică decât Chaturbate sau LiveJasmin, dar cu o bază loială de utilizatori și payout-uri corecte. Broadcasterul implicit din Model Hub merge în browser, dar expune și calea standard de <strong>external encoder</strong>, la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel transmiți cu scene multi-cameră, overlay-uri și filtre pe care broadcasterul integrat nu le poate livra.",
+     "quick": "Transmisie pe Camster cu SplitCam: instalezi SplitCam, construiești scena, în Model Hub deschizi <em>Broadcast Settings → External Encoder</em>, copiezi URL-ul și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Model Hub.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de model Camster, deschide <strong>Model Hub → Broadcast Settings → External Encoder</strong>. Apar un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Cheia e legată de cont; tratează-o ca pe o parolă.",
+     "tips": [
+         ("Mid-tier înseamnă mai puțină concurență", "Camster are trafic stabil, dar mai puțini broadcasteri decât rețelele top — mai ușor să ajungi pe prima pagină cu o scenă îngrijită și un program constant."),
+         ("Browser broadcaster vs extern", "Broadcasterul implicit din browser e single-source. SplitCam prin External Encoder deblochează scene multi-cameră, overlay-uri, beauty filters și fundal AI."),
+         ("Payout-uri stabile, split-uri corecte", "Split-ul de venit al Camster e corect pentru nivelul mid-tier — nu cel mai mare din industrie, dar payout-uri lunare fiabile și puține plângeri de la modele despre întârzieri de plată."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă Camster oficial encodere externe precum SplitCam?", "Da — Model Hub include opțiunea External Encoder sub Broadcast Settings. URL server RTMP standard și stream key; OBS, SplitCam și alte encodere RTMP se conectează."),
+         ("Unde îmi iau stream key-ul pentru Camster?", "Model Hub → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo. Copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru Camster?", "Setări standard de cam-quality — împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru Camster?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder a Camster e gratuită."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — toate aplicate live."),
+         ("Obține URL și stream key Camster", "În contul tău de model deschide <strong>Model Hub → Broadcast Settings → External Encoder</strong>. Copiază URL-ul serverului și stream key-ul unic."),
+         ("Conectează SplitCam la Camster", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului Camster și stream key-ul în câmpurile RTMP custom. Bitrate 3.500–6.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Rulează întâi speed test-ul integrat."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online din Model Hub pe Camster. În ~10 secunde stream-ul ajunge la Camster."),
+     ],
+    },
+    {"slug": "camversity", "name": "Camversity",
+     "title": "Transmisie pe Camversity cu SplitCam — Performer Dashboard external encoder",
+     "desc": "Transmite pe Camversity cu SplitCam gratuit — Performer Dashboard external encoder, platformă cam independentă în creștere, scene multi-cameră. Fără filigran, fără înregistrare.",
+     "kw": "transmisie camversity, camversity obs, camversity external encoder, camversity rtmp, camversity stream key, camversity performer",
+     "h1html": 'Cum transmiți pe <span class="accent">Camversity</span> cu SplitCam',
+     "h1short": "Transmisie Camversity",
+     "card": "Setup cu encoder extern pentru Performer Dashboard-ul Camversity.",
+     "intro": "Camversity e o platformă cam independentă în creștere, axată pe unelte prietenoase cu performerii și rate de comision mai mici decât rețelele moștenite. Broadcasterul implicit din Performer Dashboard merge în browser, dar expune și calea standard de <strong>external encoder</strong>, la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel transmiți cu scene multi-cameră, overlay-uri și filtre.",
+     "quick": "Transmisie pe Camversity cu SplitCam: instalezi SplitCam, construiești scena, în Performer Dashboard deschizi <em>Stream Settings → External Encoder</em>, copiezi URL-ul și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Performer Dashboard.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de performer Camversity, deschide <strong>Performer Dashboard → Stream Settings → External Encoder</strong>. Apar un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Conturile noi trec prin verificarea ID-ului standard înainte de a transmite.",
+     "tips": [
+         ("Split-uri prietenoase cu performerii", "Split-ul de venit al Camversity e mai favorabil performerilor decât la rețelele moștenite — merită comparat cu platforma ta principală actuală dacă ești la început în cariera cam."),
+         ("Onboarding mai ușor decât Docler", "Verificarea Camversity e mai rapidă decât aprobarea de 48–72h a LiveJasmin, dar rămâne legitimă (fără modele random / neverificate). Un middle ground bun."),
+         ("Construiește o scenă, nu doar un webcam", "Broadcasterul implicit din Performer Dashboard al Camversity e single-source. SplitCam prin External Encoder deblochează multi-cameră, overlay-uri, beauty filters."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă Camversity oficial encodere externe precum SplitCam?", "Da — Performer Dashboard include opțiunea External Encoder sub Stream Settings. URL server RTMP standard și stream key; OBS, SplitCam, vMix se conectează."),
+         ("Unde îmi iau stream key-ul pentru Camversity?", "Performer Dashboard → Stream Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo."),
+         ("Ce bitrate folosesc pentru Camversity?", "Împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru Camversity?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder a Camversity e gratuită."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI."),
+         ("Obține URL și stream key Camversity", "În contul tău de performer deschide <strong>Performer Dashboard → Stream Settings → External Encoder</strong>. Copiază URL-ul serverului și stream key-ul unic."),
+         ("Conectează SplitCam la Camversity", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului Camversity și stream key-ul în câmpurile RTMP custom. Bitrate 3.500–6.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online din Performer Dashboard. În ~10 secunde stream-ul ajunge la Camversity."),
+     ],
+    },
 ]

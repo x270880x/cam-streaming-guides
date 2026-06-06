@@ -676,4 +676,106 @@ PLATFORMS_NL = [
             ("Klik Go Live", "Druk in SplitCam op <strong>Go Live</strong>, ga dan online vanuit het Streamer Dashboard op Cherry.tv."),
         ],
     },
+    {
+        "slug": "amateurtv", "name": "AmateurTV",
+        "title": "Streamen op AmateurTV met SplitCam — Spaanstalig cam-netwerk",
+        "desc": "Streamen op AmateurTV met gratis SplitCam — Model Panel external encoder, Spaanstalig cam-netwerk voor Spanje en LatAm, multi-camera scènes. Geen watermerk, geen registratie.",
+        "kw": "amateurtv streamen, amateur.tv obs, amateurtv external encoder, amateurtv rtmp, amateurtv stream key, modelos amateur tv",
+        "h1html": 'Hoe je <span class="accent">AmateurTV</span> streamt met SplitCam',
+        "h1short": "Streamen op AmateurTV",
+        "card": "External-encoder-setup voor het Spaanstalige netwerk AmateurTV.",
+        "intro": "AmateurTV is het leidende Spaanstalige cam-netwerk — sterk publiek in Spanje, Mexico, Argentinië en heel LatAm. De standaard broadcaster in het Model Panel werkt in de browser, maar het platform biedt ook een officiële <strong>external encoder</strong>-route waar gratis <strong style='color:var(--text)'>SplitCam</strong> op aansluit — voor multi-camera scènes, beauty-filters en overlays gericht op een hispanofoon publiek dat door de US-georiënteerde netwerken slecht bediend wordt.",
+        "quick": "Streamen op AmateurTV met SplitCam: SplitCam installeren, scène opbouwen, in het Model Panel naar <em>Broadcast Settings → External Encoder</em>, server-URL en stream key kopiëren, in SplitCam plakken, Go Live."
+                 "<ol><li>SplitCam installeren.</li><li>Camera + scène toevoegen.</li>"
+                 "<li>URL en stream key uit het Model Panel halen.</li><li>In SplitCam plakken.</li>"
+                 "<li>Go Live drukken.</li></ol>",
+        "key_how": "Log in op je AmateurTV-modelaccount, open het <strong>Model Panel</strong> en navigeer naar <strong>Broadcast Settings → External Encoder</strong>. De pagina toont een aan je account gekoppelde <strong>server-URL</strong> en <strong>stream key</strong> — kopieer beide in de custom RTMP-velden van SplitCam. Nieuwe modelaccounts moeten een ID-verificatie afronden voordat ze live kunnen.",
+        "tips": [
+            ("Hispanofoon publiek voorop", "Het verkeer op AmateurTV is overweldigend Spaanstalig — overdag Spanje, US-avonduren LatAm. Streamtitels, scènetekst en overlays in het Spaans presteren hier veel beter dan alleen Engels."),
+            ("LatAm-tijdzone is je prime time", "De piek correleert met de LatAm-avond (UTC-3 tot UTC-6). Ben je flexibel, dan vangen late-avond-CET / vroege-ochtend-Azië de pieken in zowel Spanje als LatAm."),
+            ("Solide mid-tier uitbetalingen", "Niet de hoogste RPM van de branche, maar stabiel — AmateurTV betaalt betrouwbaar en de hispanofone niche heeft minder concurrentie dan de top US-netwerken."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Ondersteunt AmateurTV externe encoders zoals SplitCam officieel?", "Ja — het Model Panel heeft onder Broadcast Settings de optie External Encoder. AmateurTV levert een standaard RTMP-server-URL en stream key; OBS, SplitCam, vMix en andere RTMP-encoders sluiten allemaal aan."),
+            ("Waar haal ik mijn AmateurTV stream key?", "Model Panel → Broadcast Settings → External Encoder. Server-URL en stream key verschijnen daar. Beide plakken in de custom RTMP-velden van SplitCam. De key is aan je account gekoppeld."),
+            ("Welke bitrate voor AmateurTV?", "Standaard cam-kwaliteit — mik op 1920×1080 bij 30 fps, 3.500–6.000 Kbps met 2 seconden keyframe-interval. Draai eerst de ingebouwde snelheidstest van SplitCam."),
+            ("Is SplitCam gratis te gebruiken met AmateurTV?", "Ja — SplitCam is gratis, zonder watermerk en zonder tijdslimiet. De External Encoder-optie van AmateurTV is gratis te activeren."),
+        ],
+        "steps": [
+            ("SplitCam downloaden en installeren", "SplitCam is gratis live-stream-software voor Windows en macOS — geen registratie, geen creditcard, geen watermerk. Het is de encoder die je video naar AmateurTV verstuurt."),
+            ("Scène opbouwen", "Open SplitCam en voeg je webcam toe. Leg er overlays, tekst, een tweede camera of je telefoon overheen, beauty-filters of een AI-achtergrond. Gebruik Spaanstalige overlay-tekst voor het hispanofone publiek van AmateurTV."),
+            ("AmateurTV-URL en stream key ophalen", "Log in op je AmateurTV-modelaccount, open het <strong>Model Panel</strong>, navigeer naar <strong>Broadcast Settings → External Encoder</strong>. De pagina toont een <strong>server-URL</strong> en een unieke <strong>stream key</strong>. Kopieer beide."),
+            ("SplitCam koppelen aan AmateurTV", "Open in SplitCam <strong>Stream Settings</strong>, plak de AmateurTV-server-URL en stream key in de custom RTMP-velden. Zet bitrate op 3.500–6.000 Kbps bij 1920×1080, 30 fps en 2 seconden keyframe. Draai eerst de ingebouwde snelheidstest."),
+            ("Klik Go Live", "Druk in SplitCam op <strong>Go Live</strong>, ga dan online vanuit het Model Panel op AmateurTV. Binnen ~10 seconden bereikt je stream het netwerk. Volgende uitzendingen zijn één klik — SplitCam openen, Go Live."),
+        ],
+    },
+    {
+        "slug": "camster", "name": "Camster",
+        "title": "Streamen op Camster met SplitCam — Model Hub external encoder",
+        "desc": "Streamen op Camster met gratis SplitCam — Model Hub external encoder, gevestigd mid-tier cam-platform, multi-camera scènes en overlays. Geen watermerk, geen registratie.",
+        "kw": "camster streamen, camster.com obs, camster external encoder, camster rtmp, camster stream key, camster model hub",
+        "h1html": 'Hoe je <span class="accent">Camster</span> streamt met SplitCam',
+        "h1short": "Streamen op Camster",
+        "card": "External-encoder-setup voor de Model Hub van Camster.",
+        "intro": "Camster is een gevestigd mid-tier cam-platform — kleiner dan Chaturbate of LiveJasmin, maar met een trouwe gebruikersbasis en eerlijke uitbetalingen. De standaard broadcaster in de Model Hub werkt in de browser, maar het platform biedt ook een officiële <strong>external encoder</strong>-route waar gratis <strong style='color:var(--text)'>SplitCam</strong> op aansluit — voor multi-camera scènes, overlays en filters die de ingebouwde broadcaster niet kan leveren.",
+        "quick": "Streamen op Camster met SplitCam: SplitCam installeren, scène opbouwen, in de Model Hub naar <em>Broadcast Settings → External Encoder</em>, server-URL en stream key kopiëren, in SplitCam plakken, Go Live."
+                 "<ol><li>SplitCam installeren.</li><li>Camera + scène toevoegen.</li>"
+                 "<li>URL en stream key uit de Model Hub halen.</li><li>In SplitCam plakken.</li>"
+                 "<li>Go Live drukken.</li></ol>",
+        "key_how": "Log in op je Camster-modelaccount, open de <strong>Model Hub</strong> en navigeer naar <strong>Broadcast Settings → External Encoder</strong>. De pagina toont een aan je account gekoppelde <strong>server-URL</strong> en <strong>stream key</strong> — kopieer beide in de custom RTMP-velden van SplitCam. De key is aan je account gekoppeld; behandel hem als wachtwoord.",
+        "tips": [
+            ("Mid-tier betekent minder concurrentie", "Camster heeft gestaag verkeer maar minder broadcasters dan de topnetwerken — met een verzorgde scène en een consistent schema land je hier makkelijker op de voorpagina."),
+            ("Browser-broadcaster vs. external", "De standaard browser-broadcaster is single-source. SplitCam via External Encoder ontgrendelt multi-camera scènes, overlays, beauty-filters en AI-achtergrond."),
+            ("Stabiele uitbetalingen, eerlijke splits", "Camsters revenue split is voor de mid-tier eerlijk — niet de hoogste van de branche, maar betrouwbare maandelijkse uitbetalingen en weinig modelklachten over betalingsvertragingen."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Ondersteunt Camster externe encoders zoals SplitCam officieel?", "Ja — de Model Hub heeft onder Broadcast Settings de optie External Encoder. Standaard RTMP-server-URL en stream key; OBS, SplitCam en andere RTMP-encoders sluiten allemaal aan."),
+            ("Waar haal ik mijn Camster stream key?", "Model Hub → Broadcast Settings → External Encoder. Server-URL en stream key verschijnen daar. Beide plakken in de custom RTMP-velden van SplitCam."),
+            ("Welke bitrate voor Camster?", "Standaard cam-kwaliteit — mik op 1920×1080 bij 30 fps, 3.500–6.000 Kbps met 2 seconden keyframe-interval. Draai eerst de ingebouwde snelheidstest van SplitCam."),
+            ("Is SplitCam gratis te gebruiken met Camster?", "Ja — SplitCam is gratis, zonder watermerk en zonder tijdslimiet. De External Encoder-optie van Camster is gratis."),
+        ],
+        "steps": [
+            ("SplitCam downloaden en installeren", "SplitCam is gratis live-stream-software voor Windows en macOS — geen registratie, geen creditcard, geen watermerk."),
+            ("Scène opbouwen", "Open SplitCam en voeg je webcam toe. Leg er overlays, tekst, een tweede camera of je telefoon overheen, beauty-filters of een AI-achtergrond — allemaal live toegepast."),
+            ("Camster-URL en stream key ophalen", "Log in op je Camster-modelaccount, open de <strong>Model Hub</strong>, navigeer naar <strong>Broadcast Settings → External Encoder</strong>. De pagina toont een <strong>server-URL</strong> en een unieke <strong>stream key</strong>. Kopieer beide."),
+            ("SplitCam koppelen aan Camster", "Open in SplitCam <strong>Stream Settings</strong>, plak de Camster-server-URL en stream key in de custom RTMP-velden. Zet bitrate op 3.500–6.000 Kbps bij 1920×1080, 30 fps en 2 seconden keyframe. Draai eerst de ingebouwde snelheidstest."),
+            ("Klik Go Live", "Druk in SplitCam op <strong>Go Live</strong>, ga dan online vanuit de Model Hub op Camster. Binnen ~10 seconden bereikt je stream Camster."),
+        ],
+    },
+    {
+        "slug": "camversity", "name": "Camversity",
+        "title": "Streamen op Camversity met SplitCam — Performer Dashboard external encoder",
+        "desc": "Streamen op Camversity met gratis SplitCam — Performer Dashboard external encoder, groeiend onafhankelijk cam-platform, multi-camera scènes. Geen watermerk, geen registratie.",
+        "kw": "camversity streamen, camversity obs, camversity external encoder, camversity rtmp, camversity stream key, camversity performer",
+        "h1html": 'Hoe je <span class="accent">Camversity</span> streamt met SplitCam',
+        "h1short": "Streamen op Camversity",
+        "card": "External-encoder-setup voor het Performer Dashboard van Camversity.",
+        "intro": "Camversity is een groeiend onafhankelijk cam-platform met focus op performer-vriendelijke tools en lagere commissies dan de legacy-netwerken. De standaard broadcaster in het Performer Dashboard werkt in de browser, maar het platform biedt ook een officiële <strong>external encoder</strong>-route waar gratis <strong style='color:var(--text)'>SplitCam</strong> op aansluit — voor multi-camera scènes, overlays en filters.",
+        "quick": "Streamen op Camversity met SplitCam: SplitCam installeren, scène opbouwen, in het Performer Dashboard naar <em>Stream Settings → External Encoder</em>, server-URL en stream key kopiëren, in SplitCam plakken, Go Live."
+                 "<ol><li>SplitCam installeren.</li><li>Camera + scène toevoegen.</li>"
+                 "<li>URL en stream key uit het Performer Dashboard halen.</li><li>In SplitCam plakken.</li>"
+                 "<li>Go Live drukken.</li></ol>",
+        "key_how": "Log in op je Camversity-performeraccount, open het <strong>Performer Dashboard</strong> en navigeer naar <strong>Stream Settings → External Encoder</strong>. De pagina toont een aan je account gekoppelde <strong>server-URL</strong> en <strong>stream key</strong> — kopieer beide in de custom RTMP-velden van SplitCam. Nieuwe accounts moeten standaard ID-verificatie afronden voordat ze live kunnen.",
+        "tips": [
+            ("Performer-vriendelijke splits", "De revenue split van Camversity is voor performers gunstiger dan bij de legacy-netwerken — de moeite waard om te vergelijken met je huidige hoofdplatform als je nog vroeg in je cam-carrière zit."),
+            ("Lichtere onboarding dan Docler", "De verificatie bij Camversity gaat sneller dan het 48–72-uurs goedkeuringsproces van LiveJasmin, en blijft toch legitiem (geen willekeurige / niet-geverifieerde modellen). Goede middenweg."),
+            ("Bouw een scène, geen kale webcam", "De standaard broadcaster in het Performer Dashboard is single-source. SplitCam via External Encoder ontgrendelt multi-camera, overlays en beauty-filters."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Ondersteunt Camversity externe encoders zoals SplitCam officieel?", "Ja — het Performer Dashboard heeft onder Stream Settings de optie External Encoder. Standaard RTMP-server-URL en stream key; OBS, SplitCam, vMix sluiten allemaal aan."),
+            ("Waar haal ik mijn Camversity stream key?", "Performer Dashboard → Stream Settings → External Encoder. Server-URL en stream key verschijnen daar."),
+            ("Welke bitrate voor Camversity?", "Mik op 1920×1080 bij 30 fps, 3.500–6.000 Kbps met 2 seconden keyframe-interval. Draai eerst de ingebouwde snelheidstest van SplitCam."),
+            ("Is SplitCam gratis te gebruiken met Camversity?", "Ja — SplitCam is gratis, zonder watermerk en zonder tijdslimiet. De External Encoder-optie van Camversity is gratis."),
+        ],
+        "steps": [
+            ("SplitCam downloaden en installeren", "SplitCam is gratis live-stream-software voor Windows en macOS — geen registratie, geen creditcard, geen watermerk."),
+            ("Scène opbouwen", "Open SplitCam en voeg je webcam toe. Leg er overlays, tekst, een tweede camera of je telefoon overheen, beauty-filters of een AI-achtergrond."),
+            ("Camversity-URL en stream key ophalen", "Log in op je Camversity-performeraccount, open het <strong>Performer Dashboard</strong>, navigeer naar <strong>Stream Settings → External Encoder</strong>. De pagina toont een <strong>server-URL</strong> en een unieke <strong>stream key</strong>. Kopieer beide."),
+            ("SplitCam koppelen aan Camversity", "Open in SplitCam <strong>Stream Settings</strong>, plak de Camversity-server-URL en stream key in de custom RTMP-velden. Zet bitrate op 3.500–6.000 Kbps bij 1920×1080, 30 fps en 2 seconden keyframe."),
+            ("Klik Go Live", "Druk in SplitCam op <strong>Go Live</strong>, ga dan online vanuit het Performer Dashboard. Binnen ~10 seconden bereikt je stream Camversity."),
+        ],
+    },
 ]

@@ -634,4 +634,103 @@ PLATFORMS_FI = [
          ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Cherry.tv:ssä. Noin 10 sekunnissa striimi saavuttaa Cherry.tv:n verkon. Seuraavat lähetykset ovat yhden klikkauksen — avaa SplitCam, Go Live, sitten online Cherry.tv:ssä."),
      ],
     },
+    {"slug": "amateurtv", "name": "AmateurTV",
+     "title": "Lähetys AmateurTV:ssä SplitCamilla — espanjankielinen cam-verkosto",
+     "desc": "Lähetys AmateurTV:ssä ilmaisella SplitCamilla — Model Panelin ulkoinen enkooderi, espanjankielinen cam-verkosto Espanjassa ja Latinalaisessa Amerikassa, monikamera-näkymät. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "amateurtv lähetys, amateur.tv obs, amateurtv ulkoinen enkooderi, amateurtv rtmp, amateurtv stream key, modelos amateur tv",
+     "h1html": 'Miten lähetät <span class="accent">AmateurTV</span>:ssä SplitCamilla',
+     "h1short": "Lähetys AmateurTV",
+     "card": "Ulkoisen enkooderin asetus AmateurTV:n espanjankieliseen verkostoon.",
+     "intro": "AmateurTV on espanjankielisen cam-maailman johtava verkosto — vahva yleisö Espanjassa, Meksikossa, Argentiinassa ja kautta koko Latinalaisen Amerikan. Oletuksena toimiva Model Panel -broadcaster pyörii selaimessa, mutta alusta avaa myös standardin <strong>ulkoisen enkooderin</strong> reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat monikamera-näkymät, kauneussuotimet ja overlayt espanjankieliselle yleisölle, jota US-keskeiset verkostot eivät palvele kunnolla.",
+     "quick": "Lähetys AmateurTV:ssä SplitCamilla: asenna SplitCam, rakenna näkymä, Model Panelissa avaa <em>Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Model Panelista.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu AmateurTV-mallitiliisi, avaa <strong>Model Panel</strong> ja siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. Uudet mallitilit vaativat henkilöllisyysverifioinnin ennen lähettämistä.",
+     "tips": [
+         ("Espanjankielinen yleisö ensin", "AmateurTV:n liikenne on ylivoimaisesti espanjankielistä — Espanja päivisin, Latinalainen Amerikka US-illan aikaan. Otsikot, näkymän tekstit ja overlayt espanjaksi toimivat tällä verkostolla huomattavasti paremmin kuin pelkkä englanti."),
+         ("LatAm-aikavyöhyke on prime-aikasi", "Liikennehuippu osuu LatAm:n iltatunteihin (UTC-3 … UTC-6). Jos aikataulusi joustaa, myöhäisilta CET / aikainen aamu Aasian aikaa osuu yhtä aikaa Espanjan ja LatAmin huippuihin."),
+         ("Vakaat mid-tier-maksut", "Ei alan korkein RPM, mutta vakaa — AmateurTV maksaa luotettavasti, ja espanjankielisessä nichessä on vähemmän kilpailua kuin huippu-US-verkoissa."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko AmateurTV ulkoisia enkoodereita kuten SplitCamia virallisesti?", "Kyllä — Model Panel sisältää External Encoder -vaihtoehdon Broadcast Settings -kohdassa. AmateurTV antaa standardin RTMP server URL:n ja stream keyn; OBS, SplitCam, vMix ja muut RTMP-enkooderit yhdistyvät."),
+         ("Mistä saan AmateurTV:n stream keyni?", "Model Panel → Broadcast Settings → External Encoder. Sekä server URL että stream key näkyvät siellä. Kopioi molemmat SplitCamin custom RTMP -kenttiin. Avain on tilikohtainen."),
+         ("Mikä bitrate AmateurTV:lle?", "Standardit cam-asetukset — 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen AmateurTV:lle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. AmateurTV:n ulkoisen enkooderin vaihtoehto on ilmainen ottaa käyttöön."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Se on enkooderi, joka lähettää videosi AmateurTV:lle."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta. Käytä espanjankielisiä tekstejä overlayilla — AmateurTV:n espanjankielinen yleisö reagoi niihin selvästi vahvemmin."),
+         ("Hae AmateurTV:n URL ja stream key", "Kirjaudu AmateurTV-mallitilillesi, avaa <strong>Model Panel</strong>, siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam AmateurTV:hen", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä AmateurTV:n server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe. Aja sisäänrakennettu nopeustesti ensin."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online AmateurTV:n Model Panelista. Noin 10 sekunnissa striimi saavuttaa verkoston. Seuraavat lähetykset ovat yhden klikkauksen — avaa SplitCam, Go Live."),
+     ],
+    },
+    {"slug": "camster", "name": "Camster",
+     "title": "Lähetys Camsterissa SplitCamilla — Model Hubin ulkoinen enkooderi",
+     "desc": "Lähetys Camsterissa ilmaisella SplitCamilla — Model Hubin ulkoinen enkooderi, vakiintunut mid-tier cam-alusta, monikamera-näkymät ja overlayt. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "camster lähetys, camster.com obs, camster ulkoinen enkooderi, camster rtmp, camster stream key, camster model hub",
+     "h1html": 'Miten lähetät <span class="accent">Camster</span>issa SplitCamilla',
+     "h1short": "Lähetys Camster",
+     "card": "Ulkoisen enkooderin asetus Camsterin Model Hubiin.",
+     "intro": "Camster on vakiintunut mid-tier cam-alusta — pienempi kuin Chaturbate tai LiveJasmin, mutta sillä on uskollinen käyttäjäkunta ja reilut maksut. Oletuksena toimiva Model Hub -broadcaster pyörii selaimessa, mutta se avaa myös standardin <strong>ulkoisen enkooderin</strong> reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat monikamera-näkymät, overlayt ja suotimet, joita sisäänrakennettu broadcaster ei pysty tarjoamaan.",
+     "quick": "Lähetys Camsterissa SplitCamilla: asenna SplitCam, rakenna näkymä, Model Hubissa avaa <em>Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Model Hubista.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu Camster-mallitiliisi, avaa <strong>Model Hub</strong> ja siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. Avain on tilikohtainen; käsittele kuten salasanaa.",
+     "tips": [
+         ("Mid-tier tarkoittaa vähemmän kilpailua", "Camsterissa on tasaista liikennettä mutta vähemmän broadcastereita kuin top-tier-verkostoilla — etusivulle pääsy on realistisempaa siistillä näkymällä ja säännöllisellä aikataululla."),
+         ("Selainbroadcaster vs ulkoinen", "Oletuksena oleva selainbroadcaster on yksilähteinen. SplitCam External Encoderin kautta avaa monikamera-näkymät, overlayt, kauneussuotimet ja AI-taustan."),
+         ("Vakaat maksut, reilu split", "Camsterin tulonjako on reilu mid-tierin mittakaavassa — ei alan korkein, mutta luotettavat kuukausimaksut, ja maksuviivästyksistä mallit valittavat harvoin."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko Camster ulkoisia enkoodereita kuten SplitCamia virallisesti?", "Kyllä — Model Hub sisältää External Encoder -vaihtoehdon Broadcast Settings -kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam ja muut RTMP-enkooderit yhdistyvät."),
+         ("Mistä saan Camsterin stream keyni?", "Model Hub → Broadcast Settings → External Encoder. Sekä server URL että stream key näkyvät siellä. Kopioi molemmat SplitCamin custom RTMP -kenttiin."),
+         ("Mikä bitrate Camsterille?", "Standardit cam-asetukset — 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen Camsterille?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Camsterin ulkoisen enkooderin vaihtoehto on ilmainen."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — kaikki reaaliajassa."),
+         ("Hae Camsterin URL ja stream key", "Kirjaudu Camster-mallitilillesi, avaa <strong>Model Hub</strong>, siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam Camsteriin", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä Camsterin server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe. Aja sisäänrakennettu nopeustesti ensin."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Camsterin Model Hubista. Noin 10 sekunnissa striimi saavuttaa Camsterin."),
+     ],
+    },
+    {"slug": "camversity", "name": "Camversity",
+     "title": "Lähetys Camversityssä SplitCamilla — Performer Dashboardin ulkoinen enkooderi",
+     "desc": "Lähetys Camversityssä ilmaisella SplitCamilla — Performer Dashboardin ulkoinen enkooderi, kasvava itsenäinen cam-alusta, monikamera-näkymät. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "camversity lähetys, camversity obs, camversity ulkoinen enkooderi, camversity rtmp, camversity stream key, camversity performer",
+     "h1html": 'Miten lähetät <span class="accent">Camversity</span>ssä SplitCamilla',
+     "h1short": "Lähetys Camversity",
+     "card": "Ulkoisen enkooderin asetus Camversityn Performer Dashboardiin.",
+     "intro": "Camversity on kasvava itsenäinen cam-alusta, joka keskittyy esiintyjäystävällisiin työkaluihin ja matalampiin provisioihin kuin perinteiset verkostot. Oletuksena toimiva Performer Dashboard -broadcaster pyörii selaimessa, mutta se avaa myös standardin <strong>ulkoisen enkooderin</strong> reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat monikamera-näkymät, overlayt ja suotimet.",
+     "quick": "Lähetys Camversityssä SplitCamilla: asenna SplitCam, rakenna näkymä, Performer Dashboardissa avaa <em>Stream Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Performer Dashboardista.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu Camversityn performer-tiliisi, avaa <strong>Performer Dashboard</strong> ja siirry kohtaan <strong>Stream Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. Uudet tilit vaativat standardin henkilöllisyysverifioinnin ennen lähettämistä.",
+     "tips": [
+         ("Esiintyjäystävälliset jaot", "Camversityn tulonjako on esiintyjälle suotuisampi kuin perinteisillä verkostoilla — kannattaa verrata nykyiseen pääalustaan, etenkin uran alussa."),
+         ("Kevyempi onboarding kuin Doclerilla", "Camversityn verifiointi on selvästi nopeampaa kuin LiveJasminin 48–72 tuntia, mutta pysyy silti legitiiminä — ei sattumanvaraisia tai verifioimattomia malleja. Hyvä keskitie."),
+         ("Rakenna näkymä, ei pelkkää webkameraa", "Oletuksena oleva Performer Dashboard -broadcaster on yksilähteinen. SplitCam External Encoderin kautta avaa monikameran, overlayt ja kauneussuotimet."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko Camversity ulkoisia enkoodereita kuten SplitCamia virallisesti?", "Kyllä — Performer Dashboard sisältää External Encoder -vaihtoehdon Stream Settings -kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam, vMix kaikki yhdistyvät."),
+         ("Mistä saan Camversityn stream keyni?", "Performer Dashboard → Stream Settings → External Encoder. Sekä server URL että stream key näkyvät siellä."),
+         ("Mikä bitrate Camversitylle?", "Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen Camversitylle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Camversityn ulkoisen enkooderin vaihtoehto on ilmainen."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta."),
+         ("Hae Camversityn URL ja stream key", "Kirjaudu Camversityn performer-tilillesi, avaa <strong>Performer Dashboard</strong>, siirry kohtaan <strong>Stream Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam Camversityyn", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä Camversityn server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Performer Dashboardista. Noin 10 sekunnissa striimi saavuttaa Camversityn."),
+     ],
+    },
 ]

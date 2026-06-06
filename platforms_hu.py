@@ -634,4 +634,103 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Streamer Dashboardból. Pár másodperc alatt megjelensz a Cherry.tv listákon. A következő adások egy kattintással mennek."),
      ],
     },
+    {"slug": "amateurtv", "name": "AmateurTV",
+     "title": "Adás az AmateurTV-n SplitCammel — spanyol nyelvű cam hálózat",
+     "desc": "Adj az AmateurTV-n ingyenes SplitCammel — Model Panel external encoder, spanyol nyelvű cam hálózat (Spanyolország + LatAm), multi-kamera jelenetek. Nincs vízjel, nincs regisztráció.",
+     "kw": "amateurtv adás, amateur.tv obs, amateurtv external encoder, amateurtv rtmp, amateurtv stream key, modelos amateur tv",
+     "h1html": 'Hogyan adsz az <span class="accent">AmateurTV-n</span> SplitCammel',
+     "h1short": "Adás AmateurTV",
+     "card": "Külső enkóder beállítás az AmateurTV spanyol nyelvű hálózatához.",
+     "intro": "Az AmateurTV a vezető spanyol nyelvű cam hálózat — erős közönség Spanyolországban, Mexikóban, Argentínában és egész Latin-Amerikában. Az alapértelmezett Model Panel broadcaster böngészőben működik, de expose-olja a standard <strong>external encoder</strong> útvonalat is, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így multi-kamera jelenetekkel, beauty szűrőkkel és overlay-ekkel adhatsz hispanofón közönségnek, amit a US-központú hálózatok nem szolgálnak ki jól.",
+     "quick": "Adás az AmateurTV-n SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Model Panel → <em>Broadcast Settings → External Encoder</em> alatt kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Model Panelből.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be az AmateurTV modell fiókodba, nyisd meg <strong>Model Panel → Broadcast Settings → External Encoder</strong>. Megjelenik egy <strong>server URL</strong> és egy <strong>stream key</strong>, fiókhoz kötve — másold mindkettőt a SplitCam egyéni RTMP mezőibe. Az új modell fiókok ID verifikáción mennek át, mielőtt élőben mennének.",
+     "tips": [
+         ("Hispanofón közönség elsőre", "Az AmateurTV forgalma elsöprően spanyol nyelvű — Spanyolország nappal, LatAm a US esti órákban. Stream címek, jelenet szövegek és overlay-ek spanyolul drámaian jobban teljesítenek, mint a csak-angol ezen a hálózaton."),
+         ("A LatAm időzóna a prime time-od", "A csúcsforgalom a LatAm esti órákhoz (UTC-3 és UTC-6 között) korrelál. Ha rugalmas vagy, a késő esti CET / kora reggeli ázsiai órás adás eltalálja Spanyolország és LatAm csúcsát is."),
+         ("Stabil mid-tier kifizetések", "Nem a legnagyobb RPM az iparágban, de stabil — az AmateurTV következetesen fizet, és a hispanofón niche-ben kisebb a verseny, mint a top US hálózatokon."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja az AmateurTV hivatalosan a külső enkódereket, mint a SplitCam?", "Igen — a Model Panel tartalmazza az External Encoder opciót a Broadcast Settings alatt. Az AmateurTV standard RTMP server URL-t és stream key-t ad; OBS, SplitCam, vMix és más RTMP enkóderek mind csatlakoznak."),
+         ("Honnan kapom meg a stream key-emet az AmateurTV-hez?", "Model Panel → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg. Másold mindkettőt a SplitCam egyéni RTMP mezőibe. A kulcs a fiókhoz kötött."),
+         ("Milyen bitrátát használjak az AmateurTV-hez?", "Standard cam-quality beállítások — push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam az AmateurTV-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Az AmateurTV External Encoder opciója is ingyenesen aktiválható."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Ez az enkóder, ami a videódat az AmateurTV-re küldi."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret. Használj spanyol szöveget az overlay-eken az AmateurTV hispanofón közönségéhez."),
+         ("Szerezd meg az AmateurTV URL-t és stream key-t", "A modell fiókodban nyisd meg <strong>Model Panel → Broadcast Settings → External Encoder</strong>. Másold a server URL-t és az egyedi stream key-t."),
+         ("Kösd össze a SplitCamet az AmateurTV-vel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be az AmateurTV server URL-t és stream key-t az egyéni RTMP mezőkbe. Bitráta 3 500–6 000 Kbps 1920×1080-on, 30 fps, keyframe 2 másodperc. Először futtasd a beépített speed testet."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Model Panelből az AmateurTV-n. Kb. 10 másodperc alatt eléri a stream a hálózatot. A következő adások egy kattintással mennek — megnyitod a SplitCamet, Go Live."),
+     ],
+    },
+    {"slug": "camster", "name": "Camster",
+     "title": "Adás a Camsteren SplitCammel — Model Hub external encoder",
+     "desc": "Adj a Camsteren ingyenes SplitCammel — Model Hub external encoder, bevett mid-tier cam platform, multi-kamera jelenetek és overlay-ek. Nincs vízjel, nincs regisztráció.",
+     "kw": "camster adás, camster.com obs, camster external encoder, camster rtmp, camster stream key, camster model hub",
+     "h1html": 'Hogyan adsz a <span class="accent">Camsteren</span> SplitCammel',
+     "h1short": "Adás Camster",
+     "card": "Külső enkóder beállítás a Camster Model Hubjához.",
+     "intro": "A Camster egy bevett mid-tier cam platform — kisebb, mint a Chaturbate vagy a LiveJasmin, de hűséges felhasználói bázissal és tisztességes kifizetésekkel. Az alapértelmezett Model Hub broadcaster böngészőben működik, de expose-olja a standard <strong>external encoder</strong> útvonalat is, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel adhatsz, amiket a beépített broadcaster nem tud nyújtani.",
+     "quick": "Adás a Camsteren SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Model Hub → <em>Broadcast Settings → External Encoder</em> alatt kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Model Hubból.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a Camster modell fiókodba, nyisd meg <strong>Model Hub → Broadcast Settings → External Encoder</strong>. Megjelenik egy <strong>server URL</strong> és egy <strong>stream key</strong>, fiókhoz kötve — másold mindkettőt a SplitCam egyéni RTMP mezőibe. A kulcs a fiókhoz kötött; kezeld jelszóként.",
+     "tips": [
+         ("A mid-tier kevesebb versenyt jelent", "A Camsternek stabil forgalma van, de kevesebb broadcaster, mint a top hálózatoknak — könnyebb a címlapra kerülni egy igényes jelenettel és következetes menetrenddel."),
+         ("Böngésző broadcaster vs. külső", "Az alapértelmezett böngésző broadcaster single-source. A SplitCam az External Encoderen keresztül kioldja a multi-kamera jeleneteket, overlay-eket, beauty szűrőket és AI hátteret."),
+         ("Stabil kifizetések, tisztességes osztás", "A Camster bevétel-osztása tisztességes a mid-tier szinten — nem a legnagyobb az iparágban, de megbízható havi kifizetések és kevés modell-panasz fizetési csúszásokról."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja a Camster hivatalosan a külső enkódereket, mint a SplitCam?", "Igen — a Model Hub tartalmazza az External Encoder opciót a Broadcast Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam és más RTMP enkóderek mind csatlakoznak."),
+         ("Honnan kapom meg a stream key-emet a Camsterhez?", "Model Hub → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg. Másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak a Camsterhez?", "Standard cam-quality beállítások — push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam a Camsterhez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Camster External Encoder opciója ingyenes."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — mind élőben alkalmazva."),
+         ("Szerezd meg a Camster URL-t és stream key-t", "A modell fiókodban nyisd meg <strong>Model Hub → Broadcast Settings → External Encoder</strong>. Másold a server URL-t és az egyedi stream key-t."),
+         ("Kösd össze a SplitCamet a Camsterrel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a Camster server URL-t és stream key-t az egyéni RTMP mezőkbe. Bitráta 3 500–6 000 Kbps 1920×1080-on, 30 fps, keyframe 2 másodperc. Először futtasd a beépített speed testet."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Model Hubból a Camsteren. Kb. 10 másodperc alatt eléri a stream a Camstert."),
+     ],
+    },
+    {"slug": "camversity", "name": "Camversity",
+     "title": "Adás a Camversityn SplitCammel — Performer Dashboard external encoder",
+     "desc": "Adj a Camversityn ingyenes SplitCammel — Performer Dashboard external encoder, növekvő független cam platform, multi-kamera jelenetek. Nincs vízjel, nincs regisztráció.",
+     "kw": "camversity adás, camversity obs, camversity external encoder, camversity rtmp, camversity stream key, camversity performer",
+     "h1html": 'Hogyan adsz a <span class="accent">Camversityn</span> SplitCammel',
+     "h1short": "Adás Camversity",
+     "card": "Külső enkóder beállítás a Camversity Performer Dashboardjához.",
+     "intro": "A Camversity egy növekvő független cam platform, ami performer-barát eszközökre és alacsonyabb jutalékokra fókuszál, mint az örökölt hálózatok. Az alapértelmezett Performer Dashboard broadcaster böngészőben működik, de expose-olja a standard <strong>external encoder</strong> útvonalat is, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel adhatsz.",
+     "quick": "Adás a Camversityn SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Performer Dashboard → <em>Stream Settings → External Encoder</em> alatt kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Performer Dashboardból.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a Camversity performer fiókodba, nyisd meg <strong>Performer Dashboard → Stream Settings → External Encoder</strong>. Megjelenik egy <strong>server URL</strong> és egy <strong>stream key</strong>, fiókhoz kötve — másold mindkettőt a SplitCam egyéni RTMP mezőibe. Az új fiókok standard ID verifikáción mennek át, mielőtt élőben mennének.",
+     "tips": [
+         ("Performer-barát osztások", "A Camversity bevétel-osztása kedvezőbb a performerek számára, mint az örökölt hálózatoké — érdemes összehasonlítani a jelenlegi fő platformoddal, ha a cam karriered elején vagy."),
+         ("Könnyebb onboarding, mint a Docleré", "A Camversity verifikációja gyorsabb, mint a LiveJasmin 48–72 órás jóváhagyása, miközben legitim marad (nincsenek random / nem verifikált modellek). Jó középút."),
+         ("Építs jelenetet, ne csak webkamerát", "A Camversity alapértelmezett Performer Dashboard broadcaster single-source. A SplitCam az External Encoderen keresztül kioldja a multi-kamerát, overlay-eket, beauty szűrőket."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja a Camversity hivatalosan a külső enkódereket, mint a SplitCam?", "Igen — a Performer Dashboard tartalmazza az External Encoder opciót a Stream Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak."),
+         ("Honnan kapom meg a stream key-emet a Camversityhez?", "Performer Dashboard → Stream Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg."),
+         ("Milyen bitrátát használjak a Camversityhez?", "Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam a Camversityhez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Camversity External Encoder opciója ingyenes."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret."),
+         ("Szerezd meg a Camversity URL-t és stream key-t", "A performer fiókodban nyisd meg <strong>Performer Dashboard → Stream Settings → External Encoder</strong>. Másold a server URL-t és az egyedi stream key-t."),
+         ("Kösd össze a SplitCamet a Camversityvel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a Camversity server URL-t és stream key-t az egyéni RTMP mezőkbe. Bitráta 3 500–6 000 Kbps 1920×1080-on, 30 fps, keyframe 2 másodperc."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Performer Dashboardból. Kb. 10 másodperc alatt eléri a stream a Camversityt."),
+     ],
+    },
 ]
