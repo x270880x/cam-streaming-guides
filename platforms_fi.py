@@ -832,4 +832,103 @@ PLATFORMS_FI = [
          ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten käynnistä Fansly Live -lähetys Creator Dashboardista. Noin 10 sekunnissa striimi saavuttaa Fansly-tilaajasi."),
      ],
     },
+    {"slug": "ifriends", "name": "iFriends",
+     "title": "Lähetys iFriendsiin SplitCamilla — Model Centerin ulkoinen enkooderi",
+     "desc": "Lähetys iFriendsiin ilmaisella SplitCamilla — Model Centerin ulkoinen enkooderi, pitkäaikainen itsenäinen cam-verkko, monikamera-näkymät. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "ifriends lähetys, ifriends obs, ifriends ulkoinen enkooderi, ifriends rtmp, ifriends stream key, ifriends model center, ifriends.net",
+     "h1html": 'Miten lähetät <span class="accent">iFriendsiin</span> SplitCamilla',
+     "h1short": "Lähetys iFriends",
+     "card": "Ulkoisen enkooderin asetus iFriendsin Model Centeriin.",
+     "intro": "iFriends (WebPower) on yksi pitkäikäisimmistä itsenäisistä cam-verkoista — hiljaa kannattava, uskollinen käyttäjäkunta ja kypsä Model Center, joka rakennettiin jo ennen selainbroadcastereiden yleistymistä. Alusta tukee standardia <strong>ulkoisen enkooderin</strong> reittiä Model Centeristä, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat striimattua tällä vakiintuneella verkolla nykyaikaisilla monikamera-näkymillä, overlayilla ja suotimilla.",
+     "quick": "Lähetys iFriendsiin SplitCamilla: asenna SplitCam, rakenna näkymä, Model Centerissä avaa <em>Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Model Centeristä.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu iFriendsin malli-tiliisi, avaa <strong>Model Center</strong> ja siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. iFriendsin hyväksyntä uusille mallitileille on tiukka mutta legitiimi; kun olet verifioitu, ulkoisen enkooderin vaihtoehto pysyy käytettävissä toistaiseksi.",
+     "tips": [
+         ("Pitkän hännän yleisö, kypsä verkko", "iFriends on toiminut 90-luvun lopusta uskollisella käyttäjäkunnalla — moni katsoja on pitkäaikainen tilaaja, ei ensikertalainen vierailija. Vakaita tuloja vakiintuneille malleille, hitaampaa kasvua uusille tulokkaille."),
+         ("Selainbroadcaster vs ulkoinen", "iFriendsin vanha broadcaster rakennettiin ennen modernia monikamera-UX:ää. Siirtyminen SplitCamiin External Encoderin kautta on huomattava päivitys — monikamera-näkymät, overlayt ja kauneussuotimet, joita vanha työkalu ei pysty tuottamaan."),
+         ("Tasaiset maksut, vähemmän yllätyksiä", "iFriendsin emoyhtiö (WebPower) on maksanut malleille luotettavasti vuosikymmenten ajan — hitaampi maksuaikataulu kuin uusilla kryptoystävällisillä alustoilla, mutta hyvin vähän kauhutarinoita."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko iFriends virallisesti ulkoisia enkoodereita kuten SplitCamia?", "Kyllä — Model Center sisältää External Encoder -vaihtoehdon Broadcast Settings -kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam, vMix kaikki yhdistyvät, kun tilisi on hyväksytty."),
+         ("Mistä saan iFriendsin stream keyni?", "Model Center → Broadcast Settings → External Encoder. Sekä server URL että stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin."),
+         ("Mikä bitrate iFriendsille?", "Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen iFriendsille?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. iFriendsin ulkoisen enkooderin vaihtoehto on ilmainen Model Centerissä."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — viimeistellyt modernit näkymät erottuvat tällä kypsällä verkolla."),
+         ("Hae iFriendsin URL ja stream key", "Kirjaudu iFriendsin malli-tilillesi, avaa <strong>Model Center</strong>, siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam iFriendsiin", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä iFriendsin server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online iFriendsin Model Centeristä. Noin 10 sekunnissa striimi saavuttaa verkon."),
+     ],
+    },
+    {"slug": "babestation", "name": "Babestation",
+     "title": "Lähetys Babestationiin SplitCamilla — UK cam-verkon asetus",
+     "desc": "Lähetys Babestationiin ilmaisella SplitCamilla — Performer Hubin ulkoinen enkooderi, UK aikuis-TV / cam-verkko, monikamera-näkymät, overlayt. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "babestation lähetys, babestation cam, babestation obs, babestation ulkoinen enkooderi, babestation rtmp, babestation performer, uk cam-verkko",
+     "h1html": 'Miten lähetät <span class="accent">Babestationiin</span> SplitCamilla',
+     "h1short": "Lähetys Babestation",
+     "card": "Ulkoisen enkooderin asetus Babestationin UK Performer Hubiin.",
+     "intro": "Babestation on Britannian johtava aikuis-TV / cam-verkko — hybridi TV-kanavista ja live cam -tuotteesta, jota syöttävät Performer Hubiin kirjautuneet performerit. Alusta tukee standardia <strong>ulkoisen enkooderin</strong> reittiä Performer Hubista, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — antaen itsenäisten UK-performereiden striimata monikamera-näkymillä, overlayilla ja kauneussuotimilla, jotka ylittävät Babestationin TV-studiotyylisen oletusbroadcasterin.",
+     "quick": "Lähetys Babestationiin SplitCamilla: asenna SplitCam, rakenna näkymä, Performer Hubissa avaa <em>Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Performer Hubista.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu Babestationin performer-tiliisi, avaa <strong>Performer Hub</strong> ja siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. Babestationin UK performer -onboarding sisältää ID-verifioinnin Britannian ikäverifiointisäännösten mukaisesti.",
+     "tips": [
+         ("UK-painotteinen yleisö ja ajoitus", "Babestationin paras liikenne on UK:n ilta- / yöaikaan (GMT/BST). Jos olet eri aikavyöhykkeellä, lähettäminen myöhäisillä UK-tunneilla ylittää selvästi paikallisen prime-time -ajoituksen tässä verkossa."),
+         ("TV-studiotason viimeistely odotetaan", "Babestationin brändi on kytköksissä sen TV-kanaviin — katsojat odottavat tuotetumpaa lavastusta ja valaistusta kuin tyypillisessä webkamera-striimissä. SplitCamin näkymät (overlayt, brändätty teksti, AI-tausta) auttavat vastaamaan alustan viimeisteltyä estetiikkaa."),
+         ("Itsenäiset vs studioperformerit", "Babestation toimii sekä UK-studioiden että itsenäisten performereiden kanssa. Itsenäiset broadcasterit, jotka yhdistyvät External Encoderin kautta, saavat saman maksumallin kuin studioiden syöttämät kamerat."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko Babestation ulkoisia enkoodereita kuten SplitCamia?", "Kyllä — Performer Hub sisältää External Encoder -vaihtoehdon Broadcast Settings -kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam, vMix kaikki yhdistyvät, kun performer-verifiointi on valmis."),
+         ("Mistä saan Babestationin stream keyni?", "Performer Hub → Broadcast Settings → External Encoder. Sekä server URL että stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin."),
+         ("Mikä bitrate Babestationille?", "Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. UK:n upload-kaistanleveys on yleensä vahva, mutta aja SplitCamin nopeustesti silti ensin."),
+         ("Onko SplitCam ilmainen Babestationille?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Babestationin ulkoisen enkooderin vaihtoehto on ilmainen Performer Hubissa."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — vastaa Babestationin TV-studiotason tuotantoviimeistelyä erottuaksesi."),
+         ("Hae Babestationin URL ja stream key", "Kirjaudu Babestationin performer-tilillesi, avaa <strong>Performer Hub</strong>, siirry kohtaan <strong>Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam Babestationiin", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä Babestationin server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Performer Hubista. Noin 10 sekunnissa striimi saavuttaa Babestationin UK-yleisön."),
+     ],
+    },
+    {"slug": "adultwork", "name": "AdultWork",
+     "title": "Lähetys AdultWorkiin SplitCamilla — Members Arean ulkoinen enkooderi",
+     "desc": "Lähetys AdultWorkiin ilmaisella SplitCamilla — Members Arean ulkoinen enkooderi, UK aikuispalvelujen markkinapaikka cam-toiminnolla, monikamera-näkymät. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "adultwork lähetys, adultwork cam, adultwork obs, adultwork ulkoinen enkooderi, adultwork rtmp, adultwork webcam, uk cam",
+     "h1html": 'Miten lähetät <span class="accent">AdultWorkiin</span> SplitCamilla',
+     "h1short": "Lähetys AdultWork",
+     "card": "Ulkoisen enkooderin asetus AdultWorkin UK Members Arean cam-toimintoon.",
+     "intro": "AdultWork on vakiintunut UK:n aikuispalvelujen markkinapaikka — tunnetaan ensisijaisesti escort-varauksista, kuva- / videomyynnistä ja puhelinpalveluista, joiden rinnalla on live-<strong>webcam-toiminto</strong>. Alusta tukee standardia <strong>ulkoisen enkooderin</strong> reittiä Members Areasta, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — antaen itsenäisten UK-performereiden lisätä live cam -tuloja monikamera-näkymillä, overlayilla ja suotimilla.",
+     "quick": "Lähetys AdultWorkiin SplitCamilla: asenna SplitCam, rakenna näkymä, Members Areassa avaa <em>Members → Broadcasting → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Members Areasta.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu AdultWorkin performer-tiliisi, avaa <strong>Members Area</strong> ja siirry kohtaan <strong>Members → Broadcasting → External Encoder</strong>. Sivu paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. AdultWorkin verifiointi on pakollinen live cam -toiminnolle ja kattaa Britannian ikäverifiointivelvoitteet.",
+     "tips": [
+         ("Ristiinmyynti muista AdultWork-palveluista", "AdultWorkin vahvuus on sen valmis asiakaskunta — katsojat ovat saattaneet jo varata kuva- / video- / puhelinpalveluitasi. Käytä live cam -striimejä ristiinmyyntiin niille asiakkaille, jotka eivät ole vielä kokeilleet camiäsi, äläkä jahtaa tuntemattomia."),
+         ("Members Area on sisäänkäynti", "Älä etsi broadcasteria julkiselta sivulta — kaikki performer-puolen toiminta on Members Arean sisällä. Lähetysasetukset, maksut ja sisällönhallinta löytyvät kaikki sieltä."),
+         ("UK-keskeinen mutta kansainväliset maksut", "Suurin osa liikenteestä on UK/EU. Maksut toimivat kansainvälisesti tavallisella pankkisiirrolla / e-lompakolla, alustalla yleensä viikoittain."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko AdultWork ulkoisia enkoodereita kuten SplitCamia?", "Kyllä — Members Area sisältää External Encoder -vaihtoehdon Broadcasting-kohdassa. Standardi RTMP server URL ja stream key; OBS, SplitCam, vMix kaikki yhdistyvät, kun performer-verifiointi on tehty."),
+         ("Mistä saan AdultWorkin stream keyni?", "Members Area → Members → Broadcasting → External Encoder. Sekä server URL että stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin."),
+         ("Mikä bitrate AdultWorkille?", "Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Aja SplitCamin sisäänrakennettu nopeustesti ensin."),
+         ("Onko SplitCam ilmainen AdultWorkille?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. AdultWorkin ulkoisen enkooderin vaihtoehto on ilmainen Members Areassa."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — käytä overlayeja mainostaaksesi AdultWork-sisältöäsi / puhelinpalveluitasi ja ristiinmyydäksesi liven aikana."),
+         ("Hae AdultWorkin URL ja stream key", "Kirjaudu AdultWorkin performer-tilillesi, avaa <strong>Members Area</strong>, siirry kohtaan <strong>Members → Broadcasting → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam AdultWorkiin", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä AdultWorkin server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Members Areasta. Noin 10 sekunnissa striimi saavuttaa AdultWorkin yleisön."),
+     ],
+    },
 ]

@@ -832,4 +832,103 @@ PLATFORMS_RO = [
          ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi pornește transmisia Fansly Live din Creator Dashboard. În ~10 secunde stream-ul tău ajunge la abonații Fansly."),
      ],
     },
+    {"slug": "ifriends", "name": "iFriends",
+     "title": "Cum transmiți pe iFriends cu SplitCam — Model Center External Encoder",
+     "desc": "Transmite pe iFriends cu SplitCam gratuit — Model Center external encoder, rețea cam independentă cu vechime, scene multi-cameră. Fără filigran, fără înregistrare.",
+     "kw": "transmisie ifriends, ifriends obs, ifriends external encoder, ifriends rtmp, ifriends stream key, ifriends model center, ifriends.net",
+     "h1html": 'Cum transmiți pe <span class="accent">iFriends</span> cu SplitCam',
+     "h1short": "Transmisie pe iFriends",
+     "card": "Setup cu encoder extern pentru Model Center-ul matur al iFriends.",
+     "intro": "iFriends (WebPower) e una dintre cele mai longevive rețele cam independente — discret profitabilă, cu o bază loială de utilizatori și un Model Center matur, construit înainte ca broadcasterele de browser să devină comune. Platforma suportă o cale standard de <strong>external encoder</strong> din Model Center la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel transmiți cu scene multi-cameră moderne, overlay-uri și filtre pe această rețea consacrată.",
+     "quick": "Transmisie pe iFriends cu SplitCam: instalezi SplitCam, construiești scena, în Model Center deschizi <em>Broadcast Settings → External Encoder</em>, copiezi URL-ul serverului și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Model Center.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de model iFriends, deschide <strong>Model Center</strong> și navighează la <strong>Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Aprobarea iFriends pentru conturile noi de model e riguroasă, dar legitimă; odată verificat, opțiunea External Encoder rămâne disponibilă pe termen nelimitat.",
+     "tips": [
+         ("Audiență long-tail, rețea matură", "iFriends funcționează de la sfârșitul anilor '90, cu o bază loială de utilizatori — mulți sunt abonați pe termen lung, nu vizitatori la prima vizită. Venit stabil pentru modele consacrate, creștere mai lentă pentru începători."),
+         ("Browser broadcaster vs encoder extern", "Broadcasterul vechi din iFriends a fost construit înainte de UX-ul modern multi-cameră. Trecerea la SplitCam prin External Encoder e un upgrade vizibil — scene multi-cameră, overlay-uri și beauty filters pe care tool-ul vechi nu le poate livra."),
+         ("Plăți constante, mai puține surprize", "Compania-mamă a iFriends (WebPower) plătește modelele constant de decenii — programe de plată mai lente decât platformele noi crypto-friendly, dar foarte puține istorii de groază."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("iFriends suportă oficial encodere externe precum SplitCam?", "Da — Model Center include o opțiune External Encoder sub Broadcast Settings. URL server RTMP standard și stream key; OBS, SplitCam, vMix se conectează odată ce contul tău e aprobat."),
+         ("Unde îmi iau stream key-ul iFriends?", "Model Center → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo — copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru iFriends?", "Împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru iFriends?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder de la iFriends e gratuită în Model Center."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau fundal AI — scenele moderne și îngrijite ies în evidență pe această rețea matură."),
+         ("Obține URL și stream key iFriends", "Loghează-te în contul tău de model iFriends, deschide <strong>Model Center</strong>, navighează la <strong>Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> unică. Copiază ambele."),
+         ("Conectează SplitCam la iFriends", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului iFriends și stream key-ul în câmpurile RTMP custom. Setează bitrate la 3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Model Center-ul iFriends. În ~10 secunde stream-ul tău ajunge în rețea."),
+     ],
+    },
+    {"slug": "babestation", "name": "Babestation",
+     "title": "Cum transmiți pe Babestation cu SplitCam — Setup rețea cam UK",
+     "desc": "Transmite pe Babestation cu SplitCam gratuit — Performer Hub external encoder, rețea adult TV / cam UK, scene multi-cameră, overlay-uri. Fără filigran, fără înregistrare.",
+     "kw": "transmisie babestation, babestation cam, babestation obs, babestation external encoder, babestation rtmp, babestation performer, uk cam network",
+     "h1html": 'Cum transmiți pe <span class="accent">Babestation</span> cu SplitCam',
+     "h1short": "Transmisie pe Babestation",
+     "card": "Setup cu encoder extern pentru Performer Hub-ul UK de la Babestation.",
+     "intro": "Babestation e principala rețea UK de adult TV / cam — un hibrid între canale TV broadcast și un produs cam live alimentat de performerii logați în Performer Hub. Platforma suportă o cale standard de <strong>external encoder</strong> din Performer Hub, la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel performerii UK independenți transmit cu scene multi-cameră, overlay-uri și beauty filters care depășesc broadcasterul implicit, de tip studio TV.",
+     "quick": "Transmisie pe Babestation cu SplitCam: instalezi SplitCam, construiești scena, în Performer Hub deschizi <em>Broadcast Settings → External Encoder</em>, copiezi URL-ul serverului și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Performer Hub.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de performer Babestation, deschide <strong>Performer Hub</strong> și navighează la <strong>Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Onboarding-ul Babestation pentru performerii UK include verificarea ID-ului conform reglementărilor britanice de verificare a vârstei.",
+     "tips": [
+         ("Audiență UK-first și timing", "Traficul de vârf al Babestation e seara / noaptea UK (GMT/BST). Dacă ești în alt fus orar, transmisia târziu în noaptea UK depășește semnificativ timingul de prime-time local pe această rețea."),
+         ("Se așteaptă polish de studio TV", "Brandul Babestation e legat de canalele sale TV — privitorii se așteaptă la seturi și iluminat mai produse decât un stream webcam tipic. Scenele SplitCam (overlay-uri, text branduit, fundal AI) ajută să te aliniezi cu estetica polish a platformei."),
+         ("Performeri independenți vs studio", "Babestation lucrează atât cu studiouri UK, cât și cu performeri independenți. Broadcasterii independenți conectați prin External Encoder primesc același model de payout ca și camerele alimentate de studio."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Babestation suportă encodere externe precum SplitCam?", "Da — Performer Hub include o opțiune External Encoder sub Broadcast Settings. URL server RTMP standard și stream key; OBS, SplitCam, vMix se conectează după ce verificarea performerului e completă."),
+         ("Unde îmi iau stream key-ul Babestation?", "Performer Hub → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo — copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru Babestation?", "Împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Banda de upload din UK e în general bună, dar rulează întâi speed test-ul din SplitCam."),
+         ("SplitCam e gratuit pentru Babestation?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder de la Babestation e gratuită în Performer Hub."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — aliniază-te cu polish-ul de producție de studio TV al Babestation ca să ieși în evidență."),
+         ("Obține URL și stream key Babestation", "Loghează-te în contul tău de performer Babestation, deschide <strong>Performer Hub</strong>, navighează la <strong>Broadcast Settings → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> unică. Copiază ambele."),
+         ("Conectează SplitCam la Babestation", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului Babestation și stream key-ul în câmpurile RTMP custom. Setează bitrate la 3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Performer Hub. În ~10 secunde stream-ul tău ajunge la audiența UK a Babestation."),
+     ],
+    },
+    {"slug": "adultwork", "name": "AdultWork",
+     "title": "Cum transmiți pe AdultWork cu SplitCam — Members Area External Encoder",
+     "desc": "Transmite pe AdultWork cu SplitCam gratuit — Members Area external encoder, marketplace UK de servicii adult cu funcție cam, scene multi-cameră. Fără filigran, fără înregistrare.",
+     "kw": "transmisie adultwork, adultwork cam, adultwork obs, adultwork external encoder, adultwork rtmp, adultwork webcam, uk cam",
+     "h1html": 'Cum transmiți pe <span class="accent">AdultWork</span> cu SplitCam',
+     "h1short": "Transmisie pe AdultWork",
+     "card": "Setup cu encoder extern pentru funcția cam din Members Area UK al AdultWork.",
+     "intro": "AdultWork e marketplace-ul UK consacrat pentru servicii adult — cunoscut în principal pentru rezervări de escortă, vânzări de foto / video și servicii telefonice, cu o funcție <strong>webcam</strong> live alături. Platforma suportă o cale standard de <strong>external encoder</strong> din Members Area, la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — astfel performerii UK independenți adaugă venit din cam live cu scene multi-cameră, overlay-uri și filtre.",
+     "quick": "Transmisie pe AdultWork cu SplitCam: instalezi SplitCam, construiești scena, în Members Area deschizi <em>Members → Broadcasting → External Encoder</em>, copiezi URL-ul serverului și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Members Area.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de performer AdultWork, deschide <strong>Members Area</strong> și navighează la <strong>Members → Broadcasting → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> legate de cont — copiază-le în câmpurile RTMP custom ale SplitCam. Verificarea AdultWork e obligatorie pentru funcția cam live și acoperă conformitatea cu regulile UK de verificare a vârstei.",
+     "tips": [
+         ("Cross-sell din celelalte servicii AdultWork", "Forța AdultWork e baza existentă de clienți — privitorii pot deja să-ți rezerve serviciile de foto / video / telefon. Folosește stream-urile live ca să faci cross-sell către clienții care încă n-au încercat cam-ul tău, nu ca să vânezi străini."),
+         ("Members Area e punctul de intrare", "Nu căuta broadcasterul pe site-ul public — totul pentru performer e în Members Area. Setări de broadcasting, payouts, gestionarea conținutului — toate stau acolo."),
+         ("UK-centric, dar payouts internaționale", "Cel mai mult trafic e UK/EU. Payouts funcționează internațional prin transfer bancar standard / e-wallet, cu programe săptămânale comune pe platformă."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("AdultWork suportă encodere externe precum SplitCam?", "Da — Members Area include o opțiune External Encoder sub Broadcasting. URL server RTMP standard și stream key; OBS, SplitCam, vMix se conectează după verificarea performerului."),
+         ("Unde îmi iau stream key-ul AdultWork?", "Members Area → Members → Broadcasting → External Encoder. Atât URL-ul serverului, cât și stream key-ul apar acolo — copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru AdultWork?", "Împinge 1920×1080 la 30 fps, 3.500–6.000 Kbps cu keyframe la 2 secunde. Rulează întâi speed test-ul integrat din SplitCam."),
+         ("SplitCam e gratuit pentru AdultWork?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Opțiunea External Encoder de la AdultWork e gratuită în Members Area."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau fundal AI — folosește overlay-urile ca să-ți promovezi conținutul AdultWork / serviciile telefonice și să faci cross-sell în timpul live-ului."),
+         ("Obține URL și stream key AdultWork", "Loghează-te în contul tău de performer AdultWork, deschide <strong>Members Area</strong>, navighează la <strong>Members → Broadcasting → External Encoder</strong>. Pagina dezvăluie un <strong>URL server</strong> și o <strong>stream key</strong> unică. Copiază ambele."),
+         ("Conectează SplitCam la AdultWork", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului AdultWork și stream key-ul în câmpurile RTMP custom. Setează bitrate la 3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Members Area. În ~10 secunde stream-ul tău ajunge la audiența AdultWork."),
+     ],
+    },
 ]

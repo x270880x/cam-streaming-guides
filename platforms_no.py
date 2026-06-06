@@ -823,4 +823,100 @@ PLATFORMS_NO = [
          ("Koble SplitCam til Fansly", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn Fansly-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
          ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og start deretter Fansly Live-sendingen fra Creator Dashboard. Innen ~10 sekunder når strømmen Fansly-abonnentene dine."),
      ]},
+    {"slug": "ifriends", "name": "iFriends",
+     "title": "Slik sender du på iFriends med SplitCam — Model Center External Encoder",
+     "desc": "Send på iFriends med gratis SplitCam — Model Center external encoder, et veletablert uavhengig cam-nettverk, multi-kamera scener. Uten vannmerke, uten registrering.",
+     "kw": "ifriends sending, ifriends obs, ifriends external encoder, ifriends rtmp, ifriends stream key, ifriends model center, ifriends.net",
+     "h1html": 'Slik sender du på <span class="accent">iFriends</span> med SplitCam',
+     "h1short": "Sending iFriends",
+     "card": "External-encoder-oppsett for iFriends voksne Model Center.",
+     "intro": "iFriends (WebPower) er et av de aller mest langlivde uavhengige cam-nettverkene — stillferdig lønnsomt, med en lojal brukerbase og et modent <strong>Model Center</strong> bygget lenge før nettleser-sending ble vanlig. Plattformen tilbyr en klassisk <strong>external encoder</strong>-vei fra Model Center, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — slik at du kan sende med moderne multi-kamera scener, overlays og filtre på dette etablerte nettverket.",
+     "quick": "Send på iFriends med SplitCam: installer SplitCam, bygg scenen, i Model Center åpne <em>Broadcast Settings → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Model Center.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på iFriends-modellkontoen din, åpne <strong>Model Center</strong> og naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. iFriends har en grundig, men ryddig godkjenning av nye modellkontoer; så snart du er verifisert, blir external encoder-valget liggende tilgjengelig på ubestemt tid.",
+     "tips": [
+         ("Long-tail-publikum, modent nettverk", "iFriends har vært i drift siden slutten av 90-tallet og har en lojal brukerbase — mange er langvarige abonnenter, ikke førstegangsbesøkende. Stabil inntekt for etablerte modeller, men tregere vekst for nykommere."),
+         ("Nettleser-broadcaster vs. external", "iFriends gamle broadcaster ble bygget før moderne multi-kamera-grensesnitt. Å bytte til SplitCam via External Encoder er et merkbart løft — multi-kamera scener, overlays og beauty-filtre som det eldre verktøyet ikke klarer å levere."),
+         ("Jevne utbetalinger, færre overraskelser", "iFriends morselskap (WebPower) har betalt modeller pålitelig i flere tiår — tregere utbetalingsrytme enn nyere krypto-vennlige plattformer, men svært få skrekkhistorier."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter iFriends eksterne enkodere som SplitCam offisielt?", "Ja — Model Center har et External Encoder-valg under Broadcast Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam og vMix kan alle kobles til så snart kontoen din er godkjent."),
+         ("Hvor finner jeg min iFriends stream key?", "Model Center → Broadcast Settings → External Encoder. Både server-URL og stream key dukker opp der. Kopier begge inn i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til iFriends?", "Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps med 2 sekunders keyframe-intervall. Kjør først SplitCams innebygde hastighetstest."),
+         ("Er SplitCam gratis å bruke med iFriends?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Encoder-valget hos iFriends er gratis i Model Center."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — polerte, moderne scener skiller seg ut på dette modne nettverket."),
+         ("Hent iFriends-URL og stream key", "Logg inn på iFriends-modellkontoen din, åpne <strong>Model Center</strong>, naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til iFriends", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn iFriends-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra iFriends Model Center. Innen ~10 sekunder når strømmen ut til nettverket."),
+     ]},
+    {"slug": "babestation", "name": "Babestation",
+     "title": "Slik sender du på Babestation med SplitCam — oppsett for britisk cam-nettverk",
+     "desc": "Send på Babestation med gratis SplitCam — Performer Hub external encoder, britisk voksen-TV-/cam-nettverk, multi-kamera scener, overlays. Uten vannmerke, uten registrering.",
+     "kw": "babestation sending, babestation cam, babestation obs, babestation external encoder, babestation rtmp, babestation performer, britisk cam-nettverk",
+     "h1html": 'Slik sender du på <span class="accent">Babestation</span> med SplitCam',
+     "h1short": "Sending Babestation",
+     "card": "External-encoder-oppsett for Babestations britiske Performer Hub.",
+     "intro": "Babestation er det ledende britiske voksen-TV-/cam-nettverket — en hybrid av TV-kanaler og et live cam-produkt som mates av modeller innlogget i <strong>Performer Hub</strong>. Plattformen tilbyr en klassisk <strong>external encoder</strong>-vei fra Performer Hub, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — slik at uavhengige britiske modeller kan sende med multi-kamera scener, overlays og beauty-filtre som går langt forbi Babestations TV-studio-pregede standardbroadcaster.",
+     "quick": "Send på Babestation med SplitCam: installer SplitCam, bygg scenen, i Performer Hub åpne <em>Broadcast Settings → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Performer Hub.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på Babestation-modellkontoen din, åpne <strong>Performer Hub</strong> og naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. Babestations britiske onboarding omfatter ID-verifisering i tråd med britiske aldersbekreftelsesregler.",
+     "tips": [
+         ("Britisk publikum og timing", "Babestations sterkeste trafikk er britisk kveld/natt (GMT/BST). Er du i en annen tidssone, gir sending sent på kvelden britisk tid langt bedre uttelling enn lokal primetime på dette nettverket."),
+         ("Forventet TV-studio-polering", "Babestations merkevare er knyttet til TV-kanalene — seerne forventer mer produserte kulisser og bedre lyssetting enn en typisk webkamera-strøm. SplitCam-scener (overlays, merket tekst, AI-bakgrunn) hjelper deg å matche plattformens polerte uttrykk."),
+         ("Uavhengige vs. studio-modeller", "Babestation jobber både med britiske studioer og uavhengige modeller. Uavhengige som kobler seg på via External Encoder, får samme utbetalingsmodell som studio-matede kameraer."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter Babestation eksterne enkodere som SplitCam?", "Ja — Performer Hub har et External Encoder-valg under Broadcast Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam og vMix kan alle kobles til når modellverifiseringen er fullført."),
+         ("Hvor finner jeg min Babestation stream key?", "Performer Hub → Broadcast Settings → External Encoder. Både server-URL og stream key dukker opp der. Kopier begge inn i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til Babestation?", "Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps med 2 sekunders keyframe-intervall. Britisk opplastningsbåndbredde er som regel god, men kjør SplitCams hastighetstest først."),
+         ("Er SplitCam gratis å bruke med Babestation?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Encoder-valget hos Babestation er gratis i Performer Hub."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — match Babestations TV-studio-polering for å skille deg ut."),
+         ("Hent Babestation-URL og stream key", "Logg inn på Babestation-modellkontoen din, åpne <strong>Performer Hub</strong>, naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til Babestation", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn Babestation-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra Performer Hub. Innen ~10 sekunder når strømmen ut til Babestations britiske publikum."),
+     ]},
+    {"slug": "adultwork", "name": "AdultWork",
+     "title": "Slik sender du på AdultWork med SplitCam — Members Area External Encoder",
+     "desc": "Send på AdultWork med gratis SplitCam — Members Area external encoder, britisk markedsplass for voksentjenester med cam-funksjon, multi-kamera scener. Uten vannmerke, uten registrering.",
+     "kw": "adultwork sending, adultwork cam, adultwork obs, adultwork external encoder, adultwork rtmp, adultwork webcam, britisk cam",
+     "h1html": 'Slik sender du på <span class="accent">AdultWork</span> med SplitCam',
+     "h1short": "Sending AdultWork",
+     "card": "External-encoder-oppsett for AdultWorks britiske Members Area-cam-funksjon.",
+     "intro": "AdultWork er den veletablerte britiske markedsplassen for voksentjenester — først og fremst kjent for escort-bookinger, salg av foto/video og telefontjenester, med en live <strong>webkamera-funksjon</strong> ved siden av. Plattformen tilbyr en klassisk <strong>external encoder</strong>-vei fra Members Area, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — slik at uavhengige britiske modeller kan legge til live cam-inntekt med multi-kamera scener, overlays og filtre.",
+     "quick": "Send på AdultWork med SplitCam: installer SplitCam, bygg scenen, i Members Area åpne <em>Members → Broadcasting → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Members Area.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på AdultWork-modellkontoen din, åpne <strong>Members Area</strong> og naviger til <strong>Members → Broadcasting → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. Verifisering er obligatorisk for live cam-funksjonen hos AdultWork og dekker britisk aldersbekreftelse.",
+     "tips": [
+         ("Krysssalg fra dine andre AdultWork-tjenester", "AdultWorks styrke er den eksisterende kundebasen — seerne booker kanskje allerede foto-, video- eller telefontjenestene dine. Bruk live cam-strømmene til å krysse-selge til kunder som ennå ikke har prøvd camen din, ikke til å jakte på fremmede."),
+         ("Members Area er inngangen", "Ikke let etter broadcasteren på den offentlige siden — alt på modellsiden ligger inne i Members Area. Sendingsinnstillinger, utbetalinger og innholdsadministrasjon finner du der."),
+         ("Britisk tyngdepunkt, men internasjonale utbetalinger", "Mesteparten av trafikken er britisk/europeisk. Utbetalinger fungerer internasjonalt via vanlig bankoverføring/e-lommebok, og ukentlige utbetalinger er vanlig på plattformen."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter AdultWork eksterne enkodere som SplitCam?", "Ja — Members Area har et External Encoder-valg under Broadcasting. Standard RTMP-server-URL og stream key; OBS, SplitCam og vMix kan alle kobles til etter at modellverifiseringen er fullført."),
+         ("Hvor finner jeg min AdultWork stream key?", "Members Area → Members → Broadcasting → External Encoder. Både server-URL og stream key dukker opp der. Kopier begge inn i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til AdultWork?", "Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps med 2 sekunders keyframe-intervall. Kjør først SplitCams innebygde hastighetstest."),
+         ("Er SplitCam gratis å bruke med AdultWork?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Encoder-valget hos AdultWork er gratis i Members Area."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — bruk overlays til å reklamere for AdultWork-innholdet og telefontjenestene dine og krysse-selge underveis i sendingen."),
+         ("Hent AdultWork-URL og stream key", "Logg inn på AdultWork-modellkontoen din, åpne <strong>Members Area</strong>, naviger til <strong>Members → Broadcasting → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til AdultWork", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn AdultWork-server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra Members Area. Innen ~10 sekunder når strømmen ut til AdultWorks publikum."),
+     ]},
 ]

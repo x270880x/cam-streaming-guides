@@ -832,4 +832,103 @@ PLATFORMS_EL = [
          ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά ξεκίνα τη μετάδοση Fansly Live από το Creator Dashboard. Μέσα σε ~10 δευτερόλεπτα το stream σου φτάνει στους συνδρομητές σου στο Fansly."),
      ],
     },
+    {"slug": "ifriends", "name": "iFriends",
+     "title": "Πώς μεταδίδεις στο iFriends με SplitCam — External Encoder στο Model Center",
+     "desc": "Μετάδωσε στο iFriends με δωρεάν SplitCam — external encoder στο Model Center, ιστορικό ανεξάρτητο cam δίκτυο, multi-camera σκηνές. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση ifriends, ifriends broadcast, ifriends obs, ifriends external encoder, ifriends rtmp, ifriends stream key, ifriends model center, ifriends.net",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">iFriends</span> με SplitCam',
+     "h1short": "Μετάδοση στο iFriends",
+     "card": "Ρύθμιση με external encoder για το ώριμο Model Center του iFriends.",
+     "intro": "Το iFriends (WebPower) είναι ένα από τα πιο μακρόβια ανεξάρτητα cam δίκτυα — διακριτικά κερδοφόρο, με πιστή βάση χρηστών και ένα ώριμο <strong>Model Center</strong> φτιαγμένο πολύ πριν γίνουν συνηθισμένοι οι broadcasters του browser. Η πλατφόρμα υποστηρίζει ένα τυπικό μονοπάτι <strong>external encoder</strong> μέσα από το Model Center, στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — έτσι μεταδίδεις με σύγχρονες multi-camera σκηνές, overlays και φίλτρα πάνω σε αυτό το καθιερωμένο δίκτυο.",
+     "quick": "Μετάδοση στο iFriends με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Model Center ανοίγεις <em>Broadcast Settings → External Encoder</em>, αντιγράφεις το server URL και το stream key, επικολλάς στον SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το URL και το stream key από το Model Center.</li><li>Επικόλλησε στον SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον model λογαριασμό σου στο iFriends, άνοιξε το <strong>Model Center</strong> και πλοηγήσου στο <strong>Broadcast Settings → External Encoder</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> και ένα <strong>stream key</strong> δεμένα με τον λογαριασμό σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Η έγκριση του iFriends για νέους model λογαριασμούς είναι αυστηρή αλλά νόμιμη· μόλις περάσεις την επαλήθευση, η επιλογή external encoder παραμένει διαθέσιμη επ' αόριστον.",
+     "tips": [
+         ("Σταθερό κοινό, ώριμο δίκτυο", "Το iFriends λειτουργεί από τα τέλη της δεκαετίας του '90 με πιστή βάση χρηστών — πολλοί είναι μακροχρόνιοι συνδρομητές, όχι περαστικοί επισκέπτες. Σταθερό εισόδημα για τα καθιερωμένα μοντέλα, πιο αργή ανάπτυξη για τους νεοεισερχόμενους."),
+         ("Browser broadcaster vs external", "Ο παλιός broadcaster του iFriends φτιάχτηκε πριν τη σύγχρονη multi-camera εμπειρία. Η μετάβαση στον SplitCam μέσω External Encoder είναι αισθητή αναβάθμιση — multi-camera σκηνές, overlays και beauty filters που το παλιότερο εργαλείο δεν μπορεί να δώσει."),
+         ("Σταθερές πληρωμές, λίγες εκπλήξεις", "Η μητρική του iFriends (WebPower) πληρώνει αξιόπιστα τα μοντέλα εδώ και δεκαετίες — με πιο αργό πρόγραμμα πληρωμών από τις νεότερες crypto-friendly πλατφόρμες, αλλά με ελάχιστες κακές ιστορίες."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει επίσημα το iFriends external encoders όπως ο SplitCam;", "Ναι — το Model Center περιλαμβάνει επιλογή External Encoder κάτω από τις Broadcast Settings. Standard RTMP server URL και stream key· OBS, SplitCam, vMix συνδέονται όλοι μόλις εγκριθεί ο λογαριασμός σου."),
+         ("Από πού παίρνω το stream key μου για το iFriends;", "Model Center → Broadcast Settings → External Encoder. Τόσο το server URL όσο και το stream key εμφανίζονται εκεί — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Τι bitrate να χρησιμοποιήσω για το iFriends;", "Push 1920×1080 στα 30 fps, 3.500–6.000 Kbps με keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test του SplitCam."),
+         ("Είναι δωρεάν ο SplitCam για το iFriends;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η επιλογή external encoder του iFriends είναι δωρεάν στο Model Center."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — προσεγμένες, σύγχρονες σκηνές ξεχωρίζουν σε αυτό το ώριμο δίκτυο."),
+         ("Πάρε το URL και το stream key του iFriends", "Συνδέσου στον model λογαριασμό σου στο iFriends, άνοιξε το <strong>Model Center</strong>, πλοηγήσου στο <strong>Broadcast Settings → External Encoder</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> και ένα μοναδικό <strong>stream key</strong>. Αντίγραψε και τα δύο."),
+         ("Σύνδεσε τον SplitCam με το iFriends", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του iFriends και το stream key στα custom RTMP πεδία. Όρισε bitrate σε 3.500–6.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγες online από το Model Center του iFriends. Μέσα σε ~10 δευτερόλεπτα το stream σου φτάνει στο δίκτυο."),
+     ],
+    },
+    {"slug": "babestation", "name": "Babestation",
+     "title": "Πώς μεταδίδεις στο Babestation με SplitCam — Ρύθμιση για το UK cam δίκτυο",
+     "desc": "Μετάδωσε στο Babestation με δωρεάν SplitCam — external encoder στο Performer Hub, UK adult TV / cam δίκτυο, multi-camera σκηνές, overlays. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση babestation, babestation broadcast, babestation cam, babestation obs, babestation external encoder, babestation rtmp, babestation performer, uk cam network",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Babestation</span> με SplitCam',
+     "h1short": "Μετάδοση στο Babestation",
+     "card": "Ρύθμιση με external encoder για το βρετανικό Performer Hub του Babestation.",
+     "intro": "Το Babestation είναι το κορυφαίο βρετανικό adult TV / cam δίκτυο — ένα υβρίδιο τηλεοπτικών καναλιών και ενός live cam προϊόντος που τροφοδοτείται από performers συνδεδεμένους στο Performer Hub. Η πλατφόρμα υποστηρίζει ένα τυπικό μονοπάτι <strong>external encoder</strong> μέσα από το Performer Hub, στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — έτσι οι ανεξάρτητοι Βρετανοί performers μεταδίδουν με multi-camera σκηνές, overlays και beauty filters που ξεπερνούν τον προεπιλεγμένο, τηλεοπτικού στιλ broadcaster του Babestation.",
+     "quick": "Μετάδοση στο Babestation με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Performer Hub ανοίγεις <em>Broadcast Settings → External Encoder</em>, αντιγράφεις το server URL και το stream key, επικολλάς στον SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το URL και το stream key από το Performer Hub.</li><li>Επικόλλησε στον SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον performer λογαριασμό σου στο Babestation, άνοιξε το <strong>Performer Hub</strong> και πλοηγήσου στο <strong>Broadcast Settings → External Encoder</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> και ένα <strong>stream key</strong> δεμένα με τον λογαριασμό σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Η εγγραφή performer στο Babestation περιλαμβάνει επαλήθευση ταυτότητας σύμφωνα με τους βρετανικούς κανονισμούς ελέγχου ηλικίας.",
+     "tips": [
+         ("Κοινό και ώρες με επίκεντρο το UK", "Η αιχμή κίνησης του Babestation είναι τα βρετανικά βράδια / νυχτερινές ώρες (GMT/BST). Αν βρίσκεσαι σε άλλη ζώνη ώρας, η μετάδοση στις αργές βρετανικές ώρες αποδίδει σημαντικά καλύτερα από την τοπική σου prime time σε αυτό το δίκτυο."),
+         ("Αναμένεται τηλεοπτική φινέτσα", "Η ταυτότητα του Babestation είναι δεμένη με τα τηλεοπτικά του κανάλια — οι θεατές περιμένουν πιο προσεγμένα σκηνικά και φωτισμό από ένα τυπικό webcam stream. Οι σκηνές του SplitCam (overlays, branded κείμενο, AI background) βοηθούν να ταιριάξεις στην προσεγμένη αισθητική της πλατφόρμας."),
+         ("Ανεξάρτητοι vs studio performers", "Το Babestation συνεργάζεται τόσο με βρετανικά studios όσο και με ανεξάρτητους performers. Οι ανεξάρτητοι που συνδέονται μέσω External Encoder έχουν το ίδιο μοντέλο πληρωμών με τις κάμερες που τροφοδοτούνται από studio."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το Babestation external encoders όπως ο SplitCam;", "Ναι — το Performer Hub περιλαμβάνει επιλογή External Encoder κάτω από τις Broadcast Settings. Standard RTMP server URL και stream key· OBS, SplitCam, vMix συνδέονται όλοι αφού ολοκληρωθεί η επαλήθευση performer."),
+         ("Από πού παίρνω το stream key μου για το Babestation;", "Performer Hub → Broadcast Settings → External Encoder. Τόσο το server URL όσο και το stream key εμφανίζονται εκεί — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Τι bitrate να χρησιμοποιήσω για το Babestation;", "Push 1920×1080 στα 30 fps, 3.500–6.000 Kbps με keyframe 2 δευτερολέπτων. Το upload bandwidth στο UK είναι γενικά ισχυρό, αλλά πρώτα τρέξε το speed test του SplitCam."),
+         ("Είναι δωρεάν ο SplitCam για το Babestation;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η επιλογή external encoder του Babestation είναι δωρεάν στο Performer Hub."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — ταίριαξε την τηλεοπτική φινέτσα του Babestation για να ξεχωρίσεις."),
+         ("Πάρε το URL και το stream key του Babestation", "Συνδέσου στον performer λογαριασμό σου στο Babestation, άνοιξε το <strong>Performer Hub</strong>, πλοηγήσου στο <strong>Broadcast Settings → External Encoder</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> και ένα μοναδικό <strong>stream key</strong>. Αντίγραψε και τα δύο."),
+         ("Σύνδεσε τον SplitCam με το Babestation", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του Babestation και το stream key στα custom RTMP πεδία. Όρισε bitrate σε 3.500–6.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγες online από το Performer Hub. Μέσα σε ~10 δευτερόλεπτα το stream σου φτάνει στο βρετανικό κοινό του Babestation."),
+     ],
+    },
+    {"slug": "adultwork", "name": "AdultWork",
+     "title": "Πώς μεταδίδεις στο AdultWork με SplitCam — External Encoder στο Members Area",
+     "desc": "Μετάδωσε στο AdultWork με δωρεάν SplitCam — external encoder στο Members Area, βρετανική adult-service αγορά με cam λειτουργία, multi-camera σκηνές. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση adultwork, adultwork broadcast, adultwork cam, adultwork obs, adultwork external encoder, adultwork rtmp, adultwork webcam, uk cam",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">AdultWork</span> με SplitCam',
+     "h1short": "Μετάδοση στο AdultWork",
+     "card": "Ρύθμιση με external encoder για την cam λειτουργία στο βρετανικό Members Area του AdultWork.",
+     "intro": "Το AdultWork είναι η καθιερωμένη βρετανική αγορά υπηρεσιών ενηλίκων — γνωστή κυρίως για κρατήσεις escort, πωλήσεις φωτογραφιών / βίντεο και τηλεφωνικές υπηρεσίες, με μια live <strong>webcam λειτουργία</strong> παράλληλα. Η πλατφόρμα υποστηρίζει ένα τυπικό μονοπάτι <strong>external encoder</strong> μέσα από το Members Area, στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — έτσι οι ανεξάρτητοι Βρετανοί performers προσθέτουν έσοδα από live cam με multi-camera σκηνές, overlays και φίλτρα.",
+     "quick": "Μετάδοση στο AdultWork με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Members Area ανοίγεις <em>Members → Broadcasting → External Encoder</em>, αντιγράφεις το server URL και το stream key, επικολλάς στον SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε το URL και το stream key από το Members Area.</li><li>Επικόλλησε στον SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον performer λογαριασμό σου στο AdultWork, άνοιξε το <strong>Members Area</strong> και πλοηγήσου στο <strong>Members → Broadcasting → External Encoder</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> και ένα <strong>stream key</strong> δεμένα με τον λογαριασμό σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam. Η επαλήθευση στο AdultWork είναι υποχρεωτική για τη live cam λειτουργία και καλύπτει τη συμμόρφωση με τον βρετανικό έλεγχο ηλικίας.",
+     "tips": [
+         ("Cross-sell από τις άλλες υπηρεσίες AdultWork", "Η δύναμη του AdultWork είναι η υπάρχουσα πελατειακή του βάση — οι θεατές ίσως ήδη κλείνουν τις φωτο / βίντεο / τηλεφωνικές σου υπηρεσίες. Χρησιμοποίησε τα live cam streams για cross-sell σε πελάτες που δεν έχουν δοκιμάσει ακόμη την κάμερά σου, αντί να κυνηγάς αγνώστους."),
+         ("Το Members Area είναι το σημείο εισόδου", "Μην ψάχνεις τον broadcaster στο δημόσιο site — όλα όσα αφορούν τον performer βρίσκονται μέσα στο Members Area. Ρυθμίσεις μετάδοσης, πληρωμές και διαχείριση περιεχομένου είναι όλα εκεί."),
+         ("Με επίκεντρο το UK αλλά διεθνείς πληρωμές", "Η περισσότερη κίνηση είναι από UK/EU. Οι πληρωμές λειτουργούν διεθνώς μέσω τυπικού εμβάσματος / e-wallet, με εβδομαδιαία προγράμματα να είναι συνηθισμένα στην πλατφόρμα."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το AdultWork external encoders όπως ο SplitCam;", "Ναι — το Members Area περιλαμβάνει επιλογή External Encoder κάτω από το Broadcasting. Standard RTMP server URL και stream key· OBS, SplitCam, vMix συνδέονται όλοι μετά την επαλήθευση performer."),
+         ("Από πού παίρνω το stream key μου για το AdultWork;", "Members Area → Members → Broadcasting → External Encoder. Τόσο το server URL όσο και το stream key εμφανίζονται εκεί — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Τι bitrate να χρησιμοποιήσω για το AdultWork;", "Push 1920×1080 στα 30 fps, 3.500–6.000 Kbps με keyframe 2 δευτερολέπτων. Πρώτα τρέξε το ενσωματωμένο speed test του SplitCam."),
+         ("Είναι δωρεάν ο SplitCam για το AdultWork;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Η επιλογή external encoder του AdultWork είναι δωρεάν στο Members Area."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — χρησιμοποίησε overlays για να διαφημίσεις το περιεχόμενο / τις τηλεφωνικές υπηρεσίες σου στο AdultWork και να κάνεις cross-sell κατά τη διάρκεια του live."),
+         ("Πάρε το URL και το stream key του AdultWork", "Συνδέσου στον performer λογαριασμό σου στο AdultWork, άνοιξε το <strong>Members Area</strong>, πλοηγήσου στο <strong>Members → Broadcasting → External Encoder</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> και ένα μοναδικό <strong>stream key</strong>. Αντίγραψε και τα δύο."),
+         ("Σύνδεσε τον SplitCam με το AdultWork", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του AdultWork και το stream key στα custom RTMP πεδία. Όρισε bitrate σε 3.500–6.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγες online από το Members Area. Μέσα σε ~10 δευτερόλεπτα το stream σου φτάνει στο κοινό του AdultWork."),
+     ],
+    },
 ]

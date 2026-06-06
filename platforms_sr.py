@@ -832,4 +832,103 @@ PLATFORMS_SR = [
          ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим покрени Fansly Live пренос из Creator Dashboard-а. У року од ~10 секунди стрим стиже до твојих Fansly претплатника."),
      ],
     },
+    {"slug": "ifriends", "name": "iFriends",
+     "title": "Пренос на iFriends са SplitCam-ом — Model Center спољни енкодер",
+     "desc": "Пренос на iFriends са бесплатним SplitCam-ом — спољни енкодер у Model Center-у, ветеранска независна cam мрежа, мулти-камера сцене. Без воденог жига, без регистрације.",
+     "kw": "ifriends пренос, ifriends obs, ifriends спољни енкодер, ifriends rtmp, ifriends stream key, ifriends model center, ifriends.net",
+     "h1html": 'Како преносиш на <span class="accent">iFriends</span> са SplitCam-ом',
+     "h1short": "Пренос iFriends",
+     "card": "Подешавање спољног енкодера за зрели Model Center платформе iFriends.",
+     "intro": "iFriends (WebPower) је једна од најдуготрајнијих независних cam мрежа — тиха али профитабилна, са оданом базом корисника и зрелим Model Center-ом изграђеним још пре него што су прегледачки broadcaster-и постали уобичајени. Платформа подржава стандардну руту <strong>спољног енкодера</strong> из Model Center-а на коју се бесплатни <strong style='color:var(--text)'>SplitCam</strong> повезује — омогућавајући ти стримовање са модерним мулти-камера сценама, преклапањима и филтерима на овој етаблираној мрежи.",
+     "quick": "Пренос на iFriends са SplitCam-ом: инсталирај SplitCam, изгради сцену, у Model Center-у отвори <em>Broadcast Settings → External Encoder</em>, копирај server URL и stream key, налепи у SplitCam, Go Live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Узми URL и stream key из Model Center-а.</li>"
+              "<li>Налепи у SplitCam.</li><li>Притисни Go Live.</li></ol>",
+     "key_how": "Пријави се на свој iFriends модел налог, отвори <strong>Model Center</strong> и крени на <strong>Broadcast Settings → External Encoder</strong>. Страница открива <strong>server URL</strong> и <strong>stream key</strong> везане за твој налог — копирај обоје у SplitCam-ова custom RTMP поља. Одобравање нових модел налога на iFriends-у је строго али легитимно; једном кад те верификују, опција спољног енкодера остаје трајно доступна.",
+     "tips": [
+         ("Long-tail публика, зрела мрежа", "iFriends ради још од касних деведесетих, са оданом базом корисника — многи су дугогодишњи претплатници, не први пут на сајту. Стабилан приход за етаблиране моделе, спорији раст за нове."),
+         ("Прегледачки broadcaster vs спољни", "Legacy broadcaster на iFriends-у настао је пре модерног мулти-камера интерфејса. Прелазак на SplitCam преко External Encoder-а је приметна надоградња — мулти-камера сцене, преклапања и beauty филтери које старија алатка не може да испоручи."),
+         ("Стабилне исплате, мање изненађења", "Матична компанија iFriends-а (WebPower) поуздано плаћа моделе деценијама — спорији распоред исплата него код новијих crypto-friendly платформи, али веома мало хорор прича."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Подржава ли iFriends званично спољне енкодере попут SplitCam-а?", "Да — Model Center укључује опцију External Encoder под Broadcast Settings. Стандардни RTMP server URL и stream key; OBS, SplitCam, vMix се повезују чим ти је налог одобрен."),
+         ("Где добијам свој iFriends stream key?", "Model Center → Broadcast Settings → External Encoder. И server URL и stream key појављују се тамо — копирај обоје у SplitCam-ова custom RTMP поља."),
+         ("Који битрејт користити за iFriends?", "Циљај 1920×1080 на 30 fps, 3500–6000 Kbps са размаком keyframe-а од 2 секунде. Покрени уграђени тест брзине у SplitCam-у прво."),
+         ("Да ли је SplitCam бесплатан за iFriends?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења. iFriends-ова опција спољног енкодера је бесплатна у Model Center-у."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру. Наслажи преклапања, текст, другу камеру или мобилни, beauty филтере или AI позадину — углађене модерне сцене се истичу на овој зрелој мрежи."),
+         ("Узми свој iFriends URL и stream key", "Пријави се на iFriends модел налог, отвори <strong>Model Center</strong>, крени на <strong>Broadcast Settings → External Encoder</strong>. Страница открива <strong>server URL</strong> и јединствени <strong>stream key</strong>. Копирај обоје."),
+         ("Повежи SplitCam са iFriends-ом", "У SplitCam-у отвори <strong>Stream Settings</strong>, налепи iFriends server URL и stream key у custom RTMP поља. Постави битрејт на 3500–6000 Kbps на 1920×1080, 30 fps, са 2-секундним keyframe-ом."),
+         ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим иди online из iFriends Model Center-а. У року од ~10 секунди стрим стиже до мреже."),
+     ],
+    },
+    {"slug": "babestation", "name": "Babestation",
+     "title": "Пренос на Babestation са SplitCam-ом — подешавање за британску cam мрежу",
+     "desc": "Пренос на Babestation са бесплатним SplitCam-ом — спољни енкодер у Performer Hub-у, британска adult TV / cam мрежа, мулти-камера сцене и преклапања. Без воденог жига, без регистрације.",
+     "kw": "babestation пренос, babestation cam, babestation obs, babestation спољни енкодер, babestation rtmp, babestation performer, britanska cam mreza",
+     "h1html": 'Како преносиш на <span class="accent">Babestation</span> са SplitCam-ом',
+     "h1short": "Пренос Babestation",
+     "card": "Подешавање спољног енкодера за британски Performer Hub платформе Babestation.",
+     "intro": "Babestation је водећа британска adult TV / cam мрежа — спој телевизијских канала и live cam производа који храни извођаче пријављене у Performer Hub. Платформа подржава стандардну руту <strong>спољног енкодера</strong> из Performer Hub-а на коју се бесплатни <strong style='color:var(--text)'>SplitCam</strong> повезује — омогућавајући независним британским извођачима да стримују са мулти-камера сценама, преклапањима и beauty филтерима који иду далеко изнад уграђеног broadcaster-а у стилу ТВ студија.",
+     "quick": "Пренос на Babestation са SplitCam-ом: инсталирај SplitCam, изгради сцену, у Performer Hub-у отвори <em>Broadcast Settings → External Encoder</em>, копирај server URL и stream key, налепи у SplitCam, Go Live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Узми URL и stream key из Performer Hub-а.</li>"
+              "<li>Налепи у SplitCam.</li><li>Притисни Go Live.</li></ol>",
+     "key_how": "Пријави се на свој Babestation performer налог, отвори <strong>Performer Hub</strong> и крени на <strong>Broadcast Settings → External Encoder</strong>. Страница открива <strong>server URL</strong> и <strong>stream key</strong> везане за твој налог — копирај обоје у SplitCam-ова custom RTMP поља. Онбординг британских извођача на Babestation укључује ID верификацију у складу са британским прописима о провери старости.",
+     "tips": [
+         ("Публика и тајминг пре свега британски", "Главни саобраћај Babestation-а пада на британско вече и ноћ (GMT/BST). Ако си у другој временској зони, пренос у касним ноћним британским сатима знатно надмашује локални prime-time на овој мрежи."),
+         ("Очекује се полираност ТВ студија", "Бренд Babestation-а везан је за његове ТВ канале — гледаоци очекују продуктивније сетове и осветљење него код обичног webcam стрима. SplitCam сцене (преклапања, брендиран текст, AI позадина) помажу да се поклопиш са полираном естетиком платформе."),
+         ("Независни vs студијски извођачи", "Babestation ради и са британским студијима и са независним извођачима. Независни broadcaster-и који се повезују преко External Encoder-а добијају исти модел исплата као студијски feed-ови."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Подржава ли Babestation спољне енкодере попут SplitCam-а?", "Да — Performer Hub укључује опцију External Encoder под Broadcast Settings. Стандардни RTMP server URL и stream key; OBS, SplitCam, vMix се повезују након завршене верификације извођача."),
+         ("Где добијам свој Babestation stream key?", "Performer Hub → Broadcast Settings → External Encoder. И server URL и stream key појављују се тамо — копирај обоје у SplitCam-ова custom RTMP поља."),
+         ("Који битрејт користити за Babestation?", "Циљај 1920×1080 на 30 fps, 3500–6000 Kbps са размаком keyframe-а од 2 секунде. Британски upload опсег је углавном јак, али покрени уграђени тест брзине у SplitCam-у прво."),
+         ("Да ли је SplitCam бесплатан за Babestation?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења. Babestation-ова опција спољног енкодера је бесплатна у Performer Hub-у."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру. Наслажи преклапања, текст, другу камеру или мобилни, beauty филтере или AI позадину — поклопи се са продуктивном полираношћу ТВ студија Babestation-а да би се истакао."),
+         ("Узми свој Babestation URL и stream key", "Пријави се на Babestation performer налог, отвори <strong>Performer Hub</strong>, крени на <strong>Broadcast Settings → External Encoder</strong>. Страница открива <strong>server URL</strong> и јединствени <strong>stream key</strong>. Копирај обоје."),
+         ("Повежи SplitCam са Babestation-ом", "У SplitCam-у отвори <strong>Stream Settings</strong>, налепи Babestation server URL и stream key у custom RTMP поља. Постави битрејт на 3500–6000 Kbps на 1920×1080, 30 fps, са 2-секундним keyframe-ом."),
+         ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим иди online из Performer Hub-а. У року од ~10 секунди стрим стиже до британске публике Babestation-а."),
+     ],
+    },
+    {"slug": "adultwork", "name": "AdultWork",
+     "title": "Пренос на AdultWork са SplitCam-ом — Members Area спољни енкодер",
+     "desc": "Пренос на AdultWork са бесплатним SplitCam-ом — спољни енкодер у Members Area, британски adult-service marketplace са cam опцијом, мулти-камера сцене. Без воденог жига, без регистрације.",
+     "kw": "adultwork пренос, adultwork cam, adultwork obs, adultwork спољни енкодер, adultwork rtmp, adultwork webcam, britanski cam",
+     "h1html": 'Како преносиш на <span class="accent">AdultWork</span> са SplitCam-ом',
+     "h1short": "Пренос AdultWork",
+     "card": "Подешавање спољног енкодера за cam опцију у британском Members Area платформе AdultWork.",
+     "intro": "AdultWork је етаблиран британски marketplace за adult услуге — пре свега познат по резервацијама пратње, продаји фотографија / видеа и телефонским услугама, уз live <strong>webcam опцију</strong>. Платформа подржава стандардну руту <strong>спољног енкодера</strong> из Members Area на коју се бесплатни <strong style='color:var(--text)'>SplitCam</strong> повезује — омогућавајући независним британским извођачима да додају live cam приход уз мулти-камера сцене, преклапања и филтере.",
+     "quick": "Пренос на AdultWork са SplitCam-ом: инсталирај SplitCam, изгради сцену, у Members Area отвори <em>Members → Broadcasting → External Encoder</em>, копирај server URL и stream key, налепи у SplitCam, Go Live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Узми URL и stream key из Members Area.</li>"
+              "<li>Налепи у SplitCam.</li><li>Притисни Go Live.</li></ol>",
+     "key_how": "Пријави се на свој AdultWork performer налог, отвори <strong>Members Area</strong> и крени на <strong>Members → Broadcasting → External Encoder</strong>. Страница открива <strong>server URL</strong> и <strong>stream key</strong> везане за твој налог — копирај обоје у SplitCam-ова custom RTMP поља. Верификација на AdultWork-у је обавезна за live cam опцију и покрива усклађеност са британском провером старости.",
+     "tips": [
+         ("Cross-sell из осталих AdultWork услуга", "Снага AdultWork-а је његова постојећа база клијената — гледаоци можда већ резервишу твоје фото / видео / телефонске услуге. Користи live cam стримове да унапред продаш cam клијентима који га још нису пробали, не да јуриш странце."),
+         ("Members Area је улазна тачка", "Не тражи broadcaster на јавном делу сајта — све што је на страни извођача налази се унутар Members Area. Подешавања преноса, исплате и управљање садржајем стоје тамо."),
+         ("Британски усмерено, али међународне исплате", "Највећи део саобраћаја је из УК / ЕУ. Исплате раде међународно преко стандардног банковног трансфера / e-wallet-а, уз недељни распоред уобичајен на платформи."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Подржава ли AdultWork спољне енкодере попут SplitCam-а?", "Да — Members Area укључује опцију External Encoder под Broadcasting. Стандардни RTMP server URL и stream key; OBS, SplitCam, vMix се повезују након верификације извођача."),
+         ("Где добијам свој AdultWork stream key?", "Members Area → Members → Broadcasting → External Encoder. И server URL и stream key појављују се тамо — копирај обоје у SplitCam-ова custom RTMP поља."),
+         ("Који битрејт користити за AdultWork?", "Циљај 1920×1080 на 30 fps, 3500–6000 Kbps са размаком keyframe-а од 2 секунде. Покрени уграђени тест брзине у SplitCam-у прво."),
+         ("Да ли је SplitCam бесплатан за AdultWork?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења. AdultWork-ова опција спољног енкодера је бесплатна у Members Area."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру. Наслажи преклапања, текст, другу камеру или мобилни, beauty филтере или AI позадину — користи преклапања да рекламираш свој AdultWork садржај / телефонске услуге и да их унапред продаш током live-а."),
+         ("Узми свој AdultWork URL и stream key", "Пријави се на AdultWork performer налог, отвори <strong>Members Area</strong>, крени на <strong>Members → Broadcasting → External Encoder</strong>. Страница открива <strong>server URL</strong> и јединствени <strong>stream key</strong>. Копирај обоје."),
+         ("Повежи SplitCam са AdultWork-ом", "У SplitCam-у отвори <strong>Stream Settings</strong>, налепи AdultWork server URL и stream key у custom RTMP поља. Постави битрејт на 3500–6000 Kbps на 1920×1080, 30 fps, са 2-секундним keyframe-ом."),
+         ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим иди online из Members Area. У року од ~10 секунди стрим стиже до публике AdultWork-а."),
+     ],
+    },
 ]

@@ -832,4 +832,103 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd indítsd el a Fansly Live adást a Creator Dashboardból. Kb. 10 másodperc alatt eléri a streamed a Fansly előfizetőidet."),
      ],
     },
+    {"slug": "ifriends", "name": "iFriends",
+     "title": "Hogyan adj az iFriendsen SplitCammel — Model Center external encoder",
+     "desc": "Adj az iFriendsen ingyenes SplitCammel — Model Center external encoder, régóta működő független cam hálózat, multi-kamera jelenetek. Nincs vízjel, nincs regisztráció.",
+     "kw": "ifriends adás, ifriends obs, ifriends external encoder, ifriends rtmp, ifriends stream key, ifriends model center, ifriends.net",
+     "h1html": 'Hogyan adsz az <span class="accent">iFriends</span>en SplitCammel',
+     "h1short": "Adás az iFriendsen",
+     "card": "Külső enkóder beállítás az iFriends érett Model Centeréhez.",
+     "intro": "Az iFriends (WebPower) az egyik legrégebb óta működő független cam hálózat — csendben nyereséges, hűséges felhasználói bázissal és egy érett Model Centerrel, amit még a böngészős broadcasterek elterjedése előtt építettek. A platform a Model Centerből kínál egy standard <strong>external encoder</strong> útvonalat, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így ezen a befutott hálózaton is adhatsz modern multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel.",
+     "quick": "Adás az iFriendsen SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Model Centerben megnyitod <em>Broadcast Settings → External Encoder</em>, kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Model Centerből.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be az iFriends modell fiókodba, nyisd meg a <strong>Model Center</strong>-t és navigálj a <strong>Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a fiókodhoz kötött <strong>server URL</strong>-t és <strong>stream key</strong>-t — másold mindkettőt a SplitCam egyéni RTMP mezőibe. Az iFriends új modell fiókokat szigorúan, de korrektül hagy jóvá; a verifikáció után az external encoder opció tartósan elérhető marad.",
+     "tips": [
+         ("Hosszú távú közönség, érett hálózat", "Az iFriends a kilencvenes évek vége óta működik egy hűséges felhasználói bázissal — sokan régóta visszatérő előfizetők, nem először betévedők. A befutott modelleknek stabil bevétel, az újaknak lassabb növekedés."),
+         ("Böngészős broadcaster vs külső enkóder", "Az iFriends régi broadcastere még a modern multi-kamerás kezelés előtt készült. Az External Encoderen át a SplitCamre váltás érezhető előrelépés — multi-kamera jelenetek, overlay-ek és beauty szűrők, amiket a régi eszköz nem tud."),
+         ("Kiszámítható kifizetések, kevés meglepetés", "Az iFriends anyacége (WebPower) évtizedek óta megbízhatóan fizet a modelleknek — lassabb kifizetési ütemben, mint az újabb kriptobarát platformok, de alig akad rémtörténet."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja az iFriends hivatalosan a külső enkódereket, mint a SplitCam?", "Igen — a Model Center tartalmaz egy External Encoder opciót a Broadcast Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak, amint a fiókod jóvá van hagyva."),
+         ("Honnan kapom meg az iFriends stream key-emet?", "Model Center → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg — másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak az iFriendshez?", "Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam az iFriendshez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Az iFriends external encoder opciója ingyenes a Model Centerben."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — a polírozott, modern jelenetek kitűnnek ezen az érett hálózaton."),
+         ("Szerezd meg az iFriends URL-t és stream key-t", "Jelentkezz be az iFriends modell fiókodba, nyisd meg a <strong>Model Center</strong>-t, navigálj a <strong>Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a <strong>server URL</strong>-t és az egyedi <strong>stream key</strong>-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet az iFriendsszel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be az iFriends server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 3 500–6 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online az iFriends Model Centerből. Kb. 10 másodperc alatt eléri a streamed a hálózatot."),
+     ],
+    },
+    {"slug": "babestation", "name": "Babestation",
+     "title": "Hogyan adj a Babestationön SplitCammel — UK cam hálózat beállítás",
+     "desc": "Adj a Babestationön ingyenes SplitCammel — Performer Hub external encoder, UK felnőtt TV / cam hálózat, multi-kamera jelenetek, overlay-ek. Nincs vízjel, nincs regisztráció.",
+     "kw": "babestation adás, babestation cam, babestation obs, babestation external encoder, babestation rtmp, babestation performer, uk cam hálózat",
+     "h1html": 'Hogyan adsz a <span class="accent">Babestation</span>ön SplitCammel',
+     "h1short": "Adás a Babestationön",
+     "card": "Külső enkóder beállítás a Babestation UK Performer Hubjához.",
+     "intro": "A Babestation a vezető UK felnőtt TV / cam hálózat — műsorszóró TV-csatornák és egy élő cam termék hibridje, amit a Performer Hubba bejelentkezett előadók táplálnak. A platform a Performer Hubból kínál egy standard <strong>external encoder</strong> útvonalat, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így a független UK előadók multi-kamera jelenetekkel, overlay-ekkel és beauty szűrőkkel adhatnak, túl a Babestation TV-stúdiós alap broadcasterén.",
+     "quick": "Adás a Babestationön SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Performer Hubban megnyitod <em>Broadcast Settings → External Encoder</em>, kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Performer Hubból.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a Babestation előadói fiókodba, nyisd meg a <strong>Performer Hub</strong>-ot és navigálj a <strong>Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a fiókodhoz kötött <strong>server URL</strong>-t és <strong>stream key</strong>-t — másold mindkettőt a SplitCam egyéni RTMP mezőibe. A Babestation UK előadói onboardingja ID-verifikációt is tartalmaz a UK életkor-ellenőrzési szabályozás szerint.",
+     "tips": [
+         ("UK-első közönség és időzítés", "A Babestation csúcsforgalma a UK esti / éjszakai sávra esik (GMT/BST). Ha más időzónában vagy, a késő esti UK órákban adás jelentősen jobban teljesít, mint a helyi főidőben ezen a hálózaton."),
+         ("Elvárt a TV-stúdiós polírozottság", "A Babestation márkája a TV-csatornáihoz kötődik — a nézők produktáltabb díszletet és világítást várnak, mint egy átlagos webkamerás streamtől. A SplitCam jelenetek (overlay-ek, márkázott szöveg, AI háttér) segítenek illeszkedni a platform polírozott esztétikájához."),
+         ("Független vs stúdiós előadók", "A Babestation UK stúdiókkal és független előadókkal egyaránt dolgozik. Az External Encoderen csatlakozó független broadcasterek ugyanazt a kifizetési modellt kapják, mint a stúdiós kamerák."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja a Babestation a külső enkódereket, mint a SplitCam?", "Igen — a Performer Hub tartalmaz egy External Encoder opciót a Broadcast Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak az előadói verifikáció befejezése után."),
+         ("Honnan kapom meg a Babestation stream key-emet?", "Performer Hub → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg — másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak a Babestationhöz?", "Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. A UK feltöltési sávszélesség általában erős, de először futtasd a SplitCam speed testjét."),
+         ("Ingyenes a SplitCam a Babestationhöz?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Babestation external encoder opciója ingyenes a Performer Hubban."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — illeszkedj a Babestation TV-stúdiós produkciós polírozottságához, hogy kitűnj."),
+         ("Szerezd meg a Babestation URL-t és stream key-t", "Jelentkezz be a Babestation előadói fiókodba, nyisd meg a <strong>Performer Hub</strong>-ot, navigálj a <strong>Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a <strong>server URL</strong>-t és az egyedi <strong>stream key</strong>-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet a Babestationnel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a Babestation server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 3 500–6 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Performer Hubból. Kb. 10 másodperc alatt eléri a streamed a Babestation UK közönségét."),
+     ],
+    },
+    {"slug": "adultwork", "name": "AdultWork",
+     "title": "Hogyan adj az AdultWorkön SplitCammel — Members Area external encoder",
+     "desc": "Adj az AdultWorkön ingyenes SplitCammel — Members Area external encoder, UK felnőtt-szolgáltatás piactér cam funkcióval, multi-kamera jelenetek. Nincs vízjel, nincs regisztráció.",
+     "kw": "adultwork adás, adultwork cam, adultwork obs, adultwork external encoder, adultwork rtmp, adultwork webcam, uk cam",
+     "h1html": 'Hogyan adsz az <span class="accent">AdultWork</span>ön SplitCammel',
+     "h1short": "Adás az AdultWorkön",
+     "card": "Külső enkóder beállítás az AdultWork UK Members Area cam funkciójához.",
+     "intro": "Az AdultWork a befutott UK felnőtt-szolgáltatás piactér — elsősorban escort foglalásokról, fotó / videó eladásokról és telefonos szolgáltatásokról ismert, mellette egy élő <strong>webkamera funkcióval</strong>. A platform a Members Areából kínál egy standard <strong>external encoder</strong> útvonalat, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így a független UK előadók élő cam bevételt adhatnak hozzá multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel.",
+     "quick": "Adás az AdultWorkön SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Members Areában megnyitod <em>Members → Broadcasting → External Encoder</em>, kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Members Areából.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be az AdultWork előadói fiókodba, nyisd meg a <strong>Members Area</strong>-t és navigálj a <strong>Members → Broadcasting → External Encoder</strong>-hez. Az oldal felfedi a fiókodhoz kötött <strong>server URL</strong>-t és <strong>stream key</strong>-t — másold mindkettőt a SplitCam egyéni RTMP mezőibe. Az AdultWork verifikáció kötelező az élő cam funkcióhoz, és lefedi a UK életkor-ellenőrzési megfelelést.",
+     "tips": [
+         ("Keresztértékesítés az AdultWork többi szolgáltatásából", "Az AdultWork erőssége a meglévő ügyfélköre — a nézők talán már foglalják a fotó / videó / telefonos szolgáltatásaidat. Az élő cam streameket arra használd, hogy keresztértékesíts azoknak az ügyfeleknek, akik a camedet még nem próbálták, ne pedig idegeneket hajszolj."),
+         ("A Members Area a belépési pont", "Ne a publikus oldalon keresd a broadcastert — minden, ami az előadó oldalához tartozik, a Members Areán belül van. Az adás beállítások, a kifizetések és a tartalomkezelés mind itt található."),
+         ("UK-központú, de nemzetközi kifizetések", "A forgalom nagy része UK/EU. A kifizetések nemzetközileg működnek standard banki átutalással / e-pénztárcával, a platformon a heti ütemezés a gyakori."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogatja az AdultWork a külső enkódereket, mint a SplitCam?", "Igen — a Members Area tartalmaz egy External Encoder opciót a Broadcasting alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak az előadói verifikáció után."),
+         ("Honnan kapom meg az AdultWork stream key-emet?", "Members Area → Members → Broadcasting → External Encoder. Mind a server URL, mind a stream key ott jelenik meg — másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak az AdultWorkhöz?", "Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. Először futtasd a SplitCam beépített speed testjét."),
+         ("Ingyenes a SplitCam az AdultWorkhöz?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Az AdultWork external encoder opciója ingyenes a Members Areában."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — az overlay-ekkel hirdesd az AdultWork tartalmaidat / telefonos szolgáltatásaidat, és keresztértékesíts adás közben."),
+         ("Szerezd meg az AdultWork URL-t és stream key-t", "Jelentkezz be az AdultWork előadói fiókodba, nyisd meg a <strong>Members Area</strong>-t, navigálj a <strong>Members → Broadcasting → External Encoder</strong>-hez. Az oldal felfedi a <strong>server URL</strong>-t és az egyedi <strong>stream key</strong>-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet az AdultWorkkel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be az AdultWork server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 3 500–6 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Members Areából. Kb. 10 másodperc alatt eléri a streamed az AdultWork közönségét."),
+     ],
+    },
 ]
