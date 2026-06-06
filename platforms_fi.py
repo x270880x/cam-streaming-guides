@@ -568,4 +568,70 @@ PLATFORMS_FI = [
          ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online LiveJasmin Model Centerissä. Noin 10 sekunnissa HD-feedisi saavuttaa LiveJasminin verkon. Seuraavat lähetykset ovat yhden klikkauksen — avaa SplitCam, Go Live, sitten online LiveJasminissa."),
      ],
     },
+    {"slug": "myfreecams", "name": "MyFreeCams",
+     "title": "Lähetys MyFreeCamsissa (MFC) SplitCamilla — Model Web Broadcasterin ohitus",
+     "desc": "Lähetys MyFreeCamsissa ilmaisella SplitCamilla — Model Adminin External Broadcaster, MFC:n token-talous, monikamera-näkymät ja overlayt. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "myfreecams lähetys, mfc external broadcaster, myfreecams obs, mfc rtmp, mfc stream key, model admin, mfc token",
+     "h1html": 'Miten lähetät <span class="accent">MyFreeCamsissa</span> SplitCamilla',
+     "h1short": "Lähetys MyFreeCams",
+     "card": "Ulkoisen broadcasterin asetus MFC:n token-pohjaiseen Model Adminiin.",
+     "intro": "MyFreeCams (MFC) on yksi alan vanhimmista cam-alustoista — puhdas token-talous, ei mallin hyväksyntäkierrosta ja uskollinen Premium-jäsenten kanta. Oletuksena toimiva Model Web Broadcaster on yhden kameran selaintyökalu, mutta Model Admin tarjoaa myös <strong>External Broadcaster</strong> -vaihtoehdon, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — avaten monikamera-näkymät, overlayt ja suotimet samaan token-striimiin.",
+     "quick": "Lähetys MyFreeCamsissa SplitCamilla: asenna SplitCam, rakenna näkymä, Model Adminissa avaa Broadcaster ja vaihda Web Broadcasterista External Broadcasteriin, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Vaihda External Broadcasteriin Model Adminissa.</li>"
+              "<li>Liitä URL ja stream key SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu MyFreeCamsiin, avaa <strong>Model Admin → Broadcaster</strong>, vaihda <strong>Web Broadcasterista</strong> <strong>External Broadcasteriin</strong>. Sivu paljastaa server URL:n (<strong>rtmp://publish.myfreecams.com…</strong>) ja malli-tiliisi sidotun stream keyn — kopioi molemmat SplitCamin custom RTMP -kenttiin. Avain on tilikohtainen; käsittele kuten salasanaa.",
+     "tips": [
+         ("Puhdas tipping- ja token-talous, ei tilauksia", "MFC pyörii tippeillä ja tokeneilla — ei kuukausitilauksia. Tulot kasvavat group- ja private-showeilla, true private -tiloilla ja tip-menuilla, eivät tilaajilla. Suunnittele näkymä laukaisemaan tip-tavoitteita: token-laskuri, goal-grafiikka, tip menu jonossa."),
+         ("Web Broadcaster vs External — valinta tehdään kerran", "Model Adminissa voi olla aktiivisena vain yksi tila: sisäänrakennettu Web Broadcaster tai External Broadcaster RTMP:llä. External käyttöön vaihtaminen poistaa selaimen esikatselun — kaikki näkymä- ja suodinasetukset hoidetaan SplitCamissa ja MFC ottaa vastaan valmiin striimin."),
+         ("MFC Alerts mfcalerts.com:in kautta — Browser-layer", "mfcalerts.com tarjoaa julkiset URLit token-alertteja, goaleja ja top-tippereitä varten. Lisää URL Browser-layerina SplitCamiin läpinäkyvällä taustalla — alertit ilmestyvät suoraan kuvan päälle ilman erillistä ikkunaa."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko MFC ulkoisia broadcastereita?", "Kyllä — Model Admin → Broadcaster -kohdassa. Vaihda Web Broadcasterista External Broadcasteriin, ja MFC antaa server URL:n ja stream keyn mille tahansa RTMP-enkooderille — SplitCam, OBS, vMix. Tämä on virallinen reitti, ei kiertotie."),
+         ("Mistä saan MFC stream keyni?", "Model Admin → Broadcaster → External Broadcaster. Sekä server URL (publish.myfreecams.com) että uniikki stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin. Avain on tilikohtainen; älä jaa ketään."),
+         ("Mikä bitrate MFC:lle?", "MFC ottaa vastaan jopa noin 6 000 Kbps. Tähtää 1920×1080, 30 fps, 3 500–6 000 Kbps ja 2 sekunnin keyframe-väli. Tämä antaa terävän kuvan Premium-katsojille ja jää alustan kattoa pienemmäksi."),
+         ("Onko SplitCam ilmainen MFC:n kanssa?", "Kyllä — SplitCam on ilmainen, ei vesileimaa, ei aikarajaa. Model Adminin External Broadcaster on standardi RTMP, joten ei tarvita lisälisenssejä eikä lisäosia."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Se on enkooderi, joka lähettää videosi MFC:lle."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet. MFC Alerteja varten lisää <strong>mfcalerts.com</strong>-URL Browser-layerina — token-laskuri, goal-grafiikka ja top-tipper-alertit ilmestyvät suoraan kuvaan."),
+         ("Vaihda External Broadcasteriin ja kopioi tiedot", "Avaa <strong>Model Admin → Broadcaster</strong> ja vaihda <strong>Web Broadcasterista</strong> <strong>External Broadcasteriin</strong>. Sivu paljastaa server URL:n (<strong>rtmp://publish.myfreecams.com…</strong>) ja stream keyn. Kopioi molemmat."),
+         ("Yhdistä SplitCam MFC:hen", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä MFC server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe. Aja sisäänrakennettu nopeustesti ensin."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong> — MFC:n External Broadcaster ottaa striimin vastaan automaattisesti ja vie sinut online. Seuraavat lähetykset ovat yhden klikkauksen päässä — avaa SplitCam, Go Live, ja olet eetterissä MFC:llä."),
+     ],
+    },
+    {"slug": "cherry-tv", "name": "Cherry.tv",
+     "title": "Lähetys Cherry.tv:ssä SplitCamilla — Web3-ystävällinen ulkoinen enkooderi",
+     "desc": "Lähetys Cherry.tv:ssä ilmaisella SplitCamilla — Streamer Dashboardin ulkoinen enkooderi, krypto-ystävällinen cam-alusta, monikamera-näkymät. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "cherry tv lähetys, cherry.tv obs, cherry tv ulkoinen enkooderi, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, web3 cam",
+     "h1html": 'Miten lähetät <span class="accent">Cherry.tv</span>:ssä SplitCamilla',
+     "h1short": "Lähetys Cherry.tv",
+     "card": "Ulkoisen enkooderin asetus Cherry.tv:n Streamer Dashboardiin.",
+     "intro": "Cherry.tv on uudempi, nopeasti kasvava cam-alusta Web3-kulmalla — krypto-ystävälliset maksut ja kevyempi sisäänpääsy kuin perinteisillä verkostoilla kuten LiveJasmin. Oletuksena toimiva broadcaster on selaimessa, mutta Streamer Dashboard tarjoaa myös standardin ulkoisen enkooderin reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat monikamera-näkymät, overlayt ja suotimet samaan striimiin.",
+     "quick": "Lähetys Cherry.tv:ssä SplitCamilla: asenna SplitCam, rakenna näkymä, Streamer Dashboardissa avaa <em>Broadcast Settings → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Hae URL ja stream key Streamer Dashboardista.</li>"
+              "<li>Liitä SplitCamiin.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu Cherry.tv:n streamer-tiliisi, avaa <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Server URL ja stream key on sidottu tiliin — kopioi molemmat SplitCamin custom RTMP -kenttiin. Uusilta tileiltä vaaditaan ensin perusverifiointi (Cherry.tv:n onboarding on kevyempi kuin perinteisillä verkoilla).",
+     "tips": [
+         ("Kevyempi sisäänpääsy, kasvava liikenne — hyvä early-mover -paikka", "Cherry.tv on nuorempi kuin LiveJasmin ja MFC, mutta kerää yleisöä nopeasti. Verifiointi on yksinkertaisempaa, listojen kärki ei vielä täynnä — nyt sisään tulemalla on helpompaa nousta esiin ja kerätä vakiokatsojia ennen kuin kilpailu kovenee."),
+         ("Kryptomaksut fiatin rinnalla", "Cherry.tv tarjoaa kryptomaksut tavallisten pankkimaksujen lisäksi — kätevää, jos olet alueella missä fiat-nosto on hankalaa tai haluat pienemmät maksuliikennekulut. Aseta haluamasi tapa maksuosioon ennen ensimmäistä isoa sessiota."),
+         ("Selainbroadcaster vs ulkoinen — mitä SplitCam tuo", "Cherry.tv:n selainbroadcaster on yksi kamera, ei overlayitä. SplitCamin External Encoder avaa monikamera-näkymät, kauneussuotimet, AI-taustat, alert-overlayt ja näkymänvaihdot — kaikki mikä nostaa kuvan keskitason mallin yläpuolelle alustalla."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko Cherry.tv ulkoisia enkoodereita?", "Kyllä — Streamer Dashboardissa on External Encoder -vaihtoehto Broadcast Settings -kohdassa. SplitCam, OBS, vMix ja muut RTMP-enkooderit yhdistyvät standardisti kun perusverifiointi on tehty."),
+         ("Mistä saan Cherry.tv stream keyni?", "Streamer Dashboardista: <strong>Broadcast Settings → External Encoder</strong>. Sekä server URL että uniikki stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin. Avain on tilikohtainen; käsittele kuten salasanaa."),
+         ("Mikä bitrate Cherry.tv:lle?", "Tähtää 3 500–6 000 Kbps, 1920×1080, 30 fps ja 2 sekunnin keyframe-väli. Tämä riittää terävään kuvaan kaikissa katsojan ikkunakokoluokissa eikä törmää ingestin kattoon."),
+         ("Onko SplitCam ilmainen Cherry.tv:lle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Streamer Dashboardin External Encoder on standardi RTMP, ei lisälisenssejä."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Se on enkooderi, joka lähettää videosi Cherry.tv:lle."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera 1080p-tilassa. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-taustat. Cherry.tv:n yleisö on nuorempaa ja teknisesti perillä — moderni näkymä näkymänvaihdoilla ja overlayilla erottaa sinut heti selainstriimaajista."),
+         ("Hae Cherry.tv URL ja stream key", "Kirjaudu Cherry.tv:n streamer-tilillesi, avaa <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam Cherry.tv:hen", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä Cherry.tv server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 3 500–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Cherry.tv:ssä. Noin 10 sekunnissa striimi saavuttaa Cherry.tv:n verkon. Seuraavat lähetykset ovat yhden klikkauksen — avaa SplitCam, Go Live, sitten online Cherry.tv:ssä."),
+     ],
+    },
 ]

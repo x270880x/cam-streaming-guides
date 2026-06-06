@@ -568,4 +568,70 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a LiveJasmin Model Centerben. ~10 másodperc alatt a HD feeded eléri a LiveJasmin hálózatát. A következő adások egy kattintással mennek — megnyitod a SplitCamet, Go Live, aztán online a LiveJasminon."),
      ],
     },
+    {"slug": "myfreecams", "name": "MyFreeCams",
+     "title": "Adás a MyFreeCamson (MFC) SplitCammel — Model Web Broadcaster bypass",
+     "desc": "Adj a MyFreeCamson ingyenes SplitCammel — Model Admin External Broadcaster, MFC tokenes gazdaság, multi-kamera jelenetek, overlay-ek. Nincs vízjel, nincs regisztráció.",
+     "kw": "myfreecams adás, mfc external broadcaster, myfreecams obs, mfc rtmp, mfc stream key, model admin, mfc token",
+     "h1html": 'Hogyan adsz a <span class="accent">MyFreeCamson</span> SplitCammel',
+     "h1short": "Adás MyFreeCams",
+     "card": "External broadcaster beállítás az MFC tokenes Model Adminjához.",
+     "intro": "A MyFreeCams (MFC) az egyik legrégebbi cam platform — tiszta tokenes gazdaság, fojtogató modell-jóváhagyási akadálypálya nélkül és lojális Premium member bázissal. Az alapértelmezett Model Web Broadcaster egy egykamerás böngészős eszköz, de a <strong>Model Admin</strong> expose-olja az <strong>External Broadcaster</strong> opciót is, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — kioldva multi-kamera jeleneteket, overlay-eket és szűrőket ugyanazon a tokenes streamen.",
+     "quick": "Adás a MyFreeCamson SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Model Admin → Broadcasterben átváltasz Web Broadcasterről External Broadcasterre, kimásolod a server URL-t és a stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Válts a Model Adminban External Broadcasterre.</li><li>Illeszd be az URL+key-t a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a MyFreeCamsra, nyisd meg <strong>Model Admin → Broadcaster</strong>, és válts <strong>Web Broadcaster</strong>-ről <strong>External Broadcaster</strong>-re. Az oldal felfedi a <strong>server URL</strong>-t (rtmp://publish.myfreecams.com…) és a fiókodhoz kötött <strong>stream key</strong>-t — másold be mindkettőt a SplitCam egyéni RTMP mezőibe.",
+     "tips": [
+         ("MFC tokenek, nem előfizetések", "Az MFC tiszta tipping/tokenes gazdaság — a Premium memberek bemehetnek privátba, de a mindennapi kenyered a free chat-es tipek. Optimalizáld a jelenetet látható tip menüre és élő reakciókra."),
+         ("Web vs External Broadcaster", "Az alapértelmezett single-source, csak böngészős webkamera; az External Broadcaster kioldja a multi-kamera jeleneteket, overlay-eket és beauty szűrőket a SplitCamből ugyanazon a streamen."),
+         ("MFC Alerts integráció", "Add hozzá az mfcalerts.com alert URL-jét Browser rétegként a kamera fölé — animált tip alertek nyomják a nézőket új tokenek felé."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogat az MFC külső broadcastereket?", "Igen — a Model Adminban van External Broadcaster opció, standard RTMP, az OBS/SplitCam/vMix mind működik. Az alapértelmezett Web Broadcaster csak a gyors böngészős verzió."),
+         ("Honnan kapom meg a stream key-emet az MFC-hez?", "Model Admin → Broadcaster → External Broadcaster mutatja a server URL-t (rtmp://publish.myfreecams.com…) és az egyedi stream key-t. Másold be mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak a MyFreeCamshoz?", "Akár ~6 000 Kbps-ig 2 másodperces keyframe-mel; tolj 1920×1080-at 30 fps-en, 3 500–6 000 Kbps mellett. Az MFC nem ír elő szigorú HD-t, de a Premium memberek azonnal észreveszik a különbséget."),
+         ("Ingyenes a SplitCam az MFC-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Az MFC sem számít fel broadcaster-díjat az External Broadcaster használatáért — csak RTMP-n keresztül csatlakozol."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Ez az enkóder, ami a videódat a MyFreeCamsra küldi."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret. Add hozzá az mfcalerts.com URL-jét Browser rétegként, hogy adás közben animált tip alertek menjenek."),
+         ("Válts External Broadcasterre", "Jelentkezz be a Model Admin → <strong>Broadcaster</strong>-be, és válts <strong>Web Broadcaster</strong>-ről <strong>External Broadcaster</strong>-re. Az oldal mutat egy server URL-t (rtmp://publish.myfreecams.com…) és egy egyedi stream key-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet az MFC-vel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be az MFC server URL-t és stream key-t az egyéni RTMP mezőkbe. Bitráta 3 500–6 000 Kbps 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben — pár másodperc alatt megjelensz a MyFreeCams listán. A következő adások egy kattintás: megnyitod a SplitCamet, Go Live."),
+     ],
+    },
+    {"slug": "cherry-tv", "name": "Cherry.tv",
+     "title": "Adás a Cherry.tv-n SplitCammel — Web3-barát külső enkóder",
+     "desc": "Adj a Cherry.tv-n ingyenes SplitCammel — Streamer Dashboard external encoder, kripto-barát cam platform, multi-kamera jelenetek. Nincs vízjel, nincs regisztráció.",
+     "kw": "cherry tv adás, cherry.tv obs, cherry tv external encoder, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, web3 cam",
+     "h1html": 'Hogyan adsz a <span class="accent">Cherry.tv-n</span> SplitCammel',
+     "h1short": "Adás Cherry.tv",
+     "card": "Külső enkóder beállítás a Cherry.tv Streamer Dashboardjához.",
+     "intro": "A Cherry.tv egy újabb, gyorsan növekvő cam platform Web3 felhanggal — kripto-barát kifizetések és alacsonyabb belépési küszöb, mint az olyan régi hálózatoknál, mint a LiveJasmin. Az alapértelmezett broadcaster böngésző-alapú, de a <strong>Streamer Dashboard</strong> expose-olja a standard <strong>External Encoder</strong> útvonalat, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik.",
+     "quick": "Adás a Cherry.tv-n SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Streamer Dashboard → Broadcast Settings → External Encoder alatt kimásolod az URL+key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Szerezd meg az URL-t és stream key-t a Streamer Dashboardból.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a Cherry.tv streamer fiókodba, nyisd meg <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Megjelenik egy <strong>server URL</strong> és egy <strong>stream key</strong> — másold mindkettőt. Az új fiókok először egy alap verifikáción mennek át (gyors).",
+     "tips": [
+         ("Könnyebb belépés, növekvő forgalom", "Nincs 72 órás Docler-stílusú review — a Cherry.tv sokkal gyorsabban jóváhagy, és jó early-mover hely fiatal, platform-okos közönséggel."),
+         ("Kripto kifizetések elérhetők", "A Cherry.tv kripto fizetéseket kínál a standard fiat mellett — hasznos, ha el akarod kerülni a banki súrlódást vagy diszkrétebben szeretnéd felvenni a bevételt."),
+         ("A böngésző broadcaster single-source", "Az alapértelmezett böngésző broadcaster egykamerás; a SplitCam az External Encoderen keresztül kioldja a multi-kamerát, overlay-eket és beauty szűrőket ugyanazon a streamen."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Támogat a Cherry.tv külső enkódereket?", "Igen — a Streamer Dashboard tartalmaz External Encoder opciót, standard RTMP. Az OBS, SplitCam és vMix azonnal működnek a fiók verifikációja után."),
+         ("Honnan kapom meg a stream key-emet a Cherry.tv-hez?", "Streamer Dashboard → Broadcast Settings → External Encoder. A server URL és az egyedi stream key is ott jelenik meg — másold mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Milyen bitrátát használjak a Cherry.tv-hez?", "3 500–6 000 Kbps 1920×1080-on, 30 fps, 2 másodperces keyframe. A Cherry.tv közönsége fiatal és jó minőséghez szokott — ne spórolj a felbontáson."),
+         ("Ingyenes a SplitCam a Cherry.tv-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Cherry.tv sem számít fel külön díjat külső enkóder használatáért."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Ez az enkóder, ami a videódat a Cherry.tv-re küldi."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — a Cherry.tv közönsége fiatal és platform-okos, a jelenetnek modernnek kell kinéznie."),
+         ("Szerezd meg az URL-t és stream key-t", "A streamer fiókodban nyisd meg <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Másold a server URL-t és az egyedi stream key-t."),
+         ("Kösd össze a SplitCamet a Cherry.tv-vel", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a Cherry.tv server URL-t és stream key-t az egyéni RTMP mezőkbe. Bitráta 3 500–6 000 Kbps 1920×1080-on, 30 fps, keyframe 2 másodperc."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Streamer Dashboardból. Pár másodperc alatt megjelensz a Cherry.tv listákon. A következő adások egy kattintással mennek."),
+     ],
+    },
 ]

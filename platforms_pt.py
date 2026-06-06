@@ -614,4 +614,84 @@ PLATFORMS_PT = [
              "Aperta <strong>Go Live</strong> no SplitCam e depois fica online no Model Center do LiveJasmin. Em uns 10 segundos seu feed HD chega na rede do LiveJasmin. As próximas transmissões são um clique — abre o SplitCam, Go Live, depois fica online no LiveJasmin."),
         ],
     },
+    {
+        "slug": "myfreecams", "name": "MyFreeCams",
+        "title": "Como transmitir no MyFreeCams (MFC) com SplitCam — bypass do Model Web Broadcaster",
+        "desc": "Transmitir no MyFreeCams com SplitCam grátis — opção de broadcaster externo do Model Admin, economia de tokens MFC, cenas multicâmera, overlays. Sem marca d'água, sem cadastro.",
+        "kw": "transmitir myfreecams, mfc broadcaster externo, myfreecams obs, mfc rtmp, mfc stream key, model admin, token mfc",
+        "h1html": 'Como transmitir no <span class="accent">MyFreeCams</span> com SplitCam',
+        "h1short": "Transmitir no MyFreeCams",
+        "card": "Setup de broadcaster externo pro Model Admin baseado em tokens do MFC.",
+        "intro": "O MyFreeCams (MFC) é uma das plataformas cam mais antigas — economia 100 % token, sem maratona de aprovação de modelo, e uma base fiel de membros Premium. O <em>Model Web Broadcaster</em> padrão é uma ferramenta de navegador de câmera única, mas o Model Admin também expõe uma opção <strong>External Broadcaster</strong> à qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta — destravando cenas multicâmera, overlays e filtros no mesmo stream monetizado por tokens.",
+        "quick": "Pra transmitir no MyFreeCams com SplitCam: instala o SplitCam, monta sua cena, em <em>Model Admin → Broadcaster</em> troca o Web Broadcaster pelo External Broadcaster, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key no Model Admin.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra no MyFreeCams, abre <strong>Model Admin → Broadcaster</strong> e troca de <em>Web Broadcaster</em> pro <strong>External Broadcaster</strong>. A página mostra uma <strong>URL do servidor</strong> (rtmp://publish.myfreecams.com…) e uma <strong>stream key</strong> vinculadas à sua conta de modelo — copia as duas pros campos de RTMP personalizado do SplitCam. A chave é vinculada à conta; trata como senha e reseta se vazar.",
+        "tips": [
+            ("Token MFC, não assinatura", "MFC é economia pura de gorjetas/tokens — os membros Premium podem entrar em privado, mas o grosso da grana sai das gorjetas do free chat. Pensa uma cena que renda vestida e casual, não só em show pelado."),
+            ("Web Broadcaster vs External — escolhe uma vez", "O Web Broadcaster padrão é câmera única, fonte única. O External Broadcaster libera multi-cena, overlays e filtros de beleza via SplitCam/OBS. Troca em Model Admin → Broadcaster antes de entrar no ar."),
+            ("Integração com MFC Alerts", "Os alertas animados de gorjeta na tela saem do mfcalerts.com — adiciona a URL do alerta como camada Browser no SplitCam, em cima da câmera. Vê nosso guia do MFC Alerts pro setup completo do overlay."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O MyFreeCams suporta oficialmente broadcasters externos tipo o SplitCam?", "Suporta — o Model Admin tem uma opção External Broadcaster que expõe URL de servidor RTMP padrão e stream key. OBS, SplitCam, vMix e os outros encoders RTMP funcionam; o MFC suporta explicitamente a opção na documentação pra modelos."),
+            ("Onde pego minha stream key do MFC?", "Model Admin → Broadcaster → troca pro External Broadcaster. A URL do servidor (rtmp://publish.myfreecams.com…) e a stream key aparecem ali. Copia as duas pros campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no MyFreeCams?", "MFC aceita até ~6.000 Kbps com intervalo de keyframe de 2 segundos. Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps — seu upload é o limite real. Roda primeiro o speed test do SplitCam."),
+            ("O SplitCam é grátis pra usar com o MyFreeCams?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A própria opção External Broadcaster é grátis dentro do Model Admin. Custo total de broadcaster: zero."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. É o encoder que manda seu vídeo pro MyFreeCams."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA — tudo aplicado ao vivo antes do stream sair do seu PC. Considera adicionar a URL do mfcalerts.com como camada Browser pros alertas animados de gorjeta."),
+            ("Troca pro External Broadcaster no Model Admin",
+             "Entra no MyFreeCams. Abre <strong>Model Admin → Broadcaster</strong>. Troca de <em>Web Broadcaster</em> pro <strong>External Broadcaster</strong>. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> única. Copia as duas."),
+            ("Conecta o SplitCam ao MyFreeCams",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do MFC e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos. Roda primeiro o speed test embutido."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam. Em uns 10 segundos seu stream chega no MyFreeCams. As próximas transmissões são um clique — abre o SplitCam, Go Live."),
+        ],
+    },
+    {
+        "slug": "cherry-tv", "name": "Cherry.tv",
+        "title": "Como transmitir no Cherry.tv com SplitCam — encoder externo Web3-friendly",
+        "desc": "Transmitir no Cherry.tv com SplitCam grátis — encoder externo do Streamer Dashboard, plataforma cam cripto-friendly, cenas multicâmera. Sem marca d'água, sem cadastro.",
+        "kw": "transmitir cherry tv, cherry.tv obs, cherry tv encoder externo, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, cam web3",
+        "h1html": 'Como transmitir no <span class="accent">Cherry.tv</span> com SplitCam',
+        "h1short": "Transmitir no Cherry.tv",
+        "card": "Setup de encoder externo pro Streamer Dashboard do Cherry.tv.",
+        "intro": "O Cherry.tv é uma plataforma cam mais nova, em rápido crescimento, com pegada Web3 — pagamentos cripto-friendly e barreira de entrada menor que as redes legacy tipo LiveJasmin. O broadcaster padrão é por navegador, mas o <strong>Streamer Dashboard</strong> também expõe um caminho padrão <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta — deixando você transmitir com cenas multicâmera, overlays e filtros.",
+        "quick": "Pra transmitir no Cherry.tv com SplitCam: instala o SplitCam, monta sua cena, no Streamer Dashboard abre <em>Broadcast Settings → External Encoder</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key no Streamer Dashboard.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de streamer do Cherry.tv, abre o <strong>Streamer Dashboard</strong> e vai em <strong>Broadcast Settings → External Encoder</strong>. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. Contas novas de streamer precisam passar por uma verificação básica (geralmente rápida — o Cherry.tv tem onboarding mais leve que as redes cam legacy) antes da opção de encoder externo ficar totalmente ativa.",
+        "tips": [
+            ("Entrada mais leve, tráfego subindo", "O onboarding do Cherry.tv é mais rápido que o das plataformas legacy (sem revisão Docler de 72 horas). Junto com o tráfego em crescimento, é um bom ponto early-mover pra montar uma base de seguidores antes da concorrência apertar."),
+            ("Saque em cripto disponível", "O Cherry.tv suporta saque em cripto além do fiat padrão — útil se você tá numa região onde os pagamentos das redes cam tradicionais são lentos ou restritos."),
+            ("Browser broadcaster vs externo", "O broadcaster por navegador é prático mas é fonte única. O SplitCam via External Encoder libera cenas multicâmera, overlays, filtros de beleza e fundo IA que a ferramenta de navegador não faz."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O Cherry.tv suporta oficialmente encoders externos tipo o SplitCam?", "Suporta — o Streamer Dashboard inclui External Encoder dentro de Broadcast Settings. A plataforma fornece uma URL de servidor RTMP padrão e uma stream key; OBS, SplitCam e os outros encoders RTMP conectam normal."),
+            ("Onde pego minha stream key do Cherry.tv?", "Streamer Dashboard → Broadcast Settings → External Encoder. A URL do servidor e a stream key aparecem ali — copia as duas pros campos de RTMP personalizado do SplitCam. A chave é vinculada à conta; trata como senha."),
+            ("Que bitrate usar no Cherry.tv?", "O Cherry.tv aceita as configurações cam-quality padrão — manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test embutido do SplitCam."),
+            ("O SplitCam é grátis pra usar com o Cherry.tv?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do Cherry.tv é grátis pra ativar. Custo total de broadcaster: zero."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. É o encoder que manda seu vídeo pro Cherry.tv."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA — tudo aplicado ao vivo. O público do Cherry.tv é mais jovem e mais antenado em plataforma, então uma cena caprichada ajuda a se destacar."),
+            ("Pega a URL e a stream key do Cherry.tv",
+             "Entra na sua conta de streamer do Cherry.tv, abre o <strong>Streamer Dashboard</strong> e vai em <strong>Broadcast Settings → External Encoder</strong>. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> única. Copia as duas."),
+            ("Conecta o SplitCam ao Cherry.tv",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do Cherry.tv e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos. Roda primeiro o speed test embutido."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo Streamer Dashboard no Cherry.tv. Em uns 10 segundos seu stream chega no Cherry.tv. As próximas transmissões são um clique — abre o SplitCam, Go Live, depois fica online no Cherry.tv."),
+        ],
+    },
 ]

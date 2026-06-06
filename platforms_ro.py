@@ -568,4 +568,70 @@ PLATFORMS_RO = [
          ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online în Model Center LiveJasmin. În ~10 secunde feed-ul tău HD ajunge în rețeaua LiveJasmin. Transmisiile următoare sunt un singur clic — deschizi SplitCam, Go Live, apoi online pe LiveJasmin."),
      ],
     },
+    {"slug": "myfreecams", "name": "MyFreeCams",
+     "title": "Transmisie pe MyFreeCams (MFC) cu SplitCam — bypass Model Web Broadcaster",
+     "desc": "Transmite pe MyFreeCams cu SplitCam gratuit — Model Admin External Broadcaster, economie pe tokens MFC, scene multi-cameră, overlay-uri. Fără filigran, fără înregistrare.",
+     "kw": "transmisie myfreecams, mfc external broadcaster, myfreecams obs, mfc rtmp, mfc stream key, model admin, mfc token",
+     "h1html": 'Cum transmiți pe <span class="accent">MyFreeCams</span> cu SplitCam',
+     "h1short": "Transmisie MyFreeCams",
+     "card": "Setup cu external broadcaster pentru Model Admin-ul pe tokens al MFC.",
+     "intro": "MyFreeCams (MFC) e una dintre cele mai vechi platforme cam — economie pură pe tokens, fără filtru sufocant de aprobare a modelelor și o bază loială de Premium members. Model Web Broadcaster-ul implicit e un tool de browser cu o singură cameră, dar <strong>Model Admin</strong> expune și o opțiune <strong>External Broadcaster</strong> la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit — deblocând scene multi-cameră, overlay-uri și filtre pe același stream pe tokens.",
+     "quick": "Transmisie pe MyFreeCams cu SplitCam: instalezi SplitCam, construiești scena, în Model Admin → Broadcaster comuți de la Web Broadcaster la External Broadcaster, copiezi URL-ul serverului și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Comută în Model Admin pe External Broadcaster.</li><li>Lipește URL+key în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te pe MyFreeCams, deschide <strong>Model Admin → Broadcaster</strong> și comută de la <strong>Web Broadcaster</strong> la <strong>External Broadcaster</strong>. Pagina dezvăluie un <strong>URL server</strong> (rtmp://publish.myfreecams.com…) și o <strong>stream key</strong> legate de contul tău de model — copiază ambele în câmpurile RTMP custom ale SplitCam.",
+     "tips": [
+         ("Tokens MFC, nu abonamente", "MFC e economie pură de tipping/tokens — Premium members pot intra în private, dar pâinea ta de zi cu zi rămân bacșișurile în free chat. Optimizează scena pentru tip menu vizibil și reacții live."),
+         ("Web vs External Broadcaster", "Implicitul e single-source, doar webcam din browser; External Broadcaster deblochează scene multi-cameră, overlay-uri și beauty filters din SplitCam pe același stream."),
+         ("Integrare MFC Alerts", "Adaugă URL-ul de alerte de la mfcalerts.com ca strat Browser deasupra camerei — primești alerte animate de tips care îi împing pe viewers spre tokens noi."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă MFC broadcasteri externi?", "Da — Model Admin are opțiunea External Broadcaster, RTMP standard, OBS/SplitCam/vMix funcționează cu toate. Web Broadcaster-ul implicit e doar varianta rapidă din browser."),
+         ("Unde îmi iau stream key-ul pentru MFC?", "Model Admin → Broadcaster → External Broadcaster afișează URL-ul serverului (rtmp://publish.myfreecams.com…) și stream key-ul tău unic. Copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru MyFreeCams?", "Până la ~6.000 Kbps cu keyframe de 2 secunde; trage 1920×1080 la 30 fps, 3.500–6.000 Kbps. MFC nu impune HD strict, dar Premium members văd diferența imediat."),
+         ("SplitCam e gratuit pentru MFC?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Nu există taxă de broadcaster din partea MFC pentru folosirea External Broadcaster — doar te conectezi prin RTMP."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. E encoderul care trimite video către MyFreeCams."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI. Adaugă URL-ul de la mfcalerts.com ca strat Browser pentru alerte animate de tips în timp ce streamezi."),
+         ("Comută pe External Broadcaster", "Loghează-te în Model Admin → <strong>Broadcaster</strong> și comută de la <strong>Web Broadcaster</strong> la <strong>External Broadcaster</strong>. Pagina afișează un URL server (rtmp://publish.myfreecams.com…) și o stream key unică. Copiază ambele."),
+         ("Conectează SplitCam la MFC", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului MFC și stream key-ul în câmpurile RTMP custom. Setează bitrate-ul la 3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam — în câteva secunde apari în lista MyFreeCams. Transmisiile următoare sunt un singur clic: deschizi SplitCam, Go Live."),
+     ],
+    },
+    {"slug": "cherry-tv", "name": "Cherry.tv",
+     "title": "Transmisie pe Cherry.tv cu SplitCam — encoder extern prietenos cu Web3",
+     "desc": "Transmite pe Cherry.tv cu SplitCam gratuit — Streamer Dashboard external encoder, platformă cam prietenoasă cu cripto, scene multi-cameră. Fără filigran, fără înregistrare.",
+     "kw": "transmisie cherry tv, cherry.tv obs, cherry tv external encoder, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, web3 cam",
+     "h1html": 'Cum transmiți pe <span class="accent">Cherry.tv</span> cu SplitCam',
+     "h1short": "Transmisie Cherry.tv",
+     "card": "Setup cu encoder extern pentru Streamer Dashboard-ul Cherry.tv.",
+     "intro": "Cherry.tv e o platformă cam mai nouă, în creștere rapidă, cu un unghi Web3 — payout-uri prietenoase cu cripto și o barieră de intrare mai joasă decât rețelele vechi precum LiveJasmin. Broadcasterul implicit e bazat pe browser, dar <strong>Streamer Dashboard</strong> expune calea standard de <strong>External Encoder</strong> la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit.",
+     "quick": "Transmisie pe Cherry.tv cu SplitCam: instalezi SplitCam, construiești scena, în Streamer Dashboard → Broadcast Settings → External Encoder copiezi URL-ul și stream key-ul, le lipești în SplitCam, Go Live."
+              "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+              "<li>Obține URL și stream key din Streamer Dashboard.</li><li>Lipește în SplitCam.</li>"
+              "<li>Apasă Go Live.</li></ol>",
+     "key_how": "Loghează-te în contul tău de streamer Cherry.tv, deschide <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Apar un <strong>URL server</strong> și o <strong>stream key</strong> — copiază ambele. Conturile noi trec mai întâi printr-o verificare de bază (rapidă).",
+     "tips": [
+         ("Intrare mai ușoară, trafic în creștere", "Fără review de 72 de ore în stil Docler — Cherry.tv aprobă mult mai rapid și e un spot bun de early mover, cu audiență tânără și platform-savvy."),
+         ("Payout-uri în cripto disponibile", "Cherry.tv oferă plăți în cripto alături de fiat standard — util dacă vrei să eviți frecușul bancar sau să încasezi mai discret."),
+         ("Browser broadcaster e single-source", "Broadcasterul implicit din browser e o singură cameră; SplitCam prin External Encoder deblochează multi-cameră, overlay-uri și beauty filters pe același stream."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Suportă Cherry.tv encodere externe?", "Da — Streamer Dashboard include opțiunea External Encoder, RTMP standard. OBS, SplitCam și vMix funcționează imediat după verificarea contului."),
+         ("Unde îmi iau stream key-ul pentru Cherry.tv?", "Streamer Dashboard → Broadcast Settings → External Encoder. Atât URL-ul serverului, cât și stream key-ul unic apar acolo — copiază ambele în câmpurile RTMP custom ale SplitCam."),
+         ("Ce bitrate folosesc pentru Cherry.tv?", "3.500–6.000 Kbps la 1920×1080, 30 fps, cu keyframe la 2 secunde. Audiența Cherry.tv e tânără și obișnuită cu calitate bună — nu trișa la rezoluție."),
+         ("SplitCam e gratuit pentru Cherry.tv?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Cherry.tv nu taxează separat folosirea unui encoder extern."),
+     ],
+     "steps": [
+         ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. E encoderul care trimite video către Cherry.tv."),
+         ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — audiența Cherry.tv e tânără și platform-savvy, scena trebuie să arate modern."),
+         ("Obține URL și stream key", "În contul de streamer deschide <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Copiază URL-ul serverului și stream key-ul unic."),
+         ("Conectează SplitCam la Cherry.tv", "În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului Cherry.tv și stream key-ul în câmpurile RTMP custom. Bitrate 3.500–6.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+         ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi du-te online din Streamer Dashboard. În câteva secunde apari în listele Cherry.tv. Transmisiile următoare sunt un singur clic."),
+     ],
+    },
 ]

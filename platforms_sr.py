@@ -568,4 +568,70 @@ PLATFORMS_SR = [
          ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим иди online у LiveJasmin Model Center-у. У року од ~10 секунди твој HD feed стиже до LiveJasmin-ове мреже. Наредни преноси су један клик — отвори SplitCam, Go Live, затим иди online на LiveJasmin-у."),
      ],
     },
+    {"slug": "myfreecams", "name": "MyFreeCams",
+     "title": "Пренос на MyFreeCams (MFC) са SplitCam-ом — заобилажење Model Web Broadcaster-а",
+     "desc": "Пренос на MyFreeCams са бесплатним SplitCam-ом — External Broadcaster у Model Admin-у, MFC токен економија, мулти-камера сцене и преклапања. Без воденог жига, без регистрације.",
+     "kw": "myfreecams пренос, mfc external broadcaster, myfreecams obs, mfc rtmp, mfc stream key, model admin, mfc token",
+     "h1html": 'Како преносиш на <span class="accent">MyFreeCams</span>-у са SplitCam-ом',
+     "h1short": "Пренос MyFreeCams",
+     "card": "Подешавање спољног broadcaster-а за MFC-ов токен Model Admin.",
+     "intro": "MyFreeCams (MFC) је једна од најстаријих cam платформи — чиста токен економија, без маратонског одобравања модела и са оданом Premium базом. Стандардни Model Web Broadcaster је прегледачки алат са једном камером, али Model Admin такође нуди опцију <strong>External Broadcaster</strong> на коју се бесплатни <strong style='color:var(--text)'>SplitCam</strong> повезује — откључавајући мулти-камера сцене, преклапања и филтере на истом токен стриму.",
+     "quick": "Пренос на MyFreeCams са SplitCam-ом: инсталирај SplitCam, изгради сцену, у Model Admin-у отвори Broadcaster и пребаци са Web Broadcaster-а на External Broadcaster, копирај server URL и stream key, налепи у SplitCam, Go Live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Пребаци на External Broadcaster у Model Admin-у.</li>"
+              "<li>Налепи URL и stream key у SplitCam.</li><li>Притисни Go Live.</li></ol>",
+     "key_how": "Пријави се на MyFreeCams, отвори <strong>Model Admin → Broadcaster</strong>, пребаци са <strong>Web Broadcaster-а</strong> на <strong>External Broadcaster</strong>. Страница открива server URL (<strong>rtmp://publish.myfreecams.com…</strong>) и stream key везане за твој модел налог — копирај обоје у SplitCam-ова custom RTMP поља. Кључ је везан за налог; третирај га као лозинку.",
+     "tips": [
+         ("Чиста tipping и токен економија, без претплата", "MFC се врти на напојницама и токенима — без месечних претплата. Зарада расте кроз group show-ове, private и true private те tip меније, а не кроз претплатнике. Планирај сцену тако да покреће tip циљеве: бројач токена, goal графику, tip menu у реду."),
+         ("Web Broadcaster vs External — бираш једном", "Model Admin дозвољава да буде активан само један режим: уграђени Web Broadcaster или External Broadcaster преко RTMP-а. Када укључиш External, губиш прегледачки preview — сва подешавања сцене и филтера иду кроз SplitCam, а MFC прима готов стрим."),
+         ("MFC Alerts преко mfcalerts.com — Browser layer", "Сервис mfcalerts.com даје јавне URL-ове за алерте токена, goal-ове и top tipper-е. Додај такав URL као Browser layer у SplitCam са провидном позадином — алерти се појављују директно преко кадра без засебног прозора."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Подржава ли MFC спољне broadcaster-е?", "Да — кроз Model Admin → Broadcaster. Пребаци са Web Broadcaster-а на External Broadcaster, и MFC ће ти дати server URL и stream key за било који RTMP енкодер — SplitCam, OBS, vMix. То је званичан пут, не заобилажење."),
+         ("Где добијам свој MFC stream key?", "Model Admin → Broadcaster → External Broadcaster. И server URL (publish.myfreecams.com) и јединствени stream key појављују се тамо — копирај обоје у SplitCam-ова custom RTMP поља. Кључ је везан за налог; ником га не показуј."),
+         ("Који битрејт користити за MFC?", "MFC прихвата до ~6000 Kbps. Циљај 1920×1080 на 30 fps, 3500–6000 Kbps са размаком keyframe-а од 2 секунде. То даје оштру слику за Premium гледаоце и не удара у лимит платформе."),
+         ("Да ли је SplitCam бесплатан за MFC?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења. External Broadcaster у Model Admin-у је стандардни RTMP, па нису потребне додатне лиценце или додаци."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига. То је енкодер који шаље твој видео MFC-у."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру. Наслажи преклапања, текст, другу камеру или мобилни, beauty филтере. За MFC Alerts додај URL са <strong>mfcalerts.com</strong> као Browser layer — бројач токена, goal графика и алерти за top tipper-е појавиће се директно у кадру."),
+         ("Пребаци на External Broadcaster и преузми податке", "У <strong>Model Admin → Broadcaster</strong> пребаци са <strong>Web Broadcaster-а</strong> на <strong>External Broadcaster</strong>. Страница открива server URL (<strong>rtmp://publish.myfreecams.com…</strong>) и stream key. Копирај обоје."),
+         ("Повежи SplitCam са MFC-ом", "У SplitCam-у отвори <strong>Stream Settings</strong>, налепи MFC server URL и stream key у custom RTMP поља. Постави битрејт на 3500–6000 Kbps на 1920×1080, 30 fps, са 2-секундним keyframe-ом. Покрени уграђени тест брзине прво."),
+         ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у — на страни MFC-а External Broadcaster аутоматски преузима стрим и пушта те online. Наредни преноси су један клик — отвори SplitCam, Go Live, и већ си у етру на MFC-у."),
+     ],
+    },
+    {"slug": "cherry-tv", "name": "Cherry.tv",
+     "title": "Пренос на Cherry.tv са SplitCam-ом — Web3-friendly спољни енкодер",
+     "desc": "Пренос на Cherry.tv са бесплатним SplitCam-ом — спољни енкодер у Streamer Dashboard-у, crypto-friendly cam платформа, мулти-камера сцене. Без воденог жига, без регистрације.",
+     "kw": "cherry tv пренос, cherry.tv obs, cherry tv спољни енкодер, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, web3 cam",
+     "h1html": 'Како преносиш на <span class="accent">Cherry.tv</span> са SplitCam-ом',
+     "h1short": "Пренос Cherry.tv",
+     "card": "Подешавање спољног енкодера за Cherry.tv Streamer Dashboard.",
+     "intro": "Cherry.tv је новија, брзо растућа cam платформа са Web3 нагибом — crypto-friendly исплате и нижа улазна препрека него код legacy мрежа попут LiveJasmin-а. Стандардни broadcaster је прегледачки, али Streamer Dashboard такође открива стандардну руту спољног енкодера на коју се бесплатни <strong style='color:var(--text)'>SplitCam</strong> повезује — омогућавајући стримовање са мулти-камера сценама, преклапањима и филтерима.",
+     "quick": "Пренос на Cherry.tv са SplitCam-ом: инсталирај SplitCam, изгради сцену, у Streamer Dashboard-у отвори <em>Broadcast Settings → External Encoder</em>, копирај server URL и stream key, налепи у SplitCam, Go Live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Узми URL и stream key из Streamer Dashboard-а.</li>"
+              "<li>Налепи у SplitCam.</li><li>Притисни Go Live.</li></ol>",
+     "key_how": "Пријави се на свој Cherry.tv streamer налог, отвори <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Server URL и stream key везани су за налог — копирај обоје у SplitCam-ова custom RTMP поља. Нови налози прво захтевају основну верификацију (Cherry.tv има лакши онбординг од legacy мрежа).",
+     "tips": [
+         ("Нижа улазна препрека и растући саобраћај — добар early-mover спот", "Cherry.tv је млађа од LiveJasmin-а и MFC-а, али брзо скупља публику. Верификација је једноставнија, врх листа још није претрпан — улазећи сада лакше се пењеш у рангу и скупљаш сталне гледаоце пре него конкуренција ојача."),
+         ("Crypto исплате уз fiat", "Cherry.tv нуди crypto исплате уз уобичајене банкарске — згодно ако си у региону где је fiat исплата компликована или желиш минималне провизије. Постави жељени начин у платном делу пре прве веће сесије."),
+         ("Прегледачки broadcaster vs спољни — шта даје SplitCam", "Прегледачки broadcaster Cherry.tv-а је једна камера, без преклапања. SplitCam-ов External Encoder откључава мулти-камера сцене, beauty филтере, AI позадину, alert преклапања и пребацивање сцена — све што слику диже изнад нивоа просечне моделе на платформи."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Подржава ли Cherry.tv спољне енкодере?", "Да — Streamer Dashboard укључује опцију External Encoder у склопу Broadcast Settings. SplitCam, OBS, vMix и други RTMP енкодери повезују се стандардно након основне верификације streamer налога."),
+         ("Где добијам свој Cherry.tv stream key?", "У Streamer Dashboard-у: <strong>Broadcast Settings → External Encoder</strong>. И server URL и јединствени stream key појављују се тамо — копирај обоје у SplitCam-ова custom RTMP поља. Кључ је везан за налог; третирај га као лозинку."),
+         ("Који битрејт користити за Cherry.tv?", "Циљај 3500–6000 Kbps на 1920×1080, 30 fps и размак keyframe-а од 2 секунде. То је довољно за оштру слику на било којој величини прозора гледаоца и не удара у лимит ingest-а."),
+         ("Да ли је SplitCam бесплатан за Cherry.tv?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења. External Encoder у Streamer Dashboard-у је стандардни RTMP, додатне лиценце нису потребне."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига. То је енкодер који шаље твој видео Cherry.tv-у."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру у 1080p моду. Наслажи преклапања, текст, другу камеру или мобилни, beauty филтере или AI позадину. Публика Cherry.tv-а је млађа и платформски поткована — модерна сцена са пребацивањем и преклапањима одмах те издваја из просечних прегледачких стримера."),
+         ("Узми свој Cherry.tv URL и stream key", "Пријави се на Cherry.tv streamer налог, отвори <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Страница открива <strong>server URL</strong> и јединствени <strong>stream key</strong>. Копирај обоје."),
+         ("Повежи SplitCam са Cherry.tv-ом", "У SplitCam-у отвори <strong>Stream Settings</strong>, налепи Cherry.tv server URL и stream key у custom RTMP поља. Постави битрејт на 3500–6000 Kbps на 1920×1080, 30 fps, са 2-секундним keyframe-ом."),
+         ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим иди online на Cherry.tv-у. У року од ~10 секунди стрим стиже до Cherry.tv мреже. Наредни преноси су један клик — отвори SplitCam, Go Live, затим иди online на Cherry.tv-у."),
+     ],
+    },
 ]

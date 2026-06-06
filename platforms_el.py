@@ -568,4 +568,70 @@ PLATFORMS_EL = [
          ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά μπες online στο Model Center του LiveJasmin. Μέσα σε ~10 δευτερόλεπτα το HD feed σου φτάνει στο network του LiveJasmin. Οι επόμενες μεταδόσεις γίνονται με ένα κλικ — ανοίγεις SplitCam, Go Live, μετά online στο LiveJasmin."),
      ],
     },
+    {"slug": "myfreecams", "name": "MyFreeCams",
+     "title": "Μετάδοση στο MyFreeCams (MFC) με SplitCam — bypass του Model Web Broadcaster",
+     "desc": "Μετάδοση στο MyFreeCams με δωρεάν SplitCam — Model Admin External Broadcaster, οικονομία tokens του MFC, multi-camera σκηνές, overlays. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση myfreecams, mfc external broadcaster, myfreecams obs, mfc rtmp, mfc stream key, model admin, mfc token",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">MyFreeCams</span> με SplitCam',
+     "h1short": "Μετάδοση MyFreeCams",
+     "card": "Ρύθμιση external broadcaster για το tokens-based Model Admin του MFC.",
+     "intro": "Το MyFreeCams (MFC) είναι μία από τις παλαιότερες cam πλατφόρμες — καθαρή οικονομία tokens, χωρίς πνιγηρό φίλτρο έγκρισης μοντέλων και με πιστή βάση Premium members. Ο προεπιλεγμένος Model Web Broadcaster είναι ένα εργαλείο μιας κάμερας μέσα στον browser, αλλά το <strong>Model Admin</strong> εκθέτει και μια επιλογή <strong>External Broadcaster</strong> στην οποία συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> — ξεκλειδώνοντας multi-camera σκηνές, overlays και filters στο ίδιο stream tokens.",
+     "quick": "Μετάδοση στο MyFreeCams με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Model Admin → Broadcaster αλλάζεις από Web Broadcaster σε External Broadcaster, αντιγράφεις το server URL και το stream key, τα επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Άλλαξε στο Model Admin σε External Broadcaster.</li><li>Επικόλλησε URL+key στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στο MyFreeCams, άνοιξε <strong>Model Admin → Broadcaster</strong> και άλλαξε από <strong>Web Broadcaster</strong> σε <strong>External Broadcaster</strong>. Η σελίδα αποκαλύπτει ένα <strong>server URL</strong> (rtmp://publish.myfreecams.com…) και ένα <strong>stream key</strong> δεμένα στον λογαριασμό μοντέλου σου — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam.",
+     "tips": [
+         ("MFC tokens, όχι συνδρομές", "Το MFC είναι καθαρή οικονομία tipping/tokens — οι Premium members μπορούν να μπουν σε private, αλλά το ψωμοτύρι σου είναι τα φιλοδωρήματα στο free chat. Βελτιστοποίησε τη σκηνή για ορατό tip menu και ζωντανές αντιδράσεις."),
+         ("Web vs External Broadcaster", "Το προεπιλεγμένο είναι single-source, μόνο webcam από browser· το External Broadcaster ξεκλειδώνει multi-camera σκηνές, overlays και beauty filters από τον SplitCam στο ίδιο stream."),
+         ("Ενσωμάτωση MFC Alerts", "Πρόσθεσε το URL των alerts από το mfcalerts.com ως Browser layer πάνω από την κάμερα — παίρνεις animated tip alerts που σπρώχνουν τους viewers προς νέα tokens."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το MFC external broadcasters;", "Ναι — το Model Admin έχει επιλογή External Broadcaster, standard RTMP, OBS/SplitCam/vMix δουλεύουν όλα. Ο προεπιλεγμένος Web Broadcaster είναι απλώς η γρήγορη browser έκδοση."),
+         ("Από πού παίρνω το stream key μου για το MFC;", "Model Admin → Broadcaster → External Broadcaster δείχνει το server URL (rtmp://publish.myfreecams.com…) και το μοναδικό σου stream key. Αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Τι bitrate να χρησιμοποιήσω για το MyFreeCams;", "Έως ~6.000 Kbps με keyframe 2 δευτερολέπτων· δούλεψε στα 1920×1080 στα 30 fps, 3.500–6.000 Kbps. Το MFC δεν επιβάλλει αυστηρά HD, αλλά οι Premium members βλέπουν τη διαφορά αμέσως."),
+         ("Είναι δωρεάν ο SplitCam για το MFC;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Ούτε το MFC χρεώνει broadcaster fee για χρήση του External Broadcaster — απλώς συνδέεσαι μέσω RTMP."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Είναι ο encoder που στέλνει το video σου στο MyFreeCams."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background. Πρόσθεσε το URL του mfcalerts.com ως Browser layer για animated tip alerts όσο μεταδίδεις."),
+         ("Άλλαξε σε External Broadcaster", "Συνδέσου στο Model Admin → <strong>Broadcaster</strong> και άλλαξε από <strong>Web Broadcaster</strong> σε <strong>External Broadcaster</strong>. Η σελίδα δείχνει ένα server URL (rtmp://publish.myfreecams.com…) και ένα μοναδικό stream key. Αντίγραψε και τα δύο."),
+         ("Σύνδεσε τον SplitCam με το MFC", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του MFC και το stream key στα custom RTMP πεδία. Όρισε bitrate 3.500–6.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam — μέσα σε δευτερόλεπτα εμφανίζεσαι στη λίστα του MyFreeCams. Οι επόμενες μεταδόσεις είναι ένα κλικ: ανοίγεις SplitCam, Go Live."),
+     ],
+    },
+    {"slug": "cherry-tv", "name": "Cherry.tv",
+     "title": "Μετάδοση στο Cherry.tv με SplitCam — Web3-friendly external encoder",
+     "desc": "Μετάδοση στο Cherry.tv με δωρεάν SplitCam — Streamer Dashboard external encoder, crypto-friendly cam πλατφόρμα, multi-camera σκηνές. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "μετάδοση cherry tv, cherry.tv obs, cherry tv external encoder, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, web3 cam",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Cherry.tv</span> με SplitCam',
+     "h1short": "Μετάδοση Cherry.tv",
+     "card": "Ρύθμιση external encoder για το Streamer Dashboard του Cherry.tv.",
+     "intro": "Το Cherry.tv είναι μια νεότερη, γρήγορα αναπτυσσόμενη cam πλατφόρμα με Web3 χροιά — crypto-friendly πληρωμές και χαμηλότερο εμπόδιο εισόδου από παλιά networks όπως το LiveJasmin. Ο προεπιλεγμένος broadcaster είναι browser-based, αλλά το <strong>Streamer Dashboard</strong> εκθέτει το standard μονοπάτι <strong>External Encoder</strong> στο οποίο συνδέεται ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong>.",
+     "quick": "Μετάδοση στο Cherry.tv με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Streamer Dashboard → Broadcast Settings → External Encoder αντιγράφεις URL+key, επικολλάς στο SplitCam, Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Πάρε URL και stream key από το Streamer Dashboard.</li><li>Επικόλλησε στο SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Συνδέσου στον streamer λογαριασμό σου στο Cherry.tv, άνοιξε <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Εμφανίζονται ένα <strong>server URL</strong> και ένα <strong>stream key</strong> — αντίγραψε και τα δύο. Οι νέοι λογαριασμοί περνούν πρώτα από μια βασική verification (γρήγορη).",
+     "tips": [
+         ("Πιο εύκολη είσοδος, αυξανόμενη επισκεψιμότητα", "Χωρίς review 72 ωρών σε στυλ Docler — το Cherry.tv εγκρίνει πολύ πιο γρήγορα και είναι καλό early-mover σημείο, με νεανικό και platform-savvy κοινό."),
+         ("Διαθέσιμες crypto πληρωμές", "Το Cherry.tv προσφέρει πληρωμές σε crypto παράλληλα με standard fiat — χρήσιμο αν θέλεις να αποφύγεις τις τραπεζικές τριβές ή να εισπράξεις πιο διακριτικά."),
+         ("Ο browser broadcaster είναι single-source", "Ο προεπιλεγμένος browser broadcaster είναι μίας κάμερας· ο SplitCam μέσω External Encoder ξεκλειδώνει multi-camera, overlays και beauty filters στο ίδιο stream."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Υποστηρίζει το Cherry.tv external encoders;", "Ναι — το Streamer Dashboard περιλαμβάνει επιλογή External Encoder, standard RTMP. OBS, SplitCam και vMix δουλεύουν αμέσως μετά την επαλήθευση λογαριασμού."),
+         ("Από πού παίρνω το stream key μου για το Cherry.tv;", "Streamer Dashboard → Broadcast Settings → External Encoder. Τόσο το server URL όσο και το μοναδικό stream key εμφανίζονται εκεί — αντίγραψε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Τι bitrate να χρησιμοποιήσω για το Cherry.tv;", "3.500–6.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων. Το κοινό του Cherry.tv είναι νεαρό και συνηθισμένο σε καλή ποιότητα — μη φειδωλεύεσαι την ανάλυση."),
+         ("Είναι δωρεάν ο SplitCam για το Cherry.tv;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Ούτε το Cherry.tv χρεώνει ξεχωριστά τη χρήση external encoder."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Είναι ο encoder που στέλνει το video σου στο Cherry.tv."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — το κοινό του Cherry.tv είναι νεαρό και platform-savvy, η σκηνή πρέπει να φαίνεται μοντέρνα."),
+         ("Πάρε URL και stream key", "Στον streamer λογαριασμό σου άνοιξε <strong>Streamer Dashboard → Broadcast Settings → External Encoder</strong>. Αντίγραψε το server URL και το μοναδικό stream key."),
+         ("Σύνδεσε τον SplitCam με το Cherry.tv", "Στον SplitCam άνοιξε <strong>Stream Settings</strong>, επικόλλησε το server URL του Cherry.tv και το stream key στα custom RTMP πεδία. Bitrate 3.500–6.000 Kbps στα 1920×1080, 30 fps, keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά μπες online από το Streamer Dashboard. Μέσα σε δευτερόλεπτα εμφανίζεσαι στις λίστες του Cherry.tv. Οι επόμενες μεταδόσεις είναι ένα κλικ."),
+     ],
+    },
 ]

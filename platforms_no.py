@@ -567,4 +567,68 @@ PLATFORMS_NO = [
          ("Koble SplitCam til LiveJasmin", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn LiveJasmins server-URL og stream key i custom RTMP-feltene. Sett bitrate til 4 000–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe. Kjør først den innebygde hastighetstesten — HD-strømmer er krevende."),
          ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online i LiveJasmin Model Center. Innen ~10 sekunder når HD-feeden din LiveJasmins nettverk. Neste gang er det ett klikk — åpne SplitCam, Go Live, og gå online på LiveJasmin."),
      ]},
+    {"slug": "myfreecams", "name": "MyFreeCams",
+     "title": "Sending på MyFreeCams (MFC) med SplitCam — utenom Model Web Broadcaster",
+     "desc": "Sending på MyFreeCams med gratis SplitCam — Model Admin External Broadcaster, MFC-token-økonomi, multi-kamera scener, overlays. Uten vannmerke, uten registrering.",
+     "kw": "myfreecams sending, mfc external broadcaster, myfreecams obs, mfc rtmp, mfc stream key, model admin, mfc token",
+     "h1html": 'Slik sender du på <span class="accent">MyFreeCams</span> med SplitCam',
+     "h1short": "Sending MyFreeCams",
+     "card": "External-broadcaster-oppsett for MFCs token-baserte Model Admin.",
+     "intro": "MyFreeCams (MFC) er en av de eldste cam-plattformene — ren token-økonomi, ingen lang modellgodkjenningsprosess og en lojal Premium-medlemsbase. Standard-<em>Model Web Broadcaster</em> er et single-kamera nettleserverktøy, men Model Admin har også en <strong>External Broadcaster</strong>-mulighet som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — og åpner for multi-kamera scener, overlays og filtre på samme token-strøm.",
+     "quick": "Sending på MyFreeCams med SplitCam: installer SplitCam, bygg scenen, i <em>Model Admin → Broadcaster</em> bytt fra Web Broadcaster til External Broadcaster, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Model Admin.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på MyFreeCams, åpne <strong>Model Admin → Broadcaster</strong>, og bytt fra <em>Web Broadcaster</em> til <strong>External Broadcaster</strong>. Siden viser en <strong>server-URL</strong> (rtmp://publish.myfreecams.com…) og en <strong>stream key</strong> knyttet til modellkontoen din — kopier begge inn i SplitCams custom RTMP-felter. Nøkkelen er knyttet til kontoen; behandle den som et passord og tilbakestill den hvis den lekker.",
+     "tips": [
+         ("MFC = tokens, ikke abonnementer", "MFC er ren tipping- og token-økonomi — Premium-medlemmer kan ta private, men hovedinntekten kommer fra tips i free chat. Planlegg en scene som tjener både påkledd og casual, ikke bare i nakenshowet."),
+         ("Web Broadcaster vs. External — velg én gang", "Standard Web Broadcaster er single-kamera, single-kilde. External Broadcaster åpner for multi-scene, overlays og beauty-filtre via SplitCam/OBS. Bytt i Model Admin → Broadcaster før du går live."),
+         ("MFC Alerts-integrasjon", "Animerte tip-alerts kommer fra mfcalerts.com — legg til alert-URL-en som Browser-lag i SplitCam over kameraet. Fullt overlay-oppsett står i MFC Alerts-guiden vår."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter MyFreeCams eksterne broadcastere som SplitCam offisielt?", "Ja — Model Admin har en External Broadcaster-mulighet som gir standard RTMP-server-URL og stream key. OBS, SplitCam, vMix og andre RTMP-enkodere fungerer alle."),
+         ("Hvor finner jeg min MFC stream key?", "Model Admin → Broadcaster → bytt til External Broadcaster. Både server-URL (rtmp://publish.myfreecams.com…) og stream key dukker opp der. Kopier begge inn i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til MyFreeCams?", "MFC tar imot opptil ~6 000 Kbps med 2 sekunders keyframe-intervall. Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps — opplastningen din er den reelle grensen."),
+         ("Er SplitCam gratis å bruke med MyFreeCams?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Broadcaster-muligheten i Model Admin er også gratis. Totale broadcaster-kostnader: null."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. Det er enkoderen som sender videoen din til MyFreeCams."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå. Legg til mfcalerts.com-URL-en som Browser-lag for animerte tip-alerts."),
+         ("Bytt til External Broadcaster i Model Admin", "Logg inn på MyFreeCams. Åpne <strong>Model Admin → Broadcaster</strong>. Bytt fra <em>Web Broadcaster</em> til <strong>External Broadcaster</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til MyFreeCams", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn MFC server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe-intervall."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam. Innen ~10 sekunder når strømmen din MyFreeCams. Neste gang er det ett klikk."),
+     ]},
+    {"slug": "cherry-tv", "name": "Cherry.tv",
+     "title": "Sending på Cherry.tv med SplitCam — Web3-vennlig External Encoder",
+     "desc": "Sending på Cherry.tv med gratis SplitCam — Streamer Dashboard external encoder, krypto-vennlig cam-plattform, multi-kamera scener. Uten vannmerke, uten registrering.",
+     "kw": "cherry tv sending, cherry.tv obs, cherry tv external encoder, cherry.tv rtmp, cherry.tv stream key, cherry tv streamer, web3 cam",
+     "h1html": 'Slik sender du på <span class="accent">Cherry.tv</span> med SplitCam',
+     "h1short": "Sending Cherry.tv",
+     "card": "External-encoder-oppsett for Cherry.tvs Streamer Dashboard.",
+     "intro": "Cherry.tv er en nyere, raskt voksende cam-plattform med en Web3-vinkling — krypto-vennlige utbetalinger og lavere terskel enn eldre nettverk som LiveJasmin. Standardbroadcasteren går i nettleseren, men <strong>Streamer Dashboard</strong> har også en standard <strong>external encoder</strong>-vei som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler seg på — slik at du kan streame med multi-kamera scener, overlays og filtre.",
+     "quick": "Sending på Cherry.tv med SplitCam: installer SplitCam, bygg scenen, i Streamer Dashboard åpne <em>Broadcast Settings → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Hent URL og stream key fra Streamer Dashboard.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på Cherry.tv-streamer-kontoen din, åpne <strong>Streamer Dashboard</strong> og naviger til <strong>Broadcast Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. Nye streamer-kontoer må fullføre en kort basisverifisering før external encoder-muligheten er fullt aktiv.",
+     "tips": [
+         ("Lettere inngang, voksende trafikk", "Cherry.tv har raskere onboarding enn de eldre plattformene (ingen 72-timers Docler-prøve). God early-mover-plass for å bygge en følgerbase."),
+         ("Krypto-utbetalinger tilgjengelig", "Cherry.tv støtter krypto-utbetaling ved siden av klassisk fiat — nyttig i regioner der tradisjonelle cam-nettverks-utbetalinger er trege eller begrensede."),
+         ("Nettleser-broadcaster vs. external", "Nettleser-broadcasteren er bekvem, men single-kilde. SplitCam via External Encoder åpner for multi-kamera scener, overlays, beauty-filtre og AI-bakgrunn."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter Cherry.tv eksterne enkodere som SplitCam offisielt?", "Ja — Streamer Dashboard har External Encoder under Broadcast Settings. Standard RTMP-server-URL og stream key; OBS, SplitCam, vMix kobler alle til."),
+         ("Hvor får jeg min Cherry.tv stream key?", "Streamer Dashboard → Broadcast Settings → External Encoder. Både server-URL og stream key dukker opp der."),
+         ("Hvilken bitrate til Cherry.tv?", "Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps med 2 sekunders keyframe. Kjør først SplitCams innebygde hastighetstest."),
+         ("Er SplitCam gratis å bruke med Cherry.tv?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera, beauty-filtre eller en AI-bakgrunn oppå. Cherry.tvs publikum er yngre og plattform-vant."),
+         ("Hent Cherry.tv-URL og stream key", "Logg inn på Cherry.tv-streamer-kontoen din, åpne <strong>Streamer Dashboard</strong>, naviger til <strong>Broadcast Settings → External Encoder</strong>. Kopier begge."),
+         ("Koble SplitCam til Cherry.tv", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn Cherry.tv server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra Streamer Dashboard på Cherry.tv."),
+     ]},
 ]
