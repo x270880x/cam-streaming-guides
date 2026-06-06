@@ -535,4 +535,37 @@ PLATFORMS_FI = [
          ("Käyttääkö cloud-relayä?", "Ei — SplitCam lähettää streamit peer-to-peer suoraan PC:ltä jokaisen alustan ingestiin."),
          ("Hidastaako multistreaming PC:tä?", "Koodaus tehdään kerran ja käytetään uudelleen; laitteistokoodaus pitää CPU-kuorman alhaisena. Upload-kaistanleveys on todellinen raja."),
      ]},
+    {"slug": "livejasmin", "name": "LiveJasmin",
+     "title": "Lähetys LiveJasminissa SplitCamilla — HD ulkoinen enkooderi",
+     "desc": "Lähetys LiveJasminissa ilmaisella SplitCamilla — Model Center ulkoinen enkooderi, HD 1080p, monikamera-näkymät ja overlayt. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "livejasmin lähetys, livejasmin obs, livejasmin ulkoinen enkooderi, livejasmin rtmp, livejasmin stream key, livejasmin model setup",
+     "h1html": 'Miten lähetät <span class="accent">LiveJasminissa</span> SplitCamilla',
+     "h1short": "Lähetys LiveJasmin",
+     "card": "Ulkoisen enkooderin asetus LiveJasminin HD-only Model Centeriin.",
+     "intro": "LiveJasmin on Docler Holdingin lippulaiva — yksi maailman suurimmista cam-verkostoista ja HD-only-alusta. Sen suosittelema lähetysohjelma on oma <strong>JasminCAM</strong>-asiakas, mutta Model Center tarjoaa myös standardin <strong>External Encoder</strong> -reitin, johon ilmainen <strong style='color:var(--text)'>SplitCam</strong> liittyy — saat monikamera-näkymät, kauneussuotimet ja overlayt samaan HD-striimiin.",
+     "quick": "Lähetys LiveJasminissa SplitCamilla: asenna SplitCam, rakenna HD-näkymä, Model Centerissä avaa <em>Settings → Broadcast → External Encoder</em>, kopioi server URL ja stream key, liitä SplitCamiin, Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + HD-näkymä.</li>"
+              "<li>Hae URL ja stream key Model Centeristä.</li><li>Liitä SplitCamiin.</li>"
+              "<li>Paina Go Live.</li></ol>",
+     "key_how": "Kirjaudu osoitteeseen <strong>modelcenter.livejasmin.com</strong>, avaa <strong>Settings → Broadcast → External Encoder</strong>. Model Center paljastaa tiliisi sidotun <strong>server URL</strong>:n ja <strong>stream key</strong>:n — kopioi molemmat SplitCamin custom RTMP -kenttiin. <strong>Huom:</strong> uudet tilit pitää hyväksyä (48–72 tuntia) ennen kuin External Encoder -vaihtoehto näkyy, ja alusta pakottaa HD-only-ulostulon.",
+     "tips": [
+         ("HD tai pudotat sijoituksia", "LiveJasmin on HD-only — alle 1280×720 voi näkyä vain matalapalkkaisilla listoilla, alle 1080p menettää 'Premium'-kelpoisuuden. Tähtää 1920×1080, 30 fps, 4 000–6 000 Kbps."),
+         ("JasminCAM vs ulkoinen enkooderi", "Doclerin oma JasminCAM-asiakas antaa siisteimmän HD-vaatimustenmukaisuuden, mutta ulkoiset enkooderit (OBS, SplitCam, vMix) ovat virallisesti tuettuja, kun tili on hyväksytty — ne avaavat monikamera-näkymät ja overlayt, joita JasminCAM ei pysty tekemään."),
+         ("Free chat ≠ private show", "Free chat on vain preview — ei alastomuutta. Private- ja Gold show -tiloissa malli tienaa. Suunnittele näkymä näyttämään vahvalta sekä vaatteissa ETTÄ show-tilassa."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Tukeeko LiveJasmin virallisesti ulkoisia enkoodereita kuten SplitCamia?", "Kyllä — Model Center sisältää External Encoder -vaihtoehdon kohdassa Settings → Broadcast. JasminCAM on suositeltu asiakas, mutta OBS, SplitCam ja muut RTMP-enkooderit on nimenomaisesti listattu tuetuiksi, kun malli-tili on hyväksytty."),
+         ("Mistä saan LiveJasmin stream keyni?", "Model Centerin sisällä: Settings → Broadcast → External Encoder. Sekä server URL että uniikki stream key näkyvät siellä — kopioi molemmat SplitCamin custom RTMP -kenttiin. Avain on sidottu tiliisi; käsittele kuten salasanaa."),
+         ("Mikä bitrate LiveJasminiin?", "LiveJasmin on HD-only — tähtää 1920×1080, 30 fps, 4 000–6 000 Kbps ja 2 sekunnin keyframe-väli. Tämän alle menevä menettää Premium-merkinnän ja putoaa sijoituksissa."),
+         ("Onko SplitCam ilmainen LiveJasminin kanssa?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Ainoa kustannus on LiveJasminin HD-vaatimusten täyttäminen, ja SplitCam hoitaa sen natiivisti 1080p-näkymäkoostamisella ja kauneussuotimilla."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Se on enkooderi, joka lähettää HD-videosi LiveJasminiin."),
+         ("Rakenna HD-näkymä", "Avaa SplitCam ja lisää webkamera 1080p-tilassa. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-taustat — LiveJasmin vaatii HD-laatua ja kootun näkymän pitää näyttää premiumilta sekä free chatissa ETTÄ private show'ssa."),
+         ("Hae LiveJasmin URL ja stream key", "Kirjaudu osoitteeseen <strong>modelcenter.livejasmin.com</strong> (tilisi pitää olla hyväksytty — yleensä 48–72 tuntia rekisteröinnistä). Avaa <strong>Settings → Broadcast → External Encoder</strong>. Sivu paljastaa <strong>server URL</strong>:n ja uniikin <strong>stream key</strong>:n. Kopioi molemmat."),
+         ("Yhdistä SplitCam LiveJasminiin", "Avaa SplitCamissa <strong>Stream Settings</strong>, liitä LiveJasmin server URL ja stream key custom RTMP -kenttiin. Aseta bitrate 4 000–6 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe. Aja sisäänrakennettu nopeustesti ensin — HD-striimit vaativat paljon."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online LiveJasmin Model Centerissä. Noin 10 sekunnissa HD-feedisi saavuttaa LiveJasminin verkon. Seuraavat lähetykset ovat yhden klikkauksen — avaa SplitCam, Go Live, sitten online LiveJasminissa."),
+     ],
+    },
 ]

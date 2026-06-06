@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Swedish (sv) content for cam-streaming-guides. Native Swedish, 19 platforms."""
+"""Swedish (sv) content for cam-streaming-guides. Native Swedish, 20 platforms."""
 
 _T_ETH = ("Använd kabelanslutning", "Ethernet slår Wi-Fi vid långa sändningar — tappade bildrutor "
           "betyder tappade tips. Koppla en kabel till datorn som sänder.")
@@ -405,5 +405,31 @@ PLATFORMS_SV = [
            ("Hämta RTMP-nycklar från varje cam-sajt", "På varje cam-plattform slår du på extern / RTMP-sändning och kopierar <strong>server-URL</strong> och <strong>streamnyckel</strong>. Upprepa för varje sajt du vill sända till — se respektive plattforms guide för den exakta vägen."),
            ("Lägg till varje mål i SplitCam", "Öppna <strong>Stream Settings</strong> och lägg till varje cam-sajt som ett anpassat RTMP-mål — klistra in server-URL och nyckel. Bocka för alla du vill vara live på."),
            ("Klicka Go Live en gång", "Tryck <strong>Go Live</strong>. SplitCam skickar streamen till varje vald cam-sajt samtidigt, peer-to-peer, från en kodning — utan extra kostnad."),
+       ]),
+    _p("livejasmin", "LiveJasmin",
+       "Sänd på LiveJasmin med SplitCam — Extern HD-kodare",
+       "Sänd på LiveJasmin med SplitCam gratis — extern kodare i Model Center, HD 1080p-uppsättning, flerkamerascener och overlays. Ingen vattenstämpel, ingen registrering.",
+       "sända livejasmin, livejasmin obs, livejasmin extern kodare, livejasmin rtmp, livejasmin stream key, livejasmin modelluppsättning",
+       'Så sänder du på <span class="accent">LiveJasmin</span> med SplitCam',
+       "Sända LiveJasmin",
+       "Extern kodare-uppsättning för LiveJasmins Model Center som kör enbart HD.",
+       "LiveJasmin är Docler Holdings flaggskepp — ett av världens största cam-nätverk och en plattform som kör enbart HD. Den föredragna sändaren är den egna klienten <strong>JasminCAM</strong>, men Model Center exponerar också en standard <strong>External Encoder</strong>-väg som gratis <strong style='color:var(--text)'>SplitCam</strong> kopplar in mot — så du kan sända flerkamerascener, beauty-filter och overlays i samma HD-stream.",
+       "Sänd på LiveJasmin med SplitCam: installera SplitCam, bygg din HD-scen, gå till <em>Settings → Broadcast → External Encoder</em> i Model Center, kopiera server-URL och streamnyckel, klistra in i SplitCam, Go Live."
+       "<ol><li>Installera SplitCam.</li><li>Lägg till kamera + HD-scen.</li><li>Hämta URL och streamnyckel från Model Center.</li><li>Klistra in i SplitCam.</li><li>Tryck Go Live.</li></ol>",
+       "Logga in på <strong>modelcenter.livejasmin.com</strong>, öppna <strong>Settings → Broadcast → External Encoder</strong>. Model Center visar en <strong>server-URL</strong> och en <strong>streamnyckel</strong> kopplade till ditt konto — kopiera båda till SplitCams anpassade RTMP-fält. <strong>Obs:</strong> nya konton måste godkännas (48–72 timmar) innan external encoder-alternativet dyker upp, och plattformen tvingar fram enbart HD-utgång.",
+       [("HD — annars åker du ner i rankingen", "LiveJasmin är enbart HD — allt under 1280×720 riskerar att bara visas på listor med sämre betalning, allt under 1080p förlorar «Premium»-statusen. Sikta på 1920×1080 vid 30 fps, 4000–6000 Kbps."),
+        ("JasminCAM vs extern kodare", "Doclers egen JasminCAM-klient ger den renaste HD-efterlevnaden, men externa kodare (OBS, SplitCam, vMix) stöds officiellt när ditt konto är godkänt — de låser upp flerkamerascener och overlays som JasminCAM inte klarar."),
+        ("Free chat ≠ private show", "Free chat är bara förhandsvisning — ingen nakenhet. Du tjänar pengarna i Private- och Gold show. Planera scenen så att den ser stark ut både påklädd OCH i show-läge."),
+        _T_ETH],
+       [("Stöder LiveJasmin officiellt externa kodare som SplitCam?", "Ja — Model Center har en External Encoder-flik under Settings → Broadcast. JasminCAM är rekommenderad klient, men OBS, SplitCam och andra RTMP-kodare listas uttryckligen som stödda så fort ditt modellkonto är godkänt."),
+        ("Var hittar jag min streamnyckel för LiveJasmin?", "Inne i Model Center: Settings → Broadcast → External Encoder. Både server-URL och den unika streamnyckeln visas där — kopiera båda till SplitCams anpassade RTMP-fält. Nyckeln är kopplad till ditt konto; behandla den som ett lösenord."),
+        ("Vilken bitrate ska jag köra på LiveJasmin?", "LiveJasmin är enbart HD — sikta på 1920×1080 vid 30 fps, 4000–6000 Kbps med nyckelbildruta varannan sekund. Allt märkbart under det tappar Premium-etiketten och åker ner i rankingen."),
+        ("Är SplitCam gratis att köra mot LiveJasmin?", "Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns. Den enda «kostnaden» är att leva upp till LiveJasmins HD-krav, vilket SplitCam fixar nativt med 1080p-scenkomposition och beauty-filter.")],
+       steps=[
+           ("Ladda ner och installera SplitCam", "SplitCam är gratis livesändningsmjukvara för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel. Det är kodaren som skickar din HD-video till LiveJasmin."),
+           ("Bygg din HD-scen", "Öppna SplitCam och lägg till webbkameran i 1080p-läge. Lägg på overlays, text, en andra kamera eller din mobil, beauty-filter eller en AI-bakgrund — LiveJasmin kräver HD-kvalitet och din komponerade scen ska se premium ut både under free chat OCH i privata shower."),
+           ("Hämta din LiveJasmin-URL och streamnyckel", "Logga in på <strong>modelcenter.livejasmin.com</strong> (ditt konto måste vara godkänt först — vanligtvis 48–72 timmar efter registrering). Öppna <strong>Settings → Broadcast → External Encoder</strong>. Sidan visar en <strong>server-URL</strong> och en unik <strong>streamnyckel</strong>. Kopiera båda."),
+           ("Koppla SplitCam till LiveJasmin", "I SplitCam öppnar du <strong>Stream Settings</strong> och klistrar in LiveJasmins server-URL och streamnyckel i de anpassade RTMP-fälten. Sätt bitrate till 4000–6000 Kbps vid 1920×1080, 30 fps, med nyckelbildruta varannan sekund. Kör det inbyggda hastighetstestet först — HD-streamar är krävande."),
+           ("Klicka Go Live", "Tryck <strong>Go Live</strong> i SplitCam och gå sedan online i LiveJasmins Model Center. Inom cirka 10 sekunder når din HD-feed LiveJasmins nätverk. Kommande sändningar är ett klick — öppna SplitCam, Go Live, gå online på LiveJasmin."),
        ]),
 ]

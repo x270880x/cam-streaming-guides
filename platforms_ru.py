@@ -1196,4 +1196,36 @@ PLATFORMS_RU = [
              "переиспользуется; аппаратное кодирование держит нагрузку на CPU низкой."),
         ],
     },
+    {
+        "slug": "livejasmin", "name": "LiveJasmin",
+        "title": "Как транслировать на LiveJasmin со SplitCam — HD-кодер",
+        "desc": "Трансляция на LiveJasmin с бесплатным SplitCam — внешний кодер из Model Center, HD 1080p, мультикамерные сцены. Без водяного знака, без регистрации.",
+        "kw": "трансляция livejasmin, livejasmin obs, livejasmin внешний кодер, livejasmin rtmp, livejasmin stream key, livejasmin model center, jasmin live",
+        "h1html": 'Как транслировать на <span class="accent">LiveJasmin</span> со SplitCam',
+        "h1short": "Трансляция на LiveJasmin",
+        "card": "Внешний кодер для HD-only Model Center LiveJasmin.",
+        "intro": "LiveJasmin — флагман Docler Holding и одна из крупнейших cam-сетей в мире, исключительно HD-платформа. Предпочтительный клиент — фирменный <strong>JasminCAM</strong>, но Model Center также открывает стандартный <strong>внешний кодер</strong>, к которому подключается бесплатный <strong style='color:var(--text)'>SplitCam</strong> — давая вам мультикамерные сцены, бьюти-фильтры и оверлеи поверх того же HD-потока.",
+        "quick": "Трансляция на LiveJasmin со SplitCam: установите SplitCam, соберите HD-сцену, в Model Center зайдите в <em>Settings → Broadcast → External Encoder</em>, скопируйте URL сервера и stream key, вставьте в SplitCam, Go Live."
+                 "<ol><li>Установите SplitCam.</li><li>Добавьте камеру + HD-сцену.</li><li>Получите URL и stream key из Model Center.</li><li>Вставьте в SplitCam.</li><li>Нажмите Go Live.</li></ol>",
+        "key_how": "Войдите на <strong>modelcenter.livejasmin.com</strong>, откройте <strong>Settings → Broadcast → External Encoder</strong>. Model Center покажет <strong>URL сервера</strong> и <strong>stream key</strong>, привязанные к вашему аккаунту — скопируйте оба в поля custom RTMP в SplitCam. <strong>Важно:</strong> новые аккаунты должны пройти модерацию (48–72 часа) прежде чем опция External Encoder появится, и платформа жёстко требует HD-качества.",
+        "tips": [
+            ("Только HD — иначе понизят в выдаче", "LiveJasmin — HD-only платформа. Всё ниже 1280×720 рискует попасть только в низкооплачиваемые списки, всё ниже 1080p теряет статус «Premium». Держите 1920×1080 @ 30 fps, 4000–6000 Кбит/с."),
+            ("JasminCAM против внешнего кодера", "Собственный JasminCAM от Docler даёт самое чистое HD-соответствие, но внешние кодеры (OBS, SplitCam, vMix) официально поддерживаются после модерации аккаунта — они открывают мультикамерные сцены и оверлеи, которых нет в JasminCAM."),
+            ("Free chat ≠ private show", "Free chat — только превью, без обнажёнки. Private и Gold-шоу — там, где модель зарабатывает. Планируйте сцену так, чтобы она выглядела сильно и в одежде, и в режиме шоу."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддерживает ли LiveJasmin внешние кодеры вроде SplitCam официально?", "Да — в Model Center есть опция External Encoder в Settings → Broadcast. JasminCAM — рекомендуемый клиент, но OBS, SplitCam и другие RTMP-кодеры явно указаны как поддерживаемые после одобрения вашего модельного аккаунта."),
+            ("Где взять stream key LiveJasmin?", "Внутри Model Center: Settings → Broadcast → External Encoder. Там показаны и URL сервера, и уникальный stream key — скопируйте оба в поля custom RTMP в SplitCam. Ключ привязан к аккаунту; держите его как пароль."),
+            ("Какой битрейт использовать для LiveJasmin?", "LiveJasmin — HD-only. Цельтесь в 1920×1080 @ 30 fps, 4000–6000 Кбит/с с интервалом ключевого кадра 2 секунды. Заметное снижение лишает метки Premium и понижает в выдаче."),
+            ("SplitCam бесплатен для LiveJasmin?", "Да — SplitCam бесплатен, без водяного знака и без лимита по времени. Единственная «цена» — соответствовать HD-требованиям LiveJasmin, и SplitCam справляется с этим нативно благодаря 1080p-сборке сцены и бьюти-фильтрам."),
+        ],
+        "steps": [
+            ("Скачайте и установите SplitCam", "SplitCam — бесплатная программа для прямых трансляций на Windows и macOS — без регистрации, без карты, без водяного знака. Это кодер, который отправляет ваше HD-видео на LiveJasmin."),
+            ("Соберите HD-сцену", "Откройте SplitCam и добавьте веб-камеру в режиме 1080p. Наслоите оверлеи, текст, вторую камеру или телефон, бьюти-фильтры или AI-фон — LiveJasmin требует HD, и ваша собранная сцена должна выглядеть премиально и во free chat, И в private."),
+            ("Получите URL и stream key LiveJasmin", "Войдите на <strong>modelcenter.livejasmin.com</strong> (аккаунт должен быть одобрен — обычно 48–72 часа после регистрации). Откройте <strong>Settings → Broadcast → External Encoder</strong>. Страница покажет <strong>URL сервера</strong> и уникальный <strong>stream key</strong>. Скопируйте оба."),
+            ("Подключите SplitCam к LiveJasmin", "В SplitCam откройте <strong>Stream Settings</strong>, вставьте URL сервера и stream key LiveJasmin в поля custom RTMP. Установите битрейт 4000–6000 Кбит/с при 1920×1080, 30 fps, с ключевым кадром каждые 2 секунды. Сначала запустите встроенный тест скорости — HD-потоки требовательны."),
+            ("Нажмите Go Live", "Нажмите <strong>Go Live</strong> в SplitCam, затем выйдите online в Model Center LiveJasmin. Через ~10 секунд ваш HD-поток достигнет сети LiveJasmin. Последующие трансляции в один клик — откройте SplitCam, Go Live, потом online на LiveJasmin."),
+        ],
+    },
 ]

@@ -535,4 +535,36 @@ PLATFORMS_NO = [
          ("Bruker den cloud-relay?", "Nei — SplitCam sender strømmer peer-to-peer direkte fra PC-en til hver plattforms ingest."),
          ("Senker multistreaming PC-en min?", "Koding skjer én gang og gjenbrukes; maskinvare-koding holder CPU-belastningen lav. Opplastnings-båndbredde er den reelle grensen."),
      ]},
+    {"slug": "livejasmin", "name": "LiveJasmin",
+     "title": "Sending på LiveJasmin med SplitCam — HD External Encoder",
+     "desc": "Sending på LiveJasmin med gratis SplitCam — Model Center External Encoder, HD 1080p-oppsett, multi-kamera scener og overlays. Uten vannmerke.",
+     "kw": "livejasmin sending, livejasmin obs, livejasmin external encoder, livejasmin rtmp, livejasmin stream key, livejasmin model setup",
+     "h1html": 'Slik sender du på <span class="accent">LiveJasmin</span> med SplitCam',
+     "h1short": "Sending LiveJasmin",
+     "card": "External-encoder-oppsett for LiveJasmins HD-only Model Center.",
+     "intro": "LiveJasmin er flaggskipet til Docler Holding — et av verdens største cam-nettverk og en HD-only-plattform. Den foretrukne broadcasteren er deres egen <strong>JasminCAM</strong>-klient, men Model Center har også en offisiell <strong>External Encoder</strong>-vei som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler rett på — for multi-kamera scener, beauty-filtre og overlays på samme HD-strøm.",
+     "quick": "Sending på LiveJasmin med SplitCam: installer SplitCam, bygg HD-scenen, i Model Center åpne <em>Settings → Broadcast → External Encoder</em>, kopier server-URL og stream key, lim inn i SplitCam, Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + HD-scene.</li>"
+              "<li>Hent URL og stream key fra Model Center.</li><li>Lim inn i SplitCam.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Logg inn på <strong>modelcenter.livejasmin.com</strong>, åpne <strong>Settings → Broadcast → External Encoder</strong>. Model Center viser en <strong>server-URL</strong> og en <strong>stream key</strong> knyttet til kontoen din — kopier begge inn i SplitCams custom RTMP-felter. <strong>Merk:</strong> Nye kontoer må godkjennes (48–72 timer) før External Encoder-valget dukker opp, og plattformen håndhever HD-only output.",
+     "tips": [
+         ("HD eller du faller i ranking", "LiveJasmin er HD-only — alt under 1280×720 risikerer kun å bli vist på de lavtbetalende listene, og alt under 1080p mister «Premium»-status. Sikt mot 1920×1080 ved 30 fps, 4 000–6 000 Kbps."),
+         ("JasminCAM vs. external encoder", "Doclers egen JasminCAM-klient gir den reneste HD-compliance, men eksterne enkodere (OBS, SplitCam, vMix) er offisielt støttet når kontoen er godkjent — og bare gjennom dem får du multi-kamera scener og overlays som JasminCAM ikke klarer."),
+         ("Free chat ≠ private show", "Free chat er bare preview — ingen nakenhet. Private og Gold shows er der modellen tjener. Bygg scenen slik at den ser sterk ut både påkledd OG i show-modus."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Støtter LiveJasmin eksterne enkodere som SplitCam offisielt?", "Ja — Model Center har External Encoder-valget under Settings → Broadcast. JasminCAM er den anbefalte klienten, men OBS, SplitCam og andre RTMP-enkodere er uttrykkelig nevnt som støttet når modellkontoen din er godkjent."),
+         ("Hvor finner jeg min LiveJasmin stream key?", "Inne i Model Center: Settings → Broadcast → External Encoder. Både server-URL og en unik stream key dukker opp der — kopier begge inn i SplitCams custom RTMP-felter. Nøkkelen er knyttet til kontoen din; behandle den som et passord."),
+         ("Hvilken bitrate til LiveJasmin?", "LiveJasmin er HD-only — sikt mot 1920×1080 ved 30 fps, 4 000–6 000 Kbps og keyframe hvert 2. sekund. Merkbart under det mister du Premium-merket og faller i ranking."),
+         ("Er SplitCam gratis å bruke med LiveJasmin?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. Det eneste du må levere, er å nå LiveJasmins HD-krav, og dem klarer SplitCam nativt med 1080p-scenekomposisjon og beauty-filtre."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. Det er enkoderen som sender HD-videoen din til LiveJasmin."),
+         ("Bygg HD-scenen", "Åpne SplitCam og legg til webkameraet i 1080p-modus. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — LiveJasmin krever HD-kvalitet, og den komponerte scenen må se premium ut både i free chat OG i private shows."),
+         ("Hent LiveJasmin-URL og stream key", "Logg inn på <strong>modelcenter.livejasmin.com</strong> (kontoen må være godkjent først — typisk 48–72 timer etter registrering). Åpne <strong>Settings → Broadcast → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge."),
+         ("Koble SplitCam til LiveJasmin", "I SplitCam åpne <strong>Stream Settings</strong>, lim inn LiveJasmins server-URL og stream key i custom RTMP-feltene. Sett bitrate til 4 000–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe. Kjør først den innebygde hastighetstesten — HD-strømmer er krevende."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online i LiveJasmin Model Center. Innen ~10 sekunder når HD-feeden din LiveJasmins nettverk. Neste gang er det ett klikk — åpne SplitCam, Go Live, og gå online på LiveJasmin."),
+     ]},
 ]

@@ -535,4 +535,37 @@ PLATFORMS_HU = [
          ("Használ cloud relay-t?", "Nem — a SplitCam peer-to-peer küldi a streameket közvetlenül a PC-ről minden platform ingestjére."),
          ("Lassítja a multistreaming a PC-met?", "A kódolás egyszer történik és újra felhasználódik; a hardver kódolás alacsonyan tartja a CPU terhelést. A feltöltési sávszélesség a valódi limit."),
      ]},
+    {"slug": "livejasmin", "name": "LiveJasmin",
+     "title": "Adás a LiveJasminen SplitCammel — HD külső enkóder",
+     "desc": "Adás a LiveJasminen ingyenes SplitCammel — Model Center külső enkóder, HD 1080p beállítás, multi-kamera jelenetek és overlay-ek. Nincs vízjel, nincs regisztráció.",
+     "kw": "livejasmin adás, livejasmin obs, livejasmin external encoder, livejasmin rtmp, livejasmin stream key, livejasmin model setup",
+     "h1html": 'Hogyan adsz a <span class="accent">LiveJasminen</span> SplitCammel',
+     "h1short": "Adás LiveJasmin",
+     "card": "Külső enkóder beállítás a LiveJasmin HD-only Model Centeréhez.",
+     "intro": "A LiveJasmin a Docler Holding zászlóshajója — a világ egyik legnagyobb cam hálózata és egy HD-only platform. A preferált broadcaster a saját <strong>JasminCAM</strong> kliens, de a Model Center expose-olja a standard <strong>External Encoder</strong> útvonalat, amihez az ingyenes <strong style='color:var(--text)'>SplitCam</strong> kapcsolódik — így multi-kamera jelenetekkel, beauty szűrőkkel és overlay-ekkel adsz ugyanazon a HD streamen.",
+     "quick": "Adás a LiveJasminen SplitCammel: telepíted a SplitCamet, megépíted a HD jelenetet, a Model Centerben mész <em>Settings → Broadcast → External Encoder</em>, kimásolod a server URL-t és a stream key-t, beilleszted a SplitCambe, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + HD jelenetet.</li>"
+              "<li>Szerezd meg a URL-t és stream key-t a Model Centerből.</li><li>Illeszd be a SplitCambe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Jelentkezz be a <strong>modelcenter.livejasmin.com</strong> oldalra, nyisd meg <strong>Settings → Broadcast → External Encoder</strong>. A Model Center megmutat egy <strong>server URL</strong>-t és egy <strong>stream key</strong>-t a fiókodhoz kötve — másold be mindkettőt a SplitCam egyéni RTMP mezőibe. <strong>Megjegyzés:</strong> az új fiókoknak előbb át kell esniük jóváhagyáson (48–72 óra), mire az External Encoder opció megjelenik, és a platform HD-only kimenetet ír elő.",
+     "tips": [
+         ("HD vagy lecsúsztatnak", "A LiveJasmin HD-only — bármi 1280×720 alatt csak az alacsonyabb fizetésű listákon kockáztat megjelenni, bármi 1080p alatt elveszíti a «Premium» jogosultságot. Tolj 1920×1080-at 30 fps-en, 4 000–6 000 Kbps mellett."),
+         ("JasminCAM vs külső enkóder", "A Docler saját JasminCAM kliense adja a legtisztább HD megfelelést, de a külső enkódereket (OBS, SplitCam, vMix) hivatalosan támogatják, amint a fiókod jóvá van hagyva — ezek olyan multi-kamera jeleneteket és overlay-eket nyitnak meg, amiket a JasminCAM nem tud."),
+         ("Free chat ≠ private show", "A free chat csak preview — nincs meztelenség. A Private és Gold show-k azok, ahol a modell keres. Tervezd a jelenetedet úgy, hogy erősen mutasson felöltözve ÉS show módban is."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Hivatalosan támogatja a LiveJasmin a külső enkódereket, mint a SplitCam?", "Igen — a Model Center tartalmaz egy External Encoder opciót a Settings → Broadcast alatt. A JasminCAM az ajánlott kliens, de az OBS, SplitCam és más RTMP enkóderek kifejezetten támogatottként vannak felsorolva, miután a modell fiókodat jóváhagyják."),
+         ("Honnan kapom meg a LiveJasmin stream key-emet?", "A Model Centerben: Settings → Broadcast → External Encoder. Mind a server URL, mind az egyedi stream key ott jelenik meg — másold be mindkettőt a SplitCam egyéni RTMP mezőibe. A kulcs a fiókodhoz van kötve; jelszóként kezeld."),
+         ("Milyen bitrátát használjak a LiveJasminhez?", "A LiveJasmin HD-only — célozz 1920×1080-at 30 fps-en, 4 000–6 000 Kbps mellett, 2 másodperces keyframe intervallummal. Bármi észrevehetően ez alatt elveszti a Premium címkét és lecsúsztatják."),
+         ("Ingyenes a SplitCam a LiveJasminhez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Az egyetlen «költség» a LiveJasmin HD követelményeinek teljesítése, amit a SplitCam natívan kezel 1080p jelenetkompozícióval és beauty szűrőkkel."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Ez az enkóder, ami a HD videódat a LiveJasminre küldi."),
+         ("Építsd meg a HD jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerádat 1080p módban. Rétegezz rá overlay-eket, szöveget, második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — a LiveJasmin HD minőséget követel, és az összeállított jelenetednek premium módon kell kinéznie a free chatben ÉS a private show-kban is."),
+         ("Szerezd meg a LiveJasmin URL-t és stream key-t", "Jelentkezz be a <strong>modelcenter.livejasmin.com</strong>-ra (a fiókodnak előbb jóváhagyottnak kell lennie — jellemzően 48–72 óra a regisztráció után). Nyisd meg <strong>Settings → Broadcast → External Encoder</strong>. Az oldal megmutat egy <strong>server URL</strong>-t és egy egyedi <strong>stream key</strong>-t. Másold mindkettőt."),
+         ("Kösd össze a SplitCamet a LiveJasminnal", "A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a LiveJasmin server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 4 000–6 000 Kbps-re 1920×1080, 30 fps mellett, 2 másodperces keyframe-mel. Először futtasd a beépített speed tesztet — a HD streamek igényesek."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a LiveJasmin Model Centerben. ~10 másodperc alatt a HD feeded eléri a LiveJasmin hálózatát. A következő adások egy kattintással mennek — megnyitod a SplitCamet, Go Live, aztán online a LiveJasminon."),
+     ],
+    },
 ]

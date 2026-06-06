@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Slovak (sk) content for cam-streaming-guides. Native Slovak, 19 platforms."""
+"""Slovak (sk) content for cam-streaming-guides. Native Slovak, 20 platforms."""
 
 _T_ETH = ("Použite káblové pripojenie", "Ethernet poráža Wi-Fi pri dlhom vysielaní — stratené snímky "
           "znamenajú stratené tipy. Zapojte kábel do počítača, ktorý vysiela.")
@@ -405,5 +405,31 @@ PLATFORMS_SK = [
            ("Získajte RTMP kľúče z každej cam stránky", "Na každej cam platforme zapnite externé / RTMP vysielanie a skopírujte <strong>URL servera</strong> a <strong>stream key</strong>. Opakujte pre každú stránku, na ktorú chcete vysielať — presnú cestu nájdete v návodoch jednotlivých platforiem."),
            ("Pridajte každý cieľ v SplitCam", "Otvorte <strong>Stream Settings</strong> a pridajte každú cam stránku ako vlastný cieľ RTMP — vložte URL servera a kľúč. Zaškrtnite všetky, kde chcete byť naživo."),
            ("Kliknite na Go Live raz", "Stlačte <strong>Go Live</strong>. SplitCam posiela stream na každú vybranú cam stránku naraz, peer-to-peer, z jedného kódovania — bez ďalších nákladov."),
+       ]),
+    _p("livejasmin", "LiveJasmin",
+       "Vysielanie na LiveJasmin so SplitCam — Externý kodér HD",
+       "Vysielanie na LiveJasmin so SplitCam zadarmo — externý kodér v Model Center, nastavenie HD 1080p, viackamerové scény a prekrytia. Bez vodoznaku, bez registrácie.",
+       "vysielanie livejasmin, livejasmin obs, livejasmin externý kodér, livejasmin rtmp, livejasmin stream key, livejasmin nastavenie modelky",
+       'Ako vysielať na <span class="accent">LiveJasmin</span> so SplitCam',
+       "Vysielanie LiveJasmin",
+       "Nastavenie externého kodéra pre Model Center LiveJasmin, ktoré beží iba v HD.",
+       "LiveJasmin je vlajková loď Docler Holding — jedna z najväčších cam sietí na svete a platforma, ktorá funguje výhradne v HD. Jej preferovaným vysielačom je vlastný klient <strong>JasminCAM</strong>, ale Model Center ponúka aj štandardnú cestu cez <strong>External Encoder</strong>, na ktorú sa pripojí <strong style='color:var(--text)'>SplitCam</strong> zadarmo — vďaka tomu môžete vysielať viackamerové scény, beauty filtre a prekrytia v tej istej HD trasnmisii.",
+       "Vysielanie na LiveJasmin so SplitCam: nainštalujte SplitCam, zostavte HD scénu, v Model Center otvorte <em>Settings → Broadcast → External Encoder</em>, skopírujte URL servera a stream key, vložte do SplitCam, Go Live."
+       "<ol><li>Nainštalujte SplitCam.</li><li>Pridajte kameru + HD scénu.</li><li>Získajte URL a stream key z Model Center.</li><li>Vložte do SplitCam.</li><li>Stlačte Go Live.</li></ol>",
+       "Prihláste sa na <strong>modelcenter.livejasmin.com</strong>, otvorte <strong>Settings → Broadcast → External Encoder</strong>. Model Center zobrazí <strong>URL servera</strong> a <strong>stream key</strong> viazané na váš účet — skopírujte oboje do vlastných RTMP polí v SplitCam. <strong>Pozor:</strong> nové účty musia byť najskôr schválené (48–72 hodín), kým sa možnosť externého kodéra objaví, a platforma vynucuje výstup iba v HD.",
+       [("HD, alebo idete dolu", "LiveJasmin je iba HD — čokoľvek pod 1280×720 hrozí, že vás ukáže iba na horšie platených zoznamoch, čokoľvek pod 1080p stráca nárok na «Premium». Mierte na 1920×1080 pri 30 fps, 4000–6000 Kbps."),
+        ("JasminCAM vs externý kodér", "Vlastný klient Doclera JasminCAM dáva najčistšiu zhodu s HD požiadavkami, ale externé kodéry (OBS, SplitCam, vMix) sú oficiálne podporované, len čo je váš účet schválený — odomykajú viackamerové scény a prekrytia, ktoré JasminCAM nezvládne."),
+        ("Free chat ≠ private show", "Free chat je len ukážka — bez nahoty. Zarábate v Private a Gold show. Naplánujte scénu tak, aby vyzerala silno oblečená AJ v režime show."),
+        _T_ETH],
+       [("Podporuje LiveJasmin oficiálne externé kodéry ako SplitCam?", "Áno — Model Center má voľbu External Encoder v Settings → Broadcast. JasminCAM je odporúčaný klient, ale OBS, SplitCam a ďalšie RTMP kodéry sú výslovne uvedené ako podporované, keď je váš účet modelky schválený."),
+        ("Kde nájdem svoj stream key LiveJasmin?", "Vnútri Model Center: Settings → Broadcast → External Encoder. Nájdete tam URL servera aj unikátny stream key — skopírujte oboje do vlastných RTMP polí v SplitCam. Kľúč je viazaný na váš účet; zaobchádzajte s ním ako s heslom."),
+        ("Aký bitrate použiť pre LiveJasmin?", "LiveJasmin je iba HD — mierte na 1920×1080 pri 30 fps, 4000–6000 Kbps s intervalom kľúčového snímku 2 sekundy. Čokoľvek viditeľne pod tým stráca štítok Premium a padá v rebríčku."),
+        ("Je SplitCam zadarmo pre LiveJasmin?", "Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu. Jediná «cena» je dotiahnuť HD požiadavky LiveJasmin, čo SplitCam zvláda natívne kompozíciou scény v 1080p a beauty filtrami.")],
+       steps=[
+           ("Stiahnite a nainštalujte SplitCam", "SplitCam je bezplatný softvér na živé vysielanie pre Windows a macOS — bez registrácie, bez karty, bez vodoznaku. Je to kodér, ktorý posiela vaše HD video na LiveJasmin."),
+           ("Zostavte HD scénu", "Otvorte SplitCam a pridajte webkameru v režime 1080p. Navrstvite prekrytia, text, druhú kameru alebo telefón, beauty filtre alebo AI pozadie — LiveJasmin vyžaduje HD kvalitu a vaša zložená scéna musí vyzerať prémiovo vo free chate AJ v privátnych show."),
+           ("Získajte URL a stream key LiveJasmin", "Prihláste sa na <strong>modelcenter.livejasmin.com</strong> (váš účet musí byť najskôr schválený — zvyčajne 48–72 hodín po registrácii). Otvorte <strong>Settings → Broadcast → External Encoder</strong>. Stránka zobrazí <strong>URL servera</strong> a unikátny <strong>stream key</strong>. Skopírujte oboje."),
+           ("Pripojte SplitCam k LiveJasmin", "V SplitCam otvorte <strong>Stream Settings</strong>, vložte URL servera LiveJasmin a stream key do vlastných RTMP polí. Nastavte bitrate na 4000–6000 Kbps pri 1920×1080, 30 fps, kľúčový snímok každé 2 sekundy. Najskôr spustite vstavaný test rýchlosti — HD streamy sú náročné."),
+           ("Kliknite Go Live", "Stlačte <strong>Go Live</strong> v SplitCam, potom prejdite online v Model Center LiveJasmin. Do približne 10 sekúnd váš HD signál dorazí do siete LiveJasmin. Ďalšie vysielania sú jeden klik — otvorte SplitCam, Go Live, potom prejdite online na LiveJasmin."),
        ]),
 ]
