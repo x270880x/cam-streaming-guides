@@ -970,4 +970,73 @@ PLATFORMS_DE = [
             ("Go Live drücken", "In SplitCam auf <strong>Go Live</strong> klicken, dann in der Members Area online gehen. Innerhalb von ~10 Sekunden erreicht dein Stream das AdultWork-Publikum."),
         ],
     },
+    {
+        "slug": "jerkmate", "name": "Jerkmate",
+        "title": "Auf Jerkmate senden mit SplitCam — Streamate-Netzwerk-Setup",
+        "desc": "Auf Jerkmate senden mit kostenlosem SplitCam — Jerkmate bezieht seine Live-Models aus dem Streamate-Netzwerk, du sendest also über SM Connect und den eingebauten Streamate-Kanal von SplitCam. Multi-Cam-Szenen, ohne Wasserzeichen.",
+        "kw": "auf jerkmate senden, jerkmate model werden, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+        "h1html": 'So sendest du auf <span class="accent">Jerkmate</span> mit SplitCam',
+        "h1short": "Auf Jerkmate senden",
+        "card": "Jerkmate zieht Models aus dem Streamate-Netzwerk — Senden über SM Connect + SplitCam.",
+        "intro": "Jerkmate ist eine der meistgesuchten Cam-Marken, bekannt für seinen KI-Matchmaker, der Zuschauer mit Live-Performern zusammenbringt. Einen eigenen Broadcaster betreibt Jerkmate nicht — die Plattform <strong>bezieht ihre Live-Models aus dem Streamate-Netzwerk</strong>. Du sendest als Model im Streamate-Netzwerk, und deine Show wird an Jerkmate und dessen Partnerseiten verteilt. Weil Streamate in <strong style='color:var(--text)'>SplitCams</strong> Kanalliste vorinstalliert ist, kannst du mit kostenlosem <strong style='color:var(--text)'>SplitCam</strong> Multi-Cam-Szenen, Overlays und Filter hinzufügen, ganz ohne manuelle RTMP-Eingabe.",
+        "quick": "Auf Jerkmate mit SplitCam senden: SplitCam installieren, Szene bauen, als Model im Streamate-Netzwerk anmelden, das Jerkmate speist, über <em>SM Connect → Start Show</em> den Key kopieren, dann in SplitCam <em>Stream Settings → Add Channel → Streamate</em> öffnen, einfügen und Go Live."
+                 "<ol><li>SplitCam installieren.</li><li>Kamera + Szene hinzufügen.</li>"
+                 "<li>Als Model im Streamate-Netzwerk anmelden.</li>"
+                 "<li>Key über SM Connect holen.</li>"
+                 "<li>Add Channel → Streamate, Go Live.</li></ol>",
+        "key_how": "Jerkmates Live-Cams kommen aus dem <strong>Streamate-Broadcasting-Netzwerk</strong> — einen separaten «Jerkmate-Encoder» gibt es nicht. Über Jerkmates Model-Programm oder direkt im Streamate-Netzwerk registrieren, <strong>SM Connect</strong> öffnen, die Bedingungen akzeptieren, <strong>Start Show</strong> klicken und den Streaming-Key kopieren. In SplitCam <strong>Stream Settings → Add Channel</strong> öffnen, <strong>Streamate</strong> aus der eingebauten Liste wählen und den Key einfügen. Dein Stream erreicht dann Jerkmate und die Partnerseiten des Netzwerks gleichzeitig.",
+        "tips": [
+            ("Darunter steckt das Streamate-Netzwerk", "Such keinen Jerkmate-eigenen Broadcaster — du sendest auf Streamate, und Jerkmate verteilt es weiter. Alles, was für Streamate funktioniert (SM Connect, der eingebaute SplitCam-Kanal), funktioniert auch für Jerkmate."),
+            ("Den KI-gematchten Traffic umwandeln", "Jerkmates Matchmaker leitet Zuschauer zu Models, die zu ihren Vorlieben passen — eine polierte SplitCam-Szene mit Overlays und gutem Bildausschnitt wandelt diese gematchten Zuschauer weit besser um als eine flache Webcam."),
+            ("Ein Feed, viele Seiten", "Senden ins Streamate-Netzwerk bringt dich gleichzeitig auf Jerkmate plus dessen Partnerseiten — größere Reichweite aus einem einzigen SplitCam-Stream, ohne Zusatzaufwand."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Hat Jerkmate einen eigenen Broadcaster oder Stream-Key?", "Nein — Jerkmate bezieht seine Live-Models aus dem Streamate-Netzwerk. Du sendest als Model im Streamate-Netzwerk über SM Connect, und deine Show erscheint automatisch auf Jerkmate."),
+            ("Wie bekomme ich meinen Jerkmate-Stream-Key?", "Über SM Connect auf der Model-Seite des Streamate-Netzwerks: Bedingungen akzeptieren → Start Show → Key kopieren. In den eingebauten Streamate-Kanal von SplitCam einfügen — keine manuelle RTMP-URL nötig."),
+            ("Welche Bitrate für Jerkmate?", "1080p bei 30 fps fixieren. Der Netzwerk-Feed ist adaptiv, eine niedrigere Bitrate bei Standbildern ist also normal. Den SplitCam-Speedtest laufen lassen und eine Kabelverbindung nutzen."),
+            ("Ist SplitCam kostenlos für Jerkmate?", "Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Streamate (das Jerkmate speist) ist ein eingebauter SplitCam-Kanal, es fallen also keine separaten Encoder-Kosten an."),
+        ],
+        "steps": [
+            ("SplitCam herunterladen und installieren", "SplitCam ist kostenlose Live-Streaming-Software für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen."),
+            ("Szene aufbauen", "SplitCam öffnen und die Webcam hinzufügen. Overlays, Text, eine zweite Kamera oder das Smartphone, Beauty-Filter oder einen KI-Hintergrund einbauen — eine starke Szene wandelt Jerkmates gematchte Zuschauer um."),
+            ("Als Model anmelden und Key holen", "Über Jerkmates Model-Programm oder direkt im <strong>Streamate-Netzwerk</strong>, das es speist, registrieren. <strong>SM Connect</strong> öffnen, die Bedingungen akzeptieren, <strong>Start Show</strong> klicken und den Streaming-Key kopieren."),
+            ("Streamate als Kanal in SplitCam hinzufügen", "In SplitCam <strong>Stream Settings → Add Channel</strong> öffnen, <strong>Streamate</strong> aus der eingebauten Liste wählen und den Key einfügen — keine manuelle RTMP-URL. Die Auflösung auf 1080p fixieren."),
+            ("Go Live drücken", "In SplitCam <strong>Go Live</strong> drücken — ein grüner Slider bestätigt die Verbindung. Deine Show geht übers Streamate-Netzwerk raus und erscheint auf Jerkmate."),
+        ],
+    },
+    {
+        "slug": "justforfans", "name": "JustForFans",
+        "title": "Auf JustForFans live gehen mit SplitCam — Virtual-Camera-Setup",
+        "desc": "Auf JustForFans (JFF) live gehen mit kostenlosem SplitCam — SplitCam als virtuelle Kamera im JFF-Live-Broadcaster für Multi-Cam-Szenen, Overlays und Filter. Ohne Wasserzeichen, ohne Registrierung.",
+        "kw": "auf justforfans live gehen, justforfans live, jff live stream, justforfans obs, justforfans virtuelle kamera, justfor.fans cam, justforfans broadcast",
+        "h1html": 'So gehst du auf <span class="accent">JustForFans</span> live mit SplitCam',
+        "h1short": "Auf JustForFans live gehen",
+        "card": "SplitCam als virtuelle Kamera im Live-Broadcaster von JustForFans nutzen.",
+        "intro": "JustForFans (JFF) ist eine creator-eigene Abo-Plattform — eine langjährige, von Performern gegründete OnlyFans-Alternative mit Abos, Pay-per-View und einem browserbasierten Live-Feature. Der Live-Broadcaster zeigt nur eine schlichte Webcam; richtest du ihn auf kostenloses <strong style='color:var(--text)'>SplitCam</strong> als <strong>virtuelle Kamera</strong>, schaltest du Multi-Cam-Szenen, Overlays und Filter frei. Bietet dein Creator-Dashboard zusätzlich eine External-Encoder- / Stream-Key-Option, verbindet sich SplitCam stattdessen über RTMP.",
+        "quick": "Auf JustForFans mit SplitCam live: SplitCam installieren, Szene bauen, auf JFF einen Live-Broadcast starten und im Kamera-Auswahlmenü des Broadcasters <em>SplitCam</em> als Webcam wählen — dann live gehen."
+                 "<ol><li>SplitCam installieren.</li><li>Kamera + Szene hinzufügen.</li>"
+                 "<li>Live-Broadcast auf JFF starten.</li>"
+                 "<li>SplitCam im Kamera-Dropdown wählen.</li><li>Go Live drücken.</li></ol>",
+        "key_how": "Der Live-Modus von JustForFans läuft im Browser. Baue deine Szene in SplitCam — es registriert sich als System-Webcam namens <strong>«SplitCam Video Driver»</strong> — öffne dann den JFF-Live-Broadcaster und wähle im Kamera-Dropdown <strong>SplitCam</strong> statt deiner rohen Webcam. Deine komponierte Szene ersetzt die flache Kamera. Bietet JFFs Creator-Dashboard eine <strong>External-Encoder- / Stream-Key</strong>-Option, fügst du diesen Key stattdessen in die Custom-RTMP-Felder von SplitCam ein.",
+        "tips": [
+            ("Virtuelle Kamera funktioniert überall", "Auch wenn der Live-Modus einer Plattform nur im Browser läuft, erscheint SplitCam als auswählbare Webcam — deine Multi-Cam-Szene, Overlays und Filter funktionieren auf JFF also ganz ohne Stream-Key."),
+            ("Creator-eigen, performer-freundlich", "JFF wird von Performern betrieben und hat eine treue Abonnentenbasis. Overlays, die dein PPV oder Abo bewerben, wandeln bei einem Publikum gut, das ohnehin schon zahlt."),
+            ("Dem Browser die Kamera-Berechtigung geben", "Erscheint SplitCam nicht in JFFs Kameraliste, stell sicher, dass SplitCam zuerst läuft und der Browser die Kamera-Berechtigung hat — dann den Broadcaster neu laden."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Wie verbindet sich SplitCam mit JustForFans?", "Der JFF-Live-Modus ist browserbasiert, SplitCam verbindet sich also als virtuelle Kamera: im Kamera-Auswahlmenü des JFF-Broadcasters SplitCam wählen. Kein Stream-Key nötig."),
+            ("Kann ich Overlays und mehrere Kameras auf JFF nutzen?", "Ja — bau die Szene in SplitCam (zweite Kamera, Overlays, Beauty- oder KI-Hintergrund-Filter), und JFF sieht die fertige Szene als eine einzige Webcam."),
+            ("Unterstützt JustForFans OBS oder externe Encoder?", "Der JFF-Live-Modus ist primär browser-/webcam-basiert. Zeigt dein Creator-Dashboard eine External-Encoder- oder Stream-Key-Option, fügst du sie in die Custom-RTMP-Felder von SplitCam ein; sonst die Virtual-Camera-Methode nutzen."),
+            ("Ist SplitCam kostenlos für JustForFans?", "Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit."),
+        ],
+        "steps": [
+            ("SplitCam herunterladen und installieren", "SplitCam ist kostenlose Live-Streaming-Software für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen. Es installiert eine virtuelle Kamera, die der Browser auswählen kann."),
+            ("Szene aufbauen", "SplitCam öffnen und die Webcam hinzufügen. Overlays, Text, eine zweite Kamera oder das Smartphone, Beauty-Filter oder einen KI-Hintergrund einbauen — alles live."),
+            ("Live-Broadcast auf JFF starten", "In deinen JustForFans-Creator-Account einloggen und den Live-Broadcaster öffnen, um einen Stream für deine Abonnenten zu starten."),
+            ("SplitCam als Kamera wählen", "Im Kamera-Dropdown des JFF-Broadcasters <strong>SplitCam</strong> statt deiner rohen Webcam wählen — deine komponierte Szene ersetzt die flache Kamera. (Oder, falls verfügbar, JFFs External-Encoder-Key in die Custom-RTMP-Felder von SplitCam einfügen.)"),
+            ("Go Live drücken", "Den Broadcast starten — deine SplitCam-Szene, Overlays und Filter erreichen deine JustForFans-Abonnenten."),
+        ],
+    },
 ]

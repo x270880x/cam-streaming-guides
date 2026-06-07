@@ -931,4 +931,71 @@ PLATFORMS_HR = [
          ("Klikni Go Live", "Pritisni <strong>Go Live</strong> u SplitCamu, zatim idi online iz Members Areje. Unutar ~10 sekundi stream stiže do publike AdultWorka."),
      ],
     },
+    {"slug": "jerkmate", "name": "Jerkmate",
+     "title": "Prijenos na Jerkmate sa SplitCamom — podešavanje preko Streamate mreže",
+     "desc": "Prijenos na Jerkmate s besplatnim SplitCamom — Jerkmate povlači uživo modele sa Streamate mreže, pa streamaš preko SM Connecta i SplitCamova ugrađenog Streamate kanala. Multi-kamera scene, bez vodenog žiga.",
+     "kw": "jerkmate prijenos, postani jerkmate model, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate vanjski enkoder, jerkmate broadcast",
+     "h1html": 'Kako prenosiš na <span class="accent">Jerkmate</span>u sa SplitCamom',
+     "h1short": "Prijenos Jerkmate",
+     "card": "Jerkmate vuče modele sa Streamate mreže — streamaš preko SM Connecta + SplitCama.",
+     "intro": "Jerkmate je jedan od najtraženijih cam brendova, poznat po AI matchmakeru koji uparuje gledatelje s modelima uživo. Nema vlastiti broadcaster — Jerkmate <strong>povlači svoje uživo modele sa Streamate mreže</strong>. Prenosiš kao model Streamate mreže, a tvoj show se distribuira na Jerkmate i njegove partnerske stranice. Kako je Streamate <strong style='color:var(--text)'>unaprijed konfiguriran unutar SplitCamove</strong> liste kanala, besplatni <strong style='color:var(--text)'>SplitCam</strong> ti dopušta dodavanje multi-kamera scena, preklapanja i filtera bez ručnog RTMP unosa.",
+     "quick": "Prijenos na Jerkmate sa SplitCamom: instaliraj SplitCam, izgradi scenu, registriraj se kao model na Streamate mreži koja hrani Jerkmate, otvori <em>SM Connect → Start Show</em> i kopiraj ključ, zatim u SplitCamu otvori <em>Stream Settings → Add Channel → Streamate</em> i zalijepi, pa Go Live."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Registriraj se kao model Streamate mreže.</li>"
+              "<li>Uzmi ključ preko SM Connecta.</li>"
+              "<li>Add Channel → Streamate, Go Live.</li></ol>",
+     "key_how": "Jerkmateove uživo kamere dolaze sa <strong>Streamate broadcasting mreže</strong> — ne postoji zaseban \"Jerkmate enkoder\". Registriraj se kroz Jerkmateov model program ili izravno na Streamate mreži, otvori <strong>SM Connect</strong>, prihvati uvjete, klikni <strong>Start Show</strong> i kopiraj svoj streaming ključ. U SplitCamu otvori <strong>Stream Settings → Add Channel</strong>, odaberi <strong>Streamate</strong> s ugrađene liste i zalijepi ključ. Tvoj stream tada istovremeno stiže na Jerkmate i partnerske stranice mreže.",
+     "tips": [
+         ("Ispod svega je Streamate mreža", "Ne traži broadcaster specifičan za Jerkmate — prenosiš na Streamateu, a Jerkmate to redistribuira. Sve što vrijedi za Streamate (SM Connect, ugrađeni SplitCam kanal) vrijedi i za Jerkmate."),
+         ("Pretvori promet od AI uparivanja", "Jerkmateov matchmaker usmjerava gledatelje prema modelima koji odgovaraju njihovim izborima — polirana SplitCam scena s preklapanjima i dobrim kadriranjem konvertira te uparene gledatelje daleko bolje od ravne web kamere."),
+         ("Jedan feed, više stranica", "Prijenos na Streamate mrežu stavlja te na Jerkmate plus njegove partnerske stranice istovremeno — širi doseg iz jednog SplitCam streama, bez dodatnog podešavanja."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Ima li Jerkmate vlastiti broadcaster ili stream key?", "Ne — Jerkmate povlači uživo modele sa Streamate mreže. Prenosiš kao model Streamate mreže preko SM Connecta, a tvoj show se automatski pojavljuje na Jerkmateu."),
+         ("Kako dobiti svoj Jerkmate stream key?", "Preko SM Connecta na strani modela Streamate mreže: prihvati uvjete → Start Show → kopiraj ključ. Zalijepi ga u SplitCamov ugrađeni Streamate kanal — bez ručnog RTMP URL-a."),
+         ("Koji bitrate za Jerkmate?", "Zaključaj 1080p na 30 fps, 3500–6000 Kbps s 2-sekundnim keyframeom. Feed mreže je adaptivan, pa je niži bitrate pri statičnoj slici normalan. Pokreni SplitCamov test brzine i koristi kabelsku vezu."),
+         ("Je li SplitCam besplatan za Jerkmate?", "Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja. Streamate (koji hrani Jerkmate) je ugrađeni SplitCam kanal, pa nema zasebnog troška enkodera."),
+     ],
+     "steps": [
+         ("Preuzmi i instaliraj SplitCam", "SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga."),
+         ("Izgradi svoju scenu", "Otvori SplitCam i dodaj webkameru. Naslagaj preklapanja, tekst, drugu kameru ili mobitel, beauty filtere ili AI pozadinu — jaka scena konvertira Jerkmateove uparene gledatelje."),
+         ("Registriraj se kao model i uzmi ključ", "Registriraj se kroz Jerkmateov model program ili izravno na <strong>Streamate mreži</strong> koja ga hrani. Otvori <strong>SM Connect</strong>, prihvati uvjete, klikni <strong>Start Show</strong> i kopiraj svoj streaming ključ."),
+         ("Dodaj Streamate kao kanal u SplitCamu", "Otvori <strong>Stream Settings → Add Channel</strong>, odaberi <strong>Streamate</strong> s ugrađene liste i zalijepi ključ — bez ručnog RTMP URL-a. Zaključaj rezoluciju na 1080p."),
+         ("Klikni Go Live", "Pritisni <strong>Go Live</strong> u SplitCamu — zeleni slider potvrđuje vezu. Tvoj show izlazi kroz Streamate mrežu i pojavljuje se na Jerkmateu."),
+     ],
+    },
+    {"slug": "justforfans", "name": "JustForFans",
+     "title": "Uživo na JustForFans sa SplitCamom — podešavanje virtualne kamere",
+     "desc": "Uživo na JustForFans (JFF) s besplatnim SplitCamom — koristi SplitCam kao virtualnu kameru u JFF live broadcasteru za multi-kamera scene, preklapanja i filtere. Bez vodenog žiga, bez registracije.",
+     "kw": "uživo justforfans, justforfans live, jff live stream, justforfans obs, justforfans virtualna kamera, justfor.fans cam, justforfans broadcast",
+     "h1html": 'Kako ideš uživo na <span class="accent">JustForFans</span> sa SplitCamom',
+     "h1short": "Live JustForFans",
+     "card": "Koristi SplitCam kao virtualnu kameru u JustForFans live broadcasteru.",
+     "intro": "JustForFans (JFF) je pretplatnička platforma u vlasništvu creatora — dugovječna alternativa OnlyFansu koju su osnovali izvođači, s pretplatama, pay-per-view sadržajem i live opcijom u pregledniku. Njegov live broadcaster prikazuje jednu ravnu web kameru; usmjeravanjem na besplatni <strong style='color:var(--text)'>SplitCam</strong> kao <strong>virtualnu kameru</strong> otključavaš multi-kamera scene, preklapanja i filtere. Ako tvoj creator dashboard izloži i opciju vanjskog enkodera / stream keya, SplitCam se umjesto toga spaja preko RTMP-a.",
+     "quick": "Uživo na JustForFans sa SplitCamom: instaliraj SplitCam, izgradi scenu, pokreni live prijenos na JFF-u, pa u biraču kamere broadcastera odaberi <em>SplitCam</em> kao web kameru — i kreni uživo."
+              "<ol><li>Instaliraj SplitCam.</li><li>Dodaj kameru + scenu.</li>"
+              "<li>Pokreni live prijenos na JFF-u.</li>"
+              "<li>Odaberi SplitCam u izborniku kamere.</li><li>Go Live.</li></ol>",
+     "key_how": "JustForFans live radi u pregledniku. Izgradi scenu u SplitCamu — registrira se kao sistemska web kamera pod nazivom <strong>\"SplitCam Video Driver\"</strong> — zatim otvori JFF live broadcaster i u izborniku kamere odaberi <strong>SplitCam</strong> umjesto sirove web kamere. Tvoja složena scena zamjenjuje ravnu kameru. Ako JFF-ov creator dashboard nudi opciju <strong>vanjskog enkodera / stream keya</strong>, zalijepi taj ključ u SplitCamova custom RTMP polja umjesto toga.",
+     "tips": [
+         ("Virtualna kamera radi posvuda", "Čak i kad je live na platformi samo u pregledniku, SplitCam se pojavljuje kao web kamera koju možeš odabrati — pa tvoja multi-kamera scena, preklapanja i filteri rade na JFF-u potpuno bez stream keya."),
+         ("U vlasništvu creatora, sklon izvođačima", "JFF vode izvođači i platforma drži lojalnu bazu pretplatnika. Preklapanja koja cross-sellaju tvoj PPV ili pretplatu dobro konvertiraju kod publike koja već plaća."),
+         ("Daj pregledniku dopuštenje za kameru", "Ako se SplitCam ne pojavi u JFF-ovoj listi kamera, provjeri je li SplitCam prvo pokrenut i ima li preglednik dopuštenje za kameru — pa osvježi broadcaster."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Kako se SplitCam spaja na JustForFans?", "JFF live radi u pregledniku, pa se SplitCam spaja kao virtualna kamera: odaberi SplitCam u biraču kamere JFF broadcastera. Nije potreban stream key."),
+         ("Mogu li koristiti preklapanja i više kamera na JFF-u?", "Da — izgradi scenu u SplitCamu (druga kamera, preklapanja, beauty ili AI-pozadinski filteri), a JFF vidi gotovu scenu kao jednu web kameru."),
+         ("Podržava li JustForFans OBS ili vanjske enkodere?", "JFF-ov live je prvenstveno temeljen na pregledniku / web kameri. Ako tvoj creator dashboard prikaže opciju vanjskog enkodera ili stream keya, zalijepi je u SplitCamova custom RTMP polja; inače koristi metodu virtualne kamere."),
+         ("Je li SplitCam besplatan za JustForFans?", "Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja."),
+     ],
+     "steps": [
+         ("Preuzmi i instaliraj SplitCam", "SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga. Instalira virtualnu kameru koju preglednik može odabrati."),
+         ("Izgradi svoju scenu", "Otvori SplitCam i dodaj webkameru. Naslagaj preklapanja, tekst, drugu kameru ili mobitel, beauty filtere ili AI pozadinu — primijenjeno uživo."),
+         ("Pokreni live prijenos na JFF-u", "Prijavi se na svoj JustForFans creator račun i otvori live broadcaster da pokreneš stream za svoje pretplatnike."),
+         ("Odaberi SplitCam kao kameru", "U izborniku kamere JFF broadcastera odaberi <strong>SplitCam</strong> umjesto sirove web kamere — tvoja složena scena zamjenjuje ravnu kameru. (Ili, ako je dostupno, zalijepi JFF-ov ključ vanjskog enkodera u SplitCamova custom RTMP polja.)"),
+         ("Go Live", "Pokreni prijenos — tvoja SplitCam scena, preklapanja i filteri stižu do tvojih JustForFans pretplatnika."),
+     ],
+    },
 ]

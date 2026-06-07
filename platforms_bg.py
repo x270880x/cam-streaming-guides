@@ -934,4 +934,74 @@ PLATFORMS_BG = [
             ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от Members Area. За ~10 секунди стриймът ти стига до публиката на AdultWork."),
         ],
     },
+    {
+        "slug": "jerkmate", "name": "Jerkmate",
+        "title": "Как да излъчваш в Jerkmate със SplitCam — настройка през Streamate мрежата",
+        "desc": "Излъчвай в Jerkmate с безплатния SplitCam — Jerkmate взема моделите си на живо от Streamate мрежата, така че стриймваш през SM Connect и вградения Streamate канал в SplitCam. Мулти-камера сцени, без воден знак.",
+        "kw": "излъчване jerkmate, jerkmate модел, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+        "h1html": 'Как да излъчваш в <span class="accent">Jerkmate</span> със SplitCam',
+        "h1short": "Излъчване Jerkmate",
+        "card": "Jerkmate тегли моделите си от Streamate мрежата — стриймваш през SM Connect + SplitCam.",
+        "intro": "Jerkmate е сред най-търсените кам брандове, познат с AI сватовника си, който свързва зрителите с модели на живо. Платформата няма собствен broadcaster — Jerkmate <strong>взема моделите си на живо от Streamate мрежата</strong>. Излъчваш като модел от Streamate мрежата, а шоуто ти се разпространява към Jerkmate и партньорските сайтове. Тъй като Streamate е <strong style='color:var(--text)'>предварително конфигуриран в списъка с канали на SplitCam</strong>, безплатният <strong style='color:var(--text)'>SplitCam</strong> ти позволява да добавиш мулти-камера сцени, наслагвания и филтри без ръчно RTMP въвеждане.",
+        "quick": "Излъчване в Jerkmate със SplitCam: инсталирай SplitCam, изгради сцената, регистрирай се като модел в Streamate мрежата, която захранва Jerkmate, отвори <em>SM Connect → Start Show</em> и копирай ключа, после в SplitCam отвори <em>Stream Settings → Add Channel → Streamate</em>, постави и Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Регистрирай се като модел в Streamate мрежата.</li>"
+                 "<li>Вземи ключа чрез SM Connect.</li>"
+                 "<li>Add Channel → Streamate, Go Live.</li></ol>",
+        "key_how": "Кам стриймовете на живо в Jerkmate идват от <strong>broadcasting мрежата Streamate</strong> — няма отделен \"Jerkmate encoder\". Регистрирай се през модел програмата на Jerkmate или директно в Streamate мрежата, отвори <strong>SM Connect</strong>, приеми условията, кликни <strong>Start Show</strong> и копирай streaming ключа. В SplitCam отвори <strong>Stream Settings → Add Channel</strong>, избери <strong>Streamate</strong> от вградения списък и постави ключа. Стриймът ти тогава стига едновременно до Jerkmate и партньорските сайтове на мрежата.",
+        "tips": [
+            ("Отдолу е Streamate мрежата", "Не търси broadcaster само за Jerkmate — излъчваш в Streamate, а Jerkmate го преразпространява. Всичко, което работи за Streamate (SM Connect, вграденият канал в SplitCam), работи и за Jerkmate."),
+            ("Превърни AI-съвпадащия трафик", "Сватовникът на Jerkmate насочва зрителите към модели, които пасват на избора им — полирана SplitCam сцена с наслагвания и добро кадриране превръща тези съвпаднати зрители далеч по-добре от плоска уебкамера."),
+            ("Един поток, много сайтове", "Излъчването в Streamate мрежата те поставя едновременно в Jerkmate и партньорските сайтове — по-широк обхват от един SplitCam стрийм, без допълнителна настройка."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Jerkmate има ли собствен broadcaster или stream key?", "Не — Jerkmate взема моделите си на живо от Streamate мрежата. Излъчваш като модел от Streamate мрежата чрез SM Connect, а шоуто ти се появява в Jerkmate автоматично."),
+            ("Как получавам своя stream key за Jerkmate?", "През SM Connect от страната на модела в Streamate мрежата: приеми условията → Start Show → копирай ключа. Постави го във вградения Streamate канал на SplitCam — без ръчен RTMP URL."),
+            ("Какъв битрейт за Jerkmate?", "Фиксирай 1080p при 30 fps. Потокът на мрежата е адаптивен, така че по-нисък битрейт при статичен кадър е нормален. Пусни теста за скорост на SplitCam и използвай кабелна връзка."),
+            ("SplitCam безплатен ли е за Jerkmate?", "Да — SplitCam е безплатен, без воден знак и без времево ограничение. Streamate (който захранва Jerkmate) е вграден канал в SplitCam, така че няма отделен разход за енкодер."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон — силна сцена превръща съвпаднатите зрители на Jerkmate."),
+            ("Регистрирай се като модел и вземи ключа", "Регистрирай се през модел програмата на Jerkmate или директно в <strong>Streamate мрежата</strong>, която го захранва. Отвори <strong>SM Connect</strong>, приеми условията, кликни <strong>Start Show</strong> и копирай streaming ключа."),
+            ("Добави Streamate като канал в SplitCam", "Отвори <strong>Stream Settings → Add Channel</strong>, избери <strong>Streamate</strong> от вградения списък и постави ключа — без ръчен RTMP URL. Фиксирай резолюцията на 1080p."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam — зелен слайдер потвърждава връзката. Шоуто ти излиза през Streamate мрежата и се появява в Jerkmate."),
+        ],
+    },
+    {
+        "slug": "justforfans", "name": "JustForFans",
+        "title": "Как да си на живо в JustForFans със SplitCam — настройка с виртуална камера",
+        "desc": "Излизай на живо в JustForFans (JFF) с безплатния SplitCam — използвай SplitCam като виртуална камера в JFF broadcaster-а за мулти-камера сцени, наслагвания и филтри. Без воден знак, без регистрация.",
+        "kw": "на живо justforfans, justforfans live, jff live stream, justforfans obs, justforfans виртуална камера, justfor.fans cam, justforfans broadcast",
+        "h1html": 'Как да си на живо в <span class="accent">JustForFans</span> със SplitCam',
+        "h1short": "Live JustForFans",
+        "card": "Използвай SplitCam като виртуална камера в live broadcaster-а на JustForFans.",
+        "intro": "JustForFans (JFF) е абонаментна платформа, притежавана от creator-и — дългогодишна алтернатива на OnlyFans, основана от изпълнители, с абонаменти, pay-per-view съдържание и live функция в браузъра. Нейният broadcaster показва само една плоска уебкамера; ако го насочиш към безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong>, отключваш мулти-камера сцени, наслагвания и филтри. Ако твоят creator dashboard излага и опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.",
+        "quick": "Излизане на живо в JustForFans със SplitCam: инсталирай SplitCam, изгради сцената, започни live излъчване в JFF, и в селектора за камера на broadcaster-а избери <em>SplitCam</em> като своя уебкамера — после излез на живо."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Започни live излъчване в JFF.</li>"
+                 "<li>Избери SplitCam от падащото меню за камера.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Live функцията на JustForFans върви в браузъра. Изгради сцената в SplitCam — той се регистрира като системна уебкамера с име <strong>\"SplitCam Video Driver\"</strong> — после отвори JFF live broadcaster-а и в падащото меню за камера избери <strong>SplitCam</strong> вместо суровата си уебкамера. Съставената ти сцена замества плоската камера. Ако creator dashboard-ът на JFF предлага опция за <strong>external encoder / stream key</strong>, постави този ключ в полетата за custom RTMP на SplitCam вместо това.",
+        "tips": [
+            ("Виртуалната камера работи навсякъде", "Дори когато live функцията на платформата е само в браузъра, SplitCam се появява като избираема уебкамера — така мулти-камера сцената, наслагванията и филтрите ти работят в JFF изобщо без stream key."),
+            ("Притежавана от creator-и, приятелска към изпълнителите", "JFF се управлява от изпълнители и пази лоялна абонатска база. Наслагвания, които кръстосано продават твоето PPV или абонамент, се превръщат добре пред публика, която вече плаща."),
+            ("Дай на браузъра достъп до камерата", "Ако SplitCam не се появява в списъка с камери на JFF, увери се, че SplitCam върви първо и че браузърът има разрешение за камера — после презареди broadcaster-а."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Как SplitCam се връзва с JustForFans?", "Live функцията на JFF е в браузъра, така че SplitCam се връзва като виртуална камера: избираш SplitCam в селектора за камера на JFF broadcaster-а. Не е нужен stream key."),
+            ("Мога ли да използвам наслагвания и няколко камери в JFF?", "Да — изгради сцената в SplitCam (втора камера, наслагвания, beauty или AI-фон филтри), а JFF вижда готовата сцена като една уебкамера."),
+            ("Поддържа ли JustForFans OBS или външни енкодери?", "Live функцията на JFF е предимно базирана на браузър/уебкамера. Ако твоят creator dashboard показва опция за external encoder или stream key, постави я в полетата за custom RTMP на SplitCam; иначе използвай метода с виртуална камера."),
+            ("SplitCam безплатен ли е за JustForFans?", "Да — SplitCam е безплатен, без воден знак и без времево ограничение."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак. Инсталира виртуална камера, която браузърът може да избере."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон — прилагани на живо."),
+            ("Започни live излъчване в JFF", "Влез в creator акаунта си в JustForFans и отвори live broadcaster-а, за да започнеш стрийм за абонатите си."),
+            ("Избери SplitCam като своя камера", "В падащото меню за камера на JFF broadcaster-а избери <strong>SplitCam</strong> вместо суровата си уебкамера — съставената ти сцена замества плоската камера. (Или, ако е налична, постави external encoder ключа на JFF в полетата за custom RTMP на SplitCam.)"),
+            ("Натисни Go Live", "Стартирай излъчването — твоята SplitCam сцена, наслагвания и филтри стигат до абонатите ти в JustForFans."),
+        ],
+    },
 ]

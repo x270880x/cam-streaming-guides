@@ -931,4 +931,72 @@ PLATFORMS_EL = [
          ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγες online από το Members Area. Μέσα σε ~10 δευτερόλεπτα το stream σου φτάνει στο κοινό του AdultWork."),
      ],
     },
+    {"slug": "jerkmate", "name": "Jerkmate",
+     "title": "Πώς μεταδίδεις στο Jerkmate με SplitCam — Ρύθμιση δικτύου Streamate",
+     "desc": "Μετάδωσε στο Jerkmate με δωρεάν SplitCam — το Jerkmate αντλεί τα live μοντέλα του από το δίκτυο Streamate, οπότε μεταδίδεις μέσω SM Connect και του ενσωματωμένου καναλιού Streamate του SplitCam. Multi-camera σκηνές, χωρίς υδατογράφημα.",
+     "kw": "μετάδοση jerkmate, jerkmate model, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">Jerkmate</span> με SplitCam',
+     "h1short": "Μετάδοση στο Jerkmate",
+     "card": "Το Jerkmate τραβά μοντέλα από το δίκτυο Streamate — μεταδίδεις μέσω SM Connect + SplitCam.",
+     "intro": "Το Jerkmate είναι μία από τις πιο αναζητημένες cam μάρκες, γνωστή για τον AI matchmaker που ταιριάζει θεατές με live performers. Δεν διαθέτει δικό του broadcaster — το Jerkmate <strong>αντλεί τα live μοντέλα του από το δίκτυο Streamate</strong>. Μεταδίδεις ως μοντέλο του δικτύου Streamate και το show σου διανέμεται στο Jerkmate και στα συνεργαζόμενα sites του. Επειδή το Streamate είναι <strong style='color:var(--text)'>προ-ρυθμισμένο στη λίστα καναλιών του SplitCam</strong>, ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> σου επιτρέπει να προσθέσεις multi-camera σκηνές, overlays και φίλτρα χωρίς χειροκίνητη εισαγωγή RTMP.",
+     "quick": "Μετάδοση στο Jerkmate με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, εγγράφεσαι ως μοντέλο στο δίκτυο Streamate που τροφοδοτεί το Jerkmate, ανοίγεις <em>SM Connect → Start Show</em> και αντιγράφεις το κλειδί, μετά στο SplitCam ανοίγεις <em>Stream Settings → Add Channel → Streamate</em> και επικολλάς, και πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Εγγράψου ως μοντέλο του δικτύου Streamate.</li>"
+              "<li>Πάρε το κλειδί μέσω SM Connect.</li>"
+              "<li>Add Channel → Streamate, Go Live.</li></ol>",
+     "key_how": "Οι live κάμερες του Jerkmate προέρχονται από το <strong>δίκτυο μετάδοσης Streamate</strong> — δεν υπάρχει ξεχωριστός \"Jerkmate encoder\". Κάνε εγγραφή μέσω του model προγράμματος του Jerkmate ή απευθείας στο δίκτυο Streamate, άνοιξε το <strong>SM Connect</strong>, αποδέξου τους όρους, κλικ <strong>Start Show</strong> και αντίγραψε το streaming κλειδί σου. Στο SplitCam άνοιξε <strong>Stream Settings → Add Channel</strong>, επίλεξε <strong>Streamate</strong> από την ενσωματωμένη λίστα και επικόλλησε το κλειδί. Το stream σου φτάνει τότε ταυτόχρονα στο Jerkmate και στα συνεργαζόμενα sites του δικτύου.",
+     "tips": [
+         ("Από κάτω είναι το δίκτυο Streamate", "Μην ψάχνεις broadcaster ειδικά για το Jerkmate — μεταδίδεις στο Streamate και το Jerkmate το αναμεταδίδει. Ό,τι δουλεύει για το Streamate (SM Connect, το ενσωματωμένο κανάλι του SplitCam) δουλεύει και για το Jerkmate."),
+         ("Μετέτρεψε την κίνηση του AI matchmaker", "Ο matchmaker του Jerkmate οδηγεί τους θεατές σε μοντέλα που ταιριάζουν στις επιλογές τους — μια προσεγμένη σκηνή SplitCam με overlays και καλό καδράρισμα μετατρέπει αυτούς τους ταιριασμένους θεατές πολύ καλύτερα από μια επίπεδη webcam."),
+         ("Ένα feed, πολλά sites", "Η μετάδοση στο δίκτυο Streamate σε βάζει ταυτόχρονα στο Jerkmate και στα συνεργαζόμενα sites του — μεγαλύτερη εμβέλεια από ένα μόνο stream SplitCam, χωρίς επιπλέον ρύθμιση."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Έχει το Jerkmate δικό του broadcaster ή stream key;", "Όχι — το Jerkmate αντλεί τα live μοντέλα του από το δίκτυο Streamate. Μεταδίδεις ως μοντέλο του δικτύου Streamate μέσω SM Connect και το show σου εμφανίζεται αυτόματα στο Jerkmate."),
+         ("Πώς παίρνω το stream key μου για το Jerkmate;", "Μέσω SM Connect από την πλευρά του μοντέλου του δικτύου Streamate: αποδοχή όρων → Start Show → αντιγραφή κλειδιού. Επικόλλησέ το στο ενσωματωμένο κανάλι Streamate του SplitCam — χωρίς χειροκίνητο RTMP URL."),
+         ("Τι bitrate για το Jerkmate;", "Σταθεροποίησε 1080p στα 30 fps. Το feed του δικτύου είναι προσαρμοστικό, οπότε χαμηλότερο bitrate σε στατική εικόνα είναι φυσιολογικό. Τρέξε το speed test του SplitCam και χρησιμοποίησε ενσύρματη σύνδεση."),
+         ("Είναι ο SplitCam δωρεάν για το Jerkmate;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο. Το Streamate (που τροφοδοτεί το Jerkmate) είναι ενσωματωμένο κανάλι στον SplitCam, οπότε δεν υπάρχει ξεχωριστό κόστος encoder."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — μια δυνατή σκηνή μετατρέπει τους ταιριασμένους θεατές του Jerkmate."),
+         ("Εγγράψου ως μοντέλο και πάρε το κλειδί σου", "Κάνε εγγραφή μέσω του model προγράμματος του Jerkmate ή απευθείας στο <strong>δίκτυο Streamate</strong> που το τροφοδοτεί. Άνοιξε το <strong>SM Connect</strong>, αποδέξου τους όρους, κλικ <strong>Start Show</strong> και αντίγραψε το streaming κλειδί σου."),
+         ("Πρόσθεσε το Streamate ως κανάλι στον SplitCam", "Άνοιξε <strong>Stream Settings → Add Channel</strong>, επίλεξε <strong>Streamate</strong> από την ενσωματωμένη λίστα και επικόλλησε το κλειδί — χωρίς χειροκίνητο RTMP URL. Σταθεροποίησε την ανάλυση στα 1080p."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam — ένα πράσινο slider επιβεβαιώνει τη σύνδεση. Το show σου βγαίνει σε όλο το δίκτυο Streamate και εμφανίζεται στο Jerkmate."),
+     ],
+    },
+    {"slug": "justforfans", "name": "JustForFans",
+     "title": "Πώς πας ζωντανά στο JustForFans με SplitCam — Ρύθμιση εικονικής κάμερας",
+     "desc": "Πήγαινε ζωντανά στο JustForFans (JFF) με δωρεάν SplitCam — χρησιμοποίησε τον SplitCam ως εικονική κάμερα στον live broadcaster του JFF για multi-camera σκηνές, overlays και φίλτρα. Χωρίς υδατογράφημα, χωρίς εγγραφή.",
+     "kw": "ζωντανά justforfans, justforfans live, jff live stream, justforfans obs, justforfans virtual camera, justfor.fans cam, justforfans broadcast",
+     "h1html": 'Πώς πας ζωντανά στο <span class="accent">JustForFans</span> με SplitCam',
+     "h1short": "Live στο JustForFans",
+     "card": "Χρησιμοποίησε τον SplitCam ως εικονική κάμερα στον live broadcaster του JustForFans.",
+     "intro": "Το JustForFans (JFF) είναι μια συνδρομητική πλατφόρμα ιδιοκτησίας creators — μια μακρόβια εναλλακτική του OnlyFans, ιδρυμένη από performer, με συνδρομές, pay-per-view και browser-based live λειτουργία. Ο live broadcaster του δείχνει μία απλή, μονο-κάμερας εικόνα· στρέφοντάς τον στον δωρεάν <strong style='color:var(--text)'>SplitCam</strong> ως <strong>εικονική κάμερα</strong> ξεκλειδώνεις multi-camera σκηνές, overlays και φίλτρα. Αν το creator dashboard σου εκθέτει και επιλογή external encoder / stream key, ο SplitCam συνδέεται εναλλακτικά μέσω RTMP.",
+     "quick": "Live στο JustForFans με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ξεκινάς live μετάδοση στο JFF και στον επιλογέα κάμερας του broadcaster διαλέγεις τον <em>SplitCam</em> ως webcam — μετά πας live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Ξεκίνα live μετάδοση στο JFF.</li>"
+              "<li>Επίλεξε SplitCam στο dropdown κάμερας.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Το live του JustForFans τρέχει στον browser. Χτίσε τη σκηνή σου στον SplitCam — καταχωρείται ως webcam συστήματος με όνομα <strong>\"SplitCam Video Driver\"</strong> — μετά άνοιξε τον live broadcaster του JFF και, στο dropdown κάμερας, επίλεξε τον <strong>SplitCam</strong> αντί για τη γυμνή webcam σου. Η σύνθετη σκηνή σου αντικαθιστά την επίπεδη κάμερα. Αν το creator dashboard του JFF προσφέρει επιλογή <strong>external encoder / stream key</strong>, επικόλλησε αυτό το κλειδί στα custom RTMP πεδία του SplitCam εναλλακτικά.",
+     "tips": [
+         ("Η εικονική κάμερα δουλεύει παντού", "Ακόμη κι όταν το live μιας πλατφόρμας είναι μόνο μέσω browser, ο SplitCam εμφανίζεται ως επιλέξιμη webcam — έτσι η multi-camera σκηνή σου, τα overlays και τα φίλτρα δουλεύουν στο JFF χωρίς κανένα stream key."),
+         ("Ιδιοκτησίας creators, φιλικό προς performers", "Το JFF διοικείται από performers και κρατά μια πιστή βάση συνδρομητών. Overlays που προωθούν το PPV ή τη συνδρομή σου μετατρέπουν καλά σε ένα κοινό που ήδη πληρώνει."),
+         ("Δώσε άδεια κάμερας στον browser", "Αν ο SplitCam δεν εμφανίζεται στη λίστα κάμερας του JFF, βεβαιώσου ότι ο SplitCam τρέχει πρώτα και ότι ο browser έχει άδεια κάμερας — μετά κάνε reload τον broadcaster."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πώς συνδέεται ο SplitCam με το JustForFans;", "Το live του JFF είναι browser-based, οπότε ο SplitCam συνδέεται ως εικονική κάμερα: επίλεξε τον SplitCam στον επιλογέα κάμερας του broadcaster του JFF. Δεν χρειάζεται stream key."),
+         ("Μπορώ να χρησιμοποιήσω overlays και πολλές κάμερες στο JFF;", "Ναι — χτίσε τη σκηνή στον SplitCam (δεύτερη κάμερα, overlays, beauty ή AI-background φίλτρα) και το JFF βλέπει την έτοιμη σκηνή ως μία webcam."),
+         ("Υποστηρίζει το JustForFans OBS ή external encoders;", "Το live του JFF είναι κατά κύριο λόγο browser/webcam-based. Αν το creator dashboard σου δείχνει επιλογή external encoder ή stream key, επικόλλησέ το στα custom RTMP πεδία του SplitCam· αλλιώς χρησιμοποίησε τη μέθοδο της εικονικής κάμερας."),
+         ("Είναι ο SplitCam δωρεάν για το JustForFans;", "Ναι — ο SplitCam είναι δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Εγκαθιστά μια εικονική κάμερα που μπορεί να επιλέξει ο browser."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — όλα εφαρμοσμένα ζωντανά."),
+         ("Ξεκίνα live μετάδοση στο JFF", "Συνδέσου στον creator λογαριασμό σου στο JustForFans και άνοιξε τον live broadcaster για να ξεκινήσεις μετάδοση για τους συνδρομητές σου."),
+         ("Επίλεξε τον SplitCam ως κάμερα", "Στο dropdown κάμερας του broadcaster του JFF, διάλεξε τον <strong>SplitCam</strong> αντί για τη γυμνή webcam σου — η σύνθετη σκηνή σου αντικαθιστά την επίπεδη κάμερα. (Ή, αν είναι διαθέσιμο, επικόλλησε το external encoder κλειδί του JFF στα custom RTMP πεδία του SplitCam.)"),
+         ("Πάτα Go Live", "Ξεκίνα τη μετάδοση — η σκηνή σου στον SplitCam, τα overlays και τα φίλτρα φτάνουν στους συνδρομητές σου στο JustForFans."),
+     ],
+    },
 ]

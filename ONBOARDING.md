@@ -14,13 +14,14 @@ adult = revenue, so it gets its own domain + 301 redirects, not deletion).
 - Sister project: the main SplitCam site (`../splitcam/`).
 
 ## Current state
-- **1330 pages**: ~62 platforms × 35 languages + per-language hubs, legal, OBS-alternative
+- **1400 pages**: 33 platforms × 35 languages + per-language hubs, legal, OBS-alternative
   and become-a-cam-model pages.
 - All pages are `noindex` — this is staging, not the production domain yet.
-- Platforms now include the original 19 plus the "14 parent expansion" batch
-  (livejasmin, myfreecams, cherry-tv, amateurtv, camster, camversity, skyprivate, manyvids,
-  fansly, ifriends, babestation, adultwork, …). Adult-platform batch 2 = ifriends + babestation
-  + adultwork (10-12/14), live across all 35 languages.
+- Platforms = the original 19 plus the now-complete "14 parent expansion": livejasmin,
+  myfreecams, cherry-tv, amateurtv, camster, camversity, skyprivate, manyvids, fansly (1-9),
+  ifriends, babestation, adultwork (10-12), jerkmate, justforfans (13-14). All live across
+  all 35 languages. Note: jerkmate broadcasts via the Streamate network (reuses the streamate
+  flow); justforfans is browser-live so SplitCam connects as a virtual camera.
 
 ## How it's built — STATIC GENERATOR
 Do not hand-edit the HTML. Edit data, then regenerate.

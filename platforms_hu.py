@@ -931,4 +931,72 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Members Areából. Kb. 10 másodperc alatt eléri a streamed az AdultWork közönségét."),
      ],
     },
+    {"slug": "jerkmate", "name": "Jerkmate",
+     "title": "Hogyan adj a Jerkmate-en SplitCammel — Streamate hálózati beállítás",
+     "desc": "Adj a Jerkmate-en ingyenes SplitCammel — a Jerkmate a Streamate hálózatból veszi az élő modelljeit, így SM Connecten és a SplitCam beépített Streamate csatornáján keresztül adsz. Multi-kamera jelenetek, nincs vízjel.",
+     "kw": "jerkmate adás, jerkmate model, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+     "h1html": 'Hogyan adsz a <span class="accent">Jerkmate</span>-en SplitCammel',
+     "h1short": "Adás a Jerkmate-en",
+     "card": "A Jerkmate a Streamate hálózatból húzza a modelleket — SM Connecten + SplitCammel adsz.",
+     "intro": "A Jerkmate az egyik legkeresettebb cam márka, az AI-párkeresőjéről ismert, ami a nézőket élő előadókkal párosítja. Nincs saját broadcastere — a Jerkmate <strong>a Streamate hálózatból veszi az élő modelljeit</strong>. Streamate-hálózati modellként adsz, és a showd a Jerkmate-re és a partneroldalaira kerül szét. Mivel a Streamate <strong style='color:var(--text)'>előre be van állítva a SplitCam</strong> csatornalistájában, az ingyenes <strong style='color:var(--text)'>SplitCammel</strong> kézi RTMP bevitel nélkül adhatsz hozzá multi-kamera jeleneteket, overlay-eket és szűrőket.",
+     "quick": "Adás a Jerkmate-en SplitCammel: telepíted a SplitCamet, jelenetet építesz, modellként regisztrálsz a Jerkmate-et tápláló Streamate hálózaton, megnyitod <em>SM Connect → Start Show</em>-t és másolod a kulcsot, majd a SplitCamben megnyitod <em>Stream Settings → Add Channel → Streamate</em>-et, beilleszted és Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Regisztrálj Streamate-hálózati modellként.</li>"
+              "<li>Szerezd meg a kulcsot SM Connecten át.</li>"
+              "<li>Add Channel → Streamate, Go Live.</li></ol>",
+     "key_how": "A Jerkmate élő camjei a <strong>Streamate broadcast hálózatból</strong> jönnek — nincs külön „Jerkmate encoder”. Regisztrálj a Jerkmate modell programján át, vagy közvetlenül a Streamate hálózaton, nyisd meg az <strong>SM Connect</strong>-et, fogadd el a feltételeket, kattints <strong>Start Show</strong>-ra és másold a streaming kulcsodat. A SplitCamben nyisd meg <strong>Stream Settings → Add Channel</strong>-t, válaszd a <strong>Streamate</strong>-et a beépített listából és illeszd be a kulcsot. A streamed így egyszerre éri el a Jerkmate-et és a hálózat partneroldalait.",
+     "tips": [
+         ("Alatta a Streamate hálózat van", "Ne keress Jerkmate-specifikus broadcastert — a Streamate-en adsz, és a Jerkmate osztja szét. Bármi, ami a Streamate-hez működik (SM Connect, a beépített SplitCam csatorna), a Jerkmate-hez is működik."),
+         ("Konvertáld az AI-párosított forgalmat", "A Jerkmate párkeresője a választásaikhoz illő modellekhez tereli a nézőket — egy kidolgozott SplitCam jelenet overlay-ekkel és jó képkivágással sokkal jobban konvertálja ezeket a párosított nézőket, mint egy lapos webkamera."),
+         ("Egy feed, sok oldal", "A Streamate hálózatra adás egyszerre tesz fel a Jerkmate-re és a partneroldalaira — szélesebb elérés egyetlen SplitCam streamből, extra beállítás nélkül."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Van a Jerkmate-nek saját broadcastere vagy stream key-e?", "Nincs — a Jerkmate a Streamate hálózatból veszi az élő modelljeit. Streamate-hálózati modellként adsz SM Connecten át, és a showd automatikusan megjelenik a Jerkmate-en."),
+         ("Hogyan szerzem meg a Jerkmate stream key-emet?", "Az SM Connecten át, a Streamate-hálózati modell oldalon: fogadd el a feltételeket → Start Show → másold a kulcsot. Illeszd be a SplitCam beépített Streamate csatornájába — nincs szükség kézi RTMP URL-re."),
+         ("Milyen bitráta a Jerkmate-hez?", "Rögzítsd 1080p-re 30 fps-en. A hálózati feed adaptív, így alacsonyabb bitráta statikus képen normális. Futtasd a SplitCam sebességtesztjét és használj vezetékes kapcsolatot."),
+         ("Ingyenes a SplitCam a Jerkmate-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Streamate (ami a Jerkmate-et táplálja) beépített SplitCam csatorna, így nincs külön enkóder költség sem."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — egy erős jelenet konvertálja a Jerkmate párosított nézőit."),
+         ("Regisztrálj modellként és szerezd meg a kulcsot", "Regisztrálj a Jerkmate modell programján át, vagy közvetlenül az azt tápláló <strong>Streamate hálózaton</strong>. Nyisd meg az <strong>SM Connect</strong>-et, fogadd el a feltételeket, kattints <strong>Start Show</strong>-ra és másold a streaming kulcsodat."),
+         ("Add hozzá a Streamate-et csatornaként a SplitCamben", "Nyisd meg <strong>Stream Settings → Add Channel</strong>-t, válaszd a <strong>Streamate</strong>-et a beépített listából és illeszd be a kulcsot — nincs kézi RTMP URL. Rögzítsd a felbontást 1080p-re."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben — zöld slider erősíti meg a kapcsolatot. A showd kimegy a Streamate hálózatra és megjelenik a Jerkmate-en."),
+     ],
+    },
+    {"slug": "justforfans", "name": "JustForFans",
+     "title": "Hogyan menj élőben JustForFansön SplitCammel — Virtuális kamera beállítás",
+     "desc": "Menj élőben JustForFansön (JFF) ingyenes SplitCammel — használd a SplitCamet virtuális kameraként a JFF élő broadcasterében multi-kamera jelenetekhez, overlay-ekhez és szűrőkhöz. Nincs vízjel, nincs regisztráció.",
+     "kw": "justforfans élő adás, justforfans live, jff live stream, justforfans obs, justforfans virtuális kamera, justfor.fans cam, justforfans broadcast",
+     "h1html": 'Hogyan mész élőben <span class="accent">JustForFans</span>ön SplitCammel',
+     "h1short": "Live JustForFans",
+     "card": "Használd a SplitCamet virtuális kameraként a JustForFans élő broadcasterében.",
+     "intro": "A JustForFans (JFF) creator-tulajdonú előfizetéses platform — egy régóta futó, előadók által alapított OnlyFans alternatíva előfizetésekkel, pay-per-view tartalommal és böngészős élő funkcióval. Az élő broadcastere egyetlen lapos webkamerát mutat; ha az ingyenes <strong style='color:var(--text)'>SplitCamre</strong> mint <strong>virtuális kamerára</strong> irányítod, multi-kamera jeleneteket, overlay-eket és szűrőket old ki. Ha a creator dashboardod külső enkóder / stream key opciót is felkínál, a SplitCam helyette RTMP-n csatlakozik.",
+     "quick": "Live JustForFansön SplitCammel: telepíted a SplitCamet, jelenetet építesz, élő adást indítasz a JFF-en, és a broadcaster kameraválasztójában a <em>SplitCamet</em> választod webkameraként — majd élőben vagy."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Indíts élő adást a JFF-en.</li>"
+              "<li>Válaszd a SplitCamet a kamera legördülőben.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "A JustForFans élő funkciója a böngészőben fut. Építsd meg a jelenetet a SplitCamben — a rendszer <strong>„SplitCam Video Driver”</strong> néven webkameraként látja —, majd nyisd meg a JFF élő broadcasterét, és a kamera legördülőben válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett. A komponált jeleneted lép a lapos kamera helyébe. Ha a JFF creator dashboardja <strong>külső enkóder / stream key</strong> opciót kínál, illeszd be azt a kulcsot a SplitCam egyéni RTMP mezőibe.",
+     "tips": [
+         ("A virtuális kamera mindenhol működik", "Még ha egy platform élő funkciója csak böngészős is, a SplitCam választható webkameraként jelenik meg — így a multi-kamera jeleneted, az overlay-ek és a szűrők stream key nélkül is működnek a JFF-en."),
+         ("Creator-tulajdonú, előadóbarát", "A JFF-et előadók működtetik, és hűséges előfizetői bázist tart fenn. A PPV-det vagy előfizetésedet keresztértékesítő overlay-ek jól konvertálnak egy közönségnél, ami már fizet neked."),
+         ("Add meg a kamera engedélyt a böngészőnek", "Ha a SplitCam nem jelenik meg a JFF kameralistájában, előbb győződj meg róla, hogy a SplitCam fut és a böngészőnek van kamera engedélye — majd töltsd újra a broadcastert."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hogyan csatlakozik a SplitCam a JustForFanshez?", "A JFF élő funkciója böngészős, így a SplitCam virtuális kameraként csatlakozik: válaszd a SplitCamet a JFF broadcaster kameraválasztójában. Nincs szükség stream key-re."),
+         ("Használhatok overlay-eket és több kamerát a JFF-en?", "Igen — építsd meg a jelenetet a SplitCamben (második kamera, overlay-ek, beauty vagy AI-háttér szűrők), és a JFF a kész jelenetet egyetlen webkameraként látja."),
+         ("Támogat a JustForFans OBS-t vagy külső enkódereket?", "A JFF élő funkciója elsősorban böngésző- / webkamera-alapú. Ha a creator dashboardod külső enkóder vagy stream key opciót mutat, illeszd be a SplitCam egyéni RTMP mezőibe; egyébként használd a virtuális kamera módot."),
+         ("Ingyenes a SplitCam a JustForFanshez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Telepít egy virtuális kamerát, amit a böngésző ki tud választani."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — mind élőben alkalmazva."),
+         ("Indíts élő adást a JFF-en", "Jelentkezz be a JustForFans creator fiókodba és nyisd meg az élő broadcastert, hogy adást indíts az előfizetőidnek."),
+         ("Válaszd a SplitCamet kameraként", "A JFF broadcaster kamera legördülőjében válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett — a komponált jeleneted lép a lapos kamera helyébe. (Vagy, ha elérhető, illeszd be a JFF külső enkóder kulcsát a SplitCam egyéni RTMP mezőibe.)"),
+         ("Go Live", "Indítsd el az adást — a SplitCam jeleneted, az overlay-ek és a szűrők elérik a JustForFans előfizetőidet."),
+     ],
+    },
 ]

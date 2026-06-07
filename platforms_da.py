@@ -919,4 +919,70 @@ PLATFORMS_DA = [
          ("Forbind SplitCam med AdultWork", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt AdultWork-server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
          ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Members Area. Inden for ~10 sekunder når strømmen AdultWorks publikum."),
      ]},
+    {"slug": "jerkmate", "name": "Jerkmate",
+     "title": "Sådan udsender du på Jerkmate med SplitCam — Streamate-netværk",
+     "desc": "Udsend på Jerkmate med gratis SplitCam — Jerkmate henter sine live-modeller fra Streamate-netværket, så du streamer via SM Connect og SplitCams integrerede Streamate-kanal. Multi-kamera scener, intet vandmærke.",
+     "kw": "jerkmate udsend, bliv jerkmate-model, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+     "h1html": 'Sådan udsender du på <span class="accent">Jerkmate</span> med SplitCam',
+     "h1short": "Udsend Jerkmate",
+     "card": "Jerkmate trækker modeller fra Streamate-netværket — stream via SM Connect + SplitCam.",
+     "intro": "Jerkmate er et af de mest søgte cam-brands, kendt for sin AI-matchmaker, der parrer seere med live-performere. Det driver ikke sin egen broadcaster — Jerkmate <strong>henter sine live-modeller fra Streamate-netværket</strong>. Du udsender som model på Streamate-netværket, og dit show distribueres til Jerkmate og partnersites. Fordi Streamate er <strong style='color:var(--text)'>forkonfigureret i SplitCams</strong> kanalliste, lader gratis <strong style='color:var(--text)'>SplitCam</strong> dig tilføje multi-kamera scener, overlays og filtre uden manuel RTMP-indtastning.",
+     "quick": "Udsend på Jerkmate med SplitCam: installér SplitCam, byg scenen, tilmeld dig som model på Streamate-netværket, der fodrer Jerkmate, åbn <em>SM Connect → Start Show</em> og kopiér nøglen, derefter i SplitCam åbn <em>Stream Settings → Add Channel → Streamate</em> og indsæt, og tryk Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Tilmeld dig som Streamate-netværksmodel.</li>"
+              "<li>Hent nøglen via SM Connect.</li>"
+              "<li>Add Channel → Streamate, Go Live.</li></ol>",
+     "key_how": "Jerkmates live-cams kommer fra <strong>Streamate-broadcasting-netværket</strong> — der findes ingen separat «Jerkmate encoder». Tilmeld dig gennem Jerkmates modelprogram eller direkte på Streamate-netværket, åbn <strong>SM Connect</strong>, acceptér vilkårene, klik <strong>Start Show</strong> og kopiér din streaming-nøgle. I SplitCam åbn <strong>Stream Settings → Add Channel</strong>, vælg <strong>Streamate</strong> fra den integrerede liste og indsæt nøglen. Din stream når derefter Jerkmate og netværkets partnersites på én gang.",
+     "tips": [
+         ("Det er Streamate-netværket nedenunder", "Led ikke efter en Jerkmate-specifik broadcaster — du udsender på Streamate, og Jerkmate redistribuerer det. Alt der virker til Streamate (SM Connect, den integrerede SplitCam-kanal) virker til Jerkmate."),
+         ("Konvertér den AI-matchede trafik", "Jerkmates matchmaker sender seere til modeller, der passer deres valg — en poleret SplitCam-scene med overlays og god framing konverterer de matchede seere langt bedre end et fladt webkamera."),
+         ("Én strøm, mange sites", "At udsende til Streamate-netværket placerer dig på Jerkmate plus partnersites samtidigt — bredere rækkevidde fra én SplitCam-stream, ingen ekstra opsætning."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Har Jerkmate sin egen broadcaster eller stream key?", "Nej — Jerkmate henter live-modeller fra Streamate-netværket. Du udsender som Streamate-netværksmodel via SM Connect, og dit show vises på Jerkmate automatisk."),
+         ("Hvordan får jeg min Jerkmate stream key?", "Gennem SM Connect på Streamate-netværkets modelside: acceptér vilkår → Start Show → kopiér nøglen. Indsæt den i SplitCams integrerede Streamate-kanal — ingen manuel RTMP-URL nødvendig."),
+         ("Hvilken bitrate til Jerkmate?", "Lås 1080p ved 30 fps. Netværkets strøm er adaptiv, så lavere bitrate ved et statisk billede er normalt. Kør SplitCams hastighedstest og brug kabelforbindelse."),
+         ("Er SplitCam gratis til Jerkmate?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. Streamate (som fodrer Jerkmate) er en integreret SplitCam-kanal, så der er ingen separat encoder-omkostning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå — en stærk scene konverterer Jerkmates matchede seere."),
+         ("Tilmeld dig som model og hent nøglen", "Tilmeld dig gennem Jerkmates modelprogram eller direkte på <strong>Streamate-netværket</strong>, der fodrer det. Åbn <strong>SM Connect</strong>, acceptér vilkårene, klik <strong>Start Show</strong> og kopiér din streaming-nøgle."),
+         ("Tilføj Streamate som kanal i SplitCam", "Åbn <strong>Stream Settings → Add Channel</strong>, vælg <strong>Streamate</strong> fra den integrerede liste og indsæt nøglen — ingen manuel RTMP-URL. Lås opløsningen til 1080p."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam — en grøn slider bekræfter forbindelsen. Dit show går ud på tværs af Streamate-netværket og vises på Jerkmate."),
+     ]},
+    {"slug": "justforfans", "name": "JustForFans",
+     "title": "Sådan går du live på JustForFans med SplitCam — Virtuelt kamera",
+     "desc": "Gå live på JustForFans (JFF) med gratis SplitCam — brug SplitCam som virtuelt kamera i JFF's live-broadcaster til multi-kamera scener, overlays og filtre. Intet vandmærke, ingen tilmelding.",
+     "kw": "live justforfans, justforfans live, jff live stream, justforfans obs, justforfans virtuelt kamera, justfor.fans cam, justforfans broadcast",
+     "h1html": 'Sådan går du live på <span class="accent">JustForFans</span> med SplitCam',
+     "h1short": "Live JustForFans",
+     "card": "Brug SplitCam som virtuelt kamera i JustForFans' live-broadcaster.",
+     "intro": "JustForFans (JFF) er en creator-ejet abonnementsplatform — et veletableret, performer-grundlagt OnlyFans-alternativ med abonnementer, pay-per-view og en browser-baseret live-funktion. Live-broadcasteren viser et enkelt fladt webkamera; peger du den mod gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, åbner du multi-kamera scener, overlays og filtre. Hvis dit creator-dashboard også afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet over RTMP.",
+     "quick": "Gå live på JustForFans med SplitCam: installér SplitCam, byg scenen, start en live-udsendelse på JFF, og i broadcasterens kameravælger vælg <em>SplitCam</em> som dit webkamera — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en live-udsendelse på JFF.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "JustForFans' live kører i browseren. Byg scenen i SplitCam — den registreres som et system-webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter JFF's live-broadcaster og vælg i kamera-dropdownen <strong>SplitCam</strong> i stedet for dit rå webkamera. Din sammensatte scene erstatter det flade kamera. Hvis JFF's creator-dashboard tilbyder en <strong>external-encoder / stream key</strong>-mulighed, indsætter du i stedet den nøgle i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Virtuelt kamera virker overalt", "Selv når en platforms live kun kører i browseren, optræder SplitCam som et valgbart webkamera — så din multi-kamera scene, overlays og filtre virker på JFF helt uden stream key."),
+         ("Creator-ejet, performer-venlig", "JFF drives af performere og holder en loyal abonnentbase. Overlays, der krydssælger din PPV eller dit abonnement, konverterer godt til et publikum, der allerede betaler."),
+         ("Giv browseren kamera-tilladelse", "Hvis SplitCam ikke dukker op i JFF's kameraliste, så sørg for, at SplitCam kører først, og at browseren har kamera-tilladelse — genindlæs derefter broadcasteren."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til JustForFans?", "JFF live er browser-baseret, så SplitCam forbinder som virtuelt kamera: vælg SplitCam i JFF-broadcasterens kameravælger. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på JFF?", "Ja — byg scenen i SplitCam (et ekstra kamera, overlays, beauty- eller AI-baggrundsfiltre), og JFF ser den færdige scene som ét webkamera."),
+         ("Understøtter JustForFans OBS eller eksterne encodere?", "JFF's live er primært browser-/webkamera-baseret. Hvis dit creator-dashboard viser en external-encoder- eller stream key-mulighed, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til JustForFans?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå — anvendt live."),
+         ("Start en live-udsendelse på JFF", "Log ind på din JustForFans-creator-konto og åbn live-broadcasteren for at starte en stream til dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I JFF-broadcasterens kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din sammensatte scene erstatter det flade kamera. (Eller indsæt, hvis tilgængelig, JFF's external-encoder-nøgle i SplitCams custom RTMP-felter.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene, overlays og filtre når dine JustForFans-abonnenter."),
+     ]},
 ]

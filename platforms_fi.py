@@ -931,4 +931,71 @@ PLATFORMS_FI = [
          ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong>, sitten mene online Members Areasta. Noin 10 sekunnissa striimi saavuttaa AdultWorkin yleisön."),
      ],
     },
+    {"slug": "jerkmate", "name": "Jerkmate",
+     "title": "Lähetys Jerkmatessa SplitCamilla — Streamate-verkon asetus",
+     "desc": "Lähetys Jerkmatessa ilmaisella SplitCamilla — Jerkmate hakee mallinsa Streamate-verkosta, joten striimaat SM Connectilla ja SplitCamin integroidulla Streamate-kanavalla. Monikamera-näkymät, ei vesileimaa.",
+     "kw": "jerkmate lähetys, jerkmate malli, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+     "h1html": 'Miten lähetät <span class="accent">Jerkmatessa</span> SplitCamilla',
+     "h1short": "Lähetys Jerkmate",
+     "card": "Jerkmate hakee mallit Streamate-verkosta — striimaa SM Connectilla + SplitCamilla.",
+     "intro": "Jerkmate on yksi haetuimmista cam-brändeistä, tunnettu AI-matchmakeristaan, joka yhdistää katsojat live-esiintyjiin. Sillä ei ole omaa broadcasteria — Jerkmate <strong>hakee live-mallinsa Streamate-verkosta</strong>. Lähetät Streamate-verkon mallina, ja showsi jaetaan Jerkmateen ja sen kumppanisivuille. Koska Streamate on <strong style='color:var(--text)'>esiasetettuna SplitCamin</strong> kanavaluettelossa, ilmainen <strong style='color:var(--text)'>SplitCam</strong> antaa lisätä monikamera-näkymät, overlayt ja suodattimet ilman manuaalista RTMP-syöttöä.",
+     "quick": "Lähetys Jerkmatessa SplitCamilla: asenna SplitCam, rakenna näkymä, rekisteröidy malliksi Jerkmaten syöttävään Streamate-verkkoon, avaa <em>SM Connect → Start Show</em> ja kopioi avain, sitten SplitCamissa avaa <em>Stream Settings → Add Channel → Streamate</em> ja liitä, ja paina Go Live."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Rekisteröidy Streamate-verkon malliksi.</li>"
+              "<li>Hanki avain SM Connectin kautta.</li>"
+              "<li>Add Channel → Streamate, Go Live.</li></ol>",
+     "key_how": "Jerkmaten live-camit tulevat <strong>Streamate-lähetysverkosta</strong> — erillistä \"Jerkmate-enkooderia\" ei ole olemassa. Rekisteröidy Jerkmaten malliohjelman kautta tai suoraan Streamate-verkkoon, avaa <strong>SM Connect</strong>, hyväksy ehdot, klikkaa <strong>Start Show</strong> ja kopioi streaming-avaimesi. SplitCamissa avaa <strong>Stream Settings → Add Channel</strong>, valitse <strong>Streamate</strong> integroidusta listasta ja liitä avain. Striimisi tavoittaa sitten Jerkmaten ja verkon kumppanisivut yhdellä kertaa.",
+     "tips": [
+         ("Pohjalla on Streamate-verkko", "Älä etsi Jerkmate-spesifistä broadcasteria — lähetät Streamatessa ja Jerkmate jakaa sen eteenpäin. Kaikki mikä toimii Streamatelle (SM Connect, integroitu SplitCam-kanava) toimii Jerkmatelle."),
+         ("Konvertoi AI-ohjattu liikenne", "Jerkmaten matchmaker ohjaa katsojat malleille, jotka sopivat heidän valintoihinsa — viimeistelty SplitCam-näkymä overlayilla ja hyvällä rajauksella konvertoi nämä yhdistetyt katsojat paljon paremmin kuin litteä webkamera."),
+         ("Yksi feed, monta sivua", "Lähettäminen Streamate-verkkoon vie sinut Jerkmateen ja sen kumppanisivuille samanaikaisesti — laajempi tavoittavuus yhdestä SplitCam-striimistä, ilman ylimääräistä asetusta."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Onko Jerkmatella oma broadcaster tai stream key?", "Ei — Jerkmate hakee live-mallit Streamate-verkosta. Lähetät Streamate-verkon mallina SM Connectin kautta, ja showsi ilmestyy Jerkmateen automaattisesti."),
+         ("Miten saan Jerkmaten stream keyni?", "SM Connectin kautta Streamate-verkon mallin puolelta: hyväksy ehdot → Start Show → kopioi avain. Liitä se SplitCamin integroituun Streamate-kanavaan — manuaalista RTMP-URL:ää ei tarvita."),
+         ("Mikä bitrate Jerkmatelle?", "Lukitse 1080p 30 fps:ssä. Verkon feed on adaptiivinen, joten matalampi bitrate staattisessa kuvassa on normaalia. Aja SplitCamin nopeustesti ja käytä kaapeliyhteyttä."),
+         ("Onko SplitCam ilmainen Jerkmatelle?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa. Streamate (joka syöttää Jerkmaten) on SplitCamin integroitu kanava, joten erillistä enkooderikulua ei ole."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — vahva näkymä konvertoi Jerkmaten yhdistetyt katsojat."),
+         ("Rekisteröidy malliksi ja hanki avain", "Rekisteröidy Jerkmaten malliohjelman kautta tai suoraan <strong>Streamate-verkkoon</strong>, joka syöttää sen. Avaa <strong>SM Connect</strong>, hyväksy ehdot, klikkaa <strong>Start Show</strong> ja kopioi streaming-avaimesi."),
+         ("Lisää Streamate kanavaksi SplitCamissa", "Avaa <strong>Stream Settings → Add Channel</strong>, valitse <strong>Streamate</strong> integroidusta listasta ja liitä avain — ei manuaalista RTMP-URL:ää. Lukitse resoluutio 1080p:hen."),
+         ("Klikkaa Go Live", "Paina SplitCamissa <strong>Go Live</strong> — vihreä slider vahvistaa yhteyden. Showsi lähtee Streamate-verkon läpi ja ilmestyy Jerkmateen."),
+     ],
+    },
+    {"slug": "justforfans", "name": "JustForFans",
+     "title": "Live JustForFansissa SplitCamilla — Virtuaalikamera-asetus",
+     "desc": "Live JustForFansissa (JFF) ilmaisella SplitCamilla — käytä SplitCamia virtuaalikamerana JFF:n live-broadcasterissa monikamera-näkymiin, overlayihin ja suodattimiin. Ei vesileimaa, ei rekisteröitymistä.",
+     "kw": "live justforfans, justforfans live, jff live stream, justforfans obs, justforfans virtuaalikamera, justfor.fans cam, justforfans broadcast",
+     "h1html": 'Miten menet livenä <span class="accent">JustForFansissa</span> SplitCamilla',
+     "h1short": "Live JustForFans",
+     "card": "Käytä SplitCamia virtuaalikamerana JustForFansin live-broadcasterissa.",
+     "intro": "JustForFans (JFF) on creator-omisteinen tilausalusta — pitkään toiminut, esiintyjien perustama OnlyFans-vaihtoehto, jossa on tilaukset, pay-per-view ja selainpohjainen live-toiminto. Sen live-broadcaster näyttää yhden litteän webkameran; sen osoittaminen ilmaiseen <strong style='color:var(--text)'>SplitCamiin</strong> <strong>virtuaalikamerana</strong> avaa monikamera-näkymät, overlayt ja suodattimet. Jos creator-dashboardisi paljastaa myös ulkoisen enkooderin / stream key -vaihtoehdon, SplitCam yhdistyy sen sijaan RTMP:llä.",
+     "quick": "Live JustForFansissa SplitCamilla: asenna SplitCam, rakenna näkymä, käynnistä live-lähetys JFF:ssä, ja valitse broadcasterin kameravalitsimessa <em>SplitCam</em> webkameraksi — sitten mene livenä."
+              "<ol><li>Asenna SplitCam.</li><li>Lisää kamera + näkymä.</li>"
+              "<li>Käynnistä live-lähetys JFF:ssä.</li>"
+              "<li>Valitse SplitCam kameravalikosta.</li><li>Paina Go Live.</li></ol>",
+     "key_how": "JustForFansin live toimii selaimessa. Rakenna näkymäsi SplitCamissa — se rekisteröityy järjestelmän webkamerana nimeltä <strong>\"SplitCam Video Driver\"</strong> — sitten avaa JFF:n live-broadcaster ja valitse kameravalikosta <strong>SplitCam</strong> raa'an webkameran sijaan. Koottu näkymäsi korvaa litteän kameran. Jos JFF:n creator-dashboard tarjoaa <strong>ulkoisen enkooderin / stream key</strong> -vaihtoehdon, liitä se avain SplitCamin custom RTMP -kenttiin.",
+     "tips": [
+         ("Virtuaalikamera toimii kaikkialla", "Vaikka alustan live olisi vain selaimessa, SplitCam näkyy valittavana webkamerana — joten monikamera-näkymäsi, overlayt ja suodattimet toimivat JFF:ssä ilman mitään stream keyä."),
+         ("Creator-omisteinen, esiintyjäystävällinen", "JFF:ää pyörittävät esiintyjät ja sillä on uskollinen tilaajakunta. PPV:tä tai tilausta ristiinmyyvät overlayt konvertoivat hyvin yleisölle, joka jo maksaa."),
+         ("Anna selaimelle kameralupa", "Jos SplitCam ei näy JFF:n kameralistalla, varmista että SplitCam on käynnissä ensin ja että selaimella on kameralupa — lataa sitten broadcaster uudelleen."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Miten SplitCam yhdistyy JustForFansiin?", "JFF:n live on selainpohjainen, joten SplitCam yhdistyy virtuaalikamerana: valitse SplitCam JFF:n broadcasterin kameravalitsimesta. Stream keyä ei tarvita."),
+         ("Voinko käyttää overlayitä ja useita kameroita JFF:ssä?", "Kyllä — rakenna näkymä SplitCamissa (toinen kamera, overlayt, kauneus- tai AI-taustasuodattimet) ja JFF näkee valmiin näkymän yhtenä webkamerana."),
+         ("Tukeeko JustForFans OBS:ää tai ulkoisia enkoodereita?", "JFF:n live on ensisijaisesti selain- / webkamerapohjainen. Jos creator-dashboardisi näyttää ulkoisen enkooderin tai stream key -vaihtoehdon, liitä se SplitCamin custom RTMP -kenttiin; muuten käytä virtuaalikamera-menetelmää."),
+         ("Onko SplitCam ilmainen JustForFansille?", "Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa."),
+     ],
+     "steps": [
+         ("Lataa ja asenna SplitCam", "SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Se asentaa virtuaalikameran, jonka selain voi valita."),
+         ("Rakenna näkymäsi", "Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — kaikki livenä sovellettuna."),
+         ("Käynnistä live-lähetys JFF:ssä", "Kirjaudu JustForFans-creator-tilillesi ja avaa live-broadcaster aloittaaksesi striimin tilaajillesi."),
+         ("Valitse SplitCam kameraksi", "Valitse JFF:n broadcasterin kameravalikosta <strong>SplitCam</strong> raa'an webkameran sijaan — koottu näkymäsi korvaa litteän kameran. (Tai, jos saatavilla, liitä JFF:n ulkoisen enkooderin avain SplitCamin custom RTMP -kenttiin.)"),
+         ("Go Live", "Käynnistä lähetys — SplitCam-näkymäsi, overlayt ja suodattimet tavoittavat JustForFans-tilaajasi."),
+     ],
+    },
 ]

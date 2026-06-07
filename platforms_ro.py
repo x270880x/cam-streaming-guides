@@ -931,4 +931,74 @@ PLATFORMS_RO = [
          ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Members Area. În ~10 secunde stream-ul tău ajunge la audiența AdultWork."),
      ],
     },
+    {
+        "slug": "jerkmate", "name": "Jerkmate",
+        "title": "Cum transmiți pe Jerkmate cu SplitCam — Setup în rețeaua Streamate",
+        "desc": "Transmite pe Jerkmate cu SplitCam gratuit — Jerkmate își ia modelele live din rețeaua Streamate, deci transmiți prin SM Connect și canalul Streamate integrat în SplitCam. Scene multi-cameră, fără filigran.",
+        "kw": "transmisie jerkmate, devino model jerkmate, jerkmate cam, jerkmate streamate, jerkmate obs, jerkmate external encoder, jerkmate broadcast",
+        "h1html": 'Cum transmiți pe <span class="accent">Jerkmate</span> cu SplitCam',
+        "h1short": "Transmisie pe Jerkmate",
+        "card": "Jerkmate își ia modelele din rețeaua Streamate — transmiți prin SM Connect + SplitCam.",
+        "intro": "Jerkmate e unul dintre cele mai căutate branduri cam, cunoscut pentru AI-ul care îmbină privitorii cu performeri live. Nu are broadcaster propriu — Jerkmate <strong>își ia modelele live din rețeaua Streamate</strong>. Transmiți ca model în rețeaua Streamate, iar show-ul tău e distribuit pe Jerkmate și pe site-urile partenere. Pentru că Streamate e <strong style='color:var(--text)'>preconfigurat în lista de canale</strong> a SplitCam, <strong style='color:var(--text)'>SplitCam</strong> gratuit îți lasă să adaugi scene multi-cameră, overlay-uri și filtre fără să introduci manual vreun URL RTMP.",
+        "quick": "Transmisie pe Jerkmate cu SplitCam: instalezi SplitCam, construiești scena, te înscrii ca model în rețeaua Streamate care alimentează Jerkmate, deschizi <em>SM Connect → Start Show</em> și copiezi cheia, apoi în SplitCam deschizi <em>Stream Settings → Add Channel → Streamate</em>, o lipești și apeși Go Live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Înscrie-te ca model în rețeaua Streamate.</li>"
+                 "<li>Ia cheia prin SM Connect.</li>"
+                 "<li>Add Channel → Streamate, Go Live.</li></ol>",
+        "key_how": "Camerele live de pe Jerkmate vin din <strong>rețeaua de broadcasting Streamate</strong> — nu există un \"Jerkmate encoder\" separat. Înregistrează-te prin programul de modele Jerkmate sau direct în rețeaua Streamate, deschide <strong>SM Connect</strong>, acceptă termenii, clic <strong>Start Show</strong> și copiază streaming key-ul. În SplitCam deschide <strong>Stream Settings → Add Channel</strong>, alegi <strong>Streamate</strong> din lista integrată și lipești cheia. Stream-ul tău ajunge atunci simultan pe Jerkmate și pe site-urile partenere ale rețelei.",
+        "tips": [
+            ("Sub capotă e rețeaua Streamate", "Nu căuta un broadcaster specific Jerkmate — transmiți pe Streamate, iar Jerkmate redistribuie. Orice merge pentru Streamate (SM Connect, canalul integrat din SplitCam) merge și pentru Jerkmate."),
+            ("Convertește traficul potrivit de AI", "AI-ul matchmaker al Jerkmate trimite privitorii către modelele care le corespund preferințelor — o scenă SplitCam îngrijită, cu overlay-uri și o încadrare bună, convertește acei privitori potriviți mult mai bine decât o webcam plată."),
+            ("Un singur flux, mai multe site-uri", "Transmisia către rețeaua Streamate te pune simultan pe Jerkmate și pe site-urile sale partenere — acoperire mai largă dintr-un singur stream SplitCam, fără setup în plus."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Are Jerkmate broadcaster propriu sau stream key?", "Nu — Jerkmate își ia modelele live din rețeaua Streamate. Transmiți ca model în rețeaua Streamate prin SM Connect, iar show-ul tău apare automat pe Jerkmate."),
+            ("Cum îmi iau stream key-ul pentru Jerkmate?", "Prin SM Connect, pe partea de model din rețeaua Streamate: acceptă termenii → Start Show → copiază cheia. O lipești în canalul Streamate integrat din SplitCam — fără URL RTMP manual."),
+            ("Ce bitrate folosesc pentru Jerkmate?", "Fixează 1080p la 30 fps. Fluxul rețelei e adaptiv, deci un bitrate mai mic pe o imagine statică e normal. Rulează speed test-ul din SplitCam și folosește conexiune prin cablu."),
+            ("SplitCam e gratuit pentru Jerkmate?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp. Streamate (care alimentează Jerkmate) e un canal integrat în SplitCam, deci nu există un cost separat de encoder."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — o scenă puternică convertește privitorii potriviți de AI ai Jerkmate."),
+            ("Înscrie-te ca model și ia-ți cheia", "Înregistrează-te prin programul de modele Jerkmate sau direct în <strong>rețeaua Streamate</strong> care îl alimentează. Deschide <strong>SM Connect</strong>, acceptă termenii, clic <strong>Start Show</strong> și copiază streaming key-ul."),
+            ("Adaugă Streamate ca un canal în SplitCam", "Deschide <strong>Stream Settings → Add Channel</strong>, alegi <strong>Streamate</strong> din lista integrată și lipești cheia — fără URL RTMP manual. Fixează rezoluția la 1080p."),
+            ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam — un slider verde confirmă conexiunea. Show-ul tău iese în rețeaua Streamate și apare pe Jerkmate."),
+        ],
+    },
+    {
+        "slug": "justforfans", "name": "JustForFans",
+        "title": "Cum intri live pe JustForFans cu SplitCam — Setup cameră virtuală",
+        "desc": "Intră live pe JustForFans (JFF) cu SplitCam gratuit — folosește SplitCam ca o cameră virtuală în broadcasterul live JFF pentru scene multi-cameră, overlay-uri și filtre. Fără filigran, fără înregistrare.",
+        "kw": "live justforfans, justforfans live, jff live stream, justforfans obs, justforfans cameră virtuală, justfor.fans cam, justforfans broadcast",
+        "h1html": 'Cum intri live pe <span class="accent">JustForFans</span> cu SplitCam',
+        "h1short": "Live pe JustForFans",
+        "card": "Folosește SplitCam ca o cameră virtuală în broadcasterul live al JustForFans.",
+        "intro": "JustForFans (JFF) e o platformă de abonamente deținută de creatori — o alternativă longevivă la OnlyFans, fondată de performeri, cu abonamente, conținut pay-per-view și o funcție live în browser. Broadcasterul ei live arată o singură webcam simplă; îndreptat spre <strong style='color:var(--text)'>SplitCam</strong> gratuit ca o <strong>cameră virtuală</strong>, deblochează scene multi-cameră, overlay-uri și filtre. Dacă în Creator Dashboard ai și o opțiune de external encoder / stream key, SplitCam se conectează în schimb prin RTMP.",
+        "quick": "Intră live pe JustForFans cu SplitCam: instalezi SplitCam, construiești scena, pornești o transmisie live pe JFF, iar în selectorul de cameră al broadcasterului alegi <em>SplitCam</em> ca webcam — apoi intri live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Pornește o transmisie live pe JFF.</li>"
+                 "<li>Alege SplitCam din lista de camere.</li>"
+                 "<li>Apasă Go Live.</li></ol>",
+        "key_how": "Live-ul JustForFans merge în browser. Construiește scena în SplitCam — apare ca o webcam de sistem numită <strong>\"SplitCam Video Driver\"</strong> — apoi deschide broadcasterul live JFF și, în lista de camere, alege <strong>SplitCam</strong> în loc de webcam-ul tău brut. Scena ta compusă înlocuiește camera plată. Dacă în Creator Dashboard-ul JFF apare o opțiune de <strong>external encoder / stream key</strong>, lipești în schimb cheia în câmpurile RTMP custom ale SplitCam.",
+        "tips": [
+            ("Camera virtuală merge peste tot", "Chiar și când live-ul unei platforme e doar în browser, SplitCam apare ca o webcam selectabilă — așa că scena ta multi-cameră, overlay-urile și filtrele merg pe JFF fără nicio stream key."),
+            ("Deținută de creatori, prietenoasă cu performerii", "JFF e condusă de performeri și păstrează o bază loială de abonați. Overlay-urile care fac cross-sell la PPV sau abonamentul tău convertesc bine la o audiență care deja plătește."),
+            ("Dă browserului permisiunea de cameră", "Dacă SplitCam nu apare în lista de camere a JFF, asigură-te mai întâi că SplitCam rulează și că browserul are permisiunea de cameră — apoi reîncarcă broadcasterul."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la JustForFans?", "Live-ul JFF e în browser, deci SplitCam se conectează ca o cameră virtuală: alegi SplitCam în selectorul de cameră al broadcasterului JFF. Nu e nevoie de stream key."),
+            ("Pot folosi overlay-uri și mai multe camere pe JFF?", "Da — construiești scena în SplitCam (a doua cameră, overlay-uri, filtre de beauty sau fundal AI), iar JFF vede scena finită ca o singură webcam."),
+            ("JustForFans suportă OBS sau encodere externe?", "Live-ul JFF e în primul rând bazat pe browser / webcam. Dacă în Creator Dashboard apare o opțiune de external encoder sau stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală."),
+            ("SplitCam e gratuit pentru JustForFans?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care browserul o poate selecta."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul aplicat live."),
+            ("Pornește o transmisie live pe JFF", "Loghează-te în contul tău de creator JustForFans și deschide broadcasterul live pentru a porni un stream pentru abonații tăi."),
+            ("Alege SplitCam ca cameră", "În lista de camere a broadcasterului JFF, alegi <strong>SplitCam</strong> în loc de webcam-ul tău brut — scena ta compusă înlocuiește camera plată. (Sau, dacă e disponibilă, lipești cheia de external encoder a JFF în câmpurile RTMP custom ale SplitCam.)"),
+            ("Apasă Go Live", "Pornește transmisia — scena ta SplitCam, overlay-urile și filtrele ajung la abonații tăi de pe JustForFans."),
+        ],
+    },
 ]
