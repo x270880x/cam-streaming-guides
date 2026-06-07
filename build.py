@@ -37,12 +37,13 @@ SITE_NAME = "Cam Stream Guide"
 
 
 def nav_html(home, home_label, lang_sw=""):
-    """Header nav: home link (left) + brand logo (dot + site name) top-right."""
+    """Header nav: desktop = 'all guides' left, brand right; mobile = brand left,
+    'all guides' right (swap via CSS flex order)."""
     return (
         '<nav>'
         f'<a class="nav-home" href="{home}">{home_label}</a>'
-        f'<div class="nav-right">{lang_sw}'
-        f'<a class="nav-brand" href="{home}"><span class="dot"></span>{SITE_NAME}</a></div>'
+        f'{lang_sw}'
+        f'<a class="nav-brand" href="{home}"><span class="dot"></span>{SITE_NAME}</a>'
         '</nav>'
     )
 PUBLISHED_DATE = "2026-05-21"
@@ -111,13 +112,13 @@ body{font-family:'Geist',sans-serif;background:var(--app-base);color:var(--text)
 line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;
-align-items:center;justify-content:space-between;padding:0 40px;
+align-items:center;gap:14px;padding:0 40px;
 background:rgba(20,20,32,.85);backdrop-filter:blur(16px);
 border-bottom:1px solid var(--app-border)}
-.nav-home{font-size:14px;font-weight:600;color:var(--text-sub);transition:color .15s}
+.nav-home{order:1;margin-right:auto;font-size:14px;font-weight:600;color:var(--text-sub);transition:color .15s}
 .nav-home:hover{color:var(--text)}
-.nav-right{display:flex;align-items:center;gap:14px}
-.nav-brand{display:inline-flex;align-items:center;gap:9px;font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
+.lang-dl{order:2}
+.nav-brand{order:3;display:inline-flex;align-items:center;gap:9px;font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
 .nav-brand:hover{color:var(--text)}
 .nav-brand .dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;
 background:linear-gradient(135deg,var(--blue),var(--purple))}
@@ -292,7 +293,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .footer-inner{flex-direction:column;text-align:center}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .hero-text{text-align:center}.hero-text .sub{margin-left:auto;margin-right:auto}.hero-cta{justify-content:center}.collab{max-width:300px;margin:0 auto}}
-@media(max-width:600px){nav{padding:0 16px}.nav-right{gap:10px}.nav-brand{font-size:16px}.nav-home{font-size:13px}
+@media(max-width:600px){nav{padding:0 16px;gap:10px}.nav-brand{font-size:16px;order:1;margin-right:auto}.nav-home{font-size:13px;order:2;margin-right:0}.lang-dl{order:3}
 .breadcrumbs{padding:78px 16px 0}.hero,.section{padding-left:16px;padding-right:16px}
 .hero{padding-top:24px}.h1{font-size:clamp(25px,6.6vw,34px);letter-spacing:-.6px}
 .sub{font-size:16px}.sec-h{font-size:23px;letter-spacing:-.4px}.cta-block h2{font-size:23px}
@@ -3179,7 +3180,7 @@ def render_404():
 <body>
 <nav>
   <a class="nav-home" href="/">All guides</a>
-  <div class="nav-right"><a class="nav-brand" href="/"><span class="dot"></span>{SITE_NAME}</a></div>
+  <a class="nav-brand" href="/"><span class="dot"></span>{SITE_NAME}</a>
 </nav>
 <div class="err-wrap">
   <div class="err-code">404</div>
