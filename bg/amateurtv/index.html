@@ -310,16 +310,17 @@ margin-bottom:26px;position:relative;z-index:1}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
 .hero-inner{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center;position:relative;z-index:1}
 .collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
-.collab-flow{display:flex;align-items:center;justify-content:center}
-.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);white-space:nowrap;display:flex;align-items:center;gap:7px;line-height:1.1}
-.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2)}
+.collab-flow{display:flex;align-items:center;justify-content:center;max-width:100%}
+.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);display:flex;align-items:center;gap:7px;line-height:1.15;min-width:0}
+.collab-pill img{flex-shrink:0}
+.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2);flex-shrink:0}
 .collab-sc img{display:block;width:23px;height:23px}
 .collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
 .collab-logo{display:block;height:21px;width:auto;max-width:180px;
 object-fit:contain;object-position:left center}
-.collab-plat{padding:8px 15px}
+.collab-plat{padding:8px 15px;min-width:0}
 .collab-plat img{height:24px;width:24px;border-radius:50%;object-fit:cover}
-.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:nowrap}
+.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:normal;min-width:0;word-break:break-word}
 .hub-card-icon{width:32px;height:32px;flex-shrink:0;border-radius:50%;
 object-fit:cover;background:var(--app-surface)}
 .hub-grid .related-card{display:flex;align-items:center;gap:14px;
