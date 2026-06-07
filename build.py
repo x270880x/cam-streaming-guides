@@ -37,13 +37,12 @@ SITE_NAME = "Cam Stream Guide"
 
 
 def nav_html(home, home_label, lang_sw=""):
-    """Header nav: home/logo link (left) + site name top-right + lang switcher."""
+    """Header nav: home link (left) + brand logo (dot + site name) top-right."""
     return (
         '<nav>'
-        f'<a class="nav-home" href="{home}"><span class="dot"></span>'
-        f'<span class="nav-home-t">{home_label}</span></a>'
+        f'<a class="nav-home" href="{home}">{home_label}</a>'
         f'<div class="nav-right">{lang_sw}'
-        f'<a class="nav-brand" href="{home}">{SITE_NAME}</a></div>'
+        f'<a class="nav-brand" href="{home}"><span class="dot"></span>{SITE_NAME}</a></div>'
         '</nav>'
     )
 PUBLISHED_DATE = "2026-05-21"
@@ -115,13 +114,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;
 align-items:center;justify-content:space-between;padding:0 40px;
 background:rgba(20,20,32,.85);backdrop-filter:blur(16px);
 border-bottom:1px solid var(--app-border)}
-.nav-home{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:var(--text-sub);transition:color .15s}
+.nav-home{font-size:14px;font-weight:600;color:var(--text-sub);transition:color .15s}
 .nav-home:hover{color:var(--text)}
-.nav-home .dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;
-background:linear-gradient(135deg,var(--blue),var(--purple))}
-.nav-right{display:flex;align-items:center;gap:14px;min-width:0}
-.nav-brand{font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-brand{display:inline-flex;align-items:center;gap:9px;font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
 .nav-brand:hover{color:var(--text)}
+.nav-brand .dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;
+background:linear-gradient(135deg,var(--blue),var(--purple))}
 .nav-links{display:flex;gap:26px;list-style:none}
 .nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--text)}
@@ -182,17 +181,16 @@ margin-bottom:26px;position:relative;z-index:1}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
 .hero-inner{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center;position:relative;z-index:1}
 .collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
-.collab-flow{display:flex;align-items:center;justify-content:center;max-width:100%}
-.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);display:flex;align-items:center;gap:7px;line-height:1.15;min-width:0}
-.collab-pill img{flex-shrink:0}
-.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2);flex-shrink:0}
+.collab-flow{display:flex;align-items:center;justify-content:center}
+.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);white-space:nowrap;display:flex;align-items:center;gap:7px;line-height:1.1}
+.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2)}
 .collab-sc img{display:block;width:23px;height:23px}
 .collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
 .collab-logo{display:block;height:21px;width:auto;max-width:180px;
 object-fit:contain;object-position:left center}
-.collab-plat{padding:8px 15px;min-width:0}
+.collab-plat{padding:8px 15px}
 .collab-plat img{height:24px;width:24px;border-radius:50%;object-fit:cover}
-.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:normal;min-width:0;word-break:break-word}
+.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:nowrap}
 .hub-card-icon{width:32px;height:32px;flex-shrink:0;border-radius:50%;
 object-fit:cover;background:var(--app-surface)}
 .hub-grid .related-card{display:flex;align-items:center;gap:14px;
@@ -294,7 +292,7 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .footer-inner{flex-direction:column;text-align:center}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .hero-text{text-align:center}.hero-text .sub{margin-left:auto;margin-right:auto}.hero-cta{justify-content:center}.collab{max-width:300px;margin:0 auto}}
-@media(max-width:600px){nav{padding:0 16px}.nav-right{gap:10px}.nav-brand{font-size:16px}.nav-home-t{display:none}
+@media(max-width:600px){nav{padding:0 16px}.nav-right{gap:10px}.nav-brand{font-size:16px}.nav-home{font-size:13px}
 .breadcrumbs{padding:78px 16px 0}.hero,.section{padding-left:16px;padding-right:16px}
 .hero{padding-top:24px}.h1{font-size:clamp(25px,6.6vw,34px);letter-spacing:-.6px}
 .sub{font-size:16px}.sec-h{font-size:23px;letter-spacing:-.4px}.cta-block h2{font-size:23px}
@@ -3180,8 +3178,8 @@ def render_404():
 </head>
 <body>
 <nav>
-  <a class="nav-home" href="/"><span class="dot"></span><span class="nav-home-t">All guides</span></a>
-  <div class="nav-right"><a class="nav-brand" href="/">{SITE_NAME}</a></div>
+  <a class="nav-home" href="/">All guides</a>
+  <div class="nav-right"><a class="nav-brand" href="/"><span class="dot"></span>{SITE_NAME}</a></div>
 </nav>
 <div class="err-wrap">
   <div class="err-code">404</div>
