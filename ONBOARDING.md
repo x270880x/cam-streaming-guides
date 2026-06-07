@@ -51,6 +51,11 @@ full meta (OG + Twitter cards).
   `platforms_<lang>.py` files (not just en/ru/es), regenerate, verify each platform has 35 dirs.
 - **Uniqueness:** pages must stay genuinely distinct (target: no EN pair >65% body similarity)
   so Google indexes each. Current: EN max ~58%, RU ~68%, ES ~53%.
+- **SEO meta (per platform, all langs):** `title` front-loaded "how to broadcast/stream/go live
+  on {Brand} with SplitCam", ≤60 chars (≤34 CJK); `desc` ≤155 chars, compelling, complete
+  sentence; `kw` = native intent + brand + modifier long-tail ({brand} obs/external encoder/
+  rtmp/stream key) — brands are unwinnable head terms (KD 67-71), so target the long-tail.
+  Keep verbs truthful to each page's real broadcast mechanism.
 - After meaningful edits: commit + push immediately (GitHub Pages auto-deploys).
 
 ## Reference docs in this repo
