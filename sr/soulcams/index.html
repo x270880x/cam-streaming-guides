@@ -54,7 +54,7 @@
 <meta property="og:url" content="https://camstreamguide.com/sr/soulcams/">
 <meta property="og:title" content="Емитуј на SoulCams са SplitCam-ом — OBS подешавања">
 <meta property="og:description" content="Емитуј на SoulCams са бесплатним SplitCam-ом — OBS подешавања, RTMP сервер и кључ, мулти-камера сцене и overlay-и. Без жига.">
-<meta property="og:site_name" content="Streaming Guides">
+<meta property="og:site_name" content="Cam Stream Guide">
 <meta property="og:locale" content="sr_RS">
 <meta property="og:image" content="https://camstreamguide.com/assets/og/soulcams.png">
 <meta property="og:image:width" content="1200">
@@ -96,7 +96,7 @@
    "dateModified": "2026-06-07",
    "publisher": {
     "@type": "Organization",
-    "name": "Streaming Guides",
+    "name": "Cam Stream Guide",
     "url": "https://camstreamguide.com/"
    },
    "image": "https://camstreamguide.com/assets/og/soulcams.png",
@@ -243,9 +243,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;
 align-items:center;justify-content:space-between;padding:0 40px;
 background:rgba(20,20,32,.85);backdrop-filter:blur(16px);
 border-bottom:1px solid var(--app-border)}
-.nav-logo{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:700;letter-spacing:.3px}
-.nav-logo .dot{width:11px;height:11px;border-radius:50%;
+.nav-home{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:var(--text-sub);transition:color .15s}
+.nav-home:hover{color:var(--text)}
+.nav-home .dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;
 background:linear-gradient(135deg,var(--blue),var(--purple))}
+.nav-right{display:flex;align-items:center;gap:14px;min-width:0}
+.nav-brand{font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
+.nav-brand:hover{color:var(--text)}
 .nav-links{display:flex;gap:26px;list-style:none}
 .nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--text)}
@@ -417,6 +421,13 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .footer-inner{flex-direction:column;text-align:center}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
+@media(max-width:600px){nav{padding:0 16px}.nav-right{gap:10px}.nav-brand{font-size:16px}.nav-home-t{display:none}
+.breadcrumbs{padding:78px 16px 0}.hero,.section{padding-left:16px;padding-right:16px}
+.hero{padding-top:24px}.h1{font-size:clamp(25px,6.6vw,34px);letter-spacing:-.6px}
+.sub{font-size:16px}.sec-h{font-size:23px;letter-spacing:-.4px}.cta-block h2{font-size:23px}
+.eyebrow{font-size:12px}.cta-block{padding:38px 16px}footer{padding:28px 16px}}
+@media(max-width:380px){.nav-brand{font-size:14px}.lang-dl>summary{padding:6px 8px}
+.h1{font-size:23px}.sub{font-size:15px}.sec-h{font-size:20px}.btn-lg{padding:12px 18px;font-size:13px}}
 </style>
 <script>
 (function(){try{
@@ -437,13 +448,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="xKzNuGcNdMMVQ1gW3UJZOw" async></script>
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="../../"><span class="dot"></span>Streaming Guides</a>
-  <ul class="nav-links">
-    <li><a href="../../">Сви водичи</a></li>
-  </ul>
-  <details class="lang-dl"><summary aria-label="Language"><span class="lf">🇷🇸</span><span class="lc">SR</span><span class="dl-caret">▾</span></summary><div class="lang-dl-menu"><a href="../../id/soulcams/" data-lang="id"><span class="lf">🇮🇩</span><span class="ln">Bahasa Indonesia</span></a><a href="../../ms/soulcams/" data-lang="ms"><span class="lf">🇲🇾</span><span class="ln">Bahasa Melayu</span></a><a href="../../da/soulcams/" data-lang="da"><span class="lf">🇩🇰</span><span class="ln">Dansk</span></a><a href="../../de/soulcams/" data-lang="de"><span class="lf">🇩🇪</span><span class="ln">Deutsch</span></a><a href="../../soulcams/" data-lang="en"><span class="lf">🇬🇧</span><span class="ln">English</span></a><a href="../../es/soulcams/" data-lang="es"><span class="lf">🇪🇸</span><span class="ln">Español</span></a><a href="../../fil/soulcams/" data-lang="fil"><span class="lf">🇵🇭</span><span class="ln">Filipino</span></a><a href="../../fr/soulcams/" data-lang="fr"><span class="lf">🇫🇷</span><span class="ln">Français</span></a><a href="../../hr/soulcams/" data-lang="hr"><span class="lf">🇭🇷</span><span class="ln">Hrvatski</span></a><a href="../../it/soulcams/" data-lang="it"><span class="lf">🇮🇹</span><span class="ln">Italiano</span></a><a href="../../hu/soulcams/" data-lang="hu"><span class="lf">🇭🇺</span><span class="ln">Magyar</span></a><a href="../../nl/soulcams/" data-lang="nl"><span class="lf">🇳🇱</span><span class="ln">Nederlands</span></a><a href="../../no/soulcams/" data-lang="no"><span class="lf">🇳🇴</span><span class="ln">Norsk</span></a><a href="../../pl/soulcams/" data-lang="pl"><span class="lf">🇵🇱</span><span class="ln">Polski</span></a><a href="../../pt/soulcams/" data-lang="pt"><span class="lf">🇧🇷</span><span class="ln">Português</span></a><a href="../../ro/soulcams/" data-lang="ro"><span class="lf">🇷🇴</span><span class="ln">Română</span></a><a href="../../sk/soulcams/" data-lang="sk"><span class="lf">🇸🇰</span><span class="ln">Slovenčina</span></a><a href="../../fi/soulcams/" data-lang="fi"><span class="lf">🇫🇮</span><span class="ln">Suomi</span></a><a href="../../sv/soulcams/" data-lang="sv"><span class="lf">🇸🇪</span><span class="ln">Svenska</span></a><a href="../../vi/soulcams/" data-lang="vi"><span class="lf">🇻🇳</span><span class="ln">Tiếng Việt</span></a><a href="../../tr/soulcams/" data-lang="tr"><span class="lf">🇹🇷</span><span class="ln">Türkçe</span></a><a href="../../cs/soulcams/" data-lang="cs"><span class="lf">🇨🇿</span><span class="ln">Čeština</span></a><a href="../../el/soulcams/" data-lang="el"><span class="lf">🇬🇷</span><span class="ln">Ελληνικά</span></a><a href="../../bg/soulcams/" data-lang="bg"><span class="lf">🇧🇬</span><span class="ln">Български</span></a><a href="../../ru/soulcams/" data-lang="ru"><span class="lf">🇷🇺</span><span class="ln">Русский</span></a><a href="../../sr/soulcams/" data-lang="sr" class="cur"><span class="lf">🇷🇸</span><span class="ln">Српски</span></a><a href="../../uk/soulcams/" data-lang="uk"><span class="lf">🇺🇦</span><span class="ln">Українська</span></a><a href="../../he/soulcams/" data-lang="he"><span class="lf">🇮🇱</span><span class="ln">עברית</span></a><a href="../../ar/soulcams/" data-lang="ar"><span class="lf">🇸🇦</span><span class="ln">العربية</span></a><a href="../../fa/soulcams/" data-lang="fa"><span class="lf">🇮🇷</span><span class="ln">فارسی</span></a><a href="../../hi/soulcams/" data-lang="hi"><span class="lf">🇮🇳</span><span class="ln">हिन्दी</span></a><a href="../../th/soulcams/" data-lang="th"><span class="lf">🇹🇭</span><span class="ln">ไทย</span></a><a href="../../zh/soulcams/" data-lang="zh"><span class="lf">🇨🇳</span><span class="ln">中文</span></a><a href="../../ja/soulcams/" data-lang="ja"><span class="lf">🇯🇵</span><span class="ln">日本語</span></a><a href="../../ko/soulcams/" data-lang="ko"><span class="lf">🇰🇷</span><span class="ln">한국어</span></a></div></details>
-</nav>
+<nav><a class="nav-home" href="../../"><span class="dot"></span><span class="nav-home-t">Сви водичи</span></a><div class="nav-right"><details class="lang-dl"><summary aria-label="Language"><span class="lf">🇷🇸</span><span class="lc">SR</span><span class="dl-caret">▾</span></summary><div class="lang-dl-menu"><a href="../../id/soulcams/" data-lang="id"><span class="lf">🇮🇩</span><span class="ln">Bahasa Indonesia</span></a><a href="../../ms/soulcams/" data-lang="ms"><span class="lf">🇲🇾</span><span class="ln">Bahasa Melayu</span></a><a href="../../da/soulcams/" data-lang="da"><span class="lf">🇩🇰</span><span class="ln">Dansk</span></a><a href="../../de/soulcams/" data-lang="de"><span class="lf">🇩🇪</span><span class="ln">Deutsch</span></a><a href="../../soulcams/" data-lang="en"><span class="lf">🇬🇧</span><span class="ln">English</span></a><a href="../../es/soulcams/" data-lang="es"><span class="lf">🇪🇸</span><span class="ln">Español</span></a><a href="../../fil/soulcams/" data-lang="fil"><span class="lf">🇵🇭</span><span class="ln">Filipino</span></a><a href="../../fr/soulcams/" data-lang="fr"><span class="lf">🇫🇷</span><span class="ln">Français</span></a><a href="../../hr/soulcams/" data-lang="hr"><span class="lf">🇭🇷</span><span class="ln">Hrvatski</span></a><a href="../../it/soulcams/" data-lang="it"><span class="lf">🇮🇹</span><span class="ln">Italiano</span></a><a href="../../hu/soulcams/" data-lang="hu"><span class="lf">🇭🇺</span><span class="ln">Magyar</span></a><a href="../../nl/soulcams/" data-lang="nl"><span class="lf">🇳🇱</span><span class="ln">Nederlands</span></a><a href="../../no/soulcams/" data-lang="no"><span class="lf">🇳🇴</span><span class="ln">Norsk</span></a><a href="../../pl/soulcams/" data-lang="pl"><span class="lf">🇵🇱</span><span class="ln">Polski</span></a><a href="../../pt/soulcams/" data-lang="pt"><span class="lf">🇧🇷</span><span class="ln">Português</span></a><a href="../../ro/soulcams/" data-lang="ro"><span class="lf">🇷🇴</span><span class="ln">Română</span></a><a href="../../sk/soulcams/" data-lang="sk"><span class="lf">🇸🇰</span><span class="ln">Slovenčina</span></a><a href="../../fi/soulcams/" data-lang="fi"><span class="lf">🇫🇮</span><span class="ln">Suomi</span></a><a href="../../sv/soulcams/" data-lang="sv"><span class="lf">🇸🇪</span><span class="ln">Svenska</span></a><a href="../../vi/soulcams/" data-lang="vi"><span class="lf">🇻🇳</span><span class="ln">Tiếng Việt</span></a><a href="../../tr/soulcams/" data-lang="tr"><span class="lf">🇹🇷</span><span class="ln">Türkçe</span></a><a href="../../cs/soulcams/" data-lang="cs"><span class="lf">🇨🇿</span><span class="ln">Čeština</span></a><a href="../../el/soulcams/" data-lang="el"><span class="lf">🇬🇷</span><span class="ln">Ελληνικά</span></a><a href="../../bg/soulcams/" data-lang="bg"><span class="lf">🇧🇬</span><span class="ln">Български</span></a><a href="../../ru/soulcams/" data-lang="ru"><span class="lf">🇷🇺</span><span class="ln">Русский</span></a><a href="../../sr/soulcams/" data-lang="sr" class="cur"><span class="lf">🇷🇸</span><span class="ln">Српски</span></a><a href="../../uk/soulcams/" data-lang="uk"><span class="lf">🇺🇦</span><span class="ln">Українська</span></a><a href="../../he/soulcams/" data-lang="he"><span class="lf">🇮🇱</span><span class="ln">עברית</span></a><a href="../../ar/soulcams/" data-lang="ar"><span class="lf">🇸🇦</span><span class="ln">العربية</span></a><a href="../../fa/soulcams/" data-lang="fa"><span class="lf">🇮🇷</span><span class="ln">فارسی</span></a><a href="../../hi/soulcams/" data-lang="hi"><span class="lf">🇮🇳</span><span class="ln">हिन्दी</span></a><a href="../../th/soulcams/" data-lang="th"><span class="lf">🇹🇭</span><span class="ln">ไทย</span></a><a href="../../zh/soulcams/" data-lang="zh"><span class="lf">🇨🇳</span><span class="ln">中文</span></a><a href="../../ja/soulcams/" data-lang="ja"><span class="lf">🇯🇵</span><span class="ln">日本語</span></a><a href="../../ko/soulcams/" data-lang="ko"><span class="lf">🇰🇷</span><span class="ln">한국어</span></a></div></details><a class="nav-brand" href="../../">Cam Stream Guide</a></div></nav>
 <div class="breadcrumbs">
   <a href="../../">Водичи</a><span class="sep">/</span><span>SoulCams</span>
 </div>
@@ -509,7 +514,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </section>
 <footer>
   <div class="footer-inner">
-    <div>© 2026 Streaming Guides · <span class="age-tag-sm">18+</span></div>
+    <div>© 2026 Cam Stream Guide · <span class="age-tag-sm">18+</span></div>
     <div class="footer-links">
       <a href="../../">Сви водичи</a>
       <a href="../../become-a-cam-model/">Постани кам модел</a>

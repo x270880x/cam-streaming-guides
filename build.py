@@ -33,7 +33,19 @@ OBS_NAV = {
 }
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
-SITE_NAME = "Streaming Guides"
+SITE_NAME = "Cam Stream Guide"
+
+
+def nav_html(home, home_label, lang_sw=""):
+    """Header nav: home/logo link (left) + site name top-right + lang switcher."""
+    return (
+        '<nav>'
+        f'<a class="nav-home" href="{home}"><span class="dot"></span>'
+        f'<span class="nav-home-t">{home_label}</span></a>'
+        f'<div class="nav-right">{lang_sw}'
+        f'<a class="nav-brand" href="{home}">{SITE_NAME}</a></div>'
+        '</nav>'
+    )
 PUBLISHED_DATE = "2026-05-21"
 MODIFIED_DATE = datetime.date.today().isoformat()
 OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
@@ -103,9 +115,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;
 align-items:center;justify-content:space-between;padding:0 40px;
 background:rgba(20,20,32,.85);backdrop-filter:blur(16px);
 border-bottom:1px solid var(--app-border)}
-.nav-logo{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:700;letter-spacing:.3px}
-.nav-logo .dot{width:11px;height:11px;border-radius:50%;
+.nav-home{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:var(--text-sub);transition:color .15s}
+.nav-home:hover{color:var(--text)}
+.nav-home .dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;
 background:linear-gradient(135deg,var(--blue),var(--purple))}
+.nav-right{display:flex;align-items:center;gap:14px;min-width:0}
+.nav-brand{font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
+.nav-brand:hover{color:var(--text)}
 .nav-links{display:flex;gap:26px;list-style:none}
 .nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--text)}
@@ -277,6 +293,13 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .footer-inner{flex-direction:column;text-align:center}
 .hero-inner{grid-template-columns:1fr;gap:24px}
 .collab{max-width:300px}}
+@media(max-width:600px){nav{padding:0 16px}.nav-right{gap:10px}.nav-brand{font-size:16px}.nav-home-t{display:none}
+.breadcrumbs{padding:78px 16px 0}.hero,.section{padding-left:16px;padding-right:16px}
+.hero{padding-top:24px}.h1{font-size:clamp(25px,6.6vw,34px);letter-spacing:-.6px}
+.sub{font-size:16px}.sec-h{font-size:23px;letter-spacing:-.4px}.cta-block h2{font-size:23px}
+.eyebrow{font-size:12px}.cta-block{padding:38px 16px}footer{padding:28px 16px}}
+@media(max-width:380px){.nav-brand{font-size:14px}.lang-dl>summary{padding:6px 8px}
+.h1{font-size:23px}.sub{font-size:15px}.sec-h{font-size:20px}.btn-lg{padding:12px 18px;font-size:13px}}
 """
 
 # ---------------------------------------------------------------- UI strings per language
@@ -1803,13 +1826,7 @@ def render(p, lang, all_platforms):
 {AHREFS_JS}
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
-  <ul class="nav-links">
-    <li><a href="{home}">{u['home']}</a></li>
-  </ul>
-  {lang_switch(lang, depth, p['slug'])}
-</nav>
+{nav_html(home, u['home'], lang_switch(lang, depth, p['slug']))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(name)}</span>
 </div>
@@ -2864,11 +2881,7 @@ def render_legal(slug, lang):
 {AHREFS_JS}
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
-  <ul class="nav-links"><li><a href="{home}">{u['home']}</a></li></ul>
-  {lang_switch(lang, depth)}
-</nav>
+{nav_html(home, u['home'], lang_switch(lang, depth))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(crumb)}</span>
 </div>
@@ -2974,11 +2987,7 @@ def render_model_guide(lang):
 {AHREFS_JS}
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
-  <ul class="nav-links"><li><a href="{home}">{u['home']}</a></li></ul>
-  {lang_switch(lang, depth)}
-</nav>
+{nav_html(home, u['home'], lang_switch(lang, depth))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(c['h1short'])}</span>
 </div>
@@ -3098,11 +3107,7 @@ def render_obs_vs(lang):
 {AHREFS_JS}
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="{home}"><span class="dot"></span>{SITE_NAME}</a>
-  <ul class="nav-links"><li><a href="{home}">{u['home']}</a></li></ul>
-  {lang_switch(lang, depth)}
-</nav>
+{nav_html(home, u['home'], lang_switch(lang, depth))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(c['h1short'])}</span>
 </div>
@@ -3174,8 +3179,8 @@ def render_404():
 </head>
 <body>
 <nav>
-  <a class="nav-logo" href="/"><span class="dot"></span>{SITE_NAME}</a>
-  <ul class="nav-links"><li><a href="/">All guides</a></li></ul>
+  <a class="nav-home" href="/"><span class="dot"></span><span class="nav-home-t">All guides</span></a>
+  <div class="nav-right"><a class="nav-brand" href="/">{SITE_NAME}</a></div>
 </nav>
 <div class="err-wrap">
   <div class="err-code">404</div>
@@ -3286,11 +3291,7 @@ def render_hub(platforms, lang):
 {AHREFS_JS}
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="./"><span class="dot"></span>{SITE_NAME}</a>
-  <ul class="nav-links"><li><a href="./">{u['home']}</a></li></ul>
-  {lang_switch(lang, hub_depth)}
-</nav>
+{nav_html("./", u['home'], lang_switch(lang, hub_depth))}
 <section class="hero" style="padding-top:96px">
   <div class="hero-glow"></div>
   <h1 class="h1">{hb['h1']}</h1>
