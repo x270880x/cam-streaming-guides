@@ -39,10 +39,11 @@ BRAND_LOGO = (
     '<defs><linearGradient id="csgLogo" x1="0" y1="0" x2="1" y2="1">'
     '<stop offset="0" stop-color="#2878fc"/><stop offset="1" stop-color="#9c5bff"/>'
     '</linearGradient></defs>'
-    '<rect x="1.5" y="1.5" width="25" height="25" rx="8" fill="url(#csgLogo)"/>'
-    '<circle cx="13" cy="15" r="6" fill="none" stroke="#fff" stroke-width="2.4"/>'
-    '<circle cx="13" cy="15" r="2.4" fill="#fff"/>'
-    '<circle cx="22" cy="6" r="3.2" fill="#ff5454" stroke="#141420" stroke-width="1.6"/>'
+    '<rect x="1" y="1" width="26" height="26" rx="7" fill="url(#csgLogo)"/>'
+    '<circle cx="9" cy="14" r="2.5" fill="#fff"/>'
+    '<path d="M9,9.5 A4.5,4.5 0 0 1 9,18.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>'
+    '<path d="M9,6.5 A7.5,7.5 0 0 1 9,21.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>'
+    '<path d="M9,3.5 A10.5,10.5 0 0 1 9,24.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity="0.4"/>'
     '</svg>'
 )
 # Styled wordmark for the header. SITE_NAME stays plain text for meta/footer/title.
@@ -3237,6 +3238,9 @@ METHOD = {
     "camversity": "stream", "skyprivate": "vcam", "manyvids": "stream", "fansly": "stream",
     "ifriends": "stream", "babestation": "stream", "adultwork": "stream", "jerkmate": "stream",
     "justforfans": "vcam",
+    "fanvue": "vcam", "loyalfans": "vcam", "fancentro": "vcam", "ismygirl": "vcam",
+    "dxlive": "stream", "streamen": "stream", "xcams": "stream", "camcontacts": "stream",
+    "royalcams": "stream", "modelhub": "stream",
 }
 # Hub filter labels: (All, Stream sites, Virtual camera) per language.
 HUB_FILTER = {
