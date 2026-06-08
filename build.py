@@ -34,16 +34,27 @@ OBS_NAV = {
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
 SITE_NAME = "CamStreamGuide.com"
+BRAND_LOGO = (
+    '<svg class="logo" viewBox="0 0 28 28" width="26" height="26" aria-hidden="true">'
+    '<defs><linearGradient id="csgLogo" x1="0" y1="0" x2="1" y2="1">'
+    '<stop offset="0" stop-color="#2878fc"/><stop offset="1" stop-color="#9c5bff"/>'
+    '</linearGradient></defs>'
+    '<rect x="1.5" y="1.5" width="25" height="25" rx="8" fill="url(#csgLogo)"/>'
+    '<path d="M11 9 L19.5 14 L11 19 Z" fill="#fff"/>'
+    '<circle cx="22" cy="6" r="3.2" fill="#ff5454" stroke="#141420" stroke-width="1.6"/>'
+    '</svg>'
+)
+# Styled wordmark for the header. SITE_NAME stays plain text for meta/footer/title.
+BRAND_MARK = BRAND_LOGO + '<span class="brand-name">CamStreamGuide</span><span class="brand-tld">.com</span>'
 
 
 def nav_html(home, home_label, lang_sw=""):
-    """Header nav: desktop = 'all guides' left, brand right; mobile = brand left,
-    'all guides' right (swap via CSS flex order)."""
+    """Header: brand (logo + colored wordmark) pinned top-left; 'all guides' + lang on the right."""
     return (
         '<nav>'
         f'<a class="nav-home" href="{home}">{home_label}</a>'
         f'{lang_sw}'
-        f'<a class="nav-brand" href="{home}"><span class="dot"></span>{SITE_NAME}</a>'
+        f'<a class="nav-brand" href="{home}" aria-label="CamStreamGuide.com home">{BRAND_MARK}</a>'
         '</nav>'
     )
 PUBLISHED_DATE = "2026-05-21"
@@ -118,10 +129,11 @@ border-bottom:1px solid var(--app-border)}
 .nav-home{order:2;font-size:14px;font-weight:600;color:var(--text-sub);transition:color .15s}
 .nav-home:hover{color:var(--text)}
 .lang-dl{order:3}
-.nav-brand{order:1;margin-right:auto;display:inline-flex;align-items:center;gap:9px;font-size:19px;font-weight:800;letter-spacing:.2px;color:var(--text);white-space:nowrap}
-.nav-brand:hover{color:var(--text)}
-.nav-brand .dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;
-background:linear-gradient(135deg,var(--blue),var(--purple))}
+.nav-brand{order:1;margin-right:auto;display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
+.nav-brand:hover{opacity:.85}
+.nav-brand .logo{display:block;width:26px;height:26px;flex-shrink:0}
+.brand-name{background:linear-gradient(120deg,#5b9bff,#b98cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-tld{color:var(--text-dim);font-weight:700}
 .nav-links{display:flex;gap:26px;list-style:none}
 .nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--text)}
@@ -3180,7 +3192,7 @@ def render_404():
 <body>
 <nav>
   <a class="nav-home" href="/">All guides</a>
-  <a class="nav-brand" href="/"><span class="dot"></span>{SITE_NAME}</a>
+  <a class="nav-brand" href="/" aria-label="CamStreamGuide.com home">{BRAND_MARK}</a>
 </nav>
 <div class="err-wrap">
   <div class="err-code">404</div>
