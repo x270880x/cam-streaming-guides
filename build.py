@@ -40,12 +40,13 @@ BRAND_LOGO = (
     '<stop offset="0" stop-color="#2878fc"/><stop offset="1" stop-color="#9c5bff"/>'
     '</linearGradient></defs>'
     '<rect x="1.5" y="1.5" width="25" height="25" rx="8" fill="url(#csgLogo)"/>'
-    '<path d="M11 9 L19.5 14 L11 19 Z" fill="#fff"/>'
+    '<circle cx="13" cy="15" r="6" fill="none" stroke="#fff" stroke-width="2.4"/>'
+    '<circle cx="13" cy="15" r="2.4" fill="#fff"/>'
     '<circle cx="22" cy="6" r="3.2" fill="#ff5454" stroke="#141420" stroke-width="1.6"/>'
     '</svg>'
 )
 # Styled wordmark for the header. SITE_NAME stays plain text for meta/footer/title.
-BRAND_MARK = BRAND_LOGO + '<span class="brand-name">CamStreamGuide</span><span class="brand-tld">.com</span>'
+BRAND_MARK = BRAND_LOGO + '<span class="brand-name">Cam<span class="brand-accent">Stream</span>Guide</span><span class="brand-tld">.com</span>'
 
 
 def nav_html(home, home_label, lang_sw=""):
@@ -132,7 +133,8 @@ border-bottom:1px solid var(--app-border)}
 .nav-brand{order:1;margin-right:auto;display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
 .nav-brand:hover{opacity:.85}
 .nav-brand .logo{display:block;width:26px;height:26px;flex-shrink:0}
-.brand-name{background:linear-gradient(120deg,#5b9bff,#b98cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-name{color:var(--text)}
+.brand-accent{background:linear-gradient(120deg,#5b9bff,#b98cff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand-tld{color:var(--text-dim);font-weight:700}
 .nav-links{display:flex;gap:26px;list-style:none}
 .nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
