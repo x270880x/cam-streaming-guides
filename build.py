@@ -3291,7 +3291,7 @@ def render_hub(platforms, lang):
     hub_depth = "../" if u["path"] else ""
     avail = [p for p in platforms if lang in p]
     # hub display order: these first, then the rest in natural order
-    first = ["multistream-cams", "onlyfans", "lovense", "mfc-alerts"]
+    first = ["multistream-cams", "onlyfans", "myfreecams", "lovense", "mfc-alerts"]
     ordered = ([p for s in first for p in avail if p["slug"] == s]
                + [p for p in avail if p["slug"] not in first])
     cards = "".join(
