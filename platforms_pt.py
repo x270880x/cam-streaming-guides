@@ -1499,4 +1499,179 @@ PLATFORMS_PT = [
              "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel. Em uns 10 segundos seu stream chega ao público do Modelhub."),
         ],
     },
+    {
+        "slug": "xhamsterlive", "name": "xHamsterLive",
+        "title": "Transmitir no xHamsterLive com SplitCam — RTMP/OBS",
+        "desc": "Transmita no xHamsterLive com SplitCam grátis via RTMP — cenas multicâmera, overlays e filtros. Pegue o tráfego mainstream do xHamster, sem marca d'água.",
+        "kw": "como transmitir no xhamsterlive, xhamsterlive, xhamsterlive obs, xhamsterlive rtmp, xhamsterlive broadcast, xhamsterlive modelo, xhamster live cam, xhamsterlive stream key",
+        "h1html": 'Como transmitir no <span class="accent">xHamsterLive</span> com SplitCam',
+        "h1short": "Transmitir no xHamsterLive",
+        "card": "SplitCam grátis → stream RTMP/OBS pro xHamsterLive.",
+        "intro": "O xHamsterLive é o braço de live cam do xHamster — mesma tecnologia de broadcaster do Stripchat, mas canalizada pelo tráfego mainstream do xHamster, uma das maiores bases de espectadores do adulto. As modelos transmitem pelo <strong>Studio</strong> do xHamsterLive, que aceita tanto o broadcaster da webcam no navegador quanto um <strong>encoder externo via RTMP</strong>. Com o <strong style='color:var(--text)'>SplitCam</strong> grátis você transmite como encoder externo pra ter cenas multicâmera, overlays e filtros — ou, se preferir transmitir pelo navegador, aponta o xHamsterLive pro SplitCam como <strong>câmera virtual</strong> pro mesmo efeito.",
+        "quick": "Transmitir no xHamsterLive com SplitCam: instala o SplitCam, monta a cena, copia a URL do servidor e a stream key do Studio do xHamsterLive, cola nos campos de RTMP do SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Copia URL + stream key do Studio do xHamsterLive → External Encoder.</li>"
+                 "<li>Cola no RTMP personalizado do SplitCam.</li>"
+                 "<li>Clica Go Live.</li></ol>",
+        "key_how": "O Studio do xHamsterLive mostra pro broadcaster uma aba de <strong>encoder externo</strong> com URL do servidor e stream key. Cola as duas no SplitCam em <strong>Stream Settings → Custom RTMP</strong>; escolhe 4.000–6.000 Kbps a 1920×1080, 30 fps, keyframe de 2 segundos. Aperta <strong>Go Live</strong> no SplitCam e depois entra online pelo Studio. Se preferir o broadcaster do navegador, abre ele e escolhe <strong>SplitCam</strong> na lista de câmeras — sua cena composta substitui a webcam crua.",
+        "tips": [
+            ("Tráfego do xHamster, motor do Stripchat", "Mesma ferramenta de broadcaster do Stripchat (painel Studio, menu de tips, Lovense), mas com o funil mainstream do xHamster — chega na sua sala um mix de público diferente."),
+            ("Usa encoder externo sempre que der", "O RTMP do SplitCam dá bitrate estável e cenas multicâmera/overlays completas; o broadcaster do navegador funciona, mas limita a composição."),
+            ("Tip menu converte público mainstream", "Muitos visitantes do xHamster são novos em cam — um tip menu limpo na tela e uma barra de meta deixam claro o que esperar e elevam a conversão."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("O xHamsterLive é o mesmo que o Stripchat?", "Roda no motor de broadcaster do Stripchat, mas a marca e a fonte de tráfego são diferentes — o xHamster canaliza o público mainstream pra cá, então o perfil de espectador difere de quem cadastra direto no Stripchat."),
+            ("Onde pego a stream key do xHamsterLive?", "No Studio do xHamsterLive, abre o painel de <em>Broadcast</em> ou <em>External Encoder</em> — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Broadcaster do navegador ou RTMP?", "Encoder externo (RTMP) é o preferido pra quem leva a sério — bitrate estável e cenas completas do SplitCam. O broadcaster do navegador também serve: escolhe o SplitCam como webcam."),
+            ("O SplitCam é grátis pra usar com o xHamsterLive?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, tip menu, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA — tudo ao vivo."),
+            ("Pega a URL do Studio do xHamsterLive + key", "Entra no xHamsterLive, abre o Studio, troca pra <strong>External Encoder</strong> e copia a <strong>URL do servidor</strong> e sua <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao xHamsterLive", "No SplitCam → <strong>Stream Settings → Custom RTMP</strong>, cola a URL e a key. Põe 4.000–6.000 Kbps a 1920×1080, 30 fps, keyframe de 2 segundos."),
+            ("Clica Go Live", "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo Studio do xHamsterLive. Em uns 10 segundos seu stream cai na lista pública."),
+        ],
+    },
+    {
+        "slug": "premium-chat", "name": "Premium.Chat",
+        "title": "Usar o SplitCam no Premium.Chat — Chamadas Pagas",
+        "desc": "Use o SplitCam grátis como câmera virtual no Premium.Chat — aceite chamadas pagas por minuto com cenas multicâmera, overlays e filtros. Sem marca d'água.",
+        "kw": "como usar splitcam no premium chat, premium chat, premium chat video call, premium chat câmera virtual, premium.chat por minuto, premium chat modelo, premium chat consultor, premium chat live",
+        "h1html": 'Como usar o SplitCam no <span class="accent">Premium.Chat</span>',
+        "h1short": "Premium.Chat com SplitCam",
+        "card": "Usa o SplitCam como câmera virtual nas chamadas pagas do Premium.Chat.",
+        "intro": "O Premium.Chat é uma plataforma paga por minuto: você define a sua tarifa por minuto pra chat, voz ou <strong>chamadas de vídeo</strong>, compartilha seu link pessoal, e o cliente paga pra falar com você. As chamadas rodam no navegador, então o <strong style='color:var(--text)'>SplitCam</strong> grátis encaixa direto como <strong>câmera virtual</strong> — cenas multicâmera, overlays, filtros de iluminação e fundo com IA chegam até quem ligou sem mudar o jeito de usar o Premium.Chat.",
+        "quick": "Usar o SplitCam no Premium.Chat: instala o SplitCam, monta uma cena limpa pra chamadas de vídeo, aceita uma chamada que entrar no Premium.Chat e, no seletor de câmera da chamada, escolhe <em>SplitCam</em>."
+                 "<ol><li>Instala o SplitCam.</li><li>Monta a cena (boa luz, overlay opcional).</li>"
+                 "<li>Define sua tarifa por minuto no Premium.Chat.</li>"
+                 "<li>Aceita a chamada de vídeo que entrar.</li>"
+                 "<li>Escolhe SplitCam como câmera.</li></ol>",
+        "key_how": "As chamadas do Premium.Chat rodam no navegador. O SplitCam instala uma webcam virtual chamada <strong>\"SplitCam Video Driver\"</strong> — quando a chamada começa, clica no menu do ícone de câmera na janela do Premium.Chat e troca da sua webcam embutida pro <strong>SplitCam</strong>. Sua cena composta (câmera real + overlays + filtros) vira o que o cliente vê.",
+        "tips": [
+            ("Premium.Chat é por minuto, não é streaming", "Diferente de salas estilo Chaturbate com tip, aqui você é paga por minuto. Luz suave, áudio claro e fundo com IA parecem mais uma consulta premium do que cam pública."),
+            ("Divulga o seu link, não um perfil", "O Premium.Chat te dá um link pessoal pra você jogar nas redes, na bio do OnlyFans ou num Linktree — é assim que o cliente te encontra."),
+            ("Overlays só se ajudarem", "Em chamada 1-a-1, overlay pesado distrai. Usa o SplitCam pela qualidade de câmera, luz e fundo — mantém a tela majoritariamente em você."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Como o SplitCam conecta no Premium.Chat?", "Como câmera virtual. As chamadas do Premium.Chat rodam no navegador; escolhe o SplitCam no seletor de câmera da chamada — sem stream key, sem RTMP."),
+            ("O Premium.Chat suporta OBS?", "O Premium.Chat é baseado em navegador, então o OBS encaixa do mesmo jeito que o SplitCam — via câmera virtual. O SplitCam é a opção mais leve, grátis e sem marca d'água."),
+            ("Dá pra usar uma segunda câmera ou overlay no Premium.Chat?", "Dá — monta a cena no SplitCam (segunda câmera, overlays, filtros) e o Premium.Chat enxerga uma única webcam. Vai com moderação em 1-a-1."),
+            ("O SplitCam é grátis?", "É — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. Ele instala uma câmera virtual que o navegador consegue usar."),
+            ("Monta sua cena pra chamadas", "Abre o SplitCam, adiciona a webcam, ajusta a luz e, se quiser, põe um fundo com IA ou um overlay discreto. Mantém o enquadramento limpo — é chamada paga, não palco."),
+            ("Define sua tarifa no Premium.Chat", "Entra no Premium.Chat, define sua tarifa por minuto pra chamada de vídeo e copia seu link pessoal. Compartilha nas redes ou em bios."),
+            ("Aceita a chamada de vídeo que entrar", "Quando o cliente paga pelo tempo, a chamada entra. Aceita pelo painel do Premium.Chat."),
+            ("Escolhe o SplitCam como câmera", "No menu do ícone de câmera da janela da chamada, troca da webcam embutida pro <strong>SplitCam</strong>. Sua cena composta agora chega ao cliente."),
+        ],
+    },
+    {
+        "slug": "arousr", "name": "Arousr",
+        "title": "Usar o SplitCam no Arousr — Sexting e Vídeo Chat",
+        "desc": "Use o SplitCam grátis como câmera virtual no vídeo chat do Arousr — cenas multicâmera, overlays e filtros pra sexting, voz e vídeo pagos. Sem marca d'água.",
+        "kw": "como usar splitcam no arousr, arousr, arousr video chat, arousr câmera virtual, arousr cam girl, arousr modelo, plataforma de sexting splitcam, arousr live",
+        "h1html": 'Como usar o SplitCam no <span class="accent">Arousr</span>',
+        "h1short": "Arousr com SplitCam",
+        "card": "Usa o SplitCam como câmera virtual no vídeo chat do Arousr.",
+        "intro": "O Arousr é uma plataforma paga de <strong>sexting + voz + vídeo chat</strong> — os clientes compram créditos pra mandar mensagem, falar ou fazer vídeo com modelos, e você é paga por sessão. O lado de vídeo roda no navegador (ou no app mobile do Arousr no celular), então o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta como <strong>câmera virtual</strong> no desktop: cenas multicâmera, overlays, filtros de iluminação e fundo com IA vão direto pro cliente.",
+        "quick": "Usar o SplitCam no Arousr: instala o SplitCam, monta a cena, aceita um pedido de vídeo que entrar no Arousr e, no seletor de câmera, escolhe <em>SplitCam</em>."
+                 "<ol><li>Instala o SplitCam.</li><li>Monta cena + iluminação.</li>"
+                 "<li>Define suas tarifas de sexting/vídeo no Arousr.</li>"
+                 "<li>Aceita o pedido de vídeo que entrar.</li>"
+                 "<li>Escolhe SplitCam na lista de câmeras.</li></ol>",
+        "key_how": "O vídeo web do Arousr roda no navegador. O SplitCam instala uma webcam virtual chamada <strong>\"SplitCam Video Driver\"</strong> — quando começa uma sessão de vídeo no painel do Arousr, troca a câmera na janela da sessão pro <strong>SplitCam</strong>. A cena composta (câmera + overlays + filtros) vira o que o cliente vê. No app mobile do Arousr câmera virtual não funciona — usa a câmera real do celular ali e deixa o SplitCam pras sessões no desktop.",
+        "tips": [
+            ("Sessões são pagas por tempo", "Os clientes compram créditos por minuto (ou por mensagem no texto). Vídeo caprichado — boa luz, fundo com IA, filtro de beleza — se paga em sessões mais longas."),
+            ("Sexting primeiro, vídeo como upsell", "A maior parte da grana do Arousr vem do texto. Uma prévia em vídeo curtinha durante um sexting empurra o cliente pra uma sessão de vídeo completa — é ali que a tarifa por minuto entra."),
+            ("Sessão no app mobile ≠ desktop", "Câmera virtual funciona no vídeo do navegador no desktop. O app mobile do Arousr usa a câmera do celular direto — mesmo fluxo, ferramenta diferente."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Como o SplitCam conecta no Arousr?", "Como câmera virtual. O vídeo chat do Arousr roda no navegador no desktop — escolhe o SplitCam no seletor de câmera. Não precisa de stream key."),
+            ("O Arousr suporta OBS?", "O Arousr é baseado em navegador, então o OBS encaixa do mesmo jeito que o SplitCam — via câmera virtual. O SplitCam é a opção grátis e sem marca d'água."),
+            ("Dá pra usar overlays numa sessão de sexting + vídeo?", "Dá — monta a cena no SplitCam (luz, overlay, segunda câmera) e o Arousr enxerga uma única webcam. Vai leve com overlay no 1-a-1."),
+            ("O SplitCam é grátis pra usar com o Arousr?", "É — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. Ele instala uma câmera virtual que o navegador consegue selecionar."),
+            ("Monta sua cena", "Abre o SplitCam, adiciona a webcam, ajusta a luz e, se quiser, põe um fundo com IA ou filtro de beleza. Mantém o clima intimista — é sessão 1-a-1 paga, não palco público."),
+            ("Define suas tarifas no Arousr", "Entra no Arousr, define sua tarifa por mensagem e por minuto de vídeo, e confere se seu perfil está aprovado pra receber pedidos."),
+            ("Aceita o pedido de vídeo que entrar", "Quando o cliente abre uma sessão de vídeo (pelo sexting ou direto), aceita pelo painel do Arousr."),
+            ("Escolhe o SplitCam como câmera", "Na lista de câmeras da janela da sessão, troca da webcam embutida pro <strong>SplitCam</strong>. Sua cena composta agora chega ao cliente."),
+        ],
+    },
+    {
+        "slug": "cams-com", "name": "Cams.com",
+        "title": "Transmitir no Cams.com com SplitCam — RTMP/OBS",
+        "desc": "Transmita no Cams.com com SplitCam grátis via RTMP — cenas multicâmera, overlays e filtros. Alcance a base pagante do AFF. Sem marca d'água.",
+        "kw": "como transmitir no cams.com, cams.com, cams.com obs, cams.com rtmp, cams.com modelo, cams.com broadcaster, cams.com stream key, adult friend finder cams, cams com modelo cadastro",
+        "h1html": 'Como transmitir no <span class="accent">Cams.com</span> com SplitCam',
+        "h1short": "Transmitir no Cams.com",
+        "card": "SplitCam grátis → stream RTMP pra rede Cams.com / AFF.",
+        "intro": "O Cams.com é o braço cam da rede AdultFriendFinder — um dos ecossistemas mais antigos de namoro + cam online, com uma base considerável de <strong>membros que já pagam</strong> chegando do AFF, do AmateurMatch e de outras propriedades da FriendFinder. As modelos transmitem pelo <strong>Model Center</strong> do Cams.com, que aceita tanto o broadcaster do navegador quanto um <strong>encoder externo via RTMP</strong>. O <strong style='color:var(--text)'>SplitCam</strong> grátis transmite via RTMP pra entregar cenas multicâmera, overlays e filtros completos — ou, no broadcaster do navegador, registra como <strong>câmera virtual</strong> pro mesmo resultado.",
+        "quick": "Transmitir no Cams.com: instala o SplitCam, monta a cena, pega a URL do servidor RTMP e a stream key do Model Center, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Copia URL + key do Model Center do Cams.com → External Encoder.</li>"
+                 "<li>Cola no RTMP personalizado do SplitCam.</li>"
+                 "<li>Clica Go Live.</li></ol>",
+        "key_how": "O Model Center do Cams.com tem uma aba de <strong>External Encoder / OBS</strong> com URL do servidor e stream key. Cola as duas no SplitCam em <strong>Stream Settings → Custom RTMP</strong>; escolhe 3.500–5.000 Kbps a 1920×1080, 30 fps, keyframe de 2 segundos. Aperta <strong>Go Live</strong> no SplitCam e depois começa seu show pelo Model Center. Se preferir o broadcaster no navegador, escolhe <strong>SplitCam</strong> na lista de câmeras.",
+        "tips": [
+            ("Cross-traffic do AFF = membros pagantes", "O Cams.com puxa público de contas do AdultFriendFinder que já têm método de pagamento cadastrado — diferente de um público recém-cadastrado. A conversão pra privado e tip costuma ser mais alta."),
+            ("Encoder externo bate o navegador", "O RTMP do SplitCam dá bitrate limpo e cenas multicâmera com overlays; o broadcaster do navegador funciona, mas limita a produção."),
+            ("Usa as ferramentas de show privado", "O Cams.com se apoia em sessões privadas/exclusivas. Um tip menu e um caminho claro pro privado (em overlay) elevam a receita por espectador bastante."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("O Cams.com é o mesmo que o AdultFriendFinder?", "Mesma rede mãe. O Cams.com é a marca de broadcast cam; o espectador pode chegar pelo AFF, AmateurMatch e outros sites da FriendFinder, e isso é uma parte grande do tráfego."),
+            ("Onde pego a stream key do Cams.com?", "No Model Center do Cams.com, abre a aba <em>External Encoder</em> ou <em>OBS</em> — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Broadcaster do navegador ou RTMP?", "RTMP (encoder externo) é o preferido — bitrate estável e cenas completas do SplitCam. O broadcaster do navegador serve como fallback: escolhe o SplitCam como webcam."),
+            ("O SplitCam é grátis pra usar com o Cams.com?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, tip menu, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA — tudo ao vivo."),
+            ("Pega a URL do Cams.com + stream key", "Entra no Model Center do Cams.com, abre a aba <strong>External Encoder / OBS</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao Cams.com", "No SplitCam → <strong>Stream Settings → Custom RTMP</strong>, cola a URL e a key. Põe 3.500–5.000 Kbps a 1920×1080, 30 fps, keyframe de 2 segundos."),
+            ("Clica Go Live", "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo Model Center. Em uns 10 segundos seu stream cai na rede Cams.com / AFF."),
+        ],
+    },
+    {
+        "slug": "stripcamfun", "name": "StripCamFun",
+        "title": "Transmitir no StripCamFun com SplitCam — RTMP/OBS",
+        "desc": "Transmita no StripCamFun com SplitCam grátis via RTMP — cenas multicâmera, overlays e filtros pra um público indie. Sem marca d'água, sem cadastro.",
+        "kw": "como transmitir no stripcamfun, stripcamfun, stripcamfun obs, stripcamfun rtmp, stripcamfun modelo, stripcamfun broadcast, strip cam fun cadastro modelo, stripcamfun stream key, site cam indie obs",
+        "h1html": 'Como transmitir no <span class="accent">StripCamFun</span> com SplitCam',
+        "h1short": "Transmitir no StripCamFun",
+        "card": "SplitCam grátis → stream RTMP/OBS pro StripCamFun.",
+        "intro": "O StripCamFun é um site de live cam independente — menor que os gigantes do nível do Chaturbate, mas com um público real, menos saturado, e bem menos concorrência de broadcaster por nicho. As modelos transmitem pelo painel de modelo do StripCamFun, que mostra uma opção de <strong>encoder externo / RTMP</strong>. O <strong style='color:var(--text)'>SplitCam</strong> grátis conecta via RTMP pra entregar cenas multicâmera, overlays e filtros completos — e onde tem broadcaster no navegador, o SplitCam também registra como <strong>câmera virtual</strong>.",
+        "quick": "Transmitir no StripCamFun: instala o SplitCam, monta a cena, copia a URL do servidor e a stream key do StripCamFun, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Copia URL + stream key do painel de modelo do StripCamFun → External Encoder.</li>"
+                 "<li>Cola no RTMP personalizado do SplitCam.</li>"
+                 "<li>Clica Go Live.</li></ol>",
+        "key_how": "Abre o painel de modelo do StripCamFun e a seção <strong>External Encoder / OBS</strong>. Copia a URL do servidor e sua stream key pro SplitCam em <strong>Stream Settings → Custom RTMP</strong>; põe 3.500–5.000 Kbps a 1920×1080, 30 fps, keyframe de 2 segundos. Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel.",
+        "tips": [
+            ("Pool menor, mais fácil aparecer", "Num site Tier-1 você é uma entre milhares online; no StripCamFun a lista de broadcaster é curta — uma cena caprichada do SplitCam se destaca mais rápido na home."),
+            ("Cross-broadcast pra alcance", "Sites cam indie casam bem com multi-streaming. Usa o SplitCam pra transmitir simultaneamente pro StripCamFun e pra um site maior pra capturar tipper dos dois lados."),
+            ("Investe na tag de nicho", "Público indie busca mais por nicho do que por estrela. Tags específicas + um overlay de cena que nomeia o nicho puxam o espectador da listagem."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Onde pego a stream key do StripCamFun?", "No painel de modelo, abre a aba <em>External Encoder / OBS</em> — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("É seguro transmitir no StripCamFun?", "Como em qualquer site cam indie, confere o contrato de modelo e os termos de pagamento antes de entrar ao vivo. Usa um e-mail real e valida seu método de pagamento primeiro."),
+            ("Dá pra fazer multi-stream pro StripCamFun e outro site cam?", "Dá — o SplitCam consegue enviar pra vários endpoints de RTMP personalizado ao mesmo tempo. Confere as regras de exclusividade de cada site antes."),
+            ("O SplitCam é grátis pra usar com o StripCamFun?", "É — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, tip menu, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA — tudo ao vivo."),
+            ("Pega a URL do StripCamFun + stream key", "Entra no painel de modelo do StripCamFun, abre <strong>External Encoder / OBS</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao StripCamFun", "No SplitCam → <strong>Stream Settings → Custom RTMP</strong>, cola a URL e a key. Põe 3.500–5.000 Kbps a 1920×1080, 30 fps, keyframe de 2 segundos."),
+            ("Clica Go Live", "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel do StripCamFun. Em uns 10 segundos seu stream cai na lista pública."),
+        ],
+    },
 ]

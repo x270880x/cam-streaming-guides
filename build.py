@@ -3248,6 +3248,8 @@ METHOD = {
     "fanvue": "vcam", "loyalfans": "vcam", "fancentro": "vcam", "ismygirl": "vcam",
     "dxlive": "stream", "streamen": "stream", "xcams": "stream", "camcontacts": "stream",
     "royalcams": "stream", "modelhub": "stream",
+    "xhamsterlive": "stream", "premium-chat": "vcam", "arousr": "vcam",
+    "cams-com": "stream", "stripcamfun": "stream",
 }
 # Hub filter labels: (All, Stream sites, Virtual camera) per language.
 HUB_FILTER = {

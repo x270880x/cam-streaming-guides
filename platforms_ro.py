@@ -1345,4 +1345,174 @@ PLATFORMS_RO = [
             ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din dashboard. În ~10 secunde stream-ul tău ajunge la audiența Modelhub."),
         ],
     },
+    {
+        "slug": "xhamsterlive", "name": "xHamsterLive",
+        "title": "Cum transmiți pe xHamsterLive cu SplitCam (RTMP/OBS)",
+        "desc": "Transmite pe xHamsterLive cu SplitCam gratuit prin RTMP — scene multi-cameră, overlay-uri și filtre. Trafic mainstream xHamster, fără filigran.",
+        "kw": "cum transmiți pe xhamsterlive, xhamsterlive obs, xhamsterlive rtmp, xhamsterlive broadcast, xhamsterlive model, xhamster live cam, xhamsterlive studio, xhamster live stream key",
+        "h1html": 'Cum transmiți pe <span class="accent">xHamsterLive</span> cu SplitCam',
+        "h1short": "Transmisie xHamsterLive",
+        "card": "SplitCam gratuit → transmisie RTMP/OBS spre xHamsterLive.",
+        "intro": "xHamsterLive e brațul live-cam al xHamster — aceeași tehnologie de broadcaster ca Stripchat, dar canalizată prin traficul mainstream al xHamster, una dintre cele mai mari baze de privitori din industria adult. Modelele transmit prin <strong>Studio</strong>-ul xHamsterLive, care suportă atât broadcasterul din browser, cât și un <strong>encoder extern prin RTMP</strong>. Cu <strong style='color:var(--text)'>SplitCam</strong> gratuit transmiți ca encoder extern pentru scene multi-cameră complete, overlay-uri și filtre — sau, dacă transmiți din browser, setezi xHamsterLive să folosească SplitCam drept <strong>cameră virtuală</strong>, cu același efect.",
+        "quick": "Transmisie pe xHamsterLive cu SplitCam: instalezi SplitCam, construiești scena, copiezi URL-ul serverului și stream key-ul din Studio-ul xHamsterLive, le lipești în setările RTMP ale SplitCam, apasă Go Live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Copiază URL + stream key din Studio xHamsterLive → External Encoder.</li>"
+                 "<li>Lipește în RTMP custom SplitCam.</li><li>Apasă Go Live.</li></ol>",
+        "key_how": "Studio-ul xHamsterLive afișează broadcasterilor un tab <strong>external encoder</strong> cu URL de server și stream key. Lipește ambele în <strong>Stream Settings → Custom RTMP</strong> din SplitCam; alege 4.000–6.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Studio. Dacă preferi broadcasterul din browser, deschide-l și alege <strong>SplitCam</strong> din dropdown-ul de cameră — scena ta compusă înlocuiește webcam-ul brut.",
+        "tips": [
+            ("Trafic xHamster, motor Stripchat", "Aceleași unelte de broadcaster ca Stripchat (panou Studio, meniu de tip-uri, Lovense), dar cu funnelul mainstream al xHamster — un mix diferit de audiență ajunge în camera ta."),
+            ("Folosește encoder extern dacă poți", "RTMP din SplitCam îți dă bitrate stabil și scene multi-cameră/overlay-uri complete; broadcasterul din browser e ok, dar limitează opțiunile de compoziție."),
+            ("Meniurile de tip-uri convertesc audiența mainstream", "Mulți vizitatori xHamster sunt noi la cam — un meniu de tip-uri clar pe ecran și un goal bar setează așteptările și cresc conversia pe sesiune."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("xHamsterLive e același lucru cu Stripchat?", "Rulează pe motorul de broadcaster al Stripchat, dar brandul și sursa de trafic diferă — xHamster canalizează audiența sa mainstream aici, deci profilul de privitor diferă de un signup direct pe Stripchat."),
+            ("De unde iau stream key-ul xHamsterLive?", "În Studio-ul xHamsterLive deschide panoul <em>Broadcast</em> sau <em>External Encoder</em> — vei vedea un URL de server și un stream key. Lipește ambele în câmpurile RTMP custom ale SplitCam."),
+            ("Broadcaster din browser sau RTMP?", "Encoderul extern (RTMP) e preferat pentru modelele serioase — bitrate stabil și scene SplitCam complete. Broadcasterul din browser merge și el: alege SplitCam drept webcam."),
+            ("SplitCam e gratuit pentru xHamsterLive?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, un meniu de tip-uri, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul live."),
+            ("Obține URL + key din Studio xHamsterLive", "Loghează-te în xHamsterLive, deschide Studio, treci pe <strong>External Encoder</strong> și copiază <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>."),
+            ("Conectează SplitCam la xHamsterLive", "În SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lipește URL-ul și cheia. Setează 4.000–6.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+            ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Studio-ul xHamsterLive. În ~10 secunde stream-ul tău apare pe lista publică."),
+        ],
+    },
+    {
+        "slug": "premium-chat", "name": "Premium.Chat",
+        "title": "Cum folosești SplitCam pe Premium.Chat — apeluri plătite",
+        "desc": "Folosește SplitCam gratuit drept cameră virtuală pe Premium.Chat — apeluri video plătite la minut, scene multi-cameră, overlay-uri, filtre. Fără filigran.",
+        "kw": "cum folosești splitcam pe premium chat, premium chat apel video, premium chat cameră virtuală, premium.chat pay per minute, premium chat model, premium chat advisor, premium chat live, platformă apel video splitcam",
+        "h1html": 'Cum folosești SplitCam pe <span class="accent">Premium.Chat</span>',
+        "h1short": "Premium.Chat cu SplitCam",
+        "card": "Folosește SplitCam drept cameră virtuală pentru apeluri plătite Premium.Chat.",
+        "intro": "Premium.Chat e o platformă plătită la minut: îți setezi tariful per minut pentru chat, voce sau <strong>apeluri video</strong>, distribui linkul tău personal, iar clienții plătesc ca să discute cu tine. Apelurile rulează în browser, ceea ce înseamnă că <strong style='color:var(--text)'>SplitCam</strong> gratuit se conectează direct ca <strong>cameră virtuală</strong> — scene multi-cameră, overlay-uri, filtre de lumină și un fundal AI ajung la apelant fără să schimbi modul în care funcționează Premium.Chat.",
+        "quick": "Folosește SplitCam pe Premium.Chat: instalezi SplitCam, construiești o scenă curată pentru apeluri video, accepți un apel Premium.Chat și în selectorul de cameră al apelului alegi <em>SplitCam</em>."
+                 "<ol><li>Instalează SplitCam.</li><li>Configurează scena (lumină bună, overlay opțional).</li>"
+                 "<li>Setează tariful pe minut pe Premium.Chat.</li><li>Acceptă apelul video.</li>"
+                 "<li>Alege SplitCam drept cameră.</li></ol>",
+        "key_how": "Apelurile Premium.Chat se desfășoară în browser. SplitCam instalează un webcam virtual numit <strong>„SplitCam Video Driver”</strong> — când începe apelul, clic pe meniul cu iconița de cameră din fereastra Premium.Chat și schimbă de pe webcam-ul integrat pe <strong>SplitCam</strong>. Scena ta compusă (cameră reală + overlay-uri + filtre) devine ceea ce vede apelantul.",
+        "tips": [
+            ("Premium.Chat e per minut, nu streaming", "Spre deosebire de camerele de tip Chaturbate cu tip-uri, ești plătit la minut. Lumină moale, audio clar și un fundal AI arată mai degrabă a consultație premium decât a cam public."),
+            ("Promovează linkul, nu un profil", "Premium.Chat îți dă un link personal pe care îl poți pune pe rețele sociale, în bio-ul OnlyFans sau pe un Linktree — așa te găsesc apelanții."),
+            ("Overlay-uri doar dacă sunt utile", "La apeluri 1-on-1, overlay-urile groase distrag. Folosește SplitCam pentru calitatea camerei, lumină și fundal — păstrează ecranul preponderent pe tine."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la Premium.Chat?", "Drept cameră virtuală. Apelurile Premium.Chat rulează în browser; alege SplitCam din selectorul de cameră al apelului — fără stream key, fără RTMP."),
+            ("Premium.Chat suportă OBS?", "Premium.Chat e bazat pe browser, deci OBS se conectează la fel ca SplitCam — prin cameră virtuală. SplitCam e varianta mai ușoară, gratuită și fără filigran."),
+            ("Pot folosi o a doua cameră sau overlay pe Premium.Chat?", "Da — compune scena în SplitCam (a doua cameră, overlay-uri, filtre) și Premium.Chat vede un singur webcam. Folosește cu moderație în 1-on-1."),
+            ("SplitCam e gratuit?", "Da — gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care o poate folosi browserul."),
+            ("Configurează scena pentru apeluri", "Deschide SplitCam, adaugă webcam-ul, pune-ți lumina, eventual adaugă un fundal AI sau un overlay discret. Păstrează încadrarea curată — e un apel plătit, nu o scenă."),
+            ("Setează tariful pe Premium.Chat", "Loghează-te pe Premium.Chat, setează tariful per minut pentru apeluri video și copiază linkul tău personal. Distribuie-l pe rețele sociale sau în bio."),
+            ("Acceptă apelul video", "Când un client plătește pentru timp, vine cererea de apel. Acceptă din dashboardul Premium.Chat."),
+            ("Alege SplitCam drept cameră", "În meniul cu iconița de cameră al ferestrei de apel, schimbă de pe webcam-ul integrat pe <strong>SplitCam</strong>. Scena ta compusă ajunge acum la apelant."),
+        ],
+    },
+    {
+        "slug": "arousr", "name": "Arousr",
+        "title": "Cum folosești SplitCam pe Arousr — sexting și apel video",
+        "desc": "Folosește SplitCam gratuit drept cameră virtuală pe apelurile video Arousr — scene multi-cameră, overlay-uri și filtre pentru sexting plătit.",
+        "kw": "cum folosești splitcam pe arousr, arousr apel video, arousr cameră virtuală, arousr cam girl, arousr model, platformă sexting splitcam, arousr live, arousr broadcast",
+        "h1html": 'Cum folosești SplitCam pe <span class="accent">Arousr</span>',
+        "h1short": "Arousr cu SplitCam",
+        "card": "Folosește SplitCam drept cameră virtuală pentru apeluri video Arousr.",
+        "intro": "Arousr e o platformă plătită de <strong>sexting + voce + apel video</strong> — clienții cumpără credite ca să scrie, să vorbească sau să facă apel video cu modelele, iar tu ești plătit pe sesiune. Partea de video rulează în browser (sau în aplicația mobilă Arousr pe telefoane), ceea ce înseamnă că <strong style='color:var(--text)'>SplitCam</strong> gratuit se conectează drept <strong>cameră virtuală</strong> pe desktop: scene multi-cameră, overlay-uri, filtre de lumină și un fundal AI ajung direct la client.",
+        "quick": "Folosește SplitCam pe Arousr: instalezi SplitCam, construiești scena, accepți o cerere de video Arousr, iar în selectorul de cameră alegi <em>SplitCam</em>."
+                 "<ol><li>Instalează SplitCam.</li><li>Configurează scena + lumina.</li>"
+                 "<li>Setează tarifele de sexting/video pe Arousr.</li><li>Acceptă cererea video.</li>"
+                 "<li>Alege SplitCam din dropdown-ul de cameră.</li></ol>",
+        "key_how": "Partea de video web Arousr rulează în browser. SplitCam instalează un webcam virtual numit <strong>„SplitCam Video Driver”</strong> — când începe o sesiune video în dashboardul Arousr, schimbă camera din fereastra sesiunii pe <strong>SplitCam</strong>. Scena compusă (cameră + overlay-uri + filtre) devine ceea ce vede clientul. În aplicația mobilă Arousr, camerele virtuale nu sunt disponibile — folosește acolo o cameră reală de telefon și rezervă SplitCam pentru sesiunile de pe desktop.",
+        "tips": [
+            ("Sesiunile sunt plătite la timp", "Clienții cumpără credite per minut (sau per mesaj pentru text). Video îngrijit — lumină bună, fundal AI, beauty filter — se amortizează prin sesiuni mai lungi."),
+            ("Sexting întâi, upsell la video", "Cea mai mare parte din venitul Arousr e text. Un scurt preview video în timpul unui chat de sexting face upsell la o sesiune video completă — acolo intră tariful per minut."),
+            ("Sesiuni în app mobile ≠ desktop", "Camerele virtuale funcționează în video-ul din browser pe desktop. Aplicația mobilă Arousr folosește direct camera telefonului — același flux, alt instrument."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la Arousr?", "Drept cameră virtuală. Apelurile video Arousr rulează în browser pe desktop — alege SplitCam din selectorul de cameră. Nu e nevoie de stream key."),
+            ("Arousr suportă OBS?", "Arousr e bazat pe browser, deci OBS se conectează la fel ca SplitCam — prin cameră virtuală. SplitCam e opțiunea gratuită, fără filigran."),
+            ("Pot folosi overlay-uri într-o sesiune de sexting + video?", "Da — compune scena în SplitCam (lumină, overlay, a doua cameră) și Arousr vede un singur webcam. Păstrează overlay-urile discrete în 1-on-1."),
+            ("SplitCam e gratuit pentru Arousr?", "Da — gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care o poate alege browserul."),
+            ("Construiește scena", "Deschide SplitCam, adaugă webcam-ul, ajustează lumina, adaugă opțional un fundal AI sau un beauty filter. Păstrează un ton intim — e o sesiune 1-on-1 plătită, nu o scenă publică."),
+            ("Setează tarifele pe Arousr", "Loghează-te pe Arousr, setează tariful per mesaj și tariful video per minut și asigură-te că profilul tău e aprobat ca să poată intra cereri."),
+            ("Acceptă cererea video", "Când un client inițiază o sesiune video din sexting sau direct, acceptă din dashboardul Arousr."),
+            ("Alege SplitCam drept cameră", "În dropdown-ul de cameră al ferestrei de sesiune, schimbă de pe webcam-ul integrat pe <strong>SplitCam</strong>. Scena ta compusă ajunge acum la client."),
+        ],
+    },
+    {
+        "slug": "cams-com", "name": "Cams.com",
+        "title": "Cum transmiți pe Cams.com cu SplitCam (RTMP/OBS)",
+        "desc": "Transmite pe Cams.com cu SplitCam gratuit prin RTMP — scene multi-cameră, overlay-uri și filtre. Acces la baza de cheltuitori AFF. Fără filigran.",
+        "kw": "cum transmiți pe cams.com, cams.com obs, cams.com rtmp, cams.com model, cams.com broadcaster, cams.com stream key, adult friend finder cams, cams.com live, cams com model signup",
+        "h1html": 'Cum transmiți pe <span class="accent">Cams.com</span> cu SplitCam',
+        "h1short": "Transmisie Cams.com",
+        "card": "SplitCam gratuit → stream RTMP spre rețeaua Cams.com / AFF.",
+        "intro": "Cams.com e brațul cam al rețelei AdultFriendFinder — unul dintre cele mai vechi ecosisteme dating + cam online, cu o bază consistentă de <strong>membri care plătesc deja</strong> ce migrează din AFF, AmateurMatch și alte proprietăți FriendFinder. Modelele transmit din <strong>Model Center</strong>-ul Cams.com, care suportă atât broadcasterul din browser, cât și un <strong>encoder extern prin RTMP</strong>. <strong style='color:var(--text)'>SplitCam</strong> gratuit transmite prin RTMP pentru scene multi-cameră complete, overlay-uri și filtre — sau, în broadcasterul din browser, se înregistrează drept <strong>cameră virtuală</strong> pentru același rezultat.",
+        "quick": "Transmisie pe Cams.com: instalezi SplitCam, construiești scena, iei URL-ul de server RTMP și stream key-ul Cams.com din Model Center, le lipești în SplitCam, apasă Go Live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Copiază URL server + key din Model Center Cams.com → External Encoder.</li>"
+                 "<li>Lipește în RTMP custom SplitCam.</li><li>Apasă Go Live.</li></ol>",
+        "key_how": "Model Center-ul Cams.com are un tab <strong>External Encoder / OBS</strong> cu URL de server și stream key. Lipește ambele în <strong>Stream Settings → Custom RTMP</strong> din SplitCam; alege 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Apasă <strong>Go Live</strong> în SplitCam, apoi pornește show-ul din Model Center. Dacă preferi broadcasterul din browser, alege <strong>SplitCam</strong> din dropdown-ul de cameră.",
+        "tips": [
+            ("Cross-trafic AFF = membri plătitori", "Cams.com aduce privitori din conturi AdultFriendFinder care au deja o metodă de plată salvată — diferit de o audiență fresh de signup. Conversia la private și tip-urile tind să fie mai mari."),
+            ("Encoderul extern bate browserul", "RTMP din SplitCam îți dă bitrate curat și permite scene multi-cameră cu overlay-uri; broadcasterul din browser merge, dar limitează producția."),
+            ("Folosește uneltele de private show", "Cams.com mizează pe sesiunile private/exclusive. Un meniu de tip-uri și un drum clar spre private (în overlay) ridică sensibil venitul per privitor."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cams.com e același lucru cu AdultFriendFinder?", "Aceeași rețea-mamă. Cams.com e brandul de broadcasting cam; privitorii pot ajunge prin AFF, AmateurMatch și alte site-uri FriendFinder, ceea ce reprezintă o mare parte din traficul său."),
+            ("De unde iau stream key-ul Cams.com?", "În Model Center-ul Cams.com, deschide tabul <em>External Encoder</em> sau <em>OBS</em> — vei vedea un URL de server și un stream key. Lipește ambele în câmpurile RTMP custom ale SplitCam."),
+            ("Broadcaster din browser sau RTMP?", "RTMP (encoder extern) e preferat — bitrate stabil, scene SplitCam complete. Broadcasterul din browser merge ca fallback: alege SplitCam drept webcam."),
+            ("SplitCam e gratuit pentru Cams.com?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, un meniu de tip-uri, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul live."),
+            ("Obține URL + stream key Cams.com", "Loghează-te în Model Center-ul Cams.com, deschide tabul <strong>External Encoder / OBS</strong> și copiază <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>."),
+            ("Conectează SplitCam la Cams.com", "În SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lipește URL-ul și cheia. Setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+            ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din Model Center. Stream-ul tău aterizează în rețeaua Cams.com / AFF în ~10 secunde."),
+        ],
+    },
+    {
+        "slug": "stripcamfun", "name": "StripCamFun",
+        "title": "Cum transmiți pe StripCamFun cu SplitCam (RTMP/OBS)",
+        "desc": "Transmite pe StripCamFun cu SplitCam gratuit prin RTMP — scene multi-cameră, overlay-uri și filtre pentru o audiență indie. Fără filigran.",
+        "kw": "cum transmiți pe stripcamfun, stripcamfun obs, stripcamfun rtmp, stripcamfun model, stripcamfun broadcast, strip cam fun model signup, stripcamfun stream key, site cam indie obs",
+        "h1html": 'Cum transmiți pe <span class="accent">StripCamFun</span> cu SplitCam',
+        "h1short": "Transmisie StripCamFun",
+        "card": "SplitCam gratuit → transmisie RTMP/OBS spre StripCamFun.",
+        "intro": "StripCamFun e un site live-cam independent — mai mic decât giganții de nivel Chaturbate, dar cu o audiență reală, mai puțin saturată, și sensibil mai puțină concurență pe nișă între broadcasteri. Modelele transmit din panoul de model StripCamFun, care expune o opțiune de <strong>encoder extern / RTMP</strong>. <strong style='color:var(--text)'>SplitCam</strong> gratuit se conectează prin RTMP pentru scene multi-cameră complete, overlay-uri și filtre — iar acolo unde e oferit un broadcaster din browser, SplitCam se înregistrează și ca <strong>cameră virtuală</strong>.",
+        "quick": "Transmisie pe StripCamFun: instalezi SplitCam, construiești scena, copiezi URL-ul de server StripCamFun și stream key-ul, le lipești în setările RTMP ale SplitCam, apasă Go Live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Copiază URL + stream key din panoul de model StripCamFun → External Encoder.</li>"
+                 "<li>Lipește în RTMP custom SplitCam.</li><li>Apasă Go Live.</li></ol>",
+        "key_how": "Deschide dashboardul de model StripCamFun și secțiunea <strong>External Encoder / OBS</strong>. Copiază URL-ul serverului și stream key-ul în <strong>Stream Settings → Custom RTMP</strong> din SplitCam; setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din dashboard.",
+        "tips": [
+            ("Bazin mai mic, vizibilitate mai ușoară", "Pe un site Tier-1 ești unul din mii online; pe StripCamFun lista de broadcasteri e scurtă — o scenă SplitCam îngrijită iese în evidență mai repede pe homepage."),
+            ("Cross-broadcast pentru reach", "Site-urile cam indie merg bine cu multi-streaming. Folosește SplitCam ca să transmiți simultan pe StripCamFun și pe un site mai mare, ca să prinzi tipperi din ambele bazine."),
+            ("Mizează pe tagging-ul de nișă", "Audiențele indie caută după nișă mai mult decât după nume mare. Tag-uri specifice + un overlay de scenă care numește nișa atrag privitorii de pe listă."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("De unde iau stream key-ul StripCamFun?", "În dashboardul de model, deschide tabul <em>External Encoder / OBS</em> — vei vedea un URL de server și un stream key. Lipește ambele în câmpurile RTMP custom ale SplitCam."),
+            ("E sigur să transmiți pe StripCamFun?", "Ca pe orice site cam indie, verifică acordul de model și termenii de plată înainte să mergi live. Folosește un email real și validează-ți întâi metoda de payout."),
+            ("Pot face multi-stream pe StripCamFun și alt site cam?", "Da — SplitCam poate trimite simultan către mai multe endpoint-uri RTMP custom. Verifică întâi regulile de exclusivitate ale fiecărui site."),
+            ("SplitCam e gratuit pentru StripCamFun?", "Da — gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, un meniu de tip-uri, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul live."),
+            ("Obține URL + stream key StripCamFun", "Loghează-te în dashboardul de model StripCamFun, deschide <strong>External Encoder / OBS</strong> și copiază <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>."),
+            ("Conectează SplitCam la StripCamFun", "În SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lipește URL-ul și cheia. Setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+            ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online în dashboardul StripCamFun. Stream-ul tău apare pe lista publică în ~10 secunde."),
+        ],
+    },
 ]
