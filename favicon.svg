@@ -7,10 +7,10 @@
     </linearGradient>
   </defs>
   <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#g)"/>
-  <!-- source dot -->
-  <circle cx="165" cy="256" r="46" fill="#fff"/>
-  <!-- signal arcs — all true semicircles, same center x=165 -->
-  <path d="M165,174 A82,82 0 0 1 165,338" fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round"/>
-  <path d="M165,119 A137,137 0 0 1 165,393" fill="none" stroke="#fff" stroke-width="33" stroke-linecap="round" opacity="0.7"/>
-  <path d="M165,64 A192,192 0 0 1 165,448" fill="none" stroke="#fff" stroke-width="29" stroke-linecap="round" opacity="0.4"/>
+  <!-- source dot, left side -->
+  <circle cx="144" cy="256" r="56" fill="#fff"/>
+  <!-- three fanning waves opening to the right -->
+  <path d="M232,176 A112,112 0 0 1 232,336" fill="none" stroke="#fff" stroke-width="35" stroke-linecap="round"/>
+  <path d="M288,128 A176,176 0 0 1 288,384" fill="none" stroke="#fff" stroke-width="32" stroke-linecap="round" opacity="0.7"/>
+  <path d="M344,88 A248,248 0 0 1 344,424" fill="none" stroke="#fff" stroke-width="29" stroke-linecap="round" opacity="0.4"/>
 </svg>

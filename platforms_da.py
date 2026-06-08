@@ -985,4 +985,328 @@ PLATFORMS_DA = [
          ("Vælg SplitCam som dit kamera", "I JFF-broadcasterens kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din sammensatte scene erstatter det flade kamera. (Eller indsæt, hvis tilgængelig, JFF's external-encoder-nøgle i SplitCams custom RTMP-felter.)"),
          ("Go Live", "Start udsendelsen — din SplitCam-scene, overlays og filtre når dine JustForFans-abonnenter."),
      ]},
+    {"slug": "fanvue", "name": "Fanvue",
+     "title": "Gå live på Fanvue med SplitCam — virtuelt kamera",
+     "desc": "Gå live på Fanvue med gratis SplitCam som virtuelt kamera — multikamera-scener, overlays og filtre til dine abonnenter. Uden vandmærke, uden tilmelding.",
+     "kw": "sådan går du live på fanvue, fanvue, fanvue live, fanvue broadcast, fanvue obs, fanvue virtual camera, fanvue virtuelt kamera",
+     "h1html": 'Sådan går du live på <span class="accent">Fanvue</span> med SplitCam',
+     "h1short": "Live Fanvue",
+     "card": "Brug SplitCam som virtuelt kamera i Fanvues live-broadcaster.",
+     "intro": "Fanvue er en hurtigtvoksende britisk creator-abonnementsplatform — et OnlyFans-alternativ kendt for at være venligt over for både skabere og AI-indhold, med abonnementer, pay-per-view og live-streaming. Live-broadcasteren kører i browseren, så peger du den mod gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, åbner du multi-kamera scener, overlays og filtre. Hvis dit creator-dashboard afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet over RTMP.",
+     "quick": "Gå live på Fanvue med SplitCam: installér SplitCam, byg scenen, start en live-udsendelse på Fanvue, og i broadcasterens kameravælger vælg <em>SplitCam</em> — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en live-udsendelse på Fanvue.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Fanvues live kører i browseren. Byg scenen i SplitCam — den registreres som et webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter Fanvues live-broadcaster og vælg <strong>SplitCam</strong> i kamera-dropdownen i stedet for dit rå webkamera. Hvis dit creator-dashboard tilbyder en <strong>external-encoder / stream key</strong>-mulighed, indsætter du i stedet den nøgle i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Virtuelt kamera virker overalt", "Selv når en platforms live kun kører i browseren, optræder SplitCam som et valgbart webkamera — multi-kamera scener, overlays og filtre virker på Fanvue helt uden stream key."),
+         ("Venlig over for skabere og AI", "Fanvue byder AI-skabere velkommen og udbetaler rent. Overlays, der krydssælger dit abonnement eller din PPV, konverterer godt til et publikum, der allerede betaler."),
+         ("Giv browseren kamera-tilladelse", "Hvis SplitCam ikke dukker op i Fanvues kameraliste, så sørg for, at SplitCam kører først, og at browseren har kamera-tilladelse — genindlæs derefter."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til Fanvue?", "Fanvue live er browser-baseret, så SplitCam forbinder som virtuelt kamera: vælg SplitCam i kameravælgeren. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på Fanvue?", "Ja — byg scenen i SplitCam (et ekstra kamera, overlays, beauty- eller AI-baggrundsfiltre), og Fanvue ser den færdige scene som ét webkamera."),
+         ("Understøtter Fanvue OBS eller eksterne encodere?", "Fanvues live er primært browser-/webkamera-baseret. Hvis dit dashboard viser en external-encoder- eller stream key-mulighed, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til Fanvue?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå — anvendt live."),
+         ("Start en live-udsendelse på Fanvue", "Log ind på din Fanvue-creator-konto og åbn live-broadcasteren for at starte en stream til dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I Fanvues kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din sammensatte scene erstatter det flade kamera. (Eller indsæt, hvis tilgængelig, en stream key i SplitCams custom RTMP-felter.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene, overlays og filtre når dine Fanvue-abonnenter."),
+     ]},
+    {"slug": "loyalfans", "name": "LoyalFans",
+     "title": "Gå live på LoyalFans med SplitCam — virtuelt kamera",
+     "desc": "Gå live på LoyalFans med gratis SplitCam som virtuelt kamera — multikamera-scener, overlays og filtre til abonnenter og tippere. Uden vandmærke.",
+     "kw": "sådan går du live på loyalfans, loyalfans, loyalfans live, loyalfans broadcast, loyalfans obs, loyalfans virtual camera, loyalfans virtuelt kamera",
+     "h1html": 'Sådan går du live på <span class="accent">LoyalFans</span> med SplitCam',
+     "h1short": "Live LoyalFans",
+     "card": "Brug SplitCam som virtuelt kamera i LoyalFans' live-broadcaster.",
+     "intro": "LoyalFans er en creator-abonnementsplatform med abonnementer, pay-per-view, tipping og en indbygget <strong>live cam</strong>-funktion. Live-broadcasteren kører i browseren, så forbinder du gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, lægger du multi-kamera scener, overlays og filtre oven på det almindelige webkamera. Hvis dit dashboard afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet via RTMP.",
+     "quick": "Gå live på LoyalFans med SplitCam: installér SplitCam, byg scenen, start en live-udsendelse på LoyalFans, og vælg <em>SplitCam</em> i broadcasterens kameravælger — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en live-udsendelse på LoyalFans.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "LoyalFans' live kører i browseren. Byg scenen i SplitCam — den registreres som et webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter LoyalFans' live-broadcaster og vælg <strong>SplitCam</strong> i kamera-dropdownen. Hvis en <strong>stream key / external-encoder</strong>-mulighed dukker op i dit creator-dashboard, indsætter du den i stedet i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Virtuelt kamera, ingen nøgle nødvendig", "Browser-baseret live får stadig hele din SplitCam-scene — overlays, et ekstra kamera og filtre — bare ved at vælge SplitCam som webkamera."),
+         ("Tips belønner produktionsværdi", "LoyalFans læner sig op ad tipping; tip-mål-overlays på skærmen og en poleret scene presser tipperne mere end et fladt webkamera."),
+         ("Giv browseren kamera-tilladelse", "Hvis SplitCam ikke er i LoyalFans' kameraliste, så start SplitCam først, tillad kamera-adgang i browseren og genindlæs derefter broadcasteren."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til LoyalFans?", "LoyalFans live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på LoyalFans?", "Ja — byg scenen i SplitCam (et ekstra kamera, overlays, beauty- eller AI-baggrundsfiltre); LoyalFans ser det som ét webkamera."),
+         ("Understøtter LoyalFans OBS eller eksterne encodere?", "Dens live er primært browser-/webkamera-baseret. Hvis dit dashboard viser en stream key-mulighed, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til LoyalFans?", "Ja — gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tip-mål-tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Start en live-udsendelse på LoyalFans", "Log ind på din LoyalFans-konto og åbn live-broadcasteren for at gå live for dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I LoyalFans' kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din scene erstatter det flade kamera. (Eller indsæt, hvis tilgængelig, en stream key i SplitCams custom RTMP-felter.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene når dit LoyalFans-publikum."),
+     ]},
+    {"slug": "fancentro", "name": "FanCentro",
+     "title": "Gå live på FanCentro med SplitCam — virtuelt kamera",
+     "desc": "Gå live på FanCentro med gratis SplitCam som virtuelt kamera — multikamera-scener, overlays og filtre til dine abonnenter. Uden vandmærke, uden tilmelding.",
+     "kw": "sådan går du live på fancentro, fancentro, fancentro live, fancentro broadcast, fancentro obs, fancentro virtual camera, fancentro virtuelt kamera",
+     "h1html": 'Sådan går du live på <span class="accent">FanCentro</span> med SplitCam',
+     "h1short": "Live FanCentro",
+     "card": "Brug SplitCam som virtuelt kamera i FanCentros live-broadcaster.",
+     "intro": "FanCentro er en veletableret creator-monetiseringsplatform — abonnementer, pay-per-view-beskeder, indhold og live-streaming. Dens live kører i browseren, så forbinder du gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, lægger du multi-kamera scener, overlays og filtre oven på det almindelige webkamera. Hvis dit dashboard afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet over RTMP.",
+     "quick": "Gå live på FanCentro med SplitCam: installér SplitCam, byg scenen, start en live-udsendelse på FanCentro, og vælg <em>SplitCam</em> i broadcasterens kameravælger — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en live-udsendelse på FanCentro.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "FanCentros live kører i browseren. Byg scenen i SplitCam — den registreres som et webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter FanCentros live-broadcaster og vælg <strong>SplitCam</strong> i kamera-dropdownen. Hvis en <strong>stream key / external-encoder</strong>-mulighed tilbydes, indsætter du den i stedet i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Virtuelt kamera virker overalt", "Browser-only live får stadig hele din SplitCam-scene — overlays, et ekstra kamera og filtre — ved at vælge SplitCam som webkamera."),
+         ("Krydssælg din funnel", "FanCentro er bygget op om creator-funnels og PPV. Overlays, der reklamerer for dit abonnement eller dine betalte beskeder, konverterer dine live-seere til købere."),
+         ("Giv browseren kamera-tilladelse", "Hvis SplitCam ikke er på listen, så kør SplitCam først, tillad kamera-adgang i browseren og genindlæs derefter broadcasteren."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til FanCentro?", "FanCentro live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på FanCentro?", "Ja — byg scenen i SplitCam; FanCentro ser den færdige scene som ét webkamera."),
+         ("Understøtter FanCentro OBS eller eksterne encodere?", "Dens live er primært browser-/webkamera-baseret. Hvis en stream key-mulighed dukker op i dit dashboard, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til FanCentro?", "Ja — gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Start en live-udsendelse på FanCentro", "Log ind på din FanCentro-konto og åbn live-broadcasteren for at gå live for dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I FanCentros kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera. (Eller indsæt, hvis tilgængelig, en stream key i SplitCams custom RTMP-felter.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene når dine FanCentro-abonnenter."),
+     ]},
+    {"slug": "ismygirl", "name": "IsMyGirl",
+     "title": "Gå live på IsMyGirl med SplitCam — virtuelt kamera",
+     "desc": "Gå live på IsMyGirl med gratis SplitCam som virtuelt kamera — multikamera-scener, overlays og filtre til dine abonnenter. Uden vandmærke, uden tilmelding.",
+     "kw": "sådan går du live på ismygirl, ismygirl, ismygirl live, ismygirl broadcast, ismygirl obs, ismygirl virtual camera, ismygirl virtuelt kamera",
+     "h1html": 'Sådan går du live på <span class="accent">IsMyGirl</span> med SplitCam',
+     "h1short": "Live IsMyGirl",
+     "card": "Brug SplitCam som virtuelt kamera i IsMyGirls live-broadcaster.",
+     "intro": "IsMyGirl er en creator-abonnementsplatform — et OnlyFans-alternativ med abonnementer, betalt indhold og live-streaming, kendt for sin hands-on creator-support. Live-broadcasteren kører i browseren, så forbinder du gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, får du multi-kamera scener, overlays og filtre. Hvis dit dashboard afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet over RTMP.",
+     "quick": "Gå live på IsMyGirl med SplitCam: installér SplitCam, byg scenen, start en live-udsendelse på IsMyGirl, og vælg <em>SplitCam</em> i broadcasterens kameravælger — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en live-udsendelse på IsMyGirl.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "IsMyGirls live kører i browseren. Byg scenen i SplitCam — den registreres som et webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter IsMyGirls live-broadcaster og vælg <strong>SplitCam</strong> i kamera-dropdownen. Hvis en <strong>stream key / external-encoder</strong>-mulighed dukker op, indsætter du den i stedet i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Virtuelt kamera, ingen nøgle nødvendig", "Browser-only live får stadig hele din SplitCam-scene — overlays, et ekstra kamera og filtre — ved at vælge SplitCam som webkamera."),
+         ("Læn dig op ad creator-supporten", "IsMyGirl markedsfører stærk creator-support og promovering. En poleret SplitCam-scene plus krydssalgs-overlays får mest ud af den trafik, de sender dig."),
+         ("Giv browseren kamera-tilladelse", "Hvis SplitCam ikke er på listen, så kør SplitCam først, tillad kamera-adgang og genindlæs derefter broadcasteren."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til IsMyGirl?", "IsMyGirl live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på IsMyGirl?", "Ja — byg scenen i SplitCam; IsMyGirl ser det som ét webkamera."),
+         ("Understøtter IsMyGirl OBS eller eksterne encodere?", "Dens live er primært browser-/webkamera-baseret. Hvis en stream key-mulighed dukker op, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til IsMyGirl?", "Ja — gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Start en live-udsendelse på IsMyGirl", "Log ind på din IsMyGirl-konto og åbn live-broadcasteren for at gå live for dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I IsMyGirls kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera. (Eller indsæt, hvis tilgængelig, en stream key i SplitCams custom RTMP-felter.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene når dine IsMyGirl-abonnenter."),
+     ]},
+    {"slug": "dxlive", "name": "DXLive",
+     "title": "Stream på DXLive med SplitCam — External Encoder",
+     "desc": "Stream på DXLive med gratis SplitCam — external encoder til det japanske premium cam-netværk, multikamera-scener og overlays. Uden vandmærke, uden tilmelding.",
+     "kw": "sådan streamer du på dxlive, dxlive, dxlive broadcast, dxlive obs, dxlive external encoder, dxlive rtmp, dxlive performer",
+     "h1html": 'Sådan udsender du på <span class="accent">DXLive</span> med SplitCam',
+     "h1short": "Udsend DXLive",
+     "card": "External-encoder-opsætning til DXLives premium cam-netværk.",
+     "intro": "DXLive er et etableret premium webcam-netværk, populært i Japan og resten af Asien, bygget på en betal-per-minut-model med et loyalt publikum. Performer-området understøtter en standard <strong>external encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på — så du kan udsende med multi-kamera scener, overlays og beauty-filtre i stedet for et enkelt fladt webkamera.",
+     "quick": "Udsend på DXLive med SplitCam: installér SplitCam, byg scenen, åbn i performer-området <em>external encoder / broadcast</em>-indstillingerne, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL + stream key fra performer-området.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din DXLive-performer-konto og åbn <strong>broadcast / external encoder</strong>-indstillingerne i performer-området. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. DXLive-verifikation er påkrævet, før live cam-funktionen aktiveres.",
+     "tips": [
+         ("Bygget til det asiatiske marked", "DXLives publikum hælder mod Japan/Asien og betaler per minut. Læg dine shows i JST-aftentimerne, og den loyale, betalende base konverterer godt."),
+         ("Polering slår rå webkamera", "En ren SplitCam-scene med overlays og beauty-filtre skiller sig ud på et premium betal-per-minut-netværk, hvor seerne forventer kvalitet."),
+         ("Brug den eksterne encoder, ikke bare webkameraet", "At gå gennem SplitCams RTMP frem for det basale browser-kamera er det, der låser multi-kamera scener og filtre op."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter DXLive eksterne encodere som SplitCam?", "Ja — performer-området har en standard external-encoder / RTMP-vej. Kopiér server-URL og stream key ind i SplitCam efter verifikation."),
+         ("Hvor finder jeg min DXLive stream key?", "I performer-områdets broadcast / external-encoder-indstillinger — både server-URL og stream key dukker op der. Indsæt begge i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til DXLive?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams indbyggede hastighedstest."),
+         ("Er SplitCam gratis til DXLive?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. DXLives external-encoder-valg er gratis i performer-området."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent DXLive-URL og stream key", "Log ind på din DXLive-performer-konto og åbn <strong>broadcast / external encoder</strong>-indstillingerne. Kopiér <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Forbind SplitCam med DXLive", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt DXLive-server-URL og stream key i custom RTMP-felterne. Sæt 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra performer-området. Inden for ~10 sekunder når strømmen DXLives publikum."),
+     ]},
+    {"slug": "streamen", "name": "Streamen",
+     "title": "Stream på Streamen med SplitCam — External Encoder",
+     "desc": "Stream på Streamen med gratis SplitCam — external-encoder-opsætning, multikamera-scener, overlays og beauty-filtre. Uden vandmærke, uden tilmelding.",
+     "kw": "sådan streamer du på streamen, streamen, streamen broadcast, streamen obs, streamen external encoder, streamen rtmp, streamen.tv",
+     "h1html": 'Sådan udsender du på <span class="accent">Streamen</span> med SplitCam',
+     "h1short": "Udsend Streamen",
+     "card": "External-encoder-opsætning til Streamen cam-platformen.",
+     "intro": "Streamen er en live cam-platform, hvor modeller udsender til et tip-drevet publikum. Dens broadcast-indstillinger viser en standard <strong>external encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på — så du kan streame med multi-kamera scener, overlays og filtre frem for et enkelt fladt webkamera.",
+     "quick": "Udsend på Streamen med SplitCam: installér SplitCam, byg scenen, åbn i dit model-dashboard <em>broadcast settings → external encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL + stream key fra dashboardet.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din Streamen-model-konto og åbn sektionen <strong>broadcast settings / external encoder</strong>. Den viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. Model-verifikation er påkrævet, før udsendelse aktiveres.",
+     "tips": [
+         ("Tip-drevet publikum", "Streamen-seere tipper — tip-mål på skærmen og en poleret scene presser flere tips end et fladt webkamera."),
+         ("Ekstern encoder låser scener op", "At gå gennem SplitCams RTMP i stedet for det basale browser-kamera er det, der muliggør multi-kamera layouts, overlays og filtre."),
+         ("Lås din opløsning", "Sæt 1080p manuelt, så feedet ikke stille sænker kvaliteten; en bitrate, der dykker på et statisk billede, er normalt på adaptive feeds."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter Streamen eksterne encodere som SplitCam?", "Ja — broadcast-indstillingerne viser en standard external-encoder / RTMP-vej. Kopiér server-URL og stream key ind i SplitCam efter verifikation."),
+         ("Hvor finder jeg min Streamen stream key?", "I dit model-dashboards broadcast / external-encoder-indstillinger — både server-URL og stream key dukker op der. Indsæt begge i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til Streamen?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams hastighedstest."),
+         ("Er SplitCam gratis til Streamen?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. Streamens external-encoder-valg er gratis i dashboardet."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tip-mål-tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent Streamen-URL og stream key", "Log ind på din Streamen-model-konto, åbn <strong>broadcast settings → external encoder</strong>, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Forbind SplitCam med Streamen", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt Streamen-server-URL og stream key i custom RTMP-felterne. Sæt 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra dit dashboard. Inden for ~10 sekunder når strømmen Streamens publikum."),
+     ]},
+    {"slug": "xcams", "name": "XCams",
+     "title": "Stream på XCams med SplitCam — External Encoder",
+     "desc": "Stream på XCams med gratis SplitCam — external encoder til det europæiske cam-fællesskab, multikamera-scener, overlays og filtre. Uden vandmærke, uden tilmelding.",
+     "kw": "sådan streamer du på xcams, xcams, xcams broadcast, xcams obs, xcams external encoder, xcams rtmp, x cams",
+     "h1html": 'Sådan udsender du på <span class="accent">XCams</span> med SplitCam',
+     "h1short": "Udsend XCams",
+     "card": "External-encoder-opsætning til XCams' europæiske fællesskab.",
+     "intro": "XCams er et europæisk live cam-fællesskab — stærkt i Italien, Frankrig og Spanien — bygget op om live-shows og en tip- / privat-show-økonomi. Model-området understøtter en standard <strong>external encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på, så du kan udsende med multi-kamera scener, overlays og beauty-filtre.",
+     "quick": "Udsend på XCams med SplitCam: installér SplitCam, byg scenen, åbn i model-området <em>broadcast / external encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL + stream key fra model-området.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din XCams-model-konto og åbn <strong>broadcast / external encoder</strong>-indstillingerne i model-området. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. XCams-verifikation er påkrævet før udsendelse.",
+     "tips": [
+         ("Europæisk primetime", "XCams-trafik topper i EU-aftentimerne (CET). At udsende i de timer slår markant off-peak på dette fællesskab."),
+         ("Private shows belønner kvalitet", "XCams kører på private / spy-shows — en poleret SplitCam-scene med overlays konverterer browsere til betalte private shows."),
+         ("Ekstern encoder låser scener op", "At gå gennem SplitCams RTMP i stedet for browser-kameraet muliggør multi-kamera layouts, overlays og filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter XCams eksterne encodere som SplitCam?", "Ja — model-området har en standard external-encoder / RTMP-vej. Kopiér server-URL og stream key ind i SplitCam efter verifikation."),
+         ("Hvor finder jeg min XCams stream key?", "I model-områdets broadcast / external-encoder-indstillinger — både server-URL og stream key dukker op der. Indsæt begge i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til XCams?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams hastighedstest."),
+         ("Er SplitCam gratis til XCams?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. XCams' external-encoder-valg er gratis i model-området."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent XCams-URL og stream key", "Log ind på din XCams-model-konto, åbn <strong>broadcast / external encoder</strong>, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Forbind SplitCam med XCams", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt XCams-server-URL og stream key i custom RTMP-felterne. Sæt 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra model-området. Inden for ~10 sekunder når strømmen XCams' publikum."),
+     ]},
+    {"slug": "camcontacts", "name": "CamContacts",
+     "title": "Stream på CamContacts med SplitCam — External Encoder",
+     "desc": "Stream på CamContacts med gratis SplitCam — external encoder til det veletablerede betal-per-minut cam-site, multikamera-scener og overlays. Uden vandmærke.",
+     "kw": "sådan streamer du på camcontacts, camcontacts, camcontacts broadcast, camcontacts obs, camcontacts external encoder, camcontacts rtmp, cam contacts",
+     "h1html": 'Sådan udsender du på <span class="accent">CamContacts</span> med SplitCam',
+     "h1short": "Udsend CamContacts",
+     "card": "External-encoder-opsætning til CamContacts' betal-per-minut cam.",
+     "intro": "CamContacts er et af de længst kørende uafhængige cam-sites — en betal-per-minut-model med et modent, loyalt publikum og et ry for stabile udbetalinger. Performer-området understøtter en standard <strong>external encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på, så du kan udsende med multi-kamera scener, overlays og beauty-filtre.",
+     "quick": "Udsend på CamContacts med SplitCam: installér SplitCam, byg scenen, åbn i performer-området <em>external encoder / broadcast</em>-indstillingerne, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL + stream key fra performer-området.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din CamContacts-performer-konto og åbn <strong>broadcast / external encoder</strong>-indstillingerne i performer-området. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. CamContacts-verifikation er påkrævet for live cam-funktionen.",
+     "tips": [
+         ("Modent, loyalt publikum", "CamContacts har kørt i årtier med langvarige medlemmer — mere stabile, bedre betalende stamgæster end et churn-tungt gratis-site, men langsommere vækst for nytilkomne."),
+         ("Betal-per-minut belønner fastholdelse", "Hold seerne i betalt tid med en poleret scene og overlays; produktionsværdi forlænger sessioner på en per-minut-model."),
+         ("Ekstern encoder låser scener op", "At gå gennem SplitCams RTMP frem for det basale kamera muliggør multi-kamera layouts, overlays og filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter CamContacts eksterne encodere som SplitCam?", "Ja — performer-området har en standard external-encoder / RTMP-vej. Kopiér server-URL og stream key ind i SplitCam efter verifikation."),
+         ("Hvor finder jeg min CamContacts stream key?", "I performer-områdets broadcast / external-encoder-indstillinger — både server-URL og stream key dukker op der. Indsæt begge i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til CamContacts?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams hastighedstest."),
+         ("Er SplitCam gratis til CamContacts?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. CamContacts' external-encoder-valg er gratis i performer-området."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent CamContacts-URL og stream key", "Log ind på din CamContacts-performer-konto, åbn <strong>broadcast / external encoder</strong>-indstillingerne, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Forbind SplitCam med CamContacts", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt CamContacts-server-URL og stream key i custom RTMP-felterne. Sæt 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra performer-området. Inden for ~10 sekunder når strømmen CamContacts' publikum."),
+     ]},
+    {"slug": "royalcams", "name": "RoyalCams",
+     "title": "Stream på RoyalCams med SplitCam — External Encoder",
+     "desc": "Stream på RoyalCams med gratis SplitCam — external encoder til det token-baserede gratis cam-site, multikamera-scener, overlays og filtre. Uden vandmærke.",
+     "kw": "sådan streamer du på royalcams, royalcams, royalcams broadcast, royalcams obs, royalcams external encoder, royalcams rtmp, royal cams",
+     "h1html": 'Sådan udsender du på <span class="accent">RoyalCams</span> med SplitCam',
+     "h1short": "Udsend RoyalCams",
+     "card": "External-encoder-opsætning til RoyalCams' token cam-site.",
+     "intro": "RoyalCams er et token-baseret gratis cam-site — åbne offentlige rum finansieret af tips, med private shows oveni. Broadcast-indstillingerne understøtter en standard <strong>external encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på, så du kan streame med multi-kamera scener, overlays og beauty-filtre i stedet for et enkelt fladt webkamera.",
+     "quick": "Udsend på RoyalCams med SplitCam: installér SplitCam, byg scenen, åbn i dit model-dashboard <em>broadcast settings → external encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL + stream key fra dashboardet.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din RoyalCams-model-konto og åbn sektionen <strong>broadcast settings / external encoder</strong>. Den viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. Model-verifikation er påkrævet før udsendelse.",
+     "tips": [
+         ("Token-rum belønner produktion", "RoyalCams' offentlige rum kører på tips — tip-mål-overlays og en poleret scene konverterer lurkers til tippere og private shows."),
+         ("Konvertér til private shows", "Brug en stærk offentlig scene til at opsælge private shows, hvor de reelle indtægter ligger på token cam-sites."),
+         ("Ekstern encoder låser scener op", "At gå gennem SplitCams RTMP frem for browser-kameraet muliggør multi-kamera layouts, overlays og filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter RoyalCams eksterne encodere som SplitCam?", "Ja — broadcast-indstillingerne viser en standard external-encoder / RTMP-vej. Kopiér server-URL og stream key ind i SplitCam efter verifikation."),
+         ("Hvor finder jeg min RoyalCams stream key?", "I dit model-dashboards broadcast / external-encoder-indstillinger — både server-URL og stream key dukker op der. Indsæt begge i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til RoyalCams?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams hastighedstest."),
+         ("Er SplitCam gratis til RoyalCams?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. RoyalCams' external-encoder-valg er gratis i dashboardet."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tip-mål-tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent RoyalCams-URL og stream key", "Log ind på din RoyalCams-model-konto, åbn <strong>broadcast settings → external encoder</strong>, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Forbind SplitCam med RoyalCams", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt RoyalCams-server-URL og stream key i custom RTMP-felterne. Sæt 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra dit dashboard. Inden for ~10 sekunder når strømmen RoyalCams' publikum."),
+     ]},
+    {"slug": "modelhub", "name": "Modelhub",
+     "title": "Stream på Modelhub med SplitCam — External Encoder",
+     "desc": "Stream på Modelhub Live med gratis SplitCam — external encoder til Pornhubs creator-platform, multikamera-scener, overlays og filtre. Uden vandmærke.",
+     "kw": "sådan streamer du på modelhub, modelhub, modelhub live, modelhub broadcast, modelhub obs, modelhub external encoder, modelhub rtmp",
+     "h1html": 'Sådan udsender du på <span class="accent">Modelhub</span> med SplitCam',
+     "h1short": "Udsend Modelhub",
+     "card": "External-encoder-opsætning til Modelhub Live (Pornhub).",
+     "intro": "Modelhub er Pornhubs creator-platform — videosalg, fan-abonnementer og et <strong>live cam</strong>-produkt med massiv top-of-funnel-trafik fra Pornhub-netværket. Model-dashboardet understøtter en standard <strong>external encoder</strong>-vej, som gratis <strong style='color:var(--text)'>SplitCam</strong> kobler sig på, så du kan udsende med multi-kamera scener, overlays og beauty-filtre.",
+     "quick": "Udsend på Modelhub med SplitCam: installér SplitCam, byg scenen, åbn i model-dashboardet <em>Live → broadcast / external encoder</em>, kopiér server-URL og stream key, indsæt i SplitCam, Go Live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Hent URL + stream key fra dashboardet.</li><li>Indsæt i SplitCam.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Log ind på din Modelhub-model-konto og åbn <strong>Live / broadcast / external encoder</strong>-indstillingerne i dashboardet. Siden viser en <strong>server-URL</strong> og en <strong>stream key</strong> bundet til din konto — kopiér begge ind i SplitCams custom RTMP-felter. Model-verifikation hos netværket er påkrævet, før du går live.",
+     "tips": [
+         ("Enorm top-of-funnel-trafik", "Modelhub trækker seere fra Pornhub-netværket — en poleret SplitCam-scene konverterer det store, tilfældige publikum til betalende live-seere og abonnenter."),
+         ("Krydssælg dine videoer", "Brug overlays til at pege live-seere mod dine Modelhub-videoer og dit abonnement — platformen er bygget til den funnel."),
+         ("Ekstern encoder låser scener op", "At gå gennem SplitCams RTMP frem for det basale kamera muliggør multi-kamera layouts, overlays og filtre."),
+         _T_ETH,
+     ],
+     "faq": [
+         ("Understøtter Modelhub eksterne encodere som SplitCam?", "Ja — model-dashboardet har en standard external-encoder / RTMP-vej til Modelhub Live. Kopiér server-URL og stream key ind i SplitCam efter verifikation."),
+         ("Hvor finder jeg min Modelhub stream key?", "I dashboardets Live / broadcast / external-encoder-indstillinger — både server-URL og stream key dukker op der. Indsæt begge i SplitCams custom RTMP-felter."),
+         ("Hvilken bitrate til Modelhub?", "Sigt efter 1920×1080 ved 30 fps, 3.500–6.000 Kbps med 2 sekunders keyframe. Kør først SplitCams hastighedstest."),
+         ("Er SplitCam gratis til Modelhub?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. Modelhubs external-encoder-valg er gratis i dashboardet."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå."),
+         ("Hent Modelhub-URL og stream key", "Log ind på din Modelhub-model-konto, åbn <strong>Live → broadcast / external encoder</strong>, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Forbind SplitCam med Modelhub", "I SplitCam åbn <strong>Stream Settings</strong>, indsæt Modelhub-server-URL og stream key i custom RTMP-felterne. Sæt 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe."),
+         ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra dashboardet. Inden for ~10 sekunder når strømmen Modelhubs publikum."),
+     ]},
 ]

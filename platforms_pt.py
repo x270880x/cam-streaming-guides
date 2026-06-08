@@ -1123,4 +1123,380 @@ PLATFORMS_PT = [
             ("Go Live", "Inicia a transmissão — sua cena do SplitCam, overlays e filtros chegam aos seus assinantes do JustForFans."),
         ],
     },
+    {
+        "slug": "fanvue", "name": "Fanvue",
+        "title": "Ficar ao vivo no Fanvue com SplitCam — Câmera Virtual",
+        "desc": "Fique ao vivo no Fanvue com SplitCam grátis como câmera virtual — cenas multicâmera, overlays e filtros pros seus assinantes. Sem marca d'água.",
+        "kw": "como ficar ao vivo no fanvue, fanvue, fanvue live, fanvue câmera virtual, fanvue virtual camera, fanvue obs, fanvue criador",
+        "h1html": 'Como entrar ao vivo no <span class="accent">Fanvue</span> com SplitCam',
+        "h1short": "Live no Fanvue",
+        "card": "Usa o SplitCam como câmera virtual no live do Fanvue.",
+        "intro": "O Fanvue é uma plataforma britânica de assinatura para criadores que cresce rápido — uma alternativa ao OnlyFans conhecida por ser amiga dos criadores e da IA, com assinaturas, pay-per-view e transmissão ao vivo. O broadcaster ao vivo roda no navegador, então apontar ele pro <strong style='color:var(--text)'>SplitCam</strong> grátis como <strong>câmera virtual</strong> libera cenas multi-câmera, overlays e filtros. Se o seu painel de criador expõe uma opção de encoder externo / stream key, o SplitCam conecta via RTMP no lugar disso.",
+        "quick": "Live no Fanvue com SplitCam: instalar SplitCam, montar a cena, iniciar uma transmissão ao vivo no Fanvue e, no seletor de câmera do broadcaster, escolher <em>SplitCam</em> — daí é só entrar ao vivo."
+                 "<ol><li>Instalar SplitCam.</li><li>Adicionar câmera + cena.</li>"
+                 "<li>Iniciar uma transmissão ao vivo no Fanvue.</li>"
+                 "<li>Selecionar SplitCam na lista de câmeras.</li><li>Go Live.</li></ol>",
+        "key_how": "O live do Fanvue roda no navegador. Monta a cena no SplitCam — ele aparece como uma webcam do sistema chamada <strong>\"SplitCam Video Driver\"</strong> — depois abre o broadcaster ao vivo do Fanvue e, na lista de câmeras, escolhe <strong>SplitCam</strong> no lugar da webcam crua. Se o seu painel de criador oferecer uma opção de <strong>encoder externo / stream key</strong>, cola essa chave nos campos de RTMP personalizado do SplitCam.",
+        "tips": [
+            ("Câmera virtual funciona em qualquer lugar", "Mesmo quando o live de uma plataforma é só no navegador, o SplitCam aparece como webcam selecionável — cenas multi-câmera, overlays e filtros funcionam no Fanvue sem stream key nenhuma."),
+            ("Amigo dos criadores e da IA", "O Fanvue acolhe criadores de IA e paga de forma limpa. Overlays que fazem venda cruzada da sua assinatura ou PPV convertem bem num público que já está pagando."),
+            ("Dá permissão de câmera ao navegador", "Se o SplitCam não aparecer na lista de câmeras do Fanvue, confere se o SplitCam está aberto antes e se o navegador tem permissão de câmera — depois recarrega."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Como o SplitCam conecta no Fanvue?", "O live do Fanvue é no navegador, então o SplitCam conecta como câmera virtual: escolhe SplitCam no seletor de câmera. Não precisa de stream key."),
+            ("Dá pra usar overlays e várias câmeras no Fanvue?", "Dá — monta a cena no SplitCam (segunda câmera, overlays, filtros de beleza ou fundo com IA) e o Fanvue vê a cena pronta como uma única webcam."),
+            ("O Fanvue suporta OBS ou encoders externos?", "O live do Fanvue é principalmente por navegador/webcam. Se o seu painel mostrar uma opção de encoder externo ou stream key, cola ela nos campos de RTMP personalizado do SplitCam; senão, usa o método da câmera virtual."),
+            ("O SplitCam é grátis pro Fanvue?", "Sim — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. Ele instala uma câmera virtual que o navegador consegue selecionar."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA — tudo aplicado ao vivo."),
+            ("Inicia uma transmissão ao vivo no Fanvue", "Entra na sua conta de criador do Fanvue e abre o broadcaster ao vivo pra começar uma transmissão pros seus assinantes."),
+            ("Seleciona o SplitCam como câmera", "Na lista de câmeras do Fanvue, escolhe <strong>SplitCam</strong> no lugar da webcam crua — sua cena composta substitui a câmera plana. (Ou, se disponível, cola a chave de encoder externo nos campos de RTMP personalizado do SplitCam.)"),
+            ("Go Live", "Inicia a transmissão — sua cena do SplitCam, overlays e filtros chegam aos seus assinantes do Fanvue."),
+        ],
+    },
+    {
+        "slug": "loyalfans", "name": "LoyalFans",
+        "title": "Ficar ao vivo no LoyalFans com SplitCam — Câmera Virtual",
+        "desc": "Fique ao vivo no LoyalFans com SplitCam grátis como câmera virtual — cenas multicâmera, overlays e filtros pros assinantes e quem dá tip. Sem marca d'água.",
+        "kw": "como ficar ao vivo no loyalfans, loyalfans, loyalfans live, loyalfans câmera virtual, loyalfans virtual camera, loyalfans obs, loyal fans",
+        "h1html": 'Como entrar ao vivo no <span class="accent">LoyalFans</span> com SplitCam',
+        "h1short": "Live no LoyalFans",
+        "card": "Usa o SplitCam como câmera virtual no live do LoyalFans.",
+        "intro": "O LoyalFans é uma plataforma de assinatura para criadores — com assinaturas, pay-per-view, tips e um recurso de <strong>live cam</strong> embutido. O broadcaster ao vivo roda no navegador, então conectar o <strong style='color:var(--text)'>SplitCam</strong> grátis como <strong>câmera virtual</strong> soma cenas multi-câmera, overlays e filtros por cima da webcam padrão. Se o seu painel expõe uma opção de encoder externo / stream key, o SplitCam conecta via RTMP no lugar disso.",
+        "quick": "Live no LoyalFans com SplitCam: instalar SplitCam, montar a cena, iniciar uma transmissão ao vivo no LoyalFans e escolher <em>SplitCam</em> no seletor de câmera do broadcaster — daí é só entrar ao vivo."
+                 "<ol><li>Instalar SplitCam.</li><li>Adicionar câmera + cena.</li>"
+                 "<li>Iniciar uma transmissão ao vivo no LoyalFans.</li>"
+                 "<li>Selecionar SplitCam na lista de câmeras.</li><li>Go Live.</li></ol>",
+        "key_how": "O live do LoyalFans roda no navegador. Monta a cena no SplitCam — ele aparece como uma webcam do sistema chamada <strong>\"SplitCam Video Driver\"</strong> — depois abre o broadcaster ao vivo do LoyalFans e, na lista de câmeras, escolhe <strong>SplitCam</strong>. Se aparecer uma opção de <strong>stream key / encoder externo</strong> no seu painel de criador, cola ela nos campos de RTMP personalizado do SplitCam.",
+        "tips": [
+            ("Câmera virtual, sem chave nenhuma", "O live no navegador ainda recebe a sua cena completa do SplitCam — overlays, segunda câmera e filtros — só de escolher o SplitCam como webcam."),
+            ("Os tips premiam produção", "O LoyalFans se apoia em tips; overlays de meta de tip na tela e uma cena caprichada incentivam mais do que uma webcam plana."),
+            ("Dá permissão de câmera ao navegador", "Se o SplitCam não estiver na lista de câmeras do LoyalFans, abre o SplitCam antes, libera o acesso à câmera no navegador e recarrega o broadcaster."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Como o SplitCam conecta no LoyalFans?", "O live do LoyalFans é no navegador, então o SplitCam conecta como câmera virtual — escolhe SplitCam no seletor de câmera. Não precisa de stream key."),
+            ("Dá pra usar overlays e várias câmeras no LoyalFans?", "Dá — monta a cena no SplitCam (segunda câmera, overlays, filtros de beleza ou fundo com IA); o LoyalFans vê tudo como uma única webcam."),
+            ("O LoyalFans suporta OBS ou encoders externos?", "O live é principalmente por navegador/webcam. Se o seu painel mostrar uma opção de stream key, cola ela nos campos de RTMP personalizado do SplitCam; senão, usa o método da câmera virtual."),
+            ("O SplitCam é grátis pro LoyalFans?", "Sim — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. Ele instala uma câmera virtual que o navegador consegue selecionar."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, texto de meta de tip, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA."),
+            ("Inicia uma transmissão ao vivo no LoyalFans", "Entra na sua conta do LoyalFans e abre o broadcaster ao vivo pra entrar ao vivo pros seus assinantes."),
+            ("Seleciona o SplitCam como câmera", "Na lista de câmeras do LoyalFans, escolhe <strong>SplitCam</strong> no lugar da webcam crua — sua cena substitui a câmera plana. (Ou, se disponível, cola a stream key nos campos de RTMP personalizado do SplitCam.)"),
+            ("Go Live", "Inicia a transmissão — sua cena do SplitCam chega ao público do LoyalFans."),
+        ],
+    },
+    {
+        "slug": "fancentro", "name": "FanCentro",
+        "title": "Ficar ao vivo no FanCentro com SplitCam — Câmera Virtual",
+        "desc": "Fique ao vivo no FanCentro com SplitCam grátis como câmera virtual — cenas multicâmera, overlays e filtros pros seus assinantes. Sem marca d'água.",
+        "kw": "como ficar ao vivo no fancentro, fancentro, fancentro live, fancentro câmera virtual, fancentro virtual camera, fancentro obs, fan centro",
+        "h1html": 'Como entrar ao vivo no <span class="accent">FanCentro</span> com SplitCam',
+        "h1short": "Live no FanCentro",
+        "card": "Usa o SplitCam como câmera virtual no live do FanCentro.",
+        "intro": "O FanCentro é uma plataforma de monetização para criadores que está no mercado há tempo — assinaturas, mensagens pay-per-view, conteúdo e transmissão ao vivo. O live roda no navegador, então conectar o <strong style='color:var(--text)'>SplitCam</strong> grátis como <strong>câmera virtual</strong> soma cenas multi-câmera, overlays e filtros que vão além da webcam simples. Se o seu painel expõe uma opção de encoder externo / stream key, o SplitCam conecta via RTMP no lugar disso.",
+        "quick": "Live no FanCentro com SplitCam: instalar SplitCam, montar a cena, iniciar uma transmissão ao vivo no FanCentro e escolher <em>SplitCam</em> no seletor de câmera do broadcaster — daí é só entrar ao vivo."
+                 "<ol><li>Instalar SplitCam.</li><li>Adicionar câmera + cena.</li>"
+                 "<li>Iniciar uma transmissão ao vivo no FanCentro.</li>"
+                 "<li>Selecionar SplitCam na lista de câmeras.</li><li>Go Live.</li></ol>",
+        "key_how": "O live do FanCentro roda no navegador. Monta a cena no SplitCam — ele aparece como uma webcam do sistema chamada <strong>\"SplitCam Video Driver\"</strong> — depois abre o broadcaster ao vivo do FanCentro e, na lista de câmeras, escolhe <strong>SplitCam</strong>. Se for oferecida uma opção de <strong>stream key / encoder externo</strong>, cola ela nos campos de RTMP personalizado do SplitCam.",
+        "tips": [
+            ("Câmera virtual funciona em qualquer lugar", "O live só no navegador ainda recebe a sua cena completa do SplitCam — overlays, segunda câmera e filtros — só de escolher o SplitCam como webcam."),
+            ("Faça venda cruzada do seu funil", "O FanCentro é construído em torno de funis de criador e PPV. Overlays divulgando sua assinatura ou mensagens pagas convertem quem assiste em comprador."),
+            ("Dá permissão de câmera ao navegador", "Se o SplitCam não estiver listado, abre o SplitCam antes, libera o acesso à câmera no navegador e recarrega o broadcaster."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Como o SplitCam conecta no FanCentro?", "O live do FanCentro é no navegador, então o SplitCam conecta como câmera virtual — escolhe SplitCam no seletor de câmera. Não precisa de stream key."),
+            ("Dá pra usar overlays e várias câmeras no FanCentro?", "Dá — monta a cena no SplitCam; o FanCentro vê a cena pronta como uma única webcam."),
+            ("O FanCentro suporta OBS ou encoders externos?", "O live é principalmente por navegador/webcam. Se aparecer uma opção de stream key no seu painel, cola ela nos campos de RTMP personalizado do SplitCam; senão, usa o método da câmera virtual."),
+            ("O SplitCam é grátis pro FanCentro?", "Sim — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. Ele instala uma câmera virtual que o navegador consegue selecionar."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA."),
+            ("Inicia uma transmissão ao vivo no FanCentro", "Entra na sua conta do FanCentro e abre o broadcaster ao vivo pra entrar ao vivo pros seus assinantes."),
+            ("Seleciona o SplitCam como câmera", "Na lista de câmeras do FanCentro, escolhe <strong>SplitCam</strong> no lugar da webcam crua. (Ou, se disponível, cola a stream key nos campos de RTMP personalizado do SplitCam.)"),
+            ("Go Live", "Inicia a transmissão — sua cena do SplitCam chega aos seus assinantes do FanCentro."),
+        ],
+    },
+    {
+        "slug": "ismygirl", "name": "IsMyGirl",
+        "title": "Ficar ao vivo no IsMyGirl com SplitCam — Câmera Virtual",
+        "desc": "Fique ao vivo no IsMyGirl com SplitCam grátis como câmera virtual — cenas multicâmera, overlays e filtros pros seus assinantes. Sem marca d'água.",
+        "kw": "como ficar ao vivo no ismygirl, ismygirl, ismygirl live, ismygirl câmera virtual, ismygirl virtual camera, ismygirl obs, is my girl",
+        "h1html": 'Como entrar ao vivo no <span class="accent">IsMyGirl</span> com SplitCam',
+        "h1short": "Live no IsMyGirl",
+        "card": "Usa o SplitCam como câmera virtual no live do IsMyGirl.",
+        "intro": "O IsMyGirl é uma plataforma de assinatura para criadores — uma alternativa ao OnlyFans com assinaturas, conteúdo pago e transmissão ao vivo, conhecida pelo suporte próximo aos criadores. O broadcaster ao vivo roda no navegador, então conectar o <strong style='color:var(--text)'>SplitCam</strong> grátis como <strong>câmera virtual</strong> traz cenas multi-câmera, overlays e filtros. Se o seu painel expõe uma opção de encoder externo / stream key, o SplitCam conecta via RTMP no lugar disso.",
+        "quick": "Live no IsMyGirl com SplitCam: instalar SplitCam, montar a cena, iniciar uma transmissão ao vivo no IsMyGirl e selecionar <em>SplitCam</em> no seletor de câmera do broadcaster — daí é só entrar ao vivo."
+                 "<ol><li>Instalar SplitCam.</li><li>Adicionar câmera + cena.</li>"
+                 "<li>Iniciar uma transmissão ao vivo no IsMyGirl.</li>"
+                 "<li>Selecionar SplitCam na lista de câmeras.</li><li>Go Live.</li></ol>",
+        "key_how": "O live do IsMyGirl roda no navegador. Monta a cena no SplitCam — ele aparece como uma webcam do sistema chamada <strong>\"SplitCam Video Driver\"</strong> — depois abre o broadcaster ao vivo do IsMyGirl e, na lista de câmeras, escolhe <strong>SplitCam</strong>. Se aparecer uma opção de <strong>stream key / encoder externo</strong>, cola ela nos campos de RTMP personalizado do SplitCam.",
+        "tips": [
+            ("Câmera virtual, sem chave nenhuma", "O live só no navegador ainda recebe a sua cena completa do SplitCam — overlays, segunda câmera e filtros — só de escolher o SplitCam como webcam."),
+            ("Aproveita o suporte ao criador", "O IsMyGirl divulga suporte forte e promoção pros criadores. Uma cena caprichada no SplitCam mais overlays de venda cruzada aproveitam ao máximo o tráfego que eles te enviam."),
+            ("Dá permissão de câmera ao navegador", "Se o SplitCam não estiver listado, abre o SplitCam antes, libera o acesso à câmera e recarrega o broadcaster."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Como o SplitCam conecta no IsMyGirl?", "O live do IsMyGirl é no navegador, então o SplitCam conecta como câmera virtual — escolhe SplitCam no seletor de câmera. Não precisa de stream key."),
+            ("Dá pra usar overlays e várias câmeras no IsMyGirl?", "Dá — monta a cena no SplitCam; o IsMyGirl vê tudo como uma única webcam."),
+            ("O IsMyGirl suporta OBS ou encoders externos?", "O live é principalmente por navegador/webcam. Se aparecer uma opção de stream key, cola ela nos campos de RTMP personalizado do SplitCam; senão, usa o método da câmera virtual."),
+            ("O SplitCam é grátis pro IsMyGirl?", "Sim — grátis, sem marca d'água e sem limite de tempo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam", "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. Ele instala uma câmera virtual que o navegador consegue selecionar."),
+            ("Monta sua cena", "Abre o SplitCam e adiciona a webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA."),
+            ("Inicia uma transmissão ao vivo no IsMyGirl", "Entra na sua conta do IsMyGirl e abre o broadcaster ao vivo pra entrar ao vivo pros seus assinantes."),
+            ("Seleciona o SplitCam como câmera", "Na lista de câmeras do IsMyGirl, escolhe <strong>SplitCam</strong> no lugar da webcam crua. (Ou, se disponível, cola a stream key nos campos de RTMP personalizado do SplitCam.)"),
+            ("Go Live", "Inicia a transmissão — sua cena do SplitCam chega aos seus assinantes do IsMyGirl."),
+        ],
+    },
+    {
+        "slug": "dxlive", "name": "DXLive",
+        "title": "Transmitir no DXLive com SplitCam — External Encoder",
+        "desc": "Transmita no DXLive com SplitCam grátis — encoder externo da rede cam premium japonesa, cenas multicâmera e overlays. Sem marca d'água, sem cadastro.",
+        "kw": "como transmitir no dxlive, dxlive, dxlive broadcast, dxlive obs, dxlive external encoder, dxlive rtmp, dxlive performer",
+        "h1html": 'Como transmitir no <span class="accent">DXLive</span> com SplitCam',
+        "h1short": "Transmitir no DXLive",
+        "card": "Setup do encoder externo pra rede cam premium do DXLive.",
+        "intro": "O DXLive é uma rede de webcam premium consolidada, popular no Japão e em toda a Ásia, construída num modelo de pagamento por minuto com um público fiel. A área de performer suporta um caminho padrão de <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta — deixando você transmitir com cenas multicâmera, overlays e filtros de beleza no lugar de uma única webcam plana.",
+        "quick": "Transmitir no DXLive com SplitCam: instala o SplitCam, monta sua cena, na área de performer abre as configurações de <em>external encoder / broadcast</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key na área de performer.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de performer do DXLive e abre as configurações de <strong>broadcast / external encoder</strong> na área de performer. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. A verificação no DXLive é obrigatória antes de o recurso de live cam ser liberado.",
+        "tips": [
+            ("Feito pro mercado asiático", "O público do DXLive pende pro Japão/Ásia e paga por minuto. Programa seus shows pras noites no horário JST e a base fiel e pagante converte bem."),
+            ("Produção bate webcam crua", "Uma cena limpa no SplitCam com overlays e filtros de beleza se destaca numa rede premium de pagamento por minuto, onde o público espera qualidade."),
+            ("Usa o encoder externo, não só a webcam", "Passar pelo RTMP do SplitCam, e não pela cam básica do navegador, é o que libera cenas multicâmera e filtros."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O DXLive suporta encoders externos tipo o SplitCam?", "Suporta — a área de performer tem um caminho padrão de external encoder / RTMP. Copia a URL do servidor e a stream key pro SplitCam depois da verificação."),
+            ("Onde pego minha stream key do DXLive?", "Nas configurações de broadcast / external encoder da área de performer — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no DXLive?", "Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test embutido do SplitCam."),
+            ("O SplitCam é grátis pra usar com o DXLive?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do DXLive é grátis na área de performer."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA."),
+            ("Pega a URL e a stream key do DXLive",
+             "Entra na sua conta de performer do DXLive e abre as configurações de <strong>broadcast / external encoder</strong>. Copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao DXLive",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do DXLive e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pela área de performer. Em uns 10 segundos seu stream chega ao público do DXLive."),
+        ],
+    },
+    {
+        "slug": "streamen", "name": "Streamen",
+        "title": "Transmitir no Streamen com SplitCam — External Encoder",
+        "desc": "Transmita no Streamen com SplitCam grátis — setup de encoder externo, cenas multicâmera, overlays e filtros de beleza. Sem marca d'água, sem cadastro.",
+        "kw": "como transmitir no streamen, streamen, streamen broadcast, streamen obs, streamen external encoder, streamen rtmp, streamen.tv",
+        "h1html": 'Como transmitir no <span class="accent">Streamen</span> com SplitCam',
+        "h1short": "Transmitir no Streamen",
+        "card": "Setup do encoder externo pra plataforma cam Streamen.",
+        "intro": "O Streamen é uma plataforma de live cam onde os modelos transmitem pra um público movido a tips. As configurações de transmissão expõem um caminho padrão de <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta — pra você transmitir com cenas multicâmera, overlays e filtros, e não com uma única webcam simples.",
+        "quick": "Transmitir no Streamen com SplitCam: instala o SplitCam, monta sua cena, no seu painel de modelo abre <em>broadcast settings → external encoder</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key no painel.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de modelo do Streamen e abre a seção de <strong>broadcast settings / external encoder</strong>. Ela mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. A verificação de modelo é obrigatória antes de a transmissão ser liberada.",
+        "tips": [
+            ("Público movido a tips", "Quem assiste o Streamen dá tip — metas de tip na tela e uma cena caprichada incentivam mais tips que uma webcam plana."),
+            ("O encoder externo libera as cenas", "Passar pelo RTMP do SplitCam, e não pela cam básica do navegador, é o que habilita layouts multicâmera, overlays e filtros."),
+            ("Trava a sua resolução", "Define 1080p na mão pra que o feed não baixe a qualidade sem avisar; um bitrate que cai numa imagem parada é normal em feeds adaptativos."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O Streamen suporta encoders externos tipo o SplitCam?", "Suporta — as configurações de transmissão têm um caminho padrão de external encoder / RTMP. Copia a URL do servidor e a stream key pro SplitCam depois da verificação."),
+            ("Onde pego minha stream key do Streamen?", "Nas configurações de broadcast / external encoder do seu painel de modelo — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no Streamen?", "Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test do SplitCam."),
+            ("O SplitCam é grátis pra usar com o Streamen?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do Streamen é grátis no painel."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto de meta de tip, uma segunda câmera ou o celular, filtros de beleza ou fundo IA."),
+            ("Pega a URL e a stream key do Streamen",
+             "Entra na sua conta de modelo do Streamen, abre <strong>broadcast settings → external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao Streamen",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do Streamen e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel. Em uns 10 segundos seu stream chega ao público do Streamen."),
+        ],
+    },
+    {
+        "slug": "xcams", "name": "XCams",
+        "title": "Transmitir no XCams com SplitCam — External Encoder",
+        "desc": "Transmita no XCams com SplitCam grátis — encoder externo da comunidade cam europeia, cenas multicâmera, overlays e filtros. Sem marca d'água, sem cadastro.",
+        "kw": "como transmitir no xcams, xcams, xcams broadcast, xcams obs, xcams external encoder, xcams rtmp, x cams",
+        "h1html": 'Como transmitir no <span class="accent">XCams</span> com SplitCam',
+        "h1short": "Transmitir no XCams",
+        "card": "Setup do encoder externo pra comunidade europeia XCams.",
+        "intro": "O XCams é uma comunidade europeia de live cam — forte na Itália, na França e na Espanha — construída em torno de shows ao vivo e de uma economia de tips e shows privados. A área de modelo suporta um caminho padrão de <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta, pra você transmitir com cenas multicâmera, overlays e filtros de beleza.",
+        "quick": "Transmitir no XCams com SplitCam: instala o SplitCam, monta sua cena, na área de modelo abre <em>broadcast / external encoder</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key na área de modelo.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de modelo do XCams e abre as configurações de <strong>broadcast / external encoder</strong> na área de modelo. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. A verificação no XCams é obrigatória antes de transmitir.",
+        "tips": [
+            ("Horário nobre europeu", "O tráfego do XCams tem pico nas noites da Europa (CET). Transmitir nesse horário rende bem mais que fora de pico nessa comunidade."),
+            ("Shows privados premiam qualidade", "O XCams roda em shows privados/spy — uma cena caprichada no SplitCam com overlays converte quem só passeia em privados pagos."),
+            ("O encoder externo libera as cenas", "Passar pelo RTMP do SplitCam, e não pela cam do navegador, habilita layouts multicâmera, overlays e filtros."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O XCams suporta encoders externos tipo o SplitCam?", "Suporta — a área de modelo tem um caminho padrão de external encoder / RTMP. Copia a URL do servidor e a stream key pro SplitCam depois da verificação."),
+            ("Onde pego minha stream key do XCams?", "Nas configurações de broadcast / external encoder da área de modelo — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no XCams?", "Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test do SplitCam."),
+            ("O SplitCam é grátis pra usar com o XCams?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do XCams é grátis na área de modelo."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA."),
+            ("Pega a URL e a stream key do XCams",
+             "Entra na sua conta de modelo do XCams, abre <strong>broadcast / external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao XCams",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do XCams e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pela área de modelo. Em uns 10 segundos seu stream chega ao público do XCams."),
+        ],
+    },
+    {
+        "slug": "camcontacts", "name": "CamContacts",
+        "title": "Transmitir no CamContacts com SplitCam — External Encoder",
+        "desc": "Transmita no CamContacts com SplitCam grátis — encoder externo do site cam pay-per-minute, cenas multicâmera e overlays. Sem marca d'água.",
+        "kw": "como transmitir no camcontacts, camcontacts, camcontacts broadcast, camcontacts obs, camcontacts external encoder, camcontacts rtmp, cam contacts",
+        "h1html": 'Como transmitir no <span class="accent">CamContacts</span> com SplitCam',
+        "h1short": "Transmitir no CamContacts",
+        "card": "Setup do encoder externo pra cam pay-per-minute do CamContacts.",
+        "intro": "O CamContacts é um dos sites cam independentes mais antigos em atividade — um modelo de pagamento por minuto com público maduro e fiel e fama de pagamentos constantes. A área de performer suporta um caminho padrão de <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta, pra você transmitir com cenas multicâmera, overlays e filtros de beleza.",
+        "quick": "Transmitir no CamContacts com SplitCam: instala o SplitCam, monta sua cena, na área de performer abre as configurações de <em>external encoder / broadcast</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key na área de performer.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de performer do CamContacts e abre as configurações de <strong>broadcast / external encoder</strong> na área de performer. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. A verificação no CamContacts é obrigatória pro recurso de live cam.",
+        "tips": [
+            ("Público maduro e fiel", "O CamContacts roda há décadas com membros de longa data — regulares mais constantes e que pagam mais que num site grátis de muita rotatividade, mas com crescimento mais lento pra quem chega."),
+            ("Pagamento por minuto premia retenção", "Mantém quem assiste em tempo pago com uma cena caprichada e overlays; a produção estende as sessões num modelo por minuto."),
+            ("O encoder externo libera as cenas", "Passar pelo RTMP do SplitCam, e não pela cam básica, habilita layouts multicâmera, overlays e filtros."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O CamContacts suporta encoders externos tipo o SplitCam?", "Suporta — a área de performer tem um caminho padrão de external encoder / RTMP. Copia a URL do servidor e a stream key pro SplitCam depois da verificação."),
+            ("Onde pego minha stream key do CamContacts?", "Nas configurações de broadcast / external encoder da área de performer — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no CamContacts?", "Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test do SplitCam."),
+            ("O SplitCam é grátis pra usar com o CamContacts?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do CamContacts é grátis na área de performer."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA."),
+            ("Pega a URL e a stream key do CamContacts",
+             "Entra na sua conta de performer do CamContacts, abre as configurações de <strong>broadcast / external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao CamContacts",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do CamContacts e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pela área de performer. Em uns 10 segundos seu stream chega ao público do CamContacts."),
+        ],
+    },
+    {
+        "slug": "royalcams", "name": "RoyalCams",
+        "title": "Transmitir no RoyalCams com SplitCam — External Encoder",
+        "desc": "Transmita no RoyalCams com SplitCam grátis — encoder externo do site cam grátis por token, cenas multicâmera, overlays e filtros. Sem marca d'água.",
+        "kw": "como transmitir no royalcams, royalcams, royalcams broadcast, royalcams obs, royalcams external encoder, royalcams rtmp, royal cams",
+        "h1html": 'Como transmitir no <span class="accent">RoyalCams</span> com SplitCam',
+        "h1short": "Transmitir no RoyalCams",
+        "card": "Setup do encoder externo pro site cam por token do RoyalCams.",
+        "intro": "O RoyalCams é um site cam grátis baseado em token — salas públicas abertas bancadas por tips, com shows privados por cima. As configurações de transmissão suportam um caminho padrão de <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta, pra você transmitir com cenas multicâmera, overlays e filtros de beleza no lugar de uma única webcam plana.",
+        "quick": "Transmitir no RoyalCams com SplitCam: instala o SplitCam, monta sua cena, no seu painel de modelo abre <em>broadcast settings → external encoder</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key no painel.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de modelo do RoyalCams e abre a seção de <strong>broadcast settings / external encoder</strong>. Ela mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. A verificação de modelo é obrigatória antes de transmitir.",
+        "tips": [
+            ("Salas de token premiam produção", "As salas públicas do RoyalCams rodam em tips — overlays de meta de tip e uma cena caprichada convertem quem só observa em quem dá tip e fecha shows privados."),
+            ("Converte em shows privados", "Usa uma cena pública forte pra fazer upsell de shows privados, onde está o dinheiro de verdade nos sites cam por token."),
+            ("O encoder externo libera as cenas", "Passar pelo RTMP do SplitCam, e não pela cam do navegador, habilita layouts multicâmera, overlays e filtros."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O RoyalCams suporta encoders externos tipo o SplitCam?", "Suporta — as configurações de transmissão têm um caminho padrão de external encoder / RTMP. Copia a URL do servidor e a stream key pro SplitCam depois da verificação."),
+            ("Onde pego minha stream key do RoyalCams?", "Nas configurações de broadcast / external encoder do seu painel de modelo — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no RoyalCams?", "Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test do SplitCam."),
+            ("O SplitCam é grátis pra usar com o RoyalCams?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do RoyalCams é grátis no painel."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto de meta de tip, uma segunda câmera ou o celular, filtros de beleza ou fundo IA."),
+            ("Pega a URL e a stream key do RoyalCams",
+             "Entra na sua conta de modelo do RoyalCams, abre <strong>broadcast settings → external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao RoyalCams",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do RoyalCams e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel. Em uns 10 segundos seu stream chega ao público do RoyalCams."),
+        ],
+    },
+    {
+        "slug": "modelhub", "name": "Modelhub",
+        "title": "Transmitir no Modelhub com SplitCam — External Encoder",
+        "desc": "Transmita no Modelhub Live com SplitCam grátis — encoder externo da plataforma de criadores do Pornhub, cenas multicâmera e overlays. Sem marca d'água.",
+        "kw": "como transmitir no modelhub, modelhub, modelhub live, modelhub obs, modelhub external encoder, modelhub rtmp, modelhub cam",
+        "h1html": 'Como transmitir no <span class="accent">Modelhub</span> com SplitCam',
+        "h1short": "Transmitir no Modelhub",
+        "card": "Setup do encoder externo pro Modelhub Live (Pornhub).",
+        "intro": "O Modelhub é a plataforma de criadores do Pornhub — venda de vídeos, assinaturas de fãs e um produto de <strong>live cam</strong> com tráfego enorme no topo do funil vindo da rede Pornhub. O painel de modelo suporta um caminho padrão de <strong>External Encoder</strong> ao qual o <strong style='color:var(--text)'>SplitCam</strong> grátis conecta, pra você transmitir com cenas multicâmera, overlays e filtros de beleza.",
+        "quick": "Transmitir no Modelhub com SplitCam: instala o SplitCam, monta sua cena, no painel de modelo abre <em>Live → broadcast / external encoder</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live."
+                 "<ol><li>Instala o SplitCam.</li><li>Adiciona câmera + cena.</li>"
+                 "<li>Pega URL e stream key no painel.</li>"
+                 "<li>Cola no SplitCam.</li>"
+                 "<li>Aperta Go Live.</li></ol>",
+        "key_how": "Entra na sua conta de modelo do Modelhub e abre as configurações de <strong>Live / broadcast / external encoder</strong> no painel. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> vinculadas à sua conta — copia as duas pros campos de RTMP personalizado do SplitCam. A verificação de modelo na rede é obrigatória antes de entrar ao vivo.",
+        "tips": [
+            ("Tráfego enorme no topo do funil", "O Modelhub puxa espectadores da rede Pornhub — uma cena caprichada no SplitCam converte esse público grande e casual em espectadores ao vivo pagantes e assinantes."),
+            ("Faz venda cruzada dos seus vídeos", "Usa overlays pra direcionar quem assiste ao vivo pros seus vídeos e assinatura do Modelhub — a plataforma é feita pra esse funil."),
+            ("O encoder externo libera as cenas", "Passar pelo RTMP do SplitCam, e não pela cam básica, habilita layouts multicâmera, overlays e filtros."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("O Modelhub suporta encoders externos tipo o SplitCam?", "Suporta — o painel de modelo tem um caminho padrão de external encoder / RTMP pro Modelhub Live. Copia a URL do servidor e a stream key pro SplitCam depois da verificação."),
+            ("Onde pego minha stream key do Modelhub?", "Nas configurações de Live / broadcast / external encoder do painel — a URL do servidor e a stream key aparecem ali. Cola as duas nos campos de RTMP personalizado do SplitCam."),
+            ("Que bitrate usar no Modelhub?", "Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test do SplitCam."),
+            ("O SplitCam é grátis pra usar com o Modelhub?", "É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do Modelhub é grátis no painel."),
+        ],
+        "steps": [
+            ("Baixa e instala o SplitCam",
+             "O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água."),
+            ("Monta sua cena",
+             "Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA."),
+            ("Pega a URL e a stream key do Modelhub",
+             "Entra na sua conta de modelo do Modelhub, abre <strong>Live → broadcast / external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>."),
+            ("Conecta o SplitCam ao Modelhub",
+             "No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do Modelhub e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos."),
+            ("Clica Go Live",
+             "Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel. Em uns 10 segundos seu stream chega ao público do Modelhub."),
+        ],
+    },
 ]

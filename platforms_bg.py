@@ -1004,4 +1004,348 @@ PLATFORMS_BG = [
             ("Натисни Go Live", "Стартирай излъчването — твоята SplitCam сцена, наслагвания и филтри стигат до абонатите ти в JustForFans."),
         ],
     },
+    {
+        "slug": "fanvue", "name": "Fanvue",
+        "title": "На живо в Fanvue със SplitCam — виртуална камера",
+        "desc": "Излизай на живо в Fanvue с безплатен SplitCam като виртуална камера — мулти-камера сцени, наслагвания и филтри за абонатите ти. Без воден знак.",
+        "kw": "как да си на живо в fanvue, fanvue live, fanvue stream, fanvue obs, fanvue виртуална камера, fanvue creator, fanvue broadcast",
+        "h1html": 'Как да си на живо в <span class="accent">Fanvue</span> със SplitCam',
+        "h1short": "Live Fanvue",
+        "card": "Използвай SplitCam като виртуална камера за live в Fanvue.",
+        "intro": "Fanvue е бързо растяща британска абонаментна платформа за creator-и — алтернатива на OnlyFans, известна с това, че е приятелска към creator-ите и към AI, с абонаменти, pay-per-view и live стрийминг. Нейният live broadcaster върви в браузъра, така че ако го насочиш към безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong>, отключваш мулти-камера сцени, наслагвания и филтри. Ако твоят creator dashboard излага опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.",
+        "quick": "Излизане на живо в Fanvue със SplitCam: инсталирай SplitCam, изгради сцената, започни live в Fanvue, и в селектора за камера на broadcaster-а избери <em>SplitCam</em> — после излез на живо."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Започни live в Fanvue.</li>"
+                 "<li>Избери SplitCam от падащото меню за камера.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Live функцията на Fanvue върви в браузъра. Изгради сцената в SplitCam — той се регистрира като уебкамера с име <strong>\"SplitCam Video Driver\"</strong> — после отвори live broadcaster-а на Fanvue и в падащото меню за камера избери <strong>SplitCam</strong> вместо суровата си уебкамера. Ако твоят creator dashboard предлага опция за <strong>external encoder / stream key</strong>, постави този ключ в полетата за custom RTMP на SplitCam вместо това.",
+        "tips": [
+            ("Виртуалната камера работи навсякъде", "Дори когато live функцията на платформата е само в браузъра, SplitCam се появява като избираема уебкамера — мулти-камера сцени, наслагвания и филтри работят във Fanvue изобщо без stream key."),
+            ("Приятелска към creator-и и към AI", "Fanvue посреща AI creator-и и изплаща чисто. Наслагвания, които кръстосано продават твоя абонамент или PPV, се превръщат добре пред публика, която вече плаща."),
+            ("Дай на браузъра достъп до камерата", "Ако SplitCam не се появи в списъка с камери на Fanvue, увери се, че SplitCam върви първо и че браузърът има разрешение за камера — после презареди."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Как SplitCam се връзва с Fanvue?", "Live функцията на Fanvue е в браузъра, така че SplitCam се връзва като виртуална камера: избираш SplitCam в селектора за камера. Не е нужен stream key."),
+            ("Мога ли да използвам наслагвания и няколко камери във Fanvue?", "Да — изгради сцената в SplitCam (втора камера, наслагвания, beauty или AI-фон филтри), а Fanvue вижда готовата сцена като една уебкамера."),
+            ("Поддържа ли Fanvue OBS или външни енкодери?", "Live функцията на Fanvue е предимно базирана на браузър/уебкамера. Ако твоят dashboard показва опция за external encoder или stream key, постави я в полетата за custom RTMP на SplitCam; иначе използвай метода с виртуална камера."),
+            ("SplitCam безплатен ли е за Fanvue?", "Да — SplitCam е безплатен, без воден знак и без времево ограничение."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак. Инсталира виртуална камера, която браузърът може да избере."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон — прилагани на живо."),
+            ("Започни live в Fanvue", "Влез в creator акаунта си във Fanvue и отвори live broadcaster-а, за да започнеш стрийм за абонатите си."),
+            ("Избери SplitCam като своя камера", "В падащото меню за камера на Fanvue избери <strong>SplitCam</strong> вместо суровата си уебкамера — съставената ти сцена замества плоската камера. (Или, ако е налична, постави stream key в полетата за custom RTMP на SplitCam.)"),
+            ("Натисни Go Live", "Стартирай излъчването — твоята SplitCam сцена, наслагвания и филтри стигат до абонатите ти във Fanvue."),
+        ],
+    },
+    {
+        "slug": "loyalfans", "name": "LoyalFans",
+        "title": "На живо в LoyalFans със SplitCam — виртуална камера",
+        "desc": "Излизай на живо в LoyalFans с безплатен SplitCam като виртуална камера — сцени, наслагвания и филтри за абонати и tip-ъри. Без воден знак.",
+        "kw": "как да си на живо в loyalfans, loyalfans live, loyalfans stream, loyalfans obs, loyalfans виртуална камера, loyalfans broadcast, loyal fans",
+        "h1html": 'Как да си на живо в <span class="accent">LoyalFans</span> със SplitCam',
+        "h1short": "Live LoyalFans",
+        "card": "Използвай SplitCam като виртуална камера за live в LoyalFans.",
+        "intro": "LoyalFans е абонаментна платформа за creator-и с абонаменти, pay-per-view, tipping и вградена <strong>live cam</strong> функция. Live broadcaster-ът върви в браузъра, така че свързването на безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong> добавя мулти-камера сцени, наслагвания и филтри върху стандартната уебкамера. Ако твоят dashboard излага опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.",
+        "quick": "Излизане на живо в LoyalFans със SplitCam: инсталирай SplitCam, изгради сцената, започни live в LoyalFans, и в селектора за камера на broadcaster-а избери <em>SplitCam</em> — после излез на живо."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Започни live в LoyalFans.</li>"
+                 "<li>Избери SplitCam от падащото меню за камера.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Live функцията на LoyalFans върви в браузъра. Изгради сцената в SplitCam — той се регистрира като уебкамера с име <strong>\"SplitCam Video Driver\"</strong> — после отвори live broadcaster-а на LoyalFans и в падащото меню за камера избери <strong>SplitCam</strong>. Ако в твоя creator dashboard се появи опция за <strong>stream key / external encoder</strong>, постави я в полетата за custom RTMP на SplitCam вместо това.",
+        "tips": [
+            ("Виртуална камера, без нужда от ключ", "Базираният на браузър live пак получава пълната ти SplitCam сцена — наслагвания, втора камера и филтри — само като избереш SplitCam за уебкамера."),
+            ("Tip-овете възнаграждават продукцията", "LoyalFans разчита на tipping; екранни наслагвания с tip-цели и полирана сцена тласкат tip-ърите повече от плоска уебкамера."),
+            ("Дай на браузъра достъп до камерата", "Ако SplitCam не е в списъка с камери на LoyalFans, пусни първо SplitCam, разреши достъп до камера в браузъра, после презареди broadcaster-а."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Как SplitCam се връзва с LoyalFans?", "Live функцията на LoyalFans е в браузъра, така че SplitCam се връзва като виртуална камера — избираш SplitCam в селектора за камера. Не е нужен stream key."),
+            ("Мога ли да използвам наслагвания и няколко камери в LoyalFans?", "Да — съчини сцената в SplitCam (втора камера, наслагвания, beauty или AI-фон филтри); LoyalFans я вижда като една уебкамера."),
+            ("Поддържа ли LoyalFans OBS или външни енкодери?", "Live функцията е предимно базирана на браузър/уебкамера. Ако твоят dashboard показва опция за stream key, постави я в полетата за custom RTMP на SplitCam; иначе използвай метода с виртуална камера."),
+            ("SplitCam безплатен ли е за LoyalFans?", "Да — безплатен, без воден знак и без времево ограничение."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак. Инсталира виртуална камера, която браузърът може да избере."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст с tip-цели, втора камера или телефона, beauty filters или AI фон."),
+            ("Започни live в LoyalFans", "Влез в акаунта си в LoyalFans и отвори live broadcaster-а, за да излезеш на живо за абонатите си."),
+            ("Избери SplitCam като своя камера", "В падащото меню за камера на LoyalFans избери <strong>SplitCam</strong> вместо суровата си уебкамера — сцената ти замества плоската камера. (Или, ако е налична, постави stream key в полетата за custom RTMP на SplitCam.)"),
+            ("Натисни Go Live", "Стартирай излъчването — твоята SplitCam сцена стига до публиката ти в LoyalFans."),
+        ],
+    },
+    {
+        "slug": "fancentro", "name": "FanCentro",
+        "title": "На живо в FanCentro със SplitCam — виртуална камера",
+        "desc": "Излизай на живо във FanCentro с безплатен SplitCam като виртуална камера — сцени, наслагвания и филтри за абонатите ти. Без воден знак.",
+        "kw": "как да си на живо в fancentro, fancentro live, fancentro stream, fancentro obs, fancentro виртуална камера, fancentro broadcast, fan centro",
+        "h1html": 'Как да си на живо в <span class="accent">FanCentro</span> със SplitCam',
+        "h1short": "Live FanCentro",
+        "card": "Използвай SplitCam като виртуална камера за live в FanCentro.",
+        "intro": "FanCentro е дългогодишна платформа за монетизация на creator-и — абонаменти, pay-per-view съобщения, съдържание и live стрийминг. Нейният live върви в браузъра, така че свързването на безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong> добавя мулти-камера сцени, наслагвания и филтри отвъд обикновената уебкамера. Ако твоят dashboard излага опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.",
+        "quick": "Излизане на живо във FanCentro със SplitCam: инсталирай SplitCam, изгради сцената, започни live във FanCentro, и в селектора за камера на broadcaster-а избери <em>SplitCam</em> — после излез на живо."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Започни live във FanCentro.</li>"
+                 "<li>Избери SplitCam от падащото меню за камера.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Live функцията на FanCentro върви в браузъра. Изгради сцената в SplitCam — той се регистрира като уебкамера с име <strong>\"SplitCam Video Driver\"</strong> — после отвори live broadcaster-а на FanCentro и в падащото меню за камера избери <strong>SplitCam</strong>. Ако се предлага опция за <strong>stream key / external encoder</strong>, постави я в полетата за custom RTMP на SplitCam вместо това.",
+        "tips": [
+            ("Виртуалната камера работи навсякъде", "Само-браузърен live пак получава пълната ти SplitCam сцена — наслагвания, втора камера и филтри — като избереш SplitCam за уебкамера."),
+            ("Кръстосвай продажбите във фунията си", "FanCentro е изграден около creator фунии и PPV. Наслагвания, рекламиращи твоя абонамент или платени съобщения, превръщат live зрителите в купувачи."),
+            ("Дай на браузъра достъп до камерата", "Ако SplitCam не е в списъка, пусни първо SplitCam, разреши достъп до камера в браузъра, после презареди broadcaster-а."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Как SplitCam се връзва с FanCentro?", "Live функцията на FanCentro е в браузъра, така че SplitCam се връзва като виртуална камера — избираш SplitCam в селектора за камера. Не е нужен stream key."),
+            ("Мога ли да използвам наслагвания и няколко камери във FanCentro?", "Да — изгради сцената в SplitCam; FanCentro вижда готовата сцена като една уебкамера."),
+            ("Поддържа ли FanCentro OBS или външни енкодери?", "Live функцията е предимно базирана на браузър/уебкамера. Ако в твоя dashboard се появи опция за stream key, постави я в полетата за custom RTMP на SplitCam; иначе използвай метода с виртуална камера."),
+            ("SplitCam безплатен ли е за FanCentro?", "Да — безплатен, без воден знак и без времево ограничение."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак. Инсталира виртуална камера, която браузърът може да избере."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон."),
+            ("Започни live във FanCentro", "Влез в акаунта си във FanCentro и отвори live broadcaster-а, за да излезеш на живо за абонатите си."),
+            ("Избери SplitCam като своя камера", "В падащото меню за камера на FanCentro избери <strong>SplitCam</strong> вместо суровата си уебкамера. (Или, ако е наличен, постави stream key в полетата за custom RTMP на SplitCam.)"),
+            ("Натисни Go Live", "Стартирай излъчването — твоята SplitCam сцена стига до абонатите ти във FanCentro."),
+        ],
+    },
+    {
+        "slug": "ismygirl", "name": "IsMyGirl",
+        "title": "На живо в IsMyGirl със SplitCam — виртуална камера",
+        "desc": "Излизай на живо в IsMyGirl с безплатен SplitCam като виртуална камера — сцени, наслагвания и филтри за абонатите ти. Без воден знак.",
+        "kw": "как да си на живо в ismygirl, ismygirl live, ismygirl stream, ismygirl obs, ismygirl виртуална камера, ismygirl broadcast, is my girl",
+        "h1html": 'Как да си на живо в <span class="accent">IsMyGirl</span> със SplitCam',
+        "h1short": "Live IsMyGirl",
+        "card": "Използвай SplitCam като виртуална камера за live в IsMyGirl.",
+        "intro": "IsMyGirl е абонаментна платформа за creator-и — алтернатива на OnlyFans с абонаменти, платено съдържание и live стрийминг, известна с активната си подкрепа за creator-и. Live broadcaster-ът върви в браузъра, така че свързването на безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong> носи мулти-камера сцени, наслагвания и филтри. Ако твоят dashboard излага опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.",
+        "quick": "Излизане на живо в IsMyGirl със SplitCam: инсталирай SplitCam, изгради сцената, започни live в IsMyGirl, и в селектора за камера на broadcaster-а избери <em>SplitCam</em> — после излез на живо."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Започни live в IsMyGirl.</li>"
+                 "<li>Избери SplitCam от падащото меню за камера.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Live функцията на IsMyGirl върви в браузъра. Изгради сцената в SplitCam — той се регистрира като уебкамера с име <strong>\"SplitCam Video Driver\"</strong> — после отвори live broadcaster-а на IsMyGirl и в падащото меню за камера избери <strong>SplitCam</strong>. Ако се появи опция за <strong>stream key / external encoder</strong>, постави я в полетата за custom RTMP на SplitCam вместо това.",
+        "tips": [
+            ("Виртуална камера, без нужда от ключ", "Само-браузърен live пак получава пълната ти SplitCam сцена — наслагвания, втора камера и филтри — като избереш SplitCam за уебкамера."),
+            ("Възползвай се от подкрепата за creator-и", "IsMyGirl рекламира силна подкрепа и промоция за creator-и. Полирана SplitCam сцена плюс наслагвания за кръстосана продажба извличат максимума от трафика, който ти насочват."),
+            ("Дай на браузъра достъп до камерата", "Ако SplitCam не е в списъка, пусни първо SplitCam, разреши достъп до камера, после презареди broadcaster-а."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Как SplitCam се връзва с IsMyGirl?", "Live функцията на IsMyGirl е в браузъра, така че SplitCam се връзва като виртуална камера — избираш SplitCam в селектора за камера. Не е нужен stream key."),
+            ("Мога ли да използвам наслагвания и няколко камери в IsMyGirl?", "Да — съчини сцената в SplitCam; IsMyGirl я вижда като една уебкамера."),
+            ("Поддържа ли IsMyGirl OBS или външни енкодери?", "Live функцията е предимно базирана на браузър/уебкамера. Ако се появи опция за stream key, постави я в полетата за custom RTMP на SplitCam; иначе използвай метода с виртуална камера."),
+            ("SplitCam безплатен ли е за IsMyGirl?", "Да — безплатен, без воден знак и без времево ограничение."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак. Инсталира виртуална камера, която браузърът може да избере."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон."),
+            ("Започни live в IsMyGirl", "Влез в акаунта си в IsMyGirl и отвори live broadcaster-а, за да излезеш на живо за абонатите си."),
+            ("Избери SplitCam като своя камера", "В падащото меню за камера на IsMyGirl избери <strong>SplitCam</strong> вместо суровата си уебкамера. (Или, ако е наличен, постави stream key в полетата за custom RTMP на SplitCam.)"),
+            ("Натисни Go Live", "Стартирай излъчването — твоята SplitCam сцена стига до абонатите ти в IsMyGirl."),
+        ],
+    },
+    {
+        "slug": "dxlive", "name": "DXLive",
+        "title": "Излъчване в DXLive със SplitCam — External Encoder",
+        "desc": "Излъчване в DXLive с безплатен SplitCam — external encoder за японската премиум кам мрежа, мулти-камера сцени и наслагвания. Без воден знак.",
+        "kw": "как да излъчвате на dxlive, dxlive broadcast, dxlive cam, dxlive obs, dxlive external encoder, dxlive rtmp, dxlive performer",
+        "h1html": 'Как да излъчваш в <span class="accent">DXLive</span> със SplitCam',
+        "h1short": "Излъчване DXLive",
+        "card": "Настройка с external encoder за премиум кам мрежата на DXLive.",
+        "intro": "DXLive е утвърдена премиум уебкам мрежа, популярна в Япония и из цяла Азия, изградена върху модел на плащане на минута с лоялна публика. Изпълнителската секция поддържа стандартен път през <strong>external encoder</strong>, към който безплатният <strong style='color:var(--text)'>SplitCam</strong> се връзва — за да излъчваш с мулти-камера сцени, наслагвания и beauty filters вместо с една плоска уебкамера.",
+        "quick": "Излъчвай в DXLive със SplitCam: инсталирай SplitCam, изгради сцената, в изпълнителската секция отвори настройките за <em>external encoder / broadcast</em>, копирай server URL и stream key, постави в SplitCam, Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Вземи URL + stream key от изпълнителската секция.</li><li>Постави в SplitCam.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Влез в изпълнителския си акаунт в DXLive и отвори настройките за <strong>broadcast / external encoder</strong> в изпълнителската секция. Страницата показва <strong>server URL</strong> и <strong>stream key</strong>, обвързани с акаунта — копирай и двете в полетата за custom RTMP на SplitCam. Верификацията в DXLive е задължителна, преди да се активира live кам функцията.",
+        "tips": [
+            ("Създадена за азиатския пазар", "Публиката на DXLive клони към Япония/Азия и плаща на минута. Насрочи шоутата си за вечерите по JST и лоялната, плащаща база се превръща добре."),
+            ("Полировката бие суровата уебкамера", "Чиста SplitCam сцена с наслагвания и beauty filters изпъква в премиум мрежа с плащане на минута, където зрителите очакват качество."),
+            ("Използвай external encoder-а, не само уебкамерата", "Минаването през RTMP на SplitCam, а не през базовата браузърна камера, е това, което отключва мулти-камера сцени и филтри."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддържа ли DXLive външни енкодери като SplitCam?", "Да — изпълнителската секция излага стандартен external-encoder / RTMP път. Копирай server URL и stream key в SplitCam след верификация."),
+            ("Откъде вземам моя stream key за DXLive?", "В настройките за broadcast / external encoder в изпълнителската секция — и server URL, и stream key се появяват там. Постави и двете в полетата за custom RTMP на SplitCam."),
+            ("Какъв bitrate да използвам за DXLive?", "Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо вградения speed test на SplitCam."),
+            ("Безплатен ли е SplitCam за DXLive?", "Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията external encoder на DXLive е безплатна в изпълнителската секция."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон."),
+            ("Вземи URL и stream key за DXLive", "Влез в изпълнителския си акаунт в DXLive и отвори настройките за <strong>broadcast / external encoder</strong>. Копирай <strong>server URL</strong> и <strong>stream key</strong>."),
+            ("Свържи SplitCam с DXLive", "В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на DXLive и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от изпълнителската секция. За ~10 секунди стриймът ти стига до публиката на DXLive."),
+        ],
+    },
+    {
+        "slug": "streamen", "name": "Streamen",
+        "title": "Излъчване в Streamen със SplitCam — External Encoder",
+        "desc": "Излъчване в Streamen с безплатен SplitCam — external encoder, мулти-камера сцени, наслагвания и beauty filters. Без воден знак.",
+        "kw": "как да излъчвате на streamen, streamen broadcast, streamen cam, streamen obs, streamen external encoder, streamen rtmp, streamen.tv",
+        "h1html": 'Как да излъчваш в <span class="accent">Streamen</span> със SplitCam',
+        "h1short": "Излъчване Streamen",
+        "card": "Настройка с external encoder за кам платформата Streamen.",
+        "intro": "Streamen е live кам платформа, където моделите излъчват към публика, движена от tip-ове. Нейните broadcast настройки излагат стандартен път през <strong>external encoder</strong>, към който безплатният <strong style='color:var(--text)'>SplitCam</strong> се връзва — така стриймваш с мулти-камера сцени, наслагвания и филтри вместо с една обикновена уебкамера.",
+        "quick": "Излъчвай в Streamen със SplitCam: инсталирай SplitCam, изгради сцената, в модел dashboard-а отвори <em>broadcast settings → external encoder</em>, копирай server URL и stream key, постави в SplitCam, Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Вземи URL + stream key от dashboard-а.</li><li>Постави в SplitCam.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Влез в модел акаунта си в Streamen и отвори секцията <strong>broadcast settings / external encoder</strong>. Тя показва <strong>server URL</strong> и <strong>stream key</strong>, обвързани с акаунта — копирай и двете в полетата за custom RTMP на SplitCam. Верификацията на модела е задължителна, преди да се активира излъчването.",
+        "tips": [
+            ("Публика, движена от tip-ове", "Зрителите на Streamen дават tip-ове — екранни tip-цели и полирана сцена тласкат повече tip-ове от плоска уебкамера."),
+            ("External encoder-ът отключва сцените", "Минаването през RTMP на SplitCam вместо през базовата браузърна камера е това, което позволява мулти-камера разположения, наслагвания и филтри."),
+            ("Заключи резолюцията", "Настрой 1080p ръчно, за да не сваля потокът качество тихо; bitrate, който пада при статичен кадър, е нормален при адаптивни потоци."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддържа ли Streamen външни енкодери като SplitCam?", "Да — broadcast настройките излагат стандартен external-encoder / RTMP път. Копирай server URL и stream key в SplitCam след верификация."),
+            ("Откъде вземам моя stream key за Streamen?", "В broadcast / external encoder настройките на модел dashboard-а — и server URL, и stream key се появяват там. Постави и двете в полетата за custom RTMP на SplitCam."),
+            ("Какъв bitrate да използвам за Streamen?", "Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо speed test на SplitCam."),
+            ("Безплатен ли е SplitCam за Streamen?", "Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията external encoder на Streamen е безплатна в dashboard-а."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст с tip-цели, втора камера или телефона, beauty filters или AI фон."),
+            ("Вземи URL и stream key за Streamen", "Влез в модел акаунта си в Streamen, отвори <strong>broadcast settings → external encoder</strong> и копирай <strong>server URL</strong> и <strong>stream key</strong>."),
+            ("Свържи SplitCam със Streamen", "В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на Streamen и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от dashboard-а. За ~10 секунди стриймът ти стига до публиката на Streamen."),
+        ],
+    },
+    {
+        "slug": "xcams", "name": "XCams",
+        "title": "Излъчване в XCams със SplitCam — External Encoder",
+        "desc": "Излъчване в XCams с безплатен SplitCam — external encoder за европейската кам общност, сцени, наслагвания и филтри. Без воден знак.",
+        "kw": "как да излъчвате на xcams, xcams broadcast, xcams cam, xcams obs, xcams external encoder, xcams rtmp, x cams",
+        "h1html": 'Как да излъчваш в <span class="accent">XCams</span> със SplitCam',
+        "h1short": "Излъчване XCams",
+        "card": "Настройка с external encoder за европейската общност на XCams.",
+        "intro": "XCams е европейска live кам общност — силна в Италия, Франция и Испания — изградена около live шоута и икономика на tip-ове и частни шоута. Модел секцията поддържа стандартен път през <strong>external encoder</strong>, към който безплатният <strong style='color:var(--text)'>SplitCam</strong> се връзва, така че можеш да излъчваш с мулти-камера сцени, наслагвания и beauty filters.",
+        "quick": "Излъчвай в XCams със SplitCam: инсталирай SplitCam, изгради сцената, в модел секцията отвори <em>broadcast / external encoder</em>, копирай server URL и stream key, постави в SplitCam, Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Вземи URL + stream key от модел секцията.</li><li>Постави в SplitCam.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Влез в модел акаунта си в XCams и отвори настройките за <strong>broadcast / external encoder</strong> в модел секцията. Страницата показва <strong>server URL</strong> и <strong>stream key</strong>, обвързани с акаунта — копирай и двете в полетата за custom RTMP на SplitCam. Верификацията в XCams е задължителна, преди да излъчваш.",
+        "tips": [
+            ("Европейски prime time", "Трафикът на XCams пикира във вечерите по EU (CET). Излъчването в тези часове значително надминава извън-пиковото в тази общност."),
+            ("Частните шоута възнаграждават качеството", "XCams върви на частни/spy шоута — полирана SplitCam сцена с наслагвания превръща разглеждащите в платени частни шоута."),
+            ("External encoder-ът отключва сцените", "Минаването през RTMP на SplitCam вместо през браузърната камера позволява мулти-камера разположения, наслагвания и филтри."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддържа ли XCams външни енкодери като SplitCam?", "Да — модел секцията излага стандартен external-encoder / RTMP път. Копирай server URL и stream key в SplitCam след верификация."),
+            ("Откъде вземам моя stream key за XCams?", "В broadcast / external encoder настройките на модел секцията — и server URL, и stream key се появяват там. Постави и двете в полетата за custom RTMP на SplitCam."),
+            ("Какъв bitrate да използвам за XCams?", "Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо speed test на SplitCam."),
+            ("Безплатен ли е SplitCam за XCams?", "Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията external encoder на XCams е безплатна в модел секцията."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон."),
+            ("Вземи URL и stream key за XCams", "Влез в модел акаунта си в XCams, отвори <strong>broadcast / external encoder</strong> и копирай <strong>server URL</strong> и <strong>stream key</strong>."),
+            ("Свържи SplitCam с XCams", "В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на XCams и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от модел секцията. За ~10 секунди стриймът ти стига до публиката на XCams."),
+        ],
+    },
+    {
+        "slug": "camcontacts", "name": "CamContacts",
+        "title": "Излъчване в CamContacts със SplitCam — External Encoder",
+        "desc": "Излъчване в CamContacts с безплатен SplitCam — external encoder за pay-per-minute кам сайта, сцени и наслагвания. Без воден знак.",
+        "kw": "как да излъчвате на camcontacts, camcontacts broadcast, camcontacts cam, camcontacts obs, camcontacts external encoder, camcontacts rtmp, cam contacts",
+        "h1html": 'Как да излъчваш в <span class="accent">CamContacts</span> със SplitCam',
+        "h1short": "Излъчване CamContacts",
+        "card": "Настройка с external encoder за pay-per-minute кам функцията на CamContacts.",
+        "intro": "CamContacts е сред най-дълго съществуващите независими кам сайтове — модел с плащане на минута, със зряла, лоялна публика и репутация за стабилни изплащания. Изпълнителската секция поддържа стандартен път през <strong>external encoder</strong>, към който безплатният <strong style='color:var(--text)'>SplitCam</strong> се връзва, така че можеш да излъчваш с мулти-камера сцени, наслагвания и beauty filters.",
+        "quick": "Излъчвай в CamContacts със SplitCam: инсталирай SplitCam, изгради сцената, в изпълнителската секция отвори настройките за <em>external encoder / broadcast</em>, копирай server URL и stream key, постави в SplitCam, Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Вземи URL + stream key от изпълнителската секция.</li><li>Постави в SplitCam.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Влез в изпълнителския си акаунт в CamContacts и отвори настройките за <strong>broadcast / external encoder</strong> в изпълнителската секция. Страницата показва <strong>server URL</strong> и <strong>stream key</strong>, обвързани с акаунта — копирай и двете в полетата за custom RTMP на SplitCam. Верификацията в CamContacts е задължителна за live кам функцията.",
+        "tips": [
+            ("Зряла, лоялна публика", "CamContacts работи от десетилетия с дългосрочни членове — по-стабилни, по-плащащи редовни клиенти от сайт с висок churn и безплатен достъп, но по-бавен растеж за новодошлите."),
+            ("Плащането на минута възнаграждава задържането", "Дръж зрителите в платено време с полирана сцена и наслагвания; продукционната стойност удължава сесиите при модел с плащане на минута."),
+            ("External encoder-ът отключва сцените", "Минаването през RTMP на SplitCam, а не през базовата камера, позволява мулти-камера разположения, наслагвания и филтри."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддържа ли CamContacts външни енкодери като SplitCam?", "Да — изпълнителската секция излага стандартен external-encoder / RTMP път. Копирай server URL и stream key в SplitCam след верификация."),
+            ("Откъде вземам моя stream key за CamContacts?", "В broadcast / external encoder настройките на изпълнителската секция — и server URL, и stream key се появяват там. Постави и двете в полетата за custom RTMP на SplitCam."),
+            ("Какъв bitrate да използвам за CamContacts?", "Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо speed test на SplitCam."),
+            ("Безплатен ли е SplitCam за CamContacts?", "Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията external encoder на CamContacts е безплатна в изпълнителската секция."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон."),
+            ("Вземи URL и stream key за CamContacts", "Влез в изпълнителския си акаунт в CamContacts, отвори настройките за <strong>broadcast / external encoder</strong> и копирай <strong>server URL</strong> и <strong>stream key</strong>."),
+            ("Свържи SplitCam с CamContacts", "В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на CamContacts и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от изпълнителската секция. За ~10 секунди стриймът ти стига до публиката на CamContacts."),
+        ],
+    },
+    {
+        "slug": "royalcams", "name": "RoyalCams",
+        "title": "Излъчване в RoyalCams със SplitCam — External Encoder",
+        "desc": "Излъчване в RoyalCams с безплатен SplitCam — external encoder за token-базирания кам сайт, сцени, наслагвания и филтри. Без воден знак.",
+        "kw": "как да излъчвате на royalcams, royalcams broadcast, royalcams cam, royalcams obs, royalcams external encoder, royalcams rtmp, royal cams",
+        "h1html": 'Как да излъчваш в <span class="accent">RoyalCams</span> със SplitCam',
+        "h1short": "Излъчване RoyalCams",
+        "card": "Настройка с external encoder за token кам сайта RoyalCams.",
+        "intro": "RoyalCams е token-базиран безплатен кам сайт — отворени публични стаи, захранвани от tip-ове, с частни шоута отгоре. Broadcast настройките поддържат стандартен път през <strong>external encoder</strong>, към който безплатният <strong style='color:var(--text)'>SplitCam</strong> се връзва, така че можеш да стриймваш с мулти-камера сцени, наслагвания и beauty filters вместо с една плоска уебкамера.",
+        "quick": "Излъчвай в RoyalCams със SplitCam: инсталирай SplitCam, изгради сцената, в модел dashboard-а отвори <em>broadcast settings → external encoder</em>, копирай server URL и stream key, постави в SplitCam, Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Вземи URL + stream key от dashboard-а.</li><li>Постави в SplitCam.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Влез в модел акаунта си в RoyalCams и отвори секцията <strong>broadcast settings / external encoder</strong>. Тя показва <strong>server URL</strong> и <strong>stream key</strong>, обвързани с акаунта — копирай и двете в полетата за custom RTMP на SplitCam. Верификацията на модела е задължителна, преди да излъчваш.",
+        "tips": [
+            ("Token стаите възнаграждават продукцията", "Публичните стаи на RoyalCams вървят на tip-ове — наслагвания с tip-цели и полирана сцена превръщат наблюдаващите в tip-ъри и частни шоута."),
+            ("Превръщай в частни шоута", "Използвай силна публична сцена, за да тласкаш частни шоута, където са истинските печалби в token кам сайтовете."),
+            ("External encoder-ът отключва сцените", "Минаването през RTMP на SplitCam, а не през браузърната камера, позволява мулти-камера разположения, наслагвания и филтри."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддържа ли RoyalCams външни енкодери като SplitCam?", "Да — broadcast настройките излагат стандартен external-encoder / RTMP път. Копирай server URL и stream key в SplitCam след верификация."),
+            ("Откъде вземам моя stream key за RoyalCams?", "В broadcast / external encoder настройките на модел dashboard-а — и server URL, и stream key се появяват там. Постави и двете в полетата за custom RTMP на SplitCam."),
+            ("Какъв bitrate да използвам за RoyalCams?", "Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо speed test на SplitCam."),
+            ("Безплатен ли е SplitCam за RoyalCams?", "Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията external encoder на RoyalCams е безплатна в dashboard-а."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст с tip-цели, втора камера или телефона, beauty filters или AI фон."),
+            ("Вземи URL и stream key за RoyalCams", "Влез в модел акаунта си в RoyalCams, отвори <strong>broadcast settings → external encoder</strong> и копирай <strong>server URL</strong> и <strong>stream key</strong>."),
+            ("Свържи SplitCam с RoyalCams", "В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на RoyalCams и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от dashboard-а. За ~10 секунди стриймът ти стига до публиката на RoyalCams."),
+        ],
+    },
+    {
+        "slug": "modelhub", "name": "Modelhub",
+        "title": "Излъчване в Modelhub със SplitCam — External Encoder",
+        "desc": "Излъчване в Modelhub Live с безплатен SplitCam — external encoder за creator платформата на Pornhub, сцени, наслагвания и филтри. Без воден знак.",
+        "kw": "как да излъчвате на modelhub, modelhub live, modelhub broadcast, modelhub obs, modelhub external encoder, modelhub rtmp, modelhub cam",
+        "h1html": 'Как да излъчваш в <span class="accent">Modelhub</span> със SplitCam',
+        "h1short": "Излъчване Modelhub",
+        "card": "Настройка с external encoder за Modelhub Live (Pornhub).",
+        "intro": "Modelhub е creator платформата на Pornhub — продажба на видеа, фен абонаменти и <strong>live cam</strong> продукт с огромен трафик в горната част на фунията от мрежата на Pornhub. Модел dashboard-ът поддържа стандартен път през <strong>external encoder</strong>, към който безплатният <strong style='color:var(--text)'>SplitCam</strong> се връзва, така че можеш да излъчваш с мулти-камера сцени, наслагвания и beauty filters.",
+        "quick": "Излъчвай в Modelhub със SplitCam: инсталирай SplitCam, изгради сцената, в модел dashboard-а отвори <em>Live → broadcast / external encoder</em>, копирай server URL и stream key, постави в SplitCam, Go Live."
+                 "<ol><li>Инсталирай SplitCam.</li><li>Добави камера + сцена.</li>"
+                 "<li>Вземи URL + stream key от dashboard-а.</li><li>Постави в SplitCam.</li>"
+                 "<li>Натисни Go Live.</li></ol>",
+        "key_how": "Влез в модел акаунта си в Modelhub и отвори настройките за <strong>Live / broadcast / external encoder</strong> в dashboard-а. Страницата показва <strong>server URL</strong> и <strong>stream key</strong>, обвързани с акаунта — копирай и двете в полетата за custom RTMP на SplitCam. Верификацията на модела с мрежата е задължителна, преди да излезеш на живо.",
+        "tips": [
+            ("Огромен трафик в горната част на фунията", "Modelhub привлича зрители от мрежата на Pornhub — полирана SplitCam сцена превръща тази голяма, случайна публика в плащащи live зрители и абонати."),
+            ("Кръстосвай продажбата на видеата си", "Използвай наслагвания, за да насочваш live зрителите към видеата и абонамента ти в Modelhub — платформата е създадена за тази фуния."),
+            ("External encoder-ът отключва сцените", "Минаването през RTMP на SplitCam, а не през базовата камера, позволява мулти-камера разположения, наслагвания и филтри."),
+            _T_ETH,
+        ],
+        "faq": [
+            ("Поддържа ли Modelhub външни енкодери като SplitCam?", "Да — модел dashboard-ът излага стандартен external-encoder / RTMP път за Modelhub Live. Копирай server URL и stream key в SplitCam след верификация."),
+            ("Откъде вземам моя stream key за Modelhub?", "В Live / broadcast / external encoder настройките на dashboard-а — и server URL, и stream key се появяват там. Постави и двете в полетата за custom RTMP на SplitCam."),
+            ("Какъв bitrate да използвам за Modelhub?", "Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо speed test на SplitCam."),
+            ("Безплатен ли е SplitCam за Modelhub?", "Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията external encoder на Modelhub е безплатна в dashboard-а."),
+        ],
+        "steps": [
+            ("Свали и инсталирай SplitCam", "SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак."),
+            ("Изгради сцената", "Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон."),
+            ("Вземи URL и stream key за Modelhub", "Влез в модел акаунта си в Modelhub, отвори <strong>Live → broadcast / external encoder</strong> и копирай <strong>server URL</strong> и <strong>stream key</strong>."),
+            ("Свържи SplitCam с Modelhub", "В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на Modelhub и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди."),
+            ("Натисни Go Live", "Натисни <strong>Go Live</strong> в SplitCam, после се пусни онлайн от dashboard-а. За ~10 секунди стриймът ти стига до публиката на Modelhub."),
+        ],
+    },
 ]

@@ -35,15 +35,15 @@ SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
 SITE_NAME = "CamStreamGuide.com"
 BRAND_LOGO = (
-    '<svg class="logo" viewBox="0 0 28 28" width="26" height="26" aria-hidden="true">'
+    '<svg class="logo" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">'
     '<defs><linearGradient id="csgLogo" x1="0" y1="0" x2="1" y2="1">'
     '<stop offset="0" stop-color="#2878fc"/><stop offset="1" stop-color="#9c5bff"/>'
     '</linearGradient></defs>'
-    '<rect x="1" y="1" width="26" height="26" rx="7" fill="url(#csgLogo)"/>'
-    '<circle cx="9" cy="14" r="2.5" fill="#fff"/>'
-    '<path d="M9,9.5 A4.5,4.5 0 0 1 9,18.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>'
-    '<path d="M9,6.5 A7.5,7.5 0 0 1 9,21.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>'
-    '<path d="M9,3.5 A10.5,10.5 0 0 1 9,24.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity="0.4"/>'
+    '<rect width="32" height="32" rx="7" fill="url(#csgLogo)"/>'
+    '<circle cx="9" cy="16" r="3.5" fill="#fff"/>'
+    '<path d="M14.5,11 A7,7 0 0 1 14.5,21" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>'
+    '<path d="M18,8 A11,11 0 0 1 18,24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>'
+    '<path d="M21.5,5.5 A15.5,15.5 0 0 1 21.5,26.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>'
     '</svg>'
 )
 # Styled wordmark for the header. SITE_NAME stays plain text for meta/footer/title.
@@ -71,9 +71,15 @@ OG_LOCALE = {"en": "en_US", "ru": "ru_RU", "es": "es_ES",
              "th": "th_TH", "fil": "fil_PH", "tr": "tr_TR", "id": "id_ID", "vi": "vi_VN", "pl": "pl_PL",
              "ko": "ko_KR", "uk": "uk_UA", "cs": "cs_CZ", "sk": "sk_SK", "sv": "sv_SE", "ms": "ms_MY",
              "he": "he_IL", "fa": "fa_IR", "hi": "hi_IN"}
-LANGS_AVAIL = ["en", "ru", "es", "de", "fr", "it", "pt", "nl",
-               "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-               "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk", "cs", "sk", "sv", "ms", "he", "fa", "hi"]  # set by main() to those with platforms_<lang>.py
+# Order = global popularity by speakers + cam-niche relevance. The lang switcher and footer
+# pick languages off this list in this order, so the most-used appear first.
+LANG_POPULARITY = [
+    "en", "es", "zh", "hi", "ar", "pt", "ru", "fr", "de", "ja",
+    "id", "tr", "ko", "it", "vi", "fa", "th", "pl", "uk", "ro",
+    "nl", "fil", "ms", "el", "cs", "hu", "sv", "he", "sr", "hr",
+    "bg", "da", "fi", "no", "sk",
+]
+LANGS_AVAIL = list(LANG_POPULARITY)  # set by main() to those with platforms_<lang>.py
 RTL_LANGS = {"ar", "he", "fa"}  # languages that need dir="rtl" on <html>
 
 
@@ -1703,8 +1709,9 @@ def platform_logo(slug, depth, name):
 def lang_switch(cur, depth, slug=None):
     """Language switcher. slug set -> platform pages; slug None -> hub pages."""
     items = []
-    # Sort alphabetically by native language name (Latin → Cyrillic → Greek → Arabic → Thai → CJK).
-    for L in sorted(LANGS_AVAIL, key=lambda x: LANG_NATIVE[x]):
+    # Order = global popularity (LANG_POPULARITY). Most-used languages come first
+    # so visitors find their language without scrolling.
+    for L in LANGS_AVAIL:
         if slug:
             href = f"{depth}{LANG_PATH[L]}{slug}/"
         else:
@@ -3417,9 +3424,11 @@ def main():
     global LANGS_AVAIL
     from platforms_en import PLATFORMS_EN
     langs_data = {"en": PLATFORMS_EN}
-    for code in ("ru", "es", "de", "fr", "it", "pt", "nl",
-                 "ro", "bg", "hu", "el", "fi", "da", "no", "sr", "hr",
-                 "zh", "ja", "ar", "th", "fil", "tr", "id", "vi", "pl", "ko", "uk", "cs", "sk", "sv", "ms", "he", "fa", "hi"):
+    # Walk LANG_POPULARITY (skipping en, already loaded) so the in-memory order
+    # is popularity-driven everywhere downstream — switcher, footer, hub list, sitemap.
+    for code in LANG_POPULARITY:
+        if code == "en":
+            continue
         try:
             mod = __import__(f"platforms_{code}", fromlist=[f"PLATFORMS_{code.upper()}"])
             langs_data[code] = getattr(mod, f"PLATFORMS_{code.upper()}")
