@@ -283,6 +283,11 @@ border-radius:11px;transition:all .16s}
 .related-card:hover{border-color:var(--blue);transform:translateY(-2px)}
 .related-card h4{font-size:14.5px;font-weight:700}
 .related-card p{font-size:12.5px;color:var(--text-sub);margin-top:3px}
+.hub-filter{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.hf-btn{padding:8px 15px;border-radius:999px;border:1px solid var(--app-border2);background:rgba(255,255,255,.02);color:var(--text-sub);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
+.hf-btn:hover{color:var(--text);border-color:var(--blue)}
+.hf-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.related-card.hf-hide{display:none}
 .cta-block{padding:52px 40px;background:linear-gradient(135deg,var(--app-panel),var(--app-surface));
 border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border);
 text-align:center;margin-top:44px}
@@ -3219,20 +3224,86 @@ def render_404():
 """
 
 
+# Broadcast method per platform — drives the hub filter.
+# "stream" = RTMP / external encoder / built-in channel; "vcam" = SplitCam as a virtual
+# camera in the browser; "" = helper/add-on (Lovense toy, MFC alerts) — shown only in "All".
+METHOD = {
+    "chaturbate": "stream", "cam4": "stream", "bongacams": "stream", "stripchat": "stream",
+    "onlyfans": "stream", "camplace": "stream", "camsoda": "stream", "streamate": "stream",
+    "streamray": "stream", "xlovecam": "stream", "soulcams": "stream", "imlive": "vcam",
+    "vxlive": "stream", "virtwish": "stream", "xmodels": "stream", "flirt4free": "stream",
+    "mfc-alerts": "", "lovense": "", "multistream-cams": "stream", "livejasmin": "stream",
+    "myfreecams": "stream", "cherry-tv": "stream", "amateurtv": "stream", "camster": "stream",
+    "camversity": "stream", "skyprivate": "vcam", "manyvids": "stream", "fansly": "stream",
+    "ifriends": "stream", "babestation": "stream", "adultwork": "stream", "jerkmate": "stream",
+    "justforfans": "vcam",
+}
+# Hub filter labels: (All, Stream sites, Virtual camera) per language.
+HUB_FILTER = {
+    "en": ("All", "Stream sites", "Virtual camera"),
+    "ru": ("Все", "Стрим-сайты", "С виртуалкой"),
+    "es": ("Todos", "Sitios de streaming", "Cámara virtual"),
+    "de": ("Alle", "Stream-Seiten", "Virtuelle Kamera"),
+    "fr": ("Tous", "Sites de stream", "Caméra virtuelle"),
+    "it": ("Tutti", "Siti streaming", "Camera virtuale"),
+    "pt": ("Todos", "Sites de streaming", "Câmera virtual"),
+    "nl": ("Alle", "Streamsites", "Virtuele camera"),
+    "ro": ("Toate", "Site-uri stream", "Cameră virtuală"),
+    "bg": ("Всички", "Стрийм сайтове", "Виртуална камера"),
+    "hu": ("Összes", "Stream oldalak", "Virtuális kamera"),
+    "el": ("Όλα", "Ιστότοποι stream", "Εικονική κάμερα"),
+    "fi": ("Kaikki", "Striimisivustot", "Virtuaalikamera"),
+    "da": ("Alle", "Streamsites", "Virtuelt kamera"),
+    "no": ("Alle", "Streamsider", "Virtuelt kamera"),
+    "sr": ("Sve", "Stream sajtovi", "Virtuelna kamera"),
+    "hr": ("Sve", "Stream stranice", "Virtualna kamera"),
+    "zh": ("全部", "推流网站", "虚拟摄像头"),
+    "ja": ("すべて", "配信サイト", "仮想カメラ"),
+    "ar": ("الكل", "مواقع البث", "كاميرا افتراضية"),
+    "th": ("ทั้งหมด", "เว็บสตรีม", "กล้องเสมือน"),
+    "fil": ("Lahat", "Stream sites", "Virtual camera"),
+    "tr": ("Tümü", "Yayın siteleri", "Sanal kamera"),
+    "id": ("Semua", "Situs stream", "Kamera virtual"),
+    "vi": ("Tất cả", "Trang stream", "Camera ảo"),
+    "pl": ("Wszystkie", "Strony stream", "Wirtualna kamera"),
+    "ko": ("전체", "스트리밍 사이트", "가상 카메라"),
+    "uk": ("Усі", "Стрім-сайти", "Віртуальна камера"),
+    "cs": ("Vše", "Stream weby", "Virtuální kamera"),
+    "sk": ("Všetko", "Stream stránky", "Virtuálna kamera"),
+    "sv": ("Alla", "Streamsajter", "Virtuell kamera"),
+    "ms": ("Semua", "Laman stream", "Kamera maya"),
+    "he": ("הכול", "אתרי סטרים", "מצלמה וירטואלית"),
+    "fa": ("همه", "سایت‌های استریم", "دوربین مجازی"),
+    "hi": ("सभी", "स्ट्रीम साइट", "वर्चुअल कैमरा"),
+}
+HUB_FILTER_JS = """<script>
+(function(){var b=document.querySelectorAll(".hf-btn");if(!b.length)return;
+var c=document.querySelectorAll(".hub-grid .related-card");
+function ap(f){for(var i=0;i<c.length;i++){var m=" "+(c[i].getAttribute("data-m")||"")+" ";c[i].classList.toggle("hf-hide",!(f==="all"||m.indexOf(" "+f+" ")>=0));}}
+for(var j=0;j<b.length;j++){b[j].onclick=function(){for(var k=0;k<b.length;k++)b[k].classList.remove("active");this.classList.add("active");ap(this.getAttribute("data-f"));};}
+})();
+</script>"""
+
+
 def render_hub(platforms, lang):
     u = UI[lang]
     hb = HUB[lang]
     hub_depth = "../" if u["path"] else ""
     avail = [p for p in platforms if lang in p]
     # hub display order: these first, then the rest in natural order
-    first = ["multistream-cams", "onlyfans", "mfc-alerts", "lovense"]
+    first = ["multistream-cams", "onlyfans", "lovense", "mfc-alerts"]
     ordered = ([p for s in first for p in avail if p["slug"] == s]
                + [p for p in avail if p["slug"] not in first])
     cards = "".join(
-        f'<a class="related-card" href="{p["slug"]}/">'
+        f'<a class="related-card" href="{p["slug"]}/" data-m="{METHOD.get(p["slug"], "")}">'
         f'<img class="hub-card-icon" src="{hub_depth}logos/round/{p["slug"]}.png" alt="" loading="lazy">'
         f'<div class="hub-card-body"><h4>{e(p[lang]["h1short"])}</h4>'
         f'<p>{e(p[lang]["card"])}</p></div></a>' for p in ordered)
+    hf = HUB_FILTER.get(lang, HUB_FILTER["en"])
+    filter_bar = (f'<div class="hub-filter">'
+                  f'<button class="hf-btn active" data-f="all">{e(hf[0])}</button>'
+                  f'<button class="hf-btn" data-f="stream">{e(hf[1])}</button>'
+                  f'<button class="hf-btn" data-f="vcam">{e(hf[2])}</button></div>')
     canon = f'{SITE}/{u["path"]}'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
     # Keywords: localized lead phrase (from H1) + universal brand/tech terms.
@@ -3313,6 +3384,7 @@ def render_hub(platforms, lang):
 </section>
 <section class="section">
   <h2 class="sec-h">{e(hb['pick'])}</h2>
+  {filter_bar}
   <div class="hub-grid">{cards}</div>
 </section>
 <footer>
@@ -3331,6 +3403,7 @@ def render_hub(platforms, lang):
 </footer>
 <div class="sticky-dl" id="stickyDl"><a href="{e(DOWNLOAD_URL)}" target="_blank" rel="nofollow noopener">⬇ {u['download']}</a></div>
 {STICKY_DL_JS}
+{HUB_FILTER_JS}
 </body>
 </html>
 """
