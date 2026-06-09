@@ -3250,6 +3250,8 @@ METHOD = {
     "royalcams": "stream", "modelhub": "stream",
     "xhamsterlive": "stream", "premium-chat": "vcam", "arousr": "vcam",
     "cams-com": "stream", "stripcamfun": "stream",
+    "mym-fans": "vcam", "fc2-live": "stream", "boosty": "vcam",
+    "amateurcommunity": "stream",
 }
 # Hub filter labels: (All, Stream sites, Virtual camera) per language.
 HUB_FILTER = {

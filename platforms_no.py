@@ -1469,4 +1469,132 @@ PLATFORMS_NO = [
          ("Koble SplitCam til StripCamFun", "I SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lim inn URL og nøkkel. Sett 3 500–5 000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe."),
          ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, slå deg deretter online i StripCamFun-dashbordet. Innen ~10 sekunder lander strømmen på den offentlige listen."),
      ]},
+    {"slug": "mym-fans", "name": "MYM.fans",
+     "title": "Slik går du live på MYM.fans med SplitCam — virtuelt kamera",
+     "desc": "Gå live på MYM.fans (det franske OnlyFans-alternativet) med gratis SplitCam som virtuelt kamera — multi-kamera scener, overlays og filtre. Uten vannmerke.",
+     "kw": "slik går du live på mym, mym.fans live, mym fans virtuelt kamera, mym creator, mym frankrike, mym live stream, mym obs, mym fans broadcast, mym influencer",
+     "h1html": 'Slik går du live på <span class="accent">MYM.fans</span> med SplitCam',
+     "h1short": "Live på MYM.fans",
+     "card": "Bruk SplitCam som virtuelt kamera for MYM.fans live.",
+     "intro": "MYM.fans er den ledende franske creator-abonnementsplattformen — Frankrikes svar på OnlyFans, med abonnementer, pay-per-view, tipping og en innebygd <strong>live stream</strong>-funksjon for fans. Broadcasteren kjører i nettleseren, så å rette gratis <strong style='color:var(--text)'>SplitCam</strong> mot MYM som <strong>virtuelt kamera</strong> legger til multi-kamera scener, overlays og filtre oppå standard-webkameraet. Hvis creator-dashbordet ditt eksponerer et ekstern-enkoder-valg, kan SplitCam også kobles via RTMP.",
+     "quick": "Gå live på MYM.fans med SplitCam: installer SplitCam, bygg scenen, start en live på MYM, og i broadcasterens kamera-rullegardin velg <em>SplitCam</em> — gå deretter live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Start en live på MYM.fans.</li><li>Velg SplitCam i kamera-rullegardinen.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "MYM.fans' live kjører i nettleseren. Bygg scenen i SplitCam — den registreres som et webkamera kalt <strong>\"SplitCam Video Driver\"</strong> — åpne deretter MYMs live-broadcaster og velg <strong>SplitCam</strong> i kamera-rullegardinen. Hvis et <strong>stream-key / ekstern-enkoder</strong>-valg tilbys i creator-dashbordet ditt, lim det inn i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Frankrikes største creator-plattform", "MYM er #1 fan-plattform i Frankrike, med et fransk/europeisk publikum som er vant til å betale i EUR. En polert SplitCam-scene + fransk-språklige overlays konverterer bedre enn et nakent webkamera."),
+         ("Virtuelt kamera fungerer uten stream key", "Nettleser-bare live får fortsatt hele SplitCam-scenen din — andre kamera, overlays, beauty-filtre eller AI-bakgrunn — bare ved å velge SplitCam som webkamera."),
+         ("Krysselg PPV under sendingen", "MYM er bygget rundt betalt innhold. On-screen overlays som promoterer abonnementet eller låser opp PPV-meldinger gjør live-seere til betalende abonnenter."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan kobles SplitCam til MYM.fans?", "MYM live er nettleserbasert, så SplitCam kobles som et virtuelt kamera — velg SplitCam i kameravelgeren. Ingen stream key trengs."),
+         ("Kan jeg bruke overlays og flere kameraer på MYM?", "Ja — bygg scenen i SplitCam (andre kamera, overlays, AI-bakgrunn); MYM ser den ferdige scenen som ett webkamera."),
+         ("Støtter MYM.fans OBS eller eksterne enkodere?", "Live er primært nettleser-/webkamera-basert. Hvis dashbordet ditt tilbyr et stream-key-valg, lim det inn i SplitCams custom RTMP-felter; ellers bruk virtuelt-kamera-metoden."),
+         ("Er SplitCam gratis å bruke med MYM.fans?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. Den installerer et virtuelt kamera nettleseren kan velge."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, tekst (på fransk hvis publikum er FR), et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå."),
+         ("Start en live på MYM.fans", "Logg inn på MYM creator-kontoen din og åpne live-broadcasteren for å starte en sending for abonnentene dine."),
+         ("Velg SplitCam som kamera", "I MYMs kamera-rullegardin, velg <strong>SplitCam</strong> i stedet for det rå webkameraet — den komponerte scenen din erstatter det flate kameraet. (Eller lim inn en stream key i SplitCams custom RTMP-felter hvis tilgjengelig.)"),
+         ("Gå Live", "Start sendingen — SplitCam-scenen, overlays og filtrene dine når MYM-abonnentene dine."),
+     ]},
+    {"slug": "fc2-live", "name": "FC2 Live",
+     "title": "Slik sender du på FC2 Live med SplitCam (RTMP/OBS)",
+     "desc": "Send på FC2 Live (Japans største live-cam-side) med gratis SplitCam over RTMP — multi-kamera scener, overlays og filtre. Uten vannmerke.",
+     "kw": "slik sender du på fc2 live, fc2 live obs, fc2 live rtmp, fc2 live broadcast, fc2 live配信, fc2 live stream key, fc2 live model, fc2 live japan, fc2 ライブ",
+     "h1html": 'Slik sender du på <span class="accent">FC2 Live</span> med SplitCam',
+     "h1short": "Sending FC2 Live",
+     "card": "Gratis SplitCam → RTMP/OBS-stil sending til FC2 Live.",
+     "intro": "FC2 Live er Japans største live-streaming-plattform — en massiv seerbase, en dedikert voksen-seksjon og en separat betalt-show-flyt som gjør den til et av de mest lukrative cam-markedene i Asia. Modeller sender fra FC2-broadcaster-panelet, som støtter både den innebygde nettleser-broadcasteren og en <strong>ekstern enkoder over RTMP</strong>. Gratis <strong style='color:var(--text)'>SplitCam</strong> sender over RTMP for fulle multi-kamera scener, overlays og filtre.",
+     "quick": "Send på FC2 Live med SplitCam: installer SplitCam, bygg scenen, kopier FC2-broadcasterens server-URL + stream key, lim dem inn i SplitCams RTMP-innstillinger, trykk Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Kopier URL + stream key fra FC2-broadcaster-panelet.</li>"
+              "<li>Lim inn i SplitCams custom RTMP.</li><li>Trykk Go Live.</li></ol>",
+     "key_how": "Åpne FC2 Live-broadcaster-panelet og bytt til <strong>External Encoder / RTMP</strong>. Kopier server-URL og stream key inn i SplitCams <strong>Stream Settings → Custom RTMP</strong>; sett 3 500–5 000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe. Klikk <strong>Go Live</strong> i SplitCam, start deretter showet fra FC2-dashbordet.",
+     "tips": [
+         ("Stort japansk publikum", "FC2 er Tier 1 i Japan — seere er lokale, vant til å betale i JPY, og lener mot lengre betalte show. Japansk overlay-tekst (f.eks. tip-meny i 円 / JPY) løfter konverteringen merkbart."),
+         ("Voksen-seksjonen er adskilt", "FC2 har både generelle og voksne lives. Sett rom-kategorien korrekt før du går live — voksne show kan ikke oppdages fra den generelle seksjonen."),
+         ("Bruk ekstern enkoder for stabil bitrate", "Japans mobil-tunge publikum er sensitivt for tapte frames. RTMP fra SplitCam ved jevn 4 Mbps slår nettleser-broadcasteren for pålitelighet."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvor får jeg FC2 Live stream key?", "I FC2 Live-broadcaster-panelet, bytt til <em>External Encoder</em> eller <em>OBS</em> — du ser en server-URL og en stream key. Lim begge inn i SplitCams custom RTMP-felter."),
+         ("Nettleser-broadcaster eller RTMP?", "RTMP (ekstern enkoder) foretrekkes — stabil bitrate, fulle SplitCam-scener. Nettleser-broadcasteren fungerer som tilbakefall: velg SplitCam som webkamera."),
+         ("Trenger jeg en japansk konto for å sende på FC2?", "En FC2-konto er påkrevd, og voksen-sending har ekstra aldersbekreftelses-trinn for modellen. Følg FC2s onboarding."),
+         ("Er SplitCam gratis å bruke med FC2 Live?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays, en tip-meny i 円 (JPY), et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — alt live."),
+         ("Hent FC2 Live-URL + stream key", "Logg inn på FC2, åpne Live-broadcaster-panelet, bytt til <strong>External Encoder</strong>, og kopier <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Koble SplitCam til FC2 Live", "I SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lim inn URL og nøkkel. Sett 3 500–5 000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, start deretter showet fra FC2-dashbordet. Innen ~10 sekunder lander strømmen på den offentlige listen."),
+     ]},
+    {"slug": "boosty", "name": "Boosty",
+     "title": "Slik går du live på Boosty med SplitCam — virtuelt kamera",
+     "desc": "Gå live på Boosty (Russlands creator-plattform) med gratis SplitCam som virtuelt kamera — multi-kamera scener, overlays og filtre. Uten vannmerke.",
+     "kw": "slik går du live på boosty, boosty live, boosty stream, boosty virtuelt kamera, boosty creator, бусти прямой эфир, boosty obs, boosty paid live, boosty subscriber",
+     "h1html": 'Slik går du live på <span class="accent">Boosty</span> med SplitCam',
+     "h1short": "Live på Boosty",
+     "card": "Bruk SplitCam som virtuelt kamera for Boosty live.",
+     "intro": "Boosty er Russlands største creator-monetisasjons-plattform — en Patreon-lignende tjeneste med abonnementer, betalte innlegg, tips og en <strong>live broadcast</strong>-funksjon, med et creator-publikum som inkluderer voksne creators sammen med mainstream-creators. Live-sendingen kjører i nettleseren, så å koble gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong> legger til multi-kamera scener, overlays og filtre som abonnenter ikke ville fått fra et nakent webkamera.",
+     "quick": "Gå live på Boosty med SplitCam: installer SplitCam, bygg scenen, start en live på Boosty, og velg <em>SplitCam</em> i broadcasterens kamera-rullegardin — gå deretter live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Start en live på Boosty.</li><li>Velg SplitCam i kamera-rullegardinen.</li>"
+              "<li>Trykk Go Live.</li></ol>",
+     "key_how": "Boostys live kjører i nettleseren. Bygg scenen i SplitCam — den registreres som et webkamera kalt <strong>\"SplitCam Video Driver\"</strong> — åpne deretter Boostys live-broadcaster og velg <strong>SplitCam</strong> i kamera-rullegardinen i stedet for det rå webkameraet.",
+     "tips": [
+         ("Russlands største creator-plattform", "Boosty erstattet Patreon for mange RU-creators etter sanksjoner, så publikum er lojalt og vant til å betale i RUB. En polert SplitCam-scene med russisk-språklige overlays konverterer godt."),
+         ("Abonnent-tier live show", "Boosty lar deg gate live-strømmer per abonnent-tier. SplitCam fungerer med alle tiers — enkoderen bryr seg ikke om hvilket tier seeren er på, du sender bare én gang og Boosty håndterer tilgang."),
+         ("Tips og pay-per-view overlay", "Boosty støtter betalt innlegg-opplåsing og tips. En on-screen overlay som navngir tier-godene løfter konverteringer under live-strømmer."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan kobles SplitCam til Boosty?", "Boosty live er nettleserbasert, så SplitCam kobles som et virtuelt kamera — velg SplitCam i kameravelgeren. Ingen stream key trengs."),
+         ("Kan jeg bruke overlays på en Boosty live?", "Ja — komponer scenen i SplitCam (overlays, andre kamera, AI-bakgrunn); Boosty ser ett webkamera. Abonnenter får den fulle komponerte scenen."),
+         ("Støtter Boosty OBS eller eksterne enkodere?", "Boosty live er primært nettleserbasert. Hvis et stream-key-valg dukker opp i creator-panelet ditt, lim det inn i SplitCams custom RTMP-felter; ellers bruk virtuelt-kamera-metoden."),
+         ("Er SplitCam gratis å bruke med Boosty?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. Den installerer et virtuelt kamera nettleseren kan velge."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays (russisk-språklige for publikum), et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå."),
+         ("Start en live på Boosty", "Logg inn på Boosty creator-kontoen din og åpne live-broadcasteren. Sett tier-gating hvis du vil ha live-en bak et betalt nivå."),
+         ("Velg SplitCam som kamera", "I Boostys kamera-rullegardin, velg <strong>SplitCam</strong> i stedet for det rå webkameraet — den komponerte scenen din erstatter det flate kameraet."),
+         ("Gå Live", "Start sendingen — SplitCam-scenen, overlays og filtrene dine når Boosty-abonnentene dine."),
+     ]},
+    {"slug": "amateurcommunity", "name": "AmateurCommunity",
+     "title": "Slik sender du på AmateurCommunity med SplitCam (RTMP)",
+     "desc": "Send på AmateurCommunity (Tysklands største amatør-cam-side) med gratis SplitCam over RTMP — multi-kamera scener, overlays og filtre. Uten vannmerke.",
+     "kw": "slik sender du på amateurcommunity, amateurcommunity obs, amateurcommunity rtmp, amateur community deutschland, amateurcommunity modell, ac community broadcast, amateurcommunity live, amateur cam deutschland",
+     "h1html": 'Slik sender du på <span class="accent">AmateurCommunity</span> med SplitCam',
+     "h1short": "Sending AmateurCommunity",
+     "card": "Gratis SplitCam → RTMP-sending til AmateurCommunity (DE).",
+     "intro": "AmateurCommunity er Tysklands største amatør-cam- og innholds-community — drevet siden tidlig 2000-tall med et dypt lojalt tysktalende publikum som er vant til å betale for innhold og live show. Modeller sender fra AC-modell-panelet, som støtter en <strong>ekstern enkoder over RTMP</strong> så vel som den innebygde nettleser-broadcasteren. Gratis <strong style='color:var(--text)'>SplitCam</strong> sender over RTMP for fulle multi-kamera scener, overlays og filtre — tysk-språklige overlays snakker direkte til det lokale publikummet.",
+     "quick": "Send på AmateurCommunity: installer SplitCam, bygg scenen, kopier AC server-URL + stream key fra modell-panelet, lim dem inn i SplitCams RTMP-innstillinger, trykk Go Live."
+              "<ol><li>Installer SplitCam.</li><li>Legg til kamera + scene.</li>"
+              "<li>Kopier URL + stream key fra AC-modell-panelet.</li>"
+              "<li>Lim inn i SplitCams custom RTMP.</li><li>Trykk Go Live.</li></ol>",
+     "key_how": "Åpne AmateurCommunity-modell-panelet og <strong>External Encoder / OBS</strong>-fanen. Kopier server-URL og stream key inn i SplitCams <strong>Stream Settings → Custom RTMP</strong>; sett 3 500–5 000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe. Klikk <strong>Go Live</strong> i SplitCam, slå deg deretter online fra panelet.",
+     "tips": [
+         ("Tysktalende, tysk-betalende publikum", "AmateurCommunitys publikum er overveldende DACH (DE/AT/CH) og betaler i EUR — overlays, tip-meny og chat i strømmen på tysk konverterer merkbart bedre enn engelsk."),
+         ("Premium PPV + live-kombo", "AC lar deg selge PPV-innhold sammen med live. Et live show som teaser PPV-en (med en on-screen overlay) løfter ofte PPV-salget under og etter sendingen."),
+         ("Ekstern enkoder for stabil kvalitet", "AC-publikum forventer høy produksjon; RTMP ved jevn 4 Mbps fra SplitCam slår nettleser-broadcasterens variable bitrate."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvor får jeg AmateurCommunity stream key?", "I AC-modell-panelet, åpne <em>External Encoder</em>- eller <em>OBS</em>-fanen — du ser en server-URL og en stream key. Lim begge inn i SplitCams custom RTMP-felter."),
+         ("Nettleser-broadcaster eller RTMP?", "RTMP (ekstern enkoder) foretrekkes for seriøse modeller — stabil bitrate, fulle SplitCam-scener. Nettleser-broadcasteren fungerer som tilbakefall: velg SplitCam som webkamera."),
+         ("Må jeg være i Tyskland for å sende på AC?", "Nei, men publikum er tysktalende. Modeller fra hvor som helst kan registrere seg — å passere modell-verifisering + skatteskjema er hovedsteget."),
+         ("Er SplitCam gratis å bruke med AmateurCommunity?", "Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense."),
+     ],
+     "steps": [
+         ("Last ned og installer SplitCam", "SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke."),
+         ("Bygg scenen", "Åpne SplitCam og legg til webkameraet. Legg overlays (på tysk — \"Trinkgeld\" / \"PPV freischalten\"), et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — alt live."),
+         ("Hent AmateurCommunity-URL + stream key", "Logg inn på AC-modell-panelet, åpne <strong>External Encoder / OBS</strong>, og kopier <strong>server-URL</strong> og <strong>stream key</strong>."),
+         ("Koble SplitCam til AmateurCommunity", "I SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lim inn URL og nøkkel. Sett 3 500–5 000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe."),
+         ("Klikk Go Live", "Trykk <strong>Go Live</strong> i SplitCam, slå deg deretter online i AC-modell-panelet. Innen ~10 sekunder lander strømmen på den offentlige listen."),
+     ]},
 ]

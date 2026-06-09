@@ -1503,4 +1503,138 @@ PLATFORMS_EL = [
          ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγάλε τον εαυτό σου online στο dashboard του StripCamFun. Το stream σου φτάνει στη δημόσια λίστα μέσα σε ~10 δευτερόλεπτα."),
      ],
     },
+    {"slug": "mym-fans", "name": "MYM.fans",
+     "title": "MYM.fans Live με SplitCam — εικονική κάμερα",
+     "desc": "Βγες live στο MYM.fans (γαλλικό OnlyFans alternative) με δωρεάν SplitCam ως εικονική κάμερα — multi-camera σκηνές, overlays και φίλτρα. Χωρίς υδατογράφημα.",
+     "kw": "πώς να βγεις live στο mym, mym.fans live, mym fans virtual camera, mym creator, mym france, mym live stream, mym obs, mym fans broadcast, mym influencer",
+     "h1html": 'Πώς βγαίνεις live στο <span class="accent">MYM.fans</span> με SplitCam',
+     "h1short": "Live στο MYM.fans",
+     "card": "Χρησιμοποίησε τον SplitCam ως εικονική κάμερα για MYM.fans live.",
+     "intro": "Το MYM.fans είναι η κορυφαία γαλλική πλατφόρμα συνδρομών για creators — η γαλλική απάντηση στο OnlyFans, με συνδρομές, pay-per-view, tipping και ενσωματωμένο <strong>live stream</strong> για τους fans. Ο broadcaster τρέχει στον browser, οπότε η σύνδεση του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> ως <strong>εικονικής κάμερας</strong> προσθέτει multi-camera σκηνές, overlays και φίλτρα πάνω στη βασική webcam. Αν το dashboard του creator σου εκθέτει επιλογή external-encoder, ο SplitCam συνδέεται και μέσω RTMP.",
+     "quick": "Live στο MYM.fans με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ξεκινάς live στο MYM και στο camera dropdown του broadcaster διαλέγεις <em>SplitCam</em> — μετά πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Ξεκίνα live στο MYM.fans.</li><li>Διάλεξε SplitCam στο camera dropdown.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Το live του MYM.fans τρέχει στον browser. Χτίσε τη σκηνή σου στον SplitCam — καταχωρείται ως webcam με όνομα <strong>«SplitCam Video Driver»</strong> — μετά άνοιξε τον live broadcaster του MYM και διάλεξε <strong>SplitCam</strong> στο camera dropdown. Αν προσφέρεται επιλογή <strong>stream-key / external-encoder</strong> στο creator dashboard, επικόλλησέ την στα custom RTMP πεδία του SplitCam.",
+     "tips": [
+         ("Η μεγαλύτερη γαλλική πλατφόρμα creators", "Το MYM είναι το #1 fan-platform στη Γαλλία, με γαλλικό/ευρωπαϊκό κοινό συνηθισμένο να πληρώνει σε EUR. Μια προσεγμένη σκηνή SplitCam + overlays στα γαλλικά μετατρέπουν καλύτερα από μια απλή webcam."),
+         ("Η εικονική κάμερα δουλεύει χωρίς stream key", "Το browser-only live παίρνει την πλήρη σκηνή SplitCam — δεύτερη κάμερα, overlays, beauty filters ή AI background — απλώς επιλέγοντας SplitCam ως webcam."),
+         ("Cross-sell PPV κατά τη διάρκεια του live", "Το MYM είναι χτισμένο γύρω από paid content. On-screen overlays που προωθούν τη συνδρομή σου ή ξεκλειδώνουν PPV μηνύματα μετατρέπουν live θεατές σε πληρωμένους συνδρομητές."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πώς συνδέεται ο SplitCam στο MYM.fans;", "Το MYM live είναι browser-based, οπότε ο SplitCam συνδέεται ως εικονική κάμερα — διάλεξε SplitCam στο camera selector. Δεν χρειάζεται stream key."),
+         ("Μπορώ να χρησιμοποιώ overlays και πολλές κάμερες στο MYM;", "Ναι — χτίσε τη σκηνή στον SplitCam (δεύτερη κάμερα, overlays, AI background)· το MYM βλέπει την έτοιμη σκηνή σαν μία webcam."),
+         ("Υποστηρίζει το MYM.fans OBS ή εξωτερικούς encoders;", "Το live του είναι κυρίως browser/webcam-based. Αν το dashboard σου προσφέρει stream-key, επικόλλησέ την στα custom RTMP πεδία του SplitCam· αλλιώς χρησιμοποίησε τη μέθοδο εικονικής κάμερας."),
+         ("Είναι δωρεάν ο SplitCam για το MYM.fans;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Εγκαθιστά μια εικονική κάμερα που μπορεί να επιλέξει ο browser."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, κείμενο (στα γαλλικά αν το κοινό σου είναι FR), δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background."),
+         ("Ξεκίνα live στο MYM.fans", "Συνδέσου στον λογαριασμό creator σου στο MYM και άνοιξε τον live broadcaster για να ξεκινήσεις μετάδοση για τους συνδρομητές σου."),
+         ("Διάλεξε τον SplitCam ως κάμερα", "Στο camera dropdown του MYM, διάλεξε <strong>SplitCam</strong> αντί για τη raw webcam — η σύνθετη σκηνή σου αντικαθιστά την επίπεδη κάμερα. (Ή επικόλλησε ένα stream key στα custom RTMP πεδία του SplitCam αν είναι διαθέσιμο.)"),
+         ("Πάτα Go Live", "Ξεκίνα τη μετάδοση — η σκηνή SplitCam, τα overlays και τα φίλτρα σου φτάνουν στους συνδρομητές σου στο MYM."),
+     ],
+    },
+    {"slug": "fc2-live", "name": "FC2 Live",
+     "title": "Μετάδοση στο FC2 Live με SplitCam (RTMP/OBS)",
+     "desc": "Μετάδιδε στο FC2 Live (το μεγαλύτερο live-cam site Ιαπωνίας) με δωρεάν SplitCam μέσω RTMP — multi-camera σκηνές, overlays, φίλτρα. Χωρίς υδατογράφημα.",
+     "kw": "πώς να μεταδίδετε στο fc2 live, fc2 live obs, fc2 live rtmp, fc2 live broadcast, fc2 live配信, fc2 live stream key, fc2 live model, fc2 live japan, fc2 ライブ",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">FC2 Live</span> με SplitCam',
+     "h1short": "Μετάδοση FC2 Live",
+     "card": "Δωρεάν SplitCam → RTMP/OBS μετάδοση στο FC2 Live.",
+     "intro": "Το FC2 Live είναι η μεγαλύτερη πλατφόρμα live-streaming της Ιαπωνίας — τεράστια βάση θεατών, αφιερωμένη adult ενότητα και ξεχωριστή ροή paid-show που το καθιστά μία από τις πιο κερδοφόρες cam αγορές της Ασίας. Οι models μεταδίδουν από το FC2 broadcaster panel, που υποστηρίζει τόσο τον in-browser broadcaster όσο και <strong>εξωτερικό encoder μέσω RTMP</strong>. Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> μεταδίδει μέσω RTMP για πλήρεις multi-camera σκηνές, overlays και φίλτρα.",
+     "quick": "Μετάδοση στο FC2 Live με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, αντιγράφεις server URL + stream key από το FC2 broadcaster panel, τα επικολλάς στις RTMP ρυθμίσεις του SplitCam, πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Αντίγραψε URL + stream key από το FC2 broadcaster panel.</li>"
+              "<li>Επικόλλησε στα custom RTMP του SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Άνοιξε το FC2 Live broadcaster panel και πέρνα στο <strong>External Encoder / RTMP</strong>. Αντίγραψε το server URL και το stream key σου στα <strong>Stream Settings → Custom RTMP</strong> του SplitCam· όρισε 3.500–5.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων. Πάτα <strong>Go Live</strong> στον SplitCam, μετά ξεκίνα το show από το FC2 dashboard.",
+     "tips": [
+         ("Τεράστιο ιαπωνικό κοινό", "Το FC2 είναι Tier 1 στην Ιαπωνία — οι θεατές είναι ντόπιοι, συνηθισμένοι να πληρώνουν σε JPY και προτιμούν μεγαλύτερα paid shows. Ιαπωνικό κείμενο στα overlays (π.χ. tip menu σε 円 / JPY) ανεβάζει αισθητά τη μετατροπή."),
+         ("Η adult ενότητα είναι ξεχωριστή", "Το FC2 έχει και γενικά και adult lives. Ρύθμισε σωστά την κατηγορία του room πριν βγεις live — τα adult shows δεν εμφανίζονται από τη γενική ενότητα."),
+         ("Χρησιμοποίησε external encoder για σταθερό bitrate", "Το ιαπωνικό κοινό, που βλέπει κυρίως από κινητό, είναι ευαίσθητο σε χαμένα frames. Το RTMP από τον SplitCam σε σταθερά 4 Mbps νικάει τον browser broadcaster σε αξιοπιστία."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πού παίρνω το FC2 Live stream key;", "Στο FC2 Live broadcaster panel, πέρνα σε <em>External Encoder</em> ή <em>OBS</em> — θα δεις ένα server URL και ένα stream key. Επικόλλησε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Browser broadcaster ή RTMP;", "Το RTMP (external encoder) προτιμάται — σταθερό bitrate, πλήρεις σκηνές SplitCam. Ο browser broadcaster λειτουργεί ως fallback: διάλεξε SplitCam ως webcam."),
+         ("Χρειάζομαι ιαπωνικό λογαριασμό για μετάδοση στο FC2;", "Χρειάζεται λογαριασμός FC2, και το adult streaming έχει επιπλέον βήματα επιβεβαίωσης ηλικίας για το model. Ακολούθησε το onboarding του FC2."),
+         ("Είναι δωρεάν ο SplitCam για το FC2 Live;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, ένα tip menu σε 円 (JPY), δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — όλα ζωντανά."),
+         ("Πάρε το URL + stream key του FC2 Live", "Συνδέσου στο FC2, άνοιξε το Live broadcaster panel, πέρνα στο <strong>External Encoder</strong> και αντίγραψε το <strong>server URL</strong> και το <strong>stream key</strong>."),
+         ("Σύνδεσε τον SplitCam με το FC2 Live", "Στον SplitCam → <strong>Stream Settings → Custom RTMP</strong>, επικόλλησε URL και κλειδί. Όρισε 3.500–5.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά ξεκίνα το show από το FC2 dashboard. Το stream σου φτάνει στη δημόσια λίστα μέσα σε ~10 δευτερόλεπτα."),
+     ],
+    },
+    {"slug": "boosty", "name": "Boosty",
+     "title": "Live στο Boosty με SplitCam — εικονική κάμερα",
+     "desc": "Βγες live στο Boosty (ρωσική πλατφόρμα creators) με δωρεάν SplitCam ως εικονική κάμερα — multi-camera σκηνές, overlays και φίλτρα. Χωρίς υδατογράφημα.",
+     "kw": "πώς να βγεις live στο boosty, boosty live, boosty stream, boosty virtual camera, boosty creator, бусти прямой эфир, boosty obs, boosty paid live, boosty subscriber",
+     "h1html": 'Πώς βγαίνεις live στο <span class="accent">Boosty</span> με SplitCam',
+     "h1short": "Live στο Boosty",
+     "card": "Χρησιμοποίησε τον SplitCam ως εικονική κάμερα για Boosty live.",
+     "intro": "Το Boosty είναι η μεγαλύτερη ρωσική πλατφόρμα δημιουργοποίησης εσόδων — μια υπηρεσία τύπου Patreon με συνδρομές, paid posts, tips και λειτουργία <strong>ζωντανής μετάδοσης</strong>, με κοινό creators που περιλαμβάνει adult δημιουργούς δίπλα στους mainstream. Το live της τρέχει στον browser, οπότε η σύνδεση του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> ως <strong>εικονικής κάμερας</strong> προσθέτει multi-camera σκηνές, overlays και φίλτρα που οι συνδρομητές δεν θα έπαιρναν από μια απλή webcam.",
+     "quick": "Live στο Boosty με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ξεκινάς live στο Boosty και διαλέγεις <em>SplitCam</em> στο camera dropdown του broadcaster — μετά πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Ξεκίνα live στο Boosty.</li><li>Διάλεξε SplitCam στο camera dropdown.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Το live του Boosty τρέχει στον browser. Χτίσε τη σκηνή σου στον SplitCam — καταχωρείται ως webcam με όνομα <strong>«SplitCam Video Driver»</strong> — μετά άνοιξε τον live broadcaster του Boosty και διάλεξε <strong>SplitCam</strong> στο camera dropdown αντί για τη raw webcam.",
+     "tips": [
+         ("Η μεγαλύτερη ρωσική πλατφόρμα creators", "Το Boosty αντικατέστησε το Patreon για πολλούς RU creators μετά τις κυρώσεις, οπότε το κοινό είναι πιστό και συνηθισμένο να πληρώνει σε RUB. Μια προσεγμένη σκηνή SplitCam με ρωσικά overlays μετατρέπει καλά."),
+         ("Live shows ανά subscriber tier", "Το Boosty σου επιτρέπει να κλειδώνεις live streams ανά συνδρομητικό tier. Ο SplitCam δουλεύει με όλα τα tiers — ο encoder δεν νοιάζεται σε ποιο tier είναι ο θεατής, στέλνεις μία φορά και το Boosty διαχειρίζεται την πρόσβαση."),
+         ("Overlay για tips και pay-per-view", "Το Boosty υποστηρίζει ξεκλείδωμα paid posts και tips. Ένα on-screen overlay που ονοματίζει τα perks των tiers ανεβάζει μετατροπές κατά τη διάρκεια των live."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πώς συνδέεται ο SplitCam στο Boosty;", "Το Boosty live είναι browser-based, οπότε ο SplitCam συνδέεται ως εικονική κάμερα — διάλεξε SplitCam στο camera selector. Δεν χρειάζεται stream key."),
+         ("Μπορώ να χρησιμοποιώ overlays σε ένα Boosty live;", "Ναι — σύνθεσε τη σκηνή στον SplitCam (overlays, δεύτερη κάμερα, AI background)· το Boosty βλέπει μία webcam. Οι συνδρομητές παίρνουν την πλήρη σύνθετη σκηνή."),
+         ("Υποστηρίζει το Boosty OBS ή εξωτερικούς encoders;", "Το live του Boosty είναι κυρίως browser-based. Αν εμφανιστεί επιλογή stream-key στο creator panel σου, επικόλλησέ την στα custom RTMP πεδία του SplitCam· αλλιώς χρησιμοποίησε τη μέθοδο εικονικής κάμερας."),
+         ("Είναι δωρεάν ο SplitCam για το Boosty;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Εγκαθιστά μια εικονική κάμερα που μπορεί να επιλέξει ο browser."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays (στα ρωσικά για το κοινό σου), δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background."),
+         ("Ξεκίνα live στο Boosty", "Συνδέσου στον λογαριασμό creator σου στο Boosty και άνοιξε τον live broadcaster. Ρύθμισε το tier gating αν θέλεις το live πίσω από πληρωμένο επίπεδο."),
+         ("Διάλεξε τον SplitCam ως κάμερα", "Στο camera dropdown του Boosty, διάλεξε <strong>SplitCam</strong> αντί για τη raw webcam — η σύνθετη σκηνή σου αντικαθιστά την επίπεδη κάμερα."),
+         ("Πάτα Go Live", "Ξεκίνα τη μετάδοση — η σκηνή SplitCam, τα overlays και τα φίλτρα σου φτάνουν στους συνδρομητές σου στο Boosty."),
+     ],
+    },
+    {"slug": "amateurcommunity", "name": "AmateurCommunity",
+     "title": "Μετάδοση στο AmateurCommunity με SplitCam (RTMP)",
+     "desc": "Μετάδιδε στο AmateurCommunity (γερμανικό amateur cam site) με δωρεάν SplitCam μέσω RTMP — multi-camera σκηνές, overlays, φίλτρα. Χωρίς υδατογράφημα.",
+     "kw": "πώς να μεταδίδετε στο amateurcommunity, amateurcommunity obs, amateurcommunity rtmp, amateur community deutschland, amateurcommunity model, ac community broadcast, amateurcommunity live, amateur cam deutschland",
+     "h1html": 'Πώς μεταδίδεις στο <span class="accent">AmateurCommunity</span> με SplitCam',
+     "h1short": "Μετάδοση AmateurCommunity",
+     "card": "Δωρεάν SplitCam → RTMP μετάδοση στο AmateurCommunity (DE).",
+     "intro": "Το AmateurCommunity είναι η μεγαλύτερη γερμανική amateur cam και content κοινότητα — λειτουργεί από τις αρχές της δεκαετίας του 2000 με βαθιά πιστό γερμανόφωνο κοινό που είναι συνηθισμένο να πληρώνει για περιεχόμενο και live shows. Οι models μεταδίδουν από το AC model panel, που υποστηρίζει <strong>εξωτερικό encoder μέσω RTMP</strong> καθώς και τον in-browser broadcaster. Ο δωρεάν <strong style='color:var(--text)'>SplitCam</strong> μεταδίδει μέσω RTMP για πλήρεις multi-camera σκηνές, overlays και φίλτρα — γερμανικά overlays μιλούν απευθείας στο τοπικό κοινό.",
+     "quick": "Μετάδοση στο AmateurCommunity: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, αντιγράφεις server URL + stream key του AC από το model panel, τα επικολλάς στις RTMP ρυθμίσεις του SplitCam, πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Αντίγραψε URL + stream key από το AC model panel.</li>"
+              "<li>Επικόλλησε στα custom RTMP του SplitCam.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Άνοιξε το model panel του AmateurCommunity και την καρτέλα <strong>External Encoder / OBS</strong>. Αντίγραψε το server URL και το stream key σου στα <strong>Stream Settings → Custom RTMP</strong> του SplitCam· όρισε 3.500–5.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων. Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγάλε τον εαυτό σου online από το panel.",
+     "tips": [
+         ("Γερμανόφωνο κοινό που πληρώνει σε ευρώ", "Το κοινό του AmateurCommunity είναι κατά συντριπτική πλειοψηφία DACH (DE/AT/CH) και πληρώνει σε EUR — overlays, tip menu και on-stream chat στα γερμανικά μετατρέπουν αισθητά καλύτερα από τα αγγλικά."),
+         ("Συνδυασμός premium PPV + live", "Το AC σου επιτρέπει να πουλάς PPV περιεχόμενο μαζί με live. Ένα live show που κάνει teaser το PPV (με on-screen overlay) τείνει να ανεβάζει τις PPV πωλήσεις κατά και μετά τη μετάδοση."),
+         ("Εξωτερικός encoder για σταθερή ποιότητα", "Το κοινό του AC περιμένει υψηλή παραγωγή· το RTMP στα σταθερά 4 Mbps από τον SplitCam νικάει το μεταβλητό bitrate του browser broadcaster."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πού παίρνω το AmateurCommunity stream key;", "Στο AC model panel, άνοιξε την καρτέλα <em>External Encoder</em> ή <em>OBS</em> — θα δεις ένα server URL και ένα stream key. Επικόλλησε και τα δύο στα custom RTMP πεδία του SplitCam."),
+         ("Browser broadcaster ή RTMP;", "Το RTMP (external encoder) προτιμάται για σοβαρά models — σταθερό bitrate, πλήρεις σκηνές SplitCam. Ο browser broadcaster λειτουργεί ως fallback: διάλεξε SplitCam ως webcam."),
+         ("Χρειάζεται να βρίσκομαι στη Γερμανία για μετάδοση στο AC;", "Όχι, αλλά το κοινό είναι γερμανόφωνο. Models από οπουδήποτε μπορούν να εγγραφούν — το κύριο βήμα είναι η επαλήθευση model και τα φορολογικά έντυπα."),
+         ("Είναι δωρεάν ο SplitCam για το AmateurCommunity;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays (στα γερμανικά — «Trinkgeld» / «PPV freischalten»), δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — όλα ζωντανά."),
+         ("Πάρε το URL + stream key του AmateurCommunity", "Συνδέσου στο AC model panel, άνοιξε το <strong>External Encoder / OBS</strong> και αντίγραψε το <strong>server URL</strong> και το <strong>stream key</strong>."),
+         ("Σύνδεσε τον SplitCam με το AmateurCommunity", "Στον SplitCam → <strong>Stream Settings → Custom RTMP</strong>, επικόλλησε URL και κλειδί. Όρισε 3.500–5.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων."),
+         ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγάλε τον εαυτό σου online στο AC model panel. Το stream σου φτάνει στη δημόσια λίστα μέσα σε ~10 δευτερόλεπτα."),
+     ],
+    },
 ]

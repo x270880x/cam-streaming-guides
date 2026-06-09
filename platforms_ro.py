@@ -1515,4 +1515,142 @@ PLATFORMS_RO = [
             ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online în dashboardul StripCamFun. Stream-ul tău apare pe lista publică în ~10 secunde."),
         ],
     },
+    {
+        "slug": "mym-fans", "name": "MYM.fans",
+        "title": "Cum intri live pe MYM.fans cu SplitCam — cameră virtuală",
+        "desc": "Intră live pe MYM.fans (alternativa franceză la OnlyFans) cu SplitCam gratuit ca o cameră virtuală — scene, overlay-uri și filtre. Fără filigran.",
+        "kw": "cum intri live pe mym, mym.fans live, mym fans cameră virtuală, mym creator, mym france, mym live stream, mym obs, mym fans broadcast, mym influencer",
+        "h1html": 'Cum intri live pe <span class="accent">MYM.fans</span> cu SplitCam',
+        "h1short": "Live pe MYM.fans",
+        "card": "Folosește SplitCam ca o cameră virtuală pentru live-ul de pe MYM.fans.",
+        "intro": "MYM.fans e cea mai mare platformă franceză de abonamente pentru creatori — răspunsul Franței la OnlyFans, cu abonamente, pay-per-view, tipping și o funcție <strong>live stream</strong> integrată pentru fani. Broadcasterul ei merge în browser, așa că prin conectarea <strong style='color:var(--text)'>SplitCam</strong> gratuit ca o <strong>cameră virtuală</strong> adaugi scene multi-cameră, overlay-uri și filtre peste webcam-ul standard. Dacă în Creator Dashboard apare o opțiune de external encoder, SplitCam se conectează în schimb prin RTMP.",
+        "quick": "Intră live pe MYM.fans cu SplitCam: instalezi SplitCam, construiești scena, pornești o transmisie live pe MYM, iar în selectorul de cameră al broadcasterului alegi <em>SplitCam</em> — apoi intri live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Pornește o transmisie live pe MYM.fans.</li>"
+                 "<li>Alege SplitCam din lista de camere.</li>"
+                 "<li>Apasă Go Live.</li></ol>",
+        "key_how": "Live-ul MYM.fans merge în browser. Construiește scena în SplitCam — apare ca o webcam de sistem numită <strong>\"SplitCam Video Driver\"</strong> — apoi deschide broadcasterul live MYM și alege <strong>SplitCam</strong> în lista de camere. Dacă în Creator Dashboard apare o opțiune de <strong>stream key / external encoder</strong>, lipești cheia în câmpurile RTMP custom ale SplitCam.",
+        "tips": [
+            ("Cea mai mare platformă franceză pentru creatori", "MYM e platforma #1 de fani în Franța, cu o audiență FR/EU obișnuită să plătească în EUR. O scenă SplitCam îngrijită cu overlay-uri în franceză convertește mai bine decât o webcam plată."),
+            ("Camera virtuală merge fără stream key", "Live-ul doar în browser primește tot scena ta SplitCam — a doua cameră, overlay-uri, filtre de beauty sau fundal AI — doar selectând SplitCam ca webcam."),
+            ("Cross-sell PPV în timpul live-ului", "MYM e construită în jurul conținutului plătit. Overlay-urile pe ecran care îți promovează abonamentul sau deblochează mesajele PPV transformă privitorii live în abonați plătitori."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la MYM.fans?", "Live-ul MYM e în browser, deci SplitCam se conectează ca o cameră virtuală — alegi SplitCam în selectorul de cameră. Nu e nevoie de stream key."),
+            ("Pot folosi overlay-uri și mai multe camere pe MYM?", "Da — construiești scena în SplitCam (a doua cameră, overlay-uri, fundal AI); MYM vede scena finită ca o singură webcam."),
+            ("MYM.fans suportă OBS sau encodere externe?", "Live-ul ei e în primul rând bazat pe browser / webcam. Dacă în dashboard apare o opțiune de stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală."),
+            ("SplitCam e gratuit pentru MYM.fans?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care browserul o poate selecta."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text (în franceză dacă audiența ta e FR), o a doua cameră sau telefonul, filtre de beauty sau un fundal AI."),
+            ("Pornește o transmisie live pe MYM.fans", "Loghează-te în contul tău de creator MYM și deschide broadcasterul live pentru a porni o transmisie pentru abonații tăi."),
+            ("Alege SplitCam ca cameră", "În lista de camere a MYM, alegi <strong>SplitCam</strong> în loc de webcam-ul tău brut — scena ta compusă înlocuiește camera plată. (Sau, dacă e disponibilă, lipești o stream key în câmpurile RTMP custom ale SplitCam.)"),
+            ("Apasă Go Live", "Pornește transmisia — scena ta SplitCam, overlay-urile și filtrele ajung la abonații tăi de pe MYM."),
+        ],
+    },
+    {
+        "slug": "fc2-live", "name": "FC2 Live",
+        "title": "Cum transmiți pe FC2 Live cu SplitCam (RTMP/OBS)",
+        "desc": "Transmite pe FC2 Live (cel mai mare site live-cam din Japonia) cu SplitCam gratuit prin RTMP — scene multi-cameră, overlay-uri și filtre. Fără filigran.",
+        "kw": "cum transmiți pe fc2 live, fc2 live obs, fc2 live rtmp, fc2 live broadcast, fc2 live配信, fc2 live stream key, fc2 live model, fc2 live japonia, fc2 ライブ",
+        "h1html": 'Cum transmiți pe <span class="accent">FC2 Live</span> cu SplitCam',
+        "h1short": "Transmisie FC2 Live",
+        "card": "SplitCam gratuit → transmisie RTMP/OBS spre FC2 Live.",
+        "intro": "FC2 Live e cea mai mare platformă de live-streaming din Japonia — o bază uriașă de privitori, o secțiune adult dedicată și un flux separat de show-uri plătite care o transformă în una dintre cele mai profitabile piețe cam din Asia. Modelele transmit din panoul de broadcaster FC2, care suportă atât broadcasterul din browser, cât și un <strong>encoder extern prin RTMP</strong>. <strong style='color:var(--text)'>SplitCam</strong> gratuit transmite prin RTMP pentru scene multi-cameră complete, overlay-uri și filtre.",
+        "quick": "Transmisie pe FC2 Live cu SplitCam: instalezi SplitCam, construiești scena, copiezi URL-ul de server și stream key-ul din panoul de broadcaster FC2, le lipești în setările RTMP ale SplitCam, apasă Go Live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Copiază URL + stream key din panoul de broadcaster FC2.</li>"
+                 "<li>Lipește în RTMP custom SplitCam.</li><li>Apasă Go Live.</li></ol>",
+        "key_how": "Deschide panoul de broadcaster FC2 Live și treci pe <strong>External Encoder / RTMP</strong>. Copiază URL-ul serverului și stream key-ul în <strong>Stream Settings → Custom RTMP</strong> din SplitCam; setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Apasă <strong>Go Live</strong> în SplitCam, apoi pornește show-ul din dashboardul FC2.",
+        "tips": [
+            ("Audiență japoneză uriașă", "FC2 e Tier 1 în Japonia — privitorii sunt locali, obișnuiți să plătească în JPY și înclină spre show-uri plătite mai lungi. Overlay-urile cu text în japoneză (de exemplu un meniu de tip-uri în 円 / JPY) cresc sensibil conversia."),
+            ("Secțiunea adult e separată", "FC2 are atât live-uri generale, cât și adult. Setează corect categoria camerei înainte să intri live — show-urile adult nu pot fi descoperite din secțiunea generală."),
+            ("Encoderul extern pentru bitrate stabil", "Audiența japoneză predominant mobilă e sensibilă la frame-urile pierdute. RTMP din SplitCam la 4 Mbps constant bate broadcasterul din browser ca fiabilitate."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("De unde iau stream key-ul FC2 Live?", "În panoul de broadcaster FC2 Live, treci pe <em>External Encoder</em> sau <em>OBS</em> — vei vedea un URL de server și un stream key. Lipește ambele în câmpurile RTMP custom ale SplitCam."),
+            ("Broadcaster din browser sau RTMP?", "RTMP (encoder extern) e preferat — bitrate stabil, scene SplitCam complete. Broadcasterul din browser merge ca fallback: alege SplitCam drept webcam."),
+            ("Am nevoie de cont japonez ca să transmit pe FC2?", "E necesar un cont FC2, iar transmisia adult are pași suplimentari de verificare a vârstei pentru model. Urmează procesul de onboarding FC2."),
+            ("SplitCam e gratuit pentru FC2 Live?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, un meniu de tip-uri în 円 (JPY), o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul live."),
+            ("Obține URL + stream key FC2 Live", "Loghează-te pe FC2, deschide panoul de broadcaster Live, treci pe <strong>External Encoder</strong> și copiază <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>."),
+            ("Conectează SplitCam la FC2 Live", "În SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lipește URL-ul și cheia. Setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+            ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi pornește show-ul din dashboardul FC2. Stream-ul tău apare pe lista publică în ~10 secunde."),
+        ],
+    },
+    {
+        "slug": "boosty", "name": "Boosty",
+        "title": "Cum intri live pe Boosty cu SplitCam — cameră virtuală",
+        "desc": "Intră live pe Boosty (platforma rusă pentru creatori) cu SplitCam gratuit ca o cameră virtuală — scene, overlay-uri și filtre. Fără filigran.",
+        "kw": "cum intri live pe boosty, boosty live, boosty stream, boosty cameră virtuală, boosty creator, бусти прямой эфир, boosty obs, boosty live plătit, boosty abonat",
+        "h1html": 'Cum intri live pe <span class="accent">Boosty</span> cu SplitCam',
+        "h1short": "Live pe Boosty",
+        "card": "Folosește SplitCam ca o cameră virtuală pentru live-ul de pe Boosty.",
+        "intro": "Boosty e cea mai mare platformă rusă de monetizare pentru creatori — un serviciu în stilul Patreon cu abonamente, postări plătite, tip-uri și o funcție <strong>live broadcast</strong>, cu o audiență de creatori care include atât creatori adult, cât și mainstream. Live-ul ei merge în browser, așa că prin conectarea <strong style='color:var(--text)'>SplitCam</strong> gratuit ca o <strong>cameră virtuală</strong> adaugi scene multi-cameră, overlay-uri și filtre pe care abonații nu le-ar primi dintr-o webcam plată.",
+        "quick": "Intră live pe Boosty cu SplitCam: instalezi SplitCam, construiești scena, pornești o transmisie live pe Boosty și alegi <em>SplitCam</em> în lista de camere a broadcasterului — apoi intri live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Pornește o transmisie live pe Boosty.</li>"
+                 "<li>Alege SplitCam din lista de camere.</li>"
+                 "<li>Apasă Go Live.</li></ol>",
+        "key_how": "Live-ul Boosty merge în browser. Construiește scena în SplitCam — apare ca o webcam de sistem numită <strong>\"SplitCam Video Driver\"</strong> — apoi deschide broadcasterul live Boosty și alege <strong>SplitCam</strong> în lista de camere în loc de webcam-ul tău brut.",
+        "tips": [
+            ("Cea mai mare platformă rusă pentru creatori", "Boosty a înlocuit Patreon pentru mulți creatori RU după sancțiuni, așa că audiența e loială și obișnuită să plătească în RUB. O scenă SplitCam îngrijită cu overlay-uri în rusă convertește bine."),
+            ("Show-uri live pe nivel de abonat", "Boosty îți permite să restricționezi transmisiile live pe nivel de abonament. SplitCam merge cu toate nivelurile — encoderului nu-i pasă pe ce nivel e privitorul, tu transmiți o singură dată și Boosty gestionează accesul."),
+            ("Overlay de tip și pay-per-view", "Boosty suportă deblocări de postări plătite și tip-uri. Un overlay pe ecran care denumește beneficiile nivelului crește conversiile în timpul transmisiilor live."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la Boosty?", "Live-ul Boosty e în browser, deci SplitCam se conectează ca o cameră virtuală — alegi SplitCam în selectorul de cameră. Nu e nevoie de stream key."),
+            ("Pot folosi overlay-uri pe un live Boosty?", "Da — compui scena în SplitCam (overlay-uri, a doua cameră, fundal AI); Boosty vede o singură webcam. Abonații primesc scena compusă completă."),
+            ("Boosty suportă OBS sau encodere externe?", "Live-ul Boosty e în primul rând bazat pe browser. Dacă în panoul de creator apare o opțiune de stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală."),
+            ("SplitCam e gratuit pentru Boosty?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care browserul o poate selecta."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri (în rusă, pentru audiența ta), o a doua cameră sau telefonul, filtre de beauty sau un fundal AI."),
+            ("Pornește o transmisie live pe Boosty", "Loghează-te în contul tău de creator Boosty și deschide broadcasterul live. Setează restricția de nivel dacă vrei ca live-ul să fie după un nivel plătit."),
+            ("Alege SplitCam ca cameră", "În lista de camere a Boosty, alegi <strong>SplitCam</strong> în loc de webcam-ul tău brut — scena ta compusă înlocuiește camera plată."),
+            ("Apasă Go Live", "Pornește transmisia — scena ta SplitCam, overlay-urile și filtrele ajung la abonații tăi de pe Boosty."),
+        ],
+    },
+    {
+        "slug": "amateurcommunity", "name": "AmateurCommunity",
+        "title": "Cum transmiți pe AmateurCommunity cu SplitCam (RTMP)",
+        "desc": "Transmite pe AmateurCommunity (cel mai mare site cam amator din Germania) cu SplitCam gratuit prin RTMP — scene, overlay-uri și filtre. Fără filigran.",
+        "kw": "cum transmiți pe amateurcommunity, amateurcommunity obs, amateurcommunity rtmp, amateur community deutschland, amateurcommunity model, ac community broadcast, amateurcommunity live, amateur cam deutschland",
+        "h1html": 'Cum transmiți pe <span class="accent">AmateurCommunity</span> cu SplitCam',
+        "h1short": "Transmisie AmateurCommunity",
+        "card": "SplitCam gratuit → transmisie RTMP spre AmateurCommunity (DE).",
+        "intro": "AmateurCommunity e cel mai mare site amator de cam și comunitate de conținut din Germania — funcționează încă de la începutul anilor 2000 cu o audiență germanofonă profund loială, obișnuită să plătească pentru conținut și show-uri live. Modelele transmit din panoul de model AC, care suportă atât un <strong>encoder extern prin RTMP</strong>, cât și broadcasterul din browser. <strong style='color:var(--text)'>SplitCam</strong> gratuit transmite prin RTMP pentru scene multi-cameră complete, overlay-uri și filtre — overlay-urile în germană vorbesc direct audienței locale.",
+        "quick": "Transmisie pe AmateurCommunity: instalezi SplitCam, construiești scena, copiezi URL-ul de server AC și stream key-ul din panoul de model, le lipești în setările RTMP ale SplitCam, apasă Go Live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Copiază URL + stream key din panoul de model AC.</li>"
+                 "<li>Lipește în RTMP custom SplitCam.</li><li>Apasă Go Live.</li></ol>",
+        "key_how": "Deschide panoul de model AmateurCommunity și tabul <strong>External Encoder / OBS</strong>. Copiază URL-ul serverului și stream key-ul în <strong>Stream Settings → Custom RTMP</strong> din SplitCam; setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde. Apasă <strong>Go Live</strong> în SplitCam, apoi treci online din panou.",
+        "tips": [
+            ("Audiență germanofonă care plătește în germană", "Audiența AmateurCommunity e covârșitor DACH (DE/AT/CH) și plătește în EUR — overlay-urile, meniul de tip-uri și chatul live în germană convertesc sensibil mai bine decât în engleză."),
+            ("Combo PPV premium + live", "AC îți permite să vinzi conținut PPV alături de live. Un show live care teasează PPV-ul (cu un overlay pe ecran) tinde să crească vânzările PPV în timpul și după transmisie."),
+            ("Encoder extern pentru calitate stabilă", "Audiența AC așteaptă producție înaltă; RTMP la 4 Mbps constant din SplitCam bate bitrate-ul variabil al broadcasterului din browser."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("De unde iau stream key-ul AmateurCommunity?", "În panoul de model AC, deschide tabul <em>External Encoder</em> sau <em>OBS</em> — vei vedea un URL de server și un stream key. Lipește ambele în câmpurile RTMP custom ale SplitCam."),
+            ("Broadcaster din browser sau RTMP?", "RTMP (encoder extern) e preferat pentru modele serioase — bitrate stabil, scene SplitCam complete. Broadcasterul din browser merge ca fallback: alege SplitCam drept webcam."),
+            ("Trebuie să fiu în Germania ca să transmit pe AC?", "Nu, dar audiența e germanofonă. Modelele de oriunde se pot înregistra — pasul principal e trecerea verificării de model + a formularelor fiscale."),
+            ("SplitCam e gratuit pentru AmateurCommunity?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri (în germană — \"Trinkgeld\" / \"PPV freischalten\"), o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul live."),
+            ("Obține URL + stream key AmateurCommunity", "Loghează-te în panoul de model AC, deschide <strong>External Encoder / OBS</strong> și copiază <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>."),
+            ("Conectează SplitCam la AmateurCommunity", "În SplitCam → <strong>Stream Settings → Custom RTMP</strong>, lipește URL-ul și cheia. Setează 3.500–5.000 Kbps la 1920×1080, 30 fps, keyframe la 2 secunde."),
+            ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online în panoul de model AC. Stream-ul tău apare pe lista publică în ~10 secunde."),
+        ],
+    },
 ]

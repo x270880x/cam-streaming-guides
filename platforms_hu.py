@@ -1498,4 +1498,140 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd kapcsold magad online-ra a StripCamFun dashboardban. A streamed kb. 10 másodperc alatt megjelenik a nyilvános listán."),
      ],
     },
+    {"slug": "mym-fans", "name": "MYM.fans",
+     "title": "Élő adás a MYM.fansön SplitCammel — Virtuális kamera",
+     "desc": "Élő adás a MYM.fansön (francia OnlyFans-alternatíva) ingyenes SplitCammel virtuális kameraként — multi-kamera jelenetek és overlay-ek. Vízjel nélkül.",
+     "kw": "hogyan menj élőben a mym-en, mym.fans live, mym fans virtuális kamera, mym creator, mym franciaország, mym élő stream, mym obs, mym fans broadcast, mym influencer",
+     "h1html": 'Hogyan mész élőben a <span class="accent">MYM.fans</span>ön SplitCammel',
+     "h1short": "Élő adás MYM.fans",
+     "card": "Használd a SplitCamet virtuális kameraként a MYM.fans élő adáshoz.",
+     "intro": "A MYM.fans a vezető francia creator-előfizetéses platform — Franciaország válasza az OnlyFansre, előfizetésekkel, pay-per-view tartalommal, tippeléssel és beépített <strong>élő stream</strong> funkcióval a rajongóknak. A broadcastere a böngészőben fut, így az ingyenes <strong style='color:var(--text)'>SplitCam</strong> mint <strong>virtuális kamera</strong> rákapcsolása multi-kamera jeleneteket, overlay-eket és szűrőket ad hozzá a sima webkamera fölött. Ha a creator dashboardod külső enkóder opciót is kínál, a SplitCam RTMP-n is tud csatlakozni.",
+     "quick": "Élő adás a MYM.fansön SplitCammel: telepíted a SplitCamet, jelenetet építesz, élő adást indítasz a MYM-en, és a broadcaster kameraválasztójában a <em>SplitCamet</em> választod — majd élőben vagy."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Indíts élő adást a MYM.fansön.</li>"
+              "<li>Válaszd a SplitCamet a kamera legördülőben.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "A MYM.fans élő funkciója a böngészőben fut. Építsd meg a jelenetet a SplitCamben — a rendszer <strong>„SplitCam Video Driver”</strong> néven webkameraként látja —, majd nyisd meg a MYM élő broadcasterét, és a kamera legördülőben válaszd a <strong>SplitCamet</strong>. Ha a creator dashboardod <strong>stream key / külső enkóder</strong> opciót kínál, illeszd be azt a SplitCam egyéni RTMP mezőibe.",
+     "tips": [
+         ("Franciaország legnagyobb creator-platformja", "A MYM az #1 rajongói platform Franciaországban, egy francia/európai közönséggel, ami megszokta az EUR-ban fizetést. Egy igényes SplitCam jelenet + francia nyelvű overlay-ek jobban konvertálnak, mint egy sima webkamera."),
+         ("Virtuális kamera stream key nélkül is működik", "Egy csak böngészős élő adás is megkapja a teljes SplitCam jelenetedet — második kamera, overlay-ek, beauty szűrők vagy AI háttér — pusztán azzal, hogy a SplitCamet választod webkameraként."),
+         ("Cross-sell PPV élő adás közben", "A MYM fizetős tartalomra épül. A képernyős overlay-ek, amik az előfizetésedet hirdetik vagy PPV üzeneteket nyitnak meg, fizető előfizetőkké alakítják az élő nézőket."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hogyan csatlakozik a SplitCam a MYM.fanshez?", "A MYM élő funkciója böngészős, így a SplitCam virtuális kameraként csatlakozik — válaszd a SplitCamet a kameraválasztóban. Nincs szükség stream key-re."),
+         ("Használhatok overlay-eket és több kamerát a MYM-en?", "Igen — építsd meg a jelenetet a SplitCamben (második kamera, overlay-ek, AI háttér); a MYM a kész jelenetet egyetlen webkameraként látja."),
+         ("Támogat a MYM.fans OBS-t vagy külső enkódereket?", "Az élő funkciója elsősorban böngésző- / webkamera-alapú. Ha a dashboardod stream key opciót kínál, illeszd be a SplitCam egyéni RTMP mezőibe; egyébként használd a virtuális kamera módot."),
+         ("Ingyenes a SplitCam a MYM.fanshez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Telepít egy virtuális kamerát, amit a böngésző ki tud választani."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget (franciául, ha a közönséged FR), egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret."),
+         ("Indíts élő adást a MYM.fansön", "Jelentkezz be a MYM creator fiókodba és nyisd meg az élő broadcastert, hogy adást indíts az előfizetőidnek."),
+         ("Válaszd a SplitCamet kameraként", "A MYM kamera legördülőjében válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett — a komponált jeleneted lép a lapos kamera helyébe. (Vagy, ha elérhető, illeszd be a stream keyt a SplitCam egyéni RTMP mezőibe.)"),
+         ("Go Live", "Indítsd el az adást — a SplitCam jeleneted, az overlay-ek és a szűrők elérik a MYM előfizetőidet."),
+     ],
+    },
+    {"slug": "fc2-live", "name": "FC2 Live",
+     "title": "Adás az FC2 Live-on SplitCammel (RTMP/OBS)",
+     "desc": "Streamelj az FC2 Live-on (Japán legnagyobb élő cam oldala) ingyenes SplitCammel RTMP-n — multi-kamera jelenetek és overlay-ek. Vízjel nélkül.",
+     "kw": "hogyan streamelj az fc2 live-on, fc2 live obs, fc2 live rtmp, fc2 live broadcast, fc2 live配信, fc2 live stream key, fc2 live modell, fc2 live japán, fc2 ライブ",
+     "h1html": 'Hogyan streamelsz az <span class="accent">FC2 Live</span>-on SplitCammel',
+     "h1short": "Adás FC2 Live",
+     "card": "Ingyenes SplitCam → RTMP/OBS stílusú adás az FC2 Live-ra.",
+     "intro": "Az FC2 Live Japán legnagyobb élő streaming platformja — masszív nézői bázissal, dedikált felnőtt szekcióval és egy különálló fizetős show folyamattal, ami az egyik leglukratívabb cam-piaccá teszi Ázsiában. A modellek az FC2 broadcaster paneljéből adnak, ami a böngészős broadcastert és a <strong>külső enkódert RTMP-n</strong> egyaránt támogatja. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> RTMP-n streamel teljes multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel.",
+     "quick": "Adás az FC2 Live-on SplitCammel: telepíted a SplitCamet, jelenetet építesz, kimásolod az FC2 broadcaster szerver URL-t + stream key-t, beilleszted a SplitCam RTMP beállításaiba, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Másold ki az URL-t + stream key-t az FC2 broadcaster panelből.</li>"
+              "<li>Illeszd be a SplitCam egyéni RTMP-jébe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Nyisd meg az FC2 Live broadcaster panelt és válts <strong>External Encoder / RTMP</strong>-re. Másold ki a szerver URL-t és a stream key-t a SplitCam <strong>Stream Settings → Custom RTMP</strong> mezőibe; állíts be 3 500–5 000 Kbps-t 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel. Kattints <strong>Go Live</strong>-ra a SplitCamben, majd indítsd a showt az FC2 dashboardból.",
+     "tips": [
+         ("Hatalmas japán közönség", "Az FC2 Tier 1 Japánban — a nézők lokálisak, megszokták a JPY-ben fizetést, és inkább a hosszabb fizetős showk felé hajlanak. A japán nyelvű overlay szöveg (pl. tip menü 円-ban / JPY) észrevehetően emeli a konverziót."),
+         ("A felnőtt szekció külön van", "Az FC2-nek általános és felnőtt élő adásai is vannak. Állítsd be a szoba kategóriát helyesen, mielőtt élőbe mész — a felnőtt showk nem fedezhetők fel az általános szekcióból."),
+         ("Külső enkóder a stabil bitrátáért", "Japán mobil-orientált közönsége érzékeny a dropolt frame-ekre. SplitCam RTMP-n állandó 4 Mbps-en megveri a böngészős broadcastert megbízhatóságban."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Honnan kapom meg az FC2 Live stream key-emet?", "Az FC2 Live broadcaster paneljében válts <em>External Encoder</em>-re vagy <em>OBS</em>-re — látsz egy szerver URL-t és egy stream key-t. Illeszd be mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Böngészős broadcaster vagy RTMP?", "Az RTMP (külső enkóder) az ajánlott — stabil bitráta, teljes SplitCam jelenetek. A böngészős broadcaster tartalékként működik: válaszd a SplitCamet webkameraként."),
+         ("Kell japán fiók az FC2-n való streameléshez?", "FC2 fiók szükséges, és a felnőtt streaminghez további kor-ellenőrzési lépések kellenek a modellnek. Kövesd az FC2 onboardingját."),
+         ("Ingyenes a SplitCam az FC2 Live-hoz?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, tip menüt 円-ban (JPY), egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — mind élőben."),
+         ("Szerezd meg az FC2 Live URL-t + stream key-t", "Jelentkezz be az FC2-re, nyisd meg a Live broadcaster panelt, válts <strong>External Encoder</strong>-re és másold ki a <strong>szerver URL</strong>-t és a <strong>stream key</strong>-t."),
+         ("Kösd össze a SplitCamet az FC2 Live-val", "A SplitCamben → <strong>Stream Settings → Custom RTMP</strong>, illeszd be az URL-t és a kulcsot. Állítsd 3 500–5 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd indítsd a showt az FC2 dashboardból. A streamed kb. 10 másodperc alatt megjelenik a nyilvános listán."),
+     ],
+    },
+    {"slug": "boosty", "name": "Boosty",
+     "title": "Élő adás a Boostyn SplitCammel — Virtuális kamera",
+     "desc": "Élő adás a Boostyn (Oroszország creator-platformja) ingyenes SplitCammel virtuális kameraként — multi-kamera jelenetek és overlay-ek. Vízjel nélkül.",
+     "kw": "hogyan menj élőben a boostyn, boosty live, boosty stream, boosty virtuális kamera, boosty creator, бусти прямой эфир, boosty obs, boosty paid live, boosty előfizető",
+     "h1html": 'Hogyan mész élőben a <span class="accent">Boosty</span>n SplitCammel',
+     "h1short": "Élő adás Boosty",
+     "card": "Használd a SplitCamet virtuális kameraként a Boosty élő adáshoz.",
+     "intro": "A Boosty Oroszország legnagyobb creator-monetizációs platformja — egy Patreon-stílusú szolgáltatás előfizetésekkel, fizetős posztokkal, tippekkel és <strong>élő adás</strong> funkcióval, ahol a creator közönség mainstream alkotók mellett felnőtt creatorokat is tartalmaz. Az élő adás a böngészőben fut, így az ingyenes <strong style='color:var(--text)'>SplitCam</strong> mint <strong>virtuális kamera</strong> rákapcsolása multi-kamera jeleneteket, overlay-eket és szűrőket ad hozzá, amiket az előfizetők nem kapnának meg egy sima webkamerától.",
+     "quick": "Élő adás a Boostyn SplitCammel: telepíted a SplitCamet, jelenetet építesz, élő adást indítasz a Boostyn, és a broadcaster kameraválasztójában a <em>SplitCamet</em> választod — majd élőben vagy."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Indíts élő adást a Boostyn.</li>"
+              "<li>Válaszd a SplitCamet a kamera legördülőben.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "A Boosty élő funkciója a böngészőben fut. Építsd meg a jelenetet a SplitCamben — a rendszer <strong>„SplitCam Video Driver”</strong> néven webkameraként látja —, majd nyisd meg a Boosty élő broadcasterét, és a kamera legördülőben válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett.",
+     "tips": [
+         ("Oroszország legnagyobb creator-platformja", "A Boosty sok RU creator számára leváltotta a Patreont a szankciók után, így a közönség hűséges és megszokta a RUB-ban fizetést. Egy igényes SplitCam jelenet orosz nyelvű overlay-ekkel jól konvertál."),
+         ("Előfizetői szintekhez kötött élő showk", "A Boostyn előfizetői szint szerint zárhatod az élő streameket. A SplitCam minden szinttel működik — az enkódernek mindegy, melyik szinten van a néző, te egyszer streamelsz, és a Boosty intézi a hozzáférést."),
+         ("Tip és pay-per-view overlay", "A Boosty támogatja a fizetős poszt feloldást és a tippeket. Egy képernyős overlay, ami megnevezi a szintek előnyeit, megemeli a konverziókat élő stream közben."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hogyan csatlakozik a SplitCam a Boostyhoz?", "A Boosty élő funkciója böngészős, így a SplitCam virtuális kameraként csatlakozik — válaszd a SplitCamet a kameraválasztóban. Nincs szükség stream key-re."),
+         ("Használhatok overlay-eket egy Boosty élő adásban?", "Igen — komponáld a jelenetet a SplitCamben (overlay-ek, második kamera, AI háttér); a Boosty egyetlen webkameraként látja. Az előfizetők megkapják a teljes komponált jelenetet."),
+         ("Támogat a Boosty OBS-t vagy külső enkódereket?", "A Boosty élő funkciója elsősorban böngésző-alapú. Ha a creator paneledben megjelenik egy stream key opció, illeszd be a SplitCam egyéni RTMP mezőibe; egyébként használd a virtuális kamera módot."),
+         ("Ingyenes a SplitCam a Boostyhoz?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Telepít egy virtuális kamerát, amit a böngésző ki tud választani."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket (orosz nyelven a közönségednek), egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret."),
+         ("Indíts élő adást a Boostyn", "Jelentkezz be a Boosty creator fiókodba és nyisd meg az élő broadcastert. Állítsd be a szint-zárolást, ha az élő adást fizetős szint mögé akarod tenni."),
+         ("Válaszd a SplitCamet kameraként", "A Boosty kamera legördülőjében válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett — a komponált jeleneted lép a lapos kamera helyébe."),
+         ("Go Live", "Indítsd el az adást — a SplitCam jeleneted, az overlay-ek és a szűrők elérik a Boosty előfizetőidet."),
+     ],
+    },
+    {"slug": "amateurcommunity", "name": "AmateurCommunity",
+     "title": "Adás az AmateurCommunityn SplitCammel (RTMP)",
+     "desc": "Streamelj az AmateurCommunityn (Németország legnagyobb amatőr cam oldala) ingyenes SplitCammel RTMP-n — multi-kamera jelenetek, overlay-ek. Vízjel nélkül.",
+     "kw": "hogyan streamelj az amateurcommunityn, amateurcommunity obs, amateurcommunity rtmp, amateur community deutschland, amateurcommunity modell, ac community broadcast, amateurcommunity live, amateur cam deutschland",
+     "h1html": 'Hogyan streamelsz az <span class="accent">AmateurCommunity</span>n SplitCammel',
+     "h1short": "Adás AmateurCommunity",
+     "card": "Ingyenes SplitCam → RTMP adás az AmateurCommunityra (DE).",
+     "intro": "Az AmateurCommunity Németország legnagyobb amatőr cam és tartalom közössége — a 2000-es évek eleje óta fut egy mélyen lojális német nyelvű közönséggel, ami megszokta, hogy fizet a tartalomért és az élő showkért. A modellek az AC modell paneljéből adnak, ami támogatja a <strong>külső enkódert RTMP-n</strong>, valamint a böngészős broadcastert. Az ingyenes <strong style='color:var(--text)'>SplitCam</strong> RTMP-n streamel teljes multi-kamera jelenetekkel, overlay-ekkel és szűrőkkel — a német nyelvű overlay-ek közvetlenül a helyi közönséghez szólnak.",
+     "quick": "Adás az AmateurCommunityn: telepíted a SplitCamet, jelenetet építesz, kimásolod az AC szerver URL-t + stream key-t a modell panelből, beilleszted a SplitCam RTMP beállításaiba, Go Live."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Másold ki az URL-t + stream key-t az AC modell panelből.</li>"
+              "<li>Illeszd be a SplitCam egyéni RTMP-jébe.</li>"
+              "<li>Nyomd meg a Go Live-ot.</li></ol>",
+     "key_how": "Nyisd meg az AmateurCommunity modell panelt és az <strong>External Encoder / OBS</strong> fület. Másold ki a szerver URL-t és a stream key-t a SplitCam <strong>Stream Settings → Custom RTMP</strong> mezőibe; állíts be 3 500–5 000 Kbps-t 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel. Kattints <strong>Go Live</strong>-ra a SplitCamben, majd kapcsold magad online-ra a panelből.",
+     "tips": [
+         ("Német nyelvű, németül fizető közönség", "Az AmateurCommunity közönsége túlnyomórészt DACH (DE/AT/CH) és EUR-ban fizet — a német nyelvű overlay-ek, tip menü és élő chat észrevehetően jobban konvertálnak, mint az angol."),
+         ("Premium PPV + élő kombó", "Az AC engedi a PPV tartalom eladását az élő mellett. Egy élő show, ami a PPV-t teasereli (egy képernyős overlay-jel), hajlamos megemelni a PPV eladásokat az adás közben és után."),
+         ("Külső enkóder a stabil minőségért", "Az AC közönsége magas produkciót vár; a SplitCam RTMP-n állandó 4 Mbps-en megveri a böngészős broadcaster változó bitrátáját."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Honnan kapom meg az AmateurCommunity stream key-emet?", "Az AC modell paneljében nyisd meg az <em>External Encoder</em> vagy <em>OBS</em> fület — látsz egy szerver URL-t és egy stream key-t. Illeszd be mindkettőt a SplitCam egyéni RTMP mezőibe."),
+         ("Böngészős broadcaster vagy RTMP?", "Az RTMP (külső enkóder) az ajánlott komoly modelleknek — stabil bitráta, teljes SplitCam jelenetek. A böngészős broadcaster tartalékként működik: válaszd a SplitCamet webkameraként."),
+         ("Németországban kell lennem, hogy az AC-n streameljek?", "Nem, de a közönség német nyelvű. Bárhonnan regisztrálhatnak modellek — a modell verifikáción + adóűrlapokon átjutás a fő lépés."),
+         ("Ingyenes a SplitCam az AmateurCommunityhoz?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket (németül — „Trinkgeld” / „PPV freischalten”), egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — mind élőben."),
+         ("Szerezd meg az AmateurCommunity URL-t + stream key-t", "Jelentkezz be az AC modell panelbe, nyisd meg az <strong>External Encoder / OBS</strong> fület és másold ki a <strong>szerver URL</strong>-t és a <strong>stream key</strong>-t."),
+         ("Kösd össze a SplitCamet az AmateurCommunityval", "A SplitCamben → <strong>Stream Settings → Custom RTMP</strong>, illeszd be az URL-t és a kulcsot. Állítsd 3 500–5 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel."),
+         ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd kapcsold magad online-ra az AC modell panelben. A streamed kb. 10 másodperc alatt megjelenik a nyilvános listán."),
+     ],
+    },
 ]

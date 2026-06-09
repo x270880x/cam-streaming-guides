@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用 SplitCam 在 FC2 Live 推流（RTMP / OBS）</title>
+<meta name="description" content="用免费 SplitCam 通过 RTMP 在 FC2 Live（日本最大直播 cam 站）推流 —— 多机位场景、叠加层和滤镜。无水印、无需注册。">
+<meta name="keywords" content="如何在 fc2 live 直播, fc2 live obs, fc2 live rtmp, fc2 live 推流, fc2 live配信, fc2 live stream key, fc2 live 模特, fc2 live 日本, fc2 ライブ">
+<link rel="canonical" href="https://camstreamguide.com/zh/fc2-live/">
+<link rel="alternate" hreflang="en" href="https://camstreamguide.com/fc2-live/">
+<link rel="alternate" hreflang="es" href="https://camstreamguide.com/es/fc2-live/">
+<link rel="alternate" hreflang="zh" href="https://camstreamguide.com/zh/fc2-live/">
+<link rel="alternate" hreflang="hi" href="https://camstreamguide.com/hi/fc2-live/">
+<link rel="alternate" hreflang="ar" href="https://camstreamguide.com/ar/fc2-live/">
+<link rel="alternate" hreflang="pt" href="https://camstreamguide.com/pt/fc2-live/">
+<link rel="alternate" hreflang="ru" href="https://camstreamguide.com/ru/fc2-live/">
+<link rel="alternate" hreflang="fr" href="https://camstreamguide.com/fr/fc2-live/">
+<link rel="alternate" hreflang="de" href="https://camstreamguide.com/de/fc2-live/">
+<link rel="alternate" hreflang="ja" href="https://camstreamguide.com/ja/fc2-live/">
+<link rel="alternate" hreflang="id" href="https://camstreamguide.com/id/fc2-live/">
+<link rel="alternate" hreflang="tr" href="https://camstreamguide.com/tr/fc2-live/">
+<link rel="alternate" hreflang="ko" href="https://camstreamguide.com/ko/fc2-live/">
+<link rel="alternate" hreflang="it" href="https://camstreamguide.com/it/fc2-live/">
+<link rel="alternate" hreflang="vi" href="https://camstreamguide.com/vi/fc2-live/">
+<link rel="alternate" hreflang="fa" href="https://camstreamguide.com/fa/fc2-live/">
+<link rel="alternate" hreflang="th" href="https://camstreamguide.com/th/fc2-live/">
+<link rel="alternate" hreflang="pl" href="https://camstreamguide.com/pl/fc2-live/">
+<link rel="alternate" hreflang="uk" href="https://camstreamguide.com/uk/fc2-live/">
+<link rel="alternate" hreflang="ro" href="https://camstreamguide.com/ro/fc2-live/">
+<link rel="alternate" hreflang="nl" href="https://camstreamguide.com/nl/fc2-live/">
+<link rel="alternate" hreflang="fil" href="https://camstreamguide.com/fil/fc2-live/">
+<link rel="alternate" hreflang="ms" href="https://camstreamguide.com/ms/fc2-live/">
+<link rel="alternate" hreflang="el" href="https://camstreamguide.com/el/fc2-live/">
+<link rel="alternate" hreflang="cs" href="https://camstreamguide.com/cs/fc2-live/">
+<link rel="alternate" hreflang="hu" href="https://camstreamguide.com/hu/fc2-live/">
+<link rel="alternate" hreflang="sv" href="https://camstreamguide.com/sv/fc2-live/">
+<link rel="alternate" hreflang="he" href="https://camstreamguide.com/he/fc2-live/">
+<link rel="alternate" hreflang="sr" href="https://camstreamguide.com/sr/fc2-live/">
+<link rel="alternate" hreflang="hr" href="https://camstreamguide.com/hr/fc2-live/">
+<link rel="alternate" hreflang="bg" href="https://camstreamguide.com/bg/fc2-live/">
+<link rel="alternate" hreflang="da" href="https://camstreamguide.com/da/fc2-live/">
+<link rel="alternate" hreflang="fi" href="https://camstreamguide.com/fi/fc2-live/">
+<link rel="alternate" hreflang="no" href="https://camstreamguide.com/no/fc2-live/">
+<link rel="alternate" hreflang="sk" href="https://camstreamguide.com/sk/fc2-live/">
+<link rel="alternate" hreflang="x-default" href="https://camstreamguide.com/fc2-live/">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<!-- <meta name="google-site-verification" content="YOUR-GSC-TOKEN"> -->
+<!-- <meta name="msvalidate.01" content="YOUR-BING-TOKEN"> -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-TOKEN"> -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://camstreamguide.com/zh/fc2-live/">
+<meta property="og:title" content="用 SplitCam 在 FC2 Live 推流（RTMP / OBS）">
+<meta property="og:description" content="用免费 SplitCam 通过 RTMP 在 FC2 Live（日本最大直播 cam 站）推流 —— 多机位场景、叠加层和滤镜。无水印、无需注册。">
+<meta property="og:site_name" content="CamStreamGuide.com">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://camstreamguide.com/assets/og/fc2-live.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="用 SplitCam 在 FC2 Live 推流（RTMP / OBS）">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="用 SplitCam 在 FC2 Live 推流（RTMP / OBS）">
+<meta name="twitter:description" content="用免费 SplitCam 通过 RTMP 在 FC2 Live（日本最大直播 cam 站）推流 —— 多机位场景、叠加层和滤镜。无水印、无需注册。">
+<meta name="twitter:image" content="https://camstreamguide.com/assets/og/fc2-live.png">
+<meta name="theme-color" content="#141420">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "指南",
+     "item": "https://camstreamguide.com/zh/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "FC2 Live",
+     "item": "https://camstreamguide.com/zh/fc2-live/"
+    }
+   ]
+  },
+  {
+   "@type": "HowTo",
+   "name": "如何使用 SplitCam 在 FC2 Live 推流",
+   "description": "用免费 SplitCam 通过 RTMP 在 FC2 Live（日本最大直播 cam 站）推流 —— 多机位场景、叠加层和滤镜。无水印、无需注册。",
+   "totalTime": "PT5M",
+   "inLanguage": "zh",
+   "datePublished": "2026-05-21",
+   "dateModified": "2026-06-09",
+   "publisher": {
+    "@type": "Organization",
+    "name": "CamStreamGuide.com",
+    "url": "https://camstreamguide.com/"
+   },
+   "image": "https://camstreamguide.com/assets/og/fc2-live.png",
+   "step": [
+    {
+     "@type": "HowToStep",
+     "position": 1,
+     "name": "下载并安装 SplitCam",
+     "text": "SplitCam 是适用于 Windows 和 macOS 的免费直播软件 —— 无需注册、无需信用卡、无水印。"
+    },
+    {
+     "@type": "HowToStep",
+     "position": 2,
+     "name": "搭好场景",
+     "text": "打开 SplitCam 添加摄像头。叠加叠加层、用 円（JPY）标价的打赏菜单、第二个摄像头或手机、美颜滤镜或 AI 背景 —— 全部实时应用。"
+    },
+    {
+     "@type": "HowToStep",
+     "position": 3,
+     "name": "拿到 FC2 Live 的 URL 和 stream key",
+     "text": "登录 FC2，打开 Live 主播器面板，切到 外部编码器，复制服务器 URL 和您的 stream key。"
+    },
+    {
+     "@type": "HowToStep",
+     "position": 4,
+     "name": "把 SplitCam 接到 FC2 Live",
+     "text": "在 SplitCam → Stream Settings → Custom RTMP，粘贴 URL 和 key。比特率设为 3,500–5,000 Kbps、1920×1080、30 fps、关键帧 2 秒。"
+    },
+    {
+     "@type": "HowToStep",
+     "position": 5,
+     "name": "点击 Go Live",
+     "text": "在 SplitCam 按 Go Live，再到 FC2 后台开播。约 10 秒内您的直播就出现在公开列表里。"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "FC2 Live 的 stream key 在哪里？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "在 FC2 Live 主播器面板里，切到 外部编码器 或 OBS —— 您能看到服务器 URL 和 stream key。把两者都粘贴到 SplitCam 的自定义 RTMP 字段。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "浏览器主播器和 RTMP 选哪个？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "优先 RTMP（外部编码器）—— 比特率稳定，SplitCam 场景完整可用。浏览器主播器作为后备方案：把 SplitCam 选为摄像头即可。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "在 FC2 上播需要日本账号吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "需要一个 FC2 账号；成人直播还有额外的模特年龄验证流程。按 FC2 的入驻指引走即可。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SplitCam 在 FC2 Live 上免费吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "免费 —— SplitCam 完全免费、无水印、无时间限制。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "您的 FC2 Live 直播卡顿或缓冲",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000 Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "FC2 Live 直播期间丢帧",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "丢帧意味着数据包未能及时到达 FC2 Live — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "黑屏 — 观众在 FC2 Live 上看不到视频",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "FC2 Live 拒绝直播密钥或无法连接",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 FC2 Live 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "FC2 Live 上没有声音或声音不同步",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "SplitCam",
+   "applicationCategory": "MultimediaApplication",
+   "operatingSystem": "Windows, macOS",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--app-base:#141420;--app-panel:#1c1c2e;--app-surface:#22223a;
+--app-border:rgba(255,255,255,.08);--app-border2:rgba(255,255,255,.14);
+--blue:#2878fc;--blue-hover:#4d8eff;--blue-dim:rgba(40,120,252,.13);
+--purple:#9c5bff;--red:#ff5454;--green:#5ee572;
+--text:#eeeeff;--text-sub:#9090bb;--text-dim:#50506a}
+html{scroll-behavior:smooth;background:var(--app-base)}
+body{font-family:'Geist',sans-serif;background:var(--app-base);color:var(--text);
+line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;
+align-items:center;gap:14px;padding:0 40px;
+background:rgba(20,20,32,.85);backdrop-filter:blur(16px);
+border-bottom:1px solid var(--app-border)}
+.nav-home{order:2;font-size:14px;font-weight:600;color:var(--text-sub);transition:color .15s}
+.nav-home:hover{color:var(--text)}
+.lang-dl{order:3}
+.nav-brand{order:1;margin-right:auto;display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
+.nav-brand:hover{opacity:.85}
+.nav-brand .logo{display:block;width:26px;height:26px;flex-shrink:0}
+.brand-name{color:var(--text)}
+.brand-accent{background:linear-gradient(120deg,#5b9bff,#b98cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-tld{color:var(--text-dim);font-weight:700}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-size:14px;color:var(--text-sub);font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--text)}
+.btn-primary{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;
+border-radius:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;transition:background .15s}
+.btn-primary:hover{background:var(--blue-hover)}
+.btn-ghost{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:8px;
+background:transparent;color:var(--text);border:1px solid var(--app-border2);
+font-size:13px;font-weight:600;transition:all .15s}
+.btn-lg{padding:13px 24px;font-size:14px;border-radius:10px}
+.dl{position:relative;display:inline-block}
+.dl>summary{list-style:none;cursor:pointer}
+.dl>summary::-webkit-details-marker{display:none}
+.dl>summary::marker{content:""}
+.dl-caret{display:inline-block;font-size:11px;transition:transform .15s}
+.dl[open] .dl-caret{transform:rotate(180deg)}
+.dl-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;
+background:var(--app-surface);border:1px solid var(--app-border2);border-radius:12px;
+padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.dl-menu a{display:block;padding:11px 14px;border-radius:8px;font-size:14px;
+font-weight:600;color:var(--text);transition:background .12s}
+.dl-menu a:hover{background:var(--blue-dim)}
+.lang-dl{position:relative;display:inline-block;flex-shrink:0}
+.lang-dl>summary{list-style:none;cursor:pointer;padding:7px 11px;border:1px solid var(--app-border2);border-radius:8px;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--text);transition:background .15s;background:rgba(255,255,255,.02)}
+.lang-dl>summary:hover{background:rgba(255,255,255,.06)}
+.lang-dl>summary::-webkit-details-marker{display:none}
+.lang-dl>summary::marker{content:""}
+.lang-dl .lf{font-size:16px;line-height:1}
+.lang-dl>summary .dl-caret{font-size:10px;color:var(--text-sub);margin-left:2px}
+.lang-dl[open]>summary .dl-caret{transform:rotate(180deg)}
+.lang-dl-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:380px;max-height:75vh;overflow-y:auto;background:var(--app-surface);border:1px solid var(--app-border2);border-radius:12px;padding:6px;z-index:30;box-shadow:0 14px 36px rgba(0,0,0,.5);display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.lang-dl-menu a{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;font-size:13px;font-weight:600;color:var(--text);transition:background .12s}
+.lang-dl-menu a:hover{background:var(--blue-dim)}
+.lang-dl-menu a.cur{background:var(--blue);color:#fff}
+.lang-dl-menu .ln{font-size:13px}
+[dir="rtl"] .lang-dl-menu{right:auto;left:0}
+@media (max-width:640px){.lang-dl-menu{min-width:280px;grid-template-columns:1fr;max-height:60vh}.lang-dl>summary .lc{display:none}}
+.shot{margin:14px 0 2px;border:1px solid var(--app-border);border-radius:10px;overflow:hidden;background:var(--app-base)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:9px 14px;font-size:12.5px;color:var(--text-sub);background:var(--app-surface);border-top:1px solid var(--app-border)}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--app-border);background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.breadcrumbs{padding:80px 40px 0;max-width:900px;margin:0 auto;font-size:13px;color:var(--text-dim)}
+.breadcrumbs a{color:var(--text-sub)}.breadcrumbs a:hover{color:var(--text)}
+.breadcrumbs .sep{margin:0 8px}
+.hero{padding:32px 40px 50px;max-width:900px;margin:0 auto;position:relative}
+.hero-glow{position:absolute;top:-50px;right:-100px;width:480px;height:480px;
+background:radial-gradient(circle,rgba(156,91,255,.15),transparent 70%);pointer-events:none;z-index:0}
+.eyebrow{display:inline-block;padding:5px 12px;background:var(--blue-dim);color:var(--blue);
+font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+border-radius:99px;margin-bottom:18px;position:relative;z-index:1}
+.h1{font-size:clamp(32px,4.4vw,48px);font-weight:800;line-height:1.07;letter-spacing:-1.4px;
+margin-bottom:18px;max-width:760px;position:relative;z-index:1}
+.h1 .accent{background:linear-gradient(135deg,var(--blue),var(--purple));
+-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:18px;color:var(--text-sub);max-width:660px;line-height:1.55;
+margin-bottom:26px;position:relative;z-index:1}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.hero-inner{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center;position:relative;z-index:1}
+.collab{background:linear-gradient(150deg,var(--app-panel),var(--app-surface));border:1px solid var(--app-border2);border-radius:18px;padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.collab-flow{display:flex;align-items:center;justify-content:center}
+.collab-pill{padding:11px 15px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.4);white-space:nowrap;display:flex;align-items:center;gap:7px;line-height:1.1}
+.collab-sc{background:linear-gradient(150deg,#26263f,#16161f);border:1px solid var(--app-border2)}
+.collab-sc img{display:block;width:23px;height:23px}
+.collab-sc span{font-size:15.5px;color:var(--text);font-weight:700}
+.collab-logo{display:block;height:21px;width:auto;max-width:180px;
+object-fit:contain;object-position:left center}
+.collab-plat{padding:8px 15px}
+.collab-plat img{height:24px;width:24px;border-radius:50%;object-fit:cover}
+.collab-plat span{font-size:15.5px;color:var(--text);font-weight:700;white-space:nowrap}
+.hub-card-icon{width:32px;height:32px;flex-shrink:0;border-radius:50%;
+object-fit:cover;background:var(--app-surface)}
+.hub-grid .related-card{display:flex;align-items:center;gap:14px;
+padding:18px 20px}
+.hub-grid .related-card .hub-card-body{flex:1;min-width:0}
+.collab-wire{width:46px;height:4px;position:relative;flex-shrink:0;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.16))}
+.collab-dot{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 13px 2px var(--blue);transform:translateY(-50%);animation:collabflow 1.7s cubic-bezier(.55,0,.45,1) infinite}
+@keyframes collabflow{0%{left:-3px;opacity:0}14%{opacity:1}80%{opacity:1}100%{left:37px;opacity:0}}
+.collab-plat{position:relative}
+.collab-plat::after{content:"";position:absolute;inset:0;border-radius:13px;animation:collabrecv 1.7s ease-in-out infinite}
+@keyframes collabrecv{0%,52%{box-shadow:0 0 0 0 rgba(255,255,255,0)}70%{box-shadow:0 0 0 5px rgba(255,255,255,.25)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+.collab-label{font-size:11px;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+.section{padding:40px 40px;max-width:900px;margin:0 auto}
+.sec-h{font-size:30px;font-weight:700;letter-spacing:-.9px;line-height:1.15;margin-bottom:16px}
+.sec-p{font-size:16px;color:var(--text-sub);line-height:1.7;margin-bottom:26px;max-width:680px}
+.qa-box{padding:24px 28px;background:linear-gradient(135deg,rgba(40,120,252,.08),rgba(156,91,255,.05));
+border:1px solid rgba(40,120,252,.25);border-radius:14px}
+.qa-h{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:.6px;
+text-transform:uppercase;margin-bottom:12px}
+.qa-text{font-size:15.5px;line-height:1.7;color:var(--text)}
+.qa-text ol{margin:8px 0 0 22px}.qa-text li{margin-bottom:5px}
+.steps{display:flex;flex-direction:column;gap:16px}
+.step{display:flex;gap:22px;padding:22px 24px;background:var(--app-panel);
+border:1px solid var(--app-border);border-radius:14px}
+.step-num{flex:0 0 44px;height:44px;border-radius:11px;
+background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;display:flex;
+align-items:center;justify-content:center;font-weight:800;font-size:19px}
+.step-body{flex:1}
+.step-h{font-size:18px;font-weight:700;margin-bottom:7px;letter-spacing:-.3px}
+.step-p{font-size:14.5px;color:var(--text-sub);line-height:1.65}
+.step-p strong{color:var(--text)}
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tip-card{padding:20px;background:var(--app-panel);border:1px solid var(--app-border);border-radius:12px}
+.tip-card h3{font-size:15px;font-weight:700;margin-bottom:7px}
+.tip-card p{font-size:13.5px;color:var(--text-sub);line-height:1.6}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{padding:18px 22px;border:1px solid var(--app-border);border-radius:12px;
+background:var(--app-panel)}
+.faq-item summary{font-size:15.5px;font-weight:600;list-style:none;cursor:pointer;
+display:flex;justify-content:space-between;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
+.faq-item[open] summary::after{content:"\2013"}
+.faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+.sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.sp-row .sp-icon{flex-shrink:0;font-size:17px;width:24px;text-align:center}
+.sp-row a{color:var(--blue);word-break:break-all;font-weight:500}
+.sp-row a:hover{color:var(--blue-hover);text-decoration:underline}
+.sp-note{font-size:13px;color:var(--text-sub);line-height:1.55;margin-top:6px}
+.cmp-wrap{overflow-x:auto;border:1px solid var(--app-border2);border-radius:14px;margin-top:8px}
+.cmp{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+.cmp th,.cmp td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--app-border)}
+[dir="rtl"] .cmp th,[dir="rtl"] .cmp td{text-align:right}
+.cmp thead th{background:var(--app-surface);font-weight:700;font-size:13.5px}
+.cmp thead th:nth-child(2){color:var(--blue)}
+.cmp tbody tr:last-child td{border-bottom:none}
+.cmp td:first-child{color:var(--text-sub);font-weight:500}
+.cmp td:nth-child(2){font-weight:600}
+.cmp .ok{color:var(--green)}
+.cmp-verdict{margin-top:22px;padding:22px 24px;background:linear-gradient(135deg,rgba(40,120,252,.08),rgba(156,91,255,.05));border:1px solid var(--app-border2);border-radius:14px;font-size:15px;line-height:1.65}
+.sticky-dl{position:fixed;right:20px;bottom:20px;z-index:90;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+.sticky-dl.show{opacity:1;transform:none;pointer-events:auto}
+.sticky-dl a{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;box-shadow:0 10px 30px rgba(40,120,252,.45);white-space:nowrap}
+.sticky-dl a:hover{background:var(--blue-hover)}
+[dir="rtl"] .sticky-dl{right:auto;left:20px}
+@media (max-width:640px){.sticky-dl{right:12px;left:12px;bottom:12px}[dir="rtl"] .sticky-dl{right:12px;left:12px}.sticky-dl a{justify-content:center;width:100%}}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.hub-grid .related-card{padding:20px 22px}
+.hub-grid .related-card h4{font-size:16.5px}
+.related-card{padding:16px 18px;background:var(--app-panel);border:1px solid var(--app-border);
+border-radius:11px;transition:all .16s}
+.related-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.related-card h4{font-size:14.5px;font-weight:700}
+.related-card p{font-size:12.5px;color:var(--text-sub);margin-top:3px}
+.hub-filter{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.hf-btn{padding:8px 15px;border-radius:999px;border:1px solid var(--app-border2);background:rgba(255,255,255,.02);color:var(--text-sub);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
+.hf-btn:hover{color:var(--text);border-color:var(--blue)}
+.hf-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.related-card.hf-hide{display:none}
+.cta-block{padding:52px 40px;background:linear-gradient(135deg,var(--app-panel),var(--app-surface));
+border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border);
+text-align:center;margin-top:44px}
+.cta-block h2{font-size:30px;font-weight:700;letter-spacing:-.8px;margin-bottom:12px}
+.cta-block p{font-size:15.5px;color:var(--text-sub);max-width:520px;margin:0 auto 24px;line-height:1.6}
+.meta-line{display:flex;align-items:center;gap:14px;padding:18px 20px 0;
+font-size:13px;color:var(--text-sub)}
+.age-tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:6px;
+background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.5px}
+.age-tag-sm{display:inline-block;padding:1px 6px;border-radius:4px;
+background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.3px;
+vertical-align:middle;margin-left:4px}
+footer{padding:36px 40px;border-top:1px solid var(--app-border);background:var(--app-panel)}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
+flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
+.footer-inner a{color:var(--text-sub)}.footer-inner a:hover{color:var(--text)}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+@media(max-width:900px){nav{padding:0 20px}.nav-links{display:none}
+.breadcrumbs{padding:80px 20px 0}.hero,.section{padding-left:20px;padding-right:20px}
+.cta-block{padding:44px 20px}.tips-grid,.related-grid,.hub-grid{grid-template-columns:1fr}
+.step{flex-direction:column;gap:10px}footer{padding:30px 20px}
+.footer-inner{flex-direction:column;text-align:center}
+.hero-inner{grid-template-columns:1fr;gap:24px}
+.hero-text{text-align:center}.hero-text .sub{margin-left:auto;margin-right:auto}.hero-cta{justify-content:center}.collab{max-width:300px;margin:0 auto}}
+@media(max-width:600px){nav{padding:0 16px;gap:10px}.nav-brand{font-size:16px}.nav-home{font-size:13px}
+.breadcrumbs{padding:78px 16px 0}.hero,.section{padding-left:16px;padding-right:16px}
+.hero{padding-top:24px}.h1{font-size:clamp(25px,6.6vw,34px);letter-spacing:-.6px}
+.sub{font-size:16px}.sec-h{font-size:23px;letter-spacing:-.4px}.cta-block h2{font-size:23px}
+.eyebrow{font-size:12px}.cta-block{padding:38px 16px}footer{padding:28px 16px}}
+@media(max-width:380px){.nav-brand{font-size:14px}.lang-dl>summary{padding:6px 8px}
+.h1{font-size:23px}.sub{font-size:15px}.sec-h{font-size:20px}.btn-lg{padding:12px 18px;font-size:13px}}
+</style>
+<script>
+(function(){try{
+var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var cur=document.documentElement.lang;
+var path=location.pathname;
+if(path.charAt(0)==="/")path=path.substring(1);
+var parts=path.split("/");
+if(L.indexOf(parts[0])>=0)parts.shift();
+var slug=parts.join("/");
+function go(lang){var p=lang==="en"?"/"+slug:"/"+lang+"/"+slug;if(p!==location.pathname){document.documentElement.style.visibility="hidden";location.replace(p+location.search+location.hash);}}
+var stored;try{stored=localStorage.getItem("preferred_lang");}catch(e){}
+if(stored&&L.indexOf(stored)>=0){if(stored!==cur)go(stored);}
+else{var bl=navigator.languages||(navigator.language?[navigator.language]:[]);for(var i=0;i<bl.length;i++){var c=bl[i].toLowerCase().split("-")[0];if(c==="nb"||c==="nn")c="no";if(c==="tl")c="fil";if(L.indexOf(c)>=0){if(c!==cur)go(c);break;}}}
+if(document.addEventListener){document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute&&t.getAttribute("data-lang")){try{localStorage.setItem("preferred_lang",t.getAttribute("data-lang"));}catch(e){}break;}t=t.parentNode;}},true);}
+}catch(e){}})();
+</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="xKzNuGcNdMMVQ1gW3UJZOw" async></script>
+</head>
+<body>
+<nav><a class="nav-home" href="../../">所有指南</a><details class="lang-dl"><summary aria-label="Language"><span class="lf">🇨🇳</span><span class="lc">中</span><span class="dl-caret">▾</span></summary><div class="lang-dl-menu"><a href="../../fc2-live/" data-lang="en"><span class="lf">🇬🇧</span><span class="ln">English</span></a><a href="../../es/fc2-live/" data-lang="es"><span class="lf">🇪🇸</span><span class="ln">Español</span></a><a href="../../zh/fc2-live/" data-lang="zh" class="cur"><span class="lf">🇨🇳</span><span class="ln">中文</span></a><a href="../../hi/fc2-live/" data-lang="hi"><span class="lf">🇮🇳</span><span class="ln">हिन्दी</span></a><a href="../../ar/fc2-live/" data-lang="ar"><span class="lf">🇸🇦</span><span class="ln">العربية</span></a><a href="../../pt/fc2-live/" data-lang="pt"><span class="lf">🇧🇷</span><span class="ln">Português</span></a><a href="../../ru/fc2-live/" data-lang="ru"><span class="lf">🇷🇺</span><span class="ln">Русский</span></a><a href="../../fr/fc2-live/" data-lang="fr"><span class="lf">🇫🇷</span><span class="ln">Français</span></a><a href="../../de/fc2-live/" data-lang="de"><span class="lf">🇩🇪</span><span class="ln">Deutsch</span></a><a href="../../ja/fc2-live/" data-lang="ja"><span class="lf">🇯🇵</span><span class="ln">日本語</span></a><a href="../../id/fc2-live/" data-lang="id"><span class="lf">🇮🇩</span><span class="ln">Bahasa Indonesia</span></a><a href="../../tr/fc2-live/" data-lang="tr"><span class="lf">🇹🇷</span><span class="ln">Türkçe</span></a><a href="../../ko/fc2-live/" data-lang="ko"><span class="lf">🇰🇷</span><span class="ln">한국어</span></a><a href="../../it/fc2-live/" data-lang="it"><span class="lf">🇮🇹</span><span class="ln">Italiano</span></a><a href="../../vi/fc2-live/" data-lang="vi"><span class="lf">🇻🇳</span><span class="ln">Tiếng Việt</span></a><a href="../../fa/fc2-live/" data-lang="fa"><span class="lf">🇮🇷</span><span class="ln">فارسی</span></a><a href="../../th/fc2-live/" data-lang="th"><span class="lf">🇹🇭</span><span class="ln">ไทย</span></a><a href="../../pl/fc2-live/" data-lang="pl"><span class="lf">🇵🇱</span><span class="ln">Polski</span></a><a href="../../uk/fc2-live/" data-lang="uk"><span class="lf">🇺🇦</span><span class="ln">Українська</span></a><a href="../../ro/fc2-live/" data-lang="ro"><span class="lf">🇷🇴</span><span class="ln">Română</span></a><a href="../../nl/fc2-live/" data-lang="nl"><span class="lf">🇳🇱</span><span class="ln">Nederlands</span></a><a href="../../fil/fc2-live/" data-lang="fil"><span class="lf">🇵🇭</span><span class="ln">Filipino</span></a><a href="../../ms/fc2-live/" data-lang="ms"><span class="lf">🇲🇾</span><span class="ln">Bahasa Melayu</span></a><a href="../../el/fc2-live/" data-lang="el"><span class="lf">🇬🇷</span><span class="ln">Ελληνικά</span></a><a href="../../cs/fc2-live/" data-lang="cs"><span class="lf">🇨🇿</span><span class="ln">Čeština</span></a><a href="../../hu/fc2-live/" data-lang="hu"><span class="lf">🇭🇺</span><span class="ln">Magyar</span></a><a href="../../sv/fc2-live/" data-lang="sv"><span class="lf">🇸🇪</span><span class="ln">Svenska</span></a><a href="../../he/fc2-live/" data-lang="he"><span class="lf">🇮🇱</span><span class="ln">עברית</span></a><a href="../../sr/fc2-live/" data-lang="sr"><span class="lf">🇷🇸</span><span class="ln">Српски</span></a><a href="../../hr/fc2-live/" data-lang="hr"><span class="lf">🇭🇷</span><span class="ln">Hrvatski</span></a><a href="../../bg/fc2-live/" data-lang="bg"><span class="lf">🇧🇬</span><span class="ln">Български</span></a><a href="../../da/fc2-live/" data-lang="da"><span class="lf">🇩🇰</span><span class="ln">Dansk</span></a><a href="../../fi/fc2-live/" data-lang="fi"><span class="lf">🇫🇮</span><span class="ln">Suomi</span></a><a href="../../no/fc2-live/" data-lang="no"><span class="lf">🇳🇴</span><span class="ln">Norsk</span></a><a href="../../sk/fc2-live/" data-lang="sk"><span class="lf">🇸🇰</span><span class="ln">Slovenčina</span></a></div></details><a class="nav-brand" href="../../" aria-label="CamStreamGuide.com home"><svg class="logo" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><defs><linearGradient id="csgLogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2878fc"/><stop offset="1" stop-color="#9c5bff"/></linearGradient></defs><rect width="32" height="32" rx="7" fill="url(#csgLogo)"/><circle cx="9" cy="16" r="3.5" fill="#fff"/><path d="M14.5,11 A7,7 0 0 1 14.5,21" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M18,8 A11,11 0 0 1 18,24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M21.5,5.5 A15.5,15.5 0 0 1 21.5,26.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/></svg><span class="brand-name">Cam<span class="brand-accent">Stream</span>Guide</span><span class="brand-tld">.com</span></a></nav>
+<div class="breadcrumbs">
+  <a href="../../">指南</a><span class="sep">/</span><span>FC2 Live</span>
+</div>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">FC2 Live</span>
+      <h1 class="h1">如何使用 SplitCam 在 <span class="accent">FC2 Live</span> 推流</h1>
+      <p class="sub">FC2 Live 是日本最大的直播平台 —— 庞大的观众基础、独立的成人板块，以及一套单独的付费秀流程，让它成为亚洲最赚钱的 cam 市场之一。模特通过 FC2 主播器面板开播，既支持浏览器主播器，也支持<strong>通过 RTMP 接外部编码器</strong>。免费 <strong style='color:var(--text)'>SplitCam</strong> 通过 RTMP 推流，完整解锁多机位场景、叠加层和滤镜。</p>
+      <div class="hero-cta">
+        <details class="dl">
+          <summary class="btn-primary btn-lg">⬇ 下载 SplitCam <span class="dl-caret">▾</span></summary>
+          <div class="dl-menu">
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">Windows</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">macOS</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">Android</a>
+            <a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">iOS</a>
+          </div>
+        </details>
+        <a href="#steps" class="btn-ghost btn-lg">跳到步骤 ↓</a>
+      </div>
+    </div>
+    <div class="collab" aria-hidden="true">
+      <div class="collab-flow">
+        <div class="collab-pill collab-sc"><img src="../../assets/splitcam.png" alt=""><span>splitcam</span></div>
+        <div class="collab-wire"><div class="collab-dot"></div></div>
+        <div class="collab-pill collab-plat collab-plat-fc2-live" style="background:#2878fc"><img src="../../logos/round/fc2-live.png" alt=""><span>FC2 Live</span></div>
+      </div>
+      <div class="collab-label">设置指南</div>
+    </div>
+  </div>
+</section>
+<div class="section">
+  <div class="qa-box">
+    <div class="qa-h">快速回答</div>
+    <div class="qa-text">在 FC2 Live 推流：安装 SplitCam，搭好场景，在 FC2 主播器面板复制服务器 URL 和 stream key，粘贴到 SplitCam 的 RTMP 设置，点击 Go Live。</div>
+  </div>
+</div>
+
+<section class="section" id="steps">
+  <h2 class="sec-h">分步指南</h2>
+  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">下载并安装 SplitCam</div><p class="step-p">SplitCam 是适用于 Windows 和 macOS 的免费直播软件 —— 无需注册、无需信用卡、无水印。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">搭好场景</div><p class="step-p">打开 SplitCam 添加摄像头。叠加叠加层、用 円（JPY）标价的打赏菜单、第二个摄像头或手机、美颜滤镜或 AI 背景 —— 全部实时应用。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">拿到 FC2 Live 的 URL 和 stream key</div><p class="step-p">登录 FC2，打开 Live 主播器面板，切到 <strong>外部编码器</strong>，复制<strong>服务器 URL</strong> 和您的 <strong>stream key</strong>。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">把 SplitCam 接到 FC2 Live</div><p class="step-p">在 SplitCam → <strong>Stream Settings → Custom RTMP</strong>，粘贴 URL 和 key。比特率设为 3,500–5,000 Kbps、1920×1080、30 fps、关键帧 2 秒。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">点击 Go Live</div><p class="step-p">在 SplitCam 按 <strong>Go Live</strong>，再到 FC2 后台开播。约 10 秒内您的直播就出现在公开列表里。</p></div></div></div>
+</section>
+<section class="section">
+  <h2 class="sec-h">专业提示</h2>
+  <div class="tips-grid"><div class="tip-card"><h3>庞大的日本观众</h3><p>FC2 在日本属于第一梯队 —— 观众以本地为主，习惯用日元付费，倾向更长时间的付费秀。日语叠加层（比如用 円 / JPY 标价的打赏菜单）能明显抬高转化。</p></div><div class="tip-card"><h3>成人板块单独分区</h3><p>FC2 同时有一般直播和成人直播。开播前一定要把房间分类设对 —— 成人秀在一般板块里搜不到。</p></div><div class="tip-card"><h3>外部编码器更稳</h3><p>日本观众大量来自移动端，对掉帧很敏感。SplitCam 通过 RTMP 稳定推 4 Mbps 比浏览器主播器更可靠。</p></div><div class="tip-card"><h3>先做个私密测试</h3><p>正式开播前运行一个简短的测试直播，检查摄像头、音频、构图和叠加层。</p></div></div>
+</section>
+<section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 FC2 Live 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>FC2 Live 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 FC2 Live — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 FC2 Live 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>FC2 Live 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 FC2 Live 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>FC2 Live 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
+<section class="section">
+  <h2 class="sec-h">常见问题</h2>
+  <div class="faq-list"><details class="faq-item"><summary>FC2 Live 的 stream key 在哪里？</summary><p>在 FC2 Live 主播器面板里，切到 <em>外部编码器</em> 或 <em>OBS</em> —— 您能看到服务器 URL 和 stream key。把两者都粘贴到 SplitCam 的自定义 RTMP 字段。</p></details><details class="faq-item"><summary>浏览器主播器和 RTMP 选哪个？</summary><p>优先 RTMP（外部编码器）—— 比特率稳定，SplitCam 场景完整可用。浏览器主播器作为后备方案：把 SplitCam 选为摄像头即可。</p></details><details class="faq-item"><summary>在 FC2 上播需要日本账号吗？</summary><p>需要一个 FC2 账号；成人直播还有额外的模特年龄验证流程。按 FC2 的入驻指引走即可。</p></details><details class="faq-item"><summary>SplitCam 在 FC2 Live 上免费吗？</summary><p>免费 —— SplitCam 完全免费、无水印、无时间限制。</p></details></div>
+</section>
+
+<div class="section">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">其他平台指南</h3>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 直播</h4><p>BongaCams 的 External Encoder 设置。</p></a></div>
+</div>
+<section class="cta-block">
+  <h2>准备开始直播了吗？</h2>
+  <p>免费软件。无水印，无需注册。一次设置，一键直播。</p>
+  <a href="https://splitcam.com/download" class="btn-primary btn-lg" target="_blank" rel="nofollow noopener">⬇ 下载 SplitCam</a>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 CamStreamGuide.com · <span class="age-tag-sm">18+</span></div>
+    <div class="footer-links">
+      <a href="../../">所有指南</a>
+      <a href="../../become-a-cam-model/">成为 cam 模特</a>
+      <a href="../../obs-alternative/">SplitCam vs OBS</a>
+      <a href="../../about/">关于</a>
+      <a href="../../contact/">联系</a>
+      <a href="../../privacy/">隐私</a>
+      <a href="../../terms/">条款</a>
+    </div>
+  </div>
+</footer>
+<div class="sticky-dl" id="stickyDl"><a href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">⬇ 下载 SplitCam</a></div>
+<script>
+(function(){var el=document.getElementById("stickyDl");if(!el)return;
+var cta=document.querySelector(".cta-block"),ctaVis=false;
+function upd(){var s=(window.scrollY||document.documentElement.scrollTop)>500;
+if(s&&!ctaVis)el.classList.add("show");else el.classList.remove("show");}
+if(window.IntersectionObserver&&cta){new IntersectionObserver(function(e){ctaVis=e[0].isIntersecting;upd();},{rootMargin:"0px 0px -10% 0px"}).observe(cta);}
+window.addEventListener("scroll",upd,{passive:true});upd();})();
+</script>
+</body>
+</html>
