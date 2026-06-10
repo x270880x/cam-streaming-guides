@@ -1637,4 +1637,70 @@ PLATFORMS_EL = [
          ("Πάτα Go Live", "Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγάλε τον εαυτό σου online στο AC model panel. Το stream σου φτάνει στη δημόσια λίστα μέσα σε ~10 δευτερόλεπτα."),
      ],
     },
+    {"slug": "myfans-jp", "name": "MyFans.jp",
+     "title": "Live στο MyFans.jp με SplitCam — εικονική κάμερα",
+     "desc": "Βγες live στο MyFans.jp (το ιαπωνικό OnlyFans) με δωρεάν SplitCam ως εικονική κάμερα — multi-camera σκηνές, overlays, φίλτρα. Χωρίς υδατογράφημα.",
+     "kw": "πώς να βγεις live στο myfans, myfans.jp live, myfans 配信, myfans virtual camera, myfans creator, マイファンズ, myfans japan, myfans broadcast, myfans subscriber",
+     "h1html": 'Πώς βγαίνεις live στο <span class="accent">MyFans.jp</span> με SplitCam',
+     "h1short": "Live στο MyFans.jp",
+     "card": "Χρησιμοποίησε τον SplitCam ως εικονική κάμερα για MyFans.jp live.",
+     "intro": "Το MyFans.jp είναι η κορυφαία ιαπωνική πλατφόρμα συνδρομών για creators — η ιαπωνική απάντηση στο OnlyFans, με συνδρομές, pay-per-view, tipping (投げ銭) και ενσωματωμένη λειτουργία <strong>ζωντανής μετάδοσης</strong> για τους fans. Ο broadcaster της τρέχει στον browser, οπότε η σύνδεση του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> στο MyFans ως <strong>εικονικής κάμερας</strong> προσθέτει multi-camera σκηνές, overlays και φίλτρα που μια απλή webcam δεν μπορεί να προσφέρει. Αν το creator dashboard σου προσφέρει επιλογή external encoder, ο SplitCam μπορεί να συνδεθεί και μέσω RTMP.",
+     "quick": "Live στο MyFans.jp με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ξεκινάς ένα live στο MyFans και στο camera dropdown του broadcaster διαλέγεις <em>SplitCam</em> — μετά πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Ξεκίνα live στο MyFans.jp.</li><li>Διάλεξε SplitCam στο camera dropdown.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Το live του MyFans.jp τρέχει στον browser. Χτίσε τη σκηνή σου στον SplitCam — καταχωρείται ως webcam με όνομα <strong>«SplitCam Video Driver»</strong> — μετά άνοιξε τον live broadcaster του MyFans και διάλεξε <strong>SplitCam</strong> στο camera dropdown. Αν εμφανιστεί επιλογή <strong>stream-key / external encoder</strong> στο creator dashboard σου, επικόλλησέ την στα custom RTMP πεδία του SplitCam.",
+     "tips": [
+         ("Η μεγαλύτερη fan-platform της Ιαπωνίας", "Το MyFans είναι η #1 πλατφόρμα συνδρομών για creators στην Ιαπωνία, με ντόπιο κοινό που πληρώνει σε 円 (JPY). Ιαπωνικά overlays και μια προσεγμένη σκηνή SplitCam μετατρέπουν πολύ καλύτερα από μια απλή webcam."),
+         ("Εικονική κάμερα, χωρίς stream key", "Ένα browser-only live παίρνει όλη τη σκηνή SplitCam — δεύτερη κάμερα, overlays, beauty filters ή AI background — απλά διαλέγοντας τον SplitCam ως webcam."),
+         ("Cross-sell PPV κατά τη μετάδοση", "Το MyFans στηρίζεται σε 投げ銭 (tips) και paid posts. Ένα on-screen overlay που ονοματίζει το PPV pack ή το tip-goal σου ανεβάζει αισθητά τα έσοδα σε ένα live."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πώς συνδέεται ο SplitCam στο MyFans.jp;", "Το MyFans live είναι browser-based, οπότε ο SplitCam συνδέεται ως εικονική κάμερα — διάλεξε SplitCam στο camera selector. Δεν χρειάζεται stream key."),
+         ("Μπορώ να χρησιμοποιώ overlays και πολλές κάμερες στο MyFans;", "Ναι — σύνθεσε τη σκηνή στον SplitCam (δεύτερη κάμερα, overlays, AI background)· το MyFans βλέπει την τελική σκηνή ως μία webcam."),
+         ("Υποστηρίζει το MyFans.jp OBS ή εξωτερικούς encoders;", "Το live του είναι κυρίως browser/webcam-based. Αν εμφανιστεί επιλογή stream-key στο dashboard σου, επικόλλησέ την στα custom RTMP πεδία του SplitCam· αλλιώς χρησιμοποίησε τη μέθοδο εικονικής κάμερας."),
+         ("Είναι δωρεάν ο SplitCam για το MyFans.jp;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Εγκαθιστά μια εικονική κάμερα που μπορεί να επιλέξει ο browser."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays (στα ιαπωνικά — «投げ銭» «PPV解放» για το κοινό σου), δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background."),
+         ("Ξεκίνα live στο MyFans.jp", "Συνδέσου στον creator λογαριασμό σου στο MyFans και άνοιξε τον live broadcaster (配信) για να ξεκινήσεις stream για τους συνδρομητές σου."),
+         ("Διάλεξε τον SplitCam ως κάμερα", "Στο camera dropdown του MyFans, διάλεξε <strong>SplitCam</strong> αντί για τη raw webcam — η σύνθετη σκηνή σου αντικαθιστά την επίπεδη κάμερα. (Ή επικόλλησε ένα stream key στα custom RTMP πεδία του SplitCam αν είναι διαθέσιμο.)"),
+         ("Πάτα Go Live", "Ξεκίνα τη μετάδοση — η σκηνή SplitCam, τα overlays και τα φίλτρα σου φτάνουν στους συνδρομητές σου στο MyFans."),
+     ],
+    },
+    {"slug": "privacy-com-br", "name": "Privacy.com.br",
+     "title": "Live στο Privacy.com.br με SplitCam — εικονική κάμερα",
+     "desc": "Βγες ao vivo στο Privacy.com.br (βραζιλιάνικο OnlyFans) με δωρεάν SplitCam ως εικονική κάμερα — multi-camera σκηνές, overlays, φίλτρα. Χωρίς υδατογράφημα.",
+     "kw": "πώς να βγεις live στο privacy, privacy.com.br ao vivo, privacy live, privacy brasil, privacy virtual camera, privacy creator, privacy broadcast, privacy br criadora, privacy assinante",
+     "h1html": 'Πώς βγαίνεις live στο <span class="accent">Privacy.com.br</span> με SplitCam',
+     "h1short": "Live στο Privacy.com.br",
+     "card": "Χρησιμοποίησε τον SplitCam ως εικονική κάμερα για Privacy.com.br ao vivo.",
+     "intro": "Το Privacy.com.br είναι η κορυφαία βραζιλιάνικη πλατφόρμα συνδρομών για creators — η βραζιλιάνικη απάντηση στο OnlyFans, με assinaturas, pay-per-view, gorjetas και ενσωματωμένη λειτουργία <strong>ao vivo</strong> (ζωντανής μετάδοσης) για τους fãs. Ο broadcaster της τρέχει στον browser, οπότε η σύνδεση του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> στο Privacy ως <strong>εικονικής κάμερας</strong> προσθέτει multi-camera σκηνές, overlays και φίλτρα που μια επίπεδη webcam δεν μπορεί να προσφέρει. Αν το creator dashboard σου προσφέρει επιλογή external encoder, ο SplitCam μπορεί να συνδεθεί και μέσω RTMP.",
+     "quick": "Live στο Privacy.com.br με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, ξεκινάς ένα ao-vivo στο Privacy και στο camera dropdown του broadcaster διαλέγεις <em>SplitCam</em> — μετά πατάς Go Live."
+              "<ol><li>Εγκατάστησε SplitCam.</li><li>Πρόσθεσε κάμερα + σκηνή.</li>"
+              "<li>Ξεκίνα ao vivo στο Privacy.com.br.</li><li>Διάλεξε SplitCam στο camera dropdown.</li>"
+              "<li>Πάτα Go Live.</li></ol>",
+     "key_how": "Το ao vivo του Privacy.com.br τρέχει στον browser. Χτίσε τη σκηνή σου στον SplitCam — καταχωρείται ως webcam με όνομα <strong>«SplitCam Video Driver»</strong> — μετά άνοιξε τον live broadcaster του Privacy και διάλεξε <strong>SplitCam</strong> στο camera dropdown. Αν προσφέρεται επιλογή <strong>stream-key / external encoder</strong>, επικόλλησέ την στα custom RTMP πεδία του SplitCam.",
+     "tips": [
+         ("Η μεγαλύτερη fan-platform της Βραζιλίας", "Το Privacy είναι η #1 πλατφόρμα συνδρομών για creators στη Βραζιλία, με πορτογαλόφωνο κοινό συνηθισμένο να πληρώνει σε BRL μέσω PIX. Overlays στα πορτογαλικά + μια προσεγμένη σκηνή SplitCam μετατρέπουν πολύ καλύτερα από μια απλή webcam."),
+         ("Εικονική κάμερα, χωρίς stream key", "Ένα browser-only live παίρνει όλη τη σκηνή SplitCam — δεύτερη κάμερα, overlays, beauty filters ή AI background — απλά διαλέγοντας τον SplitCam ως webcam."),
+         ("Tip menus + PPV κατά το ao vivo", "Το Privacy υποστηρίζει gorjetas (tips) και paid posts. Ένα on-screen overlay που ονοματίζει το PPV pack ή το meta-de-gorjeta σου ανεβάζει τα έσοδα σε ένα live."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Πώς συνδέεται ο SplitCam στο Privacy.com.br;", "Το ao vivo του Privacy είναι browser-based, οπότε ο SplitCam συνδέεται ως εικονική κάμερα — διάλεξε SplitCam στο camera selector. Δεν χρειάζεται stream key."),
+         ("Μπορώ να χρησιμοποιώ overlays και πολλές κάμερες στο Privacy;", "Ναι — σύνθεσε τη σκηνή στον SplitCam (δεύτερη κάμερα, overlays, AI background)· το Privacy βλέπει την τελική σκηνή ως μία webcam."),
+         ("Υποστηρίζει το Privacy.com.br OBS ή εξωτερικούς encoders;", "Το ao vivo του είναι κυρίως browser/webcam-based. Αν εμφανιστεί επιλογή stream-key στο dashboard σου, επικόλλησέ την στα custom RTMP πεδία του SplitCam· αλλιώς χρησιμοποίησε τη μέθοδο εικονικής κάμερας."),
+         ("Είναι δωρεάν ο SplitCam για το Privacy.com.br;", "Ναι — δωρεάν, χωρίς υδατογράφημα και χωρίς χρονικό όριο."),
+     ],
+     "steps": [
+         ("Κατέβασε και εγκατάστησε τον SplitCam", "Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα. Εγκαθιστά μια εικονική κάμερα που μπορεί να επιλέξει ο browser."),
+         ("Χτίσε τη σκηνή σου", "Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays στα πορτογαλικά («gorjeta», «desbloquear PPV»), δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background."),
+         ("Ξεκίνα ao vivo στο Privacy.com.br", "Συνδέσου στον creator λογαριασμό σου στο Privacy και άνοιξε τον ao-vivo broadcaster για να ξεκινήσεις live για τους συνδρομητές σου."),
+         ("Διάλεξε τον SplitCam ως κάμερα", "Στο camera dropdown του Privacy, διάλεξε <strong>SplitCam</strong> αντί για τη raw webcam — η σύνθετη σκηνή σου αντικαθιστά την επίπεδη κάμερα. (Ή επικόλλησε ένα stream key στα custom RTMP πεδία του SplitCam αν είναι διαθέσιμο.)"),
+         ("Πάτα Go Live", "Ξεκίνα τη μετάδοση — η σκηνή SplitCam, τα overlays και τα φίλτρα σου φτάνουν στους συνδρομητές σου στο Privacy.com.br."),
+     ],
+    },
 ]

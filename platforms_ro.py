@@ -1653,4 +1653,74 @@ PLATFORMS_RO = [
             ("Apasă Go Live", "Apasă <strong>Go Live</strong> în SplitCam, apoi treci online în panoul de model AC. Stream-ul tău apare pe lista publică în ~10 secunde."),
         ],
     },
+    {
+        "slug": "myfans-jp", "name": "MyFans.jp",
+        "title": "Cum intri live pe MyFans.jp cu SplitCam — cameră virtuală",
+        "desc": "Intră live pe MyFans.jp (OnlyFans-ul japonez) cu SplitCam gratuit ca o cameră virtuală — scene multi-cameră, overlay-uri, filtre. Fără filigran.",
+        "kw": "cum intri live pe myfans, myfans.jp live, myfans 配信, myfans cameră virtuală, myfans creator, マイファンズ, myfans japonia, myfans broadcast, myfans abonat",
+        "h1html": 'Cum intri live pe <span class="accent">MyFans.jp</span> cu SplitCam',
+        "h1short": "Live pe MyFans.jp",
+        "card": "Folosește SplitCam ca o cameră virtuală pentru live-ul de pe MyFans.jp.",
+        "intro": "MyFans.jp e platforma japoneză de top pentru abonamente la creatori — răspunsul Japoniei la OnlyFans, cu abonamente, pay-per-view, tip-uri (投げ銭) și o funcție <strong>live stream</strong> încorporată pentru fani. Broadcasterul ei merge în browser, așa că, îndreptând <strong style='color:var(--text)'>SplitCam</strong> gratuit spre MyFans ca o <strong>cameră virtuală</strong>, adaugi scene multi-cameră, overlay-uri și filtre pe care o webcam plată nu le poate livra. Dacă în dashboardul tău de creator apare opțiunea de encoder extern, SplitCam se poate conecta și prin RTMP.",
+        "quick": "Intră live pe MyFans.jp cu SplitCam: instalezi SplitCam, construiești scena, pornești un live pe MyFans și în selectorul de cameră al broadcasterului alegi <em>SplitCam</em> — apoi intri live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Pornește un live pe MyFans.jp.</li>"
+                 "<li>Alege SplitCam din lista de camere.</li>"
+                 "<li>Apasă Go Live.</li></ol>",
+        "key_how": "Live-ul MyFans.jp merge în browser. Construiește scena în SplitCam — apare ca o webcam de sistem numită <strong>\"SplitCam Video Driver\"</strong> — apoi deschide broadcasterul live MyFans și alege <strong>SplitCam</strong> în lista de camere. Dacă în dashboardul tău de creator apare o opțiune de <strong>stream key / encoder extern</strong>, lipește-o în câmpurile RTMP custom ale SplitCam.",
+        "tips": [
+            ("Cea mai mare fan-platformă din Japonia", "MyFans e #1 între platformele de abonament pentru creatori din Japonia, cu o audiență JP-nativă care plătește în 円 (JPY). Overlay-urile în japoneză și o scenă SplitCam îngrijită convertesc mult mai bine decât o webcam plată."),
+            ("Cameră virtuală, fără stream key", "Live-ul doar din browser primește totuși scena ta SplitCam completă — a doua cameră, overlay-uri, filtre de beauty sau fundal AI — alegând SplitCam ca webcam."),
+            ("Cross-sell PPV în timpul live-ului", "MyFans e construită în jurul 投げ銭 (tip-uri) și al postărilor plătite. Un overlay pe ecran care denumește pachetul PPV sau ținta de tip-uri crește sensibil veniturile în timpul unui live."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la MyFans.jp?", "Live-ul MyFans e în browser, deci SplitCam se conectează ca o cameră virtuală — alegi SplitCam în selectorul de cameră. Nu e nevoie de stream key."),
+            ("Pot folosi overlay-uri și mai multe camere pe MyFans?", "Da — compui scena în SplitCam (a doua cameră, overlay-uri, fundal AI); MyFans vede scena finală ca pe o singură webcam."),
+            ("MyFans.jp suportă OBS sau encodere externe?", "Live-ul ei e în primul rând bazat pe browser/webcam. Dacă în dashboard apare o opțiune de stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală."),
+            ("SplitCam e gratuit pentru MyFans.jp?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care browserul o poate selecta."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri (în japoneză — 「投げ銭」「PPV解放」 pentru audiența ta), o a doua cameră sau telefonul, filtre de beauty sau un fundal AI."),
+            ("Pornește un live pe MyFans.jp", "Loghează-te în contul tău de creator MyFans și deschide broadcasterul live (配信) ca să pornești o transmisie pentru abonații tăi."),
+            ("Alege SplitCam ca cameră", "În lista de camere a MyFans, alegi <strong>SplitCam</strong> în loc de webcam-ul tău brut — scena ta compusă înlocuiește camera plată. (Sau lipești un stream key în câmpurile RTMP custom ale SplitCam, dacă e disponibil.)"),
+            ("Apasă Go Live", "Pornește transmisia — scena ta SplitCam, overlay-urile și filtrele ajung la abonații tăi de pe MyFans."),
+        ],
+    },
+    {
+        "slug": "privacy-com-br", "name": "Privacy.com.br",
+        "title": "Cum intri live pe Privacy.com.br cu SplitCam",
+        "desc": "Intră ao vivo pe Privacy.com.br (OnlyFans-ul Braziliei) cu SplitCam gratuit ca o cameră virtuală — scene multi-cameră, overlay-uri, filtre. Fără filigran.",
+        "kw": "cum intri live pe privacy, privacy.com.br ao vivo, privacy live, privacy brasil, privacy cameră virtuală, privacy creator, privacy broadcast, privacy br criadora, privacy assinante",
+        "h1html": 'Cum intri live pe <span class="accent">Privacy.com.br</span> cu SplitCam',
+        "h1short": "Live pe Privacy.com.br",
+        "card": "Folosește SplitCam ca o cameră virtuală pentru ao vivo pe Privacy.com.br.",
+        "intro": "Privacy.com.br e platforma braziliană de top pentru abonamente la creatori — răspunsul Braziliei la OnlyFans, cu assinaturas, pay-per-view, gorjetas și o funcție <strong>ao vivo</strong> (live stream) încorporată pentru fãs. Broadcasterul ei merge în browser, așa că, îndreptând <strong style='color:var(--text)'>SplitCam</strong> gratuit spre Privacy ca o <strong>cameră virtuală</strong>, adaugi scene multi-cameră, overlay-uri și filtre pe care o webcam plată nu le poate livra. Dacă în dashboardul tău de creator apare opțiunea de encoder extern, SplitCam se poate conecta și prin RTMP.",
+        "quick": "Intră live pe Privacy.com.br cu SplitCam: instalezi SplitCam, construiești scena, pornești un ao vivo pe Privacy și în selectorul de cameră al broadcasterului alegi <em>SplitCam</em> — apoi intri live."
+                 "<ol><li>Instalează SplitCam.</li><li>Adaugă cameră + scenă.</li>"
+                 "<li>Pornește un ao vivo pe Privacy.com.br.</li>"
+                 "<li>Alege SplitCam din lista de camere.</li>"
+                 "<li>Apasă Go Live.</li></ol>",
+        "key_how": "Ao vivo de pe Privacy.com.br merge în browser. Construiește scena în SplitCam — apare ca o webcam de sistem numită <strong>\"SplitCam Video Driver\"</strong> — apoi deschide broadcasterul live Privacy și alege <strong>SplitCam</strong> în lista de camere. Dacă apare o opțiune de <strong>stream key / encoder extern</strong>, o lipești în câmpurile RTMP custom ale SplitCam.",
+        "tips": [
+            ("Cea mai mare fan-platformă din Brazilia", "Privacy e #1 între platformele de abonament pentru creatori din Brazilia, cu o audiență vorbitoare de portugheză obișnuită să plătească în BRL prin PIX. Overlay-urile în portugheză plus o scenă SplitCam îngrijită convertesc mult mai bine decât o webcam plată."),
+            ("Cameră virtuală, fără stream key", "Live-ul doar din browser primește totuși scena ta SplitCam completă — a doua cameră, overlay-uri, filtre de beauty sau fundal AI — alegând SplitCam ca webcam."),
+            ("Meniuri de tip + PPV în timpul ao vivo", "Privacy suportă gorjetas (tip-uri) și postări plătite. Un overlay pe ecran care denumește pachetul PPV sau meta-de-gorjeta crește veniturile în timpul unui live."),
+            _T_TEST,
+        ],
+        "faq": [
+            ("Cum se conectează SplitCam la Privacy.com.br?", "Ao vivo de pe Privacy e în browser, deci SplitCam se conectează ca o cameră virtuală — alegi SplitCam în selectorul de cameră. Nu e nevoie de stream key."),
+            ("Pot folosi overlay-uri și mai multe camere pe Privacy?", "Da — compui scena în SplitCam (a doua cameră, overlay-uri, fundal AI); Privacy vede scena finală ca pe o singură webcam."),
+            ("Privacy.com.br suportă OBS sau encodere externe?", "Ao vivo de pe ea e în primul rând bazat pe browser/webcam. Dacă în dashboard apare o opțiune de stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală."),
+            ("SplitCam e gratuit pentru Privacy.com.br?", "Da — SplitCam e gratuit, fără filigran și fără limită de timp."),
+        ],
+        "steps": [
+            ("Descarcă și instalează SplitCam", "SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care browserul o poate selecta."),
+            ("Construiește scena", "Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri în portugheză (\"gorjeta\", \"desbloquear PPV\"), o a doua cameră sau telefonul, filtre de beauty sau un fundal AI."),
+            ("Pornește un ao vivo pe Privacy.com.br", "Loghează-te în contul tău de creator Privacy și deschide broadcasterul de ao vivo ca să pornești un live pentru abonații tăi."),
+            ("Alege SplitCam ca cameră", "În lista de camere a Privacy, alegi <strong>SplitCam</strong> în loc de webcam-ul tău brut — scena ta compusă înlocuiește camera plată. (Sau lipești un stream key în câmpurile RTMP custom ale SplitCam, dacă e disponibil.)"),
+            ("Apasă Go Live", "Pornește transmisia — scena ta SplitCam, overlay-urile și filtrele ajung la abonații tăi de pe Privacy.com.br."),
+        ],
+    },
 ]

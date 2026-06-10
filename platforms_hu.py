@@ -1634,4 +1634,72 @@ PLATFORMS_HU = [
          ("Kattints Go Live-ra", "Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd kapcsold magad online-ra az AC modell panelben. A streamed kb. 10 másodperc alatt megjelenik a nyilvános listán."),
      ],
     },
+    {"slug": "myfans-jp", "name": "MyFans.jp",
+     "title": "Élő adás a MyFans.jp-n SplitCammel — Virtuális kamera",
+     "desc": "Élő adás a MyFans.jp-n (Japán OnlyFans-a) ingyenes SplitCammel virtuális kameraként — multi-kamera jelenetek, overlay-ek, szűrők. Vízjel nélkül.",
+     "kw": "hogyan menj élőben a myfans-en, myfans.jp live, myfans 配信, myfans virtuális kamera, myfans creator, マイファンズ, myfans japan, myfans broadcast, myfans előfizető",
+     "h1html": 'Hogyan mész élőben a <span class="accent">MyFans.jp</span>-n SplitCammel',
+     "h1short": "Élő adás MyFans.jp",
+     "card": "Használd a SplitCamet virtuális kameraként a MyFans.jp élő adáshoz.",
+     "intro": "A MyFans.jp Japán vezető creator-előfizetéses platformja — a japán válasz az OnlyFansre, előfizetésekkel, pay-per-view-val, tippekkel (投げ銭) és beépített <strong>élő stream</strong> funkcióval a rajongóknak. A broadcastere a böngészőben fut, így az ingyenes <strong style='color:var(--text)'>SplitCam</strong> mint <strong>virtuális kamera</strong> rákapcsolása multi-kamera jeleneteket, overlay-eket és szűrőket ad hozzá, amiket egy sima webkamera nem tud nyújtani. Ha a creator dashboardod kínál külső-enkóder opciót, a SplitCam RTMP-n is csatlakozhat.",
+     "quick": "Élő adás a MyFans.jp-n SplitCammel: telepíted a SplitCamet, jelenetet építesz, élő adást indítasz a MyFansen, és a broadcaster kameraválasztójában a <em>SplitCamet</em> választod — majd élőben vagy."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Indíts élő adást a MyFans.jp-n.</li>"
+              "<li>Válaszd a SplitCamet a kamera legördülőben.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "A MyFans.jp élő funkciója a böngészőben fut. Építsd meg a jelenetet a SplitCamben — a rendszer <strong>„SplitCam Video Driver”</strong> néven webkameraként látja —, majd nyisd meg a MyFans élő broadcasterét, és a kamera legördülőben válaszd a <strong>SplitCamet</strong>. Ha a creator dashboardodban megjelenik <strong>stream-key / külső enkóder</strong> opció, helyette azt illeszd be a SplitCam egyéni RTMP mezőibe.",
+     "tips": [
+         ("Japán legnagyobb fan-platformja", "A MyFans az #1 creator-előfizetéses platform Japánban, JP-natív közönséggel, ami 円-ban (JPY) fizet. A japán nyelvű overlay-ek és egy igényes SplitCam jelenet sokkal jobban konvertálnak, mint egy sima webkamera."),
+         ("Virtuális kamera, nincs szükség stream key-re", "A csak böngészős élő adás is megkapja a teljes SplitCam jelenetedet — második kamera, overlay-ek, beauty szűrők vagy AI háttér — egyszerűen úgy, hogy a SplitCamet választod webkameraként."),
+         ("PPV cross-sell az élő alatt", "A MyFans 投げ銭-re (tippelésre) és fizetős posztokra épül. Egy képernyős overlay, ami megnevezi a PPV csomagot vagy a tip-célt, élő alatt észrevehetően megemeli a bevételt."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hogyan csatlakozik a SplitCam a MyFans.jp-hez?", "A MyFans élő funkciója böngészős, így a SplitCam virtuális kameraként csatlakozik — válaszd a SplitCamet a kameraválasztóban. Nincs szükség stream key-re."),
+         ("Használhatok overlay-eket és több kamerát a MyFansen?", "Igen — építsd meg a jelenetet a SplitCamben (második kamera, overlay-ek, AI háttér); a MyFans egyetlen webkameraként látja a kész jelenetet."),
+         ("Támogat a MyFans.jp OBS-t vagy külső enkódereket?", "Az élő funkciója elsősorban böngésző/webkamera alapú. Ha a dashboardodban megjelenik stream key opció, illeszd be a SplitCam egyéni RTMP mezőibe; egyébként használd a virtuális kamera módot."),
+         ("Ingyenes a SplitCam a MyFans.jp-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Telepít egy virtuális kamerát, amit a böngésző ki tud választani."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket (japánul — 「投げ銭」「PPV解放」 a közönségednek), egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret."),
+         ("Indíts élő adást a MyFans.jp-n", "Jelentkezz be a MyFans creator fiókodba és nyisd meg az élő broadcastert (配信), hogy elindíts egy streamet az előfizetőidnek."),
+         ("Válaszd a SplitCamet kameraként", "A MyFans kamera legördülőjében válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett — a komponált jeleneted lép a lapos kamera helyébe. (Vagy illessz be egy stream key-t a SplitCam egyéni RTMP mezőibe, ha elérhető.)"),
+         ("Go Live", "Indítsd el az adást — a SplitCam jeleneted, az overlay-ek és a szűrők elérik a MyFans előfizetőidet."),
+     ],
+    },
+    {"slug": "privacy-com-br", "name": "Privacy.com.br",
+     "title": "Ao vivo a Privacy.com.br-n SplitCammel — Virtuális kamera",
+     "desc": "Élő adás a Privacy.com.br-n (Brazília OnlyFansa) ingyenes SplitCammel virtuális kameraként — multi-kamera jelenetek, overlay-ek, szűrők. Vízjel nélkül.",
+     "kw": "hogyan menj élőben a privacy-n, privacy.com.br ao vivo, privacy live, privacy brasil, privacy virtuális kamera, privacy creator, privacy broadcast, privacy br criadora, privacy assinante",
+     "h1html": 'Hogyan mész élőben a <span class="accent">Privacy.com.br</span>-n SplitCammel',
+     "h1short": "Élő adás Privacy.com.br",
+     "card": "Használd a SplitCamet virtuális kameraként a Privacy.com.br ao vivohoz.",
+     "intro": "A Privacy.com.br Brazília vezető creator-előfizetéses platformja — a brazil válasz az OnlyFansre, assinaturákkal, pay-per-view-val, gorjetákkal és beépített <strong>ao vivo</strong> (élő stream) funkcióval a fãs számára. A broadcastere a böngészőben fut, így az ingyenes <strong style='color:var(--text)'>SplitCam</strong> mint <strong>virtuális kamera</strong> rákapcsolása multi-kamera jeleneteket, overlay-eket és szűrőket ad hozzá, amiket egy lapos webkamera nem tud nyújtani. Ha a creator dashboardod kínál külső-enkóder opciót, a SplitCam RTMP-n is csatlakozhat.",
+     "quick": "Élő adás a Privacy.com.br-n SplitCammel: telepíted a SplitCamet, jelenetet építesz, ao-vivót indítasz a Privacyn, és a broadcaster kameraválasztójában a <em>SplitCamet</em> választod — majd élőben vagy."
+              "<ol><li>Telepítsd a SplitCamet.</li><li>Adj hozzá kamerát + jelenetet.</li>"
+              "<li>Indíts ao vivót a Privacy.com.br-n.</li>"
+              "<li>Válaszd a SplitCamet a kamera legördülőben.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "A Privacy.com.br ao vivo funkciója a böngészőben fut. Építsd meg a jelenetet a SplitCamben — a rendszer <strong>„SplitCam Video Driver”</strong> néven webkameraként látja —, majd nyisd meg a Privacy élő broadcasterét, és a kamera legördülőben válaszd a <strong>SplitCamet</strong>. Ha kínálnak <strong>stream-key / külső enkóder</strong> opciót, helyette azt illeszd be a SplitCam egyéni RTMP mezőibe.",
+     "tips": [
+         ("Brazília legnagyobb fan-platformja", "A Privacy az #1 creator-előfizetéses platform Brazíliában, portugál nyelvű közönséggel, ami BRL-ben PIX-szel fizet. A portugál overlay-ek + egy igényes SplitCam jelenet sokkal jobban konvertálnak, mint egy sima webkamera."),
+         ("Virtuális kamera, nincs szükség stream key-re", "A csak böngészős élő adás is megkapja a teljes SplitCam jelenetedet — második kamera, overlay-ek, beauty szűrők vagy AI háttér — egyszerűen úgy, hogy a SplitCamet választod webkameraként."),
+         ("Tip menük + PPV az ao vivo alatt", "A Privacy támogatja a gorjetákat (tippeket) és a fizetős posztokat. Egy képernyős overlay, ami megnevezi a PPV csomagot vagy a meta-de-gorjetát, élő alatt megemeli a bevételt."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hogyan csatlakozik a SplitCam a Privacy.com.br-hez?", "A Privacy ao vivo funkciója böngészős, így a SplitCam virtuális kameraként csatlakozik — válaszd a SplitCamet a kameraválasztóban. Nincs szükség stream key-re."),
+         ("Használhatok overlay-eket és több kamerát a Privacyn?", "Igen — építsd meg a jelenetet a SplitCamben (második kamera, overlay-ek, AI háttér); a Privacy egyetlen webkameraként látja a kész jelenetet."),
+         ("Támogat a Privacy.com.br OBS-t vagy külső enkódereket?", "Az ao vivo funkciója elsősorban böngésző/webkamera alapú. Ha a dashboardodban megjelenik stream key opció, illeszd be a SplitCam egyéni RTMP mezőibe; egyébként használd a virtuális kamera módot."),
+         ("Ingyenes a SplitCam a Privacy.com.br-hez?", "Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát."),
+     ],
+     "steps": [
+         ("Töltsd le és telepítsd a SplitCamet", "A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Telepít egy virtuális kamerát, amit a böngésző ki tud választani."),
+         ("Építsd meg a jelenetet", "Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá portugál overlay-eket („gorjeta”, „desbloquear PPV”), egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret."),
+         ("Indíts ao vivót a Privacy.com.br-n", "Jelentkezz be a Privacy creator fiókodba és nyisd meg az ao-vivo broadcastert, hogy elindíts egy élő adást az előfizetőidnek."),
+         ("Válaszd a SplitCamet kameraként", "A Privacy kamera legördülőjében válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett — a komponált jeleneted lép a lapos kamera helyébe. (Vagy illessz be egy stream key-t a SplitCam egyéni RTMP mezőibe, ha elérhető.)"),
+         ("Go Live", "Indítsd el az adást — a SplitCam jeleneted, az overlay-ek és a szűrők elérik a Privacy.com.br előfizetőidet."),
+     ],
+    },
 ]

@@ -1599,4 +1599,70 @@ PLATFORMS_DA = [
          ("Forbind SplitCam med AmateurCommunity", "I SplitCam → <strong>Stream Settings → Custom RTMP</strong>, indsæt URL og key. Sæt 3.500–5.000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe."),
          ("Klik Go Live", "Tryk <strong>Go Live</strong> i SplitCam, og sæt dig derefter online i AC-model-panelet. Din stream lander på den offentlige liste inden for ~10 sekunder."),
      ]},
+    {"slug": "myfans-jp", "name": "MyFans.jp",
+     "title": "Sådan går du live på MyFans.jp med SplitCam",
+     "desc": "Gå live på MyFans.jp (Japans OnlyFans-alternativ) med gratis SplitCam som virtuelt kamera — multikamera-scener, overlays, filtre. Uden vandmærke.",
+     "kw": "sådan går du live på myfans, myfans.jp live, myfans 配信, myfans virtuelt kamera, myfans creator, マイファンズ, myfans japan, myfans broadcast, myfans abonnent",
+     "h1html": 'Sådan går du live på <span class="accent">MyFans.jp</span> med SplitCam',
+     "h1short": "Live MyFans.jp",
+     "card": "Brug SplitCam som virtuelt kamera til MyFans.jp live.",
+     "intro": "MyFans.jp er Japans førende creator-abonnementsplatform — det japanske svar på OnlyFans, med abonnementer, pay-per-view, tip (投げ銭) og en indbygget <strong>live stream</strong>-funktion til fans. Dens broadcaster kører i browseren, så peger man gratis <strong style='color:var(--text)'>SplitCam</strong> mod MyFans som <strong>virtuelt kamera</strong>, tilføjer man multikamera-scener, overlays og filtre, som et nøgent webkamera ikke kan levere. Hvis dit creator-dashboard tilbyder en ekstern-encoder-mulighed, kan SplitCam også forbinde over RTMP.",
+     "quick": "Gå live på MyFans.jp med SplitCam: installér SplitCam, byg scenen, start en live på MyFans, og vælg <em>SplitCam</em> i broadcasterens kameravælger — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en live på MyFans.jp.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "MyFans.jp's live kører i browseren. Byg scenen i SplitCam — den registreres som et webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter MyFans live-broadcasteren og vælg <strong>SplitCam</strong> i kamera-dropdownen. Hvis en mulighed for <strong>stream key / ekstern encoder</strong> dukker op i dit creator-dashboard, indsætter du den i stedet i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Japans største fan-platform", "MyFans er den #1 creator-abonnementsplatform i Japan, med et JP-native publikum, der betaler i 円 (JPY). Japanske overlays og en poleret SplitCam-scene konverterer langt bedre end et nøgent webkamera."),
+         ("Virtuelt kamera, ingen stream key nødvendig", "Browser-only live får stadig hele din SplitCam-scene — ekstra kamera, overlays, beauty-filtre eller AI-baggrund — ved blot at vælge SplitCam som webkamera."),
+         ("Krydssalg af PPV under live", "MyFans er bygget op omkring 投げ銭 (tip) og betalte opslag. Et overlay på skærmen, der navngiver din PPV-pakke eller dit tip-mål, løfter mærkbart omsætningen under en live."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til MyFans.jp?", "MyFans live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på MyFans?", "Ja — byg scenen i SplitCam (ekstra kamera, overlays, AI-baggrund); MyFans ser den færdige scene som ét webkamera."),
+         ("Understøtter MyFans.jp OBS eller eksterne encodere?", "Dens live er primært browser/webkamera-baseret. Hvis en stream key-mulighed dukker op i dit dashboard, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til MyFans.jp?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays ovenpå (på japansk — 「投げ銭」「PPV解放」 til dit publikum), et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund."),
+         ("Start en live på MyFans.jp", "Log ind på din MyFans-creator-konto og åbn live-broadcasteren (配信) for at starte en stream til dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I MyFans' kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din komponerede scene erstatter det flade kamera. (Eller indsæt en stream key i SplitCams custom RTMP-felter, hvis tilgængeligt.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene, overlays og filtre når dine MyFans-abonnenter."),
+     ]},
+    {"slug": "privacy-com-br", "name": "Privacy.com.br",
+     "title": "Sådan går du live på Privacy.com.br med SplitCam",
+     "desc": "Gå live på Privacy.com.br (Brasiliens OnlyFans) med gratis SplitCam som virtuelt kamera — multikamera-scener, overlays, filtre. Uden vandmærke.",
+     "kw": "sådan går du live på privacy, privacy.com.br ao vivo, privacy live, privacy brasil, privacy virtuelt kamera, privacy creator, privacy broadcast, privacy br criadora, privacy assinante",
+     "h1html": 'Sådan går du live på <span class="accent">Privacy.com.br</span> med SplitCam',
+     "h1short": "Live Privacy.com.br",
+     "card": "Brug SplitCam som virtuelt kamera til Privacy.com.br ao vivo.",
+     "intro": "Privacy.com.br er Brasiliens førende creator-abonnementsplatform — det brasilianske svar på OnlyFans, med assinaturas, pay-per-view, gorjetas og en indbygget <strong>ao vivo</strong>-funktion (live stream) til fãs. Dens broadcaster kører i browseren, så peger man gratis <strong style='color:var(--text)'>SplitCam</strong> mod Privacy som <strong>virtuelt kamera</strong>, tilføjer man multikamera-scener, overlays og filtre, som et fladt webkamera ikke kan levere. Hvis dit creator-dashboard tilbyder en ekstern-encoder-mulighed, kan SplitCam også forbinde over RTMP.",
+     "quick": "Gå live på Privacy.com.br med SplitCam: installér SplitCam, byg scenen, start en ao vivo på Privacy, og vælg <em>SplitCam</em> i broadcasterens kameravælger — og gå live."
+              "<ol><li>Installér SplitCam.</li><li>Tilføj kamera + scene.</li>"
+              "<li>Start en ao vivo på Privacy.com.br.</li>"
+              "<li>Vælg SplitCam i kamera-dropdownen.</li>"
+              "<li>Tryk Go Live.</li></ol>",
+     "key_how": "Privacy.com.br's ao vivo kører i browseren. Byg scenen i SplitCam — den registreres som et webkamera kaldet <strong>\"SplitCam Video Driver\"</strong> — og åbn derefter Privacy live-broadcasteren og vælg <strong>SplitCam</strong> i kamera-dropdownen. Hvis en mulighed for <strong>stream key / ekstern encoder</strong> tilbydes, indsætter du den i stedet i SplitCams custom RTMP-felter.",
+     "tips": [
+         ("Brasiliens største fan-platform", "Privacy er den #1 creator-abonnementsplatform i Brasilien, med et portugisisktalende publikum, der er vant til at betale i BRL via PIX. Overlays på portugisisk + en poleret SplitCam-scene konverterer meget bedre end et nøgent webkamera."),
+         ("Virtuelt kamera, ingen stream key nødvendig", "Browser-only live får stadig hele din SplitCam-scene — ekstra kamera, overlays, beauty-filtre eller AI-baggrund — ved blot at vælge SplitCam som webkamera."),
+         ("Tip-menuer + PPV under ao vivo", "Privacy understøtter gorjetas (tip) og betalte opslag. Et overlay på skærmen, der navngiver din PPV-pakke eller meta-de-gorjeta, løfter omsætningen under en live."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Hvordan forbinder SplitCam til Privacy.com.br?", "Privacys ao vivo er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig."),
+         ("Kan jeg bruge overlays og flere kameraer på Privacy?", "Ja — byg scenen i SplitCam (ekstra kamera, overlays, AI-baggrund); Privacy ser den færdige scene som ét webkamera."),
+         ("Understøtter Privacy.com.br OBS eller eksterne encodere?", "Dens ao vivo er primært browser/webkamera-baseret. Hvis en stream key-mulighed dukker op i dit dashboard, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera."),
+         ("Er SplitCam gratis til Privacy.com.br?", "Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning."),
+     ],
+     "steps": [
+         ("Download og installér SplitCam", "SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge."),
+         ("Byg scenen", "Åbn SplitCam og tilføj webkameraet. Læg overlays på portugisisk ovenpå (\"gorjeta\", \"desbloquear PPV\"), et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund."),
+         ("Start en ao vivo på Privacy.com.br", "Log ind på din Privacy-creator-konto og åbn ao-vivo-broadcasteren for at starte en live for dine abonnenter."),
+         ("Vælg SplitCam som dit kamera", "I Privacys kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din komponerede scene erstatter det flade kamera. (Eller indsæt en stream key i SplitCams custom RTMP-felter, hvis tilgængeligt.)"),
+         ("Go Live", "Start udsendelsen — din SplitCam-scene, overlays og filtre når dine Privacy.com.br-abonnenter."),
+     ]},
 ]

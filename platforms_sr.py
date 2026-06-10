@@ -1630,4 +1630,70 @@ PLATFORMS_SR = [
          ("Кликни Go Live", "Притисни <strong>Go Live</strong> у SplitCam-у, затим се пребаци на online у AC model панелу. Твој стрим стиже на јавну листу у року од ~10 секунди."),
      ],
     },
+    {"slug": "myfans-jp", "name": "MyFans.jp",
+     "title": "Како преносиш на MyFans.jp са SplitCam-ом — виртуелна камера",
+     "desc": "Уживо на MyFans.jp (јапанска OnlyFans алтернатива) са бесплатним SplitCam-ом као виртуелном камером — мулти-камера сцене, преклапања, филтери. Без жига.",
+     "kw": "како преносити на myfans, myfans.jp live, myfans 配信, myfans virtual camera, myfans creator, マイファンズ, myfans japan, myfans broadcast, myfans subscriber",
+     "h1html": 'Како преносиш на <span class="accent">MyFans.jp</span> са SplitCam-ом',
+     "h1short": "Уживо на MyFans.jp",
+     "card": "Користи SplitCam као виртуелну камеру за MyFans.jp уживо.",
+     "intro": "MyFans.jp је водећа јапанска платформа за претплату на креаторе — јапански одговор на OnlyFans, са претплатама, pay-per-view, напојницама (投げ銭) и уграђеном <strong>live stream</strong> опцијом за fanove. Њен broadcaster ради у прегледачу, тако да усмеравање бесплатног <strong style='color:var(--text)'>SplitCam-а</strong> на MyFans као <strong>виртуелну камеру</strong> додаје мулти-камера сцене, преклапања и филтере које обична веб камера не може. Ако твој creator панел нуди опцију спољног енкодера, SplitCam се може повезати и преко RTMP-а.",
+     "quick": "Уживо на MyFans.jp са SplitCam-ом: инсталирај SplitCam, изгради сцену, покрени уживо на MyFans, и у broadcaster-овом избору камере изабери <em>SplitCam</em> — затим go live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Покрени уживо на MyFans.jp.</li><li>Изабери SplitCam у падајућем менију камере.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "MyFans.jp live ради у прегледачу. Изгради сцену у SplitCam-у — региструје се као веб камера под именом <strong>\"SplitCam Video Driver\"</strong> — затим отвори MyFans live broadcaster и изабери <strong>SplitCam</strong> у падајућем менију камере. Ако се у creator панелу појави опција <strong>stream-key / спољни енкодер</strong>, налепи је у SplitCam-ова custom RTMP поља уместо тога.",
+     "tips": [
+         ("Највећа фан-платформа у Јапану", "MyFans је платформа за претплату на креаторе #1 у Јапану, са JP публиком која плаћа у 円 (JPY). Преклапања на јапанском и углачана SplitCam сцена конвертују много боље од обичне веб камере."),
+         ("Виртуелна камера, без stream key-а", "Live у прегледачу и даље добија пуну SplitCam сцену — другу камеру, преклапања, beauty филтере или AI позадину — кроз избор SplitCam-а као веб камере."),
+         ("Cross-sell PPV током live-а", "MyFans је изграђен око 投げ銭 (напојница) и плаћених постова. Преклапање на екрану које именује твој PPV пакет или tip-goal приметно подиже приход током live-а."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Како се SplitCam повезује са MyFans.jp?", "MyFans live је заснован на прегледачу, тако да се SplitCam повезује као виртуелна камера — изабери SplitCam у избору камере. Stream key није потребан."),
+         ("Могу ли користити преклапања и више камера на MyFans-у?", "Да — изгради сцену у SplitCam-у (друга камера, преклапања, AI позадина); MyFans види готову сцену као једну веб камеру."),
+         ("Подржава ли MyFans.jp OBS или спољне енкодере?", "Његов live је првенствено заснован на прегледачу/веб камери. Ако се stream-key опција појави у твом панелу, налепи је у SplitCam-ова custom RTMP поља; иначе користи метод виртуелне камере."),
+         ("Је ли SplitCam бесплатан за MyFans.jp?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига. Инсталира виртуелну камеру коју прегледач може изабрати."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру. Наслажи преклапања (на јапанском — 「投げ銭」「PPV解放」 за твоју публику), другу камеру или мобилни, beauty филтере или AI позадину."),
+         ("Покрени уживо на MyFans.jp", "Пријави се на свој MyFans creator налог и отвори live broadcaster (配信) да покренеш пренос за своје претплатнике."),
+         ("Изабери SplitCam као своју камеру", "У падајућем менију камере на MyFans-у изабери <strong>SplitCam</strong> уместо обичне веб камере — твоја компонована сцена замењује равну камеру. (Или налепи stream key у SplitCam-ова custom RTMP поља ако је доступан.)"),
+         ("Go Live", "Покрени пренос — твоја SplitCam сцена, преклапања и филтери стижу до твојих MyFans претплатника."),
+     ],
+    },
+    {"slug": "privacy-com-br", "name": "Privacy.com.br",
+     "title": "Како преносиш на Privacy.com.br са SplitCam-ом",
+     "desc": "Уживо на Privacy.com.br (бразилски OnlyFans) са бесплатним SplitCam-ом као виртуелном камером — мулти-камера сцене, преклапања, филтери. Без жига.",
+     "kw": "како преносити на privacy, privacy.com.br ao vivo, privacy live, privacy brasil, privacy virtual camera, privacy creator, privacy broadcast, privacy br criadora, privacy assinante",
+     "h1html": 'Како преносиш на <span class="accent">Privacy.com.br</span> са SplitCam-ом',
+     "h1short": "Уживо на Privacy.com.br",
+     "card": "Користи SplitCam као виртуелну камеру за Privacy.com.br ao vivo.",
+     "intro": "Privacy.com.br је водећа бразилска платформа за претплату на креаторе — бразилски одговор на OnlyFans, са assinaturas, pay-per-view, gorjetas и уграђеном <strong>ao vivo</strong> (live stream) опцијом за fãs. Њен broadcaster ради у прегледачу, тако да усмеравање бесплатног <strong style='color:var(--text)'>SplitCam-а</strong> на Privacy као <strong>виртуелну камеру</strong> додаје мулти-камера сцене, преклапања и филтере које равна веб камера не може. Ако твој creator панел нуди опцију спољног енкодера, SplitCam се може повезати и преко RTMP-а.",
+     "quick": "Уживо на Privacy.com.br са SplitCam-ом: инсталирај SplitCam, изгради сцену, покрени ao-vivo на Privacy-ју, и у broadcaster-овом избору камере изабери <em>SplitCam</em> — затим go live."
+              "<ol><li>Инсталирај SplitCam.</li><li>Додај камеру + сцену.</li>"
+              "<li>Покрени ao vivo на Privacy.com.br.</li><li>Изабери SplitCam у падајућем менију камере.</li>"
+              "<li>Go Live.</li></ol>",
+     "key_how": "Privacy.com.br ao vivo ради у прегледачу. Изгради сцену у SplitCam-у — региструје се као веб камера под именом <strong>\"SplitCam Video Driver\"</strong> — затим отвори Privacy live broadcaster и изабери <strong>SplitCam</strong> у падајућем менију камере. Ако се понуди опција <strong>stream-key / спољни енкодер</strong>, налепи је у SplitCam-ова custom RTMP поља уместо тога.",
+     "tips": [
+         ("Највећа фан-платформа у Бразилу", "Privacy је платформа за претплату на креаторе #1 у Бразилу, са публиком која говори португалски и навикла је да плаћа у BRL преко PIX-а. Преклапања на португалском + углачана SplitCam сцена конвертују много боље од обичне веб камере."),
+         ("Виртуелна камера, без stream key-а", "Live у прегледачу и даље добија пуну SplitCam сцену — другу камеру, преклапања, beauty филтере или AI позадину — кроз избор SplitCam-а као веб камере."),
+         ("Tip меније + PPV током ao vivo", "Privacy подржава gorjetas (напојнице) и плаћене постове. Преклапање на екрану које именује твој PPV пакет или meta-de-gorjeta подиже приход током live-а."),
+         _T_TEST,
+     ],
+     "faq": [
+         ("Како се SplitCam повезује са Privacy.com.br?", "Privacy ao vivo је заснован на прегледачу, тако да се SplitCam повезује као виртуелна камера — изабери SplitCam у избору камере. Stream key није потребан."),
+         ("Могу ли користити преклапања и више камера на Privacy-ју?", "Да — изгради сцену у SplitCam-у (друга камера, преклапања, AI позадина); Privacy види готову сцену као једну веб камеру."),
+         ("Подржава ли Privacy.com.br OBS или спољне енкодере?", "Његов ao vivo је првенствено заснован на прегледачу/веб камери. Ако се stream-key опција појави у твом панелу, налепи је у SplitCam-ова custom RTMP поља; иначе користи метод виртуелне камере."),
+         ("Је ли SplitCam бесплатан за Privacy.com.br?", "Да — SplitCam је бесплатан, без воденог жига и без временског ограничења."),
+     ],
+     "steps": [
+         ("Преузми и инсталирај SplitCam", "SplitCam је бесплатан софтвер за live стриминг за Windows и macOS — без регистрације, без картице, без воденог жига. Инсталира виртуелну камеру коју прегледач може изабрати."),
+         ("Изгради своју сцену", "Отвори SplitCam и додај веб камеру. Наслажи преклапања на португалском (\"gorjeta\", \"desbloquear PPV\"), другу камеру или мобилни, beauty филтере или AI позадину."),
+         ("Покрени ao vivo на Privacy.com.br", "Пријави се на свој Privacy creator налог и отвори ao-vivo broadcaster да покренеш уживо за своје претплатнике."),
+         ("Изабери SplitCam као своју камеру", "У падајућем менију камере на Privacy-ју изабери <strong>SplitCam</strong> уместо обичне веб камере — твоја компонована сцена замењује равну камеру. (Или налепи stream key у SplitCam-ова custom RTMP поља ако је доступан.)"),
+         ("Go Live", "Покрени пренос — твоја SplitCam сцена, преклапања и филтери стижу до твојих Privacy.com.br претплатника."),
+     ],
+    },
 ]

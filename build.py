@@ -3252,6 +3252,7 @@ METHOD = {
     "cams-com": "stream", "stripcamfun": "stream",
     "mym-fans": "vcam", "fc2-live": "stream", "boosty": "vcam",
     "amateurcommunity": "stream",
+    "myfans-jp": "vcam", "privacy-com-br": "vcam",
 }
 # Hub filter labels: (All, Stream sites, Virtual camera) per language.
 HUB_FILTER = {
