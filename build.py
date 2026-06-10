@@ -115,8 +115,8 @@ SITE_NAME = "CamStreamGuide.com"
 # Search engine verification tokens — paste the value the dashboard gives you and rebuild.
 # These render as <meta> tags on every page when set; left empty they're skipped.
 GSC_VERIFY = ""    # Google Search Console — content of the html-tag method
-BING_VERIFY = ""   # Bing Webmaster Tools — content of the msvalidate.01 method
-YANDEX_VERIFY = "" # Yandex Webmaster — content of the yandex-verification method
+BING_VERIFY = "B099727E8706CBEA1002783B08FAC992"   # Bing Webmaster Tools (msvalidate.01)
+YANDEX_VERIFY = "5a9e0bb3733d4305" # Yandex Webmaster (yandex-verification meta tag)
 
 
 def verify_meta(depth=""):
