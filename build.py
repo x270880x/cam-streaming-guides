@@ -301,7 +301,7 @@ RTL_LANGS = {"ar", "he", "fa"}  # languages that need dir="rtl" on <html>
 # - Hides <html> during the redirect to avoid a flash of the wrong language
 LANG_REDIRECT_JS = """<script>
 (function(){try{
-var L=["en","ru","es","de","fr","it","pt","nl","ro","bg","hu","el","fi","da","no","sr","hr","zh","ja","ar","th","fil"];
+var L=__LANG_LIST__;
 var cur=document.documentElement.lang;
 var path=location.pathname;
 if(path.charAt(0)==="/")path=path.substring(1);
@@ -3459,6 +3459,16 @@ def render_404():
 .err-msg{{font-size:22px;color:var(--text);margin:18px 0 8px}}
 .err-sub{{color:var(--text-sub);font-size:15px;max-width:480px;margin-bottom:28px}}
 </style>
+<script>
+// Self-heal doubled language prefixes (e.g. /ru/he/slug/ → /he/slug/), a legacy
+// of the old auto-redirect JS that didn't know the 13 newest language codes.
+(function(){{try{{
+var L={json.dumps(LANG_POPULARITY)};
+var p=location.pathname.split("/").filter(Boolean);
+if(p.length>=2&&L.indexOf(p[0])>=0&&L.indexOf(p[1])>=0){{
+  location.replace("/"+p.slice(1).join("/")+(location.pathname.slice(-1)==="/"?"/":"")+location.search+location.hash);
+}}}}catch(e){{}}}})();
+</script>
 {AHREFS_JS}
 </head>
 <body>
@@ -3708,7 +3718,7 @@ def render_hub(platforms, lang):
 
 
 def main():
-    global LANGS_AVAIL, FAQ_EXTRA
+    global LANGS_AVAIL, FAQ_EXTRA, LANG_REDIRECT_JS
     from platforms_en import PLATFORMS_EN
     langs_data = {"en": PLATFORMS_EN}
     # Walk LANG_POPULARITY (skipping en, already loaded) so the in-memory order
@@ -3722,6 +3732,11 @@ def main():
         except ImportError:
             pass
     LANGS_AVAIL = list(langs_data.keys())
+
+    # Inject the real language list into the browser-language auto-redirect JS.
+    # A stale hardcoded list here once sent /he/ visitors to /ru/he/ (404):
+    # unknown prefixes weren't stripped from the path before re-prefixing.
+    LANG_REDIRECT_JS = LANG_REDIRECT_JS.replace("__LANG_LIST__", json.dumps(LANGS_AVAIL))
 
     # Load FAQ_EXTRA templates per language (faq_<lang>.py — same shape as faq_en.py).
     # Each file exposes FAQ_EXTRA_<LANG> with keys "common" / "stream" / "vcam".

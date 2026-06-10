@@ -233,6 +233,16 @@ flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-dim)}
 .err-msg{font-size:22px;color:var(--text);margin:18px 0 8px}
 .err-sub{color:var(--text-sub);font-size:15px;max-width:480px;margin-bottom:28px}
 </style>
+<script>
+// Self-heal doubled language prefixes (e.g. /ru/he/slug/ → /he/slug/), a legacy
+// of the old auto-redirect JS that didn't know the 13 newest language codes.
+(function(){try{
+var L=["en", "es", "zh", "hi", "ar", "pt", "ru", "fr", "de", "ja", "id", "tr", "ko", "it", "vi", "fa", "th", "pl", "uk", "ro", "nl", "fil", "ms", "el", "cs", "hu", "sv", "he", "sr", "hr", "bg", "da", "fi", "no", "sk"];
+var p=location.pathname.split("/").filter(Boolean);
+if(p.length>=2&&L.indexOf(p[0])>=0&&L.indexOf(p[1])>=0){
+  location.replace("/"+p.slice(1).join("/")+(location.pathname.slice(-1)==="/"?"/":"")+location.search+location.hash);
+}}catch(e){}})();
+</script>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="xKzNuGcNdMMVQ1gW3UJZOw" async></script>
 </head>
 <body>
