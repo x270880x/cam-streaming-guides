@@ -1820,7 +1820,7 @@ def render(p, lang, all_platforms):
 <meta name="keywords" content="{e(d['kw'])}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
 <link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
@@ -2889,7 +2889,7 @@ def render_legal(slug, lang):
 <meta name="description" content="{e(title)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
 <link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
@@ -3360,7 +3360,7 @@ def render_hub(platforms, lang):
 <meta name="keywords" content="{e(hub_kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="{hub_depth}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{hub_depth}favicon.ico">
 <link rel="apple-touch-icon" href="{hub_depth}apple-touch-icon.png">
