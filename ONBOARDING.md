@@ -1,6 +1,6 @@
 # cam-streaming-guides — Project Onboarding
 
-*Last updated: 2026-06-07. Open this at the start of any new chat about this project.*
+*Last updated: 2026-06-09. Open this at the start of any new chat about this project.*
 
 ## What this is
 Adult-cam how-to guides — "how to stream on &lt;platform&gt; with SplitCam". Built to move the
@@ -14,14 +14,25 @@ adult = revenue, so it gets its own domain + 301 redirects, not deletion).
 - Sister project: the main SplitCam site (`../splitcam/`).
 
 ## Current state
-- **1400 pages**: 33 platforms × 35 languages + per-language hubs, legal, OBS-alternative
-  and become-a-cam-model pages.
-- All pages are `noindex` — this is staging, not the production domain yet.
-- Platforms = the original 19 plus the now-complete "14 parent expansion": livejasmin,
-  myfreecams, cherry-tv, amateurtv, camster, camversity, skyprivate, manyvids, fansly (1-9),
-  ifriends, babestation, adultwork (10-12), jerkmate, justforfans (13-14). All live across
-  all 35 languages. Note: jerkmate broadcasts via the Streamate network (reuses the streamate
-  flow); justforfans is browser-live so SplitCam connects as a virtual camera.
+- **44 platforms × 35 languages** (≈ 1 800+ pages) + per-language hubs, legal,
+  OBS-alternative, become-a-cam-model and the new SEO-grouped category hub.
+- Production domain **`camstreamguide.com` is connected** — `noindex` has been
+  removed from all content pages; Google can index. Bing + Yandex webmaster
+  verification slots wired in `build.py`; GSC verification meta tag in place.
+- Platform set: original 19 + 14-parent expansion (livejasmin, myfreecams,
+  cherry-tv, amateurtv, camster, camversity, skyprivate, manyvids, fansly,
+  ifriends, babestation, adultwork, jerkmate, justforfans) **+11 added in
+  2026-06 batches:** 5 cam-model platforms, 4 regional cam platforms,
+  MyFans.jp + Privacy.com.br (Brazil/Japan).
+- New SEO topology: category-grouped hub (live-cam / cam-model / regional
+  / virtual-camera / OBS-alt) with anchor TOC, cross-refs, 3-level
+  breadcrumbs and method-aware "related-cards" + autolinked brand mentions
+  in body copy.
+- FAQ depth: **5 universal FAQ entries per platform × 35 langs** added
+  (≈ 9 450 Q&A pairs) so every page hits Schema FAQPage threshold.
+- Brand: redesigned to a signal-broadcast / signal-waves icon, matching
+  favicon, white wordmark with colored 'Stream'. Language switcher reordered
+  by popularity. CJK titles trimmed to ≤34 chars for zh/ko on a few slugs.
 
 ## How it's built — STATIC GENERATOR
 Do not hand-edit the HTML. Edit data, then regenerate.
@@ -64,14 +75,55 @@ full meta (OG + Twitter cards).
   (uses `camstreamguide.com` as a placeholder).
 
 ## Pending before launch
-1. ~~Register a neutral domain~~ — **done: `camstreamguide.com`**. Placeholder `NEWDOMAIN.com`
-   has been replaced everywhere (canonical, og:url, schema in `build.py`, `REDIRECTS.md`).
-2. Connect `camstreamguide.com` to hosting/Pages; then remove `noindex` (in `build.py`,
-   two `<meta name="robots">` lines) and rebuild.
+1. ~~Register a neutral domain~~ — **done: `camstreamguide.com`**.
+2. ~~Connect domain + remove `noindex`~~ — **done.** Live, indexable.
 3. Apply the `.htaccess` 301 block from `REDIRECTS.md` on splitcam.com **after** the new
-   site is live on `camstreamguide.com` — never 301 to URLs that 404.
+   site is live on `camstreamguide.com` — never 301 to URLs that 404. **← still pending.**
 4. Optional: official platform logos → `logos/`, screenshots → `shots/`, Android SplitCam
    Remote link.
+
+## Session log — 2026-06-09 (June launch push)
+
+The site went **live on `camstreamguide.com`** this iteration. Big swing:
+
+- **Launch:** removed `noindex` from all content pages (`build.py`), wired
+  Google / Bing / Yandex Search Console verification slots, regenerated.
+- **+11 new platforms × 35 langs (≈ 385 new pages):** 5 cam-model
+  platforms, 4 regional cam platforms, MyFans.jp + Privacy.com.br. Each
+  passes the multi-language sync rule (all 35 `platforms_<lang>.py` files).
+- **SEO topology overhaul:** category-grouped hub (live-cam / cam-model /
+  regional / virtual-camera / OBS-alt) with anchor-link TOC,
+  method-aware related-cards, autolinked brand mentions in body, and
+  3-level breadcrumbs on every page.
+- **FAQ depth:** added 5 universal FAQ entries per platform × 35 langs
+  → ≈ 9 450 new Q&A pairs, every page now meets FAQPage Schema threshold.
+- **Brand:** redesigned logo (signal-waves / signal-broadcast icon),
+  matching favicon, colored 'Stream' wordmark; language switcher
+  reordered by usage. CJK titles trimmed to ≤34 chars on a few slugs
+  (zh/ko fc2-live, mym-fans, boosty, amateurcommunity).
+- **Hub polish:** MyFreeCams pinned 3rd, MFC moved to 2nd in right col,
+  added Stream / Virtual-camera filter.
+
+Still pending: `.htaccess` 301 block on splitcam.com (item 3 above).
+
+## Recent commits — main cam-streaming-guides repo (most recent first)
+```
+ebb02ed68 SEO topology: category-grouped hub + anchor TOC + cross-refs + 3-level breadcrumbs
+6959caa22 verify: enable Bing + Yandex webmaster tools
+997d1e114 internal linking: method-aware related-cards + autolinked brand mentions
+c0710f315 SEO: add 5 universal FAQ entries per platform × 35 langs (+9 450 Q&A pairs)
+220e651c0 launch: add GSC / Bing / Yandex verification slots in build.py
+94bc4c644 launch: remove noindex from content pages (domain connected, Google can index now)
+35c40206a Add MyFans.jp + Privacy.com.br × 35 languages (70 new pages)
+3418d9dbc qc: trim 6 CJK titles to ≤34 chars (zh/ko fc2-live, mym-fans, boosty, amateurcommunity)
+5c223f101 Add 4 regional cam platforms × 35 languages (140 new pages)
+2c14bbc29 Add 5 cam-model platforms × 35 languages (175 new pages)
+2890fdb2b brand: signal-waves logo + language switcher ordered by popularity
+c7047c5db Redesign brand logo to signal-broadcast icon
+fadb3306b Hub: pin MyFreeCams to 3rd, shift the rest down by one
+5be96c7f3 Hub: move MFC to 2nd in right column + add Stream/Virtual-camera filter
+d13326d3f Brand polish: camera-lens logo, white wordmark with colored 'Stream', matching favicon
+```
 
 ## Deploy
 ```bash
