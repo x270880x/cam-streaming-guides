@@ -34,6 +34,24 @@ OBS_NAV = {
 SITE = "https://camstreamguide.com"
 DOWNLOAD_URL = "https://splitcam.com/download"   # software download (decision point — see README)
 SITE_NAME = "CamStreamGuide.com"
+# Search engine verification tokens — paste the value the dashboard gives you and rebuild.
+# These render as <meta> tags on every page when set; left empty they're skipped.
+GSC_VERIFY = ""    # Google Search Console — content of the html-tag method
+BING_VERIFY = ""   # Bing Webmaster Tools — content of the msvalidate.01 method
+YANDEX_VERIFY = "" # Yandex Webmaster — content of the yandex-verification method
+
+
+def verify_meta(depth=""):
+    """Render verification meta tags (only those with a non-empty token)."""
+    out = []
+    if GSC_VERIFY:
+        out.append(f'<meta name="google-site-verification" content="{GSC_VERIFY}">')
+    if BING_VERIFY:
+        out.append(f'<meta name="msvalidate.01" content="{BING_VERIFY}">')
+    if YANDEX_VERIFY:
+        out.append(f'<meta name="yandex-verification" content="{YANDEX_VERIFY}">')
+    return "\n".join(out)
+
 BRAND_LOGO = (
     '<svg class="logo" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">'
     '<defs><linearGradient id="csgLogo" x1="0" y1="0" x2="1" y2="1">'
@@ -1824,9 +1842,7 @@ def render(p, lang, all_platforms):
 <link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
 <link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
-<!-- <meta name="google-site-verification" content="YOUR-GSC-TOKEN"> -->
-<!-- <meta name="msvalidate.01" content="YOUR-BING-TOKEN"> -->
-<!-- <meta name="yandex-verification" content="YOUR-YANDEX-TOKEN"> -->
+{verify_meta()}
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(d['title'])}">
@@ -3364,9 +3380,7 @@ def render_hub(platforms, lang):
 <link rel="icon" type="image/svg+xml" href="{hub_depth}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{hub_depth}favicon.ico">
 <link rel="apple-touch-icon" href="{hub_depth}apple-touch-icon.png">
-<!-- <meta name="google-site-verification" content="YOUR-GSC-TOKEN"> -->
-<!-- <meta name="msvalidate.01" content="YOUR-BING-TOKEN"> -->
-<!-- <meta name="yandex-verification" content="YOUR-YANDEX-TOKEN"> -->
+{verify_meta()}
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(hb['title'])}">
