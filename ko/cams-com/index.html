@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "캠 사이트",
+     "item": "https://camstreamguide.com/ko/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Cams.com",
      "item": "https://camstreamguide.com/ko/cams-com/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">답변</a>
+  <a href="#steps">단계</a>
+  <a href="#tips">팁</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">관련 가이드</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">빠른 답변</div>
     <div class="qa-text">SplitCam으로 Cams.com 방송: SplitCam 설치, 장면 구성, Model Center에서 Cams.com RTMP 서버 URL과 stream key 받기, SplitCam에 붙여넣기, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">단계별 안내</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam 다운로드 및 설치</div><p class="step-p">SplitCam은 Windows와 macOS용 무료 라이브 방송 소프트웨어 — 가입 없음, 카드 없음, 워터마크 없음.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">장면 구성</div><p class="step-p">SplitCam을 열고 웹캠을 추가하세요. 오버레이, 팁 메뉴, 두 번째 카메라나 폰, 뷰티 필터, AI 배경을 실시간으로 얹으세요.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Cams.com URL과 stream key 받기</div><p class="step-p">Cams.com Model Center에 로그인해 <strong>외부 인코더 / OBS</strong> 탭을 열고 <strong>서버 URL</strong>과 <strong>stream key</strong>를 복사.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam을 Cams.com에 연결</div><p class="step-p">SplitCam의 <strong>Stream Settings → 커스텀 RTMP</strong>에 URL과 key를 붙여넣으세요. 1920×1080, 30 fps, 키프레임 2초로 3,500–5,000 Kbps를 설정.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live 클릭</div><p class="step-p">SplitCam에서 <strong>Go Live</strong>를 누른 뒤 Model Center에서 온라인으로 전환. 약 10초 안에 신호가 Cams.com / AFF 네트워크에 도달합니다.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">프로 팁</h2>
   <div class="tips-grid"><div class="tip-card"><h3>AFF 교차 트래픽 = 결제 회원</h3><p>Cams.com은 이미 결제 수단이 등록된 AdultFriendFinder 계정에서 시청자를 끌어옵니다 — 신규 가입 시청자와 다릅니다. 프라이빗 전환과 팁이 평균보다 잘 나옵니다.</p></div><div class="tip-card"><h3>외부 인코더가 브라우저를 이깁니다</h3><p>SplitCam의 RTMP는 깔끔한 비트레이트와 오버레이가 얹힌 멀티 카메라 장면 구성을 제공합니다; 브라우저 방송기도 되지만 연출이 제한됩니다.</p></div><div class="tip-card"><h3>프라이빗 쇼 도구를 활용하세요</h3><p>Cams.com은 프라이빗·익스클루시브 세션에 무게가 실립니다. 팁 메뉴와 프라이빗으로 가는 명확한 동선(오버레이 안)이 시청자당 매출을 눈에 띄게 끌어올립니다.</p></div><div class="tip-card"><h3>먼저 비공개로 테스트하세요</h3><p>시청자에게 방을 열기 전에 짧은 테스트 방송으로 카메라, 오디오, 화면 구도, 오버레이를 점검하세요.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">문제 해결</h2><div class="faq-list"><details class="faq-item"><summary>Cams.com 방송이 끊기거나 버퍼링됨</summary><p>거의 항상 비트레이트가 업로드가 감당할 수 있는 것보다 높게 설정된 경우입니다. SplitCam 내장 속도 테스트를 돌린 뒤 비트레이트를 측정된 업로드의 약 75%로 설정하세요 — 1080p에 3,500–6,000&nbsp;Kbps, 720p는 더 낮게. 인코더가 회선을 초과하지 않으면 끊김이 사라집니다.</p></details><details class="faq-item"><summary>Cams.com 방송 중 프레임 끊김</summary><p>프레임 끊김은 패킷이 Cams.com에 제때 도착하지 못한다는 뜻입니다 — 보통 불안정한 와이파이. 유선 이더넷으로 바꾸고 대역폭을 먹는 앱을 닫고 비트레이트를 약간 낮추세요. 한 번 튀는 건 괜찮지만 계속 늘면 회선이 못 따라가는 것입니다.</p></details><details class="faq-item"><summary>검은 화면 — 시청자가 Cams.com에서 영상을 못 봄</summary><p>카메라가 SplitCam에서 활성 소스로 선택되지 않았거나 다른 앱이 잡고 있습니다. Zoom, Skype, OBS를 닫고 SplitCam 소스 목록에서 웹캠을 다시 고르고 Go Live 전에 미리보기에 영상이 나오는지 확인하세요.</p></details><details class="faq-item"><summary>Cams.com이 스트림 키를 거부하거나 연결되지 않음</summary><p>스트림 키를 다시 복사하세요 — 끝의 공백이나 재설정된 오래된 키가 가장 흔한 원인입니다. 서버 URL이 Cams.com이 표시한 것과 일치하고 계정에 외부 인코더 방송이 켜져 있는지 확인하세요. SplitCam Stream Settings의 초록 슬라이더가 유효한 키를 확인해 줍니다.</p></details><details class="faq-item"><summary>Cams.com에서 소리가 없거나 음성이 어긋남</summary><p>SplitCam을 카메라 그리고 마이크로 모두 선택하고 SplitCam 오디오 소스 안에서 진짜 마이크를 고르세요. 오디오가 영상보다 뒤처지면 해상도를 한 단계 낮추세요 — 인코더가 과부하라 오디오가 늦은 프레임을 기다리는 것입니다.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">자주 묻는 질문</h2>
   <div class="faq-list"><details class="faq-item"><summary>Cams.com은 AdultFriendFinder와 같나요?</summary><p>같은 모회사 네트워크입니다. Cams.com은 캠 방송 브랜드이고, 시청자는 AFF, AmateurMatch, 기타 FriendFinder 사이트를 통해 들어올 수 있습니다 — 트래픽의 큰 부분을 차지합니다.</p></details><details class="faq-item"><summary>Cams.com stream key는 어디서 받나요?</summary><p>Cams.com Model Center에서 <em>외부 인코더</em> 또는 <em>OBS</em> 탭을 여세요 — 서버 URL과 stream key가 표시됩니다. 둘 다 SplitCam의 커스텀 RTMP 필드에 붙여넣으세요.</p></details><details class="faq-item"><summary>브라우저 방송기 vs RTMP?</summary><p>RTMP(외부 인코더)가 더 낫습니다 — 안정적 비트레이트와 풀 SplitCam 장면. 브라우저 방송기도 대안으로 가능합니다: 웹캠으로 SplitCam을 선택하세요.</p></details><details class="faq-item"><summary>Cams.com에 SplitCam은 무료인가요?</summary><p>네 — SplitCam은 무료, 워터마크 없음, 시간 제한 없음.</p></details><details class="faq-item"><summary>Cams.com에서 모델은 얼마나 벌 수 있나요?</summary><p>Cams.com에서의 수입은 시청자 규모, 방송 시간, 팁 문화에 따라 달라집니다. 활발한 방송인은 보통 월 $200~$3,000을 가져가며, 상위권은 $10,000 이상을 벌기도 합니다. 수익 배분은 Cams.com의 수수료 구조를 따르므로, 라이브 시작 전에 모델 계약서를 반드시 확인하세요.</p></details><details class="faq-item"><summary>Cams.com은(는) 방송인에게 안전한가요?</summary><p>Cams.com은(는) 지급 전에 연령 및 신분 확인을 요구하므로 모델을 사기로부터 보호합니다. 활동명을 사용하고, 카메라 앞에서 개인 정보를 절대 공유하지 말며, 지역 차단을 활성화해 본인이 거주하는 지역에서 방송이 보이지 않도록 하고, 모든 시청자 요청을 거래로 다루세요. SplitCam의 오버레이와 AI 배경 기능을 사용하면 실제 주변 환경을 가리거나 교체할 수도 있습니다.</p></details><details class="faq-item"><summary>Cams.com에서 모델이 되려면 어떤 서류가 필요한가요?</summary><p>Cams.com은(는) 일반적으로 정부 발급 사진 신분증(여권, 운전면허증 또는 신분증), 신분증을 들고 찍은 셀카, 그리고 세금/지급 양식(미국은 W-9, 미국 외 지역은 W-8BEN)을 요구합니다. 승인까지 보통 24~72시간이 걸리며, 승인되면 당일에 바로 라이브를 시작할 수 있습니다.</p></details><details class="faq-item"><summary>휴대폰으로 Cams.com에 방송할 수 있나요?</summary><p>Cams.com은(는) 보통 모바일 방송 앱이나 모바일 웹 방송 기능을 제공하지만, 오버레이, 보조 카메라, AI 배경이 없는 등 기능이 제한적입니다. 완전한 제작 품질을 원한다면 컴퓨터에서 SplitCam으로 방송하고, 휴대폰을 보조 카메라로 사용하세요(SplitCam은 휴대폰에서 IP 카메라 입력을 받을 수 있습니다).</p></details><details class="faq-item"><summary>Cams.com은(는) OBS나 외부 인코더를 지원하나요?</summary><p>네 — Cams.com은(는) 방송인 패널에서 RTMP 서버 URL과 스트림 키를 제공합니다. 둘 다 SplitCam의 <strong>Stream Settings → Custom RTMP</strong>에 붙여 넣고, 1920×1080, 30fps, 4,000~5,000 Kbps 비트레이트로 설정한 뒤 <strong>Go Live</strong>를 클릭하세요. Custom RTMP 경로를 사용하면 SplitCam의 모든 장면 구성 기능(멀티 카메라, 오버레이, 필터)을 그대로 활용할 수 있습니다.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">다른 플랫폼 가이드</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 방송</h4><p>BongaCams를 위한 External Encoder 설정.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat 방송</h4><p>Stripchat 방송을 위한 외부 소프트웨어 설정.</p></a><a class="related-card" href="../imlive/"><h4>ImLive의 SplitCam</h4><p>ImLive를 위한 가상 카메라 설정 — RTMP 없음.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts 추가</h4><p>MyFreeCams 방송에 애니메이션 팁 알림 표시.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">더 배우기</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>다중 송출</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>캠 모델 되기</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense 토이</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>라이브 방송 준비됐나요?</h2>

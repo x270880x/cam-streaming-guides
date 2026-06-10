@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Piattaforme di fan",
+     "item": "https://camstreamguide.com/it/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Privacy.com.br",
      "item": "https://camstreamguide.com/it/privacy-com-br/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Risposta</a>
+  <a href="#steps">Passi</a>
+  <a href="#tips">Consigli</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guide correlate</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">In breve</div>
     <div class="qa-text">Vai in diretta su Privacy.com.br con SplitCam: installa SplitCam, componi la scena, avvia un ao-vivo su Privacy e nel selettore camera del broadcaster scegli <em>SplitCam</em> — poi vai live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Passo dopo passo</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Scarica e installa SplitCam</div><p class="step-p">SplitCam è un software di live streaming gratuito per Windows e macOS — senza registrazione, senza carta, senza filigrana. Installa una camera virtuale che il browser può selezionare.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Componi la scena</div><p class="step-p">Apri SplitCam e aggiungi la webcam. Sovrapponi overlay in portoghese ("gorjeta", "desbloquear PPV"), una seconda camera o il telefono, filtri beauty o sfondo IA.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Avvia un ao vivo su Privacy.com.br</div><p class="step-p">Accedi al tuo account creator Privacy e apri il broadcaster ao-vivo per avviare una diretta per i tuoi abbonati.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Seleziona SplitCam come camera</div><p class="step-p">Nel menu camera di Privacy scegli <strong>SplitCam</strong> al posto della webcam grezza — la tua scena composta sostituisce la camera piatta. (Oppure incolla una stream key nei campi Custom RTMP di SplitCam se disponibile.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Avvia la trasmissione — la scena, gli overlay e i filtri di SplitCam arrivano ai tuoi abbonati Privacy.com.br.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Consigli</h2>
   <div class="tips-grid"><div class="tip-card"><h3>La più grande fan-platform del Brasile</h3><p>Privacy è la piattaforma di abbonamento per creator numero 1 in Brasile, con un pubblico di lingua portoghese abituato a pagare in BRL via PIX. Overlay in portoghese + una scena SplitCam curata convertono molto meglio di una webcam piatta.</p></div><div class="tip-card"><h3>Camera virtuale, senza stream key</h3><p>La diretta solo-browser ti dà comunque la scena SplitCam completa — seconda camera, overlay, filtri beauty o sfondo IA — basta selezionare SplitCam come webcam.</p></div><div class="tip-card"><h3>Tip menu + PPV durante l&#x27;ao vivo</h3><p>Privacy supporta gorjetas (mance) e post a pagamento. Un overlay on-screen che nomina il tuo pacchetto PPV o la meta-de-gorjeta alza i guadagni durante una diretta.</p></div><div class="tip-card"><h3>Prima un test privato</h3><p>Fai una breve diretta di prova per controllare camera, audio, inquadratura e overlay prima di aprire la stanza al pubblico.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Risoluzione dei problemi</h2><div class="faq-list"><details class="faq-item"><summary>Lo stream su Privacy.com.br va a scatti o si blocca in buffering</summary><p>Quasi sempre il bitrate è più alto di quanto regge il tuo upload. Esegui lo speed test integrato di SplitCam e imposta il bitrate a circa il 75% dell'upload misurato — 3.500–6.000&nbsp;Kbps per 1080p, meno per 720p. Il lag sparisce appena l'encoder smette di superare la tua connessione.</p></details><details class="faq-item"><summary>Frame persi durante la trasmissione su Privacy.com.br</summary><p>I frame persi significano che i pacchetti non arrivano a Privacy.com.br in tempo — di solito Wi-Fi instabile. Passa a una connessione Ethernet via cavo, chiudi le app che consumano banda e abbassa un po' il bitrate. Un picco isolato va bene; una salita costante vuol dire che la connessione non tiene il passo.</p></details><details class="faq-item"><summary>Schermo nero — gli spettatori non vedono il video su Privacy.com.br</summary><p>La camera non è selezionata come sorgente attiva in SplitCam, o un'altra app la sta usando. Chiudi Zoom, Skype o OBS, riseleziona la webcam nella lista sorgenti di SplitCam e verifica che l'anteprima mostri il tuo flusso prima di premere Go Live.</p></details><details class="faq-item"><summary>Privacy.com.br rifiuta la stream key o non si connette</summary><p>Ricopia la stream key — uno spazio finale o una chiave vecchia già rigenerata è la causa più comune. Verifica che l'URL del server corrisponda a quello mostrato da Privacy.com.br e che la trasmissione via encoder esterno sia attiva sul tuo account. Uno slider verde nelle Stream Settings di SplitCam conferma una chiave valida.</p></details><details class="faq-item"><summary>Niente audio o audio fuori sync su Privacy.com.br</summary><p>Scegli SplitCam come camera e come microfono, e seleziona il tuo microfono reale dentro la sorgente audio di SplitCam. Se l'audio resta indietro rispetto al video, abbassa la risoluzione di un livello — l'encoder è sovraccarico e l'audio aspetta i frame in ritardo.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Come si collega SplitCam a Privacy.com.br?</summary><p>L'ao vivo di Privacy è browser-based, quindi SplitCam si collega come camera virtuale — scegli SplitCam nel selettore camera. Nessuna stream key necessaria.</p></details><details class="faq-item"><summary>Posso usare overlay e più camere su Privacy?</summary><p>Sì — componi la scena in SplitCam (seconda camera, overlay, sfondo IA); Privacy vede la scena finita come un'unica webcam.</p></details><details class="faq-item"><summary>Privacy.com.br supporta OBS o encoder esterni?</summary><p>L'ao vivo è principalmente browser/webcam-based. Se nella dashboard compare un'opzione stream-key, incollala nei campi Custom RTMP di SplitCam; altrimenti usa il metodo camera virtuale.</p></details><details class="faq-item"><summary>SplitCam è gratis su Privacy.com.br?</summary><p>Sì — SplitCam è gratis, senza filigrana e senza limite di tempo.</p></details><details class="faq-item"><summary>Quanto possono guadagnare le modelle su Privacy.com.br?</summary><p>I guadagni su Privacy.com.br dipendono dalle dimensioni del pubblico, dalle ore di streaming e dai comportamenti di tipping. Le broadcaster attive portano a casa tipicamente 200–3.000 $ al mese; i top performer raggiungono oltre 10.000 $. La tua quota di ricavi segue la struttura delle commissioni di Privacy.com.br — controlla il contratto modella prima di andare in diretta.</p></details><details class="faq-item"><summary>Privacy.com.br è sicuro per le broadcaster?</summary><p>Privacy.com.br richiede la verifica di età e identità prima del pagamento, il che protegge le modelle dalle frodi. Usa un nome d'arte, non condividere mai dati personali in camera, attiva i geo-block per nascondere lo stream dalla tua regione di residenza e tratta ogni richiesta degli spettatori come transazionale. Gli overlay e lo sfondo AI di SplitCam possono anche nascondere o sostituire l'ambiente reale.</p></details><details class="faq-item"><summary>Quali documenti servono per diventare modella su Privacy.com.br?</summary><p>Privacy.com.br richiede tipicamente un documento d'identità con foto rilasciato dal governo (passaporto, patente o carta d'identità), un selfie con il documento in mano e un modulo fiscale/di pagamento (W-9 per gli USA, W-8BEN per non-USA). L'approvazione richiede di solito 24–72 ore; una volta approvata puoi andare in diretta lo stesso giorno.</p></details><details class="faq-item"><summary>Posso trasmettere in streaming su Privacy.com.br dal telefono?</summary><p>Privacy.com.br di solito offre un'app broadcaster mobile o un broadcaster mobile-web, ma l'esperienza è limitata — niente overlay, niente seconda camera, niente sfondo AI. Per una qualità di produzione completa, trasmetti da un computer con SplitCam e usa il telefono come seconda camera (SplitCam accetta input da IP-camera dai telefoni).</p></details><details class="faq-item"><summary>Posso usare SplitCam come camera virtuale su Privacy.com.br?</summary><p>Sì — la live di Privacy.com.br gira nel browser, quindi SplitCam si registra come una webcam chiamata <strong>"SplitCam Video Driver"</strong>. Apri il broadcaster di Privacy.com.br, clicca sul selettore della camera nel browser e scegli SplitCam. La tua scena composta (overlay, seconda camera, filtri, sfondo AI) arriva agli spettatori come un singolo feed webcam.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Altre guide di piattaforma</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam su ImLive</h4><p>Setup camera virtuale per ImLive — niente RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam su SkyPrivate</h4><p>Setup camera virtuale per le chiamate cam SkyPrivate basate su Skype.</p></a><a class="related-card" href="../justforfans/"><h4>Diretta su JustForFans</h4><p>Usa SplitCam come camera virtuale nel broadcaster live di JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Diretta su Fanvue</h4><p>Usa SplitCam come camera virtuale per le dirette di Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Trasmettere su Chaturbate</h4><p>Configurazione tramite token con encoder esterno per Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Trasmettere su CAM4</h4><p>External Encoder per CAM4 con geo-controlli.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continua</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Diventare cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Giocattoli Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Pronto a trasmettere in diretta?</h2>

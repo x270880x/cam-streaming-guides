@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "टूल्स",
+     "item": "https://camstreamguide.com/hi/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/hi/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">उत्तर</a>
+  <a href="#steps">चरण</a>
+  <a href="#tips">टिप्स</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">संबंधित गाइड</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">त्वरित उत्तर</div>
     <div class="qa-text">Lovense टॉय स्ट्रीम में जोड़ने के लिए: SplitCam और Lovense सॉफ़्टवेयर इंस्टॉल करें, टॉय पेयर करें, Lovense को कैम प्लेटफ़ॉर्म से कनेक्ट करें, SplitCam में Lovense स्टेटस को Browser लेयर के रूप में जोड़ें, फिर सामान्य रूप से स्ट्रीम करें।</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">चरण दर चरण</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam इंस्टॉल करें</div><p class="step-p">SplitCam Windows और macOS के लिए मुफ़्त लाइव स्ट्रीमिंग सॉफ़्टवेयर है।</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Lovense सॉफ़्टवेयर इंस्टॉल करें और टॉय पेयर करें</div><p class="step-p">Lovense Connect / Lovense Stream इंस्टॉल करें। टॉय ऑन करें और Bluetooth से पेयर करें।</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Lovense को कैम प्लेटफ़ॉर्म से कनेक्ट करें</div><p class="step-p">Lovense ऐप में अपना कैम अकाउंट कनेक्ट करें।</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam में Lovense ओवरले जोड़ें</div><p class="step-p">Lovense, overlay/widget URL देता है। SplitCam सीन में <strong>Browser</strong> लेयर के रूप में जोड़ें।</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">सीन बनाएं और Go Live</div><p class="step-p">कैमरा और ओवरले जोड़ें, SplitCam में कैम प्लेटफ़ॉर्म का RTMP की पेस्ट करें और <strong>Go Live</strong> क्लिक करें।</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">प्रो टिप्स</h2>
   <div class="tips-grid"><div class="tip-card"><h3>ऑफ़िशियल Lovense SplitCam Toolset उपयोग करें</h3><p>Lovense SplitCam के लिए अपने इंस्टॉलेशन गाइड के साथ डेडिकेटेड toolset पब्लिश करता है।</p></div><div class="tip-card"><h3>Lovense Cam Extension अपडेट करें</h3><p>Toolset को Lovense Cam Extension (30.1.4 या नया) चाहिए।</p></div><div class="tip-card"><h3>टॉय को चार्ज रखें</h3><p>शो के बीच में कमज़ोर बैटरी इंटरएक्टिव पार्ट खराब करती है।</p></div><div class="tip-card"><h3>टोकन रिएक्शन टेस्ट करें</h3><p>रूम खोलने से पहले एक छोटा टेस्ट टिप भेजें।</p></div><div class="tip-card"><h3>वर्शन ज़रूरतें जांचें</h3><p>Lovense SplitCam Toolset को SplitCam 10.4.5 या नया चाहिए।</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">समस्या निवारण</h2><div class="faq-list"><details class="faq-item"><summary>Lovense स्ट्रीम रुक-रुक रही है या बफ़र हो रही है</summary><p>लगभग हमेशा बिटरेट आपके अपलोड से ज़्यादा सेट होता है। SplitCam का बिल्ट-इन स्पीड टेस्ट चलाएं, फिर बिटरेट मापे गए अपलोड का ~75% सेट करें — 1080p के लिए 3500–6000&nbsp;Kbps। जब एन्कोडर आपकी लाइन से ज़्यादा नहीं जाता तो रुकना बंद हो जाता है।</p></details><details class="faq-item"><summary>Lovense स्ट्रीम के दौरान फ्रेम खो रहे हैं</summary><p>खोए फ्रेम का मतलब है पैकेट समय पर Lovense नहीं पहुंचते — आमतौर पर अस्थिर Wi-Fi। वायर्ड Ethernet पर स्विच करें, बैंडविड्थ खाने वाले ऐप बंद करें और बिटरेट थोड़ा कम करें।</p></details><details class="faq-item"><summary>ब्लैक स्क्रीन — दर्शक Lovense पर वीडियो नहीं देख सकते</summary><p>आपका कैमरा SplitCam में एक्टिव सोर्स नहीं चुना गया, या कोई दूसरा ऐप इसे रोक रहा है। Zoom, Skype या OBS बंद करें, SplitCam में वेबकैम दोबारा चुनें।</p></details><details class="faq-item"><summary>Lovense स्ट्रीम की रिजेक्ट कर रहा है या कनेक्ट नहीं हो रहा</summary><p>स्ट्रीम की दोबारा कॉपी करें — अंत में स्पेस या पुरानी रीसेट की सबसे आम कारण हैं। सुनिश्चित करें सर्वर URL वही है जो Lovense दिखाता है।</p></details><details class="faq-item"><summary>Lovense पर कोई ऑडियो नहीं या ऑडियो सिंक नहीं है</summary><p>SplitCam को कैमरा और माइक्रोफ़ोन दोनों के रूप में चुनें, और SplitCam के ऑडियो सोर्स में अपना असली माइक्रोफ़ोन चुनें। अगर ऑडियो वीडियो से पीछे है, रेज़ॉल्यूशन एक स्तर कम करें।</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">अक्सर पूछे जाने वाले प्रश्न</h2>
   <div class="faq-list"><details class="faq-item"><summary>क्या Lovense, SplitCam को ऑफ़िशियली सपोर्ट करता है?</summary><p>हाँ — Lovense ऑफ़िशियल «Lovense SplitCam Toolset» डॉक्युमेंट करता है।</p></details><details class="faq-item"><summary>क्या टॉय सीधे SplitCam से कनेक्ट होता है?</summary><p>नहीं — टॉय Lovense ऐप से पेयर होता है; SplitCam Lovense ओवरले दिखाता है।</p></details><details class="faq-item"><summary>कौन सी कैम साइट्स Lovense सपोर्ट करती हैं?</summary><p>Lovense Cam Extension आधिकारिक रूप से <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> और <a href="../camsoda/" class="autolink">CamSoda</a> को सपोर्ट करता है।</p></details><details class="faq-item"><summary>क्या स्क्रीन पर लेटेस्ट टिप दिखा सकते हैं?</summary><p>हाँ — SplitCam में Lovense widget URL को Browser लेयर के रूप में जोड़ें।</p></details><details class="faq-item"><summary>Lovense पर मॉडल कितनी कमाई कर सकते हैं?</summary><p>Lovense पर कमाई दर्शकों की संख्या, स्ट्रीमिंग के घंटों और टिप देने के व्यवहार पर निर्भर करती है। सक्रिय ब्रॉडकास्टर आमतौर पर हर महीने $200–$3,000 कमाते हैं; शीर्ष कलाकार $10,000+ तक पहुँचते हैं। आपकी आय का हिस्सा Lovense की कमीशन संरचना के अनुसार होता है — लाइव होने से पहले मॉडल अनुबंध अवश्य देखें।</p></details><details class="faq-item"><summary>क्या Lovense ब्रॉडकास्टरों के लिए सुरक्षित है?</summary><p>Lovense भुगतान से पहले आयु और पहचान सत्यापन माँगता है, जो मॉडलों को धोखाधड़ी से बचाता है। स्टेज नाम का उपयोग करें, कैमरे पर कभी भी व्यक्तिगत डेटा साझा न करें, अपने घर के क्षेत्र से स्ट्रीम छिपाने के लिए geo-blocks सक्षम करें, और हर दर्शक के अनुरोध को लेन-देन के रूप में मानें। SplitCam के overlays और AI background आपके वास्तविक परिवेश को छिपाने या बदलने में भी मदद कर सकते हैं।</p></details><details class="faq-item"><summary>Lovense पर मॉडल बनने के लिए मुझे कौन से दस्तावेज़ चाहिए?</summary><p>Lovense को आमतौर पर सरकार द्वारा जारी फोटो आईडी (passport, driver's license या ID card), आईडी पकड़े हुए एक selfie, और एक tax/payout फॉर्म (अमेरिका के लिए W-9, गैर-अमेरिकी के लिए W-8BEN) की आवश्यकता होती है। स्वीकृति में आमतौर पर 24–72 घंटे लगते हैं; स्वीकृति मिलते ही आप उसी दिन लाइव हो सकते हैं।</p></details><details class="faq-item"><summary>क्या मैं अपने फोन से Lovense पर स्ट्रीम कर सकता हूँ?</summary><p>Lovense आमतौर पर एक mobile broadcaster app या mobile-web broadcaster प्रदान करता है, लेकिन अनुभव सीमित होता है — कोई overlays नहीं, कोई दूसरा कैमरा नहीं, कोई AI background नहीं। पूर्ण प्रोडक्शन क्वालिटी के लिए, SplitCam वाले कंप्यूटर से ब्रॉडकास्ट करें और अपने फोन को दूसरे कैमरे के रूप में उपयोग करें (SplitCam फोन से IP-camera input स्वीकार करता है)।</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">आधिकारिक सहायता — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">हम एक स्वतंत्र गाइड हैं। अकाउंट, भुगतान या तकनीकी समस्याओं के लिए सीधे प्लेटफ़ॉर्म की आधिकारिक सहायता से संपर्क करें।</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">दूसरे प्लेटफ़ॉर्म के गाइड</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate स्ट्रीम</h4><p>Chaturbate पर टोकन-बेस्ड सेटअप और एक्सटर्नल एन्कोडर।</p></a><a class="related-card" href="../cam4/"><h4>CAM4 स्ट्रीम</h4><p>CAM4 पर जियो-कंट्रोल के साथ External Encoder।</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">और सीखें</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam मॉडल बनें</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense टॉय</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>लाइव जाने के लिए तैयार हैं?</h2>

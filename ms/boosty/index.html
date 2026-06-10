@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Platform peminat",
+     "item": "https://camstreamguide.com/ms/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Boosty",
      "item": "https://camstreamguide.com/ms/boosty/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Jawapan</a>
+  <a href="#steps">Langkah</a>
+  <a href="#tips">Petua</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Panduan berkaitan</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Jawapan ringkas</div>
     <div class="qa-text">Live di Boosty dengan SplitCam: pasang SplitCam, bina adegan, mulakan live di Boosty, dan pilih <em>SplitCam</em> dalam dropdown kamera penyiar — kemudian go live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Langkah demi langkah</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Muat turun dan pasang SplitCam</div><p class="step-p">SplitCam ialah perisian penstriman langsung percuma untuk Windows dan macOS — tiada pendaftaran, tiada kad, tiada tera air. Ia memasang kamera maya yang boleh dipilih oleh pelayar.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bina adegan anda</div><p class="step-p">Buka SplitCam dan tambah kamera web. Lapisi tindihan (bahasa Rusia untuk audiens anda), kamera kedua atau telefon anda, penapis kecantikan atau latar AI.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Mulakan live di Boosty</div><p class="step-p">Log masuk ke akaun kreator Boosty dan buka penyiar live. Tetapkan had tahap jika anda mahu live di sebalik tahap berbayar.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Pilih SplitCam sebagai kamera</div><p class="step-p">Dalam dropdown kamera Boosty, pilih <strong>SplitCam</strong> dan bukan kamera web mentah anda — adegan tersusun menggantikan kamera rata.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Mulakan siaran — adegan, tindihan dan penapis SplitCam anda sampai kepada pelanggan Boosty.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Petua pro</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Platform kreator terbesar di Rusia</h3><p>Boosty menggantikan Patreon untuk kebanyakan kreator RU selepas sekatan, jadi audiens setia dan biasa membayar dalam RUB. Adegan SplitCam yang dipoles dengan tindihan bahasa Rusia menukar dengan baik.</p></div><div class="tip-card"><h3>Rancangan live mengikut tahap pelanggan</h3><p>Boosty membolehkan anda mengehadkan strim langsung mengikut tahap pelanggan. SplitCam berfungsi dengan semua tahap — pengekod tidak peduli tahap mana penonton berada, anda hanya menyiar sekali dan Boosty mengurus akses.</p></div><div class="tip-card"><h3>Tindihan tip dan bayar-untuk-tonton</h3><p>Boosty menyokong buka kunci pos berbayar dan tip. Tindihan pada skrin yang menamakan kelebihan tahap menaikkan penukaran semasa strim langsung.</p></div><div class="tip-card"><h3>Buat ujian peribadi dahulu</h3><p>Jalankan siaran ujian ringkas untuk menyemak kamera, audio, rangka dan tindihan sebelum membuka bilik kepada penonton.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Penyelesaian masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran Boosty tersekat atau menimbal</summary><p>Hampir sentiasa bitrate ditetapkan lebih tinggi daripada yang mampu ditanggung muat naik anda. Jalankan ujian kelajuan terbina SplitCam, kemudian tetapkan bitrate kira-kira 75% daripada muat naik diukur — 3,500–6,000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersekat hilang sebaik pengekod berhenti melebihi talian anda.</p></details><details class="faq-item"><summary>Bingkai hilang semasa siaran Boosty</summary><p>Bingkai hilang bermakna paket tidak sampai ke Boosty tepat masa — biasanya Wi-Fi tidak stabil. Beralih ke Ethernet berwayar, tutup apl yang memakan lebar jalur dan turunkan bitrate sedikit. Satu lonjakan tak mengapa; peningkatan berterusan bermakna talian tidak mengejar.</p></details><details class="faq-item"><summary>Skrin hitam — penonton tidak nampak video di Boosty</summary><p>Kamera anda tidak dipilih sebagai sumber aktif dalam SplitCam, atau apl lain menahannya. Tutup Zoom, Skype atau OBS, pilih semula kamera web dalam senarai sumber SplitCam dan pastikan pratonton menunjukkan imej anda sebelum tekan Go Live.</p></details><details class="faq-item"><summary>Boosty menolak kunci strim atau tidak menyambung</summary><p>Salin semula kunci strim — ruang di hujung atau kunci lama yang telah diset semula ialah punca paling biasa. Pastikan URL pelayan sepadan dengan yang Boosty paparkan dan siaran pengekod luaran dihidupkan pada akaun anda. Peluncur hijau dalam Stream Settings SplitCam mengesahkan kunci sah.</p></details><details class="faq-item"><summary>Tiada audio atau audio tak segerak di Boosty</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon sebenar anda dalam sumber audio SplitCam. Jika audio ketinggalan daripada video, turunkan resolusi satu peringkat — pengekod terlebih beban dan audio menunggu bingkai yang lewat.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Soalan lazim</h2>
   <div class="faq-list"><details class="faq-item"><summary>Bagaimana SplitCam menyambung ke Boosty?</summary><p>Live Boosty berasaskan pelayar, jadi SplitCam menyambung sebagai kamera maya — pilih SplitCam dalam pemilih kamera. Tiada stream key diperlukan.</p></details><details class="faq-item"><summary>Boleh saya guna tindihan pada live Boosty?</summary><p>Ya — bina adegan dalam SplitCam (tindihan, kamera kedua, latar AI); Boosty melihat satu kamera web. Pelanggan mendapat adegan tersusun penuh.</p></details><details class="faq-item"><summary>Adakah Boosty menyokong OBS atau pengekod luaran?</summary><p>Live Boosty terutama berasaskan pelayar. Jika pilihan stream key muncul dalam panel kreator anda, tampalkannya ke medan RTMP tersuai SplitCam; jika tidak, guna kaedah kamera maya.</p></details><details class="faq-item"><summary>Adakah SplitCam percuma untuk Boosty?</summary><p>Ya — SplitCam percuma, tiada tera air dan tiada had masa.</p></details><details class="faq-item"><summary>Berapakah pendapatan model di Boosty?</summary><p>Pendapatan di Boosty bergantung pada saiz audiens, jumlah jam siaran dan tabiat memberi tip. Penyiar aktif biasanya membawa pulang $200–$3,000 sebulan; pencapai teratas mencecah $10,000+. Bahagian hasil anda mengikut struktur komisen Boosty — semak perjanjian model sebelum mula siaran langsung.</p></details><details class="faq-item"><summary>Adakah Boosty selamat untuk penyiar?</summary><p>Boosty memerlukan pengesahan umur dan ID sebelum pembayaran, yang melindungi model daripada penipuan. Gunakan nama samaran, jangan sekali-kali kongsi data peribadi di depan kamera, aktifkan sekatan geo untuk menyembunyikan siaran anda daripada wilayah asal, dan anggap setiap permintaan penonton sebagai urus niaga. Tindanan dan latar belakang AI SplitCam juga boleh menyembunyikan atau menggantikan persekitaran sebenar anda.</p></details><details class="faq-item"><summary>Apakah dokumen yang saya perlukan untuk menjadi model di Boosty?</summary><p>Boosty biasanya memerlukan ID foto yang dikeluarkan kerajaan (pasport, lesen memandu atau kad pengenalan), swafoto memegang ID tersebut, dan borang cukai/pembayaran (W-9 untuk AS, W-8BEN untuk bukan AS). Kelulusan biasanya mengambil masa 24–72 jam; setelah diluluskan anda boleh mula siaran langsung pada hari yang sama.</p></details><details class="faq-item"><summary>Bolehkah saya membuat siaran di Boosty dari telefon saya?</summary><p>Boosty biasanya menawarkan aplikasi penyiar mudah alih atau penyiar web mudah alih, tetapi pengalamannya terhad — tiada tindanan, tiada kamera kedua, tiada latar belakang AI. Untuk kualiti produksi penuh, buat siaran dari komputer dengan SplitCam dan gunakan telefon anda sebagai kamera kedua (SplitCam menerima input IP-camera daripada telefon).</p></details><details class="faq-item"><summary>Bolehkah saya menggunakan SplitCam sebagai kamera maya di Boosty?</summary><p>Ya — siaran langsung Boosty berjalan dalam pelayar, jadi SplitCam didaftarkan sebagai webcam bernama <strong>"SplitCam Video Driver"</strong>. Buka penyiar Boosty, klik pemilih kamera dalam pelayar, dan pilih SplitCam. Adegan komposit anda (tindanan, kamera kedua, penapis, latar belakang AI) sampai kepada penonton sebagai satu suapan webcam.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Panduan untuk platform lain</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam di ImLive</h4><p>Persediaan kamera maya untuk ImLive — tiada RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam pada SkyPrivate</h4><p>Persediaan virtual camera untuk panggilan cam berasaskan Skype di SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Guna SplitCam sebagai kamera maya dalam penyiar langsung JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Guna SplitCam sebagai kamera maya untuk live Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Siaran Chaturbate</h4><p>Persediaan berasaskan token dengan pengekod luaran di Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Siaran CAM4</h4><p>External Encoder di CAM4 dengan kawalan geo.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Belajar lagi</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Jadi cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mainan Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Sedia untuk go live?</h2>

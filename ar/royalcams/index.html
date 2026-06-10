@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "مواقع الكام",
+     "item": "https://camstreamguide.com/ar/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "RoyalCams",
      "item": "https://camstreamguide.com/ar/royalcams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">إجابة</a>
+  <a href="#steps">خطوات</a>
+  <a href="#tips">نصائح</a>
+  <a href="#faq">أسئلة</a>
+  <a href="#related">أدلة ذات صلة</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">إجابة سريعة</div>
     <div class="qa-text">البث على RoyalCams مع SplitCam: ثبّت SplitCam، أنشئ المشهد، في لوحة تحكم العارض افتح <em>إعدادات البث ← المُشفِّر الخارجي</em>، انسخ URL الخادم وstream key، الصقهما في SplitCam، اضغط Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">خطوة بخطوة</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">نزّل وثبّت SplitCam</div><p class="step-p">‏SplitCam برنامج بث مباشر مجاني لـ Windows وmacOS — بدون تسجيل، بدون بطاقة، بدون علامة مائية.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">ابنِ مشهدك</div><p class="step-p">افتح SplitCam وأضف كاميرا الويب. ضع طبقات من التراكبات ونص أهداف الإكراميات وكاميرا ثانية أو هاتفك وفلاتر تجميل أو خلفية AI.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">احصل على URL وstream key من RoyalCams</div><p class="step-p">سجّل الدخول إلى حساب العارض في RoyalCams، افتح <strong>إعدادات البث ← المُشفِّر الخارجي</strong>، وانسخ <strong>URL الخادم</strong> و<strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">اربط SplitCam بـ RoyalCams</div><p class="step-p">في SplitCam افتح <strong>Stream Settings</strong>، الصق URL خادم RoyalCams وstream key في حقول RTMP المخصصة. اضبط معدل البت على 3500–6000 Kbps بدقة 1920×1080، 30 fps، مع keyframe بثانيتين.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">اضغط Go Live</div><p class="step-p">اضغط <strong>Go Live</strong> في SplitCam، ثم اتصل من لوحة التحكم. خلال نحو 10 ثوانٍ يصل بثك إلى جمهور RoyalCams.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">نصائح احترافية</h2>
   <div class="tips-grid"><div class="tip-card"><h3>غرف الرموز تكافئ الإنتاج</h3><p>تعمل الغرف العامة في RoyalCams على الإكراميات — تراكبات أهداف الإكراميات ومشهد مصقول تحوّل المتلصّصين إلى مُكرِمين وعروض خاصة.</p></div><div class="tip-card"><h3>حوّل إلى عروض خاصة</h3><p>استخدم مشهداً عاماً قوياً لترقية العملاء إلى عروض خاصة، حيث الأرباح الحقيقية في مواقع cam القائمة على الرموز.</p></div><div class="tip-card"><h3>المُشفِّر الخارجي يفتح المشاهد</h3><p>التوجيه عبر RTMP في SplitCam بدلاً من كاميرا المتصفح يتيح تخطيطات متعددة الكاميرات وتراكبات وفلاتر.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث RoyalCams لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على RoyalCams</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى RoyalCams في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على RoyalCams</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>RoyalCams يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه RoyalCams وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على RoyalCams</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
   <div class="faq-list"><details class="faq-item"><summary>هل يدعم RoyalCams المُشفِّرات الخارجية مثل SplitCam؟</summary><p>نعم — تكشف إعدادات البث عن مسار مُشفِّر خارجي / RTMP قياسي. انسخ URL الخادم وstream key إلى SplitCam بعد التحقق.</p></details><details class="faq-item"><summary>أين أحصل على stream key الخاص بـ RoyalCams؟</summary><p>في إعدادات البث / المُشفِّر الخارجي بلوحة تحكم العارض — يظهر كل من URL الخادم وstream key هناك. الصق كليهما في حقول RTMP المخصصة في SplitCam.</p></details><details class="faq-item"><summary>ما معدل البت لـ RoyalCams؟</summary><p>ادفع 1920×1080 على 30 fps، بمعدل 3500–6000 Kbps مع فاصل keyframe بثانيتين. شغّل اختبار السرعة في SplitCam أولاً.</p></details><details class="faq-item"><summary>هل SplitCam مجاني للاستخدام مع RoyalCams؟</summary><p>نعم — SplitCam مجاني، بدون علامة مائية وبدون حد زمني. خيار المُشفِّر الخارجي في RoyalCams مجاني في لوحة التحكم.</p></details><details class="faq-item"><summary>كم يمكن أن يكسب العارضون على ‏RoyalCams؟</summary><p>تعتمد الأرباح على ‏RoyalCams على حجم الجمهور وعدد ساعات البث وسلوك الإكراميات. يحقق المذيعون النشطون عادةً ما بين 200 و3,000 دولار شهريًا، بينما يصل كبار المؤدين إلى أكثر من 10,000 دولار. تخضع حصتك من الإيرادات لهيكل العمولات الخاص بـ ‏RoyalCams — راجع اتفاقية العارض قبل بدء البث المباشر.</p></details><details class="faq-item"><summary>هل ‏RoyalCams آمن للمذيعين؟</summary><p>يشترط ‏RoyalCams التحقق من العمر والهوية قبل صرف الأرباح، وهو ما يحمي العارضين من الاحتيال. استخدم اسمًا فنيًا، ولا تشارك أبدًا أي بيانات شخصية أمام الكاميرا، وفعّل الحجب الجغرافي لإخفاء بثك عن منطقتك السكنية، وتعامل مع كل طلب من المشاهدين كمعاملة تجارية. كما يمكن لطبقات ‏SplitCam والخلفية الذكية ‏AI إخفاء محيطك الحقيقي أو استبداله.</p></details><details class="faq-item"><summary>ما المستندات التي أحتاجها لأصبح عارضًا على ‏RoyalCams؟</summary><p>يطلب ‏RoyalCams عادةً وثيقة هوية رسمية تحتوي على صورة (جواز سفر أو رخصة قيادة أو بطاقة هوية)، وصورة سيلفي وأنت تحمل الوثيقة، ونموذجًا ضريبيًا/لصرف الأرباح (‏W-9 للمقيمين في الولايات المتحدة و‏W-8BEN لغيرهم). تستغرق الموافقة عادةً بين 24 و72 ساعة، وبمجرد الموافقة يمكنك البث المباشر في اليوم نفسه.</p></details><details class="faq-item"><summary>هل يمكنني البث على ‏RoyalCams من هاتفي؟</summary><p>يوفر ‏RoyalCams عادةً تطبيق بث للهاتف المحمول أو واجهة بث عبر متصفح الجوال، لكن التجربة محدودة — بلا طبقات، ولا كاميرا ثانية، ولا خلفية ذكية ‏AI. للحصول على جودة إنتاج كاملة، ابثّ من جهاز كمبيوتر باستخدام ‏SplitCam، واستخدم هاتفك ككاميرا ثانية (يقبل ‏SplitCam دخل كاميرا ‏IP من الهواتف).</p></details><details class="faq-item"><summary>هل يدعم ‏RoyalCams ‏OBS أو أي مُرمِّز خارجي؟</summary><p>نعم — يوفر ‏RoyalCams عنوان خادم ‏RTMP ومفتاح بث في لوحة المذيع. الصق كليهما في <strong>‏Stream Settings → Custom RTMP</strong> داخل ‏SplitCam، واضبط الدقة على 1920×1080 بمعدل 30 إطارًا في الثانية ومعدل بت بين 4,000 و5,000 ‏Kbps، ثم انقر <strong>‏Go Live</strong>. يمنحك مسار ‏Custom RTMP تركيبًا كاملاً للمشهد في ‏SplitCam (كاميرات متعددة، طبقات، فلاتر).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">أدلة منصات أخرى</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>البث Chaturbate</h4><p>إعداد قائم على Token مع مُشفِّر خارجي على Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>البث CAM4</h4><p>External Encoder على CAM4 مع ضوابط جغرافية.</p></a><a class="related-card" href="../bongacams/"><h4>البث BongaCams</h4><p>إعداد External Encoder لـ BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>البث Stripchat</h4><p>إعداد برنامج خارجي لبث Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam على ImLive</h4><p>إعداد كاميرا افتراضية لـ ImLive — بدون RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>إضافة MFC Alerts</h4><p>عرض تنبيهات إكرامية متحركة في بث MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">تابع التعلم</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>البث المتعدد</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam مقابل OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>كن نموذج كام</h4></a>
+    <a class="related-card" href="../lovense/"><h4>ألعاب Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>جاهز للبث المباشر؟</h2>

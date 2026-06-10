@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Tapak cam",
+     "item": "https://camstreamguide.com/ms/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fansly",
      "item": "https://camstreamguide.com/ms/fansly/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Jawapan</a>
+  <a href="#steps">Langkah</a>
+  <a href="#tips">Petua</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Panduan berkaitan</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Jawapan ringkas</div>
     <div class="qa-text">Siar di Fansly Live dengan SplitCam: pasang SplitCam, bina adegan, dalam Creator Dashboard buka <em>Live → Broadcast Settings → External Encoder</em>, salin URL pelayan dan stream key, tampal dalam SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Langkah demi langkah</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Muat turun dan pasang SplitCam</div><p class="step-p">SplitCam ialah perisian penstriman langsung percuma untuk Windows dan macOS — tiada pendaftaran, tiada kad, tiada tera air.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bina adegan anda</div><p class="step-p">Buka SplitCam dan tambah kamera web. Lapisi tindihan, teks, kamera kedua atau telefon anda, penapis kecantikan atau latar AI — adegan yang dipoles sepadan dengan jangkaan premium pelanggan berbayar.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Dapatkan URL dan stream key Fansly</div><p class="step-p">Log masuk ke akaun creator Fansly, buka <strong>Creator Dashboard</strong>, ke <strong>Live → Broadcast Settings → External Encoder</strong>. Halaman mendedahkan <strong>URL pelayan</strong> dan <strong>stream key</strong> unik. Salin kedua-duanya.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Sambungkan SplitCam ke Fansly</div><p class="step-p">Dalam SplitCam buka <strong>Stream Settings</strong>, tampal URL pelayan dan stream key Fansly ke medan RTMP tersuai. Tetapkan bitrate 3,500–6,000 Kbps pada 1920×1080, 30 fps, dengan keyframe 2 saat.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tekan <strong>Go Live</strong> dalam SplitCam, kemudian mulakan siaran Fansly Live dari Creator Dashboard. Dalam ~10 saat strim anda sampai kepada pelanggan Fansly anda.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Petua pro</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Audiens pelanggan dahulu</h3><p>Audiens Fansly berasaskan langganan — siaran langsung anda menjangkau orang yang sudah membayar anda bulanan. Rancang kandungan yang memberi ganjaran kesetiaan (Q&amp;A eksklusif, di sebalik tabir, matlamat tip tersuai) bukannya mengejar metrik bilik awam.</p></div><div class="tip-card"><h3>Tip di samping langganan</h3><p>Fansly Live menyokong tipping dalam strim di samping langganan asas. Pendapatan gabungan boleh mengatasi tipping platform cam tulen untuk creator mapan.</p></div><div class="tip-card"><h3>Penyiar pelayar vs luaran</h3><p>Penyiar pelayar lalai adalah satu sumber. SplitCam melalui External Encoder membuka berbilang kamera, tindihan, penapis kecantikan, dan latar AI yang sepadan dengan polesan kandungan pelanggan berbayar.</p></div><div class="tip-card"><h3>Guna sambungan berwayar</h3><p>Ethernet mengatasi Wi-Fi semasa siaran panjang — bingkai yang hilang bermakna tip yang hilang. Sambungkan kabel ke PC yang menyiar.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Penyelesaian masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran Fansly tersekat atau menimbal</summary><p>Hampir sentiasa bitrate ditetapkan lebih tinggi daripada yang mampu ditanggung muat naik anda. Jalankan ujian kelajuan terbina SplitCam, kemudian tetapkan bitrate kira-kira 75% daripada muat naik diukur — 3,500–6,000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersekat hilang sebaik pengekod berhenti melebihi talian anda.</p></details><details class="faq-item"><summary>Bingkai hilang semasa siaran Fansly</summary><p>Bingkai hilang bermakna paket tidak sampai ke Fansly tepat masa — biasanya Wi-Fi tidak stabil. Beralih ke Ethernet berwayar, tutup apl yang memakan lebar jalur dan turunkan bitrate sedikit. Satu lonjakan tak mengapa; peningkatan berterusan bermakna talian tidak mengejar.</p></details><details class="faq-item"><summary>Skrin hitam — penonton tidak nampak video di Fansly</summary><p>Kamera anda tidak dipilih sebagai sumber aktif dalam SplitCam, atau apl lain menahannya. Tutup Zoom, Skype atau OBS, pilih semula kamera web dalam senarai sumber SplitCam dan pastikan pratonton menunjukkan imej anda sebelum tekan Go Live.</p></details><details class="faq-item"><summary>Fansly menolak kunci strim atau tidak menyambung</summary><p>Salin semula kunci strim — ruang di hujung atau kunci lama yang telah diset semula ialah punca paling biasa. Pastikan URL pelayan sepadan dengan yang Fansly paparkan dan siaran pengekod luaran dihidupkan pada akaun anda. Peluncur hijau dalam Stream Settings SplitCam mengesahkan kunci sah.</p></details><details class="faq-item"><summary>Tiada audio atau audio tak segerak di Fansly</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon sebenar anda dalam sumber audio SplitCam. Jika audio ketinggalan daripada video, turunkan resolusi satu peringkat — pengekod terlebih beban dan audio menunggu bingkai yang lewat.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Soalan lazim</h2>
   <div class="faq-list"><details class="faq-item"><summary>Adakah Fansly Live menyokong pengekod luaran seperti SplitCam?</summary><p>Ya — bahagian Live Creator Dashboard menyertakan pilihan External Encoder di bawah Broadcast Settings. URL pelayan RTMP standard dan stream key; OBS, SplitCam, vMix semua bersambung.</p></details><details class="faq-item"><summary>Di mana saya dapatkan stream key Fansly?</summary><p>Creator Dashboard → Live → Broadcast Settings → External Encoder. URL pelayan dan stream key muncul di sana. Salin kedua-duanya ke medan RTMP tersuai SplitCam.</p></details><details class="faq-item"><summary>Bitrate berapa untuk Fansly Live?</summary><p>Tolak 1920×1080 pada 30 fps, 3,500–6,000 Kbps dengan selang keyframe 2 saat. Jalankan ujian kelajuan terbina SplitCam dahulu.</p></details><details class="faq-item"><summary>Adakah SplitCam percuma untuk Fansly?</summary><p>Ya — SplitCam percuma, tiada tera air, tiada had masa. Pilihan External Encoder Fansly dalam Creator Dashboard juga percuma.</p></details><details class="faq-item"><summary>Berapakah pendapatan model di Fansly?</summary><p>Pendapatan di Fansly bergantung pada saiz audiens, jumlah jam siaran dan tabiat memberi tip. Penyiar aktif biasanya membawa pulang $200–$3,000 sebulan; pencapai teratas mencecah $10,000+. Bahagian hasil anda mengikut struktur komisen Fansly — semak perjanjian model sebelum mula siaran langsung.</p></details><details class="faq-item"><summary>Adakah Fansly selamat untuk penyiar?</summary><p>Fansly memerlukan pengesahan umur dan ID sebelum pembayaran, yang melindungi model daripada penipuan. Gunakan nama samaran, jangan sekali-kali kongsi data peribadi di depan kamera, aktifkan sekatan geo untuk menyembunyikan siaran anda daripada wilayah asal, dan anggap setiap permintaan penonton sebagai urus niaga. Tindanan dan latar belakang AI SplitCam juga boleh menyembunyikan atau menggantikan persekitaran sebenar anda.</p></details><details class="faq-item"><summary>Apakah dokumen yang saya perlukan untuk menjadi model di Fansly?</summary><p>Fansly biasanya memerlukan ID foto yang dikeluarkan kerajaan (pasport, lesen memandu atau kad pengenalan), swafoto memegang ID tersebut, dan borang cukai/pembayaran (W-9 untuk AS, W-8BEN untuk bukan AS). Kelulusan biasanya mengambil masa 24–72 jam; setelah diluluskan anda boleh mula siaran langsung pada hari yang sama.</p></details><details class="faq-item"><summary>Bolehkah saya membuat siaran di Fansly dari telefon saya?</summary><p>Fansly biasanya menawarkan aplikasi penyiar mudah alih atau penyiar web mudah alih, tetapi pengalamannya terhad — tiada tindanan, tiada kamera kedua, tiada latar belakang AI. Untuk kualiti produksi penuh, buat siaran dari komputer dengan SplitCam dan gunakan telefon anda sebagai kamera kedua (SplitCam menerima input IP-camera daripada telefon).</p></details><details class="faq-item"><summary>Adakah Fansly menyokong OBS atau pengekod luaran?</summary><p>Ya — Fansly menyediakan URL pelayan RTMP dan kunci strim di panel penyiar. Tampal kedua-duanya ke dalam <strong>Stream Settings → Custom RTMP</strong> SplitCam, tetapkan 1920×1080 pada 30 fps dengan kadar bit 4,000–5,000 Kbps, dan klik <strong>Go Live</strong>. Laluan Custom RTMP memberikan anda komposisi adegan SplitCam yang penuh (berbilang kamera, tindanan, penapis).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Panduan untuk platform lain</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Siaran Chaturbate</h4><p>Persediaan berasaskan token dengan pengekod luaran di Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Siaran CAM4</h4><p>External Encoder di CAM4 dengan kawalan geo.</p></a><a class="related-card" href="../bongacams/"><h4>Siaran BongaCams</h4><p>Persediaan External Encoder untuk BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Siaran Stripchat</h4><p>Persediaan perisian luaran untuk siaran Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam di ImLive</h4><p>Persediaan kamera maya untuk ImLive — tiada RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Tambah MFC Alerts</h4><p>Paparkan amaran tip beranimasi dalam siaran MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Belajar lagi</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Jadi cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mainan Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Sedia untuk go live?</h2>

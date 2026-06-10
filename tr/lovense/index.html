@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Araçlar",
+     "item": "https://camstreamguide.com/tr/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/tr/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Cevap</a>
+  <a href="#steps">Adımlar</a>
+  <a href="#tips">İpuçları</a>
+  <a href="#faq">SSS</a>
+  <a href="#related">İlgili kılavuzlar</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kısa cevap</div>
     <div class="qa-text">Yayına Lovense oyuncağı eklemek için: SplitCam ve Lovense yazılımını kur, oyuncağı eşle, Lovense'i cam platformuna bağla, SplitCam'e Lovense durumunu Browser katmanı olarak ekle, sonra normal yayın yap.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Adım adım</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam&#x27;i kur</div><p class="step-p">SplitCam, Windows ve macOS için ücretsiz bir yayın yazılımıdır — videonu cam platformuna gönderen kodlayıcı. Kur; filigran yok.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Lovense yazılımını kur ve oyuncağı eşle</div><p class="step-p">Lovense Connect / Lovense Stream'i (resmi masaüstü uygulaması) kur. Oyuncağı aç ve Bluetooth ile eşle, böylece uygulama bağlı gösterir.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Lovense&#x27;i cam platformuna bağla</div><p class="step-p">Lovense uygulamasında cam hesabını bağla, böylece oyuncak izleyici token'larına / bahşişlerine tepki verir. Çoğu büyük cam platformu desteklenir.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam&#x27;e Lovense katmanı ekle</div><p class="step-p">Lovense bir katman / widget URL'si sağlar. SplitCam sahnesine <strong>Browser</strong> katmanı olarak ekle, böylece izleyiciler oyuncak durumunu ve son bahşişleri ekranda görür.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Sahneyi oluştur ve Go Live</div><p class="step-p">Kamerayı ve diğer katmanları ekle, cam platformunun RTMP anahtarını SplitCam'e yapıştır ve <strong>Go Live</strong>'a tıkla. Oyuncak bahşişlere gerçek zamanlı tepki verir.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profesyonel ipuçları</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Resmi Lovense SplitCam Toolset&#x27;i kullan</h3><p>Lovense, kendi kurulum rehberiyle SplitCam'e özel bir toolset yayınlar — SplitCam için yapılmış oyuncak etkinliği katmanı ve bahşiş uyarıları ekler.</p></div><div class="tip-card"><h3>Lovense Cam Extension&#x27;ı güncelle</h3><p>Toolset güncel bir Lovense Cam Extension gerektirir (30.1.4 veya üstü) — canlıdan önce güncelle.</p></div><div class="tip-card"><h3>Oyuncağı şarjlı tut</h3><p>Şovun ortasında neredeyse boş pil etkileşimli tarafı öldürür — canlıdan önce tam şarj et.</p></div><div class="tip-card"><h3>Token tepkisini test et</h3><p>Odayı açmadan önce oyuncağın tepki verdiğini doğrulamak için küçük bir test bahşişi gönder.</p></div><div class="tip-card"><h3>Sürüm gereksinimlerini kontrol et</h3><p>Lovense SplitCam Toolset, SplitCam 10.4.5 veya üstünü gerektirir. Lovense Cam Extension resmi olarak <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> ve <a href="../camsoda/" class="autolink">CamSoda</a>'yı kapsar — başka site için Lovense'in Generic URL entegrasyonunu kullan.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Sorun giderme</h2><div class="faq-list"><details class="faq-item"><summary>Lovense yayının takılıyor veya tamponluyor</summary><p>Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer.</p></details><details class="faq-item"><summary>Lovense yayını sırasında kare kaybı</summary><p>Kare kaybı, paketlerin Lovense'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir.</p></details><details class="faq-item"><summary>Siyah ekran — izleyiciler Lovense&#x27;de video görmüyor</summary><p>Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula.</p></details><details class="faq-item"><summary>Lovense yayın anahtarını reddediyor veya bağlanmıyor</summary><p>Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin Lovense'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar.</p></details><details class="faq-item"><summary>Lovense&#x27;de ses yok veya ses senkron dışı</summary><p>SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">SSS</h2>
   <div class="faq-list"><details class="faq-item"><summary>Lovense SplitCam&#x27;i resmi destekliyor mu?</summary><p>Evet — Lovense kendi kurulum rehberiyle resmi bir «Lovense SplitCam Toolset» belgeler ve SplitCam resmi bir Lovense eklentisi sunar. Entegrasyon iki taraftan da desteklenir.</p></details><details class="faq-item"><summary>Oyuncak doğrudan SplitCam&#x27;e mi bağlanır?</summary><p>Hayır — oyuncak Lovense uygulamasıyla eşlenir; SplitCam Lovense katmanını gösterir ve kamerayı yayınlar.</p></details><details class="faq-item"><summary>Hangi cam siteleri Lovense&#x27;i destekler?</summary><p>Lovense Cam Extension resmi olarak <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> ve <a href="../camsoda/" class="autolink">CamSoda</a>'yı destekler, diğerleri için değişken destek — güncel listeyi Lovense uygulamasında kontrol et.</p></details><details class="faq-item"><summary>Son bahşişleri ekranda gösterebilir miyim?</summary><p>Evet — Lovense widget URL'sini SplitCam'e Browser katmanı olarak ekle.</p></details><details class="faq-item"><summary>Lovense üzerinde modeller ne kadar kazanabilir?</summary><p>Lovense platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız Lovense komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin.</p></details><details class="faq-item"><summary>Lovense yayıncılar için güvenli mi?</summary><p>Lovense ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir.</p></details><details class="faq-item"><summary>Lovense üzerinde model olmak için hangi belgeler gerekli?</summary><p>Lovense genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz.</p></details><details class="faq-item"><summary>Lovense üzerinde telefonumdan yayın yapabilir miyim?</summary><p>Lovense genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Resmi destek — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">Biz bağımsız bir rehberiz. Hesap, ödeme veya teknik sorunlar için doğrudan platformun resmi desteğiyle iletişime geç.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Diğer platform rehberleri</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate yayını</h4><p>Chaturbate&#x27;te harici kodlayıcı ile token tabanlı kurulum.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 yayını</h4><p>CAM4&#x27;te coğrafi kontrollü External Encoder.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Devam</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Çoklu yayın</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam model olmak</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense oyuncakları</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Canlı yayına hazır mısın?</h2>

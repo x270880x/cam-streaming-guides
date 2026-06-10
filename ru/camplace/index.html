@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Кам-сайты",
+     "item": "https://camstreamguide.com/ru/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "CamPlace",
      "item": "https://camstreamguide.com/ru/camplace/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Кратко</a>
+  <a href="#steps">Пошагово</a>
+  <a href="#tips">Советы</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Похожие гайды</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
     <div class="qa-text">Вещание на CamPlace через SplitCam: установите SplitCam, соберите сцену, включите внешнее/RTMP-вещание в CamPlace, скопируйте URL сервера и ключ, вставьте в SplitCam, Go Live. Следуйте видео-гайду выше для актуального пути.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Пошагово</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Соберите сцену</div><p class="step-p">Добавьте веб-камеру в SplitCam и наложите накладки, вторую камеру и фильтры — то, что базовый вещатель CamPlace не умеет.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции CamPlace</div><p class="step-p">Войдите в CamPlace и откройте настройки вещания. Переключитесь на внешний кодировщик / RTMP / OBS, чтобы увидеть <strong>URL сервера</strong> и <strong>ключ трансляции</strong>, скопируйте оба. Официальной документации по OBS у CamPlace нет, поэтому <strong>видео-гайд выше</strong> — самый надёжный разбор текущего интерфейса.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Вставьте URL сервера и ключ CamPlace</div><p class="step-p">Вставьте оба в поля custom RTMP SplitCam. CamPlace не публикует параметров кодировщика — следуйте видео-гайду выше, а битрейт задайте по тесту скорости.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите Go Live в SplitCam, чтобы начать эфир на CamPlace. Сначала сделайте короткий приватный тест — официальной документации, на которую можно опереться, нет.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Советы</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Нет официального OBS-гайда — смотрите видео</h3><p>У CamPlace нет публичной статьи поддержки про внешние кодировщики; видео-гайд выше — ориентир по актуальному пути.</p></div><div class="tip-card"><h3>Стандартный RTMP работает</h3><p>Даже без документации CamPlace принимает стандартный URL RTMP-сервера и ключ — SplitCam подключается обычной пользовательской RTMP-площадкой.</p></div><div class="tip-card"><h3>Накладки в SplitCam</h3><p>Цели по токенам, ник и соцсети как слои сцены — базовая камера CamPlace так не умеет.</p></div><div class="tip-card"><h3>Проводное подключение</h3><p>Раз официальной документации по кодировщикам у CamPlace нет, стабильный Ethernet-канал убирает обрывы связи как фактор, пока вы идёте по видео-гайду.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Решение проблем</h2><div class="faq-list"><details class="faq-item"><summary>Трансляция на CamPlace лагает или буферизует</summary><p>Почти всегда битрейт выше, чем тянет ваш аплоад. Запустите встроенный тест скорости SplitCam и выставьте битрейт примерно на 75% от измеренного аплоада — 3500–6000&nbsp;Кбит/с для 1080p, ниже для 720p. Лаги уходят, как только энкодер перестаёт обгонять соединение.</p></details><details class="faq-item"><summary>Потеря кадров во время эфира на CamPlace</summary><p>Потеря кадров значит, что пакеты не доходят до CamPlace вовремя — обычно нестабильный Wi-Fi. Перейдите на проводной Ethernet, закройте программы, жрущие канал, и чуть снизьте битрейт. Единичный скачок — норма; устойчивый рост значит, что соединение не справляется.</p></details><details class="faq-item"><summary>Чёрный экран — зрители не видят видео на CamPlace</summary><p>Камера не выбрана активным источником в SplitCam, или её держит другая программа. Закройте Zoom, Skype или OBS, выберите веб-камеру заново в списке источников SplitCam и убедитесь, что превью показывает картинку до нажатия Go Live.</p></details><details class="faq-item"><summary>CamPlace не принимает ключ трансляции или не подключается</summary><p>Скопируйте ключ заново — обычно причина в лишнем пробеле или старом, уже сброшенном ключе. Проверьте, что URL сервера совпадает с показанным в CamPlace и что вещание через внешний энкодер включено на аккаунте. Зелёный слайдер в Настройках трансляции SplitCam подтверждает валидный ключ.</p></details><details class="faq-item"><summary>Нет звука или звук рассинхронизирован на CamPlace</summary><p>Выберите SplitCam и как камеру, и как микрофон, а внутри SplitCam укажите ваш реальный микрофон источником звука. Если звук отстаёт от видео, снизьте разрешение на ступень — энкодер перегружен и звук ждёт опаздывающие кадры.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Вопросы и ответы</h2>
   <div class="faq-list"><details class="faq-item"><summary>Есть ли у CamPlace официальный OBS-гайд?</summary><p>Публичной статьи поддержки про внешние кодировщики не найдено. CamPlace принимает стандартный URL RTMP и ключ, так что SplitCam работает — следуйте видео-гайду выше для актуального пути.</p></details><details class="faq-item"><summary>CamPlace поддерживает внешние кодировщики?</summary><p>Да — принимает стандартный RTMP-ключ, так что SplitCam подключается пользовательской RTMP-площадкой.</p></details><details class="faq-item"><summary>SplitCam бесплатен для CamPlace?</summary><p>Да — бесплатно, без водяного знака и без ограничения по времени. Своего кодировщика у CamPlace нет, так что бесплатного RTMP-инструмента вполне достаточно.</p></details><details class="faq-item"><summary>Какой битрейт для CamPlace?</summary><p>Официальной цифры CamPlace не публикует — берите 3500–6000 Кбит/с для 1080p как безопасный диапазон, а реальный потолок определит тест скорости SplitCam.</p></details><details class="faq-item"><summary>Сколько зарабатывают модели на CamPlace?</summary><p>Заработок на CamPlace зависит от размера аудитории, количества часов в эфире и щедрости зрителей на донаты. Активные стримеры обычно получают $200–$3 000 в месяц, а топовые модели — от $10 000 и выше. Ваша доля рассчитывается по комиссионной схеме CamPlace — сверьтесь с моделью соглашения до первого эфира.</p></details><details class="faq-item"><summary>Безопасна ли работа на CamPlace для моделей?</summary><p>CamPlace требует подтверждение возраста и личности до первой выплаты, что защищает моделей от мошенничества. Используйте сценический псевдоним, не показывайте личные данные в кадре, включите гео-блок, чтобы скрыть стрим от своего региона, и относитесь к любым просьбам зрителей как к платным услугам. Оверлеи SplitCam и AI-фон помогают спрятать или заменить реальное окружение.</p></details><details class="faq-item"><summary>Какие документы нужны, чтобы стать моделью на CamPlace?</summary><p>CamPlace обычно запрашивает государственное удостоверение личности с фото (паспорт, водительские права или ID-карту), селфи с этим документом в руках и налоговую форму для выплат (W-9 для США, W-8BEN для остальных стран). Проверка занимает 24–72 часа; после одобрения можно выйти в эфир в тот же день.</p></details><details class="faq-item"><summary>Можно ли стримить на CamPlace с телефона?</summary><p>У CamPlace обычно есть мобильное приложение для вещания или мобильная веб-версия, но возможности там урезаны — нет оверлеев, второй камеры и AI-фона. Для полноценного продакшена ведите эфир с компьютера через SplitCam, а телефон используйте как вторую камеру (SplitCam принимает поток с телефона по протоколу IP-камеры).</p></details><details class="faq-item"><summary>Поддерживает ли CamPlace OBS или внешний энкодер?</summary><p>Да — CamPlace выдаёт RTMP-адрес сервера и ключ трансляции в панели вещателя. Вставьте оба значения в SplitCam в раздел <strong>Stream Settings → Custom RTMP</strong>, выставьте 1920×1080 при 30 fps и битрейт 4 000–5 000 Кбит/с, затем нажмите <strong>Go Live</strong>. Через Custom RTMP вам доступна полная сцена SplitCam: несколько камер, оверлеи и фильтры.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Официальная поддержка платформы — CamPlace</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.camplace.com/contact" rel="nofollow noopener" target="_blank">https://www.camplace.com/contact</a></li></ul><p class="sp-note">Мы независимый ресурс. По вопросам аккаунта, выплат или техподдержки обращайтесь в официальный саппорт платформы напрямую.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка через токен и внешний кодировщик Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>External Encoder CAM4 + гео-настройки.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>External Encoder BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Трансляция на Stripchat</h4><p>Настройка внешнего софта для Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam на ImLive</h4><p>Виртуальная камера для ImLive — RTMP не нужен.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Добавить MFC Alerts</h4><p>Анимированные алерты о токенах на трансляции MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Дальше</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мульти-стриминг</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стать кам-моделью</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Интеграция Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готовы выйти в эфир?</h2>

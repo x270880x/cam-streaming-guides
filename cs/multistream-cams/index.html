@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam stránky",
+     "item": "https://camstreamguide.com/cs/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Multiple Cam Sites",
      "item": "https://camstreamguide.com/cs/multistream-cams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Odpověď</a>
+  <a href="#steps">Kroky</a>
+  <a href="#tips">Tipy</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Související průvodci</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Rychlá odpověď</div>
     <div class="qa-text">Pro vysílání na více cam stránek najednou: nainstalujte SplitCam, sestavte scénu, získejte URL serveru RTMP a stream key každé cam stránky, přidejte všechny do nastavení multistreamu SplitCam, klikněte na Go Live jednou.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Krok za krokem</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Nainstalujte SplitCam</div><p class="step-p">SplitCam je bezplatný software pro živé vysílání pro Windows a macOS s vestavěným multistreamem. Nainstalujte ho — bez vodoznaku, bez registrace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Nastavte kameru a scénu</div><p class="step-p">Otevřete SplitCam, přidejte webkameru a sestavte scénu s překryvy a filtry. Jedna scéna napájí každý cíl.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Získejte RTMP klíče z každé cam stránky</div><p class="step-p">Na každé cam platformě zapněte externí / RTMP vysílání a zkopírujte <strong>URL serveru</strong> a <strong>stream key</strong>. Opakujte pro každou stránku, na kterou chcete vysílat — přesnou cestu najdete v návodech jednotlivých platforem.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Přidejte každý cíl ve SplitCam</div><p class="step-p">Otevřete <strong>Stream Settings</strong> a přidejte každou cam stránku jako vlastní cíl RTMP — vložte URL serveru a klíč. Zaškrtněte všechny, kde chcete být živě.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikněte na Go Live jednou</div><p class="step-p">Stiskněte <strong>Go Live</strong>. SplitCam posílá stream na každou vybranou cam stránku najednou, peer-to-peer, z jednoho kódování — bez dalších nákladů.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi tipy</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Hlídejte si upload</h3><p>Multistream násobí zátěž uploadu. Každý cíl používá vlastní bitrate — ujistěte se, že vaše linka unese součet.</p></div><div class="tip-card"><h3>Zkontrolujte pravidla platforem</h3><p>Některé cam stránky zakazují souběžné vysílání jinde — zkontrolujte před multistreamem.</p></div><div class="tip-card"><h3>Kabel — tady padnout nesmí</h3><p>Multistream násobí zátěž uploadu, takže jeden výpadek wi-fi může shodit všechny cíle najednou. Kabel tady není volba.</p></div><div class="tip-card"><h3>Sledujte monitor stavu</h3><p>SplitCam zobrazuje stav každého cíle — odpojte jednu stránku, pokud upload nestíhá.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Řešení problémů</h2><div class="faq-list"><details class="faq-item"><summary>Vysílání Multiple Cam Sites se seká nebo bufferuje</summary><p>Téměř vždy je bitrate nastavený výš, než unese váš upload. Spusťte vestavěný test rychlosti SplitCam, poté nastavte bitrate na zhruba 75 % naměřeného uploadu — 3500–6000&nbsp;Kbps pro 1080p, méně pro 720p. Sekání zmizí, jakmile kodér přestane překračovat vaši linku.</p></details><details class="faq-item"><summary>Ztráta snímků během vysílání Multiple Cam Sites</summary><p>Ztráta snímků znamená, že pakety nedorazí na Multiple Cam Sites včas — obvykle nestabilní Wi-Fi. Přejděte na drátový Ethernet, zavřete aplikace požírající pásmo a mírně snižte bitrate. Jeden výkyv nevadí; trvalý nárůst znamená, že linka nestíhá.</p></details><details class="faq-item"><summary>Černá obrazovka — diváci nevidí video na Multiple Cam Sites</summary><p>Vaše kamera není vybraná jako aktivní zdroj ve SplitCam, nebo ji drží jiná aplikace. Zavřete Zoom, Skype nebo OBS, vyberte webkameru znovu v seznamu zdrojů SplitCam a ujistěte se, že náhled ukazuje váš obraz, než stisknete Go Live.</p></details><details class="faq-item"><summary>Multiple Cam Sites odmítá stream key nebo se nepřipojuje</summary><p>Zkopírujte stream key znovu — mezera na konci nebo starý, resetovaný klíč jsou nejčastější příčiny. Ujistěte se, že URL serveru odpovídá tomu, co Multiple Cam Sites zobrazuje, a že vysílání externím kodérem je na účtu zapnuté. Zelený posuvník v Stream Settings SplitCam potvrzuje platný klíč.</p></details><details class="faq-item"><summary>Žádný zvuk nebo zvuk nesynchronní na Multiple Cam Sites</summary><p>Vyberte SplitCam jako kameru I mikrofon a ve zdroji zvuku SplitCam vyberte svůj skutečný mikrofon. Pokud zvuk zaostává za videem, snižte rozlišení o úroveň — kodér je přetížený a zvuk čeká na opožděné snímky.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Časté dotazy</h2>
   <div class="faq-list"><details class="faq-item"><summary>Je multistream SplitCam zdarma?</summary><p>Ano — multistream je vestavěný a zdarma, bez poplatku za cíl, bez vodoznaku.</p></details><details class="faq-item"><summary>Na kolik cam stránek můžu vysílat najednou?</summary><p>Na tolik, kolik unese šířka pásma vašeho uploadu — každý cíl používá vlastní bitrate.</p></details><details class="faq-item"><summary>Používá cloudový relay?</summary><p>Ne — SplitCam posílá stream peer-to-peer přímo z PC do ingest každé platformy.</p></details><details class="faq-item"><summary>Zpomalí multistream můj PC?</summary><p>Kódování se dělá jednou a používá se opakovaně; hardwarové kódování drží zátěž CPU nízko. Šířka pásma uploadu je skutečný limit.</p></details><details class="faq-item"><summary>Kolik si modelky můžou na Multiple Cam Sites vydělat?</summary><p>Výdělky na Multiple Cam Sites závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou Multiple Cam Sites — před prvním vysíláním si projdi model agreement.</p></details><details class="faq-item"><summary>Je Multiple Cam Sites pro vysílající bezpečná?</summary><p>Multiple Cam Sites před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit.</p></details><details class="faq-item"><summary>Jaké dokumenty potřebuju, abych se na Multiple Cam Sites stala modelkou?</summary><p>Multiple Cam Sites obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den.</p></details><details class="faq-item"><summary>Můžu na Multiple Cam Sites vysílat z mobilu?</summary><p>Multiple Cam Sites většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů).</p></details><details class="faq-item"><summary>Podporuje Multiple Cam Sites OBS nebo externí enkodér?</summary><p>Ano — Multiple Cam Sites ti v broadcaster panelu poskytne RTMP server URL a stream key. Vlož obojí do <strong>Stream Settings → Custom RTMP</strong> ve SplitCamu, nastav 1920×1080 při 30 fps s bitrate 4 000–5 000 Kbps a klikni na <strong>Go Live</strong>. Cesta přes Custom RTMP ti dá plnou kompozici scény ve SplitCamu (více kamer, overlaye, filtry).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Oficiální podpora — Multiple Cam Sites</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:hello@splitcam.com">hello@splitcam.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://splitcam.com/support" rel="nofollow noopener" target="_blank">https://splitcam.com/support</a></li></ul><p class="sp-note">Jsme nezávislý průvodce. S problémy s účtem, platbami nebo technikou se obraťte přímo na oficiální podporu platformy.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Návody pro jiné platformy</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Vysílání Chaturbate</h4><p>Nastavení založené na tokenu s externím kodérem na Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Vysílání CAM4</h4><p>External Encoder na CAM4 s geo kontrolou.</p></a><a class="related-card" href="../bongacams/"><h4>Vysílání BongaCams</h4><p>Nastavení External Encoder pro BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Vysílání Stripchat</h4><p>Nastavení externího softwaru pro vysílání Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam na ImLive</h4><p>Nastavení virtuální kamery pro ImLive — bez RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Přidat MFC Alerts</h4><p>Zobrazujte animovaná upozornění na tipy ve vysílání MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Pokračovat</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Stát se cam modelkou</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Připraveni jít živě?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sites",
+     "item": "https://camstreamguide.com/nl/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SoulCams",
      "item": "https://camstreamguide.com/nl/soulcams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Antwoord</a>
+  <a href="#steps">Stappen</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Vergelijkbare gidsen</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort</div>
     <div class="qa-text"><a href="../streamen/" class="autolink">Streamen</a> op SoulCams met SplitCam: SplitCam installeren, scène opbouwen, op SoulCams Go Online → Settings → OBS klikken, server en sleutel kopiëren, beide in SplitCam plakken, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Stap voor stap</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download en installeer SplitCam</div><p class="step-p">SplitCam is gratis streamingsoftware voor Windows en macOS. Download en start het installatieprogramma — geen aanmelding, geen creditcard, geen watermerk, geen tijdslimiet. SplitCam is de encoder die je video naar SoulCams stuurt.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Stel je camera en scène in</div><p class="step-p">Open SplitCam en voeg je webcam toe. Bouw de scène zoals je kijkers hem moeten zien — overlays, tekst, een tweede camera of je telefoon, beautyfilters of een AI-achtergrond. Alles wordt live toegepast voordat de stream je pc verlaat.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Haal je stream key van SoulCams</div><p class="step-p">Op SoulCams log in en klik <strong>Go Online</strong>, dan open <strong>Settings</strong> → <strong>OBS</strong>. Het OBS-venster toont <strong>RTMP-server</strong> en <strong>stream key</strong> samen — beide in SplitCam kopiëren.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Verbind SplitCam met SoulCams</div><p class="step-p">Open in SplitCam <strong>Stream Settings</strong>, plak de server-URL en de stream key van SoulCams in de aangepaste RTMP-velden. Bitrate: 3.500–6.000&nbsp;Kbps op 1080p, 2.000–4.000&nbsp;Kbps op 720p. Draai eerst de ingebouwde snelheidstest.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik op Go Live</div><p class="step-p">Druk in SplitCam op <strong>Go Live</strong> en start daarna de uitzending op SoulCams. Binnen ~10 seconden is je camera live. Volgende streams gaan met één klik — SplitCam openen, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Server en sleutel naast elkaar</h3><p>SoulCams toont RTMP-server en sleutel in hetzelfde OBS-venster — beide in één keer pakken.</p></div><div class="tip-card"><h3>Eerst Go Online</h3><p>OBS-instellingen verschijnen pas na klikken op Go Online op SoulCams — doe dat voordat je naar encoder-gegevens zoekt.</p></div><div class="tip-card"><h3>Blokkeer ongewenste regio&#x27;s</h3><p>SoulCams staat geo-blokkering aan de model-kant toe — kies welke landen je stream niet kunnen zien voordat je op Go Online klikt.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div><div class="tip-card"><h3>Doe eerst een privé-test</h3><p>Run een korte teststream om camera, audio, framing en overlays te checken voordat je de room voor publiek opent.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je SoulCams-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de SoulCams-uitzending</summary><p>Dropped frames betekenen dat pakketten SoulCams niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op SoulCams</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>SoulCams weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die SoulCams toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op SoulCams</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Waar zijn SoulCams&#x27; OBS-instellingen?</summary><p>Inloggen, Go Online klikken, dan Settings → OBS — RTMP-server en stream key worden samen getoond.</p></details><details class="faq-item"><summary>Ondersteunt SoulCams externe encoders?</summary><p>Ja — de OBS-instellingen geven RTMP-server en sleutel, dus SplitCam werkt.</p></details><details class="faq-item"><summary>Welke bitrate voor SoulCams?</summary><p>SoulCams noemt geen officieel getal — mik op 3.500–6.000 Kbps op 1080p en test je upload, want het OBS-venster toont geen bitrate-aanwijzing.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor SoulCams?</summary><p>Ja — gratis, geen watermerk en geen tijdslimiet, dus een volledige SoulCams-show met multi-camera scènes en overlays kost niets aan de encoder-kant.</p></details><details class="faq-item"><summary>Hoeveel kunnen modellen verdienen op SoulCams?</summary><p>Inkomsten op SoulCams hangen af van de grootte van het publiek, het aantal streamuren en het foooigedrag. Actieve broadcasters verdienen doorgaans $200–$3.000 per maand; topperformers halen $10.000+. Jouw aandeel volgt de commissiestructuur van SoulCams — bekijk de modelovereenkomst voordat je live gaat.</p></details><details class="faq-item"><summary>Is SoulCams veilig voor broadcasters?</summary><p>SoulCams vereist leeftijds- en ID-verificatie voordat er uitbetaald wordt, wat modellen beschermt tegen fraude. Gebruik een artiestennaam, deel nooit persoonlijke gegevens voor de camera, schakel geo-blokkades in om je stream te verbergen voor je eigen regio, en behandel elk kijkersverzoek als transactie. De overlays en AI-achtergrond van SplitCam kunnen je echte omgeving ook verbergen of vervangen.</p></details><details class="faq-item"><summary>Welke documenten heb ik nodig om model te worden op SoulCams?</summary><p>SoulCams vraagt doorgaans om een door de overheid uitgegeven identiteitsbewijs met foto (paspoort, rijbewijs of ID-kaart), een selfie waarop je het ID vasthoudt, en een belasting-/uitbetalingsformulier (W-9 voor de VS, W-8BEN buiten de VS). Goedkeuring duurt meestal 24–72 uur; zodra je bent goedgekeurd, kun je dezelfde dag live gaan.</p></details><details class="faq-item"><summary>Kan ik streamen op SoulCams vanaf mijn telefoon?</summary><p>SoulCams biedt meestal een mobiele broadcaster-app of een mobiele webbroadcaster, maar de ervaring is beperkt — geen overlays, geen tweede camera, geen AI-achtergrond. Voor volledige productiekwaliteit kun je beter uitzenden vanaf een computer met SplitCam en je telefoon gebruiken als tweede camera (SplitCam accepteert IP-camera-invoer van telefoons).</p></details><details class="faq-item"><summary>Ondersteunt SoulCams OBS of een externe encoder?</summary><p>Ja — SoulCams levert een RTMP-server-URL en een streamsleutel in het broadcasterpaneel. Plak beide in <strong>Stream Settings → Custom RTMP</strong> van SplitCam, stel 1920×1080 op 30 fps in met een bitrate van 4.000–5.000 Kbps, en klik op <strong>Go Live</strong>. De Custom RTMP-route geeft je volledige SplitCam-scènesamenstelling (multi-camera, overlays, filters).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiële support — SoulCams</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://soulcams.com/" rel="nofollow noopener" target="_blank">https://soulcams.com/</a></li></ul><p class="sp-note">We zijn een onafhankelijke gids. Voor account-, betaal- of technische problemen neem direct contact op met de officiële support van het platform.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere platformgidsen</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Streamen op Chaturbate</h4><p>Token-gebaseerde setup met externe encoder op Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Streamen op CAM4</h4><p>External Encoder op CAM4 met geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Streamen op BongaCams</h4><p>External Encoder-setup voor BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Streamen op Stripchat</h4><p>External software-setup voor Stripchat-streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam op ImLive</h4><p>Virtuele camera-setup voor ImLive — geen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts toevoegen</h4><p>Toon geanimeerde tip-alerts in je MyFreeCams-stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Verder lezen</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cammodel worden</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-integratie</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Klaar om live te gaan?</h2>

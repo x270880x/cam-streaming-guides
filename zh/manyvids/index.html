@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam 网站",
+     "item": "https://camstreamguide.com/zh/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "ManyVids",
      "item": "https://camstreamguide.com/zh/manyvids/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">速答</a>
+  <a href="#steps">步骤</a>
+  <a href="#tips">技巧</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">相关指南</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">快速回答</div>
     <div class="qa-text">用 SplitCam 在 MV Live 直播：安装 SplitCam，搭好场景，在 Creator Studio 打开 <em>MV Live → Broadcast Settings → External Encoder</em>，复制服务器 URL 和 stream key，粘贴到 SplitCam，Go Live。</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">分步指南</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">下载并安装 SplitCam</div><p class="step-p">SplitCam 是适用于 Windows 和 macOS 的免费直播软件 — 无需注册、无需信用卡、无水印。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">搭好场景</div><p class="step-p">打开 SplitCam 添加摄像头。叠加叠加层、文字、第二个摄像头或手机、美颜滤镜或 AI 背景 — 给 MV Live 的目标揭晓和奖励触发器搭舞台再合适不过。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">取 MV Live 的 URL 和 stream key</div><p class="step-p">登录 ManyVids 创作者账号，打开 <strong>Creator Studio</strong>，进入 <strong>MV Live → Broadcast Settings → External Encoder</strong>。页面会显示 <strong>服务器 URL</strong> 和专属 <strong>stream key</strong>。复制两者。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">把 SplitCam 接到 MV Live</div><p class="step-p">在 SplitCam 打开 <strong>Stream Settings</strong>，把 MV Live 的服务器 URL 和 stream key 粘贴到自定义 RTMP 字段。比特率设为 3,500–6,000 Kbps、1920×1080、30 fps、关键帧 2 秒。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">点击 Go Live</div><p class="step-p">在 SplitCam 按 <strong>Go Live</strong>，然后在 Creator Studio 启动 MV Live 直播。约 10 秒内信号就抵达 MV Live 观众端。</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>不只是直播，是创作者经济</h3><p>ManyVids 不是纯 cam 平台 — MV Live 只是其中一条收入线，跟卖片、定制视频、粉丝俱乐部订阅并列。把直播当成给其他变现产品引流的入口。</p></div><div class="tip-card"><h3>MV Live 内部的代币打赏</h3><p>MV Live 直播间里有自己的代币打赏体系。可以参考 <a href="../chaturbate/" class="autolink">Chaturbate</a> / <a href="../stripchat/" class="autolink">Stripchat</a> 的玩法做目标菜单和奖励触发器 — 在 ManyVids 现有粉丝群里转化率很不错。</p></div><div class="tip-card"><h3>浏览器 vs 外部编码器</h3><p>Creator Studio 自带的浏览器直播工具只能单机位。通过 External Encoder 接入 SplitCam，才能解锁多机位场景、叠加层和滤镜。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 ManyVids 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>ManyVids 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 ManyVids — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 ManyVids 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>ManyVids 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 ManyVids 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>ManyVids 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>MV Live（ManyVids）支持 SplitCam 这种外部编码器吗？</summary><p>支持 — Creator Studio 的 MV Live 板块在 Broadcast Settings 下有 External Encoder 选项。标准 RTMP 服务器 URL 和 stream key，OBS、SplitCam、vMix 都能接入。</p></details><details class="faq-item"><summary>我的 MV Live stream key 在哪里？</summary><p>Creator Studio → MV Live → Broadcast Settings → External Encoder。服务器 URL 和 stream key 都在这里 — 两者都复制到 SplitCam 的自定义 RTMP 字段。</p></details><details class="faq-item"><summary>MV Live 用什么比特率？</summary><p>推 1920×1080、30 fps、3,500–6,000 Kbps、关键帧 2 秒。先用 SplitCam 自带的速度测试跑一遍。</p></details><details class="faq-item"><summary>SplitCam 在 MV Live 上免费吗？</summary><p>免费 — SplitCam 完全免费，无水印，无时间限制。ManyVids 在 Creator Studio 里开放的外部编码器选项也免费。</p></details><details class="faq-item"><summary>模特在 ManyVids 上能赚多少钱？</summary><p>在 ManyVids 上的收入取决于观众规模、直播时长和打赏情况。活跃的主播每月通常能拿到 $200–$3,000；顶级主播可达 $10,000 以上。你的分成比例遵循 ManyVids 的佣金政策——开播前请仔细查看模特协议。</p></details><details class="faq-item"><summary>ManyVids 对主播来说安全吗？</summary><p>ManyVids 在结算前会要求年龄和身份验证，这能保护模特免受欺诈。建议使用艺名，绝不在镜头前透露个人信息，开启地区屏蔽以隐藏所在地，并把每一位观众的请求都视为交易行为。SplitCam 的叠加层和 AI 背景也可以遮挡或替换你的真实环境。</p></details><details class="faq-item"><summary>在 ManyVids 注册模特需要哪些证件？</summary><p>ManyVids 通常需要政府签发的带照片身份证件（护照、驾照或身份证）、手持证件的自拍，以及税务/结算表格（美国用户 W-9，非美国用户 W-8BEN）。审核一般需要 24–72 小时；通过后当天即可开播。</p></details><details class="faq-item"><summary>我可以用手机在 ManyVids 上直播吗？</summary><p>ManyVids 通常提供手机主播 App 或移动网页版主播界面，但功能有限——没有叠加层、没有第二路摄像头、没有 AI 背景。如需完整的制作品质，请使用电脑配合 SplitCam 直播，并把手机作为第二路摄像头使用（SplitCam 支持来自手机的 IP 摄像头输入）。</p></details><details class="faq-item"><summary>ManyVids 支持 OBS 或外部编码器吗？</summary><p>支持——ManyVids 会在主播面板中提供 RTMP 服务器地址和推流密钥。把它们粘贴到 SplitCam 的 <strong>Stream Settings → Custom RTMP</strong>，设置 1920×1080、30 fps、4,000–5,000 Kbps 码率，然后点击 <strong>Go Live</strong>。通过 Custom RTMP 通道，你可以充分利用 SplitCam 的场景合成（多摄像头、叠加层、滤镜）。</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">其他平台指南</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 直播</h4><p>BongaCams 的 External Encoder 设置。</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat 直播</h4><p>Stripchat 直播的外部软件设置。</p></a><a class="related-card" href="../imlive/"><h4>ImLive 上的 SplitCam</h4><p>ImLive 的虚拟摄像头设置 — 无 RTMP。</p></a><a class="related-card" href="../mfc-alerts/"><h4>添加 MFC Alerts</h4><p>在 MyFreeCams 直播中显示动画小费提醒。</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">继续学习</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>多平台直播</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>成为 cam 模特</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense 玩具</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>准备开始直播了吗？</h2>

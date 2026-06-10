@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sajter",
+     "item": "https://camstreamguide.com/sv/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "CamContacts",
      "item": "https://camstreamguide.com/sv/camcontacts/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Steg</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterade guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
     <div class="qa-text">Sänd på CamContacts med SplitCam: installera SplitCam, bygg din scen, öppna inställningarna för <em>extern kodare / sändning</em> i performer-området, kopiera server-URL och streamnyckel, klistra in i SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg för steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Ladda ner och installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg din scen</div><p class="step-p">Öppna SplitCam och lägg till webbkameran. Lägg till overlays, text, en andra kamera eller mobil, beauty-filter eller AI-bakgrund.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hämta CamContacts-URL och streamnyckel</div><p class="step-p">Logga in på ditt CamContacts-performerkonto, öppna inställningarna för <strong>sändning / extern kodare</strong> och kopiera <strong>server-URL</strong> och <strong>streamnyckel</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Koppla SplitCam till CamContacts</div><p class="step-p">I SplitCam öppnar du <strong>Stream Settings</strong> och klistrar in CamContacts server-URL och streamnyckel i de anpassade RTMP-fälten. Sätt 3500–6000 Kbps vid 1920×1080, 30 fps, med nyckelbildruta varannan sekund.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klicka Go Live</div><p class="step-p">Tryck <strong>Go Live</strong> i SplitCam och gå sedan online från performer-området. Inom cirka 10 sekunder når din stream CamContacts publik.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Proffstips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Mogen, lojal publik</h3><p>CamContacts har körts i decennier med långvariga medlemmar — stadigare, mer betalande stamkunder än en churn-tung gratissajt, men långsammare tillväxt för nykomlingar.</p></div><div class="tip-card"><h3>Betala-per-minut belönar retention</h3><p>Håll tittarna i betald tid med en polerad scen och overlays; produktionsvärde förlänger sessionerna i en per-minut-modell.</p></div><div class="tip-card"><h3>Extern kodare låser upp scener</h3><p>Att gå via SplitCams RTMP i stället för den enkla kameran möjliggör flerkameralayouter, overlays och filter.</p></div><div class="tip-card"><h3>Använd kabelanslutning</h3><p>Ethernet slår Wi-Fi vid långa sändningar — tappade bildrutor betyder tappade tips. Koppla en kabel till datorn som sänder.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>CamContacts-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under CamContacts-sändning</summary><p>Tappade bildrutor betyder att paket inte når CamContacts i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på CamContacts</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>CamContacts avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den CamContacts visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på CamContacts</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>
   <div class="faq-list"><details class="faq-item"><summary>Stöder CamContacts externa kodare som SplitCam?</summary><p>Ja — performer-området exponerar en standardväg via extern kodare / RTMP. Kopiera server-URL och streamnyckel till SplitCam efter verifiering.</p></details><details class="faq-item"><summary>Var hittar jag min CamContacts-streamnyckel?</summary><p>I performer-områdets inställningar för sändning / extern kodare — både server-URL och streamnyckel visas där. Klistra in båda i SplitCams anpassade RTMP-fält.</p></details><details class="faq-item"><summary>Vilken bitrate för CamContacts?</summary><p>Tryck ut 1920×1080 vid 30 fps, 3500–6000 Kbps med nyckelbildruta varannan sekund. Kör SplitCams hastighetstest först.</p></details><details class="faq-item"><summary>Är SplitCam gratis för CamContacts?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns. CamContacts alternativ för extern kodare är gratis i performer-området.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på CamContacts?</summary><p>Inkomsten på CamContacts beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer CamContacts:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är CamContacts säkert för sändare?</summary><p>CamContacts kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på CamContacts?</summary><p>CamContacts kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på CamContacts från min telefon?</summary><p>CamContacts erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Stöder CamContacts OBS eller en extern encoder?</summary><p>Ja — CamContacts tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams <strong>Stream Settings → Custom RTMP</strong>, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på <strong>Go Live</strong>. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a><a class="related-card" href="../bongacams/"><h4>Sända BongaCams</h4><p>External Encoder-uppsättning för BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Sända Stripchat</h4><p>Extern mjukvara-uppsättning för Stripchat-sändning.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuell kamera-uppsättning för ImLive — ingen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Lägg till MFC Alerts</h4><p>Visa animerade tips-aviseringar i din MyFreeCams-sändning.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Läs mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

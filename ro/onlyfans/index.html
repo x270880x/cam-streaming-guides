@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Site-uri cam",
+     "item": "https://camstreamguide.com/ro/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "OnlyFans",
      "item": "https://camstreamguide.com/ro/onlyfans/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Răspuns</a>
+  <a href="#steps">Pași</a>
+  <a href="#tips">Sfaturi</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Ghiduri similare</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Pe scurt</div>
     <div class="qa-text">Live pe OnlyFans cu SplitCam: instalezi SplitCam, construiești scena, deschizi Stream Settings &rarr; Add Channel &rarr; OnlyFans și alegi <em>Autorizare</em> — te loghezi cu contul OnlyFans, SplitCam ia cheia automat — și apeși Go Live. Cu contul conectat poți schimba parametrii streamului OnlyFans din SplitCam, fără să deschizi site-ul OnlyFans.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pas cu pas</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarcă și instalează SplitCam</div><p class="step-p">SplitCam e software de streaming gratuit pentru Windows și macOS — fără cont, fără card, fără filigran. E encoderul care îți trimite videoul către OnlyFans.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Setează camera și scena</div><p class="step-p">Deschide SplitCam și adaugă webcam-ul. Construiește scena pe care o vor vedea spectatorii — overlay-uri, text, a doua cameră, filtre beauty sau fundal AI, totul aplicat live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Conectare — Metoda 1: Autorizare (recomandată)</div><p class="step-p">În SplitCam deschide <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> și alege <strong>Autorizare</strong>. Te loghezi cu email și parola OnlyFans. SplitCam îți leagă contul, ia stream key-ul automat și îl menține sincronizat — și te lasă să gestionezi parametrii live-ului OnlyFans din SplitCam, schimbându-i în timpul sau după transmisie fără să deschizi site-ul OnlyFans.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conectare — Metoda 2: Stream Key (manual)</div><p class="step-p">Preferi să nu te loghezi? Folosește cheia. Pe OnlyFans mergi la <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; secțiunea <strong>Other</strong> și copiază <strong>OBS Key</strong>. În SplitCam, Add Channel &rarr; OnlyFans, lipește în câmpul cheii. Această cheie e statică — pentru a schimba setări mai târziu te întorci pe site-ul OnlyFans.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Indiferent de metodă, apasă <strong>Go Live</strong> în SplitCam. Cu Metoda 1 poți ajusta parametrii OnlyFans din SplitCam în timp real; cu Metoda 2 cheia rămâne exact cum ai setat-o.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Autorizare vs Stream Key</h3><p>Două moduri de conectare: <strong>Autorizare</strong> (te loghezi o dată, cheia se ia și se menține sincronizată — cea mai ușoară rută) sau <strong>Stream Key</strong> (copiezi OBS Key din OnlyFans → Profile → Settings → Other și lipești). Autorizarea scutește copy-paste-ul manual.</p></div><div class="tip-card"><h3>Schimbă setări fără să părăsești SplitCam</h3><p>Cu autorizare, contul rămâne legat, deci ajustezi parametrii live OnlyFans din SplitCam în timpul sau după transmisie — fără să treci prin site-ul OnlyFans.</p></div><div class="tip-card"><h3>Bitrate modest</h3><p>Ingestul RTMP OnlyFans limitează bitrate-ul video la circa 2.500 Kbps — mai strâns decât majoritatea cam-site-urilor. Țintește 720p–1080p la ~2.000–2.500.</p></div><div class="tip-card"><h3>Folosește conexiune prin cablu</h3><p>Ethernet bate Wi-Fi într-un stream lung — un frame pierdut e un tip pierdut. Trage un cablu până la PC-ul de stream.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe OnlyFans are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe OnlyFans</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la OnlyFans la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe OnlyFans</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>OnlyFans respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de OnlyFans și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe OnlyFans</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Cum conectez OnlyFans la SplitCam?</summary><p>Două moduri. <strong>Autorizare</strong> — Stream Settings → Add Channel → OnlyFans → loghezi cu contul OnlyFans și SplitCam ia cheia automat. Sau <strong>Stream Key</strong> — copiezi OBS Key din OnlyFans → Profile → Settings → Other și lipești.</p></details><details class="faq-item"><summary>Pot schimba setări live OnlyFans fără să deschid site-ul?</summary><p>Da — cu metoda Autorizare SplitCam rămâne conectat la contul tău OnlyFans, deci cheia și setările sincronizează automat. Schimbi totul din SplitCam în timpul sau după transmisie, fără să vizitezi onlyfans.com.</p></details><details class="faq-item"><summary>Ce bitrate pentru OnlyFans?</summary><p>Modest — ingestul RTMP OnlyFans limitează bitrate-ul la circa 2.500 Kbps, mult mai strâns decât alte platforme cam. Țintește 720p–1080p în jur de 2.000–2.500 Kbps.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru live OnlyFans?</summary><p>Da — gratuit, fără filigran și fără limită de timp. Niciun cost la nivelul encoderului.</p></details><details class="faq-item"><summary>Cât pot câștiga modelele pe OnlyFans?</summary><p>Câștigurile pe OnlyFans depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a OnlyFans — verifică acordul de model înainte să intri live.</p></details><details class="faq-item"><summary>Este OnlyFans sigur pentru broadcasteri?</summary><p>OnlyFans cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real.</p></details><details class="faq-item"><summary>Ce documente îmi trebuie ca să devin model pe OnlyFans?</summary><p>OnlyFans cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi.</p></details><details class="faq-item"><summary>Pot să dau stream pe OnlyFans de pe telefon?</summary><p>OnlyFans oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane).</p></details><details class="faq-item"><summary>OnlyFans suportă OBS sau un encoder extern?</summary><p>Da — OnlyFans furnizează un URL de server RTMP și o stream key în panoul de broadcaster. Lipește-le pe ambele în <strong>Stream Settings → Custom RTMP</strong> din SplitCam, setează 1920×1080 la 30 fps cu un bitrate de 4.000–5.000 Kbps și apasă <strong>Go Live</strong>. Ruta Custom RTMP îți oferă compoziția completă a scenei din SplitCam (multi-cameră, overlay-uri, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Suport oficial — OnlyFans</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@onlyfans.com">support@onlyfans.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://onlyfans.com/help" rel="nofollow noopener" target="_blank">https://onlyfans.com/help</a></li></ul><p class="sp-note">Suntem un ghid independent. Pentru probleme de cont, plată sau tehnice, contactează direct suportul oficial al platformei.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisie BongaCams</h4><p>Setup External Encoder pentru BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Transmisie Stripchat</h4><p>Setup software extern pentru transmisii Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam pe ImLive</h4><p>Setup cameră virtuală pentru ImLive — fără RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Adaugă MFC Alerts</h4><p>Afișează tip alerts animate în streamul MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continuă</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Devino cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Jucării Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Gata să intri live?</h2>

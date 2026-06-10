@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "캠 사이트",
+     "item": "https://camstreamguide.com/ko/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "LiveJasmin",
      "item": "https://camstreamguide.com/ko/livejasmin/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">답변</a>
+  <a href="#steps">단계</a>
+  <a href="#tips">팁</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">관련 가이드</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">빠른 답변</div>
     <div class="qa-text">SplitCam으로 LiveJasmin 방송: SplitCam 설치, HD 장면 구성, Model Center에서 <em>Settings → Broadcast → External Encoder</em> 열기, 서버 URL과 stream key 복사, SplitCam에 붙여넣기, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">단계별 안내</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam 다운로드 및 설치</div><p class="step-p">SplitCam은 Windows와 macOS용 무료 라이브 방송 소프트웨어 — 가입 없음, 카드 없음, 워터마크 없음. HD 영상을 LiveJasmin으로 보내는 인코더입니다.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">HD 장면 구성</div><p class="step-p">SplitCam을 열고 웹캠을 1080p 모드로 추가하세요. 오버레이, 텍스트, 두 번째 카메라나 폰, 뷰티 필터나 AI 배경을 얹으세요 — LiveJasmin은 HD 품질을 요구하므로, 합성된 장면이 free chat과 private show 내내 프리미엄해 보여야 합니다.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">LiveJasmin URL과 stream key 받기</div><p class="step-p"><strong>modelcenter.livejasmin.com</strong>에 로그인하세요(계정이 먼저 승인되어야 합니다 — 보통 가입 후 48–72시간). <strong>Settings → Broadcast → External Encoder</strong>를 여세요. 페이지에 <strong>서버 URL</strong>과 고유 <strong>stream key</strong>가 표시됩니다. 둘 다 복사하세요.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam을 LiveJasmin에 연결</div><p class="step-p">SplitCam에서 <strong>Stream Settings</strong>를 열고 LiveJasmin 서버 URL과 stream key를 커스텀 RTMP 필드에 붙여넣으세요. 비트레이트를 4,000–6,000 Kbps, 1920×1080, 30 fps, 2초 키프레임으로 설정하세요. 먼저 내장 속도 테스트를 돌리세요 — HD 스트림은 회선 요구가 큽니다.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live 클릭</div><p class="step-p">SplitCam에서 <strong>Go Live</strong>를 누른 뒤 LiveJasmin Model Center에서 온라인으로 전환하세요. 약 10초 안에 HD 피드가 LiveJasmin 네트워크에 도달합니다. 이후 방송은 한 번의 클릭 — SplitCam 열기, Go Live, 그다음 LiveJasmin에서 온라인.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">프로 팁</h2>
   <div class="tips-grid"><div class="tip-card"><h3>HD가 아니면 랭킹이 떨어집니다</h3><p>LiveJasmin은 HD-only — 1280×720 미만이면 저단가 리스트에만 노출되고, 1080p 미만이면 «Premium» 자격을 잃습니다. 1920×1080, 30 fps, 4,000–6,000 Kbps를 목표로.</p></div><div class="tip-card"><h3>JasminCAM vs 외부 인코더</h3><p>Docler 자체 JasminCAM 클라이언트가 HD 준수 면에서 가장 깔끔하지만, 계정이 승인되면 OBS, SplitCam, vMix 같은 외부 인코더도 공식 지원됩니다 — JasminCAM이 못 하는 멀티캠 장면과 오버레이가 풀립니다.</p></div><div class="tip-card"><h3>Free chat ≠ Private show</h3><p>Free chat은 미리보기 전용 — 노출 금지입니다. 모델이 실제로 버는 곳은 Private과 Gold show입니다. 옷을 입은 상태와 쇼 모드 양쪽에서 강해 보이도록 장면을 설계하세요.</p></div><div class="tip-card"><h3>유선 연결을 쓰세요</h3><p>긴 방송에서는 이더넷이 와이파이를 이깁니다 — 프레임이 끊기면 팁도 끊깁니다. 방송 PC에 랜선을 연결하세요.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">문제 해결</h2><div class="faq-list"><details class="faq-item"><summary>LiveJasmin 방송이 끊기거나 버퍼링됨</summary><p>거의 항상 비트레이트가 업로드가 감당할 수 있는 것보다 높게 설정된 경우입니다. SplitCam 내장 속도 테스트를 돌린 뒤 비트레이트를 측정된 업로드의 약 75%로 설정하세요 — 1080p에 3,500–6,000&nbsp;Kbps, 720p는 더 낮게. 인코더가 회선을 초과하지 않으면 끊김이 사라집니다.</p></details><details class="faq-item"><summary>LiveJasmin 방송 중 프레임 끊김</summary><p>프레임 끊김은 패킷이 LiveJasmin에 제때 도착하지 못한다는 뜻입니다 — 보통 불안정한 와이파이. 유선 이더넷으로 바꾸고 대역폭을 먹는 앱을 닫고 비트레이트를 약간 낮추세요. 한 번 튀는 건 괜찮지만 계속 늘면 회선이 못 따라가는 것입니다.</p></details><details class="faq-item"><summary>검은 화면 — 시청자가 LiveJasmin에서 영상을 못 봄</summary><p>카메라가 SplitCam에서 활성 소스로 선택되지 않았거나 다른 앱이 잡고 있습니다. Zoom, Skype, OBS를 닫고 SplitCam 소스 목록에서 웹캠을 다시 고르고 Go Live 전에 미리보기에 영상이 나오는지 확인하세요.</p></details><details class="faq-item"><summary>LiveJasmin이 스트림 키를 거부하거나 연결되지 않음</summary><p>스트림 키를 다시 복사하세요 — 끝의 공백이나 재설정된 오래된 키가 가장 흔한 원인입니다. 서버 URL이 LiveJasmin이 표시한 것과 일치하고 계정에 외부 인코더 방송이 켜져 있는지 확인하세요. SplitCam Stream Settings의 초록 슬라이더가 유효한 키를 확인해 줍니다.</p></details><details class="faq-item"><summary>LiveJasmin에서 소리가 없거나 음성이 어긋남</summary><p>SplitCam을 카메라 그리고 마이크로 모두 선택하고 SplitCam 오디오 소스 안에서 진짜 마이크를 고르세요. 오디오가 영상보다 뒤처지면 해상도를 한 단계 낮추세요 — 인코더가 과부하라 오디오가 늦은 프레임을 기다리는 것입니다.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">자주 묻는 질문</h2>
   <div class="faq-list"><details class="faq-item"><summary>LiveJasmin은 SplitCam 같은 외부 인코더를 공식 지원하나요?</summary><p>네 — Model Center는 Settings → Broadcast에 External Encoder 옵션이 있습니다. JasminCAM이 추천 클라이언트이지만, 모델 계정이 승인되면 OBS, SplitCam, 기타 RTMP 인코더가 명시적으로 지원 대상에 포함됩니다.</p></details><details class="faq-item"><summary>내 LiveJasmin stream key는 어디 있나요?</summary><p>Model Center 안: Settings → Broadcast → External Encoder. 서버 URL과 고유 stream key가 모두 여기 표시됩니다 — 둘 다 SplitCam의 커스텀 RTMP 필드에 복사하세요. 이 key는 계정에 묶여 있으니 비밀번호처럼 다루세요.</p></details><details class="faq-item"><summary>LiveJasmin에 비트레이트는 얼마?</summary><p>LiveJasmin은 HD-only — 1920×1080, 30 fps, 4,000–6,000 Kbps, 키프레임 2초 간격을 목표로 하세요. 눈에 띄게 이보다 낮으면 Premium 라벨을 잃고 랭킹이 떨어집니다.</p></details><details class="faq-item"><summary>LiveJasmin에 SplitCam은 무료인가요?</summary><p>네 — SplitCam은 무료, 워터마크 없음, 시간 제한 없음. 유일한 «비용»은 LiveJasmin의 HD 요건을 충족하는 것인데, SplitCam의 1080p 장면 합성과 뷰티 필터가 네이티브로 처리합니다.</p></details><details class="faq-item"><summary>LiveJasmin에서 모델은 얼마나 벌 수 있나요?</summary><p>LiveJasmin에서의 수입은 시청자 규모, 방송 시간, 팁 문화에 따라 달라집니다. 활발한 방송인은 보통 월 $200~$3,000을 가져가며, 상위권은 $10,000 이상을 벌기도 합니다. 수익 배분은 LiveJasmin의 수수료 구조를 따르므로, 라이브 시작 전에 모델 계약서를 반드시 확인하세요.</p></details><details class="faq-item"><summary>LiveJasmin은(는) 방송인에게 안전한가요?</summary><p>LiveJasmin은(는) 지급 전에 연령 및 신분 확인을 요구하므로 모델을 사기로부터 보호합니다. 활동명을 사용하고, 카메라 앞에서 개인 정보를 절대 공유하지 말며, 지역 차단을 활성화해 본인이 거주하는 지역에서 방송이 보이지 않도록 하고, 모든 시청자 요청을 거래로 다루세요. SplitCam의 오버레이와 AI 배경 기능을 사용하면 실제 주변 환경을 가리거나 교체할 수도 있습니다.</p></details><details class="faq-item"><summary>LiveJasmin에서 모델이 되려면 어떤 서류가 필요한가요?</summary><p>LiveJasmin은(는) 일반적으로 정부 발급 사진 신분증(여권, 운전면허증 또는 신분증), 신분증을 들고 찍은 셀카, 그리고 세금/지급 양식(미국은 W-9, 미국 외 지역은 W-8BEN)을 요구합니다. 승인까지 보통 24~72시간이 걸리며, 승인되면 당일에 바로 라이브를 시작할 수 있습니다.</p></details><details class="faq-item"><summary>휴대폰으로 LiveJasmin에 방송할 수 있나요?</summary><p>LiveJasmin은(는) 보통 모바일 방송 앱이나 모바일 웹 방송 기능을 제공하지만, 오버레이, 보조 카메라, AI 배경이 없는 등 기능이 제한적입니다. 완전한 제작 품질을 원한다면 컴퓨터에서 SplitCam으로 방송하고, 휴대폰을 보조 카메라로 사용하세요(SplitCam은 휴대폰에서 IP 카메라 입력을 받을 수 있습니다).</p></details><details class="faq-item"><summary>LiveJasmin은(는) OBS나 외부 인코더를 지원하나요?</summary><p>네 — LiveJasmin은(는) 방송인 패널에서 RTMP 서버 URL과 스트림 키를 제공합니다. 둘 다 SplitCam의 <strong>Stream Settings → Custom RTMP</strong>에 붙여 넣고, 1920×1080, 30fps, 4,000~5,000 Kbps 비트레이트로 설정한 뒤 <strong>Go Live</strong>를 클릭하세요. Custom RTMP 경로를 사용하면 SplitCam의 모든 장면 구성 기능(멀티 카메라, 오버레이, 필터)을 그대로 활용할 수 있습니다.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">다른 플랫폼 가이드</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 방송</h4><p>BongaCams를 위한 External Encoder 설정.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat 방송</h4><p>Stripchat 방송을 위한 외부 소프트웨어 설정.</p></a><a class="related-card" href="../imlive/"><h4>ImLive의 SplitCam</h4><p>ImLive를 위한 가상 카메라 설정 — RTMP 없음.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts 추가</h4><p>MyFreeCams 방송에 애니메이션 팁 알림 표시.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">더 배우기</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>다중 송출</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>캠 모델 되기</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense 토이</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>라이브 방송 준비됐나요?</h2>

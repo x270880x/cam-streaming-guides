@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-plattformer",
+     "item": "https://camstreamguide.com/no/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fanvue",
      "item": "https://camstreamguide.com/no/fanvue/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Trinn</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterte guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort</div>
     <div class="qa-text">Gå live på Fanvue med SplitCam: installer SplitCam, bygg scenen, start en live-sending på Fanvue, og i broadcasterens kameravelger velg <em>SplitCam</em> — så gå live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg for steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Last ned og installer SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. Det installerer et virtuelt kamera som nettleseren kan velge.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg scenen</div><p class="step-p">Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå — alt brukt live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Start en live-sending på Fanvue</div><p class="step-p">Logg inn på Fanvue-creator-kontoen din og åpne live-broadcasteren for å starte en sending til abonnentene dine.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Velg SplitCam som kamera</div><p class="step-p">I Fanvues kamera-nedtrekksliste velg <strong>SplitCam</strong> i stedet for det rå webkameraet — den komponerte scenen din erstatter det flate kameraet. (Eller lim en stream key inn i SplitCams custom RTMP-felter om tilgjengelig.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Start sendingen — SplitCam-scenen, overlays og filtrene dine når Fanvue-abonnentene dine.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Virtuelt kamera fungerer overalt</h3><p>Selv når en plattforms live kun går i nettleseren, dukker SplitCam opp som et valgbart webkamera — multi-kamera scener, overlays og filtre fungerer på Fanvue helt uten stream key.</p></div><div class="tip-card"><h3>Creator- og AI-vennlig</h3><p>Fanvue ønsker AI-creatorer velkommen og betaler ryddig ut. Overlays som krysselger abonnementet eller PPV-en din konverterer godt til et publikum som allerede betaler.</p></div><div class="tip-card"><h3>Gi nettleseren kameratilgang</h3><p>Hvis SplitCam ikke dukker opp i Fanvues kameraliste, sørg for at SplitCam kjører først og at nettleseren har kameratilgang — last deretter siden på nytt.</p></div><div class="tip-card"><h3>Gjør en privat test først</h3><p>Kjør en kort testsending for å sjekke kamera, lyd, rammeverk og overlays før du åpner rommet for publikum.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Feilsøking</h2><div class="faq-list"><details class="faq-item"><summary>Fanvue-strømmen din henger eller bufrer</summary><p>Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000&nbsp;Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din.</p></details><details class="faq-item"><summary>Tapte frames under Fanvue-sendingen</summary><p>Tapte frames betyr at pakkene ikke når Fanvue i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge.</p></details><details class="faq-item"><summary>Svart skjerm — seerne ser ingen video på Fanvue</summary><p>Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live.</p></details><details class="faq-item"><summary>Fanvue avviser strømnøkkelen eller kobler ikke til</summary><p>Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den Fanvue viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ute av synk på Fanvue</summary><p>Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hvordan kobler SplitCam seg til Fanvue?</summary><p>Fanvue live er nettleser-basert, så SplitCam kobler seg på som virtuelt kamera: velg SplitCam i kameravelgeren. Ingen stream key nødvendig.</p></details><details class="faq-item"><summary>Kan jeg bruke overlays og flere kameraer på Fanvue?</summary><p>Ja — bygg scenen i SplitCam (et ekstra kamera, overlays, beauty- eller AI-bakgrunnsfiltre), og Fanvue ser den ferdige scenen som ett enkelt webkamera.</p></details><details class="faq-item"><summary>Støtter Fanvue OBS eller eksterne enkodere?</summary><p>Fanvues live er primært nettleser-/webkamera-basert. Hvis dashbordet ditt viser et alternativ for ekstern enkoder eller stream key, lim det inn i SplitCams custom RTMP-felter; ellers bruk virtuelt-kamera-metoden.</p></details><details class="faq-item"><summary>Er SplitCam gratis å bruke med Fanvue?</summary><p>Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense.</p></details><details class="faq-item"><summary>Hvor mye kan modeller tjene på Fanvue?</summary><p>Inntektene på Fanvue avhenger av publikumsstørrelse, antall timer sendt og tipping-vaner. Aktive kringkastere tjener vanligvis $200–$3 000 i måneden; toppmodeller når $10 000+. Din andel av inntekten følger Fanvues provisjonsstruktur — sjekk modellavtalen før du går live.</p></details><details class="faq-item"><summary>Er Fanvue trygt for kringkastere?</summary><p>Fanvue krever alders- og ID-verifisering før utbetaling, noe som beskytter modeller mot svindel. Bruk et scenenavn, del aldri personlige data på kamera, aktiver geo-blokkering for å skjule strømmen fra hjemregionen din, og behandle hver seerforespørsel som en transaksjon. SplitCams overlegg og AI-bakgrunn kan også skjule eller erstatte de virkelige omgivelsene dine.</p></details><details class="faq-item"><summary>Hvilke dokumenter trenger jeg for å bli modell på Fanvue?</summary><p>Fanvue krever vanligvis et offentlig utstedt foto-ID (pass, førerkort eller ID-kort), en selfie med ID-en i hånden, og et skatte-/utbetalingsskjema (W-9 for USA, W-8BEN for ikke-amerikanske). Godkjenning tar vanligvis 24–72 timer; når du er godkjent kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg strømme på Fanvue fra mobilen?</summary><p>Fanvue tilbyr vanligvis en mobil kringkasterapp eller en mobil-web-kringkaster, men opplevelsen er begrenset — ingen overlegg, ingen andre kamera, ingen AI-bakgrunn. For full produksjonskvalitet, send fra en datamaskin med SplitCam og bruk telefonen som andre kamera (SplitCam aksepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Kan jeg bruke SplitCam som virtuelt kamera på Fanvue?</summary><p>Ja — Fanvues live kjører i nettleseren, så SplitCam registreres som et webkamera kalt <strong>"SplitCam Video Driver"</strong>. Åpne Fanvue-kringkasteren, klikk kameravelgeren i nettleseren, og velg SplitCam. Den komponerte scenen din (overlegg, andre kamera, filtre, AI-bakgrunn) når seerne som en enkelt webkamera-feed.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre plattformguider</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuelt kamera for ImLive — ingen RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam på SkyPrivate</h4><p>Virtuelt-kamera-oppsett for SkyPrivates Skype-baserte cam-samtaler.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Bruk SplitCam som virtuelt kamera i JustForFans live-broadcaster.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Bruk SplitCam som virtuelt kamera i LoyalFans live.</p></a><a class="related-card" href="../chaturbate/"><h4>Sending Chaturbate</h4><p>Token-basert oppsett med ekstern enkoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sending CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Klar til å gå live?</h2>

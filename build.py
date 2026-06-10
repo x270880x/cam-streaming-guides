@@ -96,6 +96,122 @@ def autolink_platforms(html_str, current_slug, all_platforms):
 ROOT = Path(__file__).parent
 OBS_SLUG = "obs-alternative"
 MODEL_SLUG = "become-a-cam-model"
+# Maps each platform's METHOD value to a category-anchor in the language hub —
+# used for breadcrumbs (Home > {Category} > Platform) and category headings.
+CATEGORY_OF_METHOD = {"stream": "cam-sites", "vcam": "fan-platforms", "": "extras"}
+CATEGORY_LABEL = {  # localized human names; falls back to EN if missing
+    "en": {"cam-sites": "Cam sites", "fan-platforms": "Fan platforms", "extras": "Tools"},
+    "ru": {"cam-sites": "Кам-сайты", "fan-platforms": "Фан-платформы", "extras": "Инструменты"},
+    "es": {"cam-sites": "Sitios de cam", "fan-platforms": "Plataformas de fans", "extras": "Herramientas"},
+    "de": {"cam-sites": "Cam-Seiten", "fan-platforms": "Fan-Plattformen", "extras": "Tools"},
+    "fr": {"cam-sites": "Sites de cam", "fan-platforms": "Plateformes de fans", "extras": "Outils"},
+    "it": {"cam-sites": "Siti cam", "fan-platforms": "Piattaforme di fan", "extras": "Strumenti"},
+    "pt": {"cam-sites": "Sites de cam", "fan-platforms": "Plataformas de fãs", "extras": "Ferramentas"},
+    "nl": {"cam-sites": "Cam-sites", "fan-platforms": "Fan-platformen", "extras": "Hulpmiddelen"},
+    "ro": {"cam-sites": "Site-uri cam", "fan-platforms": "Platforme pentru fani", "extras": "Instrumente"},
+    "bg": {"cam-sites": "Кам сайтове", "fan-platforms": "Платформи за фенове", "extras": "Инструменти"},
+    "hu": {"cam-sites": "Cam oldalak", "fan-platforms": "Rajongói platformok", "extras": "Eszközök"},
+    "el": {"cam-sites": "Cam sites", "fan-platforms": "Πλατφόρμες fan", "extras": "Εργαλεία"},
+    "fi": {"cam-sites": "Cam-sivustot", "fan-platforms": "Fan-alustat", "extras": "Työkalut"},
+    "da": {"cam-sites": "Cam-sider", "fan-platforms": "Fan-platforme", "extras": "Værktøjer"},
+    "no": {"cam-sites": "Cam-sider", "fan-platforms": "Fan-plattformer", "extras": "Verktøy"},
+    "sr": {"cam-sites": "Кам сајтови", "fan-platforms": "Фан платформе", "extras": "Алати"},
+    "hr": {"cam-sites": "Cam stranice", "fan-platforms": "Fan platforme", "extras": "Alati"},
+    "zh": {"cam-sites": "Cam 网站", "fan-platforms": "粉丝平台", "extras": "工具"},
+    "ja": {"cam-sites": "Camサイト", "fan-platforms": "ファンプラットフォーム", "extras": "ツール"},
+    "ar": {"cam-sites": "مواقع الكام", "fan-platforms": "منصات المعجبين", "extras": "أدوات"},
+    "th": {"cam-sites": "เว็บ Cam", "fan-platforms": "แพลตฟอร์มแฟน", "extras": "เครื่องมือ"},
+    "fil": {"cam-sites": "Cam sites", "fan-platforms": "Fan platforms", "extras": "Mga tools"},
+    "tr": {"cam-sites": "Cam siteleri", "fan-platforms": "Fan platformları", "extras": "Araçlar"},
+    "id": {"cam-sites": "Situs cam", "fan-platforms": "Platform fan", "extras": "Alat"},
+    "vi": {"cam-sites": "Trang cam", "fan-platforms": "Nền tảng fan", "extras": "Công cụ"},
+    "pl": {"cam-sites": "Strony cam", "fan-platforms": "Platformy fanów", "extras": "Narzędzia"},
+    "ko": {"cam-sites": "캠 사이트", "fan-platforms": "팬 플랫폼", "extras": "도구"},
+    "uk": {"cam-sites": "Кам-сайти", "fan-platforms": "Фан-платформи", "extras": "Інструменти"},
+    "cs": {"cam-sites": "Cam stránky", "fan-platforms": "Fan platformy", "extras": "Nástroje"},
+    "sk": {"cam-sites": "Cam stránky", "fan-platforms": "Fan platformy", "extras": "Nástroje"},
+    "sv": {"cam-sites": "Cam-sajter", "fan-platforms": "Fan-plattformar", "extras": "Verktyg"},
+    "ms": {"cam-sites": "Tapak cam", "fan-platforms": "Platform peminat", "extras": "Alatan"},
+    "he": {"cam-sites": "‏אתרי Cam", "fan-platforms": "‏פלטפורמות מעריצים", "extras": "כלים"},
+    "fa": {"cam-sites": "‏سایت‌های Cam", "fan-platforms": "‏پلتفرم‌های طرفداران", "extras": "ابزارها"},
+    "hi": {"cam-sites": "Cam साइटें", "fan-platforms": "Fan प्लेटफ़ॉर्म", "extras": "टूल्स"},
+}
+# Section anchor labels for the in-page TOC (jumps inside one platform guide).
+TOC_LABELS = {
+    "en": {"quick": "Quick answer", "steps": "Step-by-step", "tips": "Tips", "faq": "FAQ", "related": "Related guides"},
+    "ru": {"quick": "Кратко", "steps": "Пошагово", "tips": "Советы", "faq": "FAQ", "related": "Похожие гайды"},
+    "es": {"quick": "Respuesta", "steps": "Pasos", "tips": "Consejos", "faq": "FAQ", "related": "Guías relacionadas"},
+    "de": {"quick": "Antwort", "steps": "Schritte", "tips": "Tipps", "faq": "FAQ", "related": "Verwandte Guides"},
+    "fr": {"quick": "Réponse", "steps": "Étapes", "tips": "Astuces", "faq": "FAQ", "related": "Guides similaires"},
+    "it": {"quick": "Risposta", "steps": "Passi", "tips": "Consigli", "faq": "FAQ", "related": "Guide correlate"},
+    "pt": {"quick": "Resposta", "steps": "Passos", "tips": "Dicas", "faq": "FAQ", "related": "Guias relacionados"},
+    "nl": {"quick": "Antwoord", "steps": "Stappen", "tips": "Tips", "faq": "FAQ", "related": "Vergelijkbare gidsen"},
+    "ro": {"quick": "Răspuns", "steps": "Pași", "tips": "Sfaturi", "faq": "FAQ", "related": "Ghiduri similare"},
+    "bg": {"quick": "Отговор", "steps": "Стъпки", "tips": "Съвети", "faq": "ЧЗВ", "related": "Подобни ръководства"},
+    "hu": {"quick": "Válasz", "steps": "Lépések", "tips": "Tippek", "faq": "GYIK", "related": "Hasonló útmutatók"},
+    "el": {"quick": "Απάντηση", "steps": "Βήματα", "tips": "Συμβουλές", "faq": "Συχνές", "related": "Σχετικοί οδηγοί"},
+    "fi": {"quick": "Vastaus", "steps": "Vaiheet", "tips": "Vinkit", "faq": "UKK", "related": "Aiheeseen liittyvät"},
+    "da": {"quick": "Svar", "steps": "Trin", "tips": "Tips", "faq": "FAQ", "related": "Relaterede guides"},
+    "no": {"quick": "Svar", "steps": "Trinn", "tips": "Tips", "faq": "FAQ", "related": "Relaterte guider"},
+    "sr": {"quick": "Одговор", "steps": "Кораци", "tips": "Савети", "faq": "ЧПП", "related": "Слични водичи"},
+    "hr": {"quick": "Odgovor", "steps": "Koraci", "tips": "Savjeti", "faq": "FAQ", "related": "Slični vodiči"},
+    "zh": {"quick": "速答", "steps": "步骤", "tips": "技巧", "faq": "FAQ", "related": "相关指南"},
+    "ja": {"quick": "回答", "steps": "手順", "tips": "コツ", "faq": "FAQ", "related": "関連ガイド"},
+    "ar": {"quick": "إجابة", "steps": "خطوات", "tips": "نصائح", "faq": "أسئلة", "related": "أدلة ذات صلة"},
+    "th": {"quick": "คำตอบ", "steps": "ขั้นตอน", "tips": "เคล็ดลับ", "faq": "FAQ", "related": "ไกด์ที่เกี่ยวข้อง"},
+    "fil": {"quick": "Sagot", "steps": "Mga hakbang", "tips": "Mga tips", "faq": "FAQ", "related": "Kaugnay na gabay"},
+    "tr": {"quick": "Cevap", "steps": "Adımlar", "tips": "İpuçları", "faq": "SSS", "related": "İlgili kılavuzlar"},
+    "id": {"quick": "Jawaban", "steps": "Langkah", "tips": "Tips", "faq": "FAQ", "related": "Panduan terkait"},
+    "vi": {"quick": "Trả lời", "steps": "Các bước", "tips": "Mẹo", "faq": "FAQ", "related": "Hướng dẫn liên quan"},
+    "pl": {"quick": "Odpowiedź", "steps": "Kroki", "tips": "Wskazówki", "faq": "FAQ", "related": "Powiązane poradniki"},
+    "ko": {"quick": "답변", "steps": "단계", "tips": "팁", "faq": "FAQ", "related": "관련 가이드"},
+    "uk": {"quick": "Відповідь", "steps": "Кроки", "tips": "Поради", "faq": "FAQ", "related": "Схожі гайди"},
+    "cs": {"quick": "Odpověď", "steps": "Kroky", "tips": "Tipy", "faq": "FAQ", "related": "Související průvodci"},
+    "sk": {"quick": "Odpoveď", "steps": "Kroky", "tips": "Tipy", "faq": "FAQ", "related": "Súvisiace návody"},
+    "sv": {"quick": "Svar", "steps": "Steg", "tips": "Tips", "faq": "FAQ", "related": "Relaterade guider"},
+    "ms": {"quick": "Jawapan", "steps": "Langkah", "tips": "Petua", "faq": "FAQ", "related": "Panduan berkaitan"},
+    "he": {"quick": "תשובה", "steps": "שלבים", "tips": "טיפים", "faq": "שאלות", "related": "מדריכים קשורים"},
+    "fa": {"quick": "پاسخ", "steps": "مراحل", "tips": "نکات", "faq": "سوالات", "related": "راهنماهای مرتبط"},
+    "hi": {"quick": "उत्तर", "steps": "चरण", "tips": "टिप्स", "faq": "FAQ", "related": "संबंधित गाइड"},
+}
+# Cross-reference labels — "Continue learning" block linking out to support pages.
+XREF_LABELS = {
+    "en": {"heading": "Continue learning", "multi": "Multi-streaming setup", "obs": "SplitCam vs OBS", "model": "Become a cam model", "lovense": "Lovense toy integration"},
+    "ru": {"heading": "Дальше", "multi": "Мульти-стриминг", "obs": "SplitCam vs OBS", "model": "Стать кам-моделью", "lovense": "Интеграция Lovense"},
+    "es": {"heading": "Más guías", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Ser cam model", "lovense": "Juguetes Lovense"},
+    "de": {"heading": "Weiterlernen", "multi": "Multi-Streaming", "obs": "SplitCam vs OBS", "model": "Cam-Model werden", "lovense": "Lovense-Integration"},
+    "fr": {"heading": "Aller plus loin", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Devenir cam-girl", "lovense": "Jouets Lovense"},
+    "it": {"heading": "Continua", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Diventare cam model", "lovense": "Giocattoli Lovense"},
+    "pt": {"heading": "Saiba mais", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Ser cam model", "lovense": "Brinquedos Lovense"},
+    "nl": {"heading": "Verder lezen", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Cammodel worden", "lovense": "Lovense-integratie"},
+    "ro": {"heading": "Continuă", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Devino cam model", "lovense": "Jucării Lovense"},
+    "bg": {"heading": "Още", "multi": "Мулти-стрийминг", "obs": "SplitCam vs OBS", "model": "Стани кам модел", "lovense": "Lovense играчки"},
+    "hu": {"heading": "Tovább", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Cam modell leszek", "lovense": "Lovense játékok"},
+    "el": {"heading": "Συνέχεια", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Γίνε cam model", "lovense": "Lovense"},
+    "fi": {"heading": "Lue lisää", "multi": "Multi-stream", "obs": "SplitCam vs OBS", "model": "Cam-malliksi", "lovense": "Lovense-lelut"},
+    "da": {"heading": "Mere", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Bliv cam-model", "lovense": "Lovense"},
+    "no": {"heading": "Mer", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Bli cam-modell", "lovense": "Lovense"},
+    "sr": {"heading": "Још", "multi": "Мулти-стрим", "obs": "SplitCam vs OBS", "model": "Постани кам модел", "lovense": "Lovense"},
+    "hr": {"heading": "Dalje", "multi": "Multi-stream", "obs": "SplitCam vs OBS", "model": "Postani cam model", "lovense": "Lovense"},
+    "zh": {"heading": "继续学习", "multi": "多平台直播", "obs": "SplitCam vs OBS", "model": "成为 cam 模特", "lovense": "Lovense 玩具"},
+    "ja": {"heading": "もっと学ぶ", "multi": "マルチ配信", "obs": "SplitCam vs OBS", "model": "Camモデルになる", "lovense": "Lovense"},
+    "ar": {"heading": "تابع التعلم", "multi": "البث المتعدد", "obs": "SplitCam مقابل OBS", "model": "كن نموذج كام", "lovense": "ألعاب Lovense"},
+    "th": {"heading": "เรียนรู้เพิ่ม", "multi": "สตรีมหลายที่", "obs": "SplitCam vs OBS", "model": "เป็น cam model", "lovense": "ของเล่น Lovense"},
+    "fil": {"heading": "Magpatuloy", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Maging cam model", "lovense": "Mga laruang Lovense"},
+    "tr": {"heading": "Devam", "multi": "Çoklu yayın", "obs": "SplitCam vs OBS", "model": "Cam model olmak", "lovense": "Lovense oyuncakları"},
+    "id": {"heading": "Pelajari lagi", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Jadi cam model", "lovense": "Mainan Lovense"},
+    "vi": {"heading": "Tiếp tục", "multi": "Đa nền tảng", "obs": "SplitCam vs OBS", "model": "Trở thành cam model", "lovense": "Đồ chơi Lovense"},
+    "pl": {"heading": "Czytaj dalej", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Zostań cam modelką", "lovense": "Lovense"},
+    "ko": {"heading": "더 배우기", "multi": "다중 송출", "obs": "SplitCam vs OBS", "model": "캠 모델 되기", "lovense": "Lovense 토이"},
+    "uk": {"heading": "Далі", "multi": "Мульти-стрім", "obs": "SplitCam vs OBS", "model": "Стати кам-моделлю", "lovense": "Lovense"},
+    "cs": {"heading": "Pokračovat", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Stát se cam modelkou", "lovense": "Lovense"},
+    "sk": {"heading": "Ďalej", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Stať sa cam modelkou", "lovense": "Lovense"},
+    "sv": {"heading": "Läs mer", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Bli cam-modell", "lovense": "Lovense"},
+    "ms": {"heading": "Belajar lagi", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Jadi cam model", "lovense": "Mainan Lovense"},
+    "he": {"heading": "המשך ללמוד", "multi": "‏Multi-streaming", "obs": "‏SplitCam מול OBS", "model": "להפוך לדוגמנית cam", "lovense": "‏Lovense"},
+    "fa": {"heading": "ادامه یادگیری", "multi": "‏Multi-streaming", "obs": "‏SplitCam در مقابل OBS", "model": "مدل کام شوید", "lovense": "‏Lovense"},
+    "hi": {"heading": "और सीखें", "multi": "Multi-streaming", "obs": "SplitCam vs OBS", "model": "Cam मॉडल बनें", "lovense": "Lovense टॉय"},
+}
 # Short localized footer label for the SplitCam-vs-OBS page (falls back to "SplitCam vs OBS").
 OBS_NAV = {
     "en": "SplitCam vs OBS", "ru": "SplitCam vs OBS", "es": "SplitCam vs OBS",
@@ -355,6 +471,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -1899,7 +2023,12 @@ def render(p, lang, all_platforms):
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": u["crumb_home"],
                  "item": f'{SITE}/{u["path"]}'},
-                {"@type": "ListItem", "position": 2, "name": name, "item": canon}]},
+                {"@type": "ListItem", "position": 2,
+                 "name": CATEGORY_LABEL.get(lang, CATEGORY_LABEL["en"]).get(
+                     CATEGORY_OF_METHOD.get(METHOD.get(p["slug"], ""), "extras"),
+                     "Guides"),
+                 "item": f'{SITE}/{u["path"]}#{CATEGORY_OF_METHOD.get(METHOD.get(p["slug"], ""), "extras")}'},
+                {"@type": "ListItem", "position": 3, "name": name, "item": canon}]},
             {"@type": "HowTo", "name": _strip(d["h1html"]), "description": d["desc"],
              "totalTime": "PT5M", "inLanguage": lang,
              "datePublished": PUBLISHED_DATE, "dateModified": MODIFIED_DATE,
@@ -1997,7 +2126,14 @@ def render(p, lang, all_platforms):
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">{TOC_LABELS.get(lang, TOC_LABELS['en'])['quick']}</a>
+  <a href="#steps">{TOC_LABELS.get(lang, TOC_LABELS['en'])['steps']}</a>
+  <a href="#tips">{TOC_LABELS.get(lang, TOC_LABELS['en'])['tips']}</a>
+  <a href="#faq">{TOC_LABELS.get(lang, TOC_LABELS['en'])['faq']}</a>
+  <a href="#related">{TOC_LABELS.get(lang, TOC_LABELS['en'])['related']}</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">{u['quick']}</div>
     <div class="qa-text">{L(d['quick'].split('<ol>')[0])}</div>
@@ -2008,19 +2144,28 @@ def render(p, lang, all_platforms):
   <h2 class="sec-h">{u['steps_h']}</h2>
   <div class="steps">{steps_html}</div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">{u['tips_h']}</h2>
   <div class="tips-grid">{tips_html}</div>
 </section>
 {trouble_html}
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">{u['faq_h']}</h2>
   <div class="faq-list">{faq_html}</div>
 </section>
 {support_html}
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">{u['related']}</h3>
   <div class="related-grid">{related}</div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">{XREF_LABELS.get(lang, XREF_LABELS['en'])['heading']}</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>{XREF_LABELS.get(lang, XREF_LABELS['en'])['multi']}</h4></a>
+    <a class="related-card" href="../{OBS_SLUG}/"><h4>{XREF_LABELS.get(lang, XREF_LABELS['en'])['obs']}</h4></a>
+    <a class="related-card" href="../{MODEL_SLUG}/"><h4>{XREF_LABELS.get(lang, XREF_LABELS['en'])['model']}</h4></a>
+    <a class="related-card" href="../lovense/"><h4>{XREF_LABELS.get(lang, XREF_LABELS['en'])['lovense']}</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>{u['cta_h']}</h2>
@@ -3420,11 +3565,38 @@ def render_hub(platforms, lang):
     first = ["multistream-cams", "onlyfans", "myfreecams", "lovense", "mfc-alerts"]
     ordered = ([p for s in first for p in avail if p["slug"] == s]
                + [p for p in avail if p["slug"] not in first])
-    cards = "".join(
-        f'<a class="related-card" href="{p["slug"]}/" data-m="{METHOD.get(p["slug"], "")}">'
-        f'<img class="hub-card-icon" src="{hub_depth}logos/round/{p["slug"]}.png" alt="" loading="lazy">'
-        f'<div class="hub-card-body"><h4>{e(p[lang]["h1short"])}</h4>'
-        f'<p>{e(p[lang]["card"])}</p></div></a>' for p in ordered)
+
+    # Group platforms by category so each section gets its own anchor (#cam-sites,
+    # #fan-platforms, #extras). Same platforms as the flat list, just structured —
+    # gives breadcrumbs on each guide page a real intermediate URL to point at.
+    cat_labels = CATEGORY_LABEL.get(lang, CATEGORY_LABEL["en"])
+    by_cat = {"cam-sites": [], "fan-platforms": [], "extras": []}
+    for p in ordered:
+        cat = CATEGORY_OF_METHOD.get(METHOD.get(p["slug"], ""), "extras")
+        by_cat[cat].append(p)
+
+    def _card(p):
+        return (f'<a class="related-card" href="{p["slug"]}/" data-m="{METHOD.get(p["slug"], "")}">'
+                f'<img class="hub-card-icon" src="{hub_depth}logos/round/{p["slug"]}.png" alt="" loading="lazy">'
+                f'<div class="hub-card-body"><h4>{e(p[lang]["h1short"])}</h4>'
+                f'<p>{e(p[lang]["card"])}</p></div></a>')
+
+    cat_sections = []
+    for cat_key in ("cam-sites", "fan-platforms", "extras"):
+        if not by_cat[cat_key]:
+            continue
+        cards_html = "".join(_card(p) for p in by_cat[cat_key])
+        cat_sections.append(
+            f'<section class="cat-section" id="{cat_key}">'
+            f'<h2 class="cat-h">{e(cat_labels[cat_key])} '
+            f'<span class="cat-count">{len(by_cat[cat_key])}</span></h2>'
+            f'<div class="hub-grid">{cards_html}</div>'
+            f'</section>'
+        )
+    cards = "".join(cat_sections)
+
+    # Flat ungrouped fallback for the filter buttons (.hub-grid in cat-sections still
+    # works since data-m attribute is preserved; we just hide non-matching cards).
     hf = HUB_FILTER.get(lang, HUB_FILTER["en"])
     filter_bar = (f'<div class="hub-filter">'
                   f'<button class="hf-btn active" data-f="all">{e(hf[0])}</button>'
@@ -3509,7 +3681,7 @@ def render_hub(platforms, lang):
 <section class="section">
   <h2 class="sec-h">{e(hb['pick'])}</h2>
   {filter_bar}
-  <div class="hub-grid">{cards}</div>
+  {cards}
 </section>
 <footer>
   <div class="footer-inner">

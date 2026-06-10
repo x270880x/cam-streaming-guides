@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Rajongói platformok",
+     "item": "https://camstreamguide.com/hu/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fanvue",
      "item": "https://camstreamguide.com/hu/fanvue/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Válasz</a>
+  <a href="#steps">Lépések</a>
+  <a href="#tips">Tippek</a>
+  <a href="#faq">GYIK</a>
+  <a href="#related">Hasonló útmutatók</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Röviden</div>
     <div class="qa-text">Live Fanvue-n SplitCammel: telepíted a SplitCamet, jelenetet építesz, élő adást indítasz a Fanvue-n, és a broadcaster kameraválasztójában a <em>SplitCamet</em> választod — majd élőben vagy.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Lépésről lépésre</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Töltsd le és telepítsd a SplitCamet</div><p class="step-p">A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. Telepít egy virtuális kamerát, amit a böngésző ki tud választani.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Építsd meg a jelenetet</div><p class="step-p">Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — mind élőben alkalmazva.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Indíts élő adást a Fanvue-n</div><p class="step-p">Jelentkezz be a Fanvue creator fiókodba és nyisd meg az élő broadcastert, hogy adást indíts az előfizetőidnek.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Válaszd a SplitCamet kameraként</div><p class="step-p">A Fanvue kamera legördülőjében válaszd a <strong>SplitCamet</strong> a nyers webkamerád helyett — a komponált jeleneted lép a lapos kamera helyébe. (Vagy, ha elérhető, illeszd be a stream key-t a SplitCam egyéni RTMP mezőibe.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Indítsd el az adást — a SplitCam jeleneted, az overlay-ek és a szűrők elérik a Fanvue előfizetőidet.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>A virtuális kamera mindenhol működik</h3><p>Még ha egy platform élő funkciója csak böngészős is, a SplitCam választható webkameraként jelenik meg — így a multi-kamera jeleneted, az overlay-ek és a szűrők stream key nélkül is működnek a Fanvue-n.</p></div><div class="tip-card"><h3>Creator- és AI-barát</h3><p>A Fanvue szívesen fogadja az AI creatoröket és rendben fizet. A Q&amp;A vagy a PPV-d keresztértékesítő overlay-ek jól konvertálnak egy közönségnél, amely már fizet.</p></div><div class="tip-card"><h3>Add meg a kamera engedélyt a böngészőnek</h3><p>Ha a SplitCam nem jelenik meg a Fanvue kameralistájában, előbb győződj meg róla, hogy a SplitCam fut és a böngészőnek van kamera engedélye — majd töltsd újra az oldalt.</p></div><div class="tip-card"><h3>Először csinálj privát tesztet</h3><p>Futtass egy rövid teszt-adást a kamerára, hangra, kompozícióra és overlay-ekre, mielőtt a szobát megnyitod a közönségnek.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A Fanvue streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a Fanvue adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a Fanvue platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a Fanvue platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A Fanvue elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a Fanvue által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a Fanvue platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hogyan csatlakozik a SplitCam a Fanvue-hoz?</summary><p>A Fanvue élő funkciója böngészős, így a SplitCam virtuális kameraként csatlakozik: válaszd a SplitCamet a kameraválasztóban. Nincs szükség stream key-re.</p></details><details class="faq-item"><summary>Használhatok overlay-eket és több kamerát a Fanvue-n?</summary><p>Igen — építsd meg a jelenetet a SplitCamben (második kamera, overlay-ek, beauty vagy AI-háttér szűrők), és a Fanvue a kész jelenetet egyetlen webkameraként látja.</p></details><details class="faq-item"><summary>Támogat a Fanvue OBS-t vagy külső enkódereket?</summary><p>A Fanvue élő funkciója elsősorban böngésző- / webkamera-alapú. Ha a dashboardod külső enkóder vagy stream key opciót mutat, illeszd be a SplitCam egyéni RTMP mezőibe; egyébként használd a virtuális kamera módot.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a Fanvue-hoz?</summary><p>Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát.</p></details><details class="faq-item"><summary>Mennyit kereshetnek a modellek a(z) Fanvue oldalon?</summary><p>A(z) Fanvue oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) Fanvue jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést.</p></details><details class="faq-item"><summary>Biztonságos a(z) Fanvue a műsorszóróknak?</summary><p>A(z) Fanvue a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet.</p></details><details class="faq-item"><summary>Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) Fanvue oldalon?</summary><p>A(z) Fanvue általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz.</p></details><details class="faq-item"><summary>Streamelhetek a(z) Fanvue oldalra a telefonomról?</summary><p>A(z) Fanvue általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról).</p></details><details class="faq-item"><summary>Használhatom a SplitCamet virtuális kameraként a(z) Fanvue oldalon?</summary><p>Igen — a(z) Fanvue élő adása böngészőben fut, így a SplitCam <strong>"SplitCam Video Driver"</strong> nevű webkameraként jelenik meg. Nyisd meg a(z) Fanvue broadcastert, kattints a kamera-választóra a böngészőben, és válaszd a SplitCamet. A komponált jeleneted (overlay, második kamera, szűrők, AI háttér) egyetlen webkamera-adásként jut el a nézőkhöz.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">További platform-útmutatók</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam ImLive-on</h4><p>Virtuális kamera setup az ImLive-hoz — nincs RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam a SkyPrivate-en</h4><p>Virtual camera beállítás a SkyPrivate Skype-alapú cam hívásaihoz.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Használd a SplitCamet virtuális kameraként a JustForFans élő broadcasterében.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Használd a SplitCamet virtuális kameraként a LoyalFans élő adásához.</p></a><a class="related-card" href="../chaturbate/"><h4>Adás Chaturbate</h4><p>Token-alapú beállítás külső enkóderrel a Chaturbate-en.</p></a><a class="related-card" href="../cam4/"><h4>Adás CAM4</h4><p>External Encoder a CAM4-en geo-kontrollokkal.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Tovább</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam modell leszek</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense játékok</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Készen állsz az élő adásra?</h2>

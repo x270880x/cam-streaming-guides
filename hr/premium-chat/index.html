@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan platforme",
+     "item": "https://camstreamguide.com/hr/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Premium.Chat",
      "item": "https://camstreamguide.com/hr/premium-chat/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Odgovor</a>
+  <a href="#steps">Koraci</a>
+  <a href="#tips">Savjeti</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Slični vodiči</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Ukratko</div>
     <div class="qa-text">Koristi SplitCam na Premium.Chatu: instaliraj SplitCam, izgradi čistu scenu za video pozive, prihvati dolazni Premium.Chat poziv i u odabiru kamere odaberi <em>SplitCam</em>.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Korak po korak</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Preuzmi i instaliraj SplitCam</div><p class="step-p">SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga. Instalira virtualnu kameru koju preglednik može koristiti.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Postavi scenu za pozive</div><p class="step-p">Otvori SplitCam, dodaj webkameru, namjesti svjetlo, opcionalno dodaj AI pozadinu ili suptilno preklapanje. Drži kadar čist — ovo je plaćeni poziv, ne pozornica.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Postavi cijenu na Premium.Chatu</div><p class="step-p">Prijavi se na Premium.Chat, postavi svoju cijenu po minuti za video pozive i kopiraj osobni link. Podijeli na društvenim mrežama ili u bio-ima.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Prihvati dolazni video poziv</div><p class="step-p">Kad korisnik plati vrijeme, stiže zahtjev za poziv. Prihvati ga u Premium.Chat dashboardu.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Odaberi SplitCam kao kameru</div><p class="step-p">U izborniku ikone kamere u prozoru poziva prebaci s ugrađene webkamere na <strong>SplitCam</strong>. Tvoja složena scena sada dolazi do pozivatelja.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Savjeti</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Premium.Chat je po minuti, ne stream</h3><p>Za razliku od chaturbate-stila soba s napojnicama, ovdje te plaćaju po minuti. Meko svjetlo, jasan zvuk i AI pozadina izgledaju više kao premium konzultacija nego javna cam soba.</p></div><div class="tip-card"><h3>Promoviraj svoj link, ne profil</h3><p>Premium.Chat ti daje osobni link koji možeš ubaciti u društvene mreže, <a href="../onlyfans/" class="autolink">OnlyFans</a> bio ili Linktree — tako te pozivatelji nalaze.</p></div><div class="tip-card"><h3>Preklapanja samo ako su korisna</h3><p>Za 1-na-1 pozive teška preklapanja smetaju. Koristi SplitCam za kvalitetu kamere, svjetlo i pozadinu — drži ekran uglavnom na sebi.</p></div><div class="tip-card"><h3>Prvo napravi privatni test</h3><p>Pokreni kratak test prijenos za kameru, zvuk, kadriranje i preklapanja prije nego otvoriš sobu publici.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na Premium.Chat lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na Premium.Chat</summary><p>Izgubljeni frameovi znače da paketi ne stižu do Premium.Chat na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na Premium.Chat</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>Premium.Chat odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje Premium.Chat i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na Premium.Chat</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Česta pitanja</h2>
   <div class="faq-list"><details class="faq-item"><summary>Kako se SplitCam spaja na Premium.Chat?</summary><p>Kao virtualna kamera. Premium.Chat pozivi se vrte u pregledniku; odaberi SplitCam u biraču kamere u pozivu — bez stream keya, bez RTMP-a.</p></details><details class="faq-item"><summary>Podržava li Premium.Chat OBS?</summary><p>Premium.Chat je u pregledniku, pa se OBS spaja na isti način kao SplitCam — preko virtualne kamere. SplitCam je lakša, besplatna opcija bez vodenog žiga.</p></details><details class="faq-item"><summary>Mogu li koristiti drugu kameru ili preklapanje na Premium.Chatu?</summary><p>Da — složi scenu u SplitCamu (druga kamera, preklapanja, filteri) i Premium.Chat vidi jednu webkameru. Koristi umjereno na 1-na-1 pozivima.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan?</summary><p>Da — besplatan, bez vodenog žiga i bez vremenskog ograničenja.</p></details><details class="faq-item"><summary>Koliko modeli mogu zaraditi na Premium.Chat?</summary><p>Zarada na Premium.Chat ovisi o veličini publike, satima streamanja i napojnicama. Aktivni broadcasteri obično zarade 200–3.000 USD mjesečno; najbolji izvođači dosežu 10.000+ USD. Vaš udio u prihodu prati strukturu provizije platforme Premium.Chat — provjerite ugovor s modelom prije nego što krenete uživo.</p></details><details class="faq-item"><summary>Je li Premium.Chat siguran za broadcastere?</summary><p>Premium.Chat zahtijeva provjeru dobi i identiteta prije isplate, što štiti modele od prijevara. Koristite umjetničko ime, nikada ne dijelite osobne podatke pred kamerom, uključite geo-blokade kako biste sakrili stream od svoje regije i tretirajte svaki zahtjev gledatelja kao transakciju. SplitCam overlayi i AI pozadina također mogu sakriti ili zamijeniti vaše stvarno okruženje.</p></details><details class="faq-item"><summary>Koji su mi dokumenti potrebni da postanem model na Premium.Chat?</summary><p>Premium.Chat obično zahtijeva državnu osobnu ispravu s fotografijom (putovnica, vozačka dozvola ili osobna iskaznica), selfie s tom ispravom u ruci i porezni/isplatni obrazac (W-9 za SAD, W-8BEN za ostale). Odobrenje obično traje 24–72 sata; nakon odobrenja možete krenuti uživo isti dan.</p></details><details class="faq-item"><summary>Mogu li streamati na Premium.Chat s mobitela?</summary><p>Premium.Chat obično nudi mobilnu aplikaciju za broadcastere ili mobile-web broadcaster, ali iskustvo je ograničeno — bez overlaya, bez druge kamere, bez AI pozadine. Za punu produkcijsku kvalitetu emitirajte s računala koristeći SplitCam, a mobitel iskoristite kao drugu kameru (SplitCam prihvaća ulaz IP-kamere s mobitela).</p></details><details class="faq-item"><summary>Mogu li koristiti SplitCam kao virtualnu kameru na Premium.Chat?</summary><p>Da — Premium.Chat uživo radi u pregledniku, pa se SplitCam registrira kao webcam pod nazivom <strong>"SplitCam Video Driver"</strong>. Otvorite Premium.Chat broadcaster, kliknite selektor kamere u pregledniku i odaberite SplitCam. Vaša komponirana scena (overlayi, druga kamera, filteri, AI pozadina) dolazi do gledatelja kao jedan webcam feed.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Drugi vodiči za platforme</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam na ImLiveu</h4><p>Virtualna kamera za ImLive — bez RTMP-a.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam na SkyPrivateu</h4><p>Podešavanje virtualne kamere za Skype-bazirane SkyPrivate pozive.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Koristi SplitCam kao virtualnu kameru u JustForFans live broadcasteru.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Koristi SplitCam kao virtualnu kameru za Fanvue live.</p></a><a class="related-card" href="../chaturbate/"><h4>Prijenos Chaturbate</h4><p>Token-bazirano podešavanje s vanjskim enkoderom na Chaturbateu.</p></a><a class="related-card" href="../cam4/"><h4>Prijenos CAM4</h4><p>External Encoder na CAM4 s geo-kontrolama.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Dalje</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-stream</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Postani cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Spreman(a) za prijenos uživo?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-Seiten",
+     "item": "https://camstreamguide.com/de/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Chaturbate",
      "item": "https://camstreamguide.com/de/chaturbate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Antwort</a>
+  <a href="#steps">Schritte</a>
+  <a href="#tips">Tipps</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Verwandte Guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kurzantwort</div>
     <div class="qa-text">Auf Chaturbate mit SplitCam senden: SplitCam installieren, Szene bauen, auf Chaturbate <em>Broadcast Yourself → My Broadcast</em> öffnen, Broadcast-Token kopieren, in SplitCam einfügen, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Schritt für Schritt</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam herunterladen und installieren</div><p class="step-p">SplitCam ist eine kostenlose Streaming-Software für Windows und macOS. Lade sie herunter und führe den Installer aus — keine Registrierung, keine Kreditkarte, kein Wasserzeichen, kein Zeitlimit. SplitCam ist der Encoder, der dein Video an Chaturbate sendet.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Kamera und Szene einrichten</div><p class="step-p">Öffne SplitCam und füge deine Webcam hinzu. Baue die Szene, wie deine Zuschauer sie sehen sollen — Overlays, Text, eine zweite Kamera oder dein Handy, Beauty-Filter oder KI-Hintergrund. Alles wird live angewendet, bevor der Stream deinen PC verlässt.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hol dir deinen Chaturbate-Stream-Key</div><p class="step-p">Auf Chaturbate auf <strong>Broadcast Yourself</strong> klicken, dann auf der <strong>My Broadcast</strong>-Seite <strong>View RTMP/OBS broadcast information and stream key</strong>. Der Key wird als <strong>Broadcast-Token</strong> angezeigt — kopieren. Behandle ihn wie ein Passwort, niemals öffentlich posten.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam mit Chaturbate verbinden</div><p class="step-p">Öffne in SplitCam <strong>Stream Settings</strong>, füge die Chaturbate-Server-URL und den Stream-Key in die Custom-RTMP-Felder ein. Bitrate: 3.500–6.000&nbsp;Kbps für 1080p, 2.000–4.000&nbsp;Kbps für 720p. Starte zuerst den eingebauten Speedtest.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Auf Go Live klicken</div><p class="step-p">Drücke in SplitCam <strong>Go Live</strong> und starte dann die Übertragung auf Chaturbate. In ~10 Sekunden ist deine Kamera live. Folgestreams sind ein Klick — SplitCam öffnen, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Dein Token ist der Schlüssel</h3><p>Chaturbate verwendet deinen Broadcast-Token statt eines generischen Stream-Keys. Wie ein Passwort behandeln, bei Leak zurücksetzen.</p></div><div class="tip-card"><h3>Viel Reserve</h3><p>Der RTMP-Ingest akzeptiert bis zu 4K, 60 fps und sehr hohe Bitraten — die Grenze ist dein Upload, nicht die Plattform. Keyframe-Intervall 2 Sekunden.</p></div><div class="tip-card"><h3>Kabelverbindung</h3><p>Ethernet ist bei langen Streams zuverlässiger als WLAN — ein verlorenes Frame ist ein verlorener Tipp. Zieh ein Kabel zum Streaming-PC.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein Chaturbate-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der Chaturbate-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete Chaturbate nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf Chaturbate</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>Chaturbate lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Chaturbate angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf Chaturbate</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Erlaubt Chaturbate OBS / externe Encoder?</summary><p>Ja — Chaturbate unterstützt externe Encoder offiziell und hat einen eigenen «How do I set up OBS?»-Hilfeartikel. Aktivierung über «Use External Encoder to Broadcast» in den Broadcast-Einstellungen.</p></details><details class="faq-item"><summary>Wo finde ich meinen Chaturbate-Stream-Key?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Der Key ist dein Broadcast-Token.</p></details><details class="faq-item"><summary>Welche Bitrate für Chaturbate?</summary><p>3.500–6.000 Kbps bei 1080p sind reichlich. Die Decke ist hoch — der Upload ist der Engpass; teste ihn zuerst mit dem SplitCam-Speedtest.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für Chaturbate?</summary><p>Ja — vollständig kostenlos, ohne Wasserzeichen und ohne Zeitlimit, sodass der Encoder dir keinen Token wegnimmt.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf Chaturbate verdienen?</summary><p>Die Einnahmen auf Chaturbate hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von Chaturbate — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist Chaturbate sicher für Broadcaster?</summary><p>Chaturbate verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf Chaturbate zu werden?</summary><p>Chaturbate verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf Chaturbate vom Handy aus streamen?</summary><p>Chaturbate bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Unterstützt Chaturbate OBS oder einen externen Encoder?</summary><p>Ja — Chaturbate stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter <strong>Stream-Einstellungen → Custom RTMP</strong> ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf <strong>Go Live</strong>. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Offizieller Support — Chaturbate</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@chaturbate.com">support@chaturbate.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.chaturbate.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.chaturbate.com/hc/en-us</a></li></ul><p class="sp-note">Wir sind ein unabhängiger Guide. Bei Konto-, Zahlungs- oder technischen Problemen wende dich direkt an den offiziellen Support der Plattform.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere Plattform-Anleitungen</h3>
   <div class="related-grid"><a class="related-card" href="../cam4/"><h4>Auf CAM4 streamen</h4><p>External Encoder bei CAM4 mit Geo-Kontrollen.</p></a><a class="related-card" href="../bongacams/"><h4>Auf BongaCams streamen</h4><p>External-Encoder-Setup für BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Auf Stripchat streamen</h4><p>External-Software-Setup für Stripchat-Streams.</p></a><a class="related-card" href="../onlyfans/"><h4>Auf OnlyFans live gehen</h4><p>Einmal autorisieren oder Key einfügen — auf OnlyFans live gehen.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam auf ImLive</h4><p>Virtual-Camera-Setup für ImLive — kein RTMP nötig.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts hinzufügen</h4><p>Animierte Tipp-Alerts auf deinem MyFreeCams-Stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Weiterlernen</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-Streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-Model werden</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-Integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Bereit für den Live-Stream?</h2>

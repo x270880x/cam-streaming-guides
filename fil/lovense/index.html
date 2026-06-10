@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Mga tools",
+     "item": "https://camstreamguide.com/fil/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/fil/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Sagot</a>
+  <a href="#steps">Mga hakbang</a>
+  <a href="#tips">Mga tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Kaugnay na gabay</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Mabilis na sagot</div>
     <div class="qa-text">Para magdagdag ng Lovense toy sa stream: i-install ang SplitCam at Lovense software, i-pair ang toy, i-link ang Lovense sa cam platform, idagdag ang Lovense status bilang Browser layer sa SplitCam, pagkatapos mag-broadcast nang normal.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Hakbang-hakbang</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">I-install ang SplitCam</div><p class="step-p">Ang SplitCam ay libreng streaming software para sa Windows at macOS — ang encoder na nagpapadala ng video mo sa cam platform. I-install; walang watermark.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">I-install ang Lovense software at i-pair ang toy</div><p class="step-p">I-install ang Lovense Connect / Lovense Stream (opisyal na desktop app). I-on ang toy at i-pair sa pamamagitan ng Bluetooth para magpakita ang app na connected.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">I-link ang Lovense sa cam platform</div><p class="step-p">Sa Lovense app i-link ang cam account para tumugon ang toy sa viewer tokens / tips. Sinusuportahan ang karamihan ng major cam platforms.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Idagdag ang Lovense overlay sa SplitCam</div><p class="step-p">Nagbibigay ang Lovense ng overlay / widget URL. Idagdag bilang <strong>Browser</strong> layer sa SplitCam scene para makita ng viewers ang toy status at recent tips on screen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Buuin ang scene at Go Live</div><p class="step-p">Idagdag ang camera at iba pang overlays, i-paste ang cam platform RTMP key sa SplitCam at i-click ang <strong>Go Live</strong>. Tumutugon ang toy sa tips in real time.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Gamitin ang opisyal na Lovense SplitCam Toolset</h3><p>Naglalathala ang Lovense ng SplitCam-specific toolset na may sariling installation guide — nagdadagdag ng toy activity overlay at tip alerts na ginawa para sa SplitCam.</p></div><div class="tip-card"><h3>I-update ang Lovense Cam Extension</h3><p>Nangangailangan ang toolset ng recent Lovense Cam Extension (30.1.4 o mas bago) — i-update bago mag-live.</p></div><div class="tip-card"><h3>Panatilihing naka-charge ang toy</h3><p>Halos walang baterya sa kalagitnaan ng show ay pumapatay sa interactive side — i-charge nang buo bago mag-live.</p></div><div class="tip-card"><h3>Subukan ang reaction sa tokens</h3><p>Magpadala ng maliit na test tip para kumpirmahin na tumutugon ang toy bago buksan ang room.</p></div><div class="tip-card"><h3>Suriin ang version requirements</h3><p>Nangangailangan ng SplitCam 10.4.5 o mas bago ang Lovense SplitCam Toolset. Sinasaklaw ng Lovense Cam Extension ang <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> at <a href="../camsoda/" class="autolink">CamSoda</a> nang opisyal — para sa anumang ibang site, gamitin ang Generic URL integration ng Lovense.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang Lovense stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa Lovense</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Lovense sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa Lovense</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng Lovense ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Lovense at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa Lovense</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Opisyal bang sinusuportahan ng Lovense ang SplitCam?</summary><p>Oo — idinodokumento ng Lovense ang opisyal na «Lovense SplitCam Toolset» na may sariling installation guide, at nagbibigay ang SplitCam ng opisyal na Lovense plugin. Sinusuportahan ang integration mula sa parehong panig.</p></details><details class="faq-item"><summary>Direktang kumokonekta ba ang toy sa SplitCam?</summary><p>Hindi — ipinapares ang toy sa Lovense app; ipinapakita ng SplitCam ang Lovense overlay at nag-bo-broadcast ng camera.</p></details><details class="faq-item"><summary>Anong cam sites ang sumusuporta sa Lovense?</summary><p>Sinusuportahan ng Lovense Cam Extension ang <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> at <a href="../camsoda/" class="autolink">CamSoda</a> nang opisyal, na may varying support para sa iba — suriin ang kasalukuyang listahan sa Lovense app.</p></details><details class="faq-item"><summary>Maaari ko bang ipakita ang mga kamakailang tips sa screen?</summary><p>Oo — idagdag ang Lovense widget URL bilang Browser layer sa SplitCam.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa Lovense?</summary><p>Ang kita sa Lovense ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng Lovense — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang Lovense para sa mga broadcaster?</summary><p>Nangangailangan ang Lovense ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa Lovense?</summary><p>Karaniwang nangangailangan ang Lovense ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa Lovense mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang Lovense ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Opisyal na suporta — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">Kami ay isang independyenteng gabay. Para sa mga isyu sa account, bayad o teknikal, direktang kontakin ang opisyal na suporta ng platform.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Iba pang gabay sa platform</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Magpatuloy</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Maging cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mga laruang Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Handa nang mag-live?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam sites",
+     "item": "https://camstreamguide.com/fil/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "VirtWish",
      "item": "https://camstreamguide.com/fil/virtwish/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Sagot</a>
+  <a href="#steps">Mga hakbang</a>
+  <a href="#tips">Mga tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Kaugnay na gabay</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Mabilis na sagot</div>
     <div class="qa-text">Mag-broadcast sa VirtWish gamit ang SplitCam: i-install ang SplitCam, buuin ang scene, sa VirtWish buksan ang <em>Profile → Start Broadcast</em> hanggang sa OBS section, kopyahin ang link at key, i-paste pareho sa SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Hakbang-hakbang</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">I-download at i-install ang SplitCam</div><p class="step-p">Ang SplitCam ay libreng live-streaming software para sa Windows at macOS. I-download ito at patakbuhin ang installer — walang sign-up, walang card, walang watermark, walang time limit. Ito ang encoder na nagpapadala ng iyong video sa VirtWish.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">I-set up ang iyong camera at scene</div><p class="step-p">Buksan ang SplitCam at idagdag ang iyong webcam. Buuin ang scene sa paraang gusto mong makita ng mga viewer — overlays, text, pangalawang camera o telepono, beauty filters o AI background. Ang lahat ay inilalapat nang live bago umalis ang stream sa iyong PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Kunin ang iyong VirtWish stream key</div><p class="step-p">Sa VirtWish i-click ang icon sa top right corner → <strong>Profile</strong> → <strong>Start Broadcast</strong>, pagkatapos <strong>Start Broadcast</strong> ulit para makarating sa OBS section. <strong>Kopyahin ang link sa unang linya</strong> sa Stream URL field ng SplitCam, at ang <strong>Stream Key</strong> na hiwalay sa key field.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Ikonekta ang SplitCam sa VirtWish</div><p class="step-p">Sa SplitCam buksan ang <strong>Stream Settings</strong>, i-paste ang VirtWish server URL at stream key sa mga custom RTMP field. Bitrate: 3,500–6,000&nbsp;Kbps para sa 1080p, 2,000–4,000&nbsp;Kbps para sa 720p. Patakbuhin muna ang built-in speed test.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">I-click ang Go Live</div><p class="step-p">Pindutin ang <strong>Go Live</strong> sa SplitCam, pagkatapos ay simulan ang broadcast sa VirtWish. Sa loob ng ~10 segundo, live na ang iyong camera. Ang mga susunod na stream ay isang click lang — buksan ang SplitCam, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Link sa unang linya</h3><p>Inilalagay ng OBS section ng VirtWish ang stream URL sa unang linya — kopyahin sa SplitCam Stream URL, pagkatapos ang separate key.</p></div><div class="tip-card"><h3>Dalawang click sa Start Broadcast</h3><p>I-click ang Start Broadcast nang dalawang beses sa VirtWish para makarating sa OBS section — inaasahan, hindi bug.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div><div class="tip-card"><h3>Gumawa muna ng private test</h3><p>Magpatakbo ng maikling test broadcast para suriin ang camera, audio, framing at overlays bago buksan ang room para sa publiko.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang VirtWish stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa VirtWish</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa VirtWish sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa VirtWish</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng VirtWish ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng VirtWish at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa VirtWish</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Saan ang VirtWish RTMP data?</summary><p>Icon sa taas-kanan → Profile → Start Broadcast dalawang beses → ang OBS section ay nagpapakita ng link at stream key.</p></details><details class="faq-item"><summary>Sinusuportahan ba ng VirtWish ang external encoders?</summary><p>Oo — nagbibigay ang OBS section ng stream URL at key, kaya gumagana ang SplitCam.</p></details><details class="faq-item"><summary>Anong bitrate para sa VirtWish?</summary><p>Hindi naglalathala ng opisyal na ceiling ang VirtWish; 3,500–6,000 Kbps sa 1080p ay ligtas. Itugma ang resolution ng SplitCam sa nakaset sa VirtWish para maiwasan ang rescaling.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa VirtWish?</summary><p>Oo — libre, walang watermark at walang time limit. Ang URL-and-key setup ng VirtWish ay nagkakahalaga lamang ng ilang minuto na kinakailangan.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa VirtWish?</summary><p>Ang kita sa VirtWish ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng VirtWish — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang VirtWish para sa mga broadcaster?</summary><p>Nangangailangan ang VirtWish ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa VirtWish?</summary><p>Karaniwang nangangailangan ang VirtWish ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa VirtWish mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang VirtWish ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details><details class="faq-item"><summary>Sinusuportahan ba ng VirtWish ang OBS o panlabas na encoder?</summary><p>Oo — nagbibigay ang VirtWish ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa <strong>Stream Settings → Custom RTMP</strong> ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang <strong>Go Live</strong>. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Opisyal na suporta — VirtWish</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://t.me/vwsupport" rel="nofollow noopener" target="_blank">https://t.me/vwsupport</a></li></ul><p class="sp-note">Kami ay isang independyenteng gabay. Para sa mga isyu sa account, bayad o teknikal, direktang kontakin ang opisyal na suporta ng platform.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Iba pang gabay sa platform</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams broadcast</h4><p>External Encoder setup para sa BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat broadcast</h4><p>External software setup para sa Stripchat streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam sa ImLive</h4><p>Virtual camera setup para sa ImLive — walang RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Idagdag ang MFC Alerts</h4><p>Ipakita ang mga animated na tip alerts sa MyFreeCams stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Magpatuloy</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Maging cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mga laruang Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Handa nang mag-live?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Кам-сайти",
+     "item": "https://camstreamguide.com/uk/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "StripCamFun",
      "item": "https://camstreamguide.com/uk/stripcamfun/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Відповідь</a>
+  <a href="#steps">Кроки</a>
+  <a href="#tips">Поради</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Схожі гайди</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Швидка відповідь</div>
     <div class="qa-text">Трансляція на StripCamFun: встановіть SplitCam, зберіть сцену, скопіюйте URL сервера й stream key StripCamFun, вставте в RTMP-налаштування SplitCam, натисніть Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Покроково</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Завантажте та встановіть SplitCam</div><p class="step-p">SplitCam — безкоштовне ПЗ для прямих трансляцій для Windows і macOS — без реєстрації, без картки, без водяного знака.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Зберіть сцену</div><p class="step-p">Відкрийте SplitCam і додайте вебку. Накладіть оверлеї, меню чайових, другу камеру чи телефон, beauty-фільтри чи AI-фон — усе наживо.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Отримайте URL і stream key StripCamFun</div><p class="step-p">Увійдіть у дашборд моделі StripCamFun, відкрийте <strong>External Encoder / OBS</strong> і скопіюйте <strong>URL сервера</strong> та <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Підключіть SplitCam до StripCamFun</div><p class="step-p">У SplitCam → <strong>Stream Settings → Custom RTMP</strong> вставте URL і ключ. Поставте 3500–5000 Кбіт/с при 1920×1080, 30 fps, ключовий кадр кожні 2 секунди.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Натисніть Go Live</div><p class="step-p">Натисніть <strong>Go Live</strong> у SplitCam, потім увімкніться онлайн у дашборді StripCamFun. Приблизно за 10 секунд стрім потрапляє в публічний список.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Поради для профі</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Менший пул — легша видимість</h3><p>На сайті Tier-1 ви — один із тисяч онлайн; на StripCamFun список broadcaster'ів короткий — охайна сцена SplitCam швидше виділяється на головній.</p></div><div class="tip-card"><h3>Крос-трансляція для охоплення</h3><p>Інді-сайти добре поєднуються з мультистрімінгом. Використовуйте SplitCam, щоб одночасно мовити на StripCamFun і більший сайт — тримаєте чайові з обох пулів.</p></div><div class="tip-card"><h3>Налягайте на нішеві теги</h3><p>Інді-аудиторія шукає радше за нішею, ніж за «зіркою». Конкретні теги + оверлей сцени з назвою ніші витягують глядачів зі списку.</p></div><div class="tip-card"><h3>Спершу зробіть приватний тест</h3><p>Проведіть коротку тестову трансляцію, щоб перевірити камеру, звук, кадрування та оверлеї, перш ніж відкривати кімнату для глядачів.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Усунення несправностей</h2><div class="faq-list"><details class="faq-item"><summary>Трансляція StripCamFun гальмує або буферизується</summary><p>Майже завжди бітрейт заданий вище, ніж витримає ваш аплоуд. Запустіть вбудований тест швидкості SplitCam, далі задайте бітрейт приблизно 75% від виміряного аплоуду — 3500–6000&nbsp;Кбіт/с для 1080p, нижче для 720p. Гальмування зникає, коли кодувальник перестає перевищувати ваш канал.</p></details><details class="faq-item"><summary>Втрата кадрів під час трансляції StripCamFun</summary><p>Втрата кадрів означає, що пакети не доходять до StripCamFun вчасно — зазвичай нестабільний Wi-Fi. Перейдіть на дротовий Ethernet, закрийте застосунки, що з'їдають канал, і трохи знизьте бітрейт. Один стрибок — це нічого; постійне зростання означає, що канал не встигає.</p></details><details class="faq-item"><summary>Чорний екран — глядачі не бачать відео на StripCamFun</summary><p>Ваша камера не вибрана як активне джерело у SplitCam, або її тримає інший застосунок. Закрийте Zoom, Skype чи OBS, виберіть вебкамеру знову у списку джерел SplitCam і переконайтеся, що попередній перегляд показує ваше зображення, перш ніж натиснути Go Live.</p></details><details class="faq-item"><summary>StripCamFun відхиляє ключ трансляції або не під&#x27;єднується</summary><p>Скопіюйте ключ трансляції знову — пробіл у кінці чи старий, скинутий ключ — найчастіші причини. Переконайтеся, що URL сервера збігається з тим, що показує StripCamFun, і що трансляція зовнішнім кодувальником увімкнена на акаунті. Зелений повзунок у Stream Settings SplitCam підтверджує дійсний ключ.</p></details><details class="faq-item"><summary>Немає звуку або звук розсинхронізований на StripCamFun</summary><p>Виберіть SplitCam камерою І мікрофоном, а в джерелі звуку SplitCam виберіть свій справжній мікрофон. Якщо звук відстає від відео, знизьте роздільну здатність на один рівень — кодувальник перевантажений, і звук чекає на запізнілі кадри.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Часті питання</h2>
   <div class="faq-list"><details class="faq-item"><summary>Де взяти stream key StripCamFun?</summary><p>У дашборді моделі відкрийте вкладку <em>External Encoder / OBS</em> — побачите URL сервера й stream key. Вставте обидва в кастомні RTMP-поля SplitCam.</p></details><details class="faq-item"><summary>Чи безпечно мовити на StripCamFun?</summary><p>Як і на будь-якому інді-сайті, перевірте модель-договір і умови виплат перед виходом наживо. Використовуйте реальний email і верифікуйте спосіб виплати спершу.</p></details><details class="faq-item"><summary>Чи можна мультистрімити на StripCamFun і ще один кам-сайт?</summary><p>Так — SplitCam може пушити на кілька кастомних RTMP-ендпоїнтів одночасно. Спершу перевірте правила ексклюзиву на кожному сайті.</p></details><details class="faq-item"><summary>Чи безкоштовний SplitCam для StripCamFun?</summary><p>Так — безкоштовний, без водяного знака й без обмеження часу.</p></details><details class="faq-item"><summary>Скільки моделі заробляють на StripCamFun?</summary><p>Заробіток на StripCamFun залежить від розміру аудиторії, кількості годин трансляцій і щедрості глядачів на чайові. Активні мовники зазвичай отримують $200–$3 000 на місяць; топові виконавці сягають $10 000+. Ваша частка доходу визначається комісійною структурою StripCamFun — перевірте угоду з моделлю перед виходом в ефір.</p></details><details class="faq-item"><summary>Чи безпечно мовникам працювати на StripCamFun?</summary><p>StripCamFun вимагає підтвердження віку та особи перед виплатами, що захищає моделей від шахрайства. Використовуйте сценічний псевдонім, ніколи не діліться особистими даними в кадрі, увімкніть гео-блокування, щоб приховати трансляцію від вашого регіону, і ставтеся до кожного запиту глядача як до транзакційного. Накладки SplitCam та AI-фон також можуть приховати або замінити ваше реальне оточення.</p></details><details class="faq-item"><summary>Які документи потрібні, щоб стати моделлю на StripCamFun?</summary><p>StripCamFun зазвичай вимагає державне посвідчення особи з фото (паспорт, водійське посвідчення або ID-картка), селфі з документом у руках і податкову/виплатну форму (W-9 для США, W-8BEN для нерезидентів). Схвалення зазвичай триває 24–72 години; після схвалення можна вийти в ефір того ж дня.</p></details><details class="faq-item"><summary>Чи можу я транслювати на StripCamFun з телефона?</summary><p>StripCamFun зазвичай пропонує мобільний застосунок для мовників або веб-версію для телефона, але можливості обмежені — без накладок, без другої камери, без AI-фону. Для повноцінної продакшн-якості мовте з комп'ютера через SplitCam і використовуйте телефон як другу камеру (SplitCam приймає вхід IP-камери з телефонів).</p></details><details class="faq-item"><summary>Чи підтримує StripCamFun OBS або зовнішній енкодер?</summary><p>Так — StripCamFun надає URL RTMP-сервера та ключ трансляції в панелі мовника. Вставте обидва в SplitCam у <strong>Stream Settings → Custom RTMP</strong>, виставте 1920×1080 при 30 fps з бітрейтом 4 000–5 000 Кбіт/с і натисніть <strong>Go Live</strong>. Маршрут Custom RTMP дає повний доступ до композиції сцен SplitCam (мульти-камера, накладки, фільтри).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Посібники для інших платформ</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляція Chaturbate</h4><p>Налаштування на основі токена із зовнішнім кодувальником на Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляція CAM4</h4><p>External Encoder на CAM4 з гео-контролем.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляція BongaCams</h4><p>Налаштування External Encoder для BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Трансляція Stripchat</h4><p>Налаштування зовнішнього ПЗ для трансляції Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam на ImLive</h4><p>Налаштування віртуальної камери для ImLive — без RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Додати MFC Alerts</h4><p>Показуйте анімовані сповіщення про чайові в трансляції MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Далі</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мульти-стрім</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стати кам-моделлю</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готові вийти наживо?</h2>

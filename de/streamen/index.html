@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-Seiten",
+     "item": "https://camstreamguide.com/de/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Streamen",
      "item": "https://camstreamguide.com/de/streamen/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Antwort</a>
+  <a href="#steps">Schritte</a>
+  <a href="#tips">Tipps</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Verwandte Guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kurzantwort</div>
     <div class="qa-text">Auf Streamen mit SplitCam senden: SplitCam installieren, Szene bauen, im Model-Dashboard <em>Broadcast Settings → External Encoder</em> öffnen, Server-URL und Stream Key kopieren, in SplitCam einfügen, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Schritt für Schritt</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam herunterladen und installieren</div><p class="step-p">SplitCam ist kostenlose Live-Streaming-Software für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Szene aufbauen</div><p class="step-p">SplitCam öffnen und die Webcam hinzufügen. Overlays, Tip-Goal-Text, eine zweite Kamera oder das Smartphone, Beauty-Filter oder einen KI-Hintergrund einbauen.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Streamen-URL und Stream-Key holen</div><p class="step-p">Im Streamen-Model-Account anmelden, <strong>Broadcast Settings → External Encoder</strong> öffnen und <strong>Server-URL</strong> und <strong>Stream Key</strong> kopieren.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam mit Streamen verbinden</div><p class="step-p">In SplitCam <strong>Stream Settings</strong> öffnen, die Streamen-Server-URL und den Stream Key in die Custom-RTMP-Felder einfügen. 3.500–6.000 Kbps bei 1920×1080, 30 fps und 2 Sekunden Keyframe einstellen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live drücken</div><p class="step-p">In SplitCam auf <strong>Go Live</strong> klicken, dann aus deinem Dashboard online gehen. Innerhalb von ~10 Sekunden erreicht dein Stream Streamens Publikum.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Trinkgeld-getriebenes Publikum</h3><p>Streamen-Zuschauer geben Trinkgeld — eingeblendete Tip-Goals und eine polierte Szene treiben mehr Trinkgeld als eine flache Webcam.</p></div><div class="tip-card"><h3>External Encoder schaltet Szenen frei</h3><p>Der Weg über SplitCams RTMP statt der einfachen Browser-Cam ermöglicht Multi-Cam-Layouts, Overlays und Filter.</p></div><div class="tip-card"><h3>Auflösung festlegen</h3><p>1080p von Hand setzen, damit der Feed nicht heimlich die Qualität drosselt; dass die Bitrate bei einem ruhigen Bild absackt, ist bei adaptiven Feeds normal.</p></div><div class="tip-card"><h3>Kabelverbindung</h3><p>Ethernet ist bei langen Streams zuverlässiger als WLAN — ein verlorenes Frame ist ein verlorener Tipp. Zieh ein Kabel zum Streaming-PC.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein Streamen-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der Streamen-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete Streamen nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf Streamen</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>Streamen lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Streamen angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf Streamen</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Unterstützt Streamen externe Encoder wie SplitCam?</summary><p>Ja — die Broadcast-Einstellungen bieten einen Standard-External-Encoder- / RTMP-Pfad. Server-URL und Stream Key nach der Verifizierung in SplitCam kopieren.</p></details><details class="faq-item"><summary>Wo bekomme ich meinen Streamen-Stream-Key?</summary><p>In den Broadcast- / External-Encoder-Einstellungen deines Model-Dashboards — Server-URL und Stream Key erscheinen dort. Beides in die Custom-RTMP-Felder von SplitCam einfügen.</p></details><details class="faq-item"><summary>Welche Bitrate für Streamen?</summary><p>Anpeilen: 1920×1080 bei 30 fps, 3.500–6.000 Kbps und 2 Sekunden Keyframe-Intervall. Vorher den SplitCam-Speedtest laufen lassen.</p></details><details class="faq-item"><summary>Ist SplitCam bei Streamen kostenlos nutzbar?</summary><p>Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Die External-Encoder-Option von Streamen ist im Dashboard kostenlos.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf Streamen verdienen?</summary><p>Die Einnahmen auf Streamen hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von Streamen — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist Streamen sicher für Broadcaster?</summary><p>Streamen verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf Streamen zu werden?</summary><p>Streamen verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf Streamen vom Handy aus streamen?</summary><p>Streamen bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Unterstützt Streamen OBS oder einen externen Encoder?</summary><p>Ja — Streamen stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter <strong>Stream-Einstellungen → Custom RTMP</strong> ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf <strong>Go Live</strong>. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere Plattform-Anleitungen</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Auf Chaturbate streamen</h4><p>Token-Setup für Chaturbate über externen Encoder.</p></a><a class="related-card" href="../cam4/"><h4>Auf CAM4 streamen</h4><p>External Encoder bei CAM4 mit Geo-Kontrollen.</p></a><a class="related-card" href="../bongacams/"><h4>Auf BongaCams streamen</h4><p>External-Encoder-Setup für BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Auf Stripchat streamen</h4><p>External-Software-Setup für Stripchat-Streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam auf ImLive</h4><p>Virtual-Camera-Setup für ImLive — kein RTMP nötig.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts hinzufügen</h4><p>Animierte Tipp-Alerts auf deinem MyFreeCams-Stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Weiterlernen</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-Streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-Model werden</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-Integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Bereit für den Live-Stream?</h2>

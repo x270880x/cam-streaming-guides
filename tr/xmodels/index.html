@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam siteleri",
+     "item": "https://camstreamguide.com/tr/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "XModels",
      "item": "https://camstreamguide.com/tr/xmodels/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Cevap</a>
+  <a href="#steps">Adımlar</a>
+  <a href="#tips">İpuçları</a>
+  <a href="#faq">SSS</a>
+  <a href="#related">İlgili kılavuzlar</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kısa cevap</div>
     <div class="qa-text">SplitCam ile XModels'te yayın: SplitCam'i kur, sahneyi oluştur, XModels model hesabında harici kodlayıcı seçeneğini etkinleştir, sunucu URL'si ve yayın anahtarını kopyala, SplitCam'e yapıştır, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Adım adım</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam&#x27;i indir ve kur</div><p class="step-p">SplitCam, Windows ve macOS için ücretsiz bir canlı yayın yazılımıdır. İndir ve kurulumu çalıştır — kayıt yok, kart yok, filigran yok, süre sınırı yok. Videonu XModels'e gönderen kodlayıcıdır.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Kamera ve sahneni ayarla</div><p class="step-p">SplitCam'i aç ve web kameranı ekle. Sahneyi izleyicilerin görmesini istediğin gibi oluştur — katmanlar, metin, ikinci kamera veya telefonun, güzellik filtreleri veya AI arka plan. Hepsi yayın PC'den çıkmadan önce canlı uygulanır.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">XModels yayın anahtarını al</div><p class="step-p">XModels <strong>model hesabı ayarlarında</strong> <strong>harici kodlayıcı ile yayın</strong> seçeneğini etkinleştir. XModels bir <strong>yayın anahtarı</strong> sağlar — SplitCam'e kopyala. Seçenek beklediğin yerde değilse, XModels desteği sitedeki SSS sohbeti ve <strong>info@xmodels.com</strong>'dur; yukarıdaki video da gösterir.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam&#x27;i XModels&#x27;e bağla</div><p class="step-p">SplitCam'de <strong>Stream Settings</strong>'i aç, XModels sunucu URL'sini ve yayın anahtarını özel RTMP alanlarına yapıştır. Bitrate: 1080p için 3.500–6.000&nbsp;Kbps, 720p için 2.000–4.000&nbsp;Kbps. Önce yerleşik hız testini çalıştır.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live&#x27;a tıkla</div><p class="step-p">SplitCam'de <strong>Go Live</strong>'a bas, sonra XModels'de yayını başlat. ~10 saniye içinde kameran canlıda. Sonraki yayınlar tek tık — SplitCam'i aç, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profesyonel ipuçları</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Hesap ayarlarında</h3><p>XModels harici kodlayıcı seçeneğini ayrı bir yayın ekranında değil, model hesabı ayarlarına koyar.</p></div><div class="tip-card"><h3>Destek: sohbet + e-posta</h3><p>XModels'in büyük bir herkese açık yardım merkezi yok — sitedeki SSS sohbeti ve info@xmodels.com resmi destek kanallarıdır.</p></div><div class="tip-card"><h3>Katmanları SplitCam&#x27;de yığ</h3><p>Bahşiş hedefleri, isim ve sosyal medya sahne katmanları olarak — XModels'in temel kamerası bunları eklemez.</p></div><div class="tip-card"><h3>Kablolu bağlantı kullan</h3><p>Uzun yayında Ethernet, Wi-Fi'ı yener — kaybolan bir kare kaybolan bir bahşiştir. Yayın bilgisayarına kablo çek.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Sorun giderme</h2><div class="faq-list"><details class="faq-item"><summary>XModels yayının takılıyor veya tamponluyor</summary><p>Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer.</p></details><details class="faq-item"><summary>XModels yayını sırasında kare kaybı</summary><p>Kare kaybı, paketlerin XModels'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir.</p></details><details class="faq-item"><summary>Siyah ekran — izleyiciler XModels&#x27;de video görmüyor</summary><p>Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula.</p></details><details class="faq-item"><summary>XModels yayın anahtarını reddediyor veya bağlanmıyor</summary><p>Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin XModels'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar.</p></details><details class="faq-item"><summary>XModels&#x27;de ses yok veya ses senkron dışı</summary><p>SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">SSS</h2>
   <div class="faq-list"><details class="faq-item"><summary>XModels harici kodlayıcıları destekliyor mu?</summary><p>Evet — model hesabı ayarları, yayın anahtarı sağlayan harici kodlayıcı yayın seçeneği içerir, böylece SplitCam çalışır.</p></details><details class="faq-item"><summary>XModels yardımını nereden alırım?</summary><p>XModels desteği sitedeki SSS sohbeti ve info@xmodels.com e-postası üzerindendir — büyük bir herkese açık yardım merkezi yok.</p></details><details class="faq-item"><summary>XModels için hangi bitrate?</summary><p>XModels resmi bir sayı belgelemez — 1080p'de 3.500–6.000 Kbps kullan ve SplitCam'in hız testini çalıştır, çünkü XModels desteği sadece sohbet ve e-posta.</p></details><details class="faq-item"><summary>SplitCam XModels için ücretsiz mi?</summary><p>Evet — ücretsiz, filigransız ve süre sınırı yok, böylece XModels'in Avrupa ağına yayın yazılım maliyeti eklemez.</p></details><details class="faq-item"><summary>XModels üzerinde modeller ne kadar kazanabilir?</summary><p>XModels platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız XModels komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin.</p></details><details class="faq-item"><summary>XModels yayıncılar için güvenli mi?</summary><p>XModels ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir.</p></details><details class="faq-item"><summary>XModels üzerinde model olmak için hangi belgeler gerekli?</summary><p>XModels genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz.</p></details><details class="faq-item"><summary>XModels üzerinde telefonumdan yayın yapabilir miyim?</summary><p>XModels genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder).</p></details><details class="faq-item"><summary>XModels OBS veya harici bir encoder destekliyor mu?</summary><p>Evet — XModels yayıncı panelinde bir RTMP sunucu URL'si ve yayın anahtarı sağlar. Her ikisini de SplitCam'in <strong>Stream Settings → Custom RTMP</strong> bölümüne yapıştırın, 30 fps'de 1920×1080 ve 4.000–5.000 Kbps bitrate ayarlayın ve <strong>Go Live</strong>'a tıklayın. Custom RTMP yolu size tam SplitCam sahne kompozisyonu sağlar (çoklu kamera, overlay'ler, filtreler).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Resmi destek — XModels</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:info@xmodels.com">info@xmodels.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.xmodels.com/contact" rel="nofollow noopener" target="_blank">https://www.xmodels.com/contact</a></li></ul><p class="sp-note">Biz bağımsız bir rehberiz. Hesap, ödeme veya teknik sorunlar için doğrudan platformun resmi desteğiyle iletişime geç.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Diğer platform rehberleri</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate yayını</h4><p>Chaturbate&#x27;te harici kodlayıcı ile token tabanlı kurulum.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 yayını</h4><p>CAM4&#x27;te coğrafi kontrollü External Encoder.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams yayını</h4><p>BongaCams için External Encoder kurulumu.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat yayını</h4><p>Stripchat yayınları için harici yazılım kurulumu.</p></a><a class="related-card" href="../imlive/"><h4>ImLive&#x27;de SplitCam</h4><p>ImLive için sanal kamera kurulumu — RTMP yok.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts ekle</h4><p>MyFreeCams yayınında animasyonlu bahşiş uyarıları göster.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Devam</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Çoklu yayın</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam model olmak</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense oyuncakları</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Canlı yayına hazır mısın?</h2>

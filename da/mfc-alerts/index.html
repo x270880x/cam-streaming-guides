@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Værktøjer",
+     "item": "https://camstreamguide.com/da/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/da/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Trin</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterede guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort fortalt</div>
     <div class="qa-text">Tilføjelse af MFC Alerts med SplitCam: installér SplitCam, tilføj webkameraet, åbn Browser-fanen og indlæs mfcalerts.com, kopiér alerts-URL, tilføj som Browser-lag over webkameraet, test derefter med test-tip.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Trin for trin</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Installér SplitCam og tilføj webkameraet</div><p class="step-p">Installér gratis SplitCam til Windows eller macOS, tilføj derefter <strong>webkameraet</strong> som kilde. MFC Alerts sidder som lag over dette kamera.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Åbn Browser-fanen og gå til mfcalerts.com</div><p class="step-p">I SplitCam åbn <strong>Browser</strong>-fanen og naviger til <strong>www.mfcalerts.com</strong>. Log ind, eller registrér dig, hvis du ikke har en mfcalerts.com-konto endnu.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Kopiér din alerts-URL</div><p class="step-p">På mfcalerts.com brug <strong>Copy to clipboard</strong> til at kopiere din personlige alerts-URL — det er siden, der renderer tip-animationer.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Tilføj URL som Browser-lag — over webkameraet</div><p class="step-p">Indsæt URL'en i SplitCam's Browser-vindue og klik <strong>Add</strong>. Omarranger derefter kildelisten, så <strong>MFC Alerts er over webkameraet</strong> (3-prikket menu → Move Up). Hvis det sidder under, forbliver effekterne skjult.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Test med test-tip</div><p class="step-p">Åbn <strong>Settings → Send test tip</strong> og bekræft, at alert-effekten vises over kameraet. Udsend derefter normalt på <a href="../myfreecams/" class="autolink">MyFreeCams</a> — rigtige tips udløser nu animationerne.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts skal være over webkameraet</h3><p>Den mest almindelige fejl: hvis MFC Alerts-laget er under webkameraet på kildelisten, forbliver effekterne skjult. Flyt op.</p></div><div class="tip-card"><h3>Mfcalerts.com-konto påkrævet</h3><p>Alerts-URL er personlig — registrér dig på mfcalerts.com først, hvis du ikke har en konto.</p></div><div class="tip-card"><h3>Send test-tip før live</h3><p>Brug Settings → Send test tip til at bekræfte, at overlay'et virker — opdag ikke fejlen midt i showet.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit MFC Alerts-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under MFC Alerts-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til MFC Alerts i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på MFC Alerts</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>MFC Alerts afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, MFC Alerts viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på MFC Alerts</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hvad er MFC Alerts?</summary><p>Et notifikationssystem til <a href="../myfreecams/" class="autolink">MyFreeCams</a>, der viser videoeffekter i din stream, når seere sender tips — tilføjet som Browser-overlay i SplitCam.</p></details><details class="faq-item"><summary>Hvorfor vises mine MFC Alerts ikke?</summary><p>Næsten altid lagorden — MFC Alerts Browser-laget skal være over webkameraet på SplitCam's kildeliste.</p></details><details class="faq-item"><summary>Skal jeg have en konto til MFC Alerts?</summary><p>Ja — registrér dig på mfcalerts.com for at få din personlige alerts-URL.</p></details><details class="faq-item"><summary>Er SplitCam gratis til dette?</summary><p>Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning, og MFC Alerts browser-overlay kører i den uden ekstra omkostninger.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på MFC Alerts?</summary><p>Indtjeningen på MFC Alerts afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger MFC Alertss kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er MFC Alerts sikkert for broadcastere?</summary><p>MFC Alerts kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på MFC Alerts?</summary><p>MFC Alerts kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på MFC Alerts fra min telefon?</summary><p>MFC Alerts tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiel support — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre platformsguides</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Udsend Chaturbate</h4><p>Token-baseret opsætning med ekstern encoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Udsend CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Mere</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bliv cam-model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Klar til at gå live?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam sites",
+     "item": "https://camstreamguide.com/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "FC2 Live",
      "item": "https://camstreamguide.com/fc2-live/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Quick answer</a>
+  <a href="#steps">Step-by-step</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Related guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Quick answer</div>
     <div class="qa-text">Stream on FC2 Live with SplitCam: install SplitCam, build your scene, copy the FC2 broadcaster server URL + stream key, paste them into SplitCam's RTMP settings, click Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Step-by-step</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download and install SplitCam</div><p class="step-p">SplitCam is free live-streaming software for Windows and macOS — no signup, no card, no watermark.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Build your scene</div><p class="step-p">Open SplitCam and add your webcam. Layer in overlays, a tip menu in 円 (JPY), a second camera or your phone, beauty filters or an AI background — all live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Get your FC2 Live URL + stream key</div><p class="step-p">Log in to FC2, open the Live broadcaster panel, switch to <strong>External Encoder</strong>, and copy the <strong>server URL</strong> and your <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Connect SplitCam to FC2 Live</div><p class="step-p">In SplitCam → <strong>Stream Settings → Custom RTMP</strong>, paste the URL and key. Set 3,500–5,000 Kbps at 1920×1080, 30 fps, 2-second keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Click Go Live</div><p class="step-p">Press <strong>Go Live</strong> in SplitCam, then start the show from the FC2 dashboard. Your stream lands on the public list within ~10 seconds.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Huge Japanese audience</h3><p>FC2 is Tier 1 in Japan — viewers are local, used to paying in JPY, and lean toward longer paid shows. Japanese overlay text (e.g. tip menu in 円 / JPY) lifts conversion noticeably.</p></div><div class="tip-card"><h3>Adult section is separated</h3><p>FC2 has both general and adult lives. Set the room category correctly before going live — adult shows can't be discovered from the general section.</p></div><div class="tip-card"><h3>Use external encoder for stable bitrate</h3><p>Japan's mobile-heavy audience is sensitive to dropped frames. RTMP from SplitCam at a steady 4 Mbps beats the browser broadcaster for reliability.</p></div><div class="tip-card"><h3>Run a private test first</h3><p>Do a short test broadcast to check camera, audio, framing and overlays before you open the room publicly.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your FC2 Live stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the FC2 Live broadcast</summary><p>Dropped frames mean packets aren't reaching FC2 Live in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on FC2 Live</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>FC2 Live rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one FC2 Live shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on FC2 Live</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Where do I get the FC2 Live stream key?</summary><p>In the FC2 Live broadcaster panel, switch to <em>External Encoder</em> or <em>OBS</em> — you'll see a server URL and a stream key. Paste both into SplitCam's custom RTMP fields.</p></details><details class="faq-item"><summary>Browser broadcaster or RTMP?</summary><p>RTMP (external encoder) is preferred — stable bitrate, full SplitCam scenes. Browser broadcaster works as a fallback: pick SplitCam as the webcam.</p></details><details class="faq-item"><summary>Do I need a Japanese account to stream on FC2?</summary><p>An FC2 account is required, and adult streaming has additional age-verification steps for the model. Follow FC2's onboarding.</p></details><details class="faq-item"><summary>Is SplitCam free to use with FC2 Live?</summary><p>Yes — SplitCam is free, no watermark and no time limit.</p></details><details class="faq-item"><summary>How much can models earn on FC2 Live?</summary><p>Earnings on FC2 Live depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows FC2 Live's commission structure — check the model agreement before going live.</p></details><details class="faq-item"><summary>Is FC2 Live safe for broadcasters?</summary><p>FC2 Live requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings.</p></details><details class="faq-item"><summary>What documents do I need to become a model on FC2 Live?</summary><p>FC2 Live typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day.</p></details><details class="faq-item"><summary>Can I stream on FC2 Live from my phone?</summary><p>FC2 Live usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones).</p></details><details class="faq-item"><summary>Does FC2 Live support OBS or an external encoder?</summary><p>Yes — FC2 Live provides an RTMP server URL and a stream key in the broadcaster panel. Paste both into SplitCam's <strong>Stream Settings → Custom RTMP</strong>, set 1920×1080 at 30 fps with a 4,000–5,000 Kbps bitrate, and click <strong>Go Live</strong>. The Custom RTMP route gives you full SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Other platform guides</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Stream on Chaturbate</h4><p>Token-based external encoder setup for Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Stream on CAM4</h4><p>External Encoder setup for CAM4, with geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>Stream on BongaCams</h4><p>External Encoder setup for BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Stream on Stripchat</h4><p>External-software setup for Stripchat broadcasts.</p></a><a class="related-card" href="../imlive/"><h4>Use SplitCam on ImLive</h4><p>Virtual-camera setup for ImLive — no RTMP needed.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Add MFC Alerts</h4><p>Show animated tip alerts on your MyFreeCams stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continue learning</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming setup</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Become a cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense toy integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Ready to go live?</h2>

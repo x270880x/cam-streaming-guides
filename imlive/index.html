@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan platforms",
+     "item": "https://camstreamguide.com/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "ImLive",
      "item": "https://camstreamguide.com/imlive/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Quick answer</a>
+  <a href="#steps">Step-by-step</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Related guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Quick answer</div>
     <div class="qa-text">Use SplitCam on ImLive: install SplitCam, build your scene with media layers, open ImLive and start a video chat, then in ImLive's settings select SplitCam as your webcam and microphone.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Step-by-step</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Install SplitCam</div><p class="step-p">SplitCam is free software for Windows and macOS. Install it — no watermark, no signup. On ImLive it works as a <strong>virtual camera</strong>, not an RTMP encoder.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Build your scene in SplitCam</div><p class="step-p">Open SplitCam and use <strong>Media Layers +</strong> to add your webcam plus any overlays, text, filters or AI background. This composed scene is what ImLive will see as your camera.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Start a video chat on ImLive</div><p class="step-p">Go to the ImLive site and click <strong>Start Video Chat</strong>, then open <strong>Go To Settings</strong> to reach the camera and microphone options.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Select SplitCam as your camera</div><p class="step-p">In ImLive's settings, choose <strong>SplitCam</strong> as both the webcam and the microphone. ImLive now shows your full SplitCam scene instead of a plain webcam.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Start your Free Live Chat</div><p class="step-p">Click <strong>Free Live Chat</strong> on ImLive to go live. To change your look mid-session, edit the scene in SplitCam — it updates in ImLive instantly.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>No stream key needed</h3><p>ImLive has no RTMP — don't look for a server URL or key. SplitCam is just selected as the camera device.</p></div><div class="tip-card"><h3>Set SplitCam as mic too</h3><p>Pick SplitCam for the microphone as well as the camera so your audio mix and noise suppression carry through.</p></div><div class="tip-card"><h3>Build the scene before going live</h3><p>ImLive shows whatever SplitCam outputs — arrange your layers before starting the chat.</p></div><div class="tip-card"><h3>Test the virtual camera first</h3><p>Before starting an ImLive chat, confirm the SplitCam virtual camera works — check it in ImLive's settings preview.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your ImLive stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the ImLive broadcast</summary><p>Dropped frames mean packets aren't reaching ImLive in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on ImLive</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>ImLive rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one ImLive shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on ImLive</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Does ImLive use RTMP or a stream key?</summary><p>No — ImLive uses your webcam directly. SplitCam connects as a virtual camera, so there's no key to copy.</p></details><details class="faq-item"><summary>How do I pick SplitCam on ImLive?</summary><p>Start Video Chat → Go To Settings → choose SplitCam as the webcam and microphone.</p></details><details class="faq-item"><summary>Is SplitCam free for ImLive?</summary><p>Yes — free, no watermark, no time limit. As a virtual camera for ImLive it adds no cost and no branding to your video chat.</p></details><details class="faq-item"><summary>Can I use overlays on ImLive?</summary><p>Yes — build them into the SplitCam scene; ImLive shows the composed result.</p></details><details class="faq-item"><summary>How much can models earn on ImLive?</summary><p>Earnings on ImLive depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows ImLive's commission structure — check the model agreement before going live.</p></details><details class="faq-item"><summary>Is ImLive safe for broadcasters?</summary><p>ImLive requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings.</p></details><details class="faq-item"><summary>What documents do I need to become a model on ImLive?</summary><p>ImLive typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day.</p></details><details class="faq-item"><summary>Can I stream on ImLive from my phone?</summary><p>ImLive usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones).</p></details><details class="faq-item"><summary>Can I use SplitCam as a virtual camera on ImLive?</summary><p>Yes — ImLive's live runs in the browser, so SplitCam registers as a webcam called <strong>"SplitCam Video Driver"</strong>. Open the ImLive broadcaster, click the camera selector in the browser, and pick SplitCam. Your composed scene (overlays, second camera, filters, AI background) reaches viewers as a single webcam feed.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Official support — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">We are an independent guide. For account, payment or technical issues contact the platform's official support directly.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Other platform guides</h3>
   <div class="related-grid"><a class="related-card" href="../skyprivate/"><h4>SplitCam on SkyPrivate</h4><p>Virtual-camera setup for SkyPrivate&#x27;s Skype-based cam calls.</p></a><a class="related-card" href="../justforfans/"><h4>Go live on JustForFans</h4><p>Use SplitCam as your virtual camera in JustForFans&#x27; live broadcaster.</p></a><a class="related-card" href="../fanvue/"><h4>Go live on Fanvue</h4><p>Use SplitCam as your virtual camera for Fanvue live.</p></a><a class="related-card" href="../loyalfans/"><h4>Go live on LoyalFans</h4><p>Use SplitCam as your virtual camera for LoyalFans live.</p></a><a class="related-card" href="../chaturbate/"><h4>Stream on Chaturbate</h4><p>Token-based external encoder setup for Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Stream on CAM4</h4><p>External Encoder setup for CAM4, with geo-controls.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continue learning</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming setup</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Become a cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense toy integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Ready to go live?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "‏פלטפורמות מעריצים",
+     "item": "https://camstreamguide.com/he/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Boosty",
      "item": "https://camstreamguide.com/he/boosty/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">תשובה</a>
+  <a href="#steps">שלבים</a>
+  <a href="#tips">טיפים</a>
+  <a href="#faq">שאלות</a>
+  <a href="#related">מדריכים קשורים</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">תשובה מהירה</div>
     <div class="qa-text">לייב ב-Boosty עם SplitCam: התקינו SplitCam, בנו את הסצנה, התחילו לייב ב-Boosty, ובחרו <em>SplitCam</em> בתפריט המצלמה של השדרן — ואז עלו לאוויר.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">שלב אחר שלב</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">הורידו והתקינו SplitCam</div><p class="step-p">‏SplitCam היא תוכנת שידור חי חינמית ל-Windows ול-macOS — ללא הרשמה, ללא כרטיס, ללא סימן מים. היא מתקינה מצלמה וירטואלית שהדפדפן יכול לבחור.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">בנו את הסצנה שלכם</div><p class="step-p">פתחו SplitCam והוסיפו את המצלמה. הוסיפו שכבות (ברוסית לקהל שלכם), מצלמה שנייה או הטלפון שלכם, מסנני יופי או רקע AI.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">התחילו לייב ב-Boosty</div><p class="step-p">התחברו לחשבון היוצר שלכם ב-Boosty ופתחו את שדרן הלייב. הגדירו חסימה לפי שכבה אם אתם רוצים את הלייב מאחורי רמה בתשלום.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">בחרו את SplitCam כמצלמה שלכם</div><p class="step-p">בתפריט המצלמה של Boosty, בחרו <strong>SplitCam</strong> במקום מצלמת האינטרנט הגולמית — הסצנה המורכבת שלכם מחליפה את המצלמה השטוחה.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">התחילו את השידור — סצנת SplitCam, השכבות והמסננים שלכם מגיעים למנויי Boosty שלכם.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">טיפים מקצועיים</h2>
   <div class="tips-grid"><div class="tip-card"><h3>פלטפורמת היוצרים הגדולה ברוסיה</h3><p>‏Boosty החליפה את Patreon עבור יוצרי RU רבים אחרי הסנקציות, כך שהקהל נאמן ורגיל לשלם ב-RUB. סצנת SplitCam מלוטשת עם שכבות ברוסית מובילה להמרות טובות.</p></div><div class="tip-card"><h3>מופעי לייב לפי שכבת מנוי</h3><p>‏Boosty מאפשרת לחסום שידורים חיים לפי שכבת מנוי. SplitCam עובד עם כל השכבות — למקודד לא אכפת באיזו שכבה הצופה, אתם פשוט משדרים פעם אחת ו-Boosty מטפל בגישה.</p></div><div class="tip-card"><h3>שכבת טיפים ו-pay-per-view</h3><p>‏Boosty תומך בפתיחת פוסטים בתשלום ובטיפים. שכבת מסך שמציינת את הטבות השכבה מעלה המרות במהלך שידורים חיים.</p></div><div class="tip-card"><h3>עשו בדיקה פרטית קודם</h3><p>הריצו שידור בדיקה קצר כדי לבדוק מצלמה, אודיו, מסגור ושכבות לפני שאתם פותחים את החדר לצופים.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">פתרון בעיות</h2><div class="faq-list"><details class="faq-item"><summary>השידור ב-Boosty נתקע או באפרינג</summary><p>כמעט תמיד הביטרייט מוגדר גבוה ממה שההעלאה שלכם נושאת. הריצו את בדיקת המהירות המובנית של SplitCam, ואז הגדירו ביטרייט לכ-75% מההעלאה הנמדדת — 3,500–6,000&nbsp;Kbps ל-1080p, נמוך יותר ל-720p. התקיעות נעלמת ברגע שהמקודד מפסיק לחרוג מהקו שלכם.</p></details><details class="faq-item"><summary>פריימים שאבדו במהלך שידור Boosty</summary><p>פריימים שאבדו פירושם שחבילות לא מגיעות ל-Boosty בזמן — בדרך כלל Wi-Fi לא יציב. עברו ל-Ethernet קווי, סגרו אפליקציות שאוכלות רוחב פס והורידו מעט את הביטרייט. קפיצה בודדת לא נורא; עלייה מתמשכת פירושה שהקו לא עומד בקצב.</p></details><details class="faq-item"><summary>מסך שחור — הצופים לא רואים וידאו ב-Boosty</summary><p>המצלמה שלכם לא נבחרה כמקור פעיל ב-SplitCam, או שאפליקציה אחרת מחזיקה אותה. סגרו Zoom, Skype או OBS, בחרו שוב את המצלמה ברשימת המקורות של SplitCam וודאו שהתצוגה המקדימה מציגה את התמונה לפני לחיצה על Go Live.</p></details><details class="faq-item"><summary>Boosty דוחה את מפתח השידור או לא מתחבר</summary><p>העתיקו שוב את מפתח השידור — רווח בסוף או מפתח ישן שאופס הם הסיבות הנפוצות. ודאו ש-URL השרת תואם למה ש-Boosty מציג וששידור במקודד חיצוני מופעל בחשבון. המחוון הירוק ב-Stream Settings של SplitCam מאשר מפתח תקף.</p></details><details class="faq-item"><summary>אין אודיו או אודיו לא מסונכרן ב-Boosty</summary><p>בחרו SplitCam גם כמצלמה וגם כמיקרופון, ובחרו את המיקרופון האמיתי שלכם בתוך מקור האודיו של SplitCam. אם האודיו מפגר אחרי הווידאו, הורידו את הרזולוציה ברמה אחת — המקודד עמוס מדי והאודיו מחכה לפריימים מאוחרים.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">שאלות נפוצות</h2>
   <div class="faq-list"><details class="faq-item"><summary>איך SplitCam מתחבר ל-Boosty?</summary><p>הלייב של Boosty מבוסס דפדפן, אז SplitCam מתחבר כמצלמה וירטואלית — בחרו SplitCam בבוחר המצלמה. אין צורך ב-stream key.</p></details><details class="faq-item"><summary>אפשר להשתמש בשכבות בלייב של Boosty?</summary><p>כן — הרכיבו את הסצנה ב-SplitCam (שכבות, מצלמה שנייה, רקע AI); Boosty רואה מצלמת אינטרנט אחת. המנויים מקבלים את הסצנה המורכבת המלאה.</p></details><details class="faq-item"><summary>האם Boosty תומכת ב-OBS או מקודדים חיצוניים?</summary><p>הלייב של Boosty מבוסס בעיקר דפדפן. אם אפשרות stream-key מופיעה בפאנל היוצר שלכם, הדביקו אותה בשדות ה-RTMP המותאם של SplitCam; אחרת השתמשו בשיטת המצלמה הווירטואלית.</p></details><details class="faq-item"><summary>האם SplitCam חינמי לשימוש עם Boosty?</summary><p>כן — SplitCam חינמי, ללא סימן מים וללא הגבלת זמן.</p></details><details class="faq-item"><summary>כמה דוגמנים יכולים להרוויח ב־‏Boosty?</summary><p>ההכנסות ב־‏Boosty תלויות בגודל הקהל, בשעות השידור ובהתנהגות הטיפים. משדרים פעילים מביאים הביתה בדרך כלל 200–3,000 דולר בחודש; המובילים מגיעים ליותר מ־10,000 דולר. חלקך בהכנסות נקבע לפי מבנה העמלות של ‏Boosty — בדוק את הסכם הדוגמן לפני שאתה עולה לשידור חי.</p></details><details class="faq-item"><summary>האם ‏Boosty בטוח למשדרים?</summary><p>‏Boosty דורש אימות גיל ותעודה מזהה לפני תשלום, מה שמגן על דוגמנים מהונאה. השתמש בשם במה, אל תשתף לעולם פרטים אישיים מול המצלמה, הפעל חסימות גיאוגרפיות כדי להסתיר את השידור שלך מאזור המגורים שלך, והתייחס לכל בקשה של צופה כעסקה. השכבות והרקע מבוסס ‏AI של ‏SplitCam יכולים גם להסתיר או להחליף את הסביבה האמיתית שלך.</p></details><details class="faq-item"><summary>אילו מסמכים אני צריך כדי להפוך לדוגמן ב־‏Boosty?</summary><p>‏Boosty דורש בדרך כלל תעודה מזהה ממשלתית עם תמונה (דרכון, רישיון נהיגה או תעודת זהות), סלפי עם התעודה ביד, וטופס מס/תשלום (‏W-9 לארצות הברית, ‏W-8BEN לחו"ל). האישור אורך בדרך כלל 24–72 שעות; לאחר האישור אפשר לעלות לשידור חי באותו היום.</p></details><details class="faq-item"><summary>האם אני יכול לשדר ב־‏Boosty מהטלפון שלי?</summary><p>‏Boosty בדרך כלל מציע אפליקציית שידור לנייד או ממשק שידור דרך דפדפן הנייד, אבל החוויה מוגבלת — בלי שכבות, בלי מצלמה שנייה, בלי רקע ‏AI. לאיכות הפקה מלאה, שדר ממחשב באמצעות ‏SplitCam והשתמש בטלפון כמצלמה שנייה (‏SplitCam מקבל קלט מצלמת ‏IP מטלפונים).</p></details><details class="faq-item"><summary>האם אני יכול להשתמש ב־‏SplitCam כמצלמה וירטואלית ב־‏Boosty?</summary><p>כן — השידור החי של ‏Boosty רץ בדפדפן, ולכן ‏SplitCam נרשם כמצלמת רשת בשם <strong>"‏SplitCam Video Driver"</strong>. פתח את לוח המשדר של ‏Boosty, לחץ על בורר המצלמה בדפדפן ובחר ב־‏SplitCam. הסצנה המורכבת שלך (שכבות, מצלמה שנייה, פילטרים, רקע ‏AI) מגיעה לצופים כזרם מצלמת רשת יחיד.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">מדריכים לפלטפורמות אחרות</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam ב-ImLive</h4><p>הגדרת מצלמה וירטואלית ל-ImLive — ללא RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam ב-SkyPrivate</h4><p>הגדרת מצלמה וירטואלית לשיחות cam של SkyPrivate מבוססות Skype.</p></a><a class="related-card" href="../justforfans/"><h4>לייב JustForFans</h4><p>השתמשו ב-SplitCam כמצלמה וירטואלית בכלי השידור החי של JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>לייב Fanvue</h4><p>השתמשו ב-SplitCam כמצלמה וירטואלית ללייב ב-Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>שידור Chaturbate</h4><p>הגדרה מבוססת טוקן עם מקודד חיצוני ב-Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>שידור CAM4</h4><p>‏External Encoder ב-CAM4 עם שליטה גאוגרפית.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">המשך ללמוד</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>‏Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>‏SplitCam מול OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>להפוך לדוגמנית cam</h4></a>
+    <a class="related-card" href="../lovense/"><h4>‏Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>מוכנים לעלות ללייב?</h2>

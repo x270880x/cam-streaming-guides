@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Camサイト",
+     "item": "https://camstreamguide.com/ja/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Chaturbate",
      "item": "https://camstreamguide.com/ja/chaturbate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">回答</a>
+  <a href="#steps">手順</a>
+  <a href="#tips">コツ</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">関連ガイド</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">簡単な答え</div>
     <div class="qa-text">SplitCamでChaturbate配信：SplitCamをインストール、シーンを構築、Chaturbateで<em>Broadcast Yourself → My Broadcast</em>を開き、broadcast tokenをコピー、SplitCamに貼り付け、Go Live。</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">ステップバイステップ</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCamをダウンロードしてインストール</div><p class="step-p">SplitCamはWindowsとmacOS用の無料ライブ配信ソフトウェアです。ダウンロードしてインストーラーを実行してください — 登録不要、カード不要、透かしなし、時間制限なし。SplitCamは、あなたのビデオをChaturbateに送信するエンコーダーです。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">カメラとシーンをセットアップ</div><p class="step-p">SplitCamを開いてウェブカメラを追加します。視聴者に見せたいようにシーンを構築 — オーバーレイ、テキスト、2台目のカメラまたはスマートフォン、ビューティーフィルターやAI背景。すべてがストリームがPCを離れる前にライブで適用されます。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Chaturbateのストリームキーを取得</div><p class="step-p">Chaturbateで<strong>Broadcast Yourself</strong>をクリックして<strong>My Broadcast</strong>ページを開き、<strong>View RTMP/OBS broadcast information and stream key</strong>を選択。キーは<strong>broadcast token</strong>として表示 — コピーしてください。パスワードのように扱い、公開しないでください。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCamをChaturbateに接続</div><p class="step-p">SplitCamで<strong>Stream Settings</strong>を開き、ChaturbateのサーバーURLとストリームキーをカスタムRTMPフィールドに貼り付けます。ビットレート：1080pは3,500–6,000&nbsp;Kbps、720pは2,000–4,000&nbsp;Kbps。最初に内蔵の速度テストを実行してください。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Liveをクリック</div><p class="step-p">SplitCamで<strong>Go Live</strong>を押してから、Chaturbateで配信を開始。約10秒以内にカメラがライブになります。次回以降の配信はワンクリック — SplitCamを開いてGo Live。</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">プロのヒント</h2>
   <div class="tips-grid"><div class="tip-card"><h3>トークンが鍵</h3><p>Chaturbateは汎用ストリームキーの代わりにbroadcast tokenを使用。パスワードとして扱い、漏洩したらリセット。</p></div><div class="tip-card"><h3>余裕は十分</h3><p>ChaturbateのRTMP ingestは4K、60 fps、高ビットレートまで受け入れ — 制限はアップロード、プラットフォームではない。キーフレームは2秒ごと。</p></div><div class="tip-card"><h3>有線接続を使用</h3><p>長い配信ではEthernetがWi-Fiに勝つ — 失われたフレームは失われたチップ。配信PCまでケーブルを引きましょう。</p></div><div class="tip-card"><h3>まず非公開テストを実施</h3><p>観客に部屋を開く前に、カメラ、音声、構図、オーバーレイをチェックする短いテスト配信を実行。</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">トラブルシューティング</h2><div class="faq-list"><details class="faq-item"><summary>Chaturbate の配信がカクつく・バッファリングする</summary><p>ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。</p></details><details class="faq-item"><summary>Chaturbate 配信中のフレーム落ち</summary><p>フレーム落ちはパケットが Chaturbate に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。</p></details><details class="faq-item"><summary>黒い画面 — Chaturbate で視聴者に映像が映らない</summary><p>カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。</p></details><details class="faq-item"><summary>Chaturbate がストリームキーを拒否する・接続しない</summary><p>ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが Chaturbate の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。</p></details><details class="faq-item"><summary>Chaturbate で音声がない・音ズレする</summary><p>SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">よくある質問</h2>
   <div class="faq-list"><details class="faq-item"><summary>ChaturbateはOBS / 外部エンコーダーを許可？</summary><p>はい — Chaturbateは外部エンコーダーを公式にサポート、独自の「How do I set up OBS?」記事あり。配信設定で「Use External Encoder to Broadcast」で有効化。</p></details><details class="faq-item"><summary>Chaturbateのストリームキーはどこ？</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key。キーはbroadcast token。</p></details><details class="faq-item"><summary>Chaturbateのビットレートは？</summary><p>1080pで3,500–6,000 Kbpsで十分。Chaturbateの上限は高い — 実際の制限はアップロード；最初にSplitCamの速度テストを実行。</p></details><details class="faq-item"><summary>SplitCamはChaturbateで無料？</summary><p>はい — 完全無料、透かしなし、時間制限なし：エンコーダーがトークン収入を食べることはない。</p></details><details class="faq-item"><summary>Chaturbateでモデルはどれくらい稼げますか？</summary><p>Chaturbateでの収入は視聴者数、配信時間、投げ銭の状況によって変動します。アクティブな配信者の月収は通常2万〜30万円程度で、トップ層は100万円以上に達します。あなたの取り分はChaturbateの手数料体系に従うため、配信開始前にモデル契約書を必ず確認してください。</p></details><details class="faq-item"><summary>Chaturbateは配信者にとって安全ですか？</summary><p>Chaturbateは出金前に年齢と本人確認を必須としており、これがモデルを詐欺から守ります。ステージネームを使い、カメラの前で個人情報を絶対に明かさず、ジオブロック機能で自宅地域から配信を隠し、視聴者からのリクエストはすべて取引として扱ってください。SplitCamのオーバーレイやAI背景機能を使えば、実際の周囲の様子を隠したり差し替えたりすることもできます。</p></details><details class="faq-item"><summary>Chaturbateでモデル登録するにはどんな書類が必要ですか？</summary><p>Chaturbateでは通常、政府発行の写真付き身分証（パスポート、運転免許証、マイナンバーカードなど）、その身分証を持った自撮り写真、そして税務・支払い用フォーム（米国居住者はW-9、それ以外はW-8BEN）が必要です。審査は通常24〜72時間で完了し、承認されればその日のうちに配信を開始できます。</p></details><details class="faq-item"><summary>Chaturbateにスマホから配信できますか？</summary><p>Chaturbateには大抵モバイル配信アプリかモバイルウェブ配信ツールが用意されていますが、オーバーレイなし、セカンドカメラなし、AI背景なしと機能が制限されます。本格的な配信品質を求めるなら、パソコンからSplitCamで配信し、スマホはセカンドカメラとして使うのがおすすめです（SplitCamはスマホからのIPカメラ入力に対応しています）。</p></details><details class="faq-item"><summary>ChaturbateはOBSや外部エンコーダーに対応していますか？</summary><p>はい、対応しています。Chaturbateの配信者パネルにRTMPサーバーURLとストリームキーが表示されます。両方をSplitCamの<strong>配信設定 → カスタムRTMP</strong>に貼り付け、1920×1080の30fps、ビットレート4,000〜5,000Kbpsに設定して<strong>配信開始</strong>をクリックしてください。カスタムRTMP経由ならSplitCamのシーン合成機能（マルチカメラ、オーバーレイ、フィルター）をフル活用できます。</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">公式サポート — Chaturbate</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@chaturbate.com">support@chaturbate.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.chaturbate.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.chaturbate.com/hc/en-us</a></li></ul><p class="sp-note">私たちは独立したガイドです。アカウント、支払い、技術的な問題については、プラットフォームの公式サポートに直接お問い合わせください。</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">他のプラットフォームガイド</h3>
   <div class="related-grid"><a class="related-card" href="../cam4/"><h4>CAM4配信</h4><p>地域コントロール付きCAM4 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams配信</h4><p>BongaCams用External Encoder設定。</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat配信</h4><p>Stripchat配信用外部ソフトウェア設定。</p></a><a class="related-card" href="../onlyfans/"><h4>OnlyFansライブ</h4><p>一度認証またはキーを貼り付け — OnlyFansライブ。</p></a><a class="related-card" href="../imlive/"><h4>ImLiveでのSplitCam</h4><p>ImLive用仮想カメラ設定 — RTMPなし。</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts追加</h4><p>MyFreeCamsストリームにアニメーションチップアラートを表示。</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">もっと学ぶ</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>マルチ配信</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Camモデルになる</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>ライブ配信の準備はできましたか？</h2>

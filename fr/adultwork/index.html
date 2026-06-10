@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Sites de cam",
+     "item": "https://camstreamguide.com/fr/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "AdultWork",
      "item": "https://camstreamguide.com/fr/adultwork/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Réponse</a>
+  <a href="#steps">Étapes</a>
+  <a href="#tips">Astuces</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guides similaires</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">En bref</div>
     <div class="qa-text">Pour diffuser sur AdultWork avec SplitCam : installer SplitCam, composer la scène, dans le Members Area ouvrir <em>Members → Broadcasting → External Encoder</em>, copier l'URL serveur et la stream key, les coller dans SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pas à pas</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Téléchargez et installez SplitCam</div><p class="step-p">SplitCam est un logiciel de streaming gratuit pour Windows et macOS — pas d'inscription, pas de carte, pas de filigrane.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Composez votre scène</div><p class="step-p">Ouvrez SplitCam et ajoutez votre webcam. Empilez overlays, texte, une deuxième caméra ou votre téléphone, filtres beauté ou fond IA — utilisez les overlays pour mettre en avant votre contenu AdultWork / vos services téléphoniques et faire du cross-sell pendant le live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Récupérez votre URL et stream key AdultWork</div><p class="step-p">Connectez-vous à votre compte performeuse AdultWork, ouvrez le <strong>Members Area</strong> et allez dans <strong>Members → Broadcasting → External Encoder</strong>. La page révèle une <strong>URL serveur</strong> et une <strong>stream key</strong> unique. Copiez les deux.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Connectez SplitCam à AdultWork</div><p class="step-p">Dans SplitCam ouvrez <strong>Stream Settings</strong>, collez l'URL serveur AdultWork et la stream key dans les champs RTMP personnalisé. Réglez le bitrate à 3 500–6 000 Kbps en 1920×1080, 30 fps, keyframe 2 secondes.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Cliquez Go Live</div><p class="step-p">Appuyez sur <strong>Go Live</strong> dans SplitCam, puis passez en ligne depuis le Members Area. En ~10 secondes votre flux atteint l'audience d'AdultWork.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Astuces</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Cross-sell depuis les autres services AdultWork</h3><p>La force d'AdultWork est sa base de clients existante — vos viewers réservent peut-être déjà vos services photo / vidéo / téléphone. Utilisez les lives cam pour faire du cross-sell auprès des clients qui n'ont pas encore essayé votre cam, pas pour courir après des inconnus.</p></div><div class="tip-card"><h3>Le Members Area est le point d&#x27;entrée</h3><p>Ne cherchez pas le broadcaster sur la partie publique du site — tout le côté performeuse vit dans le Members Area. Réglages de diffusion, paiements, gestion de contenu sont là.</p></div><div class="tip-card"><h3>Centré UK mais paiements internationaux</h3><p>L'essentiel du trafic est UK/UE. Les paiements fonctionnent à l'international via virement bancaire / e-wallet standard, avec des calendriers hebdomadaires fréquents sur la plateforme.</p></div><div class="tip-card"><h3>Connexion filaire</h3><p>L'Ethernet est plus fiable que le Wi-Fi pour un long live — une trame perdue, c'est un tip perdu. Tire un câble jusqu'au PC de stream.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Dépannage</h2><div class="faq-list"><details class="faq-item"><summary>Ton stream AdultWork rame ou met en mémoire tampon</summary><p>La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion.</p></details><details class="faq-item"><summary>Images perdues pendant la diffusion sur AdultWork</summary><p>Les images perdues signifient que les paquets n'atteignent pas AdultWork à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas.</p></details><details class="faq-item"><summary>Écran noir — les spectateurs ne voient pas de vidéo sur AdultWork</summary><p>Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live.</p></details><details class="faq-item"><summary>AdultWork refuse la clé de stream ou ne se connecte pas</summary><p>Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par AdultWork et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide.</p></details><details class="faq-item"><summary>Pas de son ou son désynchronisé sur AdultWork</summary><p>Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>AdultWork supporte-t-il les encodeurs externes comme SplitCam ?</summary><p>Oui — le Members Area propose une option External Encoder dans Broadcasting. URL serveur RTMP standard et stream key ; OBS, SplitCam, vMix s'y connectent une fois la performeuse vérifiée.</p></details><details class="faq-item"><summary>Où je récupère ma stream key AdultWork ?</summary><p>Members Area → Members → Broadcasting → External Encoder. URL serveur et stream key apparaissent là — copiez les deux dans les champs RTMP personnalisé de SplitCam.</p></details><details class="faq-item"><summary>Quel bitrate utiliser pour AdultWork ?</summary><p>Poussez du 1920×1080 à 30 fps, 3 500–6 000 Kbps avec un keyframe de 2 secondes. Lancez d'abord le speed test intégré de SplitCam.</p></details><details class="faq-item"><summary>SplitCam est-il gratuit avec AdultWork ?</summary><p>Oui — SplitCam est gratuit, sans filigrane et sans limite de temps. L'option encodeur externe d'AdultWork est gratuite dans le Members Area.</p></details><details class="faq-item"><summary>Combien peut-on gagner en tant que créateur sur AdultWork ?</summary><p>Les revenus sur AdultWork dépendent de la taille de l'audience, des heures de direct et de la générosité des pourboires. Un créateur actif gagne en général entre 200 et 3 000 $ par mois ; les meilleurs dépassent 10 000 $. Votre part de revenus suit la grille de commissions de AdultWork — vérifiez l'accord créateur avant de passer en direct.</p></details><details class="faq-item"><summary>AdultWork est-il sûr pour les créateurs en direct ?</summary><p>AdultWork exige une vérification d'âge et d'identité avant tout versement, ce qui protège les créateurs contre la fraude. Utilisez un pseudonyme, ne partagez jamais de données personnelles à la caméra, activez les blocages géographiques pour cacher votre direct depuis votre région d'origine, et traitez chaque demande de spectateur comme une transaction. Les surimpressions et l'arrière-plan IA de SplitCam permettent aussi de masquer ou de remplacer votre véritable décor.</p></details><details class="faq-item"><summary>Quels documents faut-il pour devenir créateur sur AdultWork ?</summary><p>AdultWork demande en général une pièce d'identité officielle avec photo (passeport, permis de conduire ou carte d'identité), un selfie avec le document en main, et un formulaire fiscal pour la cagnotte (W-9 aux États-Unis, W-8BEN hors États-Unis). La validation prend habituellement 24 à 72 heures ; une fois acceptée, vous pouvez passer en direct le jour même.</p></details><details class="faq-item"><summary>Puis-je diffuser sur AdultWork depuis mon téléphone ?</summary><p>AdultWork propose en général une application mobile pour créateur ou un studio mobile via le navigateur, mais l'expérience reste limitée — pas de surimpressions, pas de seconde caméra, pas d'arrière-plan IA. Pour une qualité de production complète, diffusez depuis un ordinateur avec SplitCam et utilisez votre téléphone comme deuxième caméra (SplitCam accepte le flux IP-camera des téléphones).</p></details><details class="faq-item"><summary>AdultWork prend-il en charge OBS ou un encodeur externe ?</summary><p>Oui — AdultWork fournit une URL de serveur RTMP et une clé de flux dans le panneau créateur. Collez les deux dans <strong>Paramètres de diffusion → RTMP personnalisé</strong> de SplitCam, réglez sur 1920×1080 à 30 ips avec un débit de 4 000 à 5 000 Kbps, puis cliquez sur <strong>Passer en direct</strong>. La voie RTMP personnalisé vous donne accès à toute la composition de scène SplitCam (multi-caméras, surimpressions, filtres).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Autres guides de plateforme</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Streamer sur Chaturbate</h4><p>Configuration par token via encodeur externe pour Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Streamer sur CAM4</h4><p>External Encoder pour CAM4, avec géo-contrôles.</p></a><a class="related-card" href="../bongacams/"><h4>Streamer sur BongaCams</h4><p>Configuration External Encoder pour BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Streamer sur Stripchat</h4><p>Setup logiciel externe pour les diffusions Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam sur ImLive</h4><p>Setup caméra virtuelle pour ImLive — pas besoin de RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Ajouter MFC Alerts</h4><p>Afficher des alertes de tips animées sur votre stream MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Aller plus loin</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Devenir cam-girl</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Jouets Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Prêt à passer en live ?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Кам сайтове",
+     "item": "https://camstreamguide.com/bg/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fansly",
      "item": "https://camstreamguide.com/bg/fansly/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Отговор</a>
+  <a href="#steps">Стъпки</a>
+  <a href="#tips">Съвети</a>
+  <a href="#faq">ЧЗВ</a>
+  <a href="#related">Подобни ръководства</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Накратко</div>
     <div class="qa-text">Излъчване в Fansly Live със SplitCam: инсталирай SplitCam, изгради сцената, в Creator Dashboard отвори <em>Live → Broadcast Settings → External Encoder</em>, копирай server URL и stream key, постави в SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Стъпка по стъпка</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Свали и инсталирай SplitCam</div><p class="step-p">SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Изгради сцената</div><p class="step-p">Отвори SplitCam и добави webcam-а. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон — полирани сцени, които пасват на премиум очакванията на платящите абонати.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Вземи URL и stream key за Fansly</div><p class="step-p">Влез в creator акаунта си във Fansly, отвори <strong>Creator Dashboard</strong>, навигирай до <strong>Live → Broadcast Settings → External Encoder</strong>. Страницата показва <strong>server URL</strong> и уникален <strong>stream key</strong>. Копирай и двете.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Свържи SplitCam с Fansly</div><p class="step-p">В SplitCam отвори <strong>Stream Settings</strong>, постави server URL на Fansly и stream key в полетата за custom RTMP. Bitrate 3 500–6 000 Kbps при 1920×1080, 30 fps, keyframe на 2 секунди.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Натисни Go Live</div><p class="step-p">Натисни <strong>Go Live</strong> в SplitCam, после стартирай излъчването на Fansly Live от Creator Dashboard. За ~10 секунди стриймът ти стига до абонатите във Fansly.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Съвети</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Аудитория от тип subscriber-first</h3><p>Аудиторията на Fansly е базирана на абонамент — твоят live стрийм стига до хора, които вече ти плащат месечно. Планирай съдържание, което възнаграждава лоялността (ексклузивно Q&amp;A, behind-the-scenes, custom tip goals), вместо да гониш метрики от публични стаи.</p></div><div class="tip-card"><h3>Tip-ове редом с абонаменти</h3><p>Fansly Live поддържа tipping в стрийма в допълнение към базовите абонаменти. Комбинираните приходи могат да надминат tipping-а на чистите кам платформи за утвърдените creator-и.</p></div><div class="tip-card"><h3>Браузър broadcaster vs външен</h3><p>Подразбиращият се браузър broadcaster е single-source. SplitCam през External Encoder отключва мулти-камера, наслагвания, beauty filters и AI фон, които пасват на полирания вид на премиум съдържание за абонати.</p></div><div class="tip-card"><h3>Използвай кабелна връзка</h3><p>Ethernet бие Wi-Fi в дълъг стрийм — загубен кадър е загубен тип. Прокарай кабел до стрийм компютъра.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на Fansly лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на Fansly</summary><p>Изпуснатите кадри значат, че пакетите не стигат до Fansly навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на Fansly</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>Fansly отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от Fansly и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на Fansly</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Често задавани въпроси</h2>
   <div class="faq-list"><details class="faq-item"><summary>Поддържа ли Fansly Live външни енкодери като SplitCam?</summary><p>Да — Live секцията в Creator Dashboard включва опция External Encoder под Broadcast Settings. Стандартен RTMP server URL и stream key; OBS, SplitCam, vMix се връзват.</p></details><details class="faq-item"><summary>Откъде вземам моя stream key за Fansly?</summary><p>Creator Dashboard → Live → Broadcast Settings → External Encoder. И server URL, и stream key се появяват там. Копирай и двете в полетата за custom RTMP на SplitCam.</p></details><details class="faq-item"><summary>Какъв bitrate да използвам за Fansly Live?</summary><p>Push 1920×1080 при 30 fps, 3 500–6 000 Kbps с 2-секунден keyframe. Пусни първо вградения speed test на SplitCam.</p></details><details class="faq-item"><summary>Безплатен ли е SplitCam за Fansly?</summary><p>Да — SplitCam е безплатен, без воден знак и без лимит на времето. Опцията External Encoder на Fansly е безплатна в Creator Dashboard.</p></details><details class="faq-item"><summary>Колко могат да изкарват моделите в Fansly?</summary><p>Приходите в Fansly зависят от размера на аудиторията, часовете на стрийм и активността с типове. Активните излъчващи обикновено прибират $200–$3,000 на месец; топ изпълнителите достигат $10,000+. Делът ти от приходите следва комисионната структура на Fansly — провери моделния договор, преди да тръгнеш в ефир.</p></details><details class="faq-item"><summary>Безопасен ли е Fansly за излъчващите?</summary><p>Fansly изисква верификация на възрастта и личната карта преди изплащане, което защитава моделите от измами. Използвай сценично име, никога не споделяй лични данни пред камерата, активирай гео-блокове, за да скриеш стрийма си от родния си регион, и третирай всяка молба на зрител като транзакционна. Овърлеите и AI фонът на SplitCam също могат да скрият или подменят реалната ти обстановка.</p></details><details class="faq-item"><summary>Какви документи са ми нужни, за да стана модел в Fansly?</summary><p>Fansly обикновено изисква държавно издаден документ за самоличност със снимка (паспорт, шофьорска книжка или лична карта), селфи с документа в ръка и данъчен/платежен формуляр (W-9 за САЩ, W-8BEN за извън САЩ). Одобрението обикновено отнема 24–72 часа; след одобрение можеш да излезеш в ефир още същия ден.</p></details><details class="faq-item"><summary>Мога ли да стриймвам в Fansly от телефона си?</summary><p>Fansly обикновено предлага мобилно приложение за излъчване или мобилен уеб-броудкастър, но изживяването е ограничено — без овърлеи, без втора камера, без AI фон. За пълно продукционно качество излъчвай от компютър със SplitCam и използвай телефона си като втора камера (SplitCam приема IP-камера вход от телефони).</p></details><details class="faq-item"><summary>Поддържа ли Fansly OBS или външен енкодер?</summary><p>Да — Fansly предоставя RTMP сървър URL и стрийм ключ в панела на излъчващия. Постави и двете в <strong>Stream Settings → Custom RTMP</strong> на SplitCam, задай 1920×1080 при 30 fps с битрейт 4,000–5,000 Kbps и кликни <strong>Go Live</strong>. Custom RTMP маршрутът ти дава пълната композиция на сцената в SplitCam (мулти-камера, овърлеи, филтри).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други ръководства за платформи</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a><a class="related-card" href="../bongacams/"><h4>Излъчване BongaCams</h4><p>External Encoder настройка за BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Излъчване Stripchat</h4><p>Външен софтуер за Stripchat стрийм.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam в ImLive</h4><p>Виртуална камера за ImLive — без RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Добави MFC Alerts</h4><p>Показвай анимирани tip alerts в MyFreeCams стрийма.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Още</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мулти-стрийминг</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стани кам модел</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense играчки</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готов(а) ли си за ефир?</h2>

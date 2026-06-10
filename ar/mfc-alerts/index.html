@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "أدوات",
+     "item": "https://camstreamguide.com/ar/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/ar/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">إجابة</a>
+  <a href="#steps">خطوات</a>
+  <a href="#tips">نصائح</a>
+  <a href="#faq">أسئلة</a>
+  <a href="#related">أدلة ذات صلة</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">إجابة سريعة</div>
     <div class="qa-text">إضافة MFC Alerts باستخدام SplitCam: ثبّت SplitCam، أضف كاميرا الويب، افتح علامة تبويب Browser وحمّل mfcalerts.com، انسخ URL التنبيهات، أضفه كطبقة Browser فوق كاميرا الويب، ثم اختبر بإكرامية اختبار.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">خطوة بخطوة</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">ثبّت SplitCam وأضف كاميرا الويب</div><p class="step-p">ثبّت SplitCam المجاني لـ Windows أو macOS، ثم أضف <strong>كاميرا الويب</strong> كمصدر. MFC Alerts تجلس كطبقة فوق هذه الكاميرا.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">افتح علامة تبويب Browser واذهب إلى mfcalerts.com</div><p class="step-p">في SplitCam افتح علامة تبويب <strong>Browser</strong> وانتقل إلى <strong>www.mfcalerts.com</strong>. سجل الدخول، أو سجل إذا لم يكن لديك حساب mfcalerts.com بعد.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">انسخ URL التنبيهات</div><p class="step-p">على mfcalerts.com استخدم <strong>Copy to clipboard</strong> لنسخ URL التنبيهات الشخصي — إنها الصفحة التي تعرض رسوم متحركة للإكراميات.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">أضف URL كطبقة Browser — فوق كاميرا الويب</div><p class="step-p">الصق URL في نافذة Browser في SplitCam وانقر <strong>Add</strong>. ثم أعد ترتيب قائمة المصادر بحيث يكون <strong>MFC Alerts فوق كاميرا الويب</strong> (قائمة 3 نقاط → Move Up). إذا كانت أسفل، تبقى التأثيرات مخفية.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">اختبر بإكرامية اختبار</div><p class="step-p">افتح <strong>Settings → Send test tip</strong> وأكد ظهور تأثير التنبيه فوق كاميرتك. ثم ابث بشكل طبيعي على <a href="../myfreecams/" class="autolink">MyFreeCams</a> — الإكراميات الحقيقية الآن تشغل الرسوم المتحركة.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">نصائح احترافية</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts يجب أن يكون فوق كاميرا الويب</h3><p>الخطأ الأكثر شيوعاً: إذا كانت طبقة MFC Alerts أسفل كاميرا الويب في قائمة المصادر، تبقى التأثيرات مخفية. حركها لأعلى.</p></div><div class="tip-card"><h3>حساب mfcalerts.com مطلوب</h3><p>URL التنبيهات شخصي — سجل في mfcalerts.com أولاً إذا لم يكن لديك حساب.</p></div><div class="tip-card"><h3>أرسل إكرامية اختبار قبل البث المباشر</h3><p>استخدم Settings → Send test tip لتأكيد أن التراكب يعمل — لا تكتشف الخطأ في منتصف العرض.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث MFC Alerts لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على MFC Alerts</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى MFC Alerts في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على MFC Alerts</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>MFC Alerts يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه MFC Alerts وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على MFC Alerts</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
   <div class="faq-list"><details class="faq-item"><summary>ما هو MFC Alerts؟</summary><p>نظام إشعارات لـ <a href="../myfreecams/" class="autolink">MyFreeCams</a> يعرض تأثيرات فيديو في بثك عندما يرسل المشاهدون إكراميات — يُضاف كتراكب Browser في SplitCam.</p></details><details class="faq-item"><summary>لماذا لا تظهر MFC Alerts الخاصة بي؟</summary><p>ترتيب الطبقات تقريباً دائماً — طبقة MFC Alerts Browser يجب أن تكون فوق كاميرا الويب في قائمة مصادر SplitCam.</p></details><details class="faq-item"><summary>هل أحتاج حساباً لـ MFC Alerts؟</summary><p>نعم — سجل في mfcalerts.com للحصول على URL التنبيهات الشخصي.</p></details><details class="faq-item"><summary>هل SplitCam مجاني لهذا؟</summary><p>نعم — SplitCam مجاني، بدون علامة مائية وبدون حد زمني، وتراكب browser الخاص بـ MFC Alerts يعمل بداخله دون تكلفة إضافية.</p></details><details class="faq-item"><summary>كم يمكن أن يكسب العارضون على ‏MFC Alerts؟</summary><p>تعتمد الأرباح على ‏MFC Alerts على حجم الجمهور وعدد ساعات البث وسلوك الإكراميات. يحقق المذيعون النشطون عادةً ما بين 200 و3,000 دولار شهريًا، بينما يصل كبار المؤدين إلى أكثر من 10,000 دولار. تخضع حصتك من الإيرادات لهيكل العمولات الخاص بـ ‏MFC Alerts — راجع اتفاقية العارض قبل بدء البث المباشر.</p></details><details class="faq-item"><summary>هل ‏MFC Alerts آمن للمذيعين؟</summary><p>يشترط ‏MFC Alerts التحقق من العمر والهوية قبل صرف الأرباح، وهو ما يحمي العارضين من الاحتيال. استخدم اسمًا فنيًا، ولا تشارك أبدًا أي بيانات شخصية أمام الكاميرا، وفعّل الحجب الجغرافي لإخفاء بثك عن منطقتك السكنية، وتعامل مع كل طلب من المشاهدين كمعاملة تجارية. كما يمكن لطبقات ‏SplitCam والخلفية الذكية ‏AI إخفاء محيطك الحقيقي أو استبداله.</p></details><details class="faq-item"><summary>ما المستندات التي أحتاجها لأصبح عارضًا على ‏MFC Alerts؟</summary><p>يطلب ‏MFC Alerts عادةً وثيقة هوية رسمية تحتوي على صورة (جواز سفر أو رخصة قيادة أو بطاقة هوية)، وصورة سيلفي وأنت تحمل الوثيقة، ونموذجًا ضريبيًا/لصرف الأرباح (‏W-9 للمقيمين في الولايات المتحدة و‏W-8BEN لغيرهم). تستغرق الموافقة عادةً بين 24 و72 ساعة، وبمجرد الموافقة يمكنك البث المباشر في اليوم نفسه.</p></details><details class="faq-item"><summary>هل يمكنني البث على ‏MFC Alerts من هاتفي؟</summary><p>يوفر ‏MFC Alerts عادةً تطبيق بث للهاتف المحمول أو واجهة بث عبر متصفح الجوال، لكن التجربة محدودة — بلا طبقات، ولا كاميرا ثانية، ولا خلفية ذكية ‏AI. للحصول على جودة إنتاج كاملة، ابثّ من جهاز كمبيوتر باستخدام ‏SplitCam، واستخدم هاتفك ككاميرا ثانية (يقبل ‏SplitCam دخل كاميرا ‏IP من الهواتف).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">الدعم الرسمي — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">نحن دليل مستقل. لمشاكل الحساب أو الدفع أو الفنية، تواصل مباشرة مع الدعم الرسمي للمنصة.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">أدلة منصات أخرى</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>البث Chaturbate</h4><p>إعداد قائم على Token مع مُشفِّر خارجي على Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>البث CAM4</h4><p>External Encoder على CAM4 مع ضوابط جغرافية.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">تابع التعلم</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>البث المتعدد</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam مقابل OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>كن نموذج كام</h4></a>
+    <a class="related-card" href="../lovense/"><h4>ألعاب Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>جاهز للبث المباشر؟</h2>

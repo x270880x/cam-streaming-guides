@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-plattformar",
+     "item": "https://camstreamguide.com/sv/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Privacy.com.br",
      "item": "https://camstreamguide.com/sv/privacy-com-br/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Steg</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterade guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
     <div class="qa-text">Gå live på Privacy.com.br med SplitCam: installera SplitCam, bygg din scen, starta en ao vivo på Privacy och välj <em>SplitCam</em> i sändarens kameralista — gå sedan live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg för steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Ladda ner och installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel. Den installerar en virtuell kamera som webbläsaren kan välja.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg din scen</div><p class="step-p">Öppna SplitCam och lägg till webbkameran. Lägg till overlays på portugisiska ("gorjeta", "desbloquear PPV"), en andra kamera eller mobil, beauty-filter eller en AI-bakgrund.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Starta en ao vivo på Privacy.com.br</div><p class="step-p">Logga in på ditt Privacy-creatorkonto och öppna ao-vivo-sändaren för att starta en live för dina prenumeranter.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Välj SplitCam som kamera</div><p class="step-p">I Privacys kameralista, välj <strong>SplitCam</strong> i stället för din råa webbkamera — din komponerade scen ersätter den platta kameran. (Eller klistra in en streamnyckel i SplitCams anpassade RTMP-fält om tillgängligt.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Tryck Go Live</div><p class="step-p">Starta sändningen — din SplitCam-scen, overlays och filter når dina Privacy.com.br-prenumeranter.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Proffstips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Brasiliens största fan-plattform</h3><p>Privacy är den #1 creator-prenumerationsplattformen i Brasilien, med en portugisisktalande publik som är van vid att betala i BRL via PIX. Overlays på portugisiska + en polerad SplitCam-scen konverterar mycket bättre än en platt webbkamera.</p></div><div class="tip-card"><h3>Virtuell kamera, ingen streamnyckel behövs</h3><p>Live enbart via webbläsare får ändå hela din SplitCam-scen — andra kamera, overlays, beauty-filter eller AI-bakgrund — bara genom att välja SplitCam som webbkamera.</p></div><div class="tip-card"><h3>Tipsmenyer + PPV under ao vivo</h3><p>Privacy stöder gorjetas (tips) och betalda inlägg. En overlay på skärmen som namnger ditt PPV-paket eller meta-de-gorjeta lyfter intäkterna under en live.</p></div><div class="tip-card"><h3>Gör ett privat test först</h3><p>Kör en kort testsändning för att kontrollera kamera, ljud, bildkomposition och overlays innan du öppnar rummet för tittare.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>Privacy.com.br-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under Privacy.com.br-sändning</summary><p>Tappade bildrutor betyder att paket inte når Privacy.com.br i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på Privacy.com.br</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>Privacy.com.br avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den Privacy.com.br visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på Privacy.com.br</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hur kopplas SplitCam till Privacy.com.br?</summary><p>Privacys ao vivo är webbläsarbaserad, så SplitCam kopplas in som virtuell kamera — välj SplitCam i kameraväljaren. Ingen streamnyckel behövs.</p></details><details class="faq-item"><summary>Kan jag använda overlays och flera kameror på Privacy?</summary><p>Ja — bygg scenen i SplitCam (andra kamera, overlays, AI-bakgrund); Privacy ser den färdiga scenen som en enda webbkamera.</p></details><details class="faq-item"><summary>Stöder Privacy.com.br OBS eller externa kodare?</summary><p>Dess ao vivo är främst webbläsar-/webbkamerabaserad. Om ett streamnyckelalternativ dyker upp i din panel klistrar du in det i SplitCams anpassade RTMP-fält; annars använd metoden med virtuell kamera.</p></details><details class="faq-item"><summary>Är SplitCam gratis för Privacy.com.br?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på Privacy.com.br?</summary><p>Inkomsten på Privacy.com.br beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer Privacy.com.br:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är Privacy.com.br säkert för sändare?</summary><p>Privacy.com.br kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på Privacy.com.br?</summary><p>Privacy.com.br kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på Privacy.com.br från min telefon?</summary><p>Privacy.com.br erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Kan jag använda SplitCam som en virtuell kamera på Privacy.com.br?</summary><p>Ja — Privacy.com.br:s live körs i webbläsaren, så SplitCam registreras som en webbkamera vid namn <strong>"SplitCam Video Driver"</strong>. Öppna Privacy.com.br-sändaren, klicka på kameraväljaren i webbläsaren och välj SplitCam. Din komponerade scen (overlays, andra kamera, filter, AI-bakgrund) når tittarna som en enda webbkameraström.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuell kamera-uppsättning för ImLive — ingen RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam på SkyPrivate</h4><p>Virtuell kamera-konfiguration för Skype-baserade cam-samtal på SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Använd SplitCam som virtuell kamera i JustForFans livesändare.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Använd SplitCam som virtuell kamera för live på Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Läs mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

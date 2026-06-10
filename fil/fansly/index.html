@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam sites",
+     "item": "https://camstreamguide.com/fil/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fansly",
      "item": "https://camstreamguide.com/fil/fansly/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Sagot</a>
+  <a href="#steps">Mga hakbang</a>
+  <a href="#tips">Mga tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Kaugnay na gabay</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Mabilis na sagot</div>
     <div class="qa-text">Mag-stream sa Fansly Live gamit ang SplitCam: i-install ang SplitCam, buuin ang scene, sa Creator Dashboard buksan ang <em>Live → Broadcast Settings → External Encoder</em>, kopyahin ang server URL at stream key, i-paste sa SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Hakbang-hakbang</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">I-download at i-install ang SplitCam</div><p class="step-p">Ang SplitCam ay libreng live-streaming software para sa Windows at macOS — walang sign-up, walang card, walang watermark.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Buuin ang scene mo</div><p class="step-p">Buksan ang SplitCam at idagdag ang webcam. Maglagay ng overlays, text, second camera o phone mo, beauty filters o AI background — ang mga pinaganda na scene ay bagay sa premium expectation ng mga bayad na subscriber.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Kunin ang Fansly URL at stream key</div><p class="step-p">Mag-log in sa creator account ng Fansly, buksan ang <strong>Creator Dashboard</strong>, pumunta sa <strong>Live → Broadcast Settings → External Encoder</strong>. Ipinapakita ng pahina ang <strong>server URL</strong> at unique na <strong>stream key</strong>. Kopyahin pareho.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">I-connect ang SplitCam sa Fansly</div><p class="step-p">Sa SplitCam buksan ang <strong>Stream Settings</strong>, i-paste ang Fansly server URL at stream key sa custom RTMP fields. Itakda ang bitrate sa 3,500–6,000 Kbps sa 1920×1080, 30 fps, na may 2-second keyframe interval.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">I-click ang Go Live</div><p class="step-p">Pindutin ang <strong>Go Live</strong> sa SplitCam, pagkatapos simulan ang Fansly Live broadcast mula sa Creator Dashboard. Sa loob ng ~10 segundo aabot sa mga Fansly subscriber mo ang stream mo.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Subscriber-first na audience</h3><p>Subscription-based ang audience ng Fansly — ang live stream mo ay umaabot sa mga taong buwan-buwan ka nang binabayaran. Magplano ng content na gumagantimpala sa loyalty (exclusive Q&amp;A, behind-the-scenes, custom tip goals) sa halip na habulin ang public-room metrics.</p></div><div class="tip-card"><h3>Tips kasabay ng subscriptions</h3><p>Sinusuportahan ng Fansly Live ang in-stream tipping bukod pa sa base subscriptions. Ang pinagsamang kita ay maaaring lumampas sa puro cam-platform tipping para sa mga itinatag nang creator.</p></div><div class="tip-card"><h3>Browser broadcaster vs external</h3><p>Single-source ang default browser broadcaster. Ang SplitCam sa pamamagitan ng External Encoder ay nagbubukas ng multi-camera, overlays, beauty filters at AI background na bagay sa kakintaban ng bayad na subscriber content.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang Fansly stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa Fansly</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Fansly sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa Fansly</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng Fansly ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Fansly at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa Fansly</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng Fansly Live ang mga external encoder tulad ng SplitCam?</summary><p>Oo — may External Encoder option ang Live section ng Creator Dashboard sa ilalim ng Broadcast Settings. Standard RTMP server URL at stream key; OBS, SplitCam, vMix lahat ay konektado.</p></details><details class="faq-item"><summary>Saan ko makukuha ang Fansly stream key ko?</summary><p>Creator Dashboard → Live → Broadcast Settings → External Encoder. Lumalabas doon ang server URL at stream key. Kopyahin pareho sa custom RTMP fields ng SplitCam.</p></details><details class="faq-item"><summary>Anong bitrate para sa Fansly Live?</summary><p>Itulak ang 1920×1080 sa 30 fps, 3,500–6,000 Kbps na may 2-second keyframe interval. Patakbuhin muna ang built-in speed test ng SplitCam.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa Fansly?</summary><p>Oo — libre ang SplitCam, walang watermark at walang time limit. Libre rin ang External Encoder option ng Fansly sa Creator Dashboard.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa Fansly?</summary><p>Ang kita sa Fansly ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng Fansly — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang Fansly para sa mga broadcaster?</summary><p>Nangangailangan ang Fansly ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa Fansly?</summary><p>Karaniwang nangangailangan ang Fansly ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa Fansly mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang Fansly ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details><details class="faq-item"><summary>Sinusuportahan ba ng Fansly ang OBS o panlabas na encoder?</summary><p>Oo — nagbibigay ang Fansly ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa <strong>Stream Settings → Custom RTMP</strong> ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang <strong>Go Live</strong>. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Iba pang gabay sa platform</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams broadcast</h4><p>External Encoder setup para sa BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat broadcast</h4><p>External software setup para sa Stripchat streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam sa ImLive</h4><p>Virtual camera setup para sa ImLive — walang RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Idagdag ang MFC Alerts</h4><p>Ipakita ang mga animated na tip alerts sa MyFreeCams stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Magpatuloy</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Maging cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mga laruang Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Handa nang mag-live?</h2>

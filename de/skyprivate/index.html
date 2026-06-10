@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-Plattformen",
+     "item": "https://camstreamguide.com/de/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/de/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Antwort</a>
+  <a href="#steps">Schritte</a>
+  <a href="#tips">Tipps</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Verwandte Guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kurzantwort</div>
     <div class="qa-text">SkyPrivate mit SplitCam nutzen: SplitCam installieren, Szene bauen, Skype mit dem SkyPrivate-Add-on installieren, in Skypes <em>Video-Einstellungen</em> SplitCam als Kamera und Mikrofon wählen, dann SkyPrivate-Buchungen annehmen — Skype liefert deine komponierte Szene an den Kunden.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Schritt für Schritt</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam installieren</div><p class="step-p">SplitCam ist kostenlos für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen. Für SkyPrivate fungiert es als <strong>virtuelle Kamera</strong>, die Skype wie jede andere Webcam erkennt.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Szene in SplitCam bauen</div><p class="step-p">SplitCam öffnen und über <strong>Media Layers +</strong> die Webcam plus Overlays, Text, Beauty-Filter oder KI-Hintergrund hinzufügen. Genau diese Szene liefert Skype später an den SkyPrivate-Kunden.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Skype und SkyPrivate-Add-on installieren</div><p class="step-p">Skype auf demselben PC installieren, anmelden, dann das SkyPrivate-Add-on / die Desktop-App gemäß SkyPrivates Onboarding einrichten. Das Add-on regelt die Minutenabrechnung auf SkyPrivate-Seite.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">In Skype SplitCam als Kamera und Mikrofon wählen</div><p class="step-p">In Skype <strong>Einstellungen → Audio &amp; Video</strong> öffnen. <strong>Kamera = SplitCam</strong> und <strong>Mikrofon = SplitCam</strong> setzen. Schnellen Skype-Testcall (Echo / Sound Test Service) machen, um Bild und Ton zu prüfen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">SkyPrivate-Calls annehmen</div><p class="step-p">Bucht ein SkyPrivate-Kunde einen bezahlten Call, kommt er als Skype-Anruf rein — einfach annehmen. Der Kunde sieht deine komponierte SplitCam-Szene; SkyPrivate rechnet pro Minute ab. Szene mitten im Call ändern? Direkt in SplitCam anpassen — Skype zeigt das sofort.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Kein RTMP — Virtual-Camera-Flow</h3><p>Such nicht nach Server-URL oder Stream Key. SkyPrivate läuft über Skype, und Skype erkennt SplitCam einfach als Webcam-Gerät. Szene in SplitCam bauen, dann in Skypes Kamera-Einstellungen SplitCam auswählen.</p></div><div class="tip-card"><h3>SplitCam auch als Mikrofon setzen</h3><p>In den Audio-Einstellungen von Skype zusätzlich SplitCam als Mikrofon wählen — so erreichen Rauschunterdrückung, gemischtes Audio und Intro-Musik den Kunden mit.</p></div><div class="tip-card"><h3>Test-Call in Skype vorab</h3><p>Vor dem ersten bezahlten SkyPrivate-Call einen kostenlosen Skype-Testcall machen (Echo / Sound Test Service), um zu prüfen, dass SplitCam als Kamera aktiv ist und die Szene sauber komponiert ist.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein SkyPrivate-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der SkyPrivate-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete SkyPrivate nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf SkyPrivate</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>SkyPrivate lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von SkyPrivate angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf SkyPrivate</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Nutzt SkyPrivate RTMP oder einen Stream Key?</summary><p>Weder noch. SkyPrivate übernimmt Abrechnung und Buchung; der eigentliche Video-Call läuft über Skype. Es gibt keine RTMP-Server-URL und keinen Stream Key — du konfigurierst SplitCam einfach als Kamera in Skype.</p></details><details class="faq-item"><summary>Wie wähle ich SplitCam für SkyPrivate in Skype aus?</summary><p>Skype-Einstellungen → Audio &amp; Video → Kamera öffnen und SplitCam aus der Liste auswählen. Beim Mikrofon dasselbe. SkyPrivate-Calls kommen dann als normale Skype-Anrufe rein, mit deiner SplitCam-Szene als Kamerabild.</p></details><details class="faq-item"><summary>Funktionieren Overlays und Beauty-Filter mit SkyPrivate?</summary><p>Ja — die werden in der SplitCam-Szene zusammengestellt. Skype bekommt nur das fertig komponierte Bild als ein Kamera-Feed, also ist alles aus SplitCam (Overlays, Beauty-Filter, KI-Hintergrund, Multi-Cam-Szenen) für den SkyPrivate-Kunden sichtbar.</p></details><details class="faq-item"><summary>Ist SplitCam für SkyPrivate kostenlos?</summary><p>Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Als virtuelle Kamera für Skype-basierte SkyPrivate-Calls fallen keine zusätzlichen Kosten an und es wird kein Branding eingeblendet.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf SkyPrivate verdienen?</summary><p>Die Einnahmen auf SkyPrivate hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von SkyPrivate — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist SkyPrivate sicher für Broadcaster?</summary><p>SkyPrivate verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf SkyPrivate zu werden?</summary><p>SkyPrivate verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf SkyPrivate vom Handy aus streamen?</summary><p>SkyPrivate bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Kann ich SplitCam als virtuelle Kamera auf SkyPrivate verwenden?</summary><p>Ja — der Live-Modus von SkyPrivate läuft im Browser, daher meldet sich SplitCam als Webcam namens <strong>"SplitCam Video Driver"</strong> an. Öffne den Broadcaster von SkyPrivate, klicke im Browser auf die Kameraauswahl und wähle SplitCam. Deine komponierte Szene (Overlays, Zweitkamera, Filter, KI-Hintergrund, Premium-Inhalte) erreicht die Zuschauer als einzelner Webcam-Feed.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere Plattform-Anleitungen</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam auf ImLive</h4><p>Virtual-Camera-Setup für ImLive — kein RTMP nötig.</p></a><a class="related-card" href="../justforfans/"><h4>Auf JustForFans live gehen</h4><p>SplitCam als virtuelle Kamera im Live-Broadcaster von JustForFans nutzen.</p></a><a class="related-card" href="../fanvue/"><h4>Auf Fanvue live gehen</h4><p>SplitCam als virtuelle Kamera im Live-Modus von Fanvue nutzen.</p></a><a class="related-card" href="../loyalfans/"><h4>Auf LoyalFans live gehen</h4><p>SplitCam als virtuelle Kamera im Live-Modus von LoyalFans nutzen.</p></a><a class="related-card" href="../chaturbate/"><h4>Auf Chaturbate streamen</h4><p>Token-Setup für Chaturbate über externen Encoder.</p></a><a class="related-card" href="../cam4/"><h4>Auf CAM4 streamen</h4><p>External Encoder bei CAM4 mit Geo-Kontrollen.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Weiterlernen</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-Streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-Model werden</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-Integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Bereit für den Live-Stream?</h2>

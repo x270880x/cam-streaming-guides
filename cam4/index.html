@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam sites",
+     "item": "https://camstreamguide.com/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "CAM4",
      "item": "https://camstreamguide.com/cam4/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Quick answer</a>
+  <a href="#steps">Step-by-step</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Related guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Quick answer</div>
     <div class="qa-text">Broadcast on CAM4 with SplitCam: install SplitCam, build your scene, on CAM4 open <em>Broadcast &amp; Earn Money → Start Broadcast → External Encoder</em>, Get Stream Key, paste it into SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Step-by-step</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download and install SplitCam</div><p class="step-p">SplitCam is free live-streaming software for Windows and macOS. Download it and run the installer — no signup, no card, no watermark, no time limit. It is the encoder that sends your video to CAM4.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Set up your scene and geo-blocking</div><p class="step-p">Add your webcam and overlays in SplitCam, and decide on CAM4 which countries to hide your show from before you start.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Get your CAM4 stream key</div><p class="step-p">On CAM4, click <strong>Broadcast</strong> → <strong>Broadcast &amp; Earn Money</strong> → <strong>Start Broadcast</strong>, then click <strong>External Encoder</strong> at the top. Fill in date of birth, gender and country, then use <strong>Get Stream Key</strong> and copy it. A green slider in SplitCam's Stream Settings confirms the connection.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Paste the CAM4 stream key</div><p class="step-p">Paste the key into SplitCam's Stream Settings — a green slider confirms it. Keep the bitrate near 3,000 Kbps; CAM4's ingest caps lower than most sites.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Press Go Live in SplitCam, then start the broadcast on CAM4. Watch that the slider stays green — red means re-check the key.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Pro tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Set your geo-restrictions</h3><p>CAM4 lets you hide your broadcast in specific countries and regions — set this on CAM4's side before going live if you need it.</p></div><div class="tip-card"><h3>Watch for the green slider</h3><p>CAM4's setup shows a green slider in SplitCam Stream Settings when the key is accepted — red means re-check the key.</p></div><div class="tip-card"><h3>Use CAM4&#x27;s official encoder preset</h3><p>CAM4's OBS Guide specifies CBR, a 1-second keyframe interval and the x264 veryfast/superfast preset with tune=zerolatency and B-frames at 0 — and recommends enabling "dynamically change bitrate". Run the connection test at speedtest.xcdnpro.com first.</p></div><div class="tip-card"><h3>Cable beats Wi-Fi on CAM4</h3><p>CAM4's ingest is bandwidth-tiered — a wired connection holds a steady tier instead of bouncing your resolution down on every Wi-Fi dip.</p></div><div class="tip-card"><h3>Test camera and geo-settings</h3><p>Run a short private CAM4 broadcast to check your camera, audio and geo-restrictions before opening the room.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your CAM4 stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the CAM4 broadcast</summary><p>Dropped frames mean packets aren't reaching CAM4 in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on CAM4</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>CAM4 rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one CAM4 shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on CAM4</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Does CAM4 officially support OBS / external encoders?</summary><p>Yes — CAM4 has an official OBS Guide on its support site and recommends the External Encoder option for the best experience. SplitCam uses the same RTMP path.</p></details><details class="faq-item"><summary>Can I geo-block my CAM4 broadcast?</summary><p>Yes — CAM4 has built-in geo-restriction to hide your broadcast in certain countries. It's set on CAM4, not in SplitCam.</p></details><details class="faq-item"><summary>Where is the CAM4 stream key?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>What bitrate for CAM4?</summary><p>Lower than most cam sites — CAM4's ingest caps the video bitrate around 3,000 Kbps at 30 fps with a 1-second keyframe interval. CAM4's official OBS Guide has a speed-test-based table; don't push past ~3,000.</p></details><details class="faq-item"><summary>How much can models earn on CAM4?</summary><p>Earnings on CAM4 depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows CAM4's commission structure — check the model agreement before going live.</p></details><details class="faq-item"><summary>Is CAM4 safe for broadcasters?</summary><p>CAM4 requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings.</p></details><details class="faq-item"><summary>What documents do I need to become a model on CAM4?</summary><p>CAM4 typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day.</p></details><details class="faq-item"><summary>Can I stream on CAM4 from my phone?</summary><p>CAM4 usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones).</p></details><details class="faq-item"><summary>Does CAM4 support OBS or an external encoder?</summary><p>Yes — CAM4 provides an RTMP server URL and a stream key in the broadcaster panel. Paste both into SplitCam's <strong>Stream Settings → Custom RTMP</strong>, set 1920×1080 at 30 fps with a 4,000–5,000 Kbps bitrate, and click <strong>Go Live</strong>. The Custom RTMP route gives you full SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Official support — CAM4</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@cam4.biz">support@cam4.biz</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.cam4support.com/" rel="nofollow noopener" target="_blank">https://www.cam4support.com/</a></li></ul><p class="sp-note">We are an independent guide. For account, payment or technical issues contact the platform's official support directly.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Other platform guides</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Stream on Chaturbate</h4><p>Token-based external encoder setup for Chaturbate.</p></a><a class="related-card" href="../bongacams/"><h4>Stream on BongaCams</h4><p>External Encoder setup for BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Stream on Stripchat</h4><p>External-software setup for Stripchat broadcasts.</p></a><a class="related-card" href="../onlyfans/"><h4>Go live on OnlyFans</h4><p>Authorize once or paste the key — go live on OnlyFans.</p></a><a class="related-card" href="../imlive/"><h4>Use SplitCam on ImLive</h4><p>Virtual-camera setup for ImLive — no RTMP needed.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Add MFC Alerts</h4><p>Show animated tip alerts on your MyFreeCams stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continue learning</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming setup</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Become a cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense toy integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Ready to go live?</h2>

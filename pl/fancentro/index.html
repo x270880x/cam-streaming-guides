@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Platformy fanów",
+     "item": "https://camstreamguide.com/pl/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "FanCentro",
      "item": "https://camstreamguide.com/pl/fancentro/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Odpowiedź</a>
+  <a href="#steps">Kroki</a>
+  <a href="#tips">Wskazówki</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Powiązane poradniki</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Szybka odpowiedź</div>
     <div class="qa-text">Live na FanCentro z SplitCam: zainstaluj SplitCam, zbuduj scenę, rozpocznij transmisję live na FanCentro i w selektorze kamery nadajnika wybierz <em>SplitCam</em> — potem przejdź na żywo.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Krok po kroku</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Pobierz i zainstaluj SplitCam</div><p class="step-p">SplitCam to darmowe oprogramowanie do transmisji na żywo dla Windows i macOS — bez rejestracji, bez karty, bez znaku wodnego. Instaluje kamerę wirtualną, którą przeglądarka może wybrać.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Zbuduj scenę</div><p class="step-p">Otwórz SplitCam i dodaj kamerę. Dorzuć nakładki, tekst, drugą kamerę albo telefon, filtry beauty albo tło AI.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Rozpocznij transmisję live na FanCentro</div><p class="step-p">Zaloguj się na konto FanCentro i otwórz nadajnik live, by wejść na żywo dla subskrybentów.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Wybierz SplitCam jako kamerę</div><p class="step-p">Z listy kamer FanCentro wybierz <strong>SplitCam</strong> zamiast surowej kamerki. (Albo, jeśli dostępne, wklej klucz streamu w niestandardowe pola RTMP w SplitCam.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Rozpocznij transmisję — twoja scena SplitCam dociera do subskrybentów FanCentro.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Wskazówki dla profesjonalistów</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Kamera wirtualna działa wszędzie</h3><p>Live działający tylko w przeglądarce wciąż dostaje twoją pełną scenę SplitCam — nakładki, drugą kamerę i filtry — wystarczy wybrać SplitCam jako kamerę.</p></div><div class="tip-card"><h3>Cross-sell w swoim lejku</h3><p>FanCentro jest zbudowany wokół lejków twórcy i PPV. Nakładki promujące twoją subskrypcję lub płatne wiadomości zamieniają widzów live w kupujących.</p></div><div class="tip-card"><h3>Daj przeglądarce uprawnienie do kamery</h3><p>Jeśli SplitCam nie jest na liście, uruchom najpierw SplitCam, zezwól na dostęp do kamery w przeglądarce, potem odśwież nadajnik.</p></div><div class="tip-card"><h3>Najpierw zrób prywatny test</h3><p>Przeprowadź krótką transmisję testową, by sprawdzić kamerę, dźwięk, kadr i nakładki, zanim otworzysz pokój dla widzów.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Rozwiązywanie problemów</h2><div class="faq-list"><details class="faq-item"><summary>Transmisja FanCentro się tnie lub buforuje</summary><p>Niemal zawsze bitrate jest ustawiony wyżej, niż udźwignie twój upload. Uruchom wbudowany test prędkości SplitCam, potem ustaw bitrate na około 75% zmierzonego uploadu — 3500–6000&nbsp;Kbps dla 1080p, niżej dla 720p. Cięcia znikają, gdy enkoder przestaje przekraczać twoje łącze.</p></details><details class="faq-item"><summary>Zgubione klatki podczas transmisji FanCentro</summary><p>Zgubione klatki oznaczają, że pakiety nie docierają do FanCentro na czas — zwykle niestabilne Wi-Fi. Przejdź na przewodowy Ethernet, zamknij aplikacje pożerające pasmo i nieco obniż bitrate. Pojedynczy skok to nic; ciągły wzrost oznacza, że łącze nie nadąża.</p></details><details class="faq-item"><summary>Czarny ekran — widzowie nie widzą wideo na FanCentro</summary><p>Twoja kamera nie jest wybrana jako aktywne źródło w SplitCam albo trzyma ją inna aplikacja. Zamknij Zoom, Skype lub OBS, wybierz ponownie kamerę na liście źródeł SplitCam i upewnij się, że podgląd pokazuje twój obraz, zanim naciśniesz Go Live.</p></details><details class="faq-item"><summary>FanCentro odrzuca klucz streamu lub się nie łączy</summary><p>Skopiuj klucz streamu ponownie — spacja na końcu albo stary, zresetowany klucz to najczęstsze przyczyny. Upewnij się, że URL serwera zgadza się z tym, co pokazuje FanCentro, a transmisja enkoderem zewnętrznym jest włączona na koncie. Zielony suwak w Stream Settings SplitCam potwierdza ważny klucz.</p></details><details class="faq-item"><summary>Brak dźwięku lub dźwięk niezsynchronizowany na FanCentro</summary><p>Wybierz SplitCam jako kamerę I mikrofon, a w źródle dźwięku SplitCam wybierz swój prawdziwy mikrofon. Jeśli dźwięk opóźnia się względem wideo, obniż rozdzielczość o jeden poziom — enkoder jest przeciążony i dźwięk czeka na spóźnione klatki.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Jak SplitCam łączy się z FanCentro?</summary><p>Live FanCentro działa w przeglądarce, więc SplitCam łączy się jako kamera wirtualna — wybierz SplitCam w selektorze kamery. Klucz streamu nie jest potrzebny.</p></details><details class="faq-item"><summary>Czy mogę używać nakładek i wielu kamer na FanCentro?</summary><p>Tak — zbuduj scenę w SplitCam; FanCentro widzi gotową scenę jako jedną kamerę.</p></details><details class="faq-item"><summary>Czy FanCentro wspiera OBS lub enkodery zewnętrzne?</summary><p>Jego live opiera się głównie na przeglądarce / kamerce. Jeśli w panelu pojawi się opcja klucza streamu, wklej ją w niestandardowe pola RTMP w SplitCam; w przeciwnym razie użyj metody kamery wirtualnej.</p></details><details class="faq-item"><summary>Czy SplitCam jest darmowy dla FanCentro?</summary><p>Tak — darmowy, bez znaku wodnego i bez limitu czasu.</p></details><details class="faq-item"><summary>Ile modelki mogą zarobić na FanCentro?</summary><p>Zarobki na FanCentro zależą od wielkości widowni, liczby godzin transmisji i hojności napiwków. Aktywni nadawcy zwykle zarabiają 200–3 000 USD miesięcznie; topowi performerzy osiągają 10 000 USD i więcej. Twój udział w przychodach wynika ze struktury prowizji FanCentro — sprawdź umowę modelki przed wejściem na żywo.</p></details><details class="faq-item"><summary>Czy FanCentro jest bezpieczne dla nadawców?</summary><p>FanCentro wymaga weryfikacji wieku i dokumentu tożsamości przed wypłatą, co chroni modelki przed oszustwami. Używaj pseudonimu scenicznego, nigdy nie udostępniaj danych osobowych przed kamerą, włącz geo-blokady, aby ukryć transmisję przed mieszkańcami swojego regionu, i traktuj każde życzenie widza jako transakcję. Nakładki i tło AI w SplitCam pomogą też ukryć lub zastąpić Twoje prawdziwe otoczenie.</p></details><details class="faq-item"><summary>Jakie dokumenty są potrzebne, aby zostać modelką na FanCentro?</summary><p>FanCentro zwykle wymaga rządowego dokumentu tożsamości ze zdjęciem (paszport, prawo jazdy lub dowód osobisty), selfie z dokumentem w ręku oraz formularza podatkowego/wypłat (W-9 dla USA, W-8BEN poza USA). Akceptacja trwa zwykle 24–72 godziny; po zatwierdzeniu możesz wejść na żywo tego samego dnia.</p></details><details class="faq-item"><summary>Czy mogę nadawać na FanCentro z telefonu?</summary><p>FanCentro zwykle oferuje mobilną aplikację dla nadawców lub mobilną wersję webową, ale doświadczenie jest ograniczone — bez nakładek, drugiej kamery i tła AI. Dla pełnej jakości produkcji nadawaj z komputera w SplitCam, a telefonu używaj jako drugiej kamery (SplitCam przyjmuje sygnał z telefonu jako IP-camera).</p></details><details class="faq-item"><summary>Czy mogę używać SplitCam jako wirtualnej kamery na FanCentro?</summary><p>Tak — transmisja na FanCentro działa w przeglądarce, więc SplitCam pojawia się jako kamera <strong>"SplitCam Video Driver"</strong>. Otwórz panel nadawcy FanCentro, kliknij selektor kamery w przeglądarce i wybierz SplitCam. Twoja skomponowana scena (nakładki, druga kamera, filtry, tło AI) trafia do widzów jako pojedynczy sygnał kamery.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Poradniki dla innych platform</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam na ImLive</h4><p>Konfiguracja kamery wirtualnej dla ImLive — bez RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam na SkyPrivate</h4><p>Konfiguracja wirtualnej kamery do cam-calli przez Skype na SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Użyj SplitCam jako kamery wirtualnej w nadajniku live JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Live na Fanvue</h4><p>Użyj SplitCam jako kamery wirtualnej do live na Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Transmisja Chaturbate</h4><p>Konfiguracja oparta na tokenie z enkoderem zewnętrznym na Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisja CAM4</h4><p>External Encoder na CAM4 z kontrolą geo.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Czytaj dalej</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Zostań cam modelką</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Gotowy, by wejść na żywo?</h2>

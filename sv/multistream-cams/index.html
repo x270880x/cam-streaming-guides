@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sajter",
+     "item": "https://camstreamguide.com/sv/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Multiple Cam Sites",
      "item": "https://camstreamguide.com/sv/multistream-cams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Steg</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterade guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
     <div class="qa-text">För att sända till flera cam-sajter samtidigt: installera SplitCam, bygg din scen, hämta RTMP-server-URL och streamnyckel för varje cam-sajt, lägg till alla i SplitCams multistream-inställningar, klicka Go Live en gång.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg för steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS med inbyggd multistream. Installera den — ingen vattenstämpel, ingen registrering.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Ställ in kamera och scen</div><p class="step-p">Öppna SplitCam, lägg till webbkameran och bygg en scen med overlays och filter. En scen matar varje mål.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hämta RTMP-nycklar från varje cam-sajt</div><p class="step-p">På varje cam-plattform slår du på extern / RTMP-sändning och kopierar <strong>server-URL</strong> och <strong>streamnyckel</strong>. Upprepa för varje sajt du vill sända till — se respektive plattforms guide för den exakta vägen.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Lägg till varje mål i SplitCam</div><p class="step-p">Öppna <strong>Stream Settings</strong> och lägg till varje cam-sajt som ett anpassat RTMP-mål — klistra in server-URL och nyckel. Bocka för alla du vill vara live på.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klicka Go Live en gång</div><p class="step-p">Tryck <strong>Go Live</strong>. SplitCam skickar streamen till varje vald cam-sajt samtidigt, peer-to-peer, från en kodning — utan extra kostnad.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Proffstips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Håll koll på din uppladdning</h3><p>Multistream multiplicerar uppladdningsbelastningen. Varje mål använder sin egen bitrate — se till att linjen klarar summan.</p></div><div class="tip-card"><h3>Kolla plattformsreglerna</h3><p>Vissa cam-sajter förbjuder samtidig sändning på annat håll — kolla före multistream.</p></div><div class="tip-card"><h3>Kabel — här får det inte falla</h3><p>Multistream multiplicerar uppladdningsbelastningen, så ett wifi-avbrott kan fälla alla mål samtidigt. Kabel är inget alternativ här.</p></div><div class="tip-card"><h3>Övervaka hälsomonitorn</h3><p>SplitCam visar status per mål — koppla bort en sajt om uppladdningen inte räcker.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>Multiple Cam Sites-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under Multiple Cam Sites-sändning</summary><p>Tappade bildrutor betyder att paket inte når Multiple Cam Sites i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på Multiple Cam Sites</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>Multiple Cam Sites avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den Multiple Cam Sites visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på Multiple Cam Sites</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>
   <div class="faq-list"><details class="faq-item"><summary>Är SplitCams multistream gratis?</summary><p>Ja — multistream är inbyggd och gratis, ingen avgift per mål, ingen vattenstämpel.</p></details><details class="faq-item"><summary>Hur många cam-sajter kan jag sända till samtidigt?</summary><p>Så många som din uppladdningsbandbredd klarar — varje mål använder sin egen bitrate.</p></details><details class="faq-item"><summary>Använder den en moln-relay?</summary><p>Nej — SplitCam skickar streamen peer-to-peer direkt från datorn till varje plattforms ingest.</p></details><details class="faq-item"><summary>Saktar multistream ner min dator?</summary><p>Kodningen görs en gång och återanvänds; hårdvarukodning håller CPU-belastningen låg. Uppladdningsbandbredden är den verkliga gränsen.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på Multiple Cam Sites?</summary><p>Inkomsten på Multiple Cam Sites beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer Multiple Cam Sites:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är Multiple Cam Sites säkert för sändare?</summary><p>Multiple Cam Sites kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på Multiple Cam Sites?</summary><p>Multiple Cam Sites kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på Multiple Cam Sites från min telefon?</summary><p>Multiple Cam Sites erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Stöder Multiple Cam Sites OBS eller en extern encoder?</summary><p>Ja — Multiple Cam Sites tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams <strong>Stream Settings → Custom RTMP</strong>, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på <strong>Go Live</strong>. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiell support — Multiple Cam Sites</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:hello@splitcam.com">hello@splitcam.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://splitcam.com/support" rel="nofollow noopener" target="_blank">https://splitcam.com/support</a></li></ul><p class="sp-note">Vi är en oberoende guide. För konto-, betalnings- eller tekniska problem, kontakta plattformens officiella support direkt.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a><a class="related-card" href="../bongacams/"><h4>Sända BongaCams</h4><p>External Encoder-uppsättning för BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Sända Stripchat</h4><p>Extern mjukvara-uppsättning för Stripchat-sändning.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuell kamera-uppsättning för ImLive — ingen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Lägg till MFC Alerts</h4><p>Visa animerade tips-aviseringar i din MyFreeCams-sändning.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Läs mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

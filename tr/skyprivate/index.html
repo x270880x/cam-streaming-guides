@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan platformları",
+     "item": "https://camstreamguide.com/tr/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/tr/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Cevap</a>
+  <a href="#steps">Adımlar</a>
+  <a href="#tips">İpuçları</a>
+  <a href="#faq">SSS</a>
+  <a href="#related">İlgili kılavuzlar</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kısa cevap</div>
     <div class="qa-text">SplitCam ile SkyPrivate kullan: SplitCam'i kur, sahneni oluştur, Skype'ı SkyPrivate eklentisiyle birlikte kur, Skype'ın <em>Video Ayarları</em>'nda kamera ve mikrofon olarak SplitCam'i seç, ardından SkyPrivate üzerinden gelen aramaları yanıtla — Skype, oluşturduğun sahneyi müşteriye iletir.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Adım adım</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam&#x27;i kur</div><p class="step-p">SplitCam, Windows ve macOS için ücretsizdir — kayıt yok, kart yok, filigran yok. SkyPrivate için Skype'ın herhangi bir webcam gibi yakaladığı bir <strong>virtual camera</strong> olarak çalışır.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Sahneni SplitCam&#x27;de oluştur</div><p class="step-p">SplitCam'i aç ve <strong>Media Layers +</strong> ile webcam'ini, overlay'leri, metni, beauty filtrelerini veya AI arka planını ekle. Bu oluşturulan sahne, Skype'ın SkyPrivate müşterisine ileteceği görüntüdür.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Skype ve SkyPrivate eklentisini kur</div><p class="step-p">Aynı PC'ye Skype'ı kur, giriş yap, sonra SkyPrivate'in onboarding'ini takip ederek SkyPrivate eklentisini / masaüstü uygulamasını yükle. Eklenti SkyPrivate tarafında dakika başına faturalandırmayı yönetir.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Skype&#x27;ta kamera ve mikrofon olarak SplitCam&#x27;i seç</div><p class="step-p">Skype'ta <strong>Ayarlar → Ses ve Video</strong>'yu aç. <strong>Kamera = SplitCam</strong> ve <strong>Mikrofon = SplitCam</strong> olarak ayarla. Sahnenin doğru göründüğünü ve duyulduğunu teyit etmek için kısa bir Skype test araması (Echo / Sound Test Service) yap.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">SkyPrivate aramalarını yanıtla</div><p class="step-p">Bir SkyPrivate müşterisi ücretli arama rezerve ettiğinde Skype araması olarak gelir — yanıtla. Onlar senin oluşturduğun SplitCam sahnesini görür; SkyPrivate dakika başına faturalandırır. Görüşme sırasında sahneyi SplitCam'de düzenleyerek değiştir — Skype anında günceller.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profesyonel ipuçları</h2>
   <div class="tips-grid"><div class="tip-card"><h3>RTMP yok — virtual camera akışı</h3><p>Sunucu URL'si veya yayın anahtarı arama. SkyPrivate Skype üzerinden çalışır, Skype de SplitCam'i sadece bir webcam cihazı olarak görür. Sahneni SplitCam'de oluştur, sonra Skype'ın kamera ayarlarında SplitCam'i seç.</p></div><div class="tip-card"><h3>SplitCam&#x27;i mikrofon olarak da ayarla</h3><p>Skype'ın Ses ayarlarında kameraya ek olarak mikrofon olarak da SplitCam'i seç — böylece gürültü engelleme, karışık ses ve intro müziği de müşteriye ulaşır.</p></div><div class="tip-card"><h3>Skype&#x27;tan giden test araması ekle</h3><p>İlk ücretli SkyPrivate aramandan önce ücretsiz bir Skype test araması (Echo / Sound Test Service) yap, böylece SplitCam'in aktif kamera olduğunu ve sahnenin doğru oluştuğunu teyit edersin.</p></div><div class="tip-card"><h3>Önce özel bir test yap</h3><p>Odayı izleyicilere açmadan önce kamerayı, sesi, kadrajı ve katmanları kontrol etmek için kısa bir test yayını yap.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Sorun giderme</h2><div class="faq-list"><details class="faq-item"><summary>SkyPrivate yayının takılıyor veya tamponluyor</summary><p>Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer.</p></details><details class="faq-item"><summary>SkyPrivate yayını sırasında kare kaybı</summary><p>Kare kaybı, paketlerin SkyPrivate'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir.</p></details><details class="faq-item"><summary>Siyah ekran — izleyiciler SkyPrivate&#x27;de video görmüyor</summary><p>Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula.</p></details><details class="faq-item"><summary>SkyPrivate yayın anahtarını reddediyor veya bağlanmıyor</summary><p>Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin SkyPrivate'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar.</p></details><details class="faq-item"><summary>SkyPrivate&#x27;de ses yok veya ses senkron dışı</summary><p>SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">SSS</h2>
   <div class="faq-list"><details class="faq-item"><summary>SkyPrivate RTMP veya yayın anahtarı kullanıyor mu?</summary><p>Hiçbiri. SkyPrivate faturalandırma ve rezervasyonu yönetir; asıl video Skype üzerinden gider. Bir RTMP sunucu URL'sine veya yayın anahtarına ihtiyacın yok — sadece Skype içinde SplitCam'i kamera olarak ayarla.</p></details><details class="faq-item"><summary>Skype&#x27;ta SkyPrivate için SplitCam&#x27;i nasıl seçerim?</summary><p>Skype Ayarları → Ses ve Video → Kamera'yı aç, listeden SplitCam'i seç. Mikrofon için de aynısını yap. SkyPrivate aramaları o zaman normal Skype aramaları olarak gelir ve kamera akışı SplitCam sahnen olur.</p></details><details class="faq-item"><summary>SkyPrivate ile overlay ve beauty filtreleri kullanabilir miyim?</summary><p>Evet — bunları SplitCam sahnenin içinde kur. Skype, oluşan sonucu tek bir kamera akışı olarak alır, yani SplitCam'in oluşturduğu her şey (overlay'ler, beauty filtreleri, AI arka planı, çoklu kamera sahneleri) SkyPrivate müşterisine görünür.</p></details><details class="faq-item"><summary>SplitCam SkyPrivate için ücretsiz mi?</summary><p>Evet — SplitCam ücretsizdir, filigran yok ve süre sınırı yok. Skype tabanlı SkyPrivate aramaları için bir virtual camera olarak hiçbir ek ücret veya marka ekleme getirmez.</p></details><details class="faq-item"><summary>SkyPrivate üzerinde modeller ne kadar kazanabilir?</summary><p>SkyPrivate platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız SkyPrivate komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin.</p></details><details class="faq-item"><summary>SkyPrivate yayıncılar için güvenli mi?</summary><p>SkyPrivate ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir.</p></details><details class="faq-item"><summary>SkyPrivate üzerinde model olmak için hangi belgeler gerekli?</summary><p>SkyPrivate genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz.</p></details><details class="faq-item"><summary>SkyPrivate üzerinde telefonumdan yayın yapabilir miyim?</summary><p>SkyPrivate genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder).</p></details><details class="faq-item"><summary>SplitCam&#x27;i SkyPrivate üzerinde sanal kamera olarak kullanabilir miyim?</summary><p>Evet — SkyPrivate'in canlı yayını tarayıcıda çalışır, bu yüzden SplitCam <strong>"SplitCam Video Driver"</strong> adlı bir webcam olarak kaydedilir. SkyPrivate yayıncı arayüzünü açın, tarayıcıdaki kamera seçiciye tıklayın ve SplitCam'i seçin. Oluşturduğunuz sahne (overlay'ler, ikinci kamera, filtreler, yapay zeka arka planı) izleyicilere tek bir webcam akışı olarak ulaşır.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Diğer platform rehberleri</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>ImLive&#x27;de SplitCam</h4><p>ImLive için sanal kamera kurulumu — RTMP yok.</p></a><a class="related-card" href="../justforfans/"><h4>JustForFans canlı</h4><p>JustForFans&#x27;in canlı yayıncısında SplitCam&#x27;i sanal kamera olarak kullan.</p></a><a class="related-card" href="../fanvue/"><h4>Fanvue canlı</h4><p>Fanvue canlı yayını için SplitCam&#x27;i sanal kamera olarak kullan.</p></a><a class="related-card" href="../loyalfans/"><h4>LoyalFans canlı</h4><p>LoyalFans canlı yayını için SplitCam&#x27;i sanal kamera olarak kullan.</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate yayını</h4><p>Chaturbate&#x27;te harici kodlayıcı ile token tabanlı kurulum.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 yayını</h4><p>CAM4&#x27;te coğrafi kontrollü External Encoder.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Devam</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Çoklu yayın</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam model olmak</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense oyuncakları</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Canlı yayına hazır mısın?</h2>

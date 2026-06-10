@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "‏سایت‌های Cam",
+     "item": "https://camstreamguide.com/fa/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "LiveJasmin",
      "item": "https://camstreamguide.com/fa/livejasmin/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">پاسخ</a>
+  <a href="#steps">مراحل</a>
+  <a href="#tips">نکات</a>
+  <a href="#faq">سوالات</a>
+  <a href="#related">راهنماهای مرتبط</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">پاسخ سریع</div>
     <div class="qa-text">پخش در LiveJasmin با SplitCam: SplitCam را نصب کنید، صحنه HD بسازید، در Model Center به <em>Settings → Broadcast → External Encoder</em> بروید، URL سرور و stream key را کپی کنید، در SplitCam جای‌گذاری کنید، Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">مرحله به مرحله</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam را دانلود و نصب کنید</div><p class="step-p">SplitCam نرم‌افزار پخش زنده رایگان برای Windows و macOS است — بدون ثبت‌نام، بدون کارت، بدون واترمارک. این رمزگذاری است که ویدیوی HD شما را به LiveJasmin می‌فرستد.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">صحنه HD خود را بسازید</div><p class="step-p">SplitCam را باز کنید و وب‌کم خود را در حالت 1080p اضافه کنید. پوشش‌ها، متن، یک دوربین دوم یا گوشی، فیلترهای زیبایی یا پس‌زمینه AI اضافه کنید — LiveJasmin کیفیت HD می‌خواهد و صحنه ترکیبی شما باید هم در Free chat و هم در شوهای خصوصی پرمیوم به نظر برسد.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">URL و stream key لایوجاسمین را دریافت کنید</div><p class="step-p">وارد <strong>modelcenter.livejasmin.com</strong> شوید (حساب شما ابتدا باید تأیید شود — معمولاً ۴۸ تا ۷۲ ساعت پس از ثبت‌نام). <strong>Settings → Broadcast → External Encoder</strong> را باز کنید. این صفحه یک <strong>URL سرور</strong> و یک <strong>stream key</strong> منحصر به فرد نشان می‌دهد. هر دو را کپی کنید.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam را به LiveJasmin متصل کنید</div><p class="step-p">در SplitCam <strong>Stream Settings</strong> را باز کنید، URL سرور و stream key لایوجاسمین را در فیلدهای RTMP سفارشی جای‌گذاری کنید. بیت‌ریت را روی ۴۰۰۰ تا ۶۰۰۰ کیلوبیت بر ثانیه در ۱۹۲۰×۱۰۸۰، ۳۰ fps، با keyframe دو ثانیه‌ای تنظیم کنید. ابتدا تست سرعت داخلی را اجرا کنید — جریان‌های HD سنگین هستند.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live را کلیک کنید</div><p class="step-p"><strong>Go Live</strong> را در SplitCam فشار دهید، سپس در Model Center لایوجاسمین آنلاین شوید. در حدود ۱۰ ثانیه فید HD شما به شبکه LiveJasmin می‌رسد. پخش‌های بعدی فقط با یک کلیک انجام می‌شود — SplitCam را باز کنید، Go Live بزنید، سپس در LiveJasmin آنلاین شوید.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">نکات حرفه‌ای</h2>
   <div class="tips-grid"><div class="tip-card"><h3>HD یا رتبه‌ات پایین می‌آید</h3><p>LiveJasmin فقط HD است — هر چیزی زیر 1280×720 ریسک این را دارد که فقط در فهرست‌های با درآمد پایین نمایش داده شود، و هر چیزی زیر 1080p واجد شرایط «Premium» نخواهد بود. ۱۹۲۰×۱۰۸۰ در ۳۰ fps با ۴۰۰۰ تا ۶۰۰۰ کیلوبیت بر ثانیه را هدف بگیرید.</p></div><div class="tip-card"><h3>JasminCAM در برابر رمزگذار خارجی</h3><p>کلاینت JasminCAM متعلق به Docler تمیزترین تطابق با HD را دارد، اما رمزگذارهای خارجی (OBS، SplitCam، vMix) پس از تأیید حساب رسماً پشتیبانی می‌شوند — و صحنه‌های چندکاره و پوشش‌هایی را باز می‌کنند که JasminCAM توان آن را ندارد.</p></div><div class="tip-card"><h3>Free chat ≠ شوی خصوصی</h3><p>Free chat فقط پیش‌نمایش است — بدون برهنگی. شوهای خصوصی و Gold show جایی است که مدل درآمد دارد. صحنه‌ات را طوری طراحی کن که هم با لباس و هم در حالت شو قوی به نظر برسد.</p></div><div class="tip-card"><h3>از اتصال سیمی استفاده کنید</h3><p>اترنت در پخش‌های طولانی از Wi-Fi بهتر است — فریم‌های گم‌شده به معنای انعام‌های گم‌شده است. کابل را به رایانه پخش‌کننده وصل کنید.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">عیب‌یابی</h2><div class="faq-list"><details class="faq-item"><summary>پخش LiveJasmin متوقف می‌شود یا بافر می‌کند</summary><p>تقریباً همیشه بیت‌ریت بالاتر از آن تنظیم شده که آپلود شما تحمل کند. تست سرعت داخلی SplitCam را اجرا کنید، سپس بیت‌ریت را به حدود ۷۵٪ آپلود اندازه‌گیری شده تنظیم کنید — ۳۵۰۰–۶۰۰۰&nbsp;Kbps برای ۱۰۸۰p.</p></details><details class="faq-item"><summary>فریم‌های از دست رفته حین پخش LiveJasmin</summary><p>فریم‌های از دست رفته به این معناست که بسته‌ها به LiveJasmin به موقع نمی‌رسند — معمولاً Wi-Fi ناپایدار. به Ethernet سیمی تغییر دهید، برنامه‌هایی که پهنای باند می‌خورند را ببندید و بیت‌ریت را کمی کاهش دهید.</p></details><details class="faq-item"><summary>صفحه سیاه — بینندگان ویدیو را در LiveJasmin نمی‌بینند</summary><p>دوربین شما به عنوان منبع فعال در SplitCam انتخاب نشده، یا برنامه دیگری آن را نگه داشته. Zoom، Skype یا OBS را ببندید، وب‌کم را دوباره در لیست منابع SplitCam انتخاب کنید.</p></details><details class="faq-item"><summary>LiveJasmin کلید جریان را رد می‌کند یا متصل نمی‌شود</summary><p>کلید جریان را دوباره کپی کنید — فاصله در انتها یا کلید قدیمی بازنشانی شده رایج‌ترین دلایل هستند. مطمئن شوید URL سرور با آنچه LiveJasmin نشان می‌دهد مطابقت دارد.</p></details><details class="faq-item"><summary>صدا وجود ندارد یا صدا در LiveJasmin ناهمزمان است</summary><p>SplitCam را هم به عنوان دوربین و هم میکروفون انتخاب کنید، و میکروفون واقعی خود را در منبع صدای SplitCam انتخاب کنید. اگر صدا از ویدیو عقب می‌ماند، رزولوشن را یک سطح پایین بیاورید.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">سؤالات متداول</h2>
   <div class="faq-list"><details class="faq-item"><summary>آیا LiveJasmin رسماً از رمزگذارهای خارجی مانند SplitCam پشتیبانی می‌کند؟</summary><p>بله — Model Center شامل گزینه External Encoder در Settings → Broadcast است. JasminCAM کلاینت پیشنهادی است، اما OBS، SplitCam و سایر رمزگذارهای RTMP پس از تأیید حساب مدل به صراحت به عنوان پشتیبانی‌شده ذکر شده‌اند.</p></details><details class="faq-item"><summary>stream key لایوجاسمین را از کجا می‌گیرم؟</summary><p>از داخل Model Center: Settings → Broadcast → External Encoder. هم URL سرور و هم stream key منحصر به فرد در آنجا ظاهر می‌شوند — هر دو را در فیلدهای RTMP سفارشی SplitCam جای‌گذاری کنید. کلید مخصوص حساب شماست؛ مثل رمز عبور با آن رفتار کنید.</p></details><details class="faq-item"><summary>برای LiveJasmin چه بیت‌ریتی استفاده کنم؟</summary><p>LiveJasmin فقط HD است — ۱۹۲۰×۱۰۸۰ در ۳۰ fps، ۴۰۰۰ تا ۶۰۰۰ کیلوبیت بر ثانیه با فاصله keyframe دو ثانیه‌ای را هدف بگیرید. هر چیزی پایین‌تر از این به طور محسوس برچسب Premium را از دست می‌دهد و رتبه‌اش پایین می‌آید.</p></details><details class="faq-item"><summary>آیا استفاده از SplitCam با LiveJasmin رایگان است؟</summary><p>بله — SplitCam رایگان است، بدون واترمارک و بدون محدودیت زمانی. تنها هزینه برآورده کردن الزامات HD لایوجاسمین است که SplitCam با ترکیب صحنه ۱۰۸۰p و فیلترهای زیبایی به صورت بومی از پس آن برمی‌آید.</p></details><details class="faq-item"><summary>مدل‌ها در ‏LiveJasmin چقدر می‌توانند درآمد داشته باشند؟</summary><p>درآمد در ‏LiveJasmin به اندازه مخاطب، ساعات پخش زنده و رفتار تیپ دادن بستگی دارد. پخش‌کنندگان فعال معمولاً ماهانه بین ۲۰۰ تا ۳٬۰۰۰ دلار به دست می‌آورند؛ افراد برتر به بیش از ۱۰٬۰۰۰ دلار می‌رسند. سهم درآمد شما از ساختار کمیسیون ‏LiveJasmin پیروی می‌کند — پیش از پخش زنده، قرارداد مدل را بررسی کنید.</p></details><details class="faq-item"><summary>آیا ‏LiveJasmin برای پخش‌کنندگان امن است؟</summary><p>‏LiveJasmin پیش از پرداخت، احراز سن و هویت را الزامی می‌کند که از مدل‌ها در برابر کلاهبرداری محافظت می‌کند. از یک نام مستعار استفاده کنید، هرگز اطلاعات شخصی را جلوی دوربین فاش نکنید، مسدودسازی جغرافیایی را برای پنهان کردن پخش خود از منطقه محل سکونتتان فعال کنید و هر درخواست بیننده را تراکنشی در نظر بگیرید. اورلی‌ها و پس‌زمینه هوش مصنوعی ‏SplitCam نیز می‌توانند محیط واقعی شما را پنهان یا جایگزین کنند.</p></details><details class="faq-item"><summary>برای تبدیل شدن به مدل در ‏LiveJasmin چه مدارکی نیاز دارم؟</summary><p>‏LiveJasmin معمولاً یک کارت شناسایی عکس‌دار صادر شده توسط دولت (پاسپورت، گواهینامه رانندگی یا کارت شناسایی)، یک سلفی همراه با کارت شناسایی و یک فرم مالیاتی/پرداخت (W-9 برای آمریکا، W-8BEN برای خارج از آمریکا) نیاز دارد. تأیید معمولاً بین ۲۴ تا ۷۲ ساعت طول می‌کشد؛ پس از تأیید می‌توانید همان روز پخش زنده را آغاز کنید.</p></details><details class="faq-item"><summary>آیا می‌توانم از گوشی خود در ‏LiveJasmin پخش زنده داشته باشم؟</summary><p>‏LiveJasmin معمولاً یک اپلیکیشن موبایلی برای پخش‌کنندگان یا یک نسخه وب موبایلی ارائه می‌دهد، اما تجربه محدود است — بدون اورلی، بدون دوربین دوم، بدون پس‌زمینه هوش مصنوعی. برای کیفیت کامل تولید، از یک کامپیوتر با ‏SplitCam پخش کنید و از گوشی خود به عنوان دوربین دوم استفاده کنید (‏SplitCam ورودی دوربین ‏IP را از گوشی‌ها می‌پذیرد).</p></details><details class="faq-item"><summary>آیا ‏LiveJasmin از ‏OBS یا یک انکودر خارجی پشتیبانی می‌کند؟</summary><p>بله — ‏LiveJasmin یک آدرس سرور ‏RTMP و یک کلید استریم را در پنل پخش‌کننده ارائه می‌دهد. هر دو را در <strong>‏Stream Settings → Custom RTMP</strong> در ‏SplitCam وارد کنید، رزولوشن ۱۹۲۰×۱۰۸۰ با ۳۰ فریم بر ثانیه و بیت‌ریت ۴٬۰۰۰ تا ۵٬۰۰۰ کیلوبیت بر ثانیه را تنظیم کنید و روی <strong>‏Go Live</strong> کلیک کنید. مسیر ‏Custom RTMP ترکیب کامل صحنه ‏SplitCam را به شما می‌دهد (چند دوربین، اورلی‌ها، فیلترها).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">راهنماهای پلتفرم‌های دیگر</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>پخش Chaturbate</h4><p>تنظیم مبتنی بر توکن با رمزگذار خارجی در Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>پخش CAM4</h4><p>External Encoder در CAM4 با کنترل جغرافیایی.</p></a><a class="related-card" href="../bongacams/"><h4>پخش BongaCams</h4><p>تنظیم External Encoder برای BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>پخش Stripchat</h4><p>تنظیم نرم‌افزار خارجی برای پخش Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam در ImLive</h4><p>تنظیم دوربین مجازی برای ImLive — بدون RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>افزودن MFC Alerts</h4><p>هشدارهای انعام متحرک را در پخش MyFreeCams نمایش دهید.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">ادامه یادگیری</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>‏Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>‏SplitCam در مقابل OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>مدل کام شوید</h4></a>
+    <a class="related-card" href="../lovense/"><h4>‏Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>آماده پخش زنده هستید؟</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan platformları",
+     "item": "https://camstreamguide.com/tr/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fanvue",
      "item": "https://camstreamguide.com/tr/fanvue/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Cevap</a>
+  <a href="#steps">Adımlar</a>
+  <a href="#tips">İpuçları</a>
+  <a href="#faq">SSS</a>
+  <a href="#related">İlgili kılavuzlar</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kısa cevap</div>
     <div class="qa-text">SplitCam ile Fanvue'de canlı: SplitCam'i kur, sahneni oluştur, Fanvue'de bir canlı yayın başlat ve yayıncının kamera seçicisinde <em>SplitCam</em>'i seç — sonra canlıya geç.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Adım adım</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam&#x27;i indir ve kur</div><p class="step-p">SplitCam, Windows ve macOS için ücretsiz canlı yayın yazılımıdır — kayıt yok, kart yok, filigran yok. Tarayıcının seçebileceği bir sanal kamera kurar.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Sahneni oluştur</div><p class="step-p">SplitCam'i aç ve web kameranı ekle. Overlay'ler, metin, ikinci bir kamera veya telefonun, beauty filtreleri ya da AI arka planı katmanla — hepsi canlı uygulanır.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Fanvue&#x27;de canlı yayın başlat</div><p class="step-p">Fanvue creator hesabına giriş yap ve abonelerin için bir yayın başlatmak üzere canlı yayıncıyı aç.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Kameranı SplitCam olarak seç</div><p class="step-p">Fanvue'nin kamera menüsünde ham web kameran yerine <strong>SplitCam</strong>'i seç — oluşturduğun sahne düz kameranın yerini alır. (Ya da varsa, yayın anahtarını SplitCam'in özel RTMP alanlarına yapıştır.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live&#x27;a tıkla</div><p class="step-p">Yayını başlat — SplitCam sahnen, overlay'lerin ve filtrelerin Fanvue abonelerine ulaşır.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profesyonel ipuçları</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Sanal kamera her yerde çalışır</h3><p>Bir platformun canlı yayını yalnızca tarayıcıda olsa bile SplitCam seçilebilir bir web kamerası olarak görünür — çoklu kamera sahneleri, overlay'ler ve filtreler Fanvue'de hiçbir yayın anahtarı olmadan çalışır.</p></div><div class="tip-card"><h3>Creator ve AI dostu</h3><p>Fanvue, AI creator'ları kabul eder ve ödemeleri sorunsuz yapar. Aboneliğini veya PPV'ni öne çıkaran overlay'ler, zaten ödeme yapan bir kitleye iyi dönüşür.</p></div><div class="tip-card"><h3>Tarayıcıya kamera izni ver</h3><p>SplitCam Fanvue'nin kamera listesinde görünmüyorsa, önce SplitCam'in çalıştığından ve tarayıcının kamera iznine sahip olduğundan emin ol, sonra sayfayı yeniden yükle.</p></div><div class="tip-card"><h3>Önce özel bir test yap</h3><p>Odayı izleyicilere açmadan önce kamerayı, sesi, kadrajı ve katmanları kontrol etmek için kısa bir test yayını yap.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Sorun giderme</h2><div class="faq-list"><details class="faq-item"><summary>Fanvue yayının takılıyor veya tamponluyor</summary><p>Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer.</p></details><details class="faq-item"><summary>Fanvue yayını sırasında kare kaybı</summary><p>Kare kaybı, paketlerin Fanvue'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir.</p></details><details class="faq-item"><summary>Siyah ekran — izleyiciler Fanvue&#x27;de video görmüyor</summary><p>Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula.</p></details><details class="faq-item"><summary>Fanvue yayın anahtarını reddediyor veya bağlanmıyor</summary><p>Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin Fanvue'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar.</p></details><details class="faq-item"><summary>Fanvue&#x27;de ses yok veya ses senkron dışı</summary><p>SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">SSS</h2>
   <div class="faq-list"><details class="faq-item"><summary>SplitCam Fanvue&#x27;ye nasıl bağlanır?</summary><p>Fanvue canlı yayını tarayıcı tabanlıdır, bu yüzden SplitCam sanal kamera olarak bağlanır: kamera seçicisinde SplitCam'i seç. Yayın anahtarı gerekmez.</p></details><details class="faq-item"><summary>Fanvue&#x27;de overlay ve birden çok kamera kullanabilir miyim?</summary><p>Evet — sahneyi SplitCam'de oluştur (ikinci kamera, overlay'ler, beauty veya AI arka plan filtreleri) ve Fanvue bitmiş sahneyi tek bir web kamerası olarak görür.</p></details><details class="faq-item"><summary>Fanvue OBS veya harici kodlayıcıları destekliyor mu?</summary><p>Fanvue canlı yayını öncelikle tarayıcı / web kamerası tabanlıdır. Panelin bir harici kodlayıcı veya yayın anahtarı seçeneği gösteriyorsa onu SplitCam'in özel RTMP alanlarına yapıştır; aksi halde sanal kamera yöntemini kullan.</p></details><details class="faq-item"><summary>SplitCam Fanvue için ücretsiz mi?</summary><p>Evet — SplitCam ücretsizdir, filigran yok ve süre sınırı yok.</p></details><details class="faq-item"><summary>Fanvue üzerinde modeller ne kadar kazanabilir?</summary><p>Fanvue platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız Fanvue komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin.</p></details><details class="faq-item"><summary>Fanvue yayıncılar için güvenli mi?</summary><p>Fanvue ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir.</p></details><details class="faq-item"><summary>Fanvue üzerinde model olmak için hangi belgeler gerekli?</summary><p>Fanvue genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz.</p></details><details class="faq-item"><summary>Fanvue üzerinde telefonumdan yayın yapabilir miyim?</summary><p>Fanvue genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder).</p></details><details class="faq-item"><summary>SplitCam&#x27;i Fanvue üzerinde sanal kamera olarak kullanabilir miyim?</summary><p>Evet — Fanvue'in canlı yayını tarayıcıda çalışır, bu yüzden SplitCam <strong>"SplitCam Video Driver"</strong> adlı bir webcam olarak kaydedilir. Fanvue yayıncı arayüzünü açın, tarayıcıdaki kamera seçiciye tıklayın ve SplitCam'i seçin. Oluşturduğunuz sahne (overlay'ler, ikinci kamera, filtreler, yapay zeka arka planı) izleyicilere tek bir webcam akışı olarak ulaşır.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Diğer platform rehberleri</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>ImLive&#x27;de SplitCam</h4><p>ImLive için sanal kamera kurulumu — RTMP yok.</p></a><a class="related-card" href="../skyprivate/"><h4>SkyPrivate&#x27;te SplitCam</h4><p>SkyPrivate&#x27;in Skype tabanlı cam görüşmeleri için virtual camera kurulumu.</p></a><a class="related-card" href="../justforfans/"><h4>JustForFans canlı</h4><p>JustForFans&#x27;in canlı yayıncısında SplitCam&#x27;i sanal kamera olarak kullan.</p></a><a class="related-card" href="../loyalfans/"><h4>LoyalFans canlı</h4><p>LoyalFans canlı yayını için SplitCam&#x27;i sanal kamera olarak kullan.</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate yayını</h4><p>Chaturbate&#x27;te harici kodlayıcı ile token tabanlı kurulum.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 yayını</h4><p>CAM4&#x27;te coğrafi kontrollü External Encoder.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Devam</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Çoklu yayın</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam model olmak</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense oyuncakları</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Canlı yayına hazır mısın?</h2>

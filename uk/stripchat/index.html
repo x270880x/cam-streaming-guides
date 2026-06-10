@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Кам-сайти",
+     "item": "https://camstreamguide.com/uk/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Stripchat",
      "item": "https://camstreamguide.com/uk/stripchat/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Відповідь</a>
+  <a href="#steps">Кроки</a>
+  <a href="#tips">Поради</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Схожі гайди</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Швидка відповідь</div>
     <div class="qa-text">Трансляція на Stripchat зі SplitCam: встановіть SplitCam, зберіть сцену, на Stripchat виберіть <em>Switch to external software</em>, скопіюйте ключ трансляції, вставте у SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Покроково</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Завантажте та встановіть SplitCam</div><p class="step-p">SplitCam — безкоштовна програма для трансляцій на Windows і macOS. Завантажте й запустіть інсталятор — без реєстрації, без картки, без водяного знака, без обмеження часу. Це кодувальник, що надсилає ваше відео на Stripchat.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Налаштуйте камеру й сцену</div><p class="step-p">Відкрийте SplitCam і додайте вебкамеру. Зберіть сцену так, як хочете, щоб її бачили глядачі — оверлеї, текст, друга камера чи телефон, beauty-фільтри або AI-фон. Усе застосовується наживо, перш ніж стрим покине ваш ПК.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Отримайте ключ трансляції Stripchat</div><p class="step-p">На Stripchat виберіть <strong>Switch to external software</strong>, далі <strong>Show external software settings for the stream</strong>. Скопіюйте ключ трансляції — Stripchat показує його як токен. Тримайте в таємниці.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Під&#x27;єднайте SplitCam до Stripchat</div><p class="step-p">У SplitCam відкрийте <strong>Stream Settings</strong>, вставте URL сервера й ключ трансляції Stripchat у поля кастомного RTMP. Задайте бітрейт 3500–6000&nbsp;Кбіт/с для 1080p, 2000–4000&nbsp;Кбіт/с для 720p і спершу запустіть вбудований тест швидкості.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Натисніть Go Live</div><p class="step-p">Натисніть <strong>Go Live</strong> у SplitCam, далі почніть трансляцію на Stripchat. За ~10 секунд ваша камера наживо. Наступні трансляції — один клік: відкрийте SplitCam, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Поради для профі</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Узгодьте роздільну здатність із сайтом</h3><p>FAQ Stripchat попереджає: роздільна здатність у вашому ПЗ має точно збігатися із сайтом, інакше відео розсиплеться. Зробіть обидві однаковими.</p></div><div class="tip-card"><h3>Увага на мінімум 2 Мбіт/с</h3><p>Stripchat вказує 2 Мбіт/с аплоуду як мінімум — і прямо каже, що цього замало для трансляції OBS чи мультистриму. Цільтеся значно вище.</p></div><div class="tip-card"><h3>Ключ — це токен</h3><p>Ключ трансляції Stripchat — це токен — копіюйте точно, ніколи не діліться, скиньте, якщо витік.</p></div><div class="tip-card"><h3>Використовуйте дротове з&#x27;єднання</h3><p>Ethernet перемагає Wi-Fi під час довгих трансляцій — втрачені кадри означають втрачені чайові. Підключіть кабель до комп'ютера, що веде ефір.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Усунення несправностей</h2><div class="faq-list"><details class="faq-item"><summary>Трансляція Stripchat гальмує або буферизується</summary><p>Майже завжди бітрейт заданий вище, ніж витримає ваш аплоуд. Запустіть вбудований тест швидкості SplitCam, далі задайте бітрейт приблизно 75% від виміряного аплоуду — 3500–6000&nbsp;Кбіт/с для 1080p, нижче для 720p. Гальмування зникає, коли кодувальник перестає перевищувати ваш канал.</p></details><details class="faq-item"><summary>Втрата кадрів під час трансляції Stripchat</summary><p>Втрата кадрів означає, що пакети не доходять до Stripchat вчасно — зазвичай нестабільний Wi-Fi. Перейдіть на дротовий Ethernet, закрийте застосунки, що з'їдають канал, і трохи знизьте бітрейт. Один стрибок — це нічого; постійне зростання означає, що канал не встигає.</p></details><details class="faq-item"><summary>Чорний екран — глядачі не бачать відео на Stripchat</summary><p>Ваша камера не вибрана як активне джерело у SplitCam, або її тримає інший застосунок. Закрийте Zoom, Skype чи OBS, виберіть вебкамеру знову у списку джерел SplitCam і переконайтеся, що попередній перегляд показує ваше зображення, перш ніж натиснути Go Live.</p></details><details class="faq-item"><summary>Stripchat відхиляє ключ трансляції або не під&#x27;єднується</summary><p>Скопіюйте ключ трансляції знову — пробіл у кінці чи старий, скинутий ключ — найчастіші причини. Переконайтеся, що URL сервера збігається з тим, що показує Stripchat, і що трансляція зовнішнім кодувальником увімкнена на акаунті. Зелений повзунок у Stream Settings SplitCam підтверджує дійсний ключ.</p></details><details class="faq-item"><summary>Немає звуку або звук розсинхронізований на Stripchat</summary><p>Виберіть SplitCam камерою І мікрофоном, а в джерелі звуку SplitCam виберіть свій справжній мікрофон. Якщо звук відстає від відео, знизьте роздільну здатність на один рівень — кодувальник перевантажений, і звук чекає на запізнілі кадри.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Часті питання</h2>
   <div class="faq-list"><details class="faq-item"><summary>Чи рекомендує Stripchat OBS / зовнішнє ПЗ?</summary><p>Так — офіційний FAQ Stripchat рекомендує зовнішнє ПЗ для трансляцій, як-от OBS, «для досягнення найкращої якості відео та звуку». SplitCam працює так само.</p></details><details class="faq-item"><summary>Як переключити Stripchat на зовнішнє ПЗ?</summary><p>У Broadcast Center виберіть Switch to External Broadcast Software (OBS), далі відкрийте external software settings, щоб показати ключ трансляції (токен).</p></details><details class="faq-item"><summary>Який бітрейт для Stripchat?</summary><p>RTMP ingest приймає до ~6000 Кбіт/с із ключовим кадром 2 секунди. 3500–6000 у 1080p ідеально — але має бути значно вище за мінімум 2 Мбіт/с, особливо для трансляції OBS.</p></details><details class="faq-item"><summary>Чи безкоштовний SplitCam для Stripchat?</summary><p>Так — без ліцензійної плати, без водяного знака, без обмеження часу: навіть довгі інтерактивні шоу на Stripchat нічого не коштують на боці кодувальника.</p></details><details class="faq-item"><summary>Скільки моделі заробляють на Stripchat?</summary><p>Заробіток на Stripchat залежить від розміру аудиторії, кількості годин трансляцій і щедрості глядачів на чайові. Активні мовники зазвичай отримують $200–$3 000 на місяць; топові виконавці сягають $10 000+. Ваша частка доходу визначається комісійною структурою Stripchat — перевірте угоду з моделлю перед виходом в ефір.</p></details><details class="faq-item"><summary>Чи безпечно мовникам працювати на Stripchat?</summary><p>Stripchat вимагає підтвердження віку та особи перед виплатами, що захищає моделей від шахрайства. Використовуйте сценічний псевдонім, ніколи не діліться особистими даними в кадрі, увімкніть гео-блокування, щоб приховати трансляцію від вашого регіону, і ставтеся до кожного запиту глядача як до транзакційного. Накладки SplitCam та AI-фон також можуть приховати або замінити ваше реальне оточення.</p></details><details class="faq-item"><summary>Які документи потрібні, щоб стати моделлю на Stripchat?</summary><p>Stripchat зазвичай вимагає державне посвідчення особи з фото (паспорт, водійське посвідчення або ID-картка), селфі з документом у руках і податкову/виплатну форму (W-9 для США, W-8BEN для нерезидентів). Схвалення зазвичай триває 24–72 години; після схвалення можна вийти в ефір того ж дня.</p></details><details class="faq-item"><summary>Чи можу я транслювати на Stripchat з телефона?</summary><p>Stripchat зазвичай пропонує мобільний застосунок для мовників або веб-версію для телефона, але можливості обмежені — без накладок, без другої камери, без AI-фону. Для повноцінної продакшн-якості мовте з комп'ютера через SplitCam і використовуйте телефон як другу камеру (SplitCam приймає вхід IP-камери з телефонів).</p></details><details class="faq-item"><summary>Чи підтримує Stripchat OBS або зовнішній енкодер?</summary><p>Так — Stripchat надає URL RTMP-сервера та ключ трансляції в панелі мовника. Вставте обидва в SplitCam у <strong>Stream Settings → Custom RTMP</strong>, виставте 1920×1080 при 30 fps з бітрейтом 4 000–5 000 Кбіт/с і натисніть <strong>Go Live</strong>. Маршрут Custom RTMP дає повний доступ до композиції сцен SplitCam (мульти-камера, накладки, фільтри).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Офіційна підтримка — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Ми незалежний посібник. З питань акаунта, платежів чи технічних проблем звертайтеся напряму до офіційної підтримки платформи.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Посібники для інших платформ</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляція Chaturbate</h4><p>Налаштування на основі токена із зовнішнім кодувальником на Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляція CAM4</h4><p>External Encoder на CAM4 з гео-контролем.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляція BongaCams</h4><p>Налаштування External Encoder для BongaCams.</p></a><a class="related-card" href="../onlyfans/"><h4>Лайв OnlyFans</h4><p>Авторизуйтеся раз або вставте ключ — лайв на OnlyFans.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam на ImLive</h4><p>Налаштування віртуальної камери для ImLive — без RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Додати MFC Alerts</h4><p>Показуйте анімовані сповіщення про чайові в трансляції MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Далі</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мульти-стрім</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стати кам-моделлю</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готові вийти наживо?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Sites de cam",
+     "item": "https://camstreamguide.com/pt/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Flirt4Free",
      "item": "https://camstreamguide.com/pt/flirt4free/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Resposta</a>
+  <a href="#steps">Passos</a>
+  <a href="#tips">Dicas</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guias relacionados</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Em resumo</div>
     <div class="qa-text">Transmitir no Flirt4Free com SplitCam: instalar SplitCam, montar a cena, abrir o External Broadcast Form do Flirt4Free, copiar RTMP URL e Stream Name e definir resolução/bitrate, colar no SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Passo a passo</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Baixe e instale o SplitCam</div><p class="step-p">O SplitCam é um software de streaming grátis pra Windows e macOS. Baixe e rode o instalador — sem cadastro, sem cartão, sem marca d'água, sem limite de tempo. O SplitCam é o encoder que envia o seu vídeo pro Flirt4Free.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Configure sua câmera e a cena</div><p class="step-p">Abra o SplitCam e adicione a webcam. Monte a cena do jeito que quer que os espectadores vejam — sobreposições, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo com IA. Tudo é aplicado ao vivo antes do stream sair do PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Pegue sua stream key do Flirt4Free</div><p class="step-p">Na área da modelo do Flirt4Free abre o <strong>External Broadcast Form</strong>. Diferente da maioria dos sites cam, o Flirt4Free te dá uma <strong>RTMP URL</strong> e um <strong>Stream Name</strong> (não uma «chave»), mais campos de resolução e bitrate que você preenche no próprio formulário. Copia URL e Stream Name nos campos servidor e chave do SplitCam.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conecte o SplitCam ao Flirt4Free</div><p class="step-p">No SplitCam abra <strong>Stream Settings</strong>, cole a URL do servidor e a stream key do Flirt4Free nos campos RTMP personalizados. Bitrate: 3.500–6.000&nbsp;Kbps em 1080p, 2.000–4.000&nbsp;Kbps em 720p. Rode antes o teste de velocidade embutido.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Clique em Go Live</div><p class="step-p">Pressione <strong>Go Live</strong> no SplitCam e depois inicie a transmissão no Flirt4Free. Em ~10 segundos a câmera está ao vivo. As próximas transmissões saem com um clique — abrir SplitCam, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Dicas</h2>
   <div class="tips-grid"><div class="tip-card"><h3>É Stream Name, não chave</h3><p>O Flirt4Free chama o credencial de Stream Name. Cola no campo stream key do SplitCam — cumpre o mesmo papel.</p></div><div class="tip-card"><h3>Define resolução/bitrate no formulário</h3><p>O External Broadcast Form do Flirt4Free tem campos próprios de resolução e bitrate — alinha com as configurações do SplitCam pra imagem não ser reescalada.</p></div><div class="tip-card"><h3>Plataforma histórica</h3><p>O Flirt4Free roda desde os anos 90 — as ferramentas pra modelos são maduras e o External Broadcast Form é parte documentada disso.</p></div><div class="tip-card"><h3>Use conexão por cabo</h3><p>Ethernet bate Wi-Fi numa live longa — um frame perdido é um tip perdido. Puxa um cabo até o PC do stream.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Solução de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Sua transmissão no Flirt4Free trava ou fica em buffer</summary><p>Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão.</p></details><details class="faq-item"><summary>Frames perdidos durante a transmissão no Flirt4Free</summary><p>Frames perdidos significam que os pacotes não chegam ao Flirt4Free a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta.</p></details><details class="faq-item"><summary>Tela preta — os espectadores não veem vídeo no Flirt4Free</summary><p>Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live.</p></details><details class="faq-item"><summary>Flirt4Free rejeita a stream key ou não conecta</summary><p>Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo Flirt4Free e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida.</p></details><details class="faq-item"><summary>Sem áudio ou áudio fora de sincronia no Flirt4Free</summary><p>Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>O Flirt4Free suporta encoders externos?</summary><p>Sim — oficialmente, via o External Broadcast Form, que fornece RTMP URL e Stream Name. O SplitCam funciona como encoder.</p></details><details class="faq-item"><summary>Onde pego os dados RTMP do Flirt4Free?</summary><p>Do External Broadcast Form na área da modelo — mostra RTMP URL, Stream Name e campos de resolução/bitrate.</p></details><details class="faq-item"><summary>Que bitrate pro Flirt4Free?</summary><p>3.500–6.000 Kbps em 1080p — define o mesmo valor no External Broadcast Form e no SplitCam.</p></details><details class="faq-item"><summary>O SplitCam é grátis pro Flirt4Free?</summary><p>Sim — grátis, sem marca d'água e sem limite de tempo, o que combina com uma plataforma histórica como o Flirt4Free, onde os shows podem ser longos.</p></details><details class="faq-item"><summary>Quanto as criadoras ganham no Flirt4Free?</summary><p>Os ganhos no Flirt4Free dependem do tamanho do público, das horas ao vivo e do volume de gorjetas. Criadoras ativas costumam levar para casa de R$ 1.000 a R$ 15.000 por mês; as top performers chegam a R$ 50.000+. Sua porcentagem segue a comissão do Flirt4Free — leia o contrato de modelo antes de entrar ao vivo.</p></details><details class="faq-item"><summary>O Flirt4Free é seguro para quem transmite?</summary><p>O Flirt4Free exige verificação de idade e documento antes de liberar o pagamento, o que protege a criadora contra fraudes. Use um nome artístico, nunca mostre dados pessoais na câmera, ative bloqueio geográfico para esconder a transmissão da sua região e trate todo pedido de assinante como transacional. Os overlays e o fundo com IA do SplitCam também escondem ou substituem o ambiente real.</p></details><details class="faq-item"><summary>Quais documentos eu preciso para virar modelo no Flirt4Free?</summary><p>O Flirt4Free geralmente pede um documento oficial com foto (RG, CNH ou passaporte), uma selfie segurando o documento e o formulário fiscal/de pagamento (W-9 para EUA, W-8BEN fora dos EUA; no Brasil costumam aceitar CPF para receber via PIX por gateway). A aprovação leva de 24 a 72 horas; aprovada, você já entra ao vivo no mesmo dia.</p></details><details class="faq-item"><summary>Dá para transmitir no Flirt4Free pelo celular?</summary><p>O Flirt4Free normalmente oferece um app de transmissão ou um broadcaster mobile pelo navegador, mas a experiência é limitada — sem overlays, sem segunda câmera, sem fundo com IA. Para qualidade de produção completa, transmita pelo computador com o SplitCam e use o celular como segunda câmera (o SplitCam aceita entrada de câmera IP a partir do celular).</p></details><details class="faq-item"><summary>O Flirt4Free aceita OBS ou encoder externo?</summary><p>Sim — o Flirt4Free disponibiliza uma URL de servidor RTMP e uma chave de transmissão no painel da criadora. Cole as duas em <strong>Stream Settings → Custom RTMP</strong> do SplitCam, configure 1920×1080 a 30 fps com bitrate de 4.000 a 5.000 Kbps e clique em <strong>Go Live</strong>. A rota Custom RTMP libera a composição de cena completa do SplitCam (multicâmera, overlays, filtros).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Suporte oficial — Flirt4Free</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:customerservice@flirt4free.com">customerservice@flirt4free.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.flirt4free.com/help" rel="nofollow noopener" target="_blank">https://www.flirt4free.com/help</a></li></ul><p class="sp-note">Somos um guia independente. Pra questões de conta, pagamentos ou problemas técnicos, fale direto com o suporte oficial da plataforma.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Outros guias de plataforma</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmitir no Chaturbate</h4><p>Configuração por token com encoder externo no Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmitir no CAM4</h4><p>External Encoder no CAM4 com geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Transmitir no BongaCams</h4><p>Configuração External Encoder pro BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Transmitir no Stripchat</h4><p>Setup de software externo pra transmissões no Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam no ImLive</h4><p>Setup câmera virtual pro ImLive — sem RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Adicionar MFC Alerts</h4><p>Mostre alerts animados de tips no seu stream MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Saiba mais</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Ser cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Brinquedos Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Pronto pra entrar ao vivo?</h2>

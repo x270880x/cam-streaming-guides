@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Situs cam",
+     "item": "https://camstreamguide.com/id/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Stripchat",
      "item": "https://camstreamguide.com/id/stripchat/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Jawaban</a>
+  <a href="#steps">Langkah</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Panduan terkait</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Jawaban singkat</div>
     <div class="qa-text">Siaran di Stripchat dengan SplitCam: pasang SplitCam, susun scene, di Stripchat pilih <em>Switch to external software</em>, salin stream key, tempel di SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Langkah demi langkah</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Unduh dan pasang SplitCam</div><p class="step-p">SplitCam adalah software live-streaming gratis untuk Windows dan macOS. Unduh dan jalankan installer — tanpa daftar, tanpa kartu, tanpa watermark, tanpa batas waktu. Inilah encoder yang mengirim videomu ke Stripchat.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Atur kamera dan scene</div><p class="step-p">Buka SplitCam dan tambahkan webcam-mu. Susun scene seperti yang ingin dilihat penonton — overlay, teks, kamera kedua atau ponselmu, filter kecantikan atau latar AI. Semua diterapkan secara live sebelum stream meninggalkan PC-mu.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Ambil stream key Stripchat</div><p class="step-p">Di Stripchat pilih <strong>Switch to external software</strong>, lalu <strong>Show external software settings for the stream</strong>. Salin stream key — Stripchat menampilkannya sebagai token. Jaga kerahasiaannya.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Hubungkan SplitCam ke Stripchat</div><p class="step-p">Di SplitCam buka <strong>Stream Settings</strong>, tempel URL server dan stream key Stripchat ke kolom RTMP kustom. Atur bitrate ke 3.500–6.000&nbsp;Kbps untuk 1080p, 2.000–4.000&nbsp;Kbps untuk 720p, dan jalankan tes kecepatan bawaan dulu.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tekan <strong>Go Live</strong> di SplitCam, lalu mulai siaran di Stripchat. Dalam ~10 detik feed kameramu live. Siaran berikutnya cukup satu klik — buka SplitCam, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips pro</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Samakan resolusi dengan situs</h3><p>FAQ Stripchat memperingatkan: resolusi di software-mu harus persis cocok dengan situs, kalau tidak video jadi pecah. Atur keduanya sama.</p></div><div class="tip-card"><h3>Awas batas minimum 2 Mbps</h3><p>Stripchat mencantumkan 2 Mbps upload sebagai minimum — dan menyatakan terus terang itu tidak cukup untuk siaran OBS atau multistream. Bidik jauh lebih tinggi.</p></div><div class="tip-card"><h3>Kunci adalah token</h3><p>Stream key Stripchat adalah token — salin persis, jangan pernah dibagikan, reset jika bocor.</p></div><div class="tip-card"><h3>Pakai koneksi kabel</h3><p>Ethernet mengalahkan Wi-Fi saat siaran panjang — frame yang hilang berarti tip yang hilang. Tarik kabel ke PC siaran.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Pemecahan masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran Stripchat tersendat atau buffering</summary><p>Hampir selalu bitrate diatur lebih tinggi dari yang mampu ditanggung upload-mu. Jalankan tes kecepatan bawaan SplitCam, lalu setel bitrate ke sekitar 75% dari upload terukur — 3.500–6.000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersendat hilang begitu encoder berhenti melampaui koneksimu.</p></details><details class="faq-item"><summary>Frame hilang saat siaran Stripchat</summary><p>Frame hilang berarti paket tidak sampai ke Stripchat tepat waktu — biasanya Wi-Fi tidak stabil. Pindah ke Ethernet kabel, tutup aplikasi pemakan bandwidth, dan turunkan bitrate sedikit. Satu lonjakan tidak masalah; kenaikan terus-menerus berarti koneksi tidak mengejar.</p></details><details class="faq-item"><summary>Layar hitam — penonton tidak melihat video di Stripchat</summary><p>Kameramu tidak terpilih sebagai sumber aktif di SplitCam, atau aplikasi lain menahannya. Tutup Zoom, Skype, atau OBS, pilih ulang webcam di daftar sumber SplitCam, dan pastikan preview menampilkan gambarmu sebelum tekan Go Live.</p></details><details class="faq-item"><summary>Stripchat menolak stream key atau tidak terhubung</summary><p>Salin ulang stream key — spasi di akhir atau kunci lama yang sudah di-reset adalah penyebab paling umum. Pastikan URL server cocok dengan yang ditampilkan Stripchat dan bahwa siaran encoder eksternal aktif di akunmu. Slider hijau di Stream Settings SplitCam menandakan kunci valid.</p></details><details class="faq-item"><summary>Tidak ada audio atau audio tidak sinkron di Stripchat</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon aslimu di dalam sumber audio SplitCam. Jika audio tertinggal dari video, turunkan resolusi satu tingkat — encoder kelebihan beban dan audio menunggu frame yang terlambat.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Apakah Stripchat menyarankan OBS / software eksternal?</summary><p>Ya — FAQ resmi Stripchat menyarankan software siaran eksternal seperti OBS «untuk mencapai kualitas video dan audio terbaik». SplitCam bekerja dengan cara yang sama.</p></details><details class="faq-item"><summary>Bagaimana mengalihkan Stripchat ke software eksternal?</summary><p>Di Broadcast Center pilih Switch to External Broadcast Software (OBS), lalu buka external software settings untuk menampilkan stream key (token).</p></details><details class="faq-item"><summary>Bitrate berapa untuk Stripchat?</summary><p>RTMP ingest menerima hingga ~6.000 Kbps dengan keyframe 2 detik. 3.500–6.000 di 1080p ideal — tapi harus jauh di atas minimum 2 Mbps, terutama untuk siaran OBS.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk Stripchat?</summary><p>Ya — tanpa biaya lisensi, tanpa watermark, tanpa batas waktu: bahkan show Stripchat interaktif yang panjang tidak ada biaya di sisi encoder.</p></details><details class="faq-item"><summary>Berapa penghasilan model di Stripchat?</summary><p>Penghasilan di Stripchat bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi Stripchat — periksa perjanjian model sebelum mulai siaran.</p></details><details class="faq-item"><summary>Apakah Stripchat aman untuk broadcaster?</summary><p>Stripchat mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda.</p></details><details class="faq-item"><summary>Dokumen apa yang dibutuhkan untuk menjadi model di Stripchat?</summary><p>Stripchat biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama.</p></details><details class="faq-item"><summary>Bisakah saya siaran di Stripchat dari ponsel?</summary><p>Stripchat biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel).</p></details><details class="faq-item"><summary>Apakah Stripchat mendukung OBS atau encoder eksternal?</summary><p>Ya — Stripchat menyediakan URL server RTMP dan stream key di panel broadcaster. Tempelkan keduanya ke <strong>Stream Settings → Custom RTMP</strong> SplitCam, atur 1920×1080 pada 30 fps dengan bitrate 4.000–5.000 Kbps, dan klik <strong>Go Live</strong>. Jalur Custom RTMP memberi Anda komposisi scene SplitCam penuh (multi-kamera, overlay, filter).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Dukungan resmi — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Kami panduan independen. Untuk masalah akun, pembayaran, atau teknis, hubungi langsung dukungan resmi platform.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Panduan platform lain</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Siaran Chaturbate</h4><p>Pengaturan berbasis token dengan encoder eksternal di Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Siaran CAM4</h4><p>External Encoder di CAM4 dengan kontrol geo.</p></a><a class="related-card" href="../bongacams/"><h4>Siaran BongaCams</h4><p>Pengaturan External Encoder untuk BongaCams.</p></a><a class="related-card" href="../onlyfans/"><h4>Live OnlyFans</h4><p>Otorisasi sekali atau tempel kunci — live di OnlyFans.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam di ImLive</h4><p>Pengaturan kamera virtual untuk ImLive — tanpa RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Tambah MFC Alerts</h4><p>Tampilkan tip alert animasi di siaran MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Pelajari lagi</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Jadi cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mainan Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Siap untuk live?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam sites",
+     "item": "https://camstreamguide.com/el/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Stripchat",
      "item": "https://camstreamguide.com/el/stripchat/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Απάντηση</a>
+  <a href="#steps">Βήματα</a>
+  <a href="#tips">Συμβουλές</a>
+  <a href="#faq">Συχνές</a>
+  <a href="#related">Σχετικοί οδηγοί</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Σύντομη απάντηση</div>
     <div class="qa-text">Μετάδοση στο Stripchat με SplitCam: εγκαθιστάς SplitCam, χτίζεις τη σκηνή, στο Stripchat επιλέγεις <em>Switch to external software</em>, αντιγράφεις το stream key, επικολλάς στο SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Βήμα προς βήμα</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Κατέβασε και εγκατέστησε το SplitCam</div><p class="step-p">Το SplitCam είναι δωρεάν λογισμικό streaming για Windows και macOS. Κατέβασέ το και τρέξε τον installer — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα, χωρίς χρονικό όριο. Το SplitCam είναι ο encoder που στέλνει το βίντεό σου στο Stripchat.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Ρύθμισε κάμερα και σκηνή</div><p class="step-p">Άνοιξε το SplitCam και πρόσθεσε την webcam σου. Φτιάξε τη σκηνή όπως θέλεις να τη βλέπουν οι θεατές — overlays, κείμενο, δεύτερη κάμερα ή το κινητό, beauty φίλτρα ή AI φόντο. Όλα εφαρμόζονται ζωντανά πριν φύγει το stream από τον υπολογιστή.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Πάρε το stream key για Stripchat</div><p class="step-p">Στο Stripchat επίλεξε <strong>Switch to external software</strong>, μετά <strong>Show external software settings for the stream</strong>. Αντίγραψε το stream key — το Stripchat το δείχνει ως token. Κράτησέ το ιδιωτικό.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Σύνδεσε το SplitCam στο Stripchat</div><p class="step-p">Στο SplitCam άνοιξε τα <strong>Stream Settings</strong>, επικόλλησε το server URL και το stream key του Stripchat στα πεδία custom RTMP. Bitrate: 3.500–6.000&nbsp;Kbps για 1080p, 2.000–4.000&nbsp;Kbps για 720p. Τρέξε πρώτα το ενσωματωμένο speed test.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Πάτησε Go Live</div><p class="step-p">Πάτησε <strong>Go Live</strong> στο SplitCam, μετά ξεκίνα την μετάδοση στο Stripchat. Σε ~10 δευτερόλεπτα η κάμερά σου είναι ζωντανή. Οι επόμενες μεταδόσεις ξεκινούν με ένα κλικ — ανοίγεις το SplitCam, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Συμβουλές</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Συμφώνησε την ανάλυση με το site</h3><p>Το FAQ του Stripchat προειδοποιεί: η ανάλυση στο λογισμικό σου πρέπει να ταιριάζει ακριβώς με αυτή του site, αλλιώς το βίντεο πιξελιάζει. Όρισε και τα δύο ίδια.</p></div><div class="tip-card"><h3>Προσοχή στο ελάχιστο των 2 Mbps</h3><p>Το Stripchat αναφέρει 2 Mbps upload ως ελάχιστο — και λέει ευθέως ότι δεν αρκεί για OBS streaming ή multistreaming. Στόχευσε πολύ πιο ψηλά.</p></div><div class="tip-card"><h3>Το κλειδί είναι token</h3><p>Το stream key του Stripchat είναι token — αντίγραψε ακριβώς, ποτέ μη μοιραστείς, κάνε reset αν διαρρεύσει.</p></div><div class="tip-card"><h3>Χρησιμοποίησε ενσύρματη σύνδεση</h3><p>Το Ethernet νικάει το Wi-Fi σε ένα μακρύ stream — ένα χαμένο frame είναι ένα χαμένο tip. Τράβα καλώδιο στο stream PC.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Αντιμετώπιση προβλημάτων</h2><div class="faq-list"><details class="faq-item"><summary>Το stream σου στο Stripchat κολλάει ή κάνει buffering</summary><p>Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000&nbsp;Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου.</p></details><details class="faq-item"><summary>Χαμένα frames κατά τη μετάδοση στο Stripchat</summary><p>Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο Stripchat εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει.</p></details><details class="faq-item"><summary>Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο Stripchat</summary><p>Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live.</p></details><details class="faq-item"><summary>Το Stripchat απορρίπτει το stream key ή δεν συνδέεται</summary><p>Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το Stripchat και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key.</p></details><details class="faq-item"><summary>Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο Stripchat</summary><p>Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Συχνές ερωτήσεις</h2>
   <div class="faq-list"><details class="faq-item"><summary>Προτείνει το Stripchat OBS / εξωτερικό λογισμικό;</summary><p>Ναι — το επίσημο FAQ του Stripchat προτείνει εξωτερικό broadcast λογισμικό όπως το OBS «για να επιτευχθεί η καλύτερη ποιότητα βίντεο και ήχου». Ο SplitCam δουλεύει το ίδιο.</p></details><details class="faq-item"><summary>Πώς αλλάζω το Stripchat σε εξωτερικό λογισμικό;</summary><p>Στο Broadcast Center επίλεξε Switch to External Broadcast Software (OBS), μετά άνοιξε external software settings για να εμφανιστεί το stream key (token).</p></details><details class="faq-item"><summary>Τι bitrate για Stripchat;</summary><p>Το RTMP ingest δέχεται έως ~6.000 Kbps με 2 δευτερόλεπτα keyframe. 3.500–6.000 στα 1080p είναι ιδανικά — αλλά πρέπει να είσαι αρκετά πάνω από το ελάχιστο των 2 Mbps, ιδίως για OBS streaming.</p></details><details class="faq-item"><summary>Είναι ο SplitCam δωρεάν για Stripchat;</summary><p>Ναι — χωρίς συνδρομή, χωρίς υδατογράφημα, χωρίς χρονικό όριο: ακόμη και μακρά διαδραστικά Stripchat shows δεν κοστίζουν τίποτα από την πλευρά του encoder.</p></details><details class="faq-item"><summary>Πόσα μπορούν να κερδίσουν τα μοντέλα στο Stripchat;</summary><p>Τα κέρδη στο Stripchat εξαρτώνται από το μέγεθος του κοινού, τις ώρες μετάδοσης και τη συμπεριφορά φιλοδωρημάτων. Οι ενεργοί broadcasters συνήθως παίρνουν σπίτι 200–3.000 $ τον μήνα· οι κορυφαίοι performers φτάνουν τα 10.000 $+. Το μερίδιό σας ακολουθεί τη δομή προμηθειών του Stripchat — ελέγξτε τη σύμβαση μοντέλου πριν βγείτε live.</p></details><details class="faq-item"><summary>Είναι το Stripchat ασφαλές για τους broadcasters;</summary><p>Το Stripchat απαιτεί επαλήθευση ηλικίας και ταυτότητας πριν την πληρωμή, κάτι που προστατεύει τα μοντέλα από απάτη. Χρησιμοποιήστε καλλιτεχνικό όνομα, μην μοιράζεστε ποτέ προσωπικά δεδομένα στην κάμερα, ενεργοποιήστε geo-blocks για να κρύψετε τη μετάδοσή σας από την περιοχή σας και αντιμετωπίστε κάθε αίτημα θεατή ως συναλλακτικό. Τα overlays του SplitCam και το AI background μπορούν επίσης να κρύψουν ή να αντικαταστήσουν τον πραγματικό σας χώρο.</p></details><details class="faq-item"><summary>Τι έγγραφα χρειάζομαι για να γίνω μοντέλο στο Stripchat;</summary><p>Το Stripchat συνήθως απαιτεί επίσημη φωτογραφική ταυτότητα (διαβατήριο, δίπλωμα οδήγησης ή ταυτότητα), μια selfie όπου κρατάτε την ταυτότητα, και ένα φορολογικό έντυπο πληρωμής (W-9 για ΗΠΑ, W-8BEN για εκτός ΗΠΑ). Η έγκριση συνήθως διαρκεί 24–72 ώρες· μόλις εγκριθείτε μπορείτε να βγείτε live την ίδια μέρα.</p></details><details class="faq-item"><summary>Μπορώ να κάνω stream στο Stripchat από το κινητό μου;</summary><p>Το Stripchat συνήθως προσφέρει εφαρμογή broadcaster για κινητά ή mobile-web broadcaster, αλλά η εμπειρία είναι περιορισμένη — χωρίς overlays, χωρίς δεύτερη κάμερα, χωρίς AI background. Για πλήρη ποιότητα παραγωγής, κάντε μετάδοση από υπολογιστή με SplitCam και χρησιμοποιήστε το κινητό σας ως δεύτερη κάμερα (το SplitCam δέχεται είσοδο IP-camera από κινητά).</p></details><details class="faq-item"><summary>Υποστηρίζει το Stripchat OBS ή εξωτερικό encoder;</summary><p>Ναι — το Stripchat παρέχει RTMP server URL και stream key στο πάνελ broadcaster. Επικολλήστε και τα δύο στο <strong>Stream Settings → Custom RTMP</strong> του SplitCam, ρυθμίστε 1920×1080 στα 30 fps με bitrate 4.000–5.000 Kbps και κάντε κλικ στο <strong>Go Live</strong>. Η διαδρομή Custom RTMP σας δίνει πλήρη σύνθεση σκηνής SplitCam (πολλαπλές κάμερες, overlays, φίλτρα).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Επίσημη υποστήριξη — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Είμαστε ανεξάρτητος οδηγός. Για ζητήματα λογαριασμού, πληρωμών ή τεχνικά προβλήματα επικοινωνήστε απευθείας με την επίσημη υποστήριξη της πλατφόρμας.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Άλλοι οδηγοί πλατφορμών</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Μετάδοση Chaturbate</h4><p>Token-βασισμένη ρύθμιση με εξωτερικό encoder στο Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Μετάδοση CAM4</h4><p>External Encoder στο CAM4 με γεω-ελέγχους.</p></a><a class="related-card" href="../bongacams/"><h4>Μετάδοση BongaCams</h4><p>External Encoder ρύθμιση για BongaCams.</p></a><a class="related-card" href="../onlyfans/"><h4>Live OnlyFans</h4><p>Εξουσιοδότησε μία φορά ή επικόλλησε το κλειδί — live στο OnlyFans.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam στο ImLive</h4><p>Εικονική κάμερα για ImLive — χωρίς RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Προσθήκη MFC Alerts</h4><p>Εμφάνιση κινούμενων tip alerts στο MyFreeCams stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Συνέχεια</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Γίνε cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Έτοιμος για ζωντανή μετάδοση;</h2>

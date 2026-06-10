@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Sites de cam",
+     "item": "https://camstreamguide.com/pt/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Cherry.tv",
      "item": "https://camstreamguide.com/pt/cherry-tv/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Resposta</a>
+  <a href="#steps">Passos</a>
+  <a href="#tips">Dicas</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guias relacionados</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Em resumo</div>
     <div class="qa-text">Pra transmitir no Cherry.tv com SplitCam: instala o SplitCam, monta sua cena, no Streamer Dashboard abre <em>Broadcast Settings → External Encoder</em>, copia a URL do servidor e a stream key, cola no SplitCam e dá Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Passo a passo</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Baixa e instala o SplitCam</div><p class="step-p">O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água. É o encoder que manda seu vídeo pro Cherry.tv.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Monta sua cena</div><p class="step-p">Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA — tudo aplicado ao vivo. O público do Cherry.tv é mais jovem e mais antenado em plataforma, então uma cena caprichada ajuda a se destacar.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Pega a URL e a stream key do Cherry.tv</div><p class="step-p">Entra na sua conta de streamer do Cherry.tv, abre o <strong>Streamer Dashboard</strong> e vai em <strong>Broadcast Settings → External Encoder</strong>. A página mostra uma <strong>URL do servidor</strong> e uma <strong>stream key</strong> única. Copia as duas.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conecta o SplitCam ao Cherry.tv</div><p class="step-p">No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do Cherry.tv e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos. Roda primeiro o speed test embutido.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Clica Go Live</div><p class="step-p">Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo Streamer Dashboard no Cherry.tv. Em uns 10 segundos seu stream chega no Cherry.tv. As próximas transmissões são um clique — abre o SplitCam, Go Live, depois fica online no Cherry.tv.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Dicas</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Entrada mais leve, tráfego subindo</h3><p>O onboarding do Cherry.tv é mais rápido que o das plataformas legacy (sem revisão Docler de 72 horas). Junto com o tráfego em crescimento, é um bom ponto early-mover pra montar uma base de seguidores antes da concorrência apertar.</p></div><div class="tip-card"><h3>Saque em cripto disponível</h3><p>O Cherry.tv suporta saque em cripto além do fiat padrão — útil se você tá numa região onde os pagamentos das redes cam tradicionais são lentos ou restritos.</p></div><div class="tip-card"><h3>Browser broadcaster vs externo</h3><p>O broadcaster por navegador é prático mas é fonte única. O SplitCam via External Encoder libera cenas multicâmera, overlays, filtros de beleza e fundo IA que a ferramenta de navegador não faz.</p></div><div class="tip-card"><h3>Use conexão por cabo</h3><p>Ethernet bate Wi-Fi numa live longa — um frame perdido é um tip perdido. Puxa um cabo até o PC do stream.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Solução de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Sua transmissão no Cherry.tv trava ou fica em buffer</summary><p>Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão.</p></details><details class="faq-item"><summary>Frames perdidos durante a transmissão no Cherry.tv</summary><p>Frames perdidos significam que os pacotes não chegam ao Cherry.tv a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta.</p></details><details class="faq-item"><summary>Tela preta — os espectadores não veem vídeo no Cherry.tv</summary><p>Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live.</p></details><details class="faq-item"><summary>Cherry.tv rejeita a stream key ou não conecta</summary><p>Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo Cherry.tv e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida.</p></details><details class="faq-item"><summary>Sem áudio ou áudio fora de sincronia no Cherry.tv</summary><p>Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>O Cherry.tv suporta oficialmente encoders externos tipo o SplitCam?</summary><p>Suporta — o Streamer Dashboard inclui External Encoder dentro de Broadcast Settings. A plataforma fornece uma URL de servidor RTMP padrão e uma stream key; OBS, SplitCam e os outros encoders RTMP conectam normal.</p></details><details class="faq-item"><summary>Onde pego minha stream key do Cherry.tv?</summary><p>Streamer Dashboard → Broadcast Settings → External Encoder. A URL do servidor e a stream key aparecem ali — copia as duas pros campos de RTMP personalizado do SplitCam. A chave é vinculada à conta; trata como senha.</p></details><details class="faq-item"><summary>Que bitrate usar no Cherry.tv?</summary><p>O Cherry.tv aceita as configurações cam-quality padrão — manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test embutido do SplitCam.</p></details><details class="faq-item"><summary>O SplitCam é grátis pra usar com o Cherry.tv?</summary><p>É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do Cherry.tv é grátis pra ativar. Custo total de broadcaster: zero.</p></details><details class="faq-item"><summary>Quanto as criadoras ganham no Cherry.tv?</summary><p>Os ganhos no Cherry.tv dependem do tamanho do público, das horas ao vivo e do volume de gorjetas. Criadoras ativas costumam levar para casa de R$ 1.000 a R$ 15.000 por mês; as top performers chegam a R$ 50.000+. Sua porcentagem segue a comissão do Cherry.tv — leia o contrato de modelo antes de entrar ao vivo.</p></details><details class="faq-item"><summary>O Cherry.tv é seguro para quem transmite?</summary><p>O Cherry.tv exige verificação de idade e documento antes de liberar o pagamento, o que protege a criadora contra fraudes. Use um nome artístico, nunca mostre dados pessoais na câmera, ative bloqueio geográfico para esconder a transmissão da sua região e trate todo pedido de assinante como transacional. Os overlays e o fundo com IA do SplitCam também escondem ou substituem o ambiente real.</p></details><details class="faq-item"><summary>Quais documentos eu preciso para virar modelo no Cherry.tv?</summary><p>O Cherry.tv geralmente pede um documento oficial com foto (RG, CNH ou passaporte), uma selfie segurando o documento e o formulário fiscal/de pagamento (W-9 para EUA, W-8BEN fora dos EUA; no Brasil costumam aceitar CPF para receber via PIX por gateway). A aprovação leva de 24 a 72 horas; aprovada, você já entra ao vivo no mesmo dia.</p></details><details class="faq-item"><summary>Dá para transmitir no Cherry.tv pelo celular?</summary><p>O Cherry.tv normalmente oferece um app de transmissão ou um broadcaster mobile pelo navegador, mas a experiência é limitada — sem overlays, sem segunda câmera, sem fundo com IA. Para qualidade de produção completa, transmita pelo computador com o SplitCam e use o celular como segunda câmera (o SplitCam aceita entrada de câmera IP a partir do celular).</p></details><details class="faq-item"><summary>O Cherry.tv aceita OBS ou encoder externo?</summary><p>Sim — o Cherry.tv disponibiliza uma URL de servidor RTMP e uma chave de transmissão no painel da criadora. Cole as duas em <strong>Stream Settings → Custom RTMP</strong> do SplitCam, configure 1920×1080 a 30 fps com bitrate de 4.000 a 5.000 Kbps e clique em <strong>Go Live</strong>. A rota Custom RTMP libera a composição de cena completa do SplitCam (multicâmera, overlays, filtros).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Outros guias de plataforma</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmitir no Chaturbate</h4><p>Configuração por token com encoder externo no Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmitir no CAM4</h4><p>External Encoder no CAM4 com geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Transmitir no BongaCams</h4><p>Configuração External Encoder pro BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Transmitir no Stripchat</h4><p>Setup de software externo pra transmissões no Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam no ImLive</h4><p>Setup câmera virtual pro ImLive — sem RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Adicionar MFC Alerts</h4><p>Mostre alerts animados de tips no seu stream MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Saiba mais</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Ser cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Brinquedos Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Pronto pra entrar ao vivo?</h2>

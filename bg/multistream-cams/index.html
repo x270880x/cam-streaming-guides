@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Кам сайтове",
+     "item": "https://camstreamguide.com/bg/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Multiple Cam Sites",
      "item": "https://camstreamguide.com/bg/multistream-cams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Отговор</a>
+  <a href="#steps">Стъпки</a>
+  <a href="#tips">Съвети</a>
+  <a href="#faq">ЧЗВ</a>
+  <a href="#related">Подобни ръководства</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Накратко</div>
     <div class="qa-text">За излъчване на няколко кам сайта наведнъж: инсталирай SplitCam, изгради сцената, вземи URL на RTMP сървъра и stream key от всеки кам сайт, добави всички в настройките за multistreaming на SplitCam, кликни Go Live веднъж.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Стъпка по стъпка</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Инсталирай SplitCam</div><p class="step-p">SplitCam е безплатен софтуер за стрийминг за Windows и macOS с вграден multistreaming. Инсталирай — без воден знак, без регистрация.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настрой камера и сцена</div><p class="step-p">Отвори SplitCam, добави уебкамерата и изгради сцената с наслагвания и филтри. Една сцена захранва всяка дестинация.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Вземи RTMP ключ от всеки кам сайт</div><p class="step-p">Във всяка кам платформа активирай външното/RTMP излъчване и копирай <strong>URL на сървъра</strong> и <strong>stream key</strong>. Повтори за всеки сайт, на който искаш да излъчваш — виж индивидуалните ръководства за платформите за точните пътища.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Добави всяка дестинация в SplitCam</div><p class="step-p">Отвори <strong>Stream Settings</strong> и добави всеки кам сайт като персонализирана RTMP дестинация — постави URL на сървъра и ключа. Маркирай всичко, което искаш да е на живо.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Кликни Go Live веднъж</div><p class="step-p">Натисни <strong>Go Live</strong>. SplitCam изпраща стрийма към всеки избран кам сайт едновременно, peer-to-peer, от едно единствено кодиране — без допълнителна такса.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Съвети</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Следи upload-а си</h3><p>Мултистрийминг-ът умножава товара върху upload-а. Всяка дестинация консумира собствен битрейт — увери се, че връзката издържа сумата.</p></div><div class="tip-card"><h3>Провери правилата на платформите</h3><p>Някои кам сайтове забраняват едновременно излъчване другаде — потвърди преди мултистрийминг.</p></div><div class="tip-card"><h3>Кабел — не можеш да си позволиш drops тук</h3><p>Мултистрийминг-ът умножава товара върху upload-а, така че едно прекъсване на wi-fi може да събори всички дестинации едновременно. Кабел не е опционален тук.</p></div><div class="tip-card"><h3>Наблюдавай health monitor-а</h3><p>SplitCam показва статус по дестинация — пусни сайт, ако upload-ът ти не го издържа.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на Multiple Cam Sites лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на Multiple Cam Sites</summary><p>Изпуснатите кадри значат, че пакетите не стигат до Multiple Cam Sites навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на Multiple Cam Sites</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>Multiple Cam Sites отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от Multiple Cam Sites и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на Multiple Cam Sites</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Често задавани въпроси</h2>
   <div class="faq-list"><details class="faq-item"><summary>SplitCam multistreaming безплатен ли е?</summary><p>Да — multistreaming-ът е вграден и безплатен, без такса на дестинация, без воден знак.</p></details><details class="faq-item"><summary>На колко кам сайта мога да излъчвам едновременно?</summary><p>Толкова, колкото upload-ът ти издържа — всяка дестинация консумира собствен битрейт.</p></details><details class="faq-item"><summary>Използва ли cloud relay?</summary><p>Не — SplitCam изпраща стриймовете peer-to-peer директно от PC-то към ingest на всяка платформа.</p></details><details class="faq-item"><summary>Multistreaming-ът забавя ли PC-то?</summary><p>Кодирането се прави веднъж и се преизползва; хардуерното кодиране държи CPU товара нисък. Upload bandwidth-ът е реалният лимит.</p></details><details class="faq-item"><summary>Колко могат да изкарват моделите в Multiple Cam Sites?</summary><p>Приходите в Multiple Cam Sites зависят от размера на аудиторията, часовете на стрийм и активността с типове. Активните излъчващи обикновено прибират $200–$3,000 на месец; топ изпълнителите достигат $10,000+. Делът ти от приходите следва комисионната структура на Multiple Cam Sites — провери моделния договор, преди да тръгнеш в ефир.</p></details><details class="faq-item"><summary>Безопасен ли е Multiple Cam Sites за излъчващите?</summary><p>Multiple Cam Sites изисква верификация на възрастта и личната карта преди изплащане, което защитава моделите от измами. Използвай сценично име, никога не споделяй лични данни пред камерата, активирай гео-блокове, за да скриеш стрийма си от родния си регион, и третирай всяка молба на зрител като транзакционна. Овърлеите и AI фонът на SplitCam също могат да скрият или подменят реалната ти обстановка.</p></details><details class="faq-item"><summary>Какви документи са ми нужни, за да стана модел в Multiple Cam Sites?</summary><p>Multiple Cam Sites обикновено изисква държавно издаден документ за самоличност със снимка (паспорт, шофьорска книжка или лична карта), селфи с документа в ръка и данъчен/платежен формуляр (W-9 за САЩ, W-8BEN за извън САЩ). Одобрението обикновено отнема 24–72 часа; след одобрение можеш да излезеш в ефир още същия ден.</p></details><details class="faq-item"><summary>Мога ли да стриймвам в Multiple Cam Sites от телефона си?</summary><p>Multiple Cam Sites обикновено предлага мобилно приложение за излъчване или мобилен уеб-броудкастър, но изживяването е ограничено — без овърлеи, без втора камера, без AI фон. За пълно продукционно качество излъчвай от компютър със SplitCam и използвай телефона си като втора камера (SplitCam приема IP-камера вход от телефони).</p></details><details class="faq-item"><summary>Поддържа ли Multiple Cam Sites OBS или външен енкодер?</summary><p>Да — Multiple Cam Sites предоставя RTMP сървър URL и стрийм ключ в панела на излъчващия. Постави и двете в <strong>Stream Settings → Custom RTMP</strong> на SplitCam, задай 1920×1080 при 30 fps с битрейт 4,000–5,000 Kbps и кликни <strong>Go Live</strong>. Custom RTMP маршрутът ти дава пълната композиция на сцената в SplitCam (мулти-камера, овърлеи, филтри).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Официална поддръжка — Multiple Cam Sites</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:hello@splitcam.com">hello@splitcam.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://splitcam.com/support" rel="nofollow noopener" target="_blank">https://splitcam.com/support</a></li></ul><p class="sp-note">Ние сме независим ресурс. За въпроси по акаунт, плащания или технически проблеми се свържи директно с официалната поддръжка на платформата.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други ръководства за платформи</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a><a class="related-card" href="../bongacams/"><h4>Излъчване BongaCams</h4><p>External Encoder настройка за BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Излъчване Stripchat</h4><p>Външен софтуер за Stripchat стрийм.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam в ImLive</h4><p>Виртуална камера за ImLive — без RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Добави MFC Alerts</h4><p>Показвай анимирани tip alerts в MyFreeCams стрийма.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Още</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мулти-стрийминг</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стани кам модел</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense играчки</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готов(а) ли си за ефир?</h2>

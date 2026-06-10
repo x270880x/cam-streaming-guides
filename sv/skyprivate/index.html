@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-plattformar",
+     "item": "https://camstreamguide.com/sv/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/sv/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Steg</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterade guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
     <div class="qa-text">Använd SkyPrivate med SplitCam: installera SplitCam, bygg scenen, installera Skype med SkyPrivate-tillägget, i Skypes <em>Video Settings</em> väljer du SplitCam som kamera och mikrofon, svara sedan på SkyPrivate-bokade samtal — Skype levererar din byggda scen till kunden.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg för steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Installera SplitCam</div><p class="step-p">SplitCam är gratis för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel. För SkyPrivate fungerar den som en <strong>virtuell kamera</strong> som Skype plockar upp som vilken webbkamera som helst.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg scenen i SplitCam</div><p class="step-p">Öppna SplitCam och använd <strong>Media Layers +</strong> för att lägga till din webbkamera plus eventuella overlays, text, beautyfilter eller AI-bakgrund. Den färdiga scenen är det Skype levererar vidare till SkyPrivate-kunden.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Installera Skype och SkyPrivate-tillägget</div><p class="step-p">Installera Skype på samma dator, logga in och installera sedan SkyPrivate-tillägget / desktop-appen enligt SkyPrivates onboarding. Tillägget hanterar minutbetalning på SkyPrivate-sidan.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Välj SplitCam som kamera och mikrofon i Skype</div><p class="step-p">Öppna <strong>Settings → Audio &amp; Video</strong> i Skype. Sätt <strong>Camera = SplitCam</strong> och <strong>Microphone = SplitCam</strong>. Kör ett snabbt testsamtal i Skype (Echo / Sound Test Service) för att bekräfta att din scen ser ut och låter rätt.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Ta emot SkyPrivate-samtal</div><p class="step-p">När en SkyPrivate-kund bokar ett betalt samtal kommer det in som ett Skype-samtal — svara på det. Kunden ser din byggda SplitCam-scen; SkyPrivate räknar minutbetalning. Justera scenen mitt i samtalet genom att redigera den i SplitCam — Skype uppdateras direkt.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Proffstips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Ingen RTMP — flow via virtuell kamera</h3><p>Leta inte efter en server-URL eller stream key. SkyPrivate går via Skype, och Skype ser bara SplitCam som en webbkameraenhet. Bygg scenen i SplitCam och välj sedan SplitCam i Skypes kamerainställningar.</p></div><div class="tip-card"><h3>Sätt SplitCam som mikrofon också</h3><p>Välj SplitCam som mikrofon utöver kameran i Skypes ljudinställningar — då når brusreducering, mixat ljud och introlåt också fram till kunden.</p></div><div class="tip-card"><h3>Lägg in ett utgående testsamtal i Skype</h3><p>Innan ditt första betalda SkyPrivate-samtal, gör ett gratis testsamtal i Skype (Echo / Sound Test Service) för att bekräfta att SplitCam är den aktiva kameran och att scenen är korrekt byggd.</p></div><div class="tip-card"><h3>Gör ett privat test först</h3><p>Kör en kort testsändning för att kontrollera kamera, ljud, bildkomposition och overlays innan du öppnar rummet för tittare.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>SkyPrivate-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under SkyPrivate-sändning</summary><p>Tappade bildrutor betyder att paket inte når SkyPrivate i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på SkyPrivate</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>SkyPrivate avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den SkyPrivate visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på SkyPrivate</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>
   <div class="faq-list"><details class="faq-item"><summary>Använder SkyPrivate RTMP eller stream key?</summary><p>Ingetdera. SkyPrivate sköter betalning och bokning; själva videon går via Skype. Du behöver ingen RTMP-server-URL eller stream key — bara konfigurera SplitCam som din kamera inne i Skype.</p></details><details class="faq-item"><summary>Hur väljer jag SplitCam i Skype för SkyPrivate?</summary><p>Öppna Skype Settings → Audio &amp; Video → Camera och välj SplitCam i listan. Gör samma sak för Microphone. SkyPrivate-samtal kommer sedan in som vanliga Skype-samtal med din SplitCam-scen som kamerafeed.</p></details><details class="faq-item"><summary>Kan jag använda overlays och beautyfilter med SkyPrivate?</summary><p>Ja — bygg in dem i din SplitCam-scen. Skype tar bara emot det färdiga resultatet som en kamerafeed, så allt SplitCam bygger ihop (overlays, beautyfilter, AI-bakgrund, flerkamerascener) syns för SkyPrivate-kunden.</p></details><details class="faq-item"><summary>Är SplitCam gratis för SkyPrivate?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns. Som virtuell kamera för Skype-baserade SkyPrivate-samtal lägger den inte till någon kostnad eller branding på samtalet.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på SkyPrivate?</summary><p>Inkomsten på SkyPrivate beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer SkyPrivate:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är SkyPrivate säkert för sändare?</summary><p>SkyPrivate kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på SkyPrivate?</summary><p>SkyPrivate kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på SkyPrivate från min telefon?</summary><p>SkyPrivate erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Kan jag använda SplitCam som en virtuell kamera på SkyPrivate?</summary><p>Ja — SkyPrivate:s live körs i webbläsaren, så SplitCam registreras som en webbkamera vid namn <strong>"SplitCam Video Driver"</strong>. Öppna SkyPrivate-sändaren, klicka på kameraväljaren i webbläsaren och välj SplitCam. Din komponerade scen (overlays, andra kamera, filter, AI-bakgrund) når tittarna som en enda webbkameraström.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuell kamera-uppsättning för ImLive — ingen RTMP.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Använd SplitCam som virtuell kamera i JustForFans livesändare.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Använd SplitCam som virtuell kamera för live på Fanvue.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Använd SplitCam som virtuell kamera för live på LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Läs mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Eszközök",
+     "item": "https://camstreamguide.com/hu/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/hu/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Válasz</a>
+  <a href="#steps">Lépések</a>
+  <a href="#tips">Tippek</a>
+  <a href="#faq">GYIK</a>
+  <a href="#related">Hasonló útmutatók</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Röviden</div>
     <div class="qa-text">MFC Alerts hozzáadása SplitCammel: telepíted a SplitCamet, hozzáadod a webkamerát, megnyitod a Browser tabot és betöltöd az mfcalerts.com-ot, másolod az alerts URL-t, hozzáadod Browser rétegként a webkamera felett, majd teszteled egy teszt tippel.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Lépésről lépésre</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Telepítsd a SplitCamet és add hozzá a webkamerát</div><p class="step-p">Telepítsd az ingyenes SplitCamet Windowsra vagy macOS-re, majd add hozzá a <strong>webkamerát</strong> forrásként. Az MFC Alerts rétegként ül ezen a kamerán.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Nyisd meg a Browser tabot és menj az mfcalerts.com-ra</div><p class="step-p">A SplitCamben nyisd meg a <strong>Browser</strong> tabot és navigálj a <strong>www.mfcalerts.com</strong>-ra. Jelentkezz be, vagy regisztrálj, ha még nincs mfcalerts.com fiókod.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Másold az alerts URL-t</div><p class="step-p">Az mfcalerts.com-on használd a <strong>Copy to clipboard</strong>-ot a személyes alerts URL-ed másolásához — ez az oldal rendereli a tip animációkat.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Add hozzá az URL-t Browser rétegként — a webkamera felett</div><p class="step-p">Illeszd be az URL-t a SplitCam Browser ablakába és kattints <strong>Add</strong>-re. Majd rendezd át a forrás listát úgy, hogy az <strong>MFC Alerts a webkamera felett legyen</strong> (3-pont menü → Move Up). Ha alatta ül, az effektek rejtve maradnak.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Teszteld teszt tippel</div><p class="step-p">Nyisd meg <strong>Settings → Send test tip</strong>-et és erősítsd meg, hogy az alert effekt megjelenik a kamerád felett. Majd streamelj normálisan a <a href="../myfreecams/" class="autolink">MyFreeCams</a>-en — a valódi tipek most az animációkat triggerelik.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Az MFC Alerts-nek a webkamera felett kell lennie</h3><p>A leggyakoribb hiba: ha az MFC Alerts réteg a webkamera alatt van a forrás listában, az effektek rejtve maradnak. Mozgasd felfelé.</p></div><div class="tip-card"><h3>Mfcalerts.com fiók szükséges</h3><p>Az alerts URL személyes — regisztrálj az mfcalerts.com-on először, ha nincs fiókod.</p></div><div class="tip-card"><h3>Küldj teszt tipet a live előtt</h3><p>Használd Settings → Send test tip-et, hogy megerősítsd az overlay működését — ne a show közepén fedezd fel a hibát.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A MFC Alerts streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a MFC Alerts adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a MFC Alerts platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a MFC Alerts platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A MFC Alerts elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a MFC Alerts által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a MFC Alerts platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Mi az MFC Alerts?</summary><p>Egy értesítési rendszer a <a href="../myfreecams/" class="autolink">MyFreeCams</a> számára, ami videó effekteket jelenít meg a streamedben, amikor a nézők tipet küldenek — Browser overlayként hozzáadva a SplitCamben.</p></details><details class="faq-item"><summary>Miért nem jelennek meg az MFC Alerts-eim?</summary><p>Szinte mindig a réteg sorrend — az MFC Alerts Browser rétegnek a webkamera felett kell lennie a SplitCam forrás listában.</p></details><details class="faq-item"><summary>Kell-e fiók az MFC Alerts-hez?</summary><p>Igen — regisztrálj az mfcalerts.com-on, hogy megkapd a személyes alerts URL-ed.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam ehhez?</summary><p>Igen — a SplitCam ingyenes, vízjel nélkül és időkorlát nélkül, és az MFC Alerts browser overlay benne fut többletköltség nélkül.</p></details><details class="faq-item"><summary>Mennyit kereshetnek a modellek a(z) MFC Alerts oldalon?</summary><p>A(z) MFC Alerts oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) MFC Alerts jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést.</p></details><details class="faq-item"><summary>Biztonságos a(z) MFC Alerts a műsorszóróknak?</summary><p>A(z) MFC Alerts a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet.</p></details><details class="faq-item"><summary>Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) MFC Alerts oldalon?</summary><p>A(z) MFC Alerts általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz.</p></details><details class="faq-item"><summary>Streamelhetek a(z) MFC Alerts oldalra a telefonomról?</summary><p>A(z) MFC Alerts általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Hivatalos támogatás — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Független útmutató vagyunk. Fiók-, fizetési vagy technikai problémák esetén lépj kapcsolatba közvetlenül a platform hivatalos támogatásával.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">További platform-útmutatók</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Adás Chaturbate</h4><p>Token-alapú beállítás külső enkóderrel a Chaturbate-en.</p></a><a class="related-card" href="../cam4/"><h4>Adás CAM4</h4><p>External Encoder a CAM4-en geo-kontrollokkal.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Tovább</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam modell leszek</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense játékok</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Készen állsz az élő adásra?</h2>

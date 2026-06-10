@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "‏پلتفرم‌های طرفداران",
+     "item": "https://camstreamguide.com/fa/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Boosty",
      "item": "https://camstreamguide.com/fa/boosty/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">پاسخ</a>
+  <a href="#steps">مراحل</a>
+  <a href="#tips">نکات</a>
+  <a href="#faq">سوالات</a>
+  <a href="#related">راهنماهای مرتبط</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">پاسخ سریع</div>
     <div class="qa-text">پخش زنده در Boosty با SplitCam: SplitCam را نصب کنید، صحنه‌تان را بسازید، یک پخش زنده در Boosty شروع کنید و در فهرست کشویی دوربین پخش‌کننده <em>SplitCam</em> را انتخاب کنید — سپس Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">مرحله به مرحله</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">‏SplitCam را دانلود و نصب کنید</div><p class="step-p">‏SplitCam نرم‌افزار پخش زنده رایگان برای Windows و macOS است — بدون ثبت‌نام، بدون کارت، بدون واترمارک. یک دوربین مجازی نصب می‌کند که مرورگر می‌تواند انتخاب کند.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">صحنه‌تان را بسازید</div><p class="step-p">‏SplitCam را باز کنید و وب‌کم را اضافه کنید. پوشش‌ها (به زبان روسی برای مخاطب)، دوربین دوم یا گوشی، فیلترهای زیبایی یا پس‌زمینه AI را لایه‌بندی کنید.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">یک پخش زنده در Boosty شروع کنید</div><p class="step-p">وارد حساب سازنده Boosty خود شوید و پخش‌کننده زنده را باز کنید. اگر می‌خواهید پخش پشت یک سطح پولی باشد، محدودیت لایه را تنظیم کنید.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">‏SplitCam را به‌عنوان دوربین انتخاب کنید</div><p class="step-p">در فهرست کشویی دوربین Boosty، به‌جای وب‌کم خام، <strong>SplitCam</strong> را انتخاب کنید — صحنه ترکیب‌شده شما جایگزین دوربین ساده می‌شود.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">‏Go Live را کلیک کنید</div><p class="step-p">پخش را شروع کنید — صحنه SplitCam، پوشش‌ها و فیلترهای شما به مشترکان Boosty می‌رسند.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">نکات حرفه‌ای</h2>
   <div class="tips-grid"><div class="tip-card"><h3>بزرگ‌ترین پلتفرم سازندگان روسیه</h3><p>‏Boosty پس از تحریم‌ها برای بسیاری از سازندگان روسی جایگزین Patreon شد، بنابراین مخاطب وفادار است و عادت دارد به RUB پرداخت کند. یک صحنه آراسته SplitCam با پوشش‌های زبان روسی به‌خوبی تبدیل می‌گیرد.</p></div><div class="tip-card"><h3>نمایش‌های زنده مخصوص لایه مشترک</h3><p>‏Boosty به شما اجازه می‌دهد پخش‌های زنده را بر اساس لایه مشترک محدود کنید. SplitCam با همه لایه‌ها کار می‌کند — اِنکودر به لایه بیننده اهمیت نمی‌دهد، شما فقط یک بار پخش می‌کنید و Boosty دسترسی را مدیریت می‌کند.</p></div><div class="tip-card"><h3>پوشش انعام و پرداخت به‌ازای مشاهده</h3><p>‏Boosty از باز کردن پست‌های پولی و انعام پشتیبانی می‌کند. یک پوشش روی صفحه که مزایای لایه را نام می‌برد، در طول پخش زنده تبدیل را بالا می‌برد.</p></div><div class="tip-card"><h3>ابتدا تست خصوصی انجام دهید</h3><p>یک پخش آزمایشی کوتاه برای بررسی دوربین، صدا، کادربندی و پوشش‌ها قبل از باز کردن اتاق برای بینندگان انجام دهید.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">عیب‌یابی</h2><div class="faq-list"><details class="faq-item"><summary>پخش Boosty متوقف می‌شود یا بافر می‌کند</summary><p>تقریباً همیشه بیت‌ریت بالاتر از آن تنظیم شده که آپلود شما تحمل کند. تست سرعت داخلی SplitCam را اجرا کنید، سپس بیت‌ریت را به حدود ۷۵٪ آپلود اندازه‌گیری شده تنظیم کنید — ۳۵۰۰–۶۰۰۰&nbsp;Kbps برای ۱۰۸۰p.</p></details><details class="faq-item"><summary>فریم‌های از دست رفته حین پخش Boosty</summary><p>فریم‌های از دست رفته به این معناست که بسته‌ها به Boosty به موقع نمی‌رسند — معمولاً Wi-Fi ناپایدار. به Ethernet سیمی تغییر دهید، برنامه‌هایی که پهنای باند می‌خورند را ببندید و بیت‌ریت را کمی کاهش دهید.</p></details><details class="faq-item"><summary>صفحه سیاه — بینندگان ویدیو را در Boosty نمی‌بینند</summary><p>دوربین شما به عنوان منبع فعال در SplitCam انتخاب نشده، یا برنامه دیگری آن را نگه داشته. Zoom، Skype یا OBS را ببندید، وب‌کم را دوباره در لیست منابع SplitCam انتخاب کنید.</p></details><details class="faq-item"><summary>Boosty کلید جریان را رد می‌کند یا متصل نمی‌شود</summary><p>کلید جریان را دوباره کپی کنید — فاصله در انتها یا کلید قدیمی بازنشانی شده رایج‌ترین دلایل هستند. مطمئن شوید URL سرور با آنچه Boosty نشان می‌دهد مطابقت دارد.</p></details><details class="faq-item"><summary>صدا وجود ندارد یا صدا در Boosty ناهمزمان است</summary><p>SplitCam را هم به عنوان دوربین و هم میکروفون انتخاب کنید، و میکروفون واقعی خود را در منبع صدای SplitCam انتخاب کنید. اگر صدا از ویدیو عقب می‌ماند، رزولوشن را یک سطح پایین بیاورید.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">سؤالات متداول</h2>
   <div class="faq-list"><details class="faq-item"><summary>‏SplitCam چگونه به Boosty متصل می‌شود؟</summary><p>پخش زنده Boosty مبتنی بر مرورگر است، بنابراین SplitCam به‌عنوان دوربین مجازی متصل می‌شود — SplitCam را در انتخاب‌گر دوربین انتخاب کنید. به stream key نیاز نیست.</p></details><details class="faq-item"><summary>آیا می‌توانم از پوشش‌ها در پخش زنده Boosty استفاده کنم؟</summary><p>بله — صحنه را در SplitCam بسازید (پوشش‌ها، دوربین دوم، پس‌زمینه AI)؛ Boosty یک وب‌کم می‌بیند. مشترکان صحنه کامل ترکیب‌شده را دریافت می‌کنند.</p></details><details class="faq-item"><summary>آیا Boosty از OBS یا اِنکودرهای خارجی پشتیبانی می‌کند؟</summary><p>پخش زنده Boosty عمدتاً مبتنی بر مرورگر است. اگر گزینه stream-key در پنل سازنده شما ظاهر شد، آن را در فیلدهای RTMP سفارشی SplitCam جای‌گذاری کنید؛ در غیر این صورت از روش دوربین مجازی استفاده کنید.</p></details><details class="faq-item"><summary>آیا استفاده از SplitCam با Boosty رایگان است؟</summary><p>بله — SplitCam رایگان است، بدون واترمارک و بدون محدودیت زمانی.</p></details><details class="faq-item"><summary>مدل‌ها در ‏Boosty چقدر می‌توانند درآمد داشته باشند؟</summary><p>درآمد در ‏Boosty به اندازه مخاطب، ساعات پخش زنده و رفتار تیپ دادن بستگی دارد. پخش‌کنندگان فعال معمولاً ماهانه بین ۲۰۰ تا ۳٬۰۰۰ دلار به دست می‌آورند؛ افراد برتر به بیش از ۱۰٬۰۰۰ دلار می‌رسند. سهم درآمد شما از ساختار کمیسیون ‏Boosty پیروی می‌کند — پیش از پخش زنده، قرارداد مدل را بررسی کنید.</p></details><details class="faq-item"><summary>آیا ‏Boosty برای پخش‌کنندگان امن است؟</summary><p>‏Boosty پیش از پرداخت، احراز سن و هویت را الزامی می‌کند که از مدل‌ها در برابر کلاهبرداری محافظت می‌کند. از یک نام مستعار استفاده کنید، هرگز اطلاعات شخصی را جلوی دوربین فاش نکنید، مسدودسازی جغرافیایی را برای پنهان کردن پخش خود از منطقه محل سکونتتان فعال کنید و هر درخواست بیننده را تراکنشی در نظر بگیرید. اورلی‌ها و پس‌زمینه هوش مصنوعی ‏SplitCam نیز می‌توانند محیط واقعی شما را پنهان یا جایگزین کنند.</p></details><details class="faq-item"><summary>برای تبدیل شدن به مدل در ‏Boosty چه مدارکی نیاز دارم؟</summary><p>‏Boosty معمولاً یک کارت شناسایی عکس‌دار صادر شده توسط دولت (پاسپورت، گواهینامه رانندگی یا کارت شناسایی)، یک سلفی همراه با کارت شناسایی و یک فرم مالیاتی/پرداخت (W-9 برای آمریکا، W-8BEN برای خارج از آمریکا) نیاز دارد. تأیید معمولاً بین ۲۴ تا ۷۲ ساعت طول می‌کشد؛ پس از تأیید می‌توانید همان روز پخش زنده را آغاز کنید.</p></details><details class="faq-item"><summary>آیا می‌توانم از گوشی خود در ‏Boosty پخش زنده داشته باشم؟</summary><p>‏Boosty معمولاً یک اپلیکیشن موبایلی برای پخش‌کنندگان یا یک نسخه وب موبایلی ارائه می‌دهد، اما تجربه محدود است — بدون اورلی، بدون دوربین دوم، بدون پس‌زمینه هوش مصنوعی. برای کیفیت کامل تولید، از یک کامپیوتر با ‏SplitCam پخش کنید و از گوشی خود به عنوان دوربین دوم استفاده کنید (‏SplitCam ورودی دوربین ‏IP را از گوشی‌ها می‌پذیرد).</p></details><details class="faq-item"><summary>آیا می‌توانم از ‏SplitCam به عنوان دوربین مجازی در ‏Boosty استفاده کنم؟</summary><p>بله — پخش زنده ‏Boosty در مرورگر اجرا می‌شود، بنابراین ‏SplitCam به عنوان یک وب‌کم با نام <strong>"‏SplitCam Video Driver"</strong> شناسایی می‌شود. پنل پخش‌کننده ‏Boosty را باز کنید، روی انتخابگر دوربین در مرورگر کلیک کنید و ‏SplitCam را انتخاب کنید. صحنه ترکیب‌شده شما (اورلی‌ها، دوربین دوم، فیلترها، پس‌زمینه هوش مصنوعی) به عنوان یک فید وب‌کم واحد به بینندگان می‌رسد.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">راهنماهای پلتفرم‌های دیگر</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam در ImLive</h4><p>تنظیم دوربین مجازی برای ImLive — بدون RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam روی SkyPrivate</h4><p>تنظیم دوربین مجازی برای تماس‌های cam مبتنی بر Skype در SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>پخش زنده JustForFans</h4><p>از SplitCam به‌عنوان دوربین مجازی در پخش‌کننده زنده JustForFans استفاده کنید.</p></a><a class="related-card" href="../fanvue/"><h4>پخش زنده Fanvue</h4><p>از SplitCam به‌عنوان دوربین مجازی برای پخش زنده Fanvue استفاده کنید.</p></a><a class="related-card" href="../chaturbate/"><h4>پخش Chaturbate</h4><p>تنظیم مبتنی بر توکن با رمزگذار خارجی در Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>پخش CAM4</h4><p>External Encoder در CAM4 با کنترل جغرافیایی.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">ادامه یادگیری</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>‏Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>‏SplitCam در مقابل OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>مدل کام شوید</h4></a>
+    <a class="related-card" href="../lovense/"><h4>‏Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>آماده پخش زنده هستید؟</h2>

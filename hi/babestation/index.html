@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam साइटें",
+     "item": "https://camstreamguide.com/hi/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Babestation",
      "item": "https://camstreamguide.com/hi/babestation/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">उत्तर</a>
+  <a href="#steps">चरण</a>
+  <a href="#tips">टिप्स</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">संबंधित गाइड</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">त्वरित उत्तर</div>
     <div class="qa-text">SplitCam के साथ Babestation पर ब्रॉडकास्ट करें: SplitCam इंस्टॉल करें, अपना सीन बनाएं, Performer Hub में <em>Broadcast Settings → External Encoder</em> खोलें, सर्वर URL और stream key कॉपी करें, SplitCam में पेस्ट करें, Go Live।</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">चरण दर चरण</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam डाउनलोड और इंस्टॉल करें</div><p class="step-p">SplitCam Windows और macOS के लिए मुफ़्त लाइव-स्ट्रीमिंग सॉफ़्टवेयर है — कोई साइनअप नहीं, कोई कार्ड नहीं, कोई वॉटरमार्क नहीं।</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">अपना सीन बनाएं</div><p class="step-p">SplitCam खोलें और अपना वेबकैम जोड़ें। ओवरले, टेक्स्ट, दूसरा कैमरा या अपना फ़ोन, ब्यूटी फ़िल्टर या AI बैकग्राउंड लेयर करें — अलग दिखने के लिए Babestation की TV-स्टूडियो प्रोडक्शन पॉलिश से मेल खाएं।</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Babestation से URL और stream key लें</div><p class="step-p">अपने Babestation परफ़ॉर्मर अकाउंट में लॉग इन करें, <strong>Performer Hub</strong> खोलें, <strong>Broadcast Settings → External Encoder</strong> पर जाएं। पेज एक <strong>सर्वर URL</strong> और यूनिक <strong>stream key</strong> दिखाता है। दोनों कॉपी करें।</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam को Babestation से कनेक्ट करें</div><p class="step-p">SplitCam में <strong>Stream Settings</strong> खोलें, Babestation सर्वर URL और stream key को कस्टम RTMP फ़ील्ड्स में पेस्ट करें। 1920×1080, 30 fps पर 3,500–6,000 Kbps सेट करें, 2-सेकंड कीफ़्रेम के साथ।</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live क्लिक करें</div><p class="step-p">SplitCam में <strong>Go Live</strong> दबाएं, फिर Performer Hub से ऑनलाइन हो जाएं। लगभग 10 सेकंड में आपकी स्ट्रीम Babestation की UK ऑडियंस तक पहुँचती है।</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">प्रो टिप्स</h2>
   <div class="tips-grid"><div class="tip-card"><h3>UK-पहले ऑडियंस और टाइमिंग</h3><p>Babestation का प्राइम ट्रैफ़िक UK की शाम / रात के घंटे (GMT/BST) हैं। अगर आप किसी और टाइमज़ोन में हैं, तो देर रात UK घंटों में ब्रॉडकास्ट करना इस नेटवर्क पर लोकल-प्राइम टाइमिंग से काफ़ी बेहतर परफ़ॉर्म करता है।</p></div><div class="tip-card"><h3>TV-स्टूडियो पॉलिश की उम्मीद</h3><p>Babestation का ब्रांड उसके TV चैनलों से जुड़ा है — दर्शक एक आम वेबकैम स्ट्रीम से ज़्यादा प्रोड्यूस्ड दिखने वाले सेट और लाइटिंग की उम्मीद करते हैं। SplitCam सीन (ओवरले, ब्रांडेड टेक्स्ट, AI बैकग्राउंड) प्लेटफ़ॉर्म के पॉलिश्ड लुक से मेल खाने में मदद करते हैं।</p></div><div class="tip-card"><h3>स्वतंत्र बनाम स्टूडियो परफ़ॉर्मर्स</h3><p>Babestation UK स्टूडियो और स्वतंत्र परफ़ॉर्मर्स दोनों के साथ काम करता है। External Encoder के ज़रिए कनेक्ट करने वाले स्वतंत्र ब्रॉडकास्टर्स को वही पेआउट मॉडल मिलता है जो स्टूडियो-फ़ेड कैमरों को।</p></div><div class="tip-card"><h3>वायर्ड कनेक्शन का उपयोग करें</h3><p>लंबे लाइव के दौरान Ethernet, Wi-Fi से बेहतर है — खोए हुए फ्रेम का मतलब खोई हुई टिप्स है। स्ट्रीमिंग PC से केबल कनेक्ट करें।</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">समस्या निवारण</h2><div class="faq-list"><details class="faq-item"><summary>Babestation स्ट्रीम रुक-रुक रही है या बफ़र हो रही है</summary><p>लगभग हमेशा बिटरेट आपके अपलोड से ज़्यादा सेट होता है। SplitCam का बिल्ट-इन स्पीड टेस्ट चलाएं, फिर बिटरेट मापे गए अपलोड का ~75% सेट करें — 1080p के लिए 3500–6000&nbsp;Kbps। जब एन्कोडर आपकी लाइन से ज़्यादा नहीं जाता तो रुकना बंद हो जाता है।</p></details><details class="faq-item"><summary>Babestation स्ट्रीम के दौरान फ्रेम खो रहे हैं</summary><p>खोए फ्रेम का मतलब है पैकेट समय पर Babestation नहीं पहुंचते — आमतौर पर अस्थिर Wi-Fi। वायर्ड Ethernet पर स्विच करें, बैंडविड्थ खाने वाले ऐप बंद करें और बिटरेट थोड़ा कम करें।</p></details><details class="faq-item"><summary>ब्लैक स्क्रीन — दर्शक Babestation पर वीडियो नहीं देख सकते</summary><p>आपका कैमरा SplitCam में एक्टिव सोर्स नहीं चुना गया, या कोई दूसरा ऐप इसे रोक रहा है। Zoom, Skype या OBS बंद करें, SplitCam में वेबकैम दोबारा चुनें।</p></details><details class="faq-item"><summary>Babestation स्ट्रीम की रिजेक्ट कर रहा है या कनेक्ट नहीं हो रहा</summary><p>स्ट्रीम की दोबारा कॉपी करें — अंत में स्पेस या पुरानी रीसेट की सबसे आम कारण हैं। सुनिश्चित करें सर्वर URL वही है जो Babestation दिखाता है।</p></details><details class="faq-item"><summary>Babestation पर कोई ऑडियो नहीं या ऑडियो सिंक नहीं है</summary><p>SplitCam को कैमरा और माइक्रोफ़ोन दोनों के रूप में चुनें, और SplitCam के ऑडियो सोर्स में अपना असली माइक्रोफ़ोन चुनें। अगर ऑडियो वीडियो से पीछे है, रेज़ॉल्यूशन एक स्तर कम करें।</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">अक्सर पूछे जाने वाले प्रश्न</h2>
   <div class="faq-list"><details class="faq-item"><summary>क्या Babestation SplitCam जैसे external encoders को सपोर्ट करता है?</summary><p>हाँ — Performer Hub में Broadcast Settings के तहत External Encoder विकल्प है। स्टैंडर्ड RTMP सर्वर URL और stream key; OBS, SplitCam, vMix सभी परफ़ॉर्मर वेरिफिकेशन पूरा होने के बाद कनेक्ट होते हैं।</p></details><details class="faq-item"><summary>मुझे अपना Babestation stream key कहाँ मिलेगा?</summary><p>Performer Hub → Broadcast Settings → External Encoder। सर्वर URL और stream key दोनों वहीं दिखते हैं — दोनों को SplitCam के कस्टम RTMP फ़ील्ड्स में कॉपी करें।</p></details><details class="faq-item"><summary>Babestation के लिए कौन सा bitrate इस्तेमाल करूँ?</summary><p>1920×1080 पर 30 fps, 3,500–6,000 Kbps के साथ 2-सेकंड कीफ़्रेम इंटरवल पुश करें। UK अपलोड बैंडविड्थ आम तौर पर मज़बूत है, फिर भी पहले SplitCam का स्पीड टेस्ट चलाएं।</p></details><details class="faq-item"><summary>क्या Babestation के साथ SplitCam मुफ़्त है?</summary><p>हाँ — SplitCam मुफ़्त है, कोई वॉटरमार्क नहीं और कोई समय सीमा नहीं। Babestation का external encoder विकल्प Performer Hub में मुफ़्त है।</p></details><details class="faq-item"><summary>Babestation पर मॉडल कितनी कमाई कर सकते हैं?</summary><p>Babestation पर कमाई दर्शकों की संख्या, स्ट्रीमिंग के घंटों और टिप देने के व्यवहार पर निर्भर करती है। सक्रिय ब्रॉडकास्टर आमतौर पर हर महीने $200–$3,000 कमाते हैं; शीर्ष कलाकार $10,000+ तक पहुँचते हैं। आपकी आय का हिस्सा Babestation की कमीशन संरचना के अनुसार होता है — लाइव होने से पहले मॉडल अनुबंध अवश्य देखें।</p></details><details class="faq-item"><summary>क्या Babestation ब्रॉडकास्टरों के लिए सुरक्षित है?</summary><p>Babestation भुगतान से पहले आयु और पहचान सत्यापन माँगता है, जो मॉडलों को धोखाधड़ी से बचाता है। स्टेज नाम का उपयोग करें, कैमरे पर कभी भी व्यक्तिगत डेटा साझा न करें, अपने घर के क्षेत्र से स्ट्रीम छिपाने के लिए geo-blocks सक्षम करें, और हर दर्शक के अनुरोध को लेन-देन के रूप में मानें। SplitCam के overlays और AI background आपके वास्तविक परिवेश को छिपाने या बदलने में भी मदद कर सकते हैं।</p></details><details class="faq-item"><summary>Babestation पर मॉडल बनने के लिए मुझे कौन से दस्तावेज़ चाहिए?</summary><p>Babestation को आमतौर पर सरकार द्वारा जारी फोटो आईडी (passport, driver's license या ID card), आईडी पकड़े हुए एक selfie, और एक tax/payout फॉर्म (अमेरिका के लिए W-9, गैर-अमेरिकी के लिए W-8BEN) की आवश्यकता होती है। स्वीकृति में आमतौर पर 24–72 घंटे लगते हैं; स्वीकृति मिलते ही आप उसी दिन लाइव हो सकते हैं।</p></details><details class="faq-item"><summary>क्या मैं अपने फोन से Babestation पर स्ट्रीम कर सकता हूँ?</summary><p>Babestation आमतौर पर एक mobile broadcaster app या mobile-web broadcaster प्रदान करता है, लेकिन अनुभव सीमित होता है — कोई overlays नहीं, कोई दूसरा कैमरा नहीं, कोई AI background नहीं। पूर्ण प्रोडक्शन क्वालिटी के लिए, SplitCam वाले कंप्यूटर से ब्रॉडकास्ट करें और अपने फोन को दूसरे कैमरे के रूप में उपयोग करें (SplitCam फोन से IP-camera input स्वीकार करता है)।</p></details><details class="faq-item"><summary>क्या Babestation OBS या किसी बाहरी encoder का समर्थन करता है?</summary><p>हाँ — Babestation broadcaster panel में एक RTMP server URL और एक stream key प्रदान करता है। दोनों को SplitCam के <strong>Stream Settings → Custom RTMP</strong> में paste करें, 1920×1080 को 30 fps और 4,000–5,000 Kbps bitrate पर सेट करें, और <strong>Go Live</strong> पर क्लिक करें। Custom RTMP रूट आपको पूर्ण SplitCam scene composition देता है (multi-camera, overlays, filters)।</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">दूसरे प्लेटफ़ॉर्म के गाइड</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate स्ट्रीम</h4><p>Chaturbate पर टोकन-बेस्ड सेटअप और एक्सटर्नल एन्कोडर।</p></a><a class="related-card" href="../cam4/"><h4>CAM4 स्ट्रीम</h4><p>CAM4 पर जियो-कंट्रोल के साथ External Encoder।</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams स्ट्रीम</h4><p>BongaCams के लिए External Encoder सेटअप।</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat स्ट्रीम</h4><p>Stripchat स्ट्रीमिंग के लिए एक्सटर्नल सॉफ़्टवेयर सेटअप।</p></a><a class="related-card" href="../imlive/"><h4>ImLive पर SplitCam</h4><p>ImLive के लिए वर्चुअल कैमरा सेटअप — RTMP नहीं।</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts जोड़ें</h4><p>MyFreeCams स्ट्रीम में एनिमेटेड टिप अलर्ट दिखाएं।</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">और सीखें</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam मॉडल बनें</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense टॉय</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>लाइव जाने के लिए तैयार हैं?</h2>

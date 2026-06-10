@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam oldalak",
+     "item": "https://camstreamguide.com/hu/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Babestation",
      "item": "https://camstreamguide.com/hu/babestation/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Válasz</a>
+  <a href="#steps">Lépések</a>
+  <a href="#tips">Tippek</a>
+  <a href="#faq">GYIK</a>
+  <a href="#related">Hasonló útmutatók</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Röviden</div>
     <div class="qa-text">Adás a Babestationön SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, a Performer Hubban megnyitod <em>Broadcast Settings → External Encoder</em>, kimásolod a server URL-t és stream key-t, beilleszted a SplitCambe, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Lépésről lépésre</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Töltsd le és telepítsd a SplitCamet</div><p class="step-p">A SplitCam ingyenes live-streaming szoftver Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Építsd meg a jelenetet</div><p class="step-p">Nyisd meg a SplitCamet és add hozzá a webkamerád. Rétegezz rá overlay-eket, szöveget, egy második kamerát vagy a telefonodat, beauty szűrőket vagy AI hátteret — illeszkedj a Babestation TV-stúdiós produkciós polírozottságához, hogy kitűnj.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Szerezd meg a Babestation URL-t és stream key-t</div><p class="step-p">Jelentkezz be a Babestation előadói fiókodba, nyisd meg a <strong>Performer Hub</strong>-ot, navigálj a <strong>Broadcast Settings → External Encoder</strong>-hez. Az oldal felfedi a <strong>server URL</strong>-t és az egyedi <strong>stream key</strong>-t. Másold mindkettőt.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Kösd össze a SplitCamet a Babestationnel</div><p class="step-p">A SplitCamben nyisd meg a <strong>Stream Settings</strong>-et, illeszd be a Babestation server URL-t és stream key-t az egyéni RTMP mezőkbe. Állítsd a bitrátát 3 500–6 000 Kbps-re 1920×1080-on, 30 fps-en, 2 másodperces keyframe-mel.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kattints Go Live-ra</div><p class="step-p">Nyomd meg a <strong>Go Live</strong>-ot a SplitCamben, majd menj online a Performer Hubból. Kb. 10 másodperc alatt eléri a streamed a Babestation UK közönségét.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>UK-első közönség és időzítés</h3><p>A Babestation csúcsforgalma a UK esti / éjszakai sávra esik (GMT/BST). Ha más időzónában vagy, a késő esti UK órákban adás jelentősen jobban teljesít, mint a helyi főidőben ezen a hálózaton.</p></div><div class="tip-card"><h3>Elvárt a TV-stúdiós polírozottság</h3><p>A Babestation márkája a TV-csatornáihoz kötődik — a nézők produktáltabb díszletet és világítást várnak, mint egy átlagos webkamerás streamtől. A SplitCam jelenetek (overlay-ek, márkázott szöveg, AI háttér) segítenek illeszkedni a platform polírozott esztétikájához.</p></div><div class="tip-card"><h3>Független vs stúdiós előadók</h3><p>A Babestation UK stúdiókkal és független előadókkal egyaránt dolgozik. Az External Encoderen csatlakozó független broadcasterek ugyanazt a kifizetési modellt kapják, mint a stúdiós kamerák.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A Babestation streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a Babestation adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a Babestation platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a Babestation platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A Babestation elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a Babestation által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a Babestation platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Támogatja a Babestation a külső enkódereket, mint a SplitCam?</summary><p>Igen — a Performer Hub tartalmaz egy External Encoder opciót a Broadcast Settings alatt. Standard RTMP server URL és stream key; OBS, SplitCam, vMix mind csatlakoznak az előadói verifikáció befejezése után.</p></details><details class="faq-item"><summary>Honnan kapom meg a Babestation stream key-emet?</summary><p>Performer Hub → Broadcast Settings → External Encoder. Mind a server URL, mind a stream key ott jelenik meg — másold mindkettőt a SplitCam egyéni RTMP mezőibe.</p></details><details class="faq-item"><summary>Milyen bitrátát használjak a Babestationhöz?</summary><p>Push 1920×1080-on, 30 fps-en, 3 500–6 000 Kbps, 2 másodperces keyframe-mel. A UK feltöltési sávszélesség általában erős, de először futtasd a SplitCam speed testjét.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a Babestationhöz?</summary><p>Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. A Babestation external encoder opciója ingyenes a Performer Hubban.</p></details><details class="faq-item"><summary>Mennyit kereshetnek a modellek a(z) Babestation oldalon?</summary><p>A(z) Babestation oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) Babestation jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést.</p></details><details class="faq-item"><summary>Biztonságos a(z) Babestation a műsorszóróknak?</summary><p>A(z) Babestation a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet.</p></details><details class="faq-item"><summary>Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) Babestation oldalon?</summary><p>A(z) Babestation általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz.</p></details><details class="faq-item"><summary>Streamelhetek a(z) Babestation oldalra a telefonomról?</summary><p>A(z) Babestation általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról).</p></details><details class="faq-item"><summary>Támogatja a(z) Babestation az OBS-t vagy külső enkódert?</summary><p>Igen — a(z) Babestation a broadcaster panelben megad egy RTMP szerver URL-t és egy stream kulcsot. Illeszd be mindkettőt a SplitCam <strong>Stream Settings → Custom RTMP</strong> menüjébe, állíts be 1920×1080-at 30 fps-en 4 000–5 000 Kbps bitrátával, majd kattints a <strong>Go Live</strong> gombra. A Custom RTMP útvonal teljes SplitCam jelenet-kompozíciót ad (több kamera, overlay, szűrők).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">További platform-útmutatók</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Adás Chaturbate</h4><p>Token-alapú beállítás külső enkóderrel a Chaturbate-en.</p></a><a class="related-card" href="../cam4/"><h4>Adás CAM4</h4><p>External Encoder a CAM4-en geo-kontrollokkal.</p></a><a class="related-card" href="../bongacams/"><h4>Adás BongaCams</h4><p>External Encoder beállítás a BongaCamshez.</p></a><a class="related-card" href="../stripchat/"><h4>Adás Stripchat</h4><p>Külső szoftver setup a Stripchat streamekhez.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam ImLive-on</h4><p>Virtuális kamera setup az ImLive-hoz — nincs RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts hozzáadás</h4><p>Animált tip alerts a MyFreeCams streamedben.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Tovább</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam modell leszek</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense játékok</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Készen állsz az élő adásra?</h2>

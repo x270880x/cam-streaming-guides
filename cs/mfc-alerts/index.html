@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Nástroje",
+     "item": "https://camstreamguide.com/cs/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/cs/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Odpověď</a>
+  <a href="#steps">Kroky</a>
+  <a href="#tips">Tipy</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Související průvodci</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Rychlá odpověď</div>
     <div class="qa-text">Přidání MFC Alerts se SplitCam: nainstalujte SplitCam, přidejte webkameru, otevřete kartu Browser a načtěte mfcalerts.com, zkopírujte svou URL upozornění, přidejte jako vrstvu Browser nad webkameru, poté otestujte testovacím tipem.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Krok za krokem</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Nainstalujte SplitCam a přidejte webkameru</div><p class="step-p">Nainstalujte SplitCam zdarma pro Windows nebo macOS, poté přidejte <strong>webkameru</strong> jako zdroj. MFC Alerts leží jako vrstva nad touto kamerou.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Otevřete kartu Browser a přejděte na mfcalerts.com</div><p class="step-p">Ve SplitCam otevřete kartu <strong>Browser</strong> a přejděte na <strong>www.mfcalerts.com</strong>. Přihlaste se nebo se zaregistrujte, pokud ještě nemáte účet mfcalerts.com.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Zkopírujte svou URL upozornění</div><p class="step-p">Na mfcalerts.com použijte <strong>Copy to clipboard</strong> ke zkopírování své soukromé URL upozornění — to je stránka, která vykresluje animace tipů.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Přidejte URL jako vrstvu Browser — nad webkameru</div><p class="step-p">Vložte URL do okna Browser SplitCam a klikněte na <strong>Add</strong>. Poté uspořádejte seznam zdrojů tak, aby <strong>MFC Alerts byl nad webkamerou</strong> (menu se 3 tečkami → Move Up). Pokud je pod ní, efekt zůstane skrytý.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Otestujte testovacím tipem</div><p class="step-p">Otevřete <strong>Settings → Send test tip</strong> a ujistěte se, že se efekt upozornění objeví nad kamerou. Poté vysílejte normálně na <a href="../myfreecams/" class="autolink">MyFreeCams</a> — skutečné tipy nyní spouštějí animace.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi tipy</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts musí být nad webkamerou</h3><p>Nejčastější chyba: pokud je vrstva MFC Alerts pod webkamerou v seznamu zdrojů, efekt zůstane skrytý. Posuňte ji nahoru.</p></div><div class="tip-card"><h3>Potřeba účet mfcalerts.com</h3><p>URL upozornění je soukromá — nejdřív se zaregistrujte na mfcalerts.com, pokud nemáte účet.</p></div><div class="tip-card"><h3>Pošlete testovací tip před vysíláním</h3><p>Použijte Settings → Send test tip, abyste se ujistili, že překryv funguje — neobjevujte chybu uprostřed show.</p></div><div class="tip-card"><h3>Použijte drátové připojení</h3><p>Ethernet poráží Wi-Fi při dlouhém vysílání — ztracené snímky znamenají ztracené tipy. Zapojte kabel do počítače, který vysílá.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Řešení problémů</h2><div class="faq-list"><details class="faq-item"><summary>Vysílání MFC Alerts se seká nebo bufferuje</summary><p>Téměř vždy je bitrate nastavený výš, než unese váš upload. Spusťte vestavěný test rychlosti SplitCam, poté nastavte bitrate na zhruba 75 % naměřeného uploadu — 3500–6000&nbsp;Kbps pro 1080p, méně pro 720p. Sekání zmizí, jakmile kodér přestane překračovat vaši linku.</p></details><details class="faq-item"><summary>Ztráta snímků během vysílání MFC Alerts</summary><p>Ztráta snímků znamená, že pakety nedorazí na MFC Alerts včas — obvykle nestabilní Wi-Fi. Přejděte na drátový Ethernet, zavřete aplikace požírající pásmo a mírně snižte bitrate. Jeden výkyv nevadí; trvalý nárůst znamená, že linka nestíhá.</p></details><details class="faq-item"><summary>Černá obrazovka — diváci nevidí video na MFC Alerts</summary><p>Vaše kamera není vybraná jako aktivní zdroj ve SplitCam, nebo ji drží jiná aplikace. Zavřete Zoom, Skype nebo OBS, vyberte webkameru znovu v seznamu zdrojů SplitCam a ujistěte se, že náhled ukazuje váš obraz, než stisknete Go Live.</p></details><details class="faq-item"><summary>MFC Alerts odmítá stream key nebo se nepřipojuje</summary><p>Zkopírujte stream key znovu — mezera na konci nebo starý, resetovaný klíč jsou nejčastější příčiny. Ujistěte se, že URL serveru odpovídá tomu, co MFC Alerts zobrazuje, a že vysílání externím kodérem je na účtu zapnuté. Zelený posuvník v Stream Settings SplitCam potvrzuje platný klíč.</p></details><details class="faq-item"><summary>Žádný zvuk nebo zvuk nesynchronní na MFC Alerts</summary><p>Vyberte SplitCam jako kameru I mikrofon a ve zdroji zvuku SplitCam vyberte svůj skutečný mikrofon. Pokud zvuk zaostává za videem, snižte rozlišení o úroveň — kodér je přetížený a zvuk čeká na opožděné snímky.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Časté dotazy</h2>
   <div class="faq-list"><details class="faq-item"><summary>Co je MFC Alerts?</summary><p>Systém upozornění pro <a href="../myfreecams/" class="autolink">MyFreeCams</a>, který zobrazuje video efekty ve vašem vysílání, když diváci posílají tipy — přidává se jako překryv Browser ve SplitCam.</p></details><details class="faq-item"><summary>Proč se mé MFC Alerts nezobrazují?</summary><p>Téměř vždy je to pořadí vrstev — vrstva Browser MFC Alerts musí být nad webkamerou v seznamu zdrojů SplitCam.</p></details><details class="faq-item"><summary>Potřebuji účet pro MFC Alerts?</summary><p>Ano — zaregistrujte se na mfcalerts.com, abyste získali svou soukromou URL upozornění.</p></details><details class="faq-item"><summary>Je SplitCam zdarma pro tohle?</summary><p>Ano — SplitCam je zdarma, bez vodoznaku a bez časového limitu, a prohlížečový překryv MFC Alerts v něm běží bez dalších nákladů.</p></details><details class="faq-item"><summary>Kolik si modelky můžou na MFC Alerts vydělat?</summary><p>Výdělky na MFC Alerts závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou MFC Alerts — před prvním vysíláním si projdi model agreement.</p></details><details class="faq-item"><summary>Je MFC Alerts pro vysílající bezpečná?</summary><p>MFC Alerts před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit.</p></details><details class="faq-item"><summary>Jaké dokumenty potřebuju, abych se na MFC Alerts stala modelkou?</summary><p>MFC Alerts obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den.</p></details><details class="faq-item"><summary>Můžu na MFC Alerts vysílat z mobilu?</summary><p>MFC Alerts většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Oficiální podpora — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Jsme nezávislý průvodce. S problémy s účtem, platbami nebo technikou se obraťte přímo na oficiální podporu platformy.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Návody pro jiné platformy</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Vysílání Chaturbate</h4><p>Nastavení založené na tokenu s externím kodérem na Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Vysílání CAM4</h4><p>External Encoder na CAM4 s geo kontrolou.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Pokračovat</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Stát se cam modelkou</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Připraveni jít živě?</h2>

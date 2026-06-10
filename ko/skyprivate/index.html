@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "팬 플랫폼",
+     "item": "https://camstreamguide.com/ko/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/ko/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">답변</a>
+  <a href="#steps">단계</a>
+  <a href="#tips">팁</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">관련 가이드</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">빠른 답변</div>
     <div class="qa-text">SkyPrivate × SplitCam 흐름: SplitCam 설치, 장면 구성, Skype와 SkyPrivate 애드온 설치, Skype의 <em>Video Settings</em>에서 카메라와 마이크를 SplitCam으로 설정, SkyPrivate 예약 콜 수신 — Skype가 합성된 장면을 고객에게 전달합니다.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">단계별 안내</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam 설치</div><p class="step-p">SplitCam은 Windows와 macOS용 무료 소프트웨어 — 가입 없음, 카드 없음, 워터마크 없음. SkyPrivate 흐름에서는 Skype가 일반 웹캠처럼 인식하는 <strong>가상 카메라</strong>로 동작합니다.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">SplitCam에서 장면 구성</div><p class="step-p">SplitCam을 열고 <strong>Media Layers +</strong>로 웹캠을 추가한 뒤 오버레이, 텍스트, 뷰티 필터, AI 배경을 올리세요. 이 합성 장면이 Skype를 통해 SkyPrivate 고객에게 전달됩니다.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Skype와 SkyPrivate 애드온 설치</div><p class="step-p">같은 PC에 Skype를 설치해 로그인하고, SkyPrivate 온보딩을 따라 SkyPrivate 애드온 / 데스크톱 앱을 설치하세요. 애드온이 SkyPrivate 측 분당 과금을 담당합니다.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Skype 카메라와 마이크를 SplitCam으로</div><p class="step-p">Skype에서 <strong>Settings → Audio &amp; Video</strong>를 열고 <strong>Camera = SplitCam</strong>, <strong>Microphone = SplitCam</strong>으로 설정. Skype 테스트 콜(Echo / Sound Test Service)로 영상과 사운드를 확인하세요.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">SkyPrivate 콜 받기</div><p class="step-p">SkyPrivate 고객이 유료 콜을 예약하면 Skype 콜로 수신됩니다 — 받으면 됩니다. 고객은 SplitCam에서 합성한 장면을 보고, SkyPrivate은 분당 과금합니다. 통화 중 장면 수정은 SplitCam에서 진행하면 Skype에 실시간 반영됩니다.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">프로 팁</h2>
   <div class="tips-grid"><div class="tip-card"><h3>RTMP 없음 — 가상 카메라 방식</h3><p>서버 URL이나 stream key를 찾지 마세요. SkyPrivate은 Skype 위에서 돌고, Skype는 SplitCam을 그냥 웹캠 디바이스로 인식합니다. SplitCam에서 장면을 만든 뒤 Skype 카메라 설정에서 SplitCam을 고르면 끝.</p></div><div class="tip-card"><h3>마이크도 SplitCam으로</h3><p>Skype의 Audio 설정에서 마이크도 SplitCam으로 — 그래야 노이즈 억제, 믹스된 오디오, 인트로 음악까지 고객에게 전달됩니다.</p></div><div class="tip-card"><h3>Skype 테스트 콜로 사전 점검</h3><p>첫 유료 SkyPrivate 콜을 받기 전, Skype 무료 테스트 콜(Echo / Sound Test Service)로 SplitCam이 현재 카메라이고 구도도 정상인지 확인하세요.</p></div><div class="tip-card"><h3>먼저 비공개로 테스트하세요</h3><p>시청자에게 방을 열기 전에 짧은 테스트 방송으로 카메라, 오디오, 화면 구도, 오버레이를 점검하세요.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">문제 해결</h2><div class="faq-list"><details class="faq-item"><summary>SkyPrivate 방송이 끊기거나 버퍼링됨</summary><p>거의 항상 비트레이트가 업로드가 감당할 수 있는 것보다 높게 설정된 경우입니다. SplitCam 내장 속도 테스트를 돌린 뒤 비트레이트를 측정된 업로드의 약 75%로 설정하세요 — 1080p에 3,500–6,000&nbsp;Kbps, 720p는 더 낮게. 인코더가 회선을 초과하지 않으면 끊김이 사라집니다.</p></details><details class="faq-item"><summary>SkyPrivate 방송 중 프레임 끊김</summary><p>프레임 끊김은 패킷이 SkyPrivate에 제때 도착하지 못한다는 뜻입니다 — 보통 불안정한 와이파이. 유선 이더넷으로 바꾸고 대역폭을 먹는 앱을 닫고 비트레이트를 약간 낮추세요. 한 번 튀는 건 괜찮지만 계속 늘면 회선이 못 따라가는 것입니다.</p></details><details class="faq-item"><summary>검은 화면 — 시청자가 SkyPrivate에서 영상을 못 봄</summary><p>카메라가 SplitCam에서 활성 소스로 선택되지 않았거나 다른 앱이 잡고 있습니다. Zoom, Skype, OBS를 닫고 SplitCam 소스 목록에서 웹캠을 다시 고르고 Go Live 전에 미리보기에 영상이 나오는지 확인하세요.</p></details><details class="faq-item"><summary>SkyPrivate이 스트림 키를 거부하거나 연결되지 않음</summary><p>스트림 키를 다시 복사하세요 — 끝의 공백이나 재설정된 오래된 키가 가장 흔한 원인입니다. 서버 URL이 SkyPrivate이 표시한 것과 일치하고 계정에 외부 인코더 방송이 켜져 있는지 확인하세요. SplitCam Stream Settings의 초록 슬라이더가 유효한 키를 확인해 줍니다.</p></details><details class="faq-item"><summary>SkyPrivate에서 소리가 없거나 음성이 어긋남</summary><p>SplitCam을 카메라 그리고 마이크로 모두 선택하고 SplitCam 오디오 소스 안에서 진짜 마이크를 고르세요. 오디오가 영상보다 뒤처지면 해상도를 한 단계 낮추세요 — 인코더가 과부하라 오디오가 늦은 프레임을 기다리는 것입니다.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">자주 묻는 질문</h2>
   <div class="faq-list"><details class="faq-item"><summary>SkyPrivate은 RTMP나 stream key를 쓰나요?</summary><p>둘 다 안 씁니다. SkyPrivate은 결제와 예약만 담당하고 실제 영상은 Skype로 흐릅니다. RTMP 서버 URL이나 stream key 없이 Skype 안에서 SplitCam을 카메라로 지정하기만 하면 됩니다.</p></details><details class="faq-item"><summary>Skype에서 SkyPrivate용으로 SplitCam은 어떻게 선택하나요?</summary><p>Skype의 Settings → Audio &amp; Video → Camera에서 SplitCam을 선택하고 마이크도 동일하게 설정하세요. SkyPrivate 콜은 일반 Skype 콜로 들어오며, 카메라 피드로 SplitCam에서 합성한 장면이 나갑니다.</p></details><details class="faq-item"><summary>SkyPrivate에서 오버레이나 뷰티 필터를 쓸 수 있나요?</summary><p>쓸 수 있습니다 — SplitCam 장면 안에서 만들어 두면 됩니다. Skype는 합성된 한 개의 카메라 피드만 받기 때문에, SplitCam에서 얹은 모든 것(오버레이, 뷰티, AI 배경, 멀티 카메라)이 SkyPrivate 고객에게 그대로 보입니다.</p></details><details class="faq-item"><summary>SplitCam은 SkyPrivate에서 무료인가요?</summary><p>네 — SplitCam은 무료, 워터마크 없음, 시간 제한 없음. Skype 기반 SkyPrivate 콜의 가상 카메라로 동작하며 콜에 별도 비용이나 브랜딩을 더하지 않습니다.</p></details><details class="faq-item"><summary>SkyPrivate에서 모델은 얼마나 벌 수 있나요?</summary><p>SkyPrivate에서의 수입은 시청자 규모, 방송 시간, 팁 문화에 따라 달라집니다. 활발한 방송인은 보통 월 $200~$3,000을 가져가며, 상위권은 $10,000 이상을 벌기도 합니다. 수익 배분은 SkyPrivate의 수수료 구조를 따르므로, 라이브 시작 전에 모델 계약서를 반드시 확인하세요.</p></details><details class="faq-item"><summary>SkyPrivate은(는) 방송인에게 안전한가요?</summary><p>SkyPrivate은(는) 지급 전에 연령 및 신분 확인을 요구하므로 모델을 사기로부터 보호합니다. 활동명을 사용하고, 카메라 앞에서 개인 정보를 절대 공유하지 말며, 지역 차단을 활성화해 본인이 거주하는 지역에서 방송이 보이지 않도록 하고, 모든 시청자 요청을 거래로 다루세요. SplitCam의 오버레이와 AI 배경 기능을 사용하면 실제 주변 환경을 가리거나 교체할 수도 있습니다.</p></details><details class="faq-item"><summary>SkyPrivate에서 모델이 되려면 어떤 서류가 필요한가요?</summary><p>SkyPrivate은(는) 일반적으로 정부 발급 사진 신분증(여권, 운전면허증 또는 신분증), 신분증을 들고 찍은 셀카, 그리고 세금/지급 양식(미국은 W-9, 미국 외 지역은 W-8BEN)을 요구합니다. 승인까지 보통 24~72시간이 걸리며, 승인되면 당일에 바로 라이브를 시작할 수 있습니다.</p></details><details class="faq-item"><summary>휴대폰으로 SkyPrivate에 방송할 수 있나요?</summary><p>SkyPrivate은(는) 보통 모바일 방송 앱이나 모바일 웹 방송 기능을 제공하지만, 오버레이, 보조 카메라, AI 배경이 없는 등 기능이 제한적입니다. 완전한 제작 품질을 원한다면 컴퓨터에서 SplitCam으로 방송하고, 휴대폰을 보조 카메라로 사용하세요(SplitCam은 휴대폰에서 IP 카메라 입력을 받을 수 있습니다).</p></details><details class="faq-item"><summary>SkyPrivate에서 SplitCam을 가상 카메라로 사용할 수 있나요?</summary><p>네 — SkyPrivate의 라이브는 브라우저에서 실행되므로, SplitCam은 <strong>"SplitCam Video Driver"</strong>라는 이름의 웹캠으로 인식됩니다. SkyPrivate 방송인 패널을 열고 브라우저의 카메라 선택기를 클릭한 뒤 SplitCam을 고르세요. 구성한 장면(오버레이, 보조 카메라, 필터, AI 배경)이 하나의 웹캠 피드로 시청자에게 전달됩니다.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">다른 플랫폼 가이드</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>ImLive의 SplitCam</h4><p>ImLive를 위한 가상 카메라 설정 — RTMP 없음.</p></a><a class="related-card" href="../justforfans/"><h4>JustForFans 라이브</h4><p>JustForFans 라이브 방송기에서 SplitCam을 가상 카메라로 사용.</p></a><a class="related-card" href="../fanvue/"><h4>Fanvue 라이브</h4><p>Fanvue 라이브를 위한 SplitCam 가상 카메라 활용.</p></a><a class="related-card" href="../loyalfans/"><h4>LoyalFans 라이브</h4><p>LoyalFans 라이브를 위한 SplitCam 가상 카메라 활용.</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">더 배우기</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>다중 송출</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>캠 모델 되기</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense 토이</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>라이브 방송 준비됐나요?</h2>

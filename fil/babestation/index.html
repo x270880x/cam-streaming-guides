@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam sites",
+     "item": "https://camstreamguide.com/fil/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Babestation",
      "item": "https://camstreamguide.com/fil/babestation/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Sagot</a>
+  <a href="#steps">Mga hakbang</a>
+  <a href="#tips">Mga tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Kaugnay na gabay</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Mabilis na sagot</div>
     <div class="qa-text">Mag-broadcast sa Babestation gamit ang SplitCam: i-install ang SplitCam, buuin ang scene, sa Performer Hub buksan ang <em>Broadcast Settings → External Encoder</em>, kopyahin ang server URL at stream key, i-paste sa SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Hakbang-hakbang</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">I-download at i-install ang SplitCam</div><p class="step-p">Ang SplitCam ay libreng live-streaming software para sa Windows at macOS — walang sign-up, walang card, walang watermark.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Buuin ang scene mo</div><p class="step-p">Buksan ang SplitCam at idagdag ang webcam. Maglagay ng overlays, text, second camera o phone mo, beauty filters o AI background — tumugma sa TV-studio production polish ng Babestation para mamukod-tangi.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Kunin ang Babestation URL at stream key</div><p class="step-p">Mag-log in sa performer account ng Babestation, buksan ang <strong>Performer Hub</strong>, pumunta sa <strong>Broadcast Settings → External Encoder</strong>. Ipinapakita ng pahina ang <strong>server URL</strong> at unique na <strong>stream key</strong>. Kopyahin pareho.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">I-connect ang SplitCam sa Babestation</div><p class="step-p">Sa SplitCam buksan ang <strong>Stream Settings</strong>, i-paste ang Babestation server URL at stream key sa custom RTMP fields. Itakda ang bitrate sa 3,500–6,000 Kbps sa 1920×1080, 30 fps, na may 2-second keyframe interval.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">I-click ang Go Live</div><p class="step-p">Pindutin ang <strong>Go Live</strong> sa SplitCam, pagkatapos mag-online mula sa Performer Hub. Sa loob ng ~10 segundo aabot sa UK audience ng Babestation ang stream mo.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>UK-first na audience at timing</h3><p>Pinakamaraming traffic ng Babestation ay sa gabi / madaling-araw sa UK (GMT/BST). Kung nasa ibang time zone ka, malaki ang lamang ng pag-broadcast sa late-night UK hours kaysa sa local-prime timing sa network na ito.</p></div><div class="tip-card"><h3>Inaasahan ang TV-studio polish</h3><p>Nakatali sa TV channels nito ang brand ng Babestation — umaasa ang manonood ng mas produced-looking na set at lighting kaysa sa karaniwang webcam stream. Tumutulong ang SplitCam scenes (overlays, branded text, AI background) na tumugma sa makinis na aesthetic ng platform.</p></div><div class="tip-card"><h3>Independent vs studio performers</h3><p>Nakikipagtulungan ang Babestation sa parehong UK studio at independent na performer. Ang mga independent broadcaster na kumokonekta sa pamamagitan ng External Encoder ay nakakakuha ng kaparehong payout model gaya ng studio-fed cameras.</p></div><div class="tip-card"><h3>Gamitin ang wired connection</h3><p>Talo ng Ethernet ang Wi-Fi sa mahabang stream — ang naturang frame ay nawawalang tip. Maglagay ng cable papunta sa stream PC.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang Babestation stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa Babestation</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Babestation sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa Babestation</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng Babestation ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Babestation at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa Babestation</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng Babestation ang external encoders tulad ng SplitCam?</summary><p>Oo — may External Encoder option ang Performer Hub sa ilalim ng Broadcast Settings. Standard RTMP server URL at stream key; OBS, SplitCam, vMix lahat ay konektado matapos makumpleto ang performer verification.</p></details><details class="faq-item"><summary>Saan ko makukuha ang Babestation stream key ko?</summary><p>Performer Hub → Broadcast Settings → External Encoder. Lumalabas doon ang server URL at stream key — kopyahin pareho sa custom RTMP fields ng SplitCam.</p></details><details class="faq-item"><summary>Anong bitrate para sa Babestation?</summary><p>Itulak ang 1920×1080 sa 30 fps, 3,500–6,000 Kbps na may 2-second keyframe interval. Karaniwang malakas ang UK upload bandwidth, pero patakbuhin muna ang speed test ng SplitCam.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa Babestation?</summary><p>Oo — libre ang SplitCam, walang watermark at walang time limit. Libre rin ang external encoder option ng Babestation sa Performer Hub.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa Babestation?</summary><p>Ang kita sa Babestation ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng Babestation — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang Babestation para sa mga broadcaster?</summary><p>Nangangailangan ang Babestation ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa Babestation?</summary><p>Karaniwang nangangailangan ang Babestation ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa Babestation mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang Babestation ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details><details class="faq-item"><summary>Sinusuportahan ba ng Babestation ang OBS o panlabas na encoder?</summary><p>Oo — nagbibigay ang Babestation ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa <strong>Stream Settings → Custom RTMP</strong> ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang <strong>Go Live</strong>. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Iba pang gabay sa platform</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams broadcast</h4><p>External Encoder setup para sa BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat broadcast</h4><p>External software setup para sa Stripchat streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam sa ImLive</h4><p>Virtual camera setup para sa ImLive — walang RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Idagdag ang MFC Alerts</h4><p>Ipakita ang mga animated na tip alerts sa MyFreeCams stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Magpatuloy</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Maging cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mga laruang Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Handa nang mag-live?</h2>

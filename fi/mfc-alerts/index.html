@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Työkalut",
+     "item": "https://camstreamguide.com/fi/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/fi/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Vastaus</a>
+  <a href="#steps">Vaiheet</a>
+  <a href="#tips">Vinkit</a>
+  <a href="#faq">UKK</a>
+  <a href="#related">Aiheeseen liittyvät</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Lyhyesti</div>
     <div class="qa-text">MFC Alertsien lisääminen SplitCamilla: asenna SplitCam, lisää webkamera, avaa Browser-välilehti ja lataa mfcalerts.com, kopioi alerts-URL, lisää Browser-kerroksena webkameran päälle, sitten testaa testi-tippillä.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vaihe vaiheelta</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Asenna SplitCam ja lisää webkamera</div><p class="step-p">Asenna ilmainen SplitCam Windowsille tai macOS:lle, sitten lisää <strong>webkamera</strong> lähteeksi. MFC Alerts istuu kerroksena tämän kameran päällä.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Avaa Browser-välilehti ja mene mfcalerts.com:iin</div><p class="step-p">SplitCamissa avaa <strong>Browser</strong>-välilehti ja navigoi <strong>www.mfcalerts.com</strong>:iin. Kirjaudu sisään tai rekisteröidy, jos sinulla ei vielä ole mfcalerts.com-tiliä.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Kopioi alerts-URL</div><p class="step-p">Mfcalerts.com:issa käytä <strong>Copy to clipboard</strong>:ia kopioidaksesi henkilökohtainen alerts-URL — se on sivu, joka renderöi tip-animaatiot.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Lisää URL Browser-kerroksena — webkameran päälle</div><p class="step-p">Liitä URL SplitCamin Browser-ikkunaan ja klikkaa <strong>Add</strong>. Sitten järjestele lähdeluettelo siten, että <strong>MFC Alerts on webkameran päällä</strong> (3-pisteinen valikko → Move Up). Jos se istuu alla, efektit pysyvät piilossa.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Testaa testi-tipillä</div><p class="step-p">Avaa <strong>Settings → Send test tip</strong> ja vahvista, että alert-efekti ilmestyy kameran päälle. Sitten lähetä normaalisti <a href="../myfreecams/" class="autolink">MyFreeCams</a>:iin — todelliset tipit laukaisevat nyt animaatiot.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts on oltava webkameran päällä</h3><p>Yleisin virhe: jos MFC Alerts -kerros on webkameran alla lähdeluettelossa, efektit pysyvät piilossa. Siirrä ylös.</p></div><div class="tip-card"><h3>Mfcalerts.com-tili vaadittu</h3><p>Alerts-URL on henkilökohtainen — rekisteröidy mfcalerts.com:iin ensin, jos sinulla ei ole tiliä.</p></div><div class="tip-card"><h3>Lähetä testi-tip ennen liveä</h3><p>Käytä Settings → Send test tip vahvistaaksesi, että overlay toimii — älä löydä virhettä show:n keskellä.</p></div><div class="tip-card"><h3>Käytä kaapeliyhteyttä</h3><p>Ethernet voittaa Wi-Fin pitkässä striimissä — kadonnut frame on menetetty tip. Vedä kaapeli stream-PC:lle.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>MFC Alerts-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja MFC Alerts-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle MFC Alerts ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla MFC Alerts</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>MFC Alerts hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan MFC Alerts näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla MFC Alerts</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Mikä on MFC Alerts?</summary><p>Ilmoitusjärjestelmä MyFreeCamsille, joka näyttää videoefektejä streamissäsi, kun katsojat lähettävät tippejä — lisätään Browser-overlaynä SplitCamissa.</p></details><details class="faq-item"><summary>Miksi MFC Alertsini eivät näy?</summary><p>Lähes aina kerrosjärjestys — MFC Alerts Browser -kerroksen on oltava webkameran päällä SplitCamin lähdeluettelossa.</p></details><details class="faq-item"><summary>Tarvitsenko tilin MFC Alertsiin?</summary><p>Kyllä — rekisteröidy mfcalerts.com:iin saadaksesi henkilökohtainen alerts-URL.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen tähän?</summary><p>Kyllä — SplitCam on ilmainen, ilman vesileimaa ja ilman aikarajaa, ja MFC Alerts browser-overlay toimii siinä ilman lisäkustannuksia.</p></details><details class="faq-item"><summary>Kuinka paljon mallit voivat ansaita alustalla MFC Alerts?</summary><p>Ansiot alustalla MFC Alerts riippuvat yleisön koosta, lähetystunneista ja tippauskäyttäytymisestä. Aktiiviset lähettäjät tienaavat tyypillisesti 200–3 000 dollaria kuukaudessa; huippusuorittajat yltävät yli 10 000 dollariin. Tuottosi osuus noudattaa MFC Alerts-alustan palkkiorakennetta — tarkista mallisopimus ennen suoran lähetyksen aloittamista.</p></details><details class="faq-item"><summary>Onko MFC Alerts turvallinen lähettäjille?</summary><p>MFC Alerts edellyttää iän ja henkilöllisyyden varmennusta ennen maksua, mikä suojaa malleja petoksilta. Käytä taiteilijanimeä, älä koskaan jaa henkilötietoja kameralla, ota käyttöön geo-estot piilottaaksesi lähetyksesi kotialueeltasi ja käsittele jokainen katsojan pyyntö kaupallisena. SplitCamin overlayt ja tekoälytausta voivat myös piilottaa tai korvata todellisen ympäristösi.</p></details><details class="faq-item"><summary>Mitä dokumentteja tarvitsen tullakseni malliksi alustalle MFC Alerts?</summary><p>MFC Alerts vaatii tyypillisesti viranomaisen myöntämän valokuvallisen henkilöllisyystodistuksen (passi, ajokortti tai henkilökortti), selfien henkilöllisyystodistuksen kanssa sekä vero-/maksulomakkeen (W-9 Yhdysvalloissa, W-8BEN muille). Hyväksyntä kestää yleensä 24–72 tuntia; hyväksynnän jälkeen voit aloittaa suorat lähetykset samana päivänä.</p></details><details class="faq-item"><summary>Voinko lähettää alustalle MFC Alerts puhelimestani?</summary><p>MFC Alerts tarjoaa yleensä mobiilisovelluksen lähettäjille tai mobiiliverkkolähettäjän, mutta kokemus on rajallinen — ei overlayta, ei toista kameraa, ei tekoälytaustaa. Täyden tuotantolaadun saavuttamiseksi lähetä tietokoneelta SplitCamilla ja käytä puhelinta toisena kamerana (SplitCam hyväksyy IP-kamerasyötteen puhelimista).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Virallinen tuki — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Olemme riippumaton opas. Tili-, maksu- tai teknisten ongelmien yhteydessä ota suoraan yhteyttä alustan viralliseen tukeen.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Muut alustaoppaat</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Lähetys Chaturbate</h4><p>Token-pohjainen asetus ulkoisella enkooderilla Chaturbatessa.</p></a><a class="related-card" href="../cam4/"><h4>Lähetys CAM4</h4><p>External Encoder CAM4:ssä geo-hallinnoilla.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Lue lisää</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-stream</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-malliksi</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-lelut</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Valmis lähetykseen?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Strony cam",
+     "item": "https://camstreamguide.com/pl/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "XCams",
      "item": "https://camstreamguide.com/pl/xcams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Odpowiedź</a>
+  <a href="#steps">Kroki</a>
+  <a href="#tips">Wskazówki</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Powiązane poradniki</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Szybka odpowiedź</div>
     <div class="qa-text">Transmisja na XCams ze SplitCam: zainstaluj SplitCam, zbuduj scenę, w strefie modelki otwórz <em>transmisję / enkoder zewnętrzny</em>, skopiuj URL serwera i stream key, wklej w SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Krok po kroku</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Pobierz i zainstaluj SplitCam</div><p class="step-p">SplitCam to darmowe oprogramowanie do transmisji na żywo dla Windows i macOS — bez rejestracji, bez karty, bez znaku wodnego.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Zbuduj scenę</div><p class="step-p">Otwórz SplitCam i dodaj kamerę. Dorzuć nakładki, teksty, drugą kamerę albo telefon, filtry beauty albo tło AI.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Pobierz URL i stream key XCams</div><p class="step-p">Zaloguj się na konto modelki XCams, otwórz <strong>transmisję / enkoder zewnętrzny</strong> i skopiuj <strong>URL serwera</strong> oraz <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Podłącz SplitCam do XCams</div><p class="step-p">W SplitCam otwórz <strong>Stream Settings</strong>, wklej URL serwera i stream key XCams w niestandardowych polach RTMP. Ustaw 3500–6000 Kbps przy 1920×1080, 30 fps, klatka kluczowa co 2 sekundy.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kliknij Go Live</div><p class="step-p">Naciśnij <strong>Go Live</strong> w SplitCam, potem przejdź online ze strefy modelki. W około 10 sekund twój sygnał dociera do publiczności XCams.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Wskazówki dla profesjonalistów</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Europejski prime time</h3><p>Ruch XCams kulminuje w europejskie wieczory (CET). Nadawanie w tych godzinach znacząco bije czas poza szczytem w tej społeczności.</p></div><div class="tip-card"><h3>Prywatne pokazy nagradzają jakość</h3><p>XCams stoi na pokazach prywatnych / spy — dopracowana scena SplitCam z nakładkami zamienia przeglądających w płatne prywatne pokazy.</p></div><div class="tip-card"><h3>Enkoder zewnętrzny odblokowuje sceny</h3><p>Przejście przez RTMP SplitCam zamiast kamerki w przeglądarce włącza układy wielokamerowe, nakładki i filtry.</p></div><div class="tip-card"><h3>Użyj połączenia przewodowego</h3><p>Ethernet bije Wi-Fi przy długich transmisjach — zgubione klatki to zgubione napiwki. Podłącz kabel do komputera nadającego.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Rozwiązywanie problemów</h2><div class="faq-list"><details class="faq-item"><summary>Transmisja XCams się tnie lub buforuje</summary><p>Niemal zawsze bitrate jest ustawiony wyżej, niż udźwignie twój upload. Uruchom wbudowany test prędkości SplitCam, potem ustaw bitrate na około 75% zmierzonego uploadu — 3500–6000&nbsp;Kbps dla 1080p, niżej dla 720p. Cięcia znikają, gdy enkoder przestaje przekraczać twoje łącze.</p></details><details class="faq-item"><summary>Zgubione klatki podczas transmisji XCams</summary><p>Zgubione klatki oznaczają, że pakiety nie docierają do XCams na czas — zwykle niestabilne Wi-Fi. Przejdź na przewodowy Ethernet, zamknij aplikacje pożerające pasmo i nieco obniż bitrate. Pojedynczy skok to nic; ciągły wzrost oznacza, że łącze nie nadąża.</p></details><details class="faq-item"><summary>Czarny ekran — widzowie nie widzą wideo na XCams</summary><p>Twoja kamera nie jest wybrana jako aktywne źródło w SplitCam albo trzyma ją inna aplikacja. Zamknij Zoom, Skype lub OBS, wybierz ponownie kamerę na liście źródeł SplitCam i upewnij się, że podgląd pokazuje twój obraz, zanim naciśniesz Go Live.</p></details><details class="faq-item"><summary>XCams odrzuca klucz streamu lub się nie łączy</summary><p>Skopiuj klucz streamu ponownie — spacja na końcu albo stary, zresetowany klucz to najczęstsze przyczyny. Upewnij się, że URL serwera zgadza się z tym, co pokazuje XCams, a transmisja enkoderem zewnętrznym jest włączona na koncie. Zielony suwak w Stream Settings SplitCam potwierdza ważny klucz.</p></details><details class="faq-item"><summary>Brak dźwięku lub dźwięk niezsynchronizowany na XCams</summary><p>Wybierz SplitCam jako kamerę I mikrofon, a w źródle dźwięku SplitCam wybierz swój prawdziwy mikrofon. Jeśli dźwięk opóźnia się względem wideo, obniż rozdzielczość o jeden poziom — enkoder jest przeciążony i dźwięk czeka na spóźnione klatki.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Czy XCams wspiera zewnętrzne enkodery jak SplitCam?</summary><p>Tak — strefa modelki udostępnia standardową ścieżkę enkodera zewnętrznego / RTMP. Skopiuj URL serwera i stream key do SplitCam po weryfikacji.</p></details><details class="faq-item"><summary>Gdzie znajdę stream key XCams?</summary><p>W ustawieniach transmisji / enkodera zewnętrznego w strefie modelki — zarówno URL serwera, jak i stream key pojawiają się tam. Wklej oba do niestandardowych pól RTMP w SplitCam.</p></details><details class="faq-item"><summary>Jaki bitrate dla XCams?</summary><p>Wypchnij 1920×1080 przy 30 fps, 3500–6000 Kbps, klatka kluczowa co 2 sekundy. Najpierw uruchom test prędkości SplitCam.</p></details><details class="faq-item"><summary>Czy SplitCam jest darmowy do XCams?</summary><p>Tak — SplitCam jest darmowy, bez znaku wodnego i bez limitu czasu. Opcja enkodera zewnętrznego XCams jest darmowa w strefie modelki.</p></details><details class="faq-item"><summary>Ile modelki mogą zarobić na XCams?</summary><p>Zarobki na XCams zależą od wielkości widowni, liczby godzin transmisji i hojności napiwków. Aktywni nadawcy zwykle zarabiają 200–3 000 USD miesięcznie; topowi performerzy osiągają 10 000 USD i więcej. Twój udział w przychodach wynika ze struktury prowizji XCams — sprawdź umowę modelki przed wejściem na żywo.</p></details><details class="faq-item"><summary>Czy XCams jest bezpieczne dla nadawców?</summary><p>XCams wymaga weryfikacji wieku i dokumentu tożsamości przed wypłatą, co chroni modelki przed oszustwami. Używaj pseudonimu scenicznego, nigdy nie udostępniaj danych osobowych przed kamerą, włącz geo-blokady, aby ukryć transmisję przed mieszkańcami swojego regionu, i traktuj każde życzenie widza jako transakcję. Nakładki i tło AI w SplitCam pomogą też ukryć lub zastąpić Twoje prawdziwe otoczenie.</p></details><details class="faq-item"><summary>Jakie dokumenty są potrzebne, aby zostać modelką na XCams?</summary><p>XCams zwykle wymaga rządowego dokumentu tożsamości ze zdjęciem (paszport, prawo jazdy lub dowód osobisty), selfie z dokumentem w ręku oraz formularza podatkowego/wypłat (W-9 dla USA, W-8BEN poza USA). Akceptacja trwa zwykle 24–72 godziny; po zatwierdzeniu możesz wejść na żywo tego samego dnia.</p></details><details class="faq-item"><summary>Czy mogę nadawać na XCams z telefonu?</summary><p>XCams zwykle oferuje mobilną aplikację dla nadawców lub mobilną wersję webową, ale doświadczenie jest ograniczone — bez nakładek, drugiej kamery i tła AI. Dla pełnej jakości produkcji nadawaj z komputera w SplitCam, a telefonu używaj jako drugiej kamery (SplitCam przyjmuje sygnał z telefonu jako IP-camera).</p></details><details class="faq-item"><summary>Czy XCams obsługuje OBS lub zewnętrzny enkoder?</summary><p>Tak — XCams udostępnia adres serwera RTMP i klucz transmisji w panelu nadawcy. Wklej oba do SplitCam w <strong>Stream Settings → Custom RTMP</strong>, ustaw 1920×1080 przy 30 fps i bitrate 4 000–5 000 Kbps, a następnie kliknij <strong>Go Live</strong>. Ścieżka Custom RTMP daje pełną kompozycję sceny w SplitCam (multi-kamera, nakładki, filtry).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Poradniki dla innych platform</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisja Chaturbate</h4><p>Konfiguracja oparta na tokenie z enkoderem zewnętrznym na Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisja CAM4</h4><p>External Encoder na CAM4 z kontrolą geo.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisja BongaCams</h4><p>Konfiguracja External Encoder dla BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Transmisja Stripchat</h4><p>Konfiguracja oprogramowania zewnętrznego dla transmisji Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam na ImLive</h4><p>Konfiguracja kamery wirtualnej dla ImLive — bez RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Dodaj MFC Alerts</h4><p>Pokaż animowane alerty napiwków w transmisji MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Czytaj dalej</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Zostań cam modelką</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Gotowy, by wejść na żywo?</h2>

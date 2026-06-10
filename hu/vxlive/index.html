@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam oldalak",
+     "item": "https://camstreamguide.com/hu/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "VXLive",
      "item": "https://camstreamguide.com/hu/vxlive/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Válasz</a>
+  <a href="#steps">Lépések</a>
+  <a href="#tips">Tippek</a>
+  <a href="#faq">GYIK</a>
+  <a href="#related">Hasonló útmutatók</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Röviden</div>
     <div class="qa-text">Adás a VXLive-on SplitCammel: telepíted a SplitCamet, jelenetet építesz, VXLive-on választod «Stream with third-party software»-t, másolod a szerver URL-t és a kulcsot, a SplitCamben kiválasztod a VISIT-X presetet és beilleszted, Go Live a SplitCamben, majd GO ONLINE a VXLive-on.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Lépésről lépésre</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Töltsd le és telepítsd a SplitCamet</div><p class="step-p">A SplitCam ingyenes streamelő szoftver Windowsra és macOS-re. Töltsd le és futtasd a telepítőt — regisztráció, kártya, vízjel és időkorlát nélkül. A SplitCam az enkóder, amely a videódat a VXLive felé küldi.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Állítsd be a kamerát és a jelenetet</div><p class="step-p">Nyisd meg a SplitCamet és add hozzá a webkamerát. Építsd fel a jelenetet úgy, ahogy a nézők látni fogják — overlay-ek, szöveg, második kamera vagy a telefon, szépségszűrők vagy AI háttér. Minden élőben alkalmazódik, mielőtt a stream elhagyná a gépet.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Szerezd meg a VXLive stream kulcsodat</div><p class="step-p">VXLive-on válaszd <strong>Stream with third-party software</strong>-t és válaszd az <strong>OBS, SplitCam vagy XSplit</strong> opciót. A VXLive <strong>szerver URL</strong>-t és <strong>stream key</strong>-t biztosít. A SplitCamben válaszd <strong>VISIT-X</strong>-et streaming platformként, illeszd be mindkettőt, nyomd meg <strong>Go Live</strong>-ot a SplitCamben, majd <strong>GO ONLINE</strong>-ot a VXLive-on.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Csatlakoztasd a SplitCamet a VXLive platformhoz</div><p class="step-p">A SplitCamben nyisd meg a <strong>Stream Settings</strong> menüt, illeszd be a VXLive szerver URL-t és a stream kulcsot a custom RTMP mezőkbe. Bitráta: 3500–6000&nbsp;Kbps 1080p-hez, 2000–4000&nbsp;Kbps 720p-hez. Először futtasd le a beépített sebességtesztet.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kattints a Go Live gombra</div><p class="step-p">Nyomd meg a <strong>Go Live</strong> gombot a SplitCamben, majd indítsd el az adást a VXLive oldalon. ~10 másodperc alatt élőben vagy. A következő streamek egy kattintással indulnak — megnyitod a SplitCamet, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>VISIT-X integrált preset</h3><p>Ne gépelj nyers RTMP URL-t — a SplitCamnek van VISIT-X-je a platform listában; csak kiválasztod és beilleszted a szerver URL-t és kulcsot.</p></div><div class="tip-card"><h3>Két lépéses go-live</h3><p>A VXLive-on először Go Live a SplitCamben, majd GO ONLINE a VXLive-on — mindkettő, ebben a sorrendben.</p></div><div class="tip-card"><h3>Német piac</h3><p>A VXLive közönsége túlnyomórészt német nyelvű — német szöveg overlay vagy cím segít kapcsolódni a nézőkkel.</p></div><div class="tip-card"><h3>Használj vezetékes kapcsolatot</h3><p>Az Ethernet veri a Wi-Fit egy hosszú streamben — egy elveszett frame elveszett tip. Húzz kábelt a stream PC-ig.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A VXLive streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a VXLive adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a VXLive platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a VXLive platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A VXLive elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a VXLive által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a VXLive platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hivatalosan támogatja a VXLive a SplitCamet?</summary><p>Igen — a VXModels (VXLive) dedikált hivatalos súgócikket tart fenn a SplitCam beállításhoz és a SplitCamet listázza OBS és XSplit mellett mint támogatott broadcasting szoftvert.</p></details><details class="faq-item"><summary>Hogyan csatlakoztatom a SplitCamet a VXLive-hoz?</summary><p>VXLive-on válaszd «Stream with third-party software»-t, majd a SplitCamben válaszd a VISIT-X presetet és illeszd be a VXLive által adott szerver URL-t és stream key-t.</p></details><details class="faq-item"><summary>A SplitCamben vagy a VXLive-on megyek élőben?</summary><p>Mindkettőben — először Go Live a SplitCamben, majd GO ONLINE a VXLive-on.</p></details><details class="faq-item"><summary>Miért ajánlja a VXModels a SplitCamet?</summary><p>A VXModels hivatalos súgócikke kifejezetten a webkamera képi artifaktumainak és pixelesedésének kiküszöbölése és a kapcsolat stabilizálása érdekében ajánlja a SplitCamet — nem csak általános enkóderként.</p></details><details class="faq-item"><summary>Mennyit kereshetnek a modellek a(z) VXLive oldalon?</summary><p>A(z) VXLive oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) VXLive jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést.</p></details><details class="faq-item"><summary>Biztonságos a(z) VXLive a műsorszóróknak?</summary><p>A(z) VXLive a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet.</p></details><details class="faq-item"><summary>Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) VXLive oldalon?</summary><p>A(z) VXLive általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz.</p></details><details class="faq-item"><summary>Streamelhetek a(z) VXLive oldalra a telefonomról?</summary><p>A(z) VXLive általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról).</p></details><details class="faq-item"><summary>Támogatja a(z) VXLive az OBS-t vagy külső enkódert?</summary><p>Igen — a(z) VXLive a broadcaster panelben megad egy RTMP szerver URL-t és egy stream kulcsot. Illeszd be mindkettőt a SplitCam <strong>Stream Settings → Custom RTMP</strong> menüjébe, állíts be 1920×1080-at 30 fps-en 4 000–5 000 Kbps bitrátával, majd kattints a <strong>Go Live</strong> gombra. A Custom RTMP útvonal teljes SplitCam jelenet-kompozíciót ad (több kamera, overlay, szűrők).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Hivatalos támogatás — VXLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://helpcenter.vxmodels.com/" rel="nofollow noopener" target="_blank">https://helpcenter.vxmodels.com/</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🎫</span><a href="https://support.vxmodels.com/" rel="nofollow noopener" target="_blank">https://support.vxmodels.com/</a></li></ul><p class="sp-note">Független útmutató vagyunk. Fiók-, fizetési vagy technikai problémák esetén lépj kapcsolatba közvetlenül a platform hivatalos támogatásával.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">További platform-útmutatók</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Adás Chaturbate</h4><p>Token-alapú beállítás külső enkóderrel a Chaturbate-en.</p></a><a class="related-card" href="../cam4/"><h4>Adás CAM4</h4><p>External Encoder a CAM4-en geo-kontrollokkal.</p></a><a class="related-card" href="../bongacams/"><h4>Adás BongaCams</h4><p>External Encoder beállítás a BongaCamshez.</p></a><a class="related-card" href="../stripchat/"><h4>Adás Stripchat</h4><p>Külső szoftver setup a Stripchat streamekhez.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam ImLive-on</h4><p>Virtuális kamera setup az ImLive-hoz — nincs RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts hozzáadás</h4><p>Animált tip alerts a MyFreeCams streamedben.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Tovább</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam modell leszek</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense játékok</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Készen állsz az élő adásra?</h2>

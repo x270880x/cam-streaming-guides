@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Verktyg",
+     "item": "https://camstreamguide.com/sv/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/sv/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Steg</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterade guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
     <div class="qa-text">För att lägga till Lovense-leksaker i sändningen: installera SplitCam och Lovense-mjukvaran, para leksaken, anslut Lovense till cam-plattformen, lägg till Lovense-status som Browser-lager i SplitCam, sänd sedan som vanligt.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg för steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS — kodaren som skickar din video till cam-plattformen. Installera den; ingen vattenstämpel.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Installera Lovense-mjukvaran och para leksaken</div><p class="step-p">Installera Lovense Connect / Lovense Stream (den officiella skrivbordsappen). Slå på leksaken och para via Bluetooth så att appen visar ansluten.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Anslut Lovense till cam-plattformen</div><p class="step-p">I Lovense-appen kopplar du ditt cam-konto så att leksaken reagerar på tittarnas tokens / tips. De flesta stora cam-plattformar stöds.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Lägg till Lovense-overlay i SplitCam</div><p class="step-p">Lovense ger en overlay-/widget-URL. Lägg till som <strong>Browser</strong>-lager i SplitCam-scenen så att tittarna ser leksaksstatus och senaste tips på skärmen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Bygg scenen och Go Live</div><p class="step-p">Lägg till kamera och andra overlays, klistra in cam-plattformens RTMP-nyckel i SplitCam och klicka <strong>Go Live</strong>. Leksaken reagerar på tips i realtid.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Proffstips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Använd det officiella Lovense SplitCam Toolset</h3><p>Lovense publicerar ett särskilt toolset för SplitCam med egen installationsguide — det lägger till overlays för leksaksaktivitet och tips-aviseringar gjorda för SplitCam.</p></div><div class="tip-card"><h3>Uppdatera Lovense Cam Extension</h3><p>Toolsetet kräver den senaste Lovense Cam Extension (30.1.4 eller nyare) — uppdatera före sändning.</p></div><div class="tip-card"><h3>Håll leksaken laddad</h3><p>Lågt batteri mitt i showen förstör den interaktiva sidan — ladda fullt före sändning.</p></div><div class="tip-card"><h3>Testa token-reaktionen</h3><p>Skicka ett litet testtips för att säkerställa att leksaken reagerar innan du öppnar rummet.</p></div><div class="tip-card"><h3>Kolla versionskraven</h3><p>Lovense SplitCam Toolset kräver SplitCam 10.4.5 eller nyare. Lovense Cam Extension omfattar officiellt <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> och <a href="../camsoda/" class="autolink">CamSoda</a> — för andra sajter, använd Lovense Generic URL-integration.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>Lovense-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under Lovense-sändning</summary><p>Tappade bildrutor betyder att paket inte når Lovense i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på Lovense</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>Lovense avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den Lovense visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på Lovense</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>
   <div class="faq-list"><details class="faq-item"><summary>Stöder Lovense SplitCam officiellt?</summary><p>Ja — Lovense dokumenterar ett officiellt «Lovense SplitCam Toolset» med egen installationsguide, och SplitCam erbjuder en officiell Lovense-plugin. Integrationen stöds från båda håll.</p></details><details class="faq-item"><summary>Ansluter leksaken direkt till SplitCam?</summary><p>Nej — leksaken paras med Lovense-appen; SplitCam visar Lovense-overlayen och sänder kameran.</p></details><details class="faq-item"><summary>Vilka cam-sajter stöder Lovense?</summary><p>Lovense Cam Extension stöder officiellt <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> och <a href="../camsoda/" class="autolink">CamSoda</a>, med varierande stöd för andra — kolla den aktuella listan i Lovense-appen.</p></details><details class="faq-item"><summary>Kan jag visa senaste tips på skärmen?</summary><p>Ja — lägg till Lovense widget-URL som Browser-lager i SplitCam.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på Lovense?</summary><p>Inkomsten på Lovense beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer Lovense:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är Lovense säkert för sändare?</summary><p>Lovense kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på Lovense?</summary><p>Lovense kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på Lovense från min telefon?</summary><p>Lovense erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiell support — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">Vi är en oberoende guide. För konto-, betalnings- eller tekniska problem, kontakta plattformens officiella support direkt.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Läs mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

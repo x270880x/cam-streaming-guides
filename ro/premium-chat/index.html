@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Platforme pentru fani",
+     "item": "https://camstreamguide.com/ro/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Premium.Chat",
      "item": "https://camstreamguide.com/ro/premium-chat/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Răspuns</a>
+  <a href="#steps">Pași</a>
+  <a href="#tips">Sfaturi</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Ghiduri similare</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Pe scurt</div>
     <div class="qa-text">Folosește SplitCam pe Premium.Chat: instalezi SplitCam, construiești o scenă curată pentru apeluri video, accepți un apel Premium.Chat și în selectorul de cameră al apelului alegi <em>SplitCam</em>.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pas cu pas</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarcă și instalează SplitCam</div><p class="step-p">SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care o poate folosi browserul.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Configurează scena pentru apeluri</div><p class="step-p">Deschide SplitCam, adaugă webcam-ul, pune-ți lumina, eventual adaugă un fundal AI sau un overlay discret. Păstrează încadrarea curată — e un apel plătit, nu o scenă.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Setează tariful pe Premium.Chat</div><p class="step-p">Loghează-te pe Premium.Chat, setează tariful per minut pentru apeluri video și copiază linkul tău personal. Distribuie-l pe rețele sociale sau în bio.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Acceptă apelul video</div><p class="step-p">Când un client plătește pentru timp, vine cererea de apel. Acceptă din dashboardul Premium.Chat.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Alege SplitCam drept cameră</div><p class="step-p">În meniul cu iconița de cameră al ferestrei de apel, schimbă de pe webcam-ul integrat pe <strong>SplitCam</strong>. Scena ta compusă ajunge acum la apelant.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Premium.Chat e per minut, nu streaming</h3><p>Spre deosebire de camerele de tip <a href="../chaturbate/" class="autolink">Chaturbate</a> cu tip-uri, ești plătit la minut. Lumină moale, audio clar și un fundal AI arată mai degrabă a consultație premium decât a cam public.</p></div><div class="tip-card"><h3>Promovează linkul, nu un profil</h3><p>Premium.Chat îți dă un link personal pe care îl poți pune pe rețele sociale, în bio-ul <a href="../onlyfans/" class="autolink">OnlyFans</a> sau pe un Linktree — așa te găsesc apelanții.</p></div><div class="tip-card"><h3>Overlay-uri doar dacă sunt utile</h3><p>La apeluri 1-on-1, overlay-urile groase distrag. Folosește SplitCam pentru calitatea camerei, lumină și fundal — păstrează ecranul preponderent pe tine.</p></div><div class="tip-card"><h3>Fă mai întâi un test privat</h3><p>Rulează o transmisiune scurtă de test pentru cameră, audio, încadrare și overlay-uri înainte să deschizi camera publicului.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe Premium.Chat are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe Premium.Chat</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la Premium.Chat la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe Premium.Chat</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>Premium.Chat respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de Premium.Chat și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe Premium.Chat</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Cum se conectează SplitCam la Premium.Chat?</summary><p>Drept cameră virtuală. Apelurile Premium.Chat rulează în browser; alege SplitCam din selectorul de cameră al apelului — fără stream key, fără RTMP.</p></details><details class="faq-item"><summary>Premium.Chat suportă OBS?</summary><p>Premium.Chat e bazat pe browser, deci OBS se conectează la fel ca SplitCam — prin cameră virtuală. SplitCam e varianta mai ușoară, gratuită și fără filigran.</p></details><details class="faq-item"><summary>Pot folosi o a doua cameră sau overlay pe Premium.Chat?</summary><p>Da — compune scena în SplitCam (a doua cameră, overlay-uri, filtre) și Premium.Chat vede un singur webcam. Folosește cu moderație în 1-on-1.</p></details><details class="faq-item"><summary>SplitCam e gratuit?</summary><p>Da — gratuit, fără filigran și fără limită de timp.</p></details><details class="faq-item"><summary>Cât pot câștiga modelele pe Premium.Chat?</summary><p>Câștigurile pe Premium.Chat depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a Premium.Chat — verifică acordul de model înainte să intri live.</p></details><details class="faq-item"><summary>Este Premium.Chat sigur pentru broadcasteri?</summary><p>Premium.Chat cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real.</p></details><details class="faq-item"><summary>Ce documente îmi trebuie ca să devin model pe Premium.Chat?</summary><p>Premium.Chat cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi.</p></details><details class="faq-item"><summary>Pot să dau stream pe Premium.Chat de pe telefon?</summary><p>Premium.Chat oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane).</p></details><details class="faq-item"><summary>Pot folosi SplitCam ca o cameră virtuală pe Premium.Chat?</summary><p>Da — live-ul de pe Premium.Chat rulează în browser, așa că SplitCam se înregistrează ca o cameră web numită <strong>"SplitCam Video Driver"</strong>. Deschide broadcaster-ul Premium.Chat, dă click pe selectorul de cameră din browser și alege SplitCam. Scena ta compusă (overlay-uri, a doua cameră, filtre, fundal AI) ajunge la viewer-i ca un singur feed de cameră web.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam pe ImLive</h4><p>Setup cameră virtuală pentru ImLive — fără RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam pe SkyPrivate</h4><p>Setup virtual camera pentru apelurile cam prin Skype ale SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live pe JustForFans</h4><p>Folosește SplitCam ca o cameră virtuală în broadcasterul live al JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Live pe Fanvue</h4><p>Folosește SplitCam ca o cameră virtuală pentru live-ul de pe Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continuă</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Devino cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Jucării Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Gata să intri live?</h2>

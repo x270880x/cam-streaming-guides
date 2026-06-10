@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-Seiten",
+     "item": "https://camstreamguide.com/de/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "StripCamFun",
      "item": "https://camstreamguide.com/de/stripcamfun/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Antwort</a>
+  <a href="#steps">Schritte</a>
+  <a href="#tips">Tipps</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Verwandte Guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kurzantwort</div>
     <div class="qa-text">Auf StripCamFun senden: SplitCam installieren, Szene bauen, StripCamFun-Server-URL und Stream Key kopieren, in die RTMP-Einstellungen von SplitCam einfügen, Go Live drücken.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Schritt für Schritt</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam herunterladen und installieren</div><p class="step-p">SplitCam ist kostenlose Live-Streaming-Software für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Szene aufbauen</div><p class="step-p">SplitCam öffnen und die Webcam hinzufügen. Overlays, ein Tip-Menü, eine zweite Kamera oder das Smartphone, Beauty-Filter oder einen KI-Hintergrund einbauen — alles live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">StripCamFun-URL und Stream Key holen</div><p class="step-p">Beim StripCamFun-Model-Dashboard anmelden, <strong>External Encoder / OBS</strong> öffnen und <strong>Server-URL</strong> und <strong>Stream Key</strong> kopieren.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam mit StripCamFun verbinden</div><p class="step-p">In SplitCam <strong>Stream Settings → Custom RTMP</strong> öffnen, URL und Key einfügen. 3.500–5.000 Kbps bei 1920×1080, 30 fps und 2 Sekunden Keyframe einstellen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live drücken</div><p class="step-p">In SplitCam auf <strong>Go Live</strong> klicken, dann im StripCamFun-Dashboard online schalten. Dein Stream landet innerhalb von ~10 Sekunden in der öffentlichen Liste.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi-Tipps</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Kleinerer Pool, leichtere Sichtbarkeit</h3><p>Auf einer Tier-1-Seite bist du eine:r von Tausenden online; auf StripCamFun ist die Broadcaster-Liste kurz — eine polierte SplitCam-Szene fällt auf der Startseite schneller auf.</p></div><div class="tip-card"><h3>Cross-Broadcast für Reichweite</h3><p>Indie-Cam-Seiten passen gut zu Multi-Streaming. Nutze SplitCam, um gleichzeitig zu StripCamFun und einer größeren Seite zu senden, und sammle Tipper aus beiden Pools ein.</p></div><div class="tip-card"><h3>Auf Nischen-Tagging setzen</h3><p>Indie-Publikum sucht eher nach Nische als nach Star-Power. Spezifische Tags und ein Szenen-Overlay, das die Nische benennt, holt Zuschauer aus der Liste.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein StripCamFun-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der StripCamFun-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete StripCamFun nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf StripCamFun</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>StripCamFun lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von StripCamFun angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf StripCamFun</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Wo bekomme ich den StripCamFun-Stream-Key?</summary><p>Im Model-Dashboard den Tab <em>External Encoder / OBS</em> öffnen — dort erscheinen Server-URL und Stream Key. Beides in SplitCams Custom-RTMP-Felder einfügen.</p></details><details class="faq-item"><summary>Ist StripCamFun sicher zum Senden?</summary><p>Wie bei jeder Indie-Cam-Seite vorher den Model-Vertrag und die Auszahlungsbedingungen prüfen. Eine echte E-Mail-Adresse nutzen und die Auszahlungsmethode zuerst verifizieren.</p></details><details class="faq-item"><summary>Kann ich gleichzeitig zu StripCamFun und einer anderen Cam-Seite senden?</summary><p>Ja — SplitCam kann an mehrere Custom-RTMP-Endpoints gleichzeitig pushen. Vorher die Exklusivitätsregeln jeder Seite prüfen.</p></details><details class="faq-item"><summary>Ist SplitCam für StripCamFun kostenlos?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf StripCamFun verdienen?</summary><p>Die Einnahmen auf StripCamFun hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von StripCamFun — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist StripCamFun sicher für Broadcaster?</summary><p>StripCamFun verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf StripCamFun zu werden?</summary><p>StripCamFun verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf StripCamFun vom Handy aus streamen?</summary><p>StripCamFun bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Unterstützt StripCamFun OBS oder einen externen Encoder?</summary><p>Ja — StripCamFun stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter <strong>Stream-Einstellungen → Custom RTMP</strong> ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf <strong>Go Live</strong>. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere Plattform-Anleitungen</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Auf Chaturbate streamen</h4><p>Token-Setup für Chaturbate über externen Encoder.</p></a><a class="related-card" href="../cam4/"><h4>Auf CAM4 streamen</h4><p>External Encoder bei CAM4 mit Geo-Kontrollen.</p></a><a class="related-card" href="../bongacams/"><h4>Auf BongaCams streamen</h4><p>External-Encoder-Setup für BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Auf Stripchat streamen</h4><p>External-Software-Setup für Stripchat-Streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam auf ImLive</h4><p>Virtual-Camera-Setup für ImLive — kein RTMP nötig.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts hinzufügen</h4><p>Animierte Tipp-Alerts auf deinem MyFreeCams-Stream.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Weiterlernen</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-Streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-Model werden</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-Integration</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Bereit für den Live-Stream?</h2>

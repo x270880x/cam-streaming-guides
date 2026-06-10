@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-alustat",
+     "item": "https://camstreamguide.com/fi/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Premium.Chat",
      "item": "https://camstreamguide.com/fi/premium-chat/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Vastaus</a>
+  <a href="#steps">Vaiheet</a>
+  <a href="#tips">Vinkit</a>
+  <a href="#faq">UKK</a>
+  <a href="#related">Aiheeseen liittyvät</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Lyhyesti</div>
     <div class="qa-text">Käytä SplitCamia Premium.Chatissä: asenna SplitCam, rakenna siisti videopuhelunäkymä, ota vastaan saapuva Premium.Chat-puhelu ja valitse puhelun kameravalitsimesta <em>SplitCam</em>.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vaihe vaiheelta</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Lataa ja asenna SplitCam</div><p class="step-p">SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Asentaa virtuaalikameran, jota selain voi käyttää.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Rakenna näkymä puheluille</div><p class="step-p">Avaa SplitCam, lisää webkamera, säädä valo, lisää valinnaisesti AI-tausta tai hillitty overlay. Pidä rajaus selkeänä — tämä on maksullinen puhelu, ei lava.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Aseta hintasi Premium.Chatissä</div><p class="step-p">Kirjaudu Premium.Chatiin, aseta minuuttihintasi videopuheluille ja kopioi henkilökohtainen linkkisi. Jaa se somessa tai bioissa.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Ota vastaan saapuva videopuhelu</div><p class="step-p">Kun asiakas maksaa ajasta, puhelupyyntö saapuu. Ota se vastaan Premium.Chat-dashboardissa.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Valitse SplitCam kameraksi</div><p class="step-p">Puheluikkunan kamerakuvake-valikossa vaihda sisäänrakennetusta webkamerasta <strong>SplitCamiin</strong>. Koostettu näkymäsi tavoittaa nyt soittajan.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Premium.Chat on minuuttihinnoiteltu, ei streamiä</h3><p>Toisin kuin <a href="../chaturbate/" class="autolink">Chaturbate</a>-tyyliset tip-huoneet, sinulle maksetaan minuutilta. Pehmeä valaistus, selkeä ääni ja AI-tausta näyttävät enemmän premium-konsultaatiolta kuin julkiselta camilta.</p></div><div class="tip-card"><h3>Mainosta linkkiäsi, ei profiilia</h3><p>Premium.Chat antaa henkilökohtaisen linkin, jonka voit pudottaa someen, <a href="../onlyfans/" class="autolink">OnlyFans</a>-bioon tai Linktreehen — sieltä soittajat löytävät sinut.</p></div><div class="tip-card"><h3>Overlayt vain jos hyödyllisiä</h3><p>1-on-1-puheluissa raskaat overlayt häiritsevät. Käytä SplitCamia kameran laatuun, valaistukseen ja taustaan — pidä ruutu pääosin sinun.</p></div><div class="tip-card"><h3>Tee ensin yksityinen testi</h3><p>Aja lyhyt testilähetys kameran, äänen, rajauksen ja overlay-yhteyden tarkistamiseksi ennen huoneen avaamista yleisölle.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>Premium.Chat-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja Premium.Chat-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle Premium.Chat ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla Premium.Chat</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>Premium.Chat hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan Premium.Chat näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla Premium.Chat</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Miten SplitCam yhdistyy Premium.Chatiin?</summary><p>Virtuaalikamerana. Premium.Chatin puhelut pyörivät selaimessa; valitse SplitCam puhelun kameravalitsimesta — ei stream keytä, ei RTMP:tä.</p></details><details class="faq-item"><summary>Tukeeko Premium.Chat OBS:ää?</summary><p>Premium.Chat on selainpohjainen, joten OBS liittyy samalla tavalla kuin SplitCam — virtuaalikameran kautta. SplitCam on kevyempi, ilmainen vaihtoehto ilman vesileimaa.</p></details><details class="faq-item"><summary>Voinko käyttää toista kameraa tai overlayta Premium.Chatissä?</summary><p>Kyllä — kompositoi näkymä SplitCamissa (toinen kamera, overlayt, suotimet) ja Premium.Chat näkee yhden webkameran. Käytä säästeliäästi 1-on-1-puheluissa.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen?</summary><p>Kyllä — ilmainen, ei vesileimaa eikä aikarajaa.</p></details><details class="faq-item"><summary>Kuinka paljon mallit voivat ansaita alustalla Premium.Chat?</summary><p>Ansiot alustalla Premium.Chat riippuvat yleisön koosta, lähetystunneista ja tippauskäyttäytymisestä. Aktiiviset lähettäjät tienaavat tyypillisesti 200–3 000 dollaria kuukaudessa; huippusuorittajat yltävät yli 10 000 dollariin. Tuottosi osuus noudattaa Premium.Chat-alustan palkkiorakennetta — tarkista mallisopimus ennen suoran lähetyksen aloittamista.</p></details><details class="faq-item"><summary>Onko Premium.Chat turvallinen lähettäjille?</summary><p>Premium.Chat edellyttää iän ja henkilöllisyyden varmennusta ennen maksua, mikä suojaa malleja petoksilta. Käytä taiteilijanimeä, älä koskaan jaa henkilötietoja kameralla, ota käyttöön geo-estot piilottaaksesi lähetyksesi kotialueeltasi ja käsittele jokainen katsojan pyyntö kaupallisena. SplitCamin overlayt ja tekoälytausta voivat myös piilottaa tai korvata todellisen ympäristösi.</p></details><details class="faq-item"><summary>Mitä dokumentteja tarvitsen tullakseni malliksi alustalle Premium.Chat?</summary><p>Premium.Chat vaatii tyypillisesti viranomaisen myöntämän valokuvallisen henkilöllisyystodistuksen (passi, ajokortti tai henkilökortti), selfien henkilöllisyystodistuksen kanssa sekä vero-/maksulomakkeen (W-9 Yhdysvalloissa, W-8BEN muille). Hyväksyntä kestää yleensä 24–72 tuntia; hyväksynnän jälkeen voit aloittaa suorat lähetykset samana päivänä.</p></details><details class="faq-item"><summary>Voinko lähettää alustalle Premium.Chat puhelimestani?</summary><p>Premium.Chat tarjoaa yleensä mobiilisovelluksen lähettäjille tai mobiiliverkkolähettäjän, mutta kokemus on rajallinen — ei overlayta, ei toista kameraa, ei tekoälytaustaa. Täyden tuotantolaadun saavuttamiseksi lähetä tietokoneelta SplitCamilla ja käytä puhelinta toisena kamerana (SplitCam hyväksyy IP-kamerasyötteen puhelimista).</p></details><details class="faq-item"><summary>Voinko käyttää SplitCamia virtuaalikamerana alustalla Premium.Chat?</summary><p>Kyllä — Premium.Chat-lähetys toimii selaimessa, joten SplitCam rekisteröityy verkkokamerana nimeltä <strong>"SplitCam Video Driver"</strong>. Avaa Premium.Chat-lähettäjäpaneeli, klikkaa selaimen kameravalitsinta ja valitse SplitCam. Koostettu näkymäsi (overlayt, toinen kamera, suodattimet, tekoälytausta) saavuttaa katsojat yhtenä verkkokamerasyötteenä.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Muut alustaoppaat</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam ImLivessä</h4><p>Virtuaalikamera ImLivelle — ei RTMP:tä.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam SkyPrivatessa</h4><p>Virtuaalikameran asetus SkyPrivaten Skype-pohjaisiin puheluihin.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Käytä SplitCamia virtuaalikamerana JustForFansin live-broadcasterissa.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Käytä SplitCamia virtuaalikamerana Fanvuen live-lähetyksissä.</p></a><a class="related-card" href="../chaturbate/"><h4>Lähetys Chaturbate</h4><p>Token-pohjainen asetus ulkoisella enkooderilla Chaturbatessa.</p></a><a class="related-card" href="../cam4/"><h4>Lähetys CAM4</h4><p>External Encoder CAM4:ssä geo-hallinnoilla.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Lue lisää</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-stream</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-malliksi</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-lelut</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Valmis lähetykseen?</h2>

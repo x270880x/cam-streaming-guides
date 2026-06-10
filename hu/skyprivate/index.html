@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Rajongói platformok",
+     "item": "https://camstreamguide.com/hu/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/hu/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Válasz</a>
+  <a href="#steps">Lépések</a>
+  <a href="#tips">Tippek</a>
+  <a href="#faq">GYIK</a>
+  <a href="#related">Hasonló útmutatók</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Röviden</div>
     <div class="qa-text">Használd a SkyPrivate-et SplitCammel: telepíted a SplitCamet, megépíted a jelenetet, telepíted a Skype-ot a SkyPrivate add-onnal, a Skype <em>Video Settings</em>-ben kiválasztod a SplitCamet kameraként és mikrofonként, majd felveszed a SkyPrivate-en foglalt hívásokat — a Skype kézbesíti az ügyfélnek a komponált jelenetet.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Lépésről lépésre</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Telepítsd a SplitCamet</div><p class="step-p">A SplitCam ingyenes Windows-ra és macOS-re — nincs regisztráció, nincs kártya, nincs vízjel. A SkyPrivate-hez <strong>virtual camera</strong>-ként működik, amit a Skype úgy lát, mint bármely más webkamerát.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Építsd meg a jelenetet a SplitCamben</div><p class="step-p">Nyisd meg a SplitCamet és használd a <strong>Media Layers +</strong>-t, hogy hozzáadd a webkamerád plusz overlay-eket, szöveget, beauty filtereket vagy AI hátteret. Ez a komponált jelenet az, amit a Skype kézbesít a SkyPrivate ügyfélnek.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Telepítsd a Skype-ot és a SkyPrivate add-ont</div><p class="step-p">Telepítsd a Skype-ot ugyanarra a PC-re, jelentkezz be, majd telepítsd a SkyPrivate add-ont / desktop alkalmazást a SkyPrivate onboarding-ját követve. Az add-on intézi a perc alapú számlázást a SkyPrivate oldalán.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Válaszd a SplitCamet kameraként és mikrofonként a Skype-on</div><p class="step-p">A Skype-on nyisd meg <strong>Settings → Audio &amp; Video</strong>. Állítsd be <strong>Camera = SplitCam</strong> és <strong>Microphone = SplitCam</strong>. Futtass egy gyors Skype teszt hívást (Echo / Sound Test Service), hogy ellenőrizd, a jeleneted jól néz ki és jól szól.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Vegyél fel SkyPrivate hívásokat</div><p class="step-p">Amikor egy SkyPrivate ügyfél lefoglal egy fizetős hívást, az Skype hívásként érkezik — vedd fel. Ő a komponált SplitCam jelenetedet látja; a SkyPrivate percenként számláz. Állítsd a jelenetet hívás közben a SplitCamben szerkesztve — a Skype azonnal frissít.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tippek</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Nincs RTMP — virtual camera folyamat</h3><p>Ne keress server URL-t vagy stream key-t. A SkyPrivate Skype-on fut, és a Skype csak egy webkamera eszközként látja a SplitCamet. Építsd meg a jelenetet a SplitCamben, majd válaszd a SplitCamet a Skype kamera-beállításaiban.</p></div><div class="tip-card"><h3>Állítsd be a SplitCamet mikrofonként is</h3><p>A Skype Audio beállításaiban válaszd a SplitCamet mikrofonként is, ne csak kameraként — így a noise-suppression, a kevert hang és a bevezető zene mind eljut az ügyfélhez.</p></div><div class="tip-card"><h3>Adj hozzá egy Skype kimenő hívás tesztet</h3><p>Az első fizetős SkyPrivate hívás előtt csinálj egy ingyenes Skype teszt hívást (Echo / Sound Test Service), hogy ellenőrizd, a SplitCam az aktív kamera, és a jeleneted helyesen van komponálva.</p></div><div class="tip-card"><h3>Először csinálj privát tesztet</h3><p>Futtass egy rövid teszt-adást a kamerára, hangra, kompozícióra és overlay-ekre, mielőtt a szobát megnyitod a közönségnek.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A SkyPrivate streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a SkyPrivate adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a SkyPrivate platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a SkyPrivate platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A SkyPrivate elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a SkyPrivate által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a SkyPrivate platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">GYIK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Használ a SkyPrivate RTMP-t vagy stream key-t?</summary><p>Egyiket sem. A SkyPrivate a számlázást és foglalást intézi; a tényleges videó Skype-on fut. Nincs szükséged RTMP server URL-re vagy stream key-re — csak állítsd be a SplitCamet kameraként a Skype-on.</p></details><details class="faq-item"><summary>Hogyan válasszam ki a SplitCamet a Skype-on SkyPrivate-hez?</summary><p>Nyisd meg Skype Settings → Audio &amp; Video → Camera, válaszd a SplitCamet a listából. Ugyanezt csináld a Microphone-nal. A SkyPrivate hívások ezután normál Skype hívásként érkeznek, a SplitCam jelenettel kamera feedként.</p></details><details class="faq-item"><summary>Használhatok overlay-eket és beauty filtereket a SkyPrivate-tel?</summary><p>Igen — építsd őket a SplitCam jelenetedbe. A Skype csak a komponált eredményt kapja meg egy kamera feedként, így minden, amit a SplitCam komponál (overlay-ek, beauty filters, AI háttér, multi-kamera jelenetek), látható a SkyPrivate ügyfélnek.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a SkyPrivate-hez?</summary><p>Igen — a SplitCam ingyenes, nincs vízjel és nincs időkorlát. Mint virtual camera a Skype-alapú SkyPrivate hívásokhoz, nem ad költséget vagy brandinget a híváshoz.</p></details><details class="faq-item"><summary>Mennyit kereshetnek a modellek a(z) SkyPrivate oldalon?</summary><p>A(z) SkyPrivate oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) SkyPrivate jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést.</p></details><details class="faq-item"><summary>Biztonságos a(z) SkyPrivate a műsorszóróknak?</summary><p>A(z) SkyPrivate a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet.</p></details><details class="faq-item"><summary>Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) SkyPrivate oldalon?</summary><p>A(z) SkyPrivate általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz.</p></details><details class="faq-item"><summary>Streamelhetek a(z) SkyPrivate oldalra a telefonomról?</summary><p>A(z) SkyPrivate általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról).</p></details><details class="faq-item"><summary>Használhatom a SplitCamet virtuális kameraként a(z) SkyPrivate oldalon?</summary><p>Igen — a(z) SkyPrivate élő adása böngészőben fut, így a SplitCam <strong>"SplitCam Video Driver"</strong> nevű webkameraként jelenik meg. Nyisd meg a(z) SkyPrivate broadcastert, kattints a kamera-választóra a böngészőben, és válaszd a SplitCamet. A komponált jeleneted (overlay, második kamera, szűrők, AI háttér) egyetlen webkamera-adásként jut el a nézőkhöz.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">További platform-útmutatók</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam ImLive-on</h4><p>Virtuális kamera setup az ImLive-hoz — nincs RTMP.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Használd a SplitCamet virtuális kameraként a JustForFans élő broadcasterében.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Használd a SplitCamet virtuális kameraként a Fanvue élő adásához.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Használd a SplitCamet virtuális kameraként a LoyalFans élő adásához.</p></a><a class="related-card" href="../chaturbate/"><h4>Adás Chaturbate</h4><p>Token-alapú beállítás külső enkóderrel a Chaturbate-en.</p></a><a class="related-card" href="../cam4/"><h4>Adás CAM4</h4><p>External Encoder a CAM4-en geo-kontrollokkal.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Tovább</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam modell leszek</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense játékok</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Készen állsz az élő adásra?</h2>

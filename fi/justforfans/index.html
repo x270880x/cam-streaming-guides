@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-alustat",
+     "item": "https://camstreamguide.com/fi/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "JustForFans",
      "item": "https://camstreamguide.com/fi/justforfans/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Vastaus</a>
+  <a href="#steps">Vaiheet</a>
+  <a href="#tips">Vinkit</a>
+  <a href="#faq">UKK</a>
+  <a href="#related">Aiheeseen liittyvät</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Lyhyesti</div>
     <div class="qa-text">Live JustForFansissa SplitCamilla: asenna SplitCam, rakenna näkymä, käynnistä live-lähetys JFF:ssä, ja valitse broadcasterin kameravalitsimessa <em>SplitCam</em> webkameraksi — sitten mene livenä.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vaihe vaiheelta</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Lataa ja asenna SplitCam</div><p class="step-p">SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa. Se asentaa virtuaalikameran, jonka selain voi valita.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Rakenna näkymäsi</div><p class="step-p">Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, teksti, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — kaikki livenä sovellettuna.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Käynnistä live-lähetys JFF:ssä</div><p class="step-p">Kirjaudu JustForFans-creator-tilillesi ja avaa live-broadcaster aloittaaksesi striimin tilaajillesi.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Valitse SplitCam kameraksi</div><p class="step-p">Valitse JFF:n broadcasterin kameravalikosta <strong>SplitCam</strong> raa'an webkameran sijaan — koottu näkymäsi korvaa litteän kameran. (Tai, jos saatavilla, liitä JFF:n ulkoisen enkooderin avain SplitCamin custom RTMP -kenttiin.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Käynnistä lähetys — SplitCam-näkymäsi, overlayt ja suodattimet tavoittavat JustForFans-tilaajasi.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Virtuaalikamera toimii kaikkialla</h3><p>Vaikka alustan live olisi vain selaimessa, SplitCam näkyy valittavana webkamerana — joten monikamera-näkymäsi, overlayt ja suodattimet toimivat JFF:ssä ilman mitään stream keyä.</p></div><div class="tip-card"><h3>Creator-omisteinen, esiintyjäystävällinen</h3><p>JFF:ää pyörittävät esiintyjät ja sillä on uskollinen tilaajakunta. PPV:tä tai tilausta ristiinmyyvät overlayt konvertoivat hyvin yleisölle, joka jo maksaa.</p></div><div class="tip-card"><h3>Anna selaimelle kameralupa</h3><p>Jos SplitCam ei näy JFF:n kameralistalla, varmista että SplitCam on käynnissä ensin ja että selaimella on kameralupa — lataa sitten broadcaster uudelleen.</p></div><div class="tip-card"><h3>Tee ensin yksityinen testi</h3><p>Aja lyhyt testilähetys kameran, äänen, rajauksen ja overlay-yhteyden tarkistamiseksi ennen huoneen avaamista yleisölle.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>JustForFans-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja JustForFans-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle JustForFans ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla JustForFans</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>JustForFans hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan JustForFans näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla JustForFans</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Miten SplitCam yhdistyy JustForFansiin?</summary><p>JFF:n live on selainpohjainen, joten SplitCam yhdistyy virtuaalikamerana: valitse SplitCam JFF:n broadcasterin kameravalitsimesta. Stream keyä ei tarvita.</p></details><details class="faq-item"><summary>Voinko käyttää overlayitä ja useita kameroita JFF:ssä?</summary><p>Kyllä — rakenna näkymä SplitCamissa (toinen kamera, overlayt, kauneus- tai AI-taustasuodattimet) ja JFF näkee valmiin näkymän yhtenä webkamerana.</p></details><details class="faq-item"><summary>Tukeeko JustForFans OBS:ää tai ulkoisia enkoodereita?</summary><p>JFF:n live on ensisijaisesti selain- / webkamerapohjainen. Jos creator-dashboardisi näyttää ulkoisen enkooderin tai stream key -vaihtoehdon, liitä se SplitCamin custom RTMP -kenttiin; muuten käytä virtuaalikamera-menetelmää.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen JustForFansille?</summary><p>Kyllä — SplitCam on ilmainen, ei vesileimaa eikä aikarajaa.</p></details><details class="faq-item"><summary>Kuinka paljon mallit voivat ansaita alustalla JustForFans?</summary><p>Ansiot alustalla JustForFans riippuvat yleisön koosta, lähetystunneista ja tippauskäyttäytymisestä. Aktiiviset lähettäjät tienaavat tyypillisesti 200–3 000 dollaria kuukaudessa; huippusuorittajat yltävät yli 10 000 dollariin. Tuottosi osuus noudattaa JustForFans-alustan palkkiorakennetta — tarkista mallisopimus ennen suoran lähetyksen aloittamista.</p></details><details class="faq-item"><summary>Onko JustForFans turvallinen lähettäjille?</summary><p>JustForFans edellyttää iän ja henkilöllisyyden varmennusta ennen maksua, mikä suojaa malleja petoksilta. Käytä taiteilijanimeä, älä koskaan jaa henkilötietoja kameralla, ota käyttöön geo-estot piilottaaksesi lähetyksesi kotialueeltasi ja käsittele jokainen katsojan pyyntö kaupallisena. SplitCamin overlayt ja tekoälytausta voivat myös piilottaa tai korvata todellisen ympäristösi.</p></details><details class="faq-item"><summary>Mitä dokumentteja tarvitsen tullakseni malliksi alustalle JustForFans?</summary><p>JustForFans vaatii tyypillisesti viranomaisen myöntämän valokuvallisen henkilöllisyystodistuksen (passi, ajokortti tai henkilökortti), selfien henkilöllisyystodistuksen kanssa sekä vero-/maksulomakkeen (W-9 Yhdysvalloissa, W-8BEN muille). Hyväksyntä kestää yleensä 24–72 tuntia; hyväksynnän jälkeen voit aloittaa suorat lähetykset samana päivänä.</p></details><details class="faq-item"><summary>Voinko lähettää alustalle JustForFans puhelimestani?</summary><p>JustForFans tarjoaa yleensä mobiilisovelluksen lähettäjille tai mobiiliverkkolähettäjän, mutta kokemus on rajallinen — ei overlayta, ei toista kameraa, ei tekoälytaustaa. Täyden tuotantolaadun saavuttamiseksi lähetä tietokoneelta SplitCamilla ja käytä puhelinta toisena kamerana (SplitCam hyväksyy IP-kamerasyötteen puhelimista).</p></details><details class="faq-item"><summary>Voinko käyttää SplitCamia virtuaalikamerana alustalla JustForFans?</summary><p>Kyllä — JustForFans-lähetys toimii selaimessa, joten SplitCam rekisteröityy verkkokamerana nimeltä <strong>"SplitCam Video Driver"</strong>. Avaa JustForFans-lähettäjäpaneeli, klikkaa selaimen kameravalitsinta ja valitse SplitCam. Koostettu näkymäsi (overlayt, toinen kamera, suodattimet, tekoälytausta) saavuttaa katsojat yhtenä verkkokamerasyötteenä.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Muut alustaoppaat</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam ImLivessä</h4><p>Virtuaalikamera ImLivelle — ei RTMP:tä.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam SkyPrivatessa</h4><p>Virtuaalikameran asetus SkyPrivaten Skype-pohjaisiin puheluihin.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Käytä SplitCamia virtuaalikamerana Fanvuen live-lähetyksissä.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Käytä SplitCamia virtuaalikamerana LoyalFansin live-lähetyksissä.</p></a><a class="related-card" href="../chaturbate/"><h4>Lähetys Chaturbate</h4><p>Token-pohjainen asetus ulkoisella enkooderilla Chaturbatessa.</p></a><a class="related-card" href="../cam4/"><h4>Lähetys CAM4</h4><p>External Encoder CAM4:ssä geo-hallinnoilla.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Lue lisää</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-stream</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-malliksi</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-lelut</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Valmis lähetykseen?</h2>

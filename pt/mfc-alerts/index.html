@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Ferramentas",
+     "item": "https://camstreamguide.com/pt/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/pt/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Resposta</a>
+  <a href="#steps">Passos</a>
+  <a href="#tips">Dicas</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guias relacionados</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Em resumo</div>
     <div class="qa-text">Adicionar MFC Alerts com SplitCam: instalar SplitCam, adicionar a webcam, abrir a aba Browser e carregar mfcalerts.com, copiar sua URL de alerts, adicionar como camada Browser acima da webcam, depois testar com um tip de teste.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Passo a passo</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Instala o SplitCam e adiciona a webcam</div><p class="step-p">Instala o SplitCam grátis pra Windows ou macOS, depois adiciona a <strong>webcam</strong> como fonte. O MFC Alerts vai ficar como camada em cima dessa câmera.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Abre a aba Browser e vai pra mfcalerts.com</div><p class="step-p">No SplitCam abre a aba <strong>Browser</strong> e navega pra <strong>www.mfcalerts.com</strong>. Loga, ou cadastra se ainda não tem conta no mfcalerts.com.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Copia sua URL de alerts</div><p class="step-p">No mfcalerts.com usa <strong>Copy to clipboard</strong> pra copiar sua URL pessoal de alerts — é a página que renderiza as animações dos tips.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Adiciona a URL como camada Browser — acima da webcam</div><p class="step-p">Cola a URL na janela Browser do SplitCam e clica <strong>Add</strong>. Depois reordena a lista de fontes pra que o <strong>MFC Alerts fique acima da sua webcam</strong> (menu 3 pontos → Move Up). Se ficar abaixo, os efeitos ficam escondidos.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Testa com um tip de teste</div><p class="step-p">Abre <strong>Settings → Send test tip</strong> e confirma que o efeito de alert aparece sobre sua câmera. Depois transmite no <a href="../myfreecams/" class="autolink">MyFreeCams</a> normal — tips reais disparam agora as animações.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Dicas</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts tem que ficar acima da webcam</h3><p>O erro mais comum: se a camada MFC Alerts fica abaixo da webcam na lista de fontes, os efeitos ficam escondidos. Sobe.</p></div><div class="tip-card"><h3>Precisa de conta no mfcalerts.com</h3><p>A URL de alerts é pessoal — cadastra no mfcalerts.com primeiro se não tem conta.</p></div><div class="tip-card"><h3>Manda um tip de teste antes do live</h3><p>Usa Settings → Send test tip pra confirmar que o overlay funciona — não descobre o erro no meio do show.</p></div><div class="tip-card"><h3>Use conexão por cabo</h3><p>Ethernet bate Wi-Fi numa live longa — um frame perdido é um tip perdido. Puxa um cabo até o PC do stream.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Solução de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Sua transmissão no MFC Alerts trava ou fica em buffer</summary><p>Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão.</p></details><details class="faq-item"><summary>Frames perdidos durante a transmissão no MFC Alerts</summary><p>Frames perdidos significam que os pacotes não chegam ao MFC Alerts a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta.</p></details><details class="faq-item"><summary>Tela preta — os espectadores não veem vídeo no MFC Alerts</summary><p>Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live.</p></details><details class="faq-item"><summary>MFC Alerts rejeita a stream key ou não conecta</summary><p>Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo MFC Alerts e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida.</p></details><details class="faq-item"><summary>Sem áudio ou áudio fora de sincronia no MFC Alerts</summary><p>Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>O que é MFC Alerts?</summary><p>Um sistema de notificações pro <a href="../myfreecams/" class="autolink">MyFreeCams</a> que mostra efeitos de vídeo no seu stream quando espectadores mandam tips — adicionado como overlay Browser no SplitCam.</p></details><details class="faq-item"><summary>Por que meus MFC Alerts não aparecem?</summary><p>Quase sempre é a ordem das camadas — a camada Browser do MFC Alerts tem que ficar acima da webcam na lista de fontes do SplitCam.</p></details><details class="faq-item"><summary>Preciso de conta pro MFC Alerts?</summary><p>Sim — cadastra no mfcalerts.com pra pegar sua URL pessoal de alerts.</p></details><details class="faq-item"><summary>O SplitCam é grátis pra isso?</summary><p>Sim — o SplitCam é grátis, sem marca d'água e sem limite de tempo, e o overlay browser do MFC Alerts roda dentro dele sem custo extra.</p></details><details class="faq-item"><summary>Quanto as criadoras ganham no MFC Alerts?</summary><p>Os ganhos no MFC Alerts dependem do tamanho do público, das horas ao vivo e do volume de gorjetas. Criadoras ativas costumam levar para casa de R$ 1.000 a R$ 15.000 por mês; as top performers chegam a R$ 50.000+. Sua porcentagem segue a comissão do MFC Alerts — leia o contrato de modelo antes de entrar ao vivo.</p></details><details class="faq-item"><summary>O MFC Alerts é seguro para quem transmite?</summary><p>O MFC Alerts exige verificação de idade e documento antes de liberar o pagamento, o que protege a criadora contra fraudes. Use um nome artístico, nunca mostre dados pessoais na câmera, ative bloqueio geográfico para esconder a transmissão da sua região e trate todo pedido de assinante como transacional. Os overlays e o fundo com IA do SplitCam também escondem ou substituem o ambiente real.</p></details><details class="faq-item"><summary>Quais documentos eu preciso para virar modelo no MFC Alerts?</summary><p>O MFC Alerts geralmente pede um documento oficial com foto (RG, CNH ou passaporte), uma selfie segurando o documento e o formulário fiscal/de pagamento (W-9 para EUA, W-8BEN fora dos EUA; no Brasil costumam aceitar CPF para receber via PIX por gateway). A aprovação leva de 24 a 72 horas; aprovada, você já entra ao vivo no mesmo dia.</p></details><details class="faq-item"><summary>Dá para transmitir no MFC Alerts pelo celular?</summary><p>O MFC Alerts normalmente oferece um app de transmissão ou um broadcaster mobile pelo navegador, mas a experiência é limitada — sem overlays, sem segunda câmera, sem fundo com IA. Para qualidade de produção completa, transmita pelo computador com o SplitCam e use o celular como segunda câmera (o SplitCam aceita entrada de câmera IP a partir do celular).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Suporte oficial — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Somos um guia independente. Pra questões de conta, pagamentos ou problemas técnicos, fale direto com o suporte oficial da plataforma.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Outros guias de plataforma</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmitir no Chaturbate</h4><p>Configuração por token com encoder externo no Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmitir no CAM4</h4><p>External Encoder no CAM4 com geo-controles.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Saiba mais</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Ser cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Brinquedos Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Pronto pra entrar ao vivo?</h2>

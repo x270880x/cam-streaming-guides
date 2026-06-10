@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Инструменти",
+     "item": "https://camstreamguide.com/bg/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/bg/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Отговор</a>
+  <a href="#steps">Стъпки</a>
+  <a href="#tips">Съвети</a>
+  <a href="#faq">ЧЗВ</a>
+  <a href="#related">Подобни ръководства</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Накратко</div>
     <div class="qa-text">За добавяне на Lovense играчка към стрийма: инсталирай SplitCam и Lovense софтуера, сдвой играчката, свържи Lovense към кам платформата, добави Lovense статус като Browser слой в SplitCam, после излъчвай нормално.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Стъпка по стъпка</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Инсталирай SplitCam</div><p class="step-p">SplitCam е безплатен софтуер за стрийминг за Windows и macOS — енкодерът, който изпраща видеото към кам платформата. Инсталирай; без воден знак.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Инсталирай Lovense софтуера и сдвой играчката</div><p class="step-p">Инсталирай Lovense Connect / Lovense Stream (официалното desktop приложение). Включи играчката и сдвой чрез Bluetooth, така че приложението да показва свързано.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Свържи Lovense към кам платформата</div><p class="step-p">В Lovense приложението свържи кам акаунта си, така че играчката да реагира на токени / типове от зрителите. Повечето големи кам платформи се поддържат.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Добави Lovense overlay в SplitCam</div><p class="step-p">Lovense предоставя overlay/widget URL. Добави като <strong>Browser</strong> слой в SplitCam сцената, така че зрителите да виждат статуса на играчката и скорошните типове на екрана.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Изгради сцена и Go Live</div><p class="step-p">Добави камерата и другите наслагвания, постави RTMP ключа на кам платформата в SplitCam и кликни <strong>Go Live</strong>. Играчката реагира на типове в реално време.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Съвети</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Използвай официалния Lovense SplitCam Toolset</h3><p>Lovense публикува SplitCam-специфичен toolset със собствено ръководство за инсталация — добавя overlay за активността на играчката и tip alerts, направени за SplitCam.</p></div><div class="tip-card"><h3>Актуализирай Lovense Cam Extension</h3><p>Toolset-ът изисква скорошен Lovense Cam Extension (30.1.4 или по-нов) — актуализирай преди live.</p></div><div class="tip-card"><h3>Дръж играчката заредена</h3><p>Почти празна батерия в средата на шоуто убива интерактивната част — зареди напълно преди live.</p></div><div class="tip-card"><h3>Тествай реакция на токени</h3><p>Изпрати малък тестов тип, за да потвърдиш, че играчката реагира, преди да отвориш стаята.</p></div><div class="tip-card"><h3>Провери изискванията за версия</h3><p>Lovense SplitCam Toolset изисква SplitCam 10.4.5 или по-нов. Lovense Cam Extension покрива официално <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> и <a href="../camsoda/" class="autolink">CamSoda</a> — за всеки друг сайт използвай Generic URL интеграцията на Lovense.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на Lovense лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на Lovense</summary><p>Изпуснатите кадри значат, че пакетите не стигат до Lovense навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на Lovense</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>Lovense отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от Lovense и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на Lovense</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Често задавани въпроси</h2>
   <div class="faq-list"><details class="faq-item"><summary>Поддържа ли Lovense SplitCam официално?</summary><p>Да — Lovense документира официален «Lovense SplitCam Toolset» със собствено ръководство за инсталация, а SplitCam предоставя официален Lovense плъгин. Интеграцията се поддържа и от двете страни.</p></details><details class="faq-item"><summary>Играчката свързва ли се директно с SplitCam?</summary><p>Не — играчката се сдвоява с Lovense приложението; SplitCam показва Lovense overlay и излъчва камерата.</p></details><details class="faq-item"><summary>Кои кам сайтове поддържат Lovense?</summary><p>Cam Extension на Lovense поддържа официално <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> и <a href="../camsoda/" class="autolink">CamSoda</a>, с променлива поддръжка за други — провери актуалния списък в Lovense приложението.</p></details><details class="faq-item"><summary>Мога ли да показвам скорошни типове на екрана?</summary><p>Да — добави URL на Lovense widget като Browser слой в SplitCam.</p></details><details class="faq-item"><summary>Колко могат да изкарват моделите в Lovense?</summary><p>Приходите в Lovense зависят от размера на аудиторията, часовете на стрийм и активността с типове. Активните излъчващи обикновено прибират $200–$3,000 на месец; топ изпълнителите достигат $10,000+. Делът ти от приходите следва комисионната структура на Lovense — провери моделния договор, преди да тръгнеш в ефир.</p></details><details class="faq-item"><summary>Безопасен ли е Lovense за излъчващите?</summary><p>Lovense изисква верификация на възрастта и личната карта преди изплащане, което защитава моделите от измами. Използвай сценично име, никога не споделяй лични данни пред камерата, активирай гео-блокове, за да скриеш стрийма си от родния си регион, и третирай всяка молба на зрител като транзакционна. Овърлеите и AI фонът на SplitCam също могат да скрият или подменят реалната ти обстановка.</p></details><details class="faq-item"><summary>Какви документи са ми нужни, за да стана модел в Lovense?</summary><p>Lovense обикновено изисква държавно издаден документ за самоличност със снимка (паспорт, шофьорска книжка или лична карта), селфи с документа в ръка и данъчен/платежен формуляр (W-9 за САЩ, W-8BEN за извън САЩ). Одобрението обикновено отнема 24–72 часа; след одобрение можеш да излезеш в ефир още същия ден.</p></details><details class="faq-item"><summary>Мога ли да стриймвам в Lovense от телефона си?</summary><p>Lovense обикновено предлага мобилно приложение за излъчване или мобилен уеб-броудкастър, но изживяването е ограничено — без овърлеи, без втора камера, без AI фон. За пълно продукционно качество излъчвай от компютър със SplitCam и използвай телефона си като втора камера (SplitCam приема IP-камера вход от телефони).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Официална поддръжка — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">Ние сме независим ресурс. За въпроси по акаунт, плащания или технически проблеми се свържи директно с официалната поддръжка на платформата.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други ръководства за платформи</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Още</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мулти-стрийминг</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стани кам модел</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense играчки</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готов(а) ли си за ефир?</h2>

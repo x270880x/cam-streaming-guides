@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "工具",
+     "item": "https://camstreamguide.com/zh/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MFC Alerts",
      "item": "https://camstreamguide.com/zh/mfc-alerts/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">速答</a>
+  <a href="#steps">步骤</a>
+  <a href="#tips">技巧</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">相关指南</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">快速回答</div>
     <div class="qa-text">使用 SplitCam 添加 MFC Alerts：安装 SplitCam，添加网络摄像头，打开浏览器选项卡并加载 mfcalerts.com，复制您的 alerts URL，将其作为浏览器层添加在网络摄像头上方，然后用测试小费测试。</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">分步指南</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">安装 SplitCam 并添加网络摄像头</div><p class="step-p">为 Windows 或 macOS 安装免费 SplitCam，然后将<strong>网络摄像头</strong>作为源添加。MFC Alerts 作为此摄像头上方的层。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">打开浏览器选项卡并转到 mfcalerts.com</div><p class="step-p">在 SplitCam 中打开<strong>浏览器</strong>选项卡并导航到 <strong>www.mfcalerts.com</strong>。登录，或在还没有 mfcalerts.com 账户的情况下注册。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">复制您的 alerts URL</div><p class="step-p">在 mfcalerts.com 上使用 <strong>Copy to clipboard</strong> 复制您的个人 alerts URL — 这是渲染小费动画的页面。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">将 URL 作为浏览器层添加 — 在网络摄像头上方</div><p class="step-p">将 URL 粘贴到 SplitCam 浏览器窗口并点击 <strong>Add</strong>。然后重新排序源列表，使 <strong>MFC Alerts 在网络摄像头上方</strong>（3 点菜单 → Move Up）。如果它在下面，效果将保持隐藏。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">用测试小费测试</div><p class="step-p">打开 <strong>Settings → Send test tip</strong> 并确认 alert 效果出现在您的摄像头上方。然后正常在 <a href="../myfreecams/" class="autolink">MyFreeCams</a> 上直播 — 真实的小费现在触发动画。</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">专业提示</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts 必须在网络摄像头上方</h3><p>最常见的错误：如果 MFC Alerts 层在源列表中的网络摄像头下方，效果将保持隐藏。向上移动。</p></div><div class="tip-card"><h3>需要 mfcalerts.com 账户</h3><p>alerts URL 是个人的 — 如果您没有账户，请先在 mfcalerts.com 注册。</p></div><div class="tip-card"><h3>在直播前发送测试小费</h3><p>使用 Settings → Send test tip 确认叠加层正在工作 — 不要在节目中途发现错误。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 MFC Alerts 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>MFC Alerts 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 MFC Alerts — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 MFC Alerts 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>MFC Alerts 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 MFC Alerts 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>MFC Alerts 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">常见问题</h2>
   <div class="faq-list"><details class="faq-item"><summary>什么是 MFC Alerts？</summary><p><a href="../myfreecams/" class="autolink">MyFreeCams</a> 的通知系统，在观众发送小费时在您的直播中显示视频效果 — 在 SplitCam 中作为浏览器叠加层添加。</p></details><details class="faq-item"><summary>为什么我的 MFC Alerts 不出现？</summary><p>几乎总是层顺序 — MFC Alerts 浏览器层必须在 SplitCam 源列表中的网络摄像头上方。</p></details><details class="faq-item"><summary>我需要 MFC Alerts 的账户吗？</summary><p>是 — 在 mfcalerts.com 注册以获取您的个人 alerts URL。</p></details><details class="faq-item"><summary>SplitCam 对此免费吗？</summary><p>是 — SplitCam 免费、无水印、无时间限制，MFC Alerts 浏览器叠加层在其中运行而无需额外成本。</p></details><details class="faq-item"><summary>模特在 MFC Alerts 上能赚多少钱？</summary><p>在 MFC Alerts 上的收入取决于观众规模、直播时长和打赏情况。活跃的主播每月通常能拿到 $200–$3,000；顶级主播可达 $10,000 以上。你的分成比例遵循 MFC Alerts 的佣金政策——开播前请仔细查看模特协议。</p></details><details class="faq-item"><summary>MFC Alerts 对主播来说安全吗？</summary><p>MFC Alerts 在结算前会要求年龄和身份验证，这能保护模特免受欺诈。建议使用艺名，绝不在镜头前透露个人信息，开启地区屏蔽以隐藏所在地，并把每一位观众的请求都视为交易行为。SplitCam 的叠加层和 AI 背景也可以遮挡或替换你的真实环境。</p></details><details class="faq-item"><summary>在 MFC Alerts 注册模特需要哪些证件？</summary><p>MFC Alerts 通常需要政府签发的带照片身份证件（护照、驾照或身份证）、手持证件的自拍，以及税务/结算表格（美国用户 W-9，非美国用户 W-8BEN）。审核一般需要 24–72 小时；通过后当天即可开播。</p></details><details class="faq-item"><summary>我可以用手机在 MFC Alerts 上直播吗？</summary><p>MFC Alerts 通常提供手机主播 App 或移动网页版主播界面，但功能有限——没有叠加层、没有第二路摄像头、没有 AI 背景。如需完整的制作品质，请使用电脑配合 SplitCam 直播，并把手机作为第二路摄像头使用（SplitCam 支持来自手机的 IP 摄像头输入）。</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">官方支持 — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">我们是独立的指南。如有账户、付款或技术问题，请直接联系平台的官方支持。</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">其他平台指南</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">继续学习</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>多平台直播</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>成为 cam 模特</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense 玩具</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>准备开始直播了吗？</h2>

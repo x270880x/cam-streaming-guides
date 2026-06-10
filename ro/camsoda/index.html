@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Site-uri cam",
+     "item": "https://camstreamguide.com/ro/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "CamSoda",
      "item": "https://camstreamguide.com/ro/camsoda/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Răspuns</a>
+  <a href="#steps">Pași</a>
+  <a href="#tips">Sfaturi</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Ghiduri similare</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Pe scurt</div>
     <div class="qa-text">Transmisie pe CamSoda cu SplitCam: instalezi SplitCam, construiești scena, clic Use OBS Broadcaster pe pagina Go Live CamSoda, copiezi URL-ul serverului și stream key-ul, lipești în SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pas cu pas</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarcă și instalează SplitCam</div><p class="step-p">SplitCam este software de streaming gratuit pentru Windows și macOS. Descarcă-l și rulează installerul — fără înregistrare, fără card, fără filigran, fără limită de timp. SplitCam este encoderul care îți trimite videoul către CamSoda.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Configurează camera și scena</div><p class="step-p">Deschide SplitCam și adaugă webcamul. Construiește scena așa cum vrei să o vadă spectatorii — suprapuneri, text, o a doua cameră sau telefonul, filtre beauty sau fundal AI. Totul se aplică live înainte ca streamul să plece din PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Obține cheia de stream CamSoda</div><p class="step-p">Pe pagina <strong>Go Live</strong> CamSoda clic <strong>Use OBS Broadcaster</strong>. CamSoda afișează URL-ul serverului RTMP și stream key — copiază ambele. Alege serverul regional (America de Nord, Europa, Asia etc.) cel mai apropiat. Wiki-ul CamSoda are un ghid OBS complet dacă ai nevoie de detalii.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conectează SplitCam la CamSoda</div><p class="step-p">În SplitCam deschide <strong>Stream Settings</strong>, lipește URL-ul serverului și cheia de stream CamSoda în câmpurile RTMP personalizate. Bitrate: 3.500–6.000&nbsp;Kbps la 1080p, 2.000–4.000&nbsp;Kbps la 720p. Rulează mai întâi testul de viteză integrat.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Apasă Go Live</div><p class="step-p">Apasă <strong>Go Live</strong> în SplitCam, apoi pornește transmisiunea pe CamSoda. În ~10 secunde camera ta este live. Următoarele streamuri se pornesc cu un singur clic — deschizi SplitCam, Go Live.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Verifică-te pentru tipuri</h3><p>Pe CamSoda oricine poate transmite, dar pentru a primi tipuri trebuie să finalizezi procesul de verificare CamSoda.</p></div><div class="tip-card"><h3>Alege serverul regional cel mai apropiat</h3><p>CamSoda oferă servere de ingest regionale — cel mai apropiat (NA / Europa / Asia / America de Sud / Oceania) reduce latența și frame-urile pierdute.</p></div><div class="tip-card"><h3>Plafon la 1080p / 30 fps</h3><p>Ingestul CamSoda merge până la circa 1080p, 30 fps și ~6.000 Kbps — nu împinge mai sus.</p></div><div class="tip-card"><h3>Folosește conexiune prin cablu</h3><p>Ethernet bate Wi-Fi într-un stream lung — un frame pierdut e un tip pierdut. Trage un cablu până la PC-ul de stream.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe CamSoda are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe CamSoda</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la CamSoda la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe CamSoda</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>CamSoda respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de CamSoda și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe CamSoda</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Suportă CamSoda OBS / encodere externe?</summary><p>Da — oficial. Există un buton Use OBS Broadcaster pe pagina Go Live și un ghid OBS pe wiki-ul CamSoda, deci SplitCam funcționează.</p></details><details class="faq-item"><summary>Trebuie să mă verific pe CamSoda?</summary><p>Pentru transmisie, nu. Pentru a primi tipuri, da — CamSoda cere finalizarea procesului de verificare mai întâi.</p></details><details class="faq-item"><summary>Ce rezoluție suportă CamSoda?</summary><p>Până la 1920×1080 la 30 fps, în jur de 6.000 Kbps maxim pe ingest RTMP.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru CamSoda?</summary><p>Da — gratuit, fără filigran și fără limită de timp. Funcționează cu modul gratuit Use OBS Broadcaster al CamSoda, deci întreg lanțul nu costă nimic.</p></details><details class="faq-item"><summary>Cât pot câștiga modelele pe CamSoda?</summary><p>Câștigurile pe CamSoda depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a CamSoda — verifică acordul de model înainte să intri live.</p></details><details class="faq-item"><summary>Este CamSoda sigur pentru broadcasteri?</summary><p>CamSoda cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real.</p></details><details class="faq-item"><summary>Ce documente îmi trebuie ca să devin model pe CamSoda?</summary><p>CamSoda cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi.</p></details><details class="faq-item"><summary>Pot să dau stream pe CamSoda de pe telefon?</summary><p>CamSoda oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane).</p></details><details class="faq-item"><summary>CamSoda suportă OBS sau un encoder extern?</summary><p>Da — CamSoda furnizează un URL de server RTMP și o stream key în panoul de broadcaster. Lipește-le pe ambele în <strong>Stream Settings → Custom RTMP</strong> din SplitCam, setează 1920×1080 la 30 fps cu un bitrate de 4.000–5.000 Kbps și apasă <strong>Go Live</strong>. Ruta Custom RTMP îți oferă compoziția completă a scenei din SplitCam (multi-cameră, overlay-uri, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Suport oficial — CamSoda</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:modelsupport@camsoda.com">modelsupport@camsoda.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.camsoda.com/support" rel="nofollow noopener" target="_blank">https://www.camsoda.com/support</a></li></ul><p class="sp-note">Suntem un ghid independent. Pentru probleme de cont, plată sau tehnice, contactează direct suportul oficial al platformei.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisie BongaCams</h4><p>Setup External Encoder pentru BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Transmisie Stripchat</h4><p>Setup software extern pentru transmisii Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam pe ImLive</h4><p>Setup cameră virtuală pentru ImLive — fără RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Adaugă MFC Alerts</h4><p>Afișează tip alerts animate în streamul MyFreeCams.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continuă</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Devino cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Jucării Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Gata să intri live?</h2>

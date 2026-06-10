@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Платформи за фенове",
+     "item": "https://camstreamguide.com/bg/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "JustForFans",
      "item": "https://camstreamguide.com/bg/justforfans/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Отговор</a>
+  <a href="#steps">Стъпки</a>
+  <a href="#tips">Съвети</a>
+  <a href="#faq">ЧЗВ</a>
+  <a href="#related">Подобни ръководства</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Накратко</div>
     <div class="qa-text">Излизане на живо в JustForFans със SplitCam: инсталирай SplitCam, изгради сцената, започни live излъчване в JFF, и в селектора за камера на broadcaster-а избери <em>SplitCam</em> като своя уебкамера — после излез на живо.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Стъпка по стъпка</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Свали и инсталирай SplitCam</div><p class="step-p">SplitCam е безплатен софтуер за live-streaming за Windows и macOS — без регистрация, без карта, без воден знак. Инсталира виртуална камера, която браузърът може да избере.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Изгради сцената</div><p class="step-p">Отвори SplitCam и добави уебкамерата. Сложи отгоре наслагвания, текст, втора камера или телефона, beauty filters или AI фон — прилагани на живо.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Започни live излъчване в JFF</div><p class="step-p">Влез в creator акаунта си в JustForFans и отвори live broadcaster-а, за да започнеш стрийм за абонатите си.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Избери SplitCam като своя камера</div><p class="step-p">В падащото меню за камера на JFF broadcaster-а избери <strong>SplitCam</strong> вместо суровата си уебкамера — съставената ти сцена замества плоската камера. (Или, ако е налична, постави external encoder ключа на JFF в полетата за custom RTMP на SplitCam.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Натисни Go Live</div><p class="step-p">Стартирай излъчването — твоята SplitCam сцена, наслагвания и филтри стигат до абонатите ти в JustForFans.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Съвети</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Виртуалната камера работи навсякъде</h3><p>Дори когато live функцията на платформата е само в браузъра, SplitCam се появява като избираема уебкамера — така мулти-камера сцената, наслагванията и филтрите ти работят в JFF изобщо без stream key.</p></div><div class="tip-card"><h3>Притежавана от creator-и, приятелска към изпълнителите</h3><p>JFF се управлява от изпълнители и пази лоялна абонатска база. Наслагвания, които кръстосано продават твоето PPV или абонамент, се превръщат добре пред публика, която вече плаща.</p></div><div class="tip-card"><h3>Дай на браузъра достъп до камерата</h3><p>Ако SplitCam не се появява в списъка с камери на JFF, увери се, че SplitCam върви първо и че браузърът има разрешение за камера — после презареди broadcaster-а.</p></div><div class="tip-card"><h3>Първо направи частен тест</h3><p>Пусни кратко тестово предаване за камера, звук, кадриране и наслагвания, преди да отвориш стаята за публика.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на JustForFans лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на JustForFans</summary><p>Изпуснатите кадри значат, че пакетите не стигат до JustForFans навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на JustForFans</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>JustForFans отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от JustForFans и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на JustForFans</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Често задавани въпроси</h2>
   <div class="faq-list"><details class="faq-item"><summary>Как SplitCam се връзва с JustForFans?</summary><p>Live функцията на JFF е в браузъра, така че SplitCam се връзва като виртуална камера: избираш SplitCam в селектора за камера на JFF broadcaster-а. Не е нужен stream key.</p></details><details class="faq-item"><summary>Мога ли да използвам наслагвания и няколко камери в JFF?</summary><p>Да — изгради сцената в SplitCam (втора камера, наслагвания, beauty или AI-фон филтри), а JFF вижда готовата сцена като една уебкамера.</p></details><details class="faq-item"><summary>Поддържа ли JustForFans OBS или външни енкодери?</summary><p>Live функцията на JFF е предимно базирана на браузър/уебкамера. Ако твоят creator dashboard показва опция за external encoder или stream key, постави я в полетата за custom RTMP на SplitCam; иначе използвай метода с виртуална камера.</p></details><details class="faq-item"><summary>SplitCam безплатен ли е за JustForFans?</summary><p>Да — SplitCam е безплатен, без воден знак и без времево ограничение.</p></details><details class="faq-item"><summary>Колко могат да изкарват моделите в JustForFans?</summary><p>Приходите в JustForFans зависят от размера на аудиторията, часовете на стрийм и активността с типове. Активните излъчващи обикновено прибират $200–$3,000 на месец; топ изпълнителите достигат $10,000+. Делът ти от приходите следва комисионната структура на JustForFans — провери моделния договор, преди да тръгнеш в ефир.</p></details><details class="faq-item"><summary>Безопасен ли е JustForFans за излъчващите?</summary><p>JustForFans изисква верификация на възрастта и личната карта преди изплащане, което защитава моделите от измами. Използвай сценично име, никога не споделяй лични данни пред камерата, активирай гео-блокове, за да скриеш стрийма си от родния си регион, и третирай всяка молба на зрител като транзакционна. Овърлеите и AI фонът на SplitCam също могат да скрият или подменят реалната ти обстановка.</p></details><details class="faq-item"><summary>Какви документи са ми нужни, за да стана модел в JustForFans?</summary><p>JustForFans обикновено изисква държавно издаден документ за самоличност със снимка (паспорт, шофьорска книжка или лична карта), селфи с документа в ръка и данъчен/платежен формуляр (W-9 за САЩ, W-8BEN за извън САЩ). Одобрението обикновено отнема 24–72 часа; след одобрение можеш да излезеш в ефир още същия ден.</p></details><details class="faq-item"><summary>Мога ли да стриймвам в JustForFans от телефона си?</summary><p>JustForFans обикновено предлага мобилно приложение за излъчване или мобилен уеб-броудкастър, но изживяването е ограничено — без овърлеи, без втора камера, без AI фон. За пълно продукционно качество излъчвай от компютър със SplitCam и използвай телефона си като втора камера (SplitCam приема IP-камера вход от телефони).</p></details><details class="faq-item"><summary>Мога ли да използвам SplitCam като виртуална камера в JustForFans?</summary><p>Да — лайвът на JustForFans върви в браузъра, така че SplitCam се регистрира като уебкамера на име <strong>"SplitCam Video Driver"</strong>. Отвори броудкастъра на JustForFans, кликни селектора на камера в браузъра и избери SplitCam. Композираната ти сцена (овърлеи, втора камера, филтри, AI фон) стига до зрителите като един уебкам поток.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други ръководства за платформи</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam в ImLive</h4><p>Виртуална камера за ImLive — без RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam в SkyPrivate</h4><p>Настройка с виртуална камера за кам обаждания през Skype в SkyPrivate.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Използвай SplitCam като виртуална камера за live в Fanvue.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Използвай SplitCam като виртуална камера за live в LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Още</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Мулти-стрийминг</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Стани кам модел</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense играчки</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Готов(а) ли си за ефир?</h2>

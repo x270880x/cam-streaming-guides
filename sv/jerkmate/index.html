@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sajter",
+     "item": "https://camstreamguide.com/sv/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Jerkmate",
      "item": "https://camstreamguide.com/sv/jerkmate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Steg</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterade guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
     <div class="qa-text">Sänd på Jerkmate med SplitCam: installera SplitCam, bygg din scen, registrera dig som modell i <a href="../streamate/" class="autolink">Streamate</a>-nätverket som matar Jerkmate, öppna <em>SM Connect → Start Show</em> och kopiera nyckeln, öppna sedan <em>Stream Settings → Add Channel → Streamate</em> i SplitCam och klistra in, tryck Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg för steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Ladda ner och installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg din scen</div><p class="step-p">Öppna SplitCam och lägg till webbkameran. Lägg till overlays, text, en andra kamera eller mobil, beauty-filter eller AI-bakgrund — en stark scen konverterar Jerkmates matchade tittare.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Registrera dig som modell och hämta nyckeln</div><p class="step-p">Registrera dig via Jerkmates modellprogram eller direkt i <strong>Streamate-nätverket</strong> som matar det. Öppna <strong>SM Connect</strong>, godkänn villkoren, klicka <strong>Start Show</strong> och kopiera streamnyckeln.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Lägg till Streamate som kanal i SplitCam</div><p class="step-p">Öppna <strong>Stream Settings → Add Channel</strong>, välj <strong>Streamate</strong> i den integrerade listan och klistra in nyckeln — ingen manuell RTMP-URL. Lås upplösningen till 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klicka Go Live</div><p class="step-p">Tryck <strong>Go Live</strong> i SplitCam — ett grönt reglage bekräftar anslutningen. Din show går ut över <a href="../streamate/" class="autolink">Streamate</a>-nätverket och dyker upp på Jerkmate.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Proffstips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Det är Streamate-nätverket under ytan</h3><p>Leta inte efter en Jerkmate-specifik sändare — du sänder på <a href="../streamate/" class="autolink">Streamate</a> och Jerkmate vidaresänder det. Allt som fungerar för Streamate (SM Connect, SplitCams integrerade kanal) fungerar för Jerkmate.</p></div><div class="tip-card"><h3>Konvertera den AI-matchade trafiken</h3><p>Jerkmates matchmaker slussar tittare till modeller som passar deras val — en polerad SplitCam-scen med overlays och bra bildkomposition konverterar de matchade tittarna långt bättre än en platt webbkamera.</p></div><div class="tip-card"><h3>En feed, många sajter</h3><p>Att sända till <a href="../streamate/" class="autolink">Streamate</a>-nätverket lägger dig på Jerkmate plus dess partnersajter samtidigt — bredare räckvidd från en enda SplitCam-stream, ingen extra uppsättning.</p></div><div class="tip-card"><h3>Använd kabelanslutning</h3><p>Ethernet slår Wi-Fi vid långa sändningar — tappade bildrutor betyder tappade tips. Koppla en kabel till datorn som sänder.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>Jerkmate-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under Jerkmate-sändning</summary><p>Tappade bildrutor betyder att paket inte når Jerkmate i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på Jerkmate</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>Jerkmate avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den Jerkmate visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på Jerkmate</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>
   <div class="faq-list"><details class="faq-item"><summary>Har Jerkmate en egen sändare eller streamnyckel?</summary><p>Nej — Jerkmate hämtar livemodeller från <a href="../streamate/" class="autolink">Streamate</a>-nätverket. Du sänder som modell i Streamate-nätverket via SM Connect, och din show dyker upp på Jerkmate automatiskt.</p></details><details class="faq-item"><summary>Hur får jag min Jerkmate-streamnyckel?</summary><p>Via SM Connect på modellsidan i <a href="../streamate/" class="autolink">Streamate</a>-nätverket: godkänn villkoren → Start Show → kopiera nyckeln. Klistra in den i SplitCams integrerade Streamate-kanal — ingen manuell RTMP-URL behövs.</p></details><details class="faq-item"><summary>Vilken bitrate för Jerkmate?</summary><p>Lås 1080p vid 30 fps. Nätverkets feed är adaptiv, så lägre bitrate vid stillbild är normalt. Kör SplitCams hastighetstest och använd kabelanslutning.</p></details><details class="faq-item"><summary>Är SplitCam gratis för Jerkmate?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns. <a href="../streamate/" class="autolink">Streamate</a> (som matar Jerkmate) är en integrerad kanal i SplitCam, så det finns ingen separat kodarkostnad.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på Jerkmate?</summary><p>Inkomsten på Jerkmate beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer Jerkmate:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är Jerkmate säkert för sändare?</summary><p>Jerkmate kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på Jerkmate?</summary><p>Jerkmate kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på Jerkmate från min telefon?</summary><p>Jerkmate erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Stöder Jerkmate OBS eller en extern encoder?</summary><p>Ja — Jerkmate tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams <strong>Stream Settings → Custom RTMP</strong>, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på <strong>Go Live</strong>. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a><a class="related-card" href="../bongacams/"><h4>Sända BongaCams</h4><p>External Encoder-uppsättning för BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Sända Stripchat</h4><p>Extern mjukvara-uppsättning för Stripchat-sändning.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuell kamera-uppsättning för ImLive — ingen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Lägg till MFC Alerts</h4><p>Visa animerade tips-aviseringar i din MyFreeCams-sändning.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Läs mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

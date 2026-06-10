@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan platformy",
+     "item": "https://camstreamguide.com/cs/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/cs/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Odpověď</a>
+  <a href="#steps">Kroky</a>
+  <a href="#tips">Tipy</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Související průvodci</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Rychlá odpověď</div>
     <div class="qa-text">Používejte SkyPrivate se SplitCam: nainstalujte SplitCam, postavte scénu, nainstalujte Skype s doplňkem SkyPrivate, v <em>Video Settings</em> ve Skype vyberte SplitCam jako kameru a mikrofon, potom přijímejte hovory rezervované přes SkyPrivate — Skype doručí vaši složenou scénu klientovi.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Krok za krokem</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Nainstalujte SplitCam</div><p class="step-p">SplitCam je zdarma pro Windows a macOS — bez registrace, bez karty, bez vodoznaku. Pro SkyPrivate funguje jako <strong>virtuální kamera</strong>, kterou Skype rozpozná jako jakoukoli webkameru.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Postavte scénu ve SplitCam</div><p class="step-p">Otevřete SplitCam a použijte <strong>Media Layers +</strong>, abyste přidali webkameru plus libovolné překryvy, texty, beauty filtry nebo AI pozadí. Tato složená scéna doputuje přes Skype ke klientovi SkyPrivate.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Nainstalujte Skype a doplněk SkyPrivate</div><p class="step-p">Nainstalujte Skype na stejný PC, přihlaste se, pak nainstalujte doplněk SkyPrivate / desktop aplikaci podle onboarding postupu SkyPrivate. Doplněk řeší účtování po minutách na straně SkyPrivate.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Vyberte SplitCam jako kameru a mikrofon ve Skype</div><p class="step-p">Ve Skype otevřete <strong>Settings → Audio &amp; Video</strong>. Nastavte <strong>Camera = SplitCam</strong> a <strong>Microphone = SplitCam</strong>. Udělejte rychlý testovací hovor ve Skype (Echo / Sound Test Service), abyste si potvrdili, že scéna vypadá i zní správně.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Přijímejte hovory SkyPrivate</div><p class="step-p">Když si klient SkyPrivate zarezervuje placený hovor, dorazí jako Skype hovor — přijměte ho. Klient vidí vaši složenou scénu SplitCam; SkyPrivate účtuje po minutách. Scénu měníte uprostřed hovoru tak, že ji upravíte ve SplitCam — Skype se aktualizuje okamžitě.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Profi tipy</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Žádné RTMP — flow virtuální kamery</h3><p>Nehledejte URL serveru ani stream key. SkyPrivate jede přes Skype, a Skype jednoduše vidí SplitCam jako webcam zařízení. Postavte scénu ve SplitCam, potom vyberte SplitCam v nastavení kamery Skype.</p></div><div class="tip-card"><h3>Nastavte SplitCam i jako mikrofon</h3><p>V nastavení Audio ve Skype vyberte jako mikrofon SplitCam vedle kamery — pak potlačení šumu, smíchané audio i úvodní hudba dojdou ke klientovi.</p></div><div class="tip-card"><h3>Přidejte test odchozího hovoru ve Skype</h3><p>Před prvním placeným hovorem SkyPrivate udělejte zdarma testovací hovor ve Skype (Echo / Sound Test Service), abyste ověřili, že SplitCam je aktivní kamera a scéna je správně složená.</p></div><div class="tip-card"><h3>Nejdřív si udělejte soukromý test</h3><p>Spusťte krátké testovací vysílání, abyste zkontrolovali kameru, zvuk, kompozici a překryvy, než otevřete místnost divákům.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Řešení problémů</h2><div class="faq-list"><details class="faq-item"><summary>Vysílání SkyPrivate se seká nebo bufferuje</summary><p>Téměř vždy je bitrate nastavený výš, než unese váš upload. Spusťte vestavěný test rychlosti SplitCam, poté nastavte bitrate na zhruba 75 % naměřeného uploadu — 3500–6000&nbsp;Kbps pro 1080p, méně pro 720p. Sekání zmizí, jakmile kodér přestane překračovat vaši linku.</p></details><details class="faq-item"><summary>Ztráta snímků během vysílání SkyPrivate</summary><p>Ztráta snímků znamená, že pakety nedorazí na SkyPrivate včas — obvykle nestabilní Wi-Fi. Přejděte na drátový Ethernet, zavřete aplikace požírající pásmo a mírně snižte bitrate. Jeden výkyv nevadí; trvalý nárůst znamená, že linka nestíhá.</p></details><details class="faq-item"><summary>Černá obrazovka — diváci nevidí video na SkyPrivate</summary><p>Vaše kamera není vybraná jako aktivní zdroj ve SplitCam, nebo ji drží jiná aplikace. Zavřete Zoom, Skype nebo OBS, vyberte webkameru znovu v seznamu zdrojů SplitCam a ujistěte se, že náhled ukazuje váš obraz, než stisknete Go Live.</p></details><details class="faq-item"><summary>SkyPrivate odmítá stream key nebo se nepřipojuje</summary><p>Zkopírujte stream key znovu — mezera na konci nebo starý, resetovaný klíč jsou nejčastější příčiny. Ujistěte se, že URL serveru odpovídá tomu, co SkyPrivate zobrazuje, a že vysílání externím kodérem je na účtu zapnuté. Zelený posuvník v Stream Settings SplitCam potvrzuje platný klíč.</p></details><details class="faq-item"><summary>Žádný zvuk nebo zvuk nesynchronní na SkyPrivate</summary><p>Vyberte SplitCam jako kameru I mikrofon a ve zdroji zvuku SplitCam vyberte svůj skutečný mikrofon. Pokud zvuk zaostává za videem, snižte rozlišení o úroveň — kodér je přetížený a zvuk čeká na opožděné snímky.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Časté dotazy</h2>
   <div class="faq-list"><details class="faq-item"><summary>Používá SkyPrivate RTMP nebo stream key?</summary><p>Ani jedno. SkyPrivate řeší účtování a rezervace; samotné video jede přes Skype. Nepotřebujete URL serveru RTMP ani stream key — stačí nastavit SplitCam jako kameru ve Skype.</p></details><details class="faq-item"><summary>Jak vybrat SplitCam ve Skype pro SkyPrivate?</summary><p>Otevřete Skype Settings → Audio &amp; Video → Camera, vyberte SplitCam ze seznamu. Totéž udělejte pro Microphone. Hovory ze SkyPrivate pak přicházejí jako normální Skype hovory s vaší scénou SplitCam jako feedem kamery.</p></details><details class="faq-item"><summary>Mohu používat překryvy a beauty filtry se SkyPrivate?</summary><p>Ano — postavte je ve své scéně SplitCam. Skype dostane jen složený výsledek jako jeden feed kamery, takže vše, co SplitCam složí (překryvy, beauty filtry, AI pozadí, vícekamerové scény) je vidět klientovi SkyPrivate.</p></details><details class="faq-item"><summary>Je SplitCam zdarma pro SkyPrivate?</summary><p>Ano — SplitCam je zdarma, bez vodoznaku a bez časového limitu. Jako virtuální kamera pro hovory SkyPrivate přes Skype nepřidává žádné náklady ani branding.</p></details><details class="faq-item"><summary>Kolik si modelky můžou na SkyPrivate vydělat?</summary><p>Výdělky na SkyPrivate závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou SkyPrivate — před prvním vysíláním si projdi model agreement.</p></details><details class="faq-item"><summary>Je SkyPrivate pro vysílající bezpečná?</summary><p>SkyPrivate před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit.</p></details><details class="faq-item"><summary>Jaké dokumenty potřebuju, abych se na SkyPrivate stala modelkou?</summary><p>SkyPrivate obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den.</p></details><details class="faq-item"><summary>Můžu na SkyPrivate vysílat z mobilu?</summary><p>SkyPrivate většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů).</p></details><details class="faq-item"><summary>Můžu SplitCam použít jako virtuální kameru na SkyPrivate?</summary><p>Ano — live na SkyPrivate běží v prohlížeči, takže SplitCam se zaregistruje jako webkamera s názvem <strong>"SplitCam Video Driver"</strong>. Otevři broadcaster SkyPrivate, klikni v prohlížeči na výběr kamery a zvol SplitCam. Tvoje složená scéna (overlaye, druhá kamera, filtry, AI pozadí) dorazí divákům jako jeden webkamerový stream.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Návody pro jiné platformy</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam na ImLive</h4><p>Nastavení virtuální kamery pro ImLive — bez RTMP.</p></a><a class="related-card" href="../justforfans/"><h4>Živě na JustForFans</h4><p>Použijte SplitCam jako virtuální kameru v živém vysílači JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Živě na Fanvue</h4><p>Použijte SplitCam jako virtuální kameru pro živé vysílání na Fanvue.</p></a><a class="related-card" href="../loyalfans/"><h4>Živě na LoyalFans</h4><p>Použijte SplitCam jako virtuální kameru pro živé vysílání na LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Vysílání Chaturbate</h4><p>Nastavení založené na tokenu s externím kodérem na Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Vysílání CAM4</h4><p>External Encoder na CAM4 s geo kontrolou.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Pokračovat</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Stát se cam modelkou</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Připraveni jít živě?</h2>

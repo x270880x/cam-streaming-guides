@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "‏سایت‌های Cam",
+     "item": "https://camstreamguide.com/fa/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Camster",
      "item": "https://camstreamguide.com/fa/camster/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">پاسخ</a>
+  <a href="#steps">مراحل</a>
+  <a href="#tips">نکات</a>
+  <a href="#faq">سوالات</a>
+  <a href="#related">راهنماهای مرتبط</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">پاسخ سریع</div>
     <div class="qa-text">پخش در Camster با SplitCam: SplitCam را نصب کنید، صحنه‌تان را بسازید، در Model Hub بخش <em>Broadcast Settings → External Encoder</em> را باز کنید، URL سرور و stream key را کپی کنید، در SplitCam جای‌گذاری کنید، Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">مرحله به مرحله</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">‏SplitCam را نصب کنید</div><p class="step-p">‏SplitCam نرم‌افزار پخش زنده رایگان برای Windows و macOS است — بدون ثبت‌نام، بدون کارت، بدون واترمارک.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">صحنه‌تان را بسازید</div><p class="step-p">‏SplitCam را باز کنید و وب‌کم را اضافه کنید. پوشش‌ها، متن، دوربین دوم یا گوشی‌تان، فیلترهای زیبایی یا پس‌زمینه AI را به صورت لایه‌ای اضافه کنید — همه به صورت زنده اعمال می‌شوند.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">‏URL و stream key را از Camster بگیرید</div><p class="step-p">وارد حساب مدل Camster خود شوید، <strong>Model Hub</strong> را باز کنید، به <strong>Broadcast Settings → External Encoder</strong> بروید. این صفحه یک <strong>URL سرور</strong> و <strong>stream key</strong> منحصربه‌فرد نمایش می‌دهد. هر دو را کپی کنید.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">‏SplitCam را به Camster متصل کنید</div><p class="step-p">در SplitCam <strong>Stream Settings</strong> را باز کنید، URL سرور و stream key مربوط به Camster را در فیلدهای RTMP سفارشی جای‌گذاری کنید. bitrate را روی ۳۵۰۰ تا ۶۰۰۰ کیلوبیت بر ثانیه در ۱۹۲۰×۱۰۸۰، ۳۰ fps، با keyframe دو ثانیه‌ای تنظیم کنید. ابتدا تست سرعت داخلی را اجرا کنید.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">‏Go Live را کلیک کنید</div><p class="step-p"><strong>Go Live</strong> را در SplitCam فشار دهید، سپس از Model Hub در Camster آنلاین شوید. در حدود ۱۰ ثانیه پخش شما به Camster می‌رسد.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">نکات حرفه‌ای</h2>
   <div class="tips-grid"><div class="tip-card"><h3>سطح میانی یعنی رقابت کمتر</h3><p>‏Camster ترافیک ثابتی دارد اما تعداد پخش‌کنندگان کمتری نسبت به شبکه‌های رده بالا — رسیدن به صفحه اول با یک صحنه آراسته و برنامه منظم آسان‌تر است.</p></div><div class="tip-card"><h3>پخش‌کننده مرورگر در برابر خارجی</h3><p>پخش‌کننده پیش‌فرض مرورگر تک‌منبع است. SplitCam از طریق External Encoder صحنه‌های چنددوربینه، پوشش‌ها، فیلترهای زیبایی و پس‌زمینه AI را باز می‌کند.</p></div><div class="tip-card"><h3>پرداخت‌های پایدار، تقسیم منصفانه</h3><p>تقسیم درآمد Camster برای سطح میانی منصفانه است — بالاترین در صنعت نیست، اما پرداخت‌های ماهانه قابل اعتماد و شکایات کم مدل‌ها از تأخیر در پرداخت.</p></div><div class="tip-card"><h3>از اتصال سیمی استفاده کنید</h3><p>اترنت در پخش‌های طولانی از Wi-Fi بهتر است — فریم‌های گم‌شده به معنای انعام‌های گم‌شده است. کابل را به رایانه پخش‌کننده وصل کنید.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">عیب‌یابی</h2><div class="faq-list"><details class="faq-item"><summary>پخش Camster متوقف می‌شود یا بافر می‌کند</summary><p>تقریباً همیشه بیت‌ریت بالاتر از آن تنظیم شده که آپلود شما تحمل کند. تست سرعت داخلی SplitCam را اجرا کنید، سپس بیت‌ریت را به حدود ۷۵٪ آپلود اندازه‌گیری شده تنظیم کنید — ۳۵۰۰–۶۰۰۰&nbsp;Kbps برای ۱۰۸۰p.</p></details><details class="faq-item"><summary>فریم‌های از دست رفته حین پخش Camster</summary><p>فریم‌های از دست رفته به این معناست که بسته‌ها به Camster به موقع نمی‌رسند — معمولاً Wi-Fi ناپایدار. به Ethernet سیمی تغییر دهید، برنامه‌هایی که پهنای باند می‌خورند را ببندید و بیت‌ریت را کمی کاهش دهید.</p></details><details class="faq-item"><summary>صفحه سیاه — بینندگان ویدیو را در Camster نمی‌بینند</summary><p>دوربین شما به عنوان منبع فعال در SplitCam انتخاب نشده، یا برنامه دیگری آن را نگه داشته. Zoom، Skype یا OBS را ببندید، وب‌کم را دوباره در لیست منابع SplitCam انتخاب کنید.</p></details><details class="faq-item"><summary>Camster کلید جریان را رد می‌کند یا متصل نمی‌شود</summary><p>کلید جریان را دوباره کپی کنید — فاصله در انتها یا کلید قدیمی بازنشانی شده رایج‌ترین دلایل هستند. مطمئن شوید URL سرور با آنچه Camster نشان می‌دهد مطابقت دارد.</p></details><details class="faq-item"><summary>صدا وجود ندارد یا صدا در Camster ناهمزمان است</summary><p>SplitCam را هم به عنوان دوربین و هم میکروفون انتخاب کنید، و میکروفون واقعی خود را در منبع صدای SplitCam انتخاب کنید. اگر صدا از ویدیو عقب می‌ماند، رزولوشن را یک سطح پایین بیاورید.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">سؤالات متداول</h2>
   <div class="faq-list"><details class="faq-item"><summary>آیا Camster رسماً از external encoder مانند SplitCam پشتیبانی می‌کند؟</summary><p>بله — Model Hub گزینه External Encoder را زیر Broadcast Settings دارد. URL سرور RTMP استاندارد و stream key؛ OBS، SplitCam و سایر انکودرهای RTMP همگی متصل می‌شوند.</p></details><details class="faq-item"><summary>‏stream key مربوط به Camster را از کجا بگیرم؟</summary><p>Model Hub → Broadcast Settings → External Encoder. هم URL سرور و هم stream key آنجا ظاهر می‌شوند. هر دو را در فیلدهای RTMP سفارشی SplitCam کپی کنید.</p></details><details class="faq-item"><summary>چه bitrate ای برای Camster استفاده کنم؟</summary><p>تنظیمات استاندارد کیفیت cam — ۱۹۲۰×۱۰۸۰ در ۳۰ fps را با ۳۵۰۰ تا ۶۰۰۰ کیلوبیت بر ثانیه و فاصله keyframe دو ثانیه‌ای پوش کنید. ابتدا تست سرعت داخلی SplitCam را اجرا کنید.</p></details><details class="faq-item"><summary>آیا استفاده از SplitCam با Camster رایگان است؟</summary><p>بله — SplitCam رایگان است، بدون واترمارک و بدون محدودیت زمانی. گزینه external encoder در Camster رایگان است.</p></details><details class="faq-item"><summary>مدل‌ها در ‏Camster چقدر می‌توانند درآمد داشته باشند؟</summary><p>درآمد در ‏Camster به اندازه مخاطب، ساعات پخش زنده و رفتار تیپ دادن بستگی دارد. پخش‌کنندگان فعال معمولاً ماهانه بین ۲۰۰ تا ۳٬۰۰۰ دلار به دست می‌آورند؛ افراد برتر به بیش از ۱۰٬۰۰۰ دلار می‌رسند. سهم درآمد شما از ساختار کمیسیون ‏Camster پیروی می‌کند — پیش از پخش زنده، قرارداد مدل را بررسی کنید.</p></details><details class="faq-item"><summary>آیا ‏Camster برای پخش‌کنندگان امن است؟</summary><p>‏Camster پیش از پرداخت، احراز سن و هویت را الزامی می‌کند که از مدل‌ها در برابر کلاهبرداری محافظت می‌کند. از یک نام مستعار استفاده کنید، هرگز اطلاعات شخصی را جلوی دوربین فاش نکنید، مسدودسازی جغرافیایی را برای پنهان کردن پخش خود از منطقه محل سکونتتان فعال کنید و هر درخواست بیننده را تراکنشی در نظر بگیرید. اورلی‌ها و پس‌زمینه هوش مصنوعی ‏SplitCam نیز می‌توانند محیط واقعی شما را پنهان یا جایگزین کنند.</p></details><details class="faq-item"><summary>برای تبدیل شدن به مدل در ‏Camster چه مدارکی نیاز دارم؟</summary><p>‏Camster معمولاً یک کارت شناسایی عکس‌دار صادر شده توسط دولت (پاسپورت، گواهینامه رانندگی یا کارت شناسایی)، یک سلفی همراه با کارت شناسایی و یک فرم مالیاتی/پرداخت (W-9 برای آمریکا، W-8BEN برای خارج از آمریکا) نیاز دارد. تأیید معمولاً بین ۲۴ تا ۷۲ ساعت طول می‌کشد؛ پس از تأیید می‌توانید همان روز پخش زنده را آغاز کنید.</p></details><details class="faq-item"><summary>آیا می‌توانم از گوشی خود در ‏Camster پخش زنده داشته باشم؟</summary><p>‏Camster معمولاً یک اپلیکیشن موبایلی برای پخش‌کنندگان یا یک نسخه وب موبایلی ارائه می‌دهد، اما تجربه محدود است — بدون اورلی، بدون دوربین دوم، بدون پس‌زمینه هوش مصنوعی. برای کیفیت کامل تولید، از یک کامپیوتر با ‏SplitCam پخش کنید و از گوشی خود به عنوان دوربین دوم استفاده کنید (‏SplitCam ورودی دوربین ‏IP را از گوشی‌ها می‌پذیرد).</p></details><details class="faq-item"><summary>آیا ‏Camster از ‏OBS یا یک انکودر خارجی پشتیبانی می‌کند؟</summary><p>بله — ‏Camster یک آدرس سرور ‏RTMP و یک کلید استریم را در پنل پخش‌کننده ارائه می‌دهد. هر دو را در <strong>‏Stream Settings → Custom RTMP</strong> در ‏SplitCam وارد کنید، رزولوشن ۱۹۲۰×۱۰۸۰ با ۳۰ فریم بر ثانیه و بیت‌ریت ۴٬۰۰۰ تا ۵٬۰۰۰ کیلوبیت بر ثانیه را تنظیم کنید و روی <strong>‏Go Live</strong> کلیک کنید. مسیر ‏Custom RTMP ترکیب کامل صحنه ‏SplitCam را به شما می‌دهد (چند دوربین، اورلی‌ها، فیلترها).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">راهنماهای پلتفرم‌های دیگر</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>پخش Chaturbate</h4><p>تنظیم مبتنی بر توکن با رمزگذار خارجی در Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>پخش CAM4</h4><p>External Encoder در CAM4 با کنترل جغرافیایی.</p></a><a class="related-card" href="../bongacams/"><h4>پخش BongaCams</h4><p>تنظیم External Encoder برای BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>پخش Stripchat</h4><p>تنظیم نرم‌افزار خارجی برای پخش Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam در ImLive</h4><p>تنظیم دوربین مجازی برای ImLive — بدون RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>افزودن MFC Alerts</h4><p>هشدارهای انعام متحرک را در پخش MyFreeCams نمایش دهید.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">ادامه یادگیری</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>‏Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>‏SplitCam در مقابل OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>مدل کام شوید</h4></a>
+    <a class="related-card" href="../lovense/"><h4>‏Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>آماده پخش زنده هستید؟</h2>

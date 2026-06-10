@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Plataformas de fans",
+     "item": "https://camstreamguide.com/es/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "IsMyGirl",
      "item": "https://camstreamguide.com/es/ismygirl/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Respuesta</a>
+  <a href="#steps">Pasos</a>
+  <a href="#tips">Consejos</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guías relacionadas</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Respuesta rápida</div>
     <div class="qa-text">Emite en directo en IsMyGirl con SplitCam: instala SplitCam, monta tu escena, inicia una emisión en directo en IsMyGirl y elige <em>SplitCam</em> en el selector de cámara del broadcaster — luego ponte en directo.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Paso a paso</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarga e instala SplitCam</div><p class="step-p">SplitCam es software gratuito de streaming en directo para Windows y macOS — sin registro, sin tarjeta, sin marca de agua. Instala una cámara virtual que el navegador puede seleccionar.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Monta tu escena</div><p class="step-p">Abre SplitCam y añade tu webcam. Mete superposiciones, texto, una segunda cámara o el móvil, filtros de belleza o un fondo IA.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Inicia una emisión en directo en IsMyGirl</div><p class="step-p">Inicia sesión en tu cuenta de IsMyGirl y abre el broadcaster en directo para ponerte en directo ante tus suscriptores.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Elige SplitCam como tu cámara</div><p class="step-p">En el desplegable de cámara de IsMyGirl, elige <strong>SplitCam</strong> en vez de tu webcam normal. (O, si está disponible, pega una clave de stream en los campos de RTMP personalizado de SplitCam.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Pulsa Go Live</div><p class="step-p">Inicia la emisión — tu escena de SplitCam llega a tus suscriptores de IsMyGirl.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Consejos</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Cámara virtual, sin clave</h3><p>El directo solo de navegador igual recibe tu escena completa de SplitCam — superposiciones, segunda cámara y filtros — eligiendo SplitCam como webcam.</p></div><div class="tip-card"><h3>Aprovecha el soporte a creators</h3><p>IsMyGirl presume de soporte y promoción fuertes para creators. Una escena pulida de SplitCam más superposiciones de cross-sell sacan el máximo partido al tráfico que te envían.</p></div><div class="tip-card"><h3>Da permiso de cámara al navegador</h3><p>Si SplitCam no aparece en la lista, abre SplitCam primero, permite el acceso a la cámara y recarga el broadcaster.</p></div><div class="tip-card"><h3>Haz una prueba privada primero</h3><p>Una emisión de prueba corta verifica cámara, audio, encuadre y superposiciones antes de abrir la sala.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Solución de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Tu emisión en IsMyGirl va con lag o se entrecorta</summary><p>Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000&nbsp;Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión.</p></details><details class="faq-item"><summary>Fotogramas perdidos durante la emisión en IsMyGirl</summary><p>Los fotogramas perdidos significan que los paquetes no llegan a tiempo a IsMyGirl — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto.</p></details><details class="faq-item"><summary>Pantalla negra — los espectadores no ven vídeo en IsMyGirl</summary><p>Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live.</p></details><details class="faq-item"><summary>IsMyGirl rechaza la clave de stream o no conecta</summary><p>Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra IsMyGirl y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida.</p></details><details class="faq-item"><summary>Sin audio o audio desincronizado en IsMyGirl</summary><p>Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Preguntas frecuentes</h2>
   <div class="faq-list"><details class="faq-item"><summary>¿Cómo conecta SplitCam con IsMyGirl?</summary><p>El directo de IsMyGirl va por navegador, así que SplitCam se conecta como cámara virtual — elige SplitCam en el selector de cámara. No hace falta clave de stream.</p></details><details class="faq-item"><summary>¿Puedo usar superposiciones y varias cámaras en IsMyGirl?</summary><p>Sí — compón la escena en SplitCam; IsMyGirl la ve como una sola webcam.</p></details><details class="faq-item"><summary>¿IsMyGirl admite OBS o codificadores externos?</summary><p>Su directo es principalmente de navegador / webcam. Si aparece una opción de clave de stream, pégala en los campos de RTMP personalizado de SplitCam; si no, usa el método de cámara virtual.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para usar con IsMyGirl?</summary><p>Sí — gratis, sin marca de agua y sin límite de tiempo.</p></details><details class="faq-item"><summary>¿Cuánto pueden ganar las modelos en IsMyGirl?</summary><p>Los ingresos en IsMyGirl dependen del tamaño de la audiencia, las horas emitidas y las propinas. Las difusoras activas suelen llevarse entre $200 y $3,000 al mes; las mejores superan los $10,000. Tu porcentaje de ingresos sigue la estructura de comisiones de IsMyGirl: revisa el contrato de modelo antes de salir en directo.</p></details><details class="faq-item"><summary>¿Es IsMyGirl segura para las difusoras?</summary><p>IsMyGirl exige verificación de edad y de identidad antes de pagar, lo que protege a las modelos del fraude. Usa un nombre artístico, no compartas nunca datos personales en cámara, activa el bloqueo geográfico para ocultar tu emisión en tu región y trata cada petición del espectador como una transacción. Los overlays y el fondo con IA de SplitCam también te permiten ocultar o reemplazar tu entorno real.</p></details><details class="faq-item"><summary>¿Qué documentos necesito para hacerme modelo en IsMyGirl?</summary><p>IsMyGirl suele pedir un documento oficial con foto (pasaporte, carné de conducir o DNI), una selfi sosteniendo el documento y un formulario fiscal/de pagos (W-9 para EE. UU., W-8BEN para no residentes en EE. UU.). La aprobación suele tardar de 24 a 72 horas; una vez aprobada, puedes emitir el mismo día.</p></details><details class="faq-item"><summary>¿Puedo emitir en IsMyGirl desde el móvil?</summary><p>IsMyGirl normalmente ofrece una app móvil para difusoras o un panel móvil web, pero la experiencia es limitada: sin overlays, sin segunda cámara y sin fondo con IA. Para una calidad de producción completa, emite desde un ordenador con SplitCam y usa el móvil como segunda cámara (SplitCam admite entrada de cámara IP desde móviles).</p></details><details class="faq-item"><summary>¿Puedo usar SplitCam como cámara virtual en IsMyGirl?</summary><p>Sí: el directo de IsMyGirl corre en el navegador, así que SplitCam se registra como una webcam llamada <strong>"SplitCam Video Driver"</strong>. Abre el panel de difusora de IsMyGirl, pulsa el selector de cámara del navegador y elige SplitCam. Tu escena compuesta (overlays, segunda cámara, filtros, fondo con IA) llega a los espectadores como una única señal de webcam.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guías de otras plataformas</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>Usar SplitCam en ImLive</h4><p>Cámara virtual para ImLive — sin RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam en SkyPrivate</h4><p>Configuración de cámara virtual para las llamadas cam de SkyPrivate basadas en Skype.</p></a><a class="related-card" href="../justforfans/"><h4>Directo en JustForFans</h4><p>Usa SplitCam como cámara virtual en el broadcaster en directo de JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Directo en Fanvue</h4><p>Usa SplitCam como cámara virtual en el broadcaster en directo de Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Transmitir en Chaturbate</h4><p>Configuración por token y codificador externo de Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmitir en CAM4</h4><p>External Encoder de CAM4 con geo-controles.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Más guías</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Ser cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Juguetes Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>¿Listo para emitir?</h2>

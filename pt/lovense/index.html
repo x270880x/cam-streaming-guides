@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Ferramentas",
+     "item": "https://camstreamguide.com/pt/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/pt/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Resposta</a>
+  <a href="#steps">Passos</a>
+  <a href="#tips">Dicas</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Guias relacionados</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Em resumo</div>
     <div class="qa-text">Pra adicionar um toy Lovense ao stream: instalar SplitCam e o software Lovense, parear o toy, ligar o Lovense à sua plataforma cam, adicionar o status Lovense como camada Browser no SplitCam, depois transmitir normal.</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Passo a passo</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Instala o SplitCam</div><p class="step-p">O SplitCam é um software de streaming grátis pra Windows e macOS — o encoder que envia seu vídeo pra sua plataforma cam. Instala; sem marca d'água.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Instala e pareia o software Lovense</div><p class="step-p">Instala o Lovense Connect / Lovense Stream (o app oficial pra desktop). Liga o toy e pareia por Bluetooth pra que o app mostre conectado.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Liga o Lovense à sua plataforma cam</div><p class="step-p">No app Lovense conecta sua conta cam pra que o toy reaja aos tokens / tips dos espectadores. A maioria das grandes plataformas cam é suportada.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Adiciona o overlay Lovense no SplitCam</div><p class="step-p">A Lovense fornece uma URL de overlay / widget. Adiciona como camada <strong>Browser</strong> na sua cena SplitCam pra que os espectadores vejam o status do toy e os tips recentes na tela.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Monta a cena e Go Live</div><p class="step-p">Adiciona a câmera e os outros overlays, cola a chave RTMP da sua plataforma cam no SplitCam e clica <strong>Go Live</strong>. O toy reage aos tips em tempo real.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Dicas</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Use o Lovense SplitCam Toolset oficial</h3><p>A Lovense publica um toolset específico pro SplitCam com guia de instalação próprio — ele adiciona o overlay de atividade do toy e alerts de tips feito pro SplitCam.</p></div><div class="tip-card"><h3>Atualize a Lovense Cam Extension</h3><p>O toolset precisa de uma Lovense Cam Extension recente (30.1.4 ou mais nova) — atualiza antes do live.</p></div><div class="tip-card"><h3>Mantém o toy carregado</h3><p>Bateria acabando no meio do show mata a parte interativa — carrega total antes de entrar ao vivo.</p></div><div class="tip-card"><h3>Testa a reação a tokens</h3><p>Manda um pequeno tip de teste pra confirmar que o toy reage antes de abrir a sala.</p></div><div class="tip-card"><h3>Confira os requisitos de versão</h3><p>O Lovense SplitCam Toolset precisa do SplitCam 10.4.5 ou mais novo. A Lovense Cam Extension cobre oficialmente <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> e <a href="../camsoda/" class="autolink">CamSoda</a> — pra qualquer outro site, usa a integração Generic URL da Lovense.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Solução de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Sua transmissão no Lovense trava ou fica em buffer</summary><p>Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão.</p></details><details class="faq-item"><summary>Frames perdidos durante a transmissão no Lovense</summary><p>Frames perdidos significam que os pacotes não chegam ao Lovense a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta.</p></details><details class="faq-item"><summary>Tela preta — os espectadores não veem vídeo no Lovense</summary><p>Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live.</p></details><details class="faq-item"><summary>Lovense rejeita a stream key ou não conecta</summary><p>Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo Lovense e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida.</p></details><details class="faq-item"><summary>Sem áudio ou áudio fora de sincronia no Lovense</summary><p>Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>A Lovense suporta o SplitCam oficialmente?</summary><p>Sim — a Lovense documenta um «Lovense SplitCam Toolset» oficial com guia de instalação próprio, e o SplitCam traz um plugin Lovense oficial. A integração é suportada dos dois lados.</p></details><details class="faq-item"><summary>O toy conecta direto no SplitCam?</summary><p>Não — o toy pareia com o app Lovense; o SplitCam mostra o overlay Lovense e transmite sua câmera.</p></details><details class="faq-item"><summary>Quais sites cam suportam Lovense?</summary><p>A Cam Extension da Lovense suporta oficialmente <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> e <a href="../camsoda/" class="autolink">CamSoda</a>, com suporte variável pra outros — confere a lista atual no app Lovense.</p></details><details class="faq-item"><summary>Posso mostrar tips recentes na tela?</summary><p>Sim — adiciona a URL do widget Lovense como camada Browser no SplitCam.</p></details><details class="faq-item"><summary>Quanto as criadoras ganham no Lovense?</summary><p>Os ganhos no Lovense dependem do tamanho do público, das horas ao vivo e do volume de gorjetas. Criadoras ativas costumam levar para casa de R$ 1.000 a R$ 15.000 por mês; as top performers chegam a R$ 50.000+. Sua porcentagem segue a comissão do Lovense — leia o contrato de modelo antes de entrar ao vivo.</p></details><details class="faq-item"><summary>O Lovense é seguro para quem transmite?</summary><p>O Lovense exige verificação de idade e documento antes de liberar o pagamento, o que protege a criadora contra fraudes. Use um nome artístico, nunca mostre dados pessoais na câmera, ative bloqueio geográfico para esconder a transmissão da sua região e trate todo pedido de assinante como transacional. Os overlays e o fundo com IA do SplitCam também escondem ou substituem o ambiente real.</p></details><details class="faq-item"><summary>Quais documentos eu preciso para virar modelo no Lovense?</summary><p>O Lovense geralmente pede um documento oficial com foto (RG, CNH ou passaporte), uma selfie segurando o documento e o formulário fiscal/de pagamento (W-9 para EUA, W-8BEN fora dos EUA; no Brasil costumam aceitar CPF para receber via PIX por gateway). A aprovação leva de 24 a 72 horas; aprovada, você já entra ao vivo no mesmo dia.</p></details><details class="faq-item"><summary>Dá para transmitir no Lovense pelo celular?</summary><p>O Lovense normalmente oferece um app de transmissão ou um broadcaster mobile pelo navegador, mas a experiência é limitada — sem overlays, sem segunda câmera, sem fundo com IA. Para qualidade de produção completa, transmita pelo computador com o SplitCam e use o celular como segunda câmera (o SplitCam aceita entrada de câmera IP a partir do celular).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Suporte oficial — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">Somos um guia independente. Pra questões de conta, pagamentos ou problemas técnicos, fale direto com o suporte oficial da plataforma.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Outros guias de plataforma</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmitir no Chaturbate</h4><p>Configuração por token com encoder externo no Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmitir no CAM4</h4><p>External Encoder no CAM4 com geo-controles.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Saiba mais</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Ser cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Brinquedos Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Pronto pra entrar ao vivo?</h2>

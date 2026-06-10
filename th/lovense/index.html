@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "เครื่องมือ",
+     "item": "https://camstreamguide.com/th/#extras"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Lovense",
      "item": "https://camstreamguide.com/th/lovense/"
     }
@@ -399,6 +405,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -522,7 +536,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">คำตอบ</a>
+  <a href="#steps">ขั้นตอน</a>
+  <a href="#tips">เคล็ดลับ</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">ไกด์ที่เกี่ยวข้อง</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">คำตอบด่วน</div>
     <div class="qa-text">ในการเพิ่มของเล่น Lovense ลงในสตรีม: ติดตั้ง SplitCam และซอฟต์แวร์ Lovense จับคู่ของเล่น เชื่อม Lovense กับแพลตฟอร์ม cam ของคุณ เพิ่มสถานะ Lovense เป็นเลเยอร์เบราว์เซอร์ใน SplitCam จากนั้นถ่ายทอดตามปกติ</div>
@@ -533,19 +554,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">ทีละขั้นตอน</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">ติดตั้ง SplitCam</div><p class="step-p">SplitCam เป็นซอฟต์แวร์สตรีมมิ่งฟรีสำหรับ Windows และ macOS — encoder ที่ส่งวิดีโอของคุณไปยังแพลตฟอร์ม cam ติดตั้ง; ไม่มีลายน้ำ</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">ติดตั้งซอฟต์แวร์ Lovense และจับคู่ของเล่น</div><p class="step-p">ติดตั้ง Lovense Connect / Lovense Stream (แอปเดสก์ท็อปทางการ) เปิดของเล่นและจับคู่ผ่าน Bluetooth ให้แอปแสดงเชื่อมต่อแล้ว</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">เชื่อม Lovense กับแพลตฟอร์ม cam</div><p class="step-p">ในแอป Lovense เชื่อมบัญชี cam ของคุณเพื่อให้ของเล่นตอบสนองต่อโทเค็น/ทิปของผู้ชม แพลตฟอร์ม cam ใหญ่ๆ ส่วนใหญ่ได้รับการสนับสนุน</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">เพิ่มโอเวอร์เลย์ Lovense ใน SplitCam</div><p class="step-p">Lovense ให้ URL โอเวอร์เลย์/วิดเจ็ต เพิ่มเป็นเลเยอร์ <strong>Browser</strong> ในฉาก SplitCam เพื่อให้ผู้ชมเห็นสถานะของเล่นและทิปล่าสุดบนหน้าจอ</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">สร้างฉากและ Go Live</div><p class="step-p">เพิ่มกล้องและโอเวอร์เลย์อื่นๆ วางคีย์ RTMP ของแพลตฟอร์ม cam ใน SplitCam และคลิก <strong>Go Live</strong> ของเล่นตอบสนองต่อทิปแบบเรียลไทม์</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">เคล็ดลับ</h2>
   <div class="tips-grid"><div class="tip-card"><h3>ใช้ Lovense SplitCam Toolset ทางการ</h3><p>Lovense เผยแพร่ toolset เฉพาะของ SplitCam พร้อมคู่มือการติดตั้งของตัวเอง — เพิ่มโอเวอร์เลย์กิจกรรมของเล่นและทิปอเลิร์ตที่สร้างสำหรับ SplitCam</p></div><div class="tip-card"><h3>อัปเดต Lovense Cam Extension</h3><p>Toolset ต้องใช้ Lovense Cam Extension ล่าสุด (30.1.4 หรือใหม่กว่า) — อัปเดตก่อนไลฟ์</p></div><div class="tip-card"><h3>เก็บของเล่นไว้ชาร์จ</h3><p>แบตเตอรี่ที่เกือบหมดกลางโชว์ฆ่าด้านโต้ตอบ — ชาร์จเต็มก่อนไลฟ์</p></div><div class="tip-card"><h3>ทดสอบการตอบสนองต่อโทเค็น</h3><p>ส่งทิปทดสอบเล็กๆ เพื่อยืนยันว่าของเล่นตอบสนองก่อนเปิดห้อง</p></div><div class="tip-card"><h3>ตรวจสอบความต้องการเวอร์ชัน</h3><p>Lovense SplitCam Toolset ต้องการ SplitCam 10.4.5 หรือใหม่กว่า Lovense Cam Extension ครอบคลุม <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> และ <a href="../camsoda/" class="autolink">CamSoda</a> อย่างเป็นทางการ — สำหรับไซต์อื่นๆ ใช้การรวมเข้ากับ Generic URL ของ Lovense</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">การแก้ไขปัญหา</h2><div class="faq-list"><details class="faq-item"><summary>สตรีม Lovense ของคุณกระตุกหรือบัฟเฟอร์</summary><p>เกือบทุกครั้งบิตเรตสูงกว่าที่อัปโหลดของคุณรับไหว รันการทดสอบความเร็วในตัวของ SplitCam แล้วตั้งบิตเรตที่ประมาณ 75% ของอัปโหลดที่วัดได้ — 3,500–6,000&nbsp;Kbps สำหรับ 1080p ต่ำกว่าสำหรับ 720p อาการกระตุกจะหายไปเมื่อ encoder หยุดวิ่งแซงการเชื่อมต่อของคุณ</p></details><details class="faq-item"><summary>เฟรมหลุดระหว่างการถ่ายทอดบน Lovense</summary><p>เฟรมหลุดหมายความว่าแพ็กเก็ตไปไม่ถึง Lovense ทันเวลา — มักเป็น Wi-Fi ไม่เสถียร เปลี่ยนเป็นการเชื่อมต่อ Ethernet แบบมีสาย ปิดแอปที่กินแบนด์วิดท์ และลดบิตเรตลงเล็กน้อย พีคครั้งเดียวไม่เป็นไร แต่การเพิ่มขึ้นต่อเนื่องหมายความว่าการเชื่อมต่อตามไม่ทัน</p></details><details class="faq-item"><summary>จอดำ — ผู้ชมไม่เห็นวิดีโอบน Lovense</summary><p>กล้องของคุณไม่ได้ถูกเลือกเป็นแหล่งที่ใช้งานใน SplitCam หรือมีแอปอื่นยึดไว้ ปิด Zoom, Skype หรือ OBS เลือกเว็บแคมใหม่ในรายการแหล่งของ SplitCam และยืนยันว่าตัวอย่างแสดงภาพของคุณก่อนกด Go Live</p></details><details class="faq-item"><summary>Lovense ปฏิเสธสตรีมคีย์หรือไม่เชื่อมต่อ</summary><p>คัดลอกสตรีมคีย์ใหม่ — ช่องว่างที่ท้ายหรือคีย์เก่าที่หมุนเปลี่ยนแล้วเป็นสาเหตุปกติ ยืนยันว่า URL เซิร์ฟเวอร์ตรงกับที่ Lovense แสดง และเปิดใช้งานการถ่ายทอดผ่าน encoder ภายนอกในบัญชีของคุณแล้ว แถบเลื่อนสีเขียวใน Stream Settings ของ SplitCam ยืนยันว่าคีย์ถูกต้อง</p></details><details class="faq-item"><summary>ไม่มีเสียงหรือเสียงไม่ตรงกับภาพบน Lovense</summary><p>เลือก SplitCam เป็นทั้งกล้องและไมโครโฟน และเลือกไมโครโฟนจริงของคุณในแหล่งเสียงของ SplitCam หากเสียงตามหลังวิดีโอ ลดความละเอียดลงหนึ่งระดับ — encoder ทำงานหนักเกินไปและเสียงกำลังรอเฟรมที่มาช้า</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">คำถามที่พบบ่อย</h2>
   <div class="faq-list"><details class="faq-item"><summary>Lovense รองรับ SplitCam อย่างเป็นทางการหรือไม่?</summary><p>ใช่ — Lovense บันทึก «Lovense SplitCam Toolset» อย่างเป็นทางการพร้อมคู่มือการติดตั้งของตัวเอง และ SplitCam ให้ปลั๊กอิน Lovense ทางการ การรวมเข้ากันได้รับการสนับสนุนจากทั้งสองด้าน</p></details><details class="faq-item"><summary>ของเล่นเชื่อมต่อโดยตรงกับ SplitCam หรือไม่?</summary><p>ไม่ — ของเล่นจับคู่กับแอป Lovense SplitCam แสดงโอเวอร์เลย์ Lovense และถ่ายทอดกล้อง</p></details><details class="faq-item"><summary>ไซต์ cam ใดรองรับ Lovense?</summary><p>Lovense Cam Extension รองรับ <a href="../chaturbate/" class="autolink">Chaturbate</a>, <a href="../stripchat/" class="autolink">Stripchat</a>, <a href="../bongacams/" class="autolink">BongaCams</a>, <a href="../myfreecams/" class="autolink">MyFreeCams</a> และ <a href="../camsoda/" class="autolink">CamSoda</a> อย่างเป็นทางการ ด้วยการสนับสนุนที่แตกต่างกันสำหรับอื่นๆ — ตรวจสอบรายการปัจจุบันในแอป Lovense</p></details><details class="faq-item"><summary>ฉันสามารถแสดงทิปล่าสุดบนหน้าจอได้หรือไม่?</summary><p>ใช่ — เพิ่ม URL วิดเจ็ต Lovense เป็นเลเยอร์เบราว์เซอร์ใน SplitCam</p></details><details class="faq-item"><summary>โมเดลสามารถสร้างรายได้บน Lovense ได้เท่าไหร่?</summary><p>รายได้บน Lovense ขึ้นอยู่กับขนาดของผู้ชม จำนวนชั่วโมงที่สตรีม และพฤติกรรมการให้ทิป ผู้แพร่ภาพที่ออนไลน์สม่ำเสมอมักจะได้รับ $200–$3,000 ต่อเดือน ส่วนผู้ที่อยู่ระดับท็อปทำได้ มากกว่า $10,000 ส่วนแบ่งรายได้ของคุณเป็นไปตามโครงสร้างค่าคอมมิชชันของ Lovense — ตรวจสอบสัญญาโมเดลก่อนเริ่มไลฟ์</p></details><details class="faq-item"><summary>Lovense ปลอดภัยสำหรับผู้แพร่ภาพหรือไม่?</summary><p>Lovense กำหนดให้ยืนยันอายุและบัตรประชาชนก่อนรับเงิน ซึ่งช่วยปกป้องโมเดลจาก การฉ้อโกง ใช้ชื่อบนเวที อย่าเปิดเผยข้อมูลส่วนตัวหน้ากล้อง เปิดใช้งานการบล็อกตามภูมิภาคเพื่อ ซ่อนสตรีมของคุณจากพื้นที่บ้านเกิด และจัดการคำขอของผู้ชมทุกครั้งเป็นเชิงธุรกรรม โอเวอร์เลย์และพื้นหลัง AI ของ SplitCam ยังช่วยซ่อนหรือแทนที่สภาพแวดล้อมจริง ของคุณได้ด้วย</p></details><details class="faq-item"><summary>ต้องใช้เอกสารอะไรบ้างเพื่อเป็นโมเดลบน Lovense?</summary><p>Lovense มักจะต้องใช้บัตรประจำตัวที่มีรูปถ่ายซึ่งออกโดยรัฐ (พาสปอร์ต ใบขับขี่ หรือบัตรประชาชน), เซลฟี่พร้อมถือบัตร และแบบฟอร์มภาษี/การจ่ายเงิน (W-9 สำหรับสหรัฐฯ, W-8BEN สำหรับนอกสหรัฐฯ) การอนุมัติมักใช้เวลา 24–72 ชั่วโมง เมื่อได้รับอนุมัติแล้ว คุณสามารถออนไลน์ได้ในวันเดียวกัน</p></details><details class="faq-item"><summary>ฉันสามารถสตรีมบน Lovense จากโทรศัพท์ได้หรือไม่?</summary><p>โดยปกติ Lovense จะมีแอปผู้แพร่ภาพบนมือถือหรือผู้แพร่ภาพแบบ mobile-web แต่ ประสบการณ์ใช้งานจำกัด — ไม่มีโอเวอร์เลย์ ไม่มีกล้องตัวที่สอง ไม่มีพื้นหลัง AI สำหรับคุณภาพ การผลิตเต็มรูปแบบ ให้แพร่ภาพจากคอมพิวเตอร์ด้วย SplitCam และใช้โทรศัพท์เป็น กล้องตัวที่สอง (SplitCam รองรับอินพุตจาก IP-camera ของโทรศัพท์)</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">ฝ่ายสนับสนุนอย่างเป็นทางการ — Lovense</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@lovense.com">support@lovense.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.lovense.com/" rel="nofollow noopener" target="_blank">https://support.lovense.com/</a></li></ul><p class="sp-note">เราคือคู่มืออิสระ สำหรับปัญหาเกี่ยวกับบัญชี การชำระเงิน หรือปัญหาทางเทคนิค โปรดติดต่อฝ่ายสนับสนุนอย่างเป็นทางการของแพลตฟอร์มโดยตรง</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">คู่มือแพลตฟอร์มอื่น</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>ถ่ายทอด Chaturbate</h4><p>การตั้งค่าตาม token ด้วย encoder ภายนอกบน Chaturbate</p></a><a class="related-card" href="../cam4/"><h4>ถ่ายทอด CAM4</h4><p>External Encoder บน CAM4 พร้อมตัวควบคุมตามภูมิภาค</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">เรียนรู้เพิ่ม</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>สตรีมหลายที่</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>เป็น cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>ของเล่น Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>พร้อมไลฟ์สดหรือยัง?</h2>

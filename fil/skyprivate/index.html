@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan platforms",
+     "item": "https://camstreamguide.com/fil/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SkyPrivate",
      "item": "https://camstreamguide.com/fil/skyprivate/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Sagot</a>
+  <a href="#steps">Mga hakbang</a>
+  <a href="#tips">Mga tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Kaugnay na gabay</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Mabilis na sagot</div>
     <div class="qa-text">Gamitin ang SkyPrivate sa SplitCam: i-install ang SplitCam, buuin ang scene, i-install ang Skype kasama ang SkyPrivate add-on, sa <em>Video Settings</em> ng Skype piliin ang SplitCam bilang camera at microphone, tapos sagutin ang mga call na bino-book ng SkyPrivate — ipinapadala ng Skype ang composed scene mo sa kliyente.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Hakbang-hakbang</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">I-install ang SplitCam</div><p class="step-p">Libre ang SplitCam para sa Windows at macOS — walang sign-up, walang card, walang watermark. Para sa SkyPrivate ito ay <strong>virtual camera</strong> na nakukuha ng Skype tulad ng kahit anong webcam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Buuin ang scene mo sa SplitCam</div><p class="step-p">Buksan ang SplitCam at gamitin ang <strong>Media Layers +</strong> para magdagdag ng webcam kasama ang anumang overlays, text, beauty filters o AI background. Ang composed scene na ito ang ipapadala ng Skype sa SkyPrivate client.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">I-install ang Skype at SkyPrivate add-on</div><p class="step-p">I-install ang Skype sa parehong PC, mag-sign in, tapos i-install ang SkyPrivate add-on / desktop app na sumusunod sa onboarding ng SkyPrivate. Hinahawakan ng add-on ang bayad-bawat-minuto billing sa side ng SkyPrivate.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Piliin ang SplitCam bilang camera at mic sa Skype</div><p class="step-p">Sa Skype buksan ang <strong>Settings → Audio &amp; Video</strong>. Itakda ang <strong>Camera = SplitCam</strong> at <strong>Microphone = SplitCam</strong>. Magsagawa ng mabilis na Skype test call (Echo / Sound Test Service) para makumpirma na tama ang itsura at tunog ng scene mo.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Sagutin ang mga SkyPrivate calls</div><p class="step-p">Kapag nag-book ng bayad na call ang SkyPrivate client, darating ito bilang Skype call — sagutin. Makikita nila ang composed SplitCam scene mo; sinisingil ng SkyPrivate kada minuto. I-adjust ang scene habang nasa tawag sa pamamagitan ng pag-edit sa SplitCam — instant na nag-a-update ang Skype.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Mga tip</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Walang RTMP — virtual camera flow</h3><p>Huwag maghanap ng server URL o stream key. Tumatakbo ang SkyPrivate sa Skype, at nakikita lang ng Skype ang SplitCam bilang webcam device. Buuin ang scene sa SplitCam, tapos piliin ang SplitCam sa camera settings ng Skype.</p></div><div class="tip-card"><h3>Itakda din ang SplitCam bilang microphone</h3><p>Sa Audio settings ng Skype piliin ang SplitCam bilang microphone bukod sa camera — para makarating din sa kliyente ang noise-suppression, mixed audio at intro music.</p></div><div class="tip-card"><h3>Magdagdag ng Skype test call</h3><p>Bago ang unang bayad mong SkyPrivate call, mag-test call muna sa Skype na libre (Echo / Sound Test Service) para makumpirma na SplitCam ang active camera at tamang nabubuo ang scene mo.</p></div><div class="tip-card"><h3>Gumawa muna ng private test</h3><p>Magpatakbo ng maikling test broadcast para suriin ang camera, audio, framing at overlays bago buksan ang room para sa publiko.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang SkyPrivate stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa SkyPrivate</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa SkyPrivate sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa SkyPrivate</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng SkyPrivate ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng SkyPrivate at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa SkyPrivate</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Gumagamit ba ng RTMP o stream key ang SkyPrivate?</summary><p>Wala sa dalawa. Hinahawakan ng SkyPrivate ang billing at booking; ang aktwal na video ay sa Skype. Hindi mo kailangan ng RTMP server URL o stream key — i-configure mo lang ang SplitCam bilang camera mo sa loob ng Skype.</p></details><details class="faq-item"><summary>Paano ko piliin ang SplitCam sa Skype para sa SkyPrivate?</summary><p>Buksan ang Skype Settings → Audio &amp; Video → Camera, piliin ang SplitCam sa listahan. Gawin din iyon para sa Microphone. Dumarating ang mga SkyPrivate call bilang normal na Skype call na may scene ng SplitCam bilang camera feed.</p></details><details class="faq-item"><summary>Pwede ba akong gumamit ng overlays at beauty filters sa SkyPrivate?</summary><p>Oo — buuin ang mga ito sa loob ng SplitCam scene mo. Ang natatanggap lang ng Skype ay ang composed na resulta bilang isang camera feed, kaya anumang inilalapat ng SplitCam (overlays, beauty filters, AI background, multi-camera scenes) ay nakikita ng SkyPrivate client.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa SkyPrivate?</summary><p>Oo — libre ang SplitCam, walang watermark at walang time limit. Bilang virtual camera para sa Skype-based SkyPrivate calls, wala itong idinaragdag na bayad o branding sa tawag.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa SkyPrivate?</summary><p>Ang kita sa SkyPrivate ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng SkyPrivate — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang SkyPrivate para sa mga broadcaster?</summary><p>Nangangailangan ang SkyPrivate ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa SkyPrivate?</summary><p>Karaniwang nangangailangan ang SkyPrivate ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa SkyPrivate mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang SkyPrivate ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details><details class="faq-item"><summary>Maaari ko bang gamitin ang SplitCam bilang virtual camera sa SkyPrivate?</summary><p>Oo — ang live ng SkyPrivate ay tumatakbo sa browser, kaya nagrerehistro ang SplitCam bilang webcam na tinatawag na <strong>"SplitCam Video Driver"</strong>. Buksan ang SkyPrivate broadcaster, i-click ang camera selector sa browser, at piliin ang SplitCam. Ang iyong composed scene (overlays, second camera, filters, AI background) ay umaabot sa mga viewer bilang isang webcam feed.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Iba pang gabay sa platform</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam sa ImLive</h4><p>Virtual camera setup para sa ImLive — walang RTMP.</p></a><a class="related-card" href="../justforfans/"><h4>Live sa JustForFans</h4><p>Gamitin ang SplitCam bilang virtual camera sa live broadcaster ng JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Live sa Fanvue</h4><p>Gamitin ang SplitCam bilang virtual camera para sa live ng Fanvue.</p></a><a class="related-card" href="../loyalfans/"><h4>Live sa LoyalFans</h4><p>Gamitin ang SplitCam bilang virtual camera para sa live ng LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Magpatuloy</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Maging cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Mga laruang Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Handa nang mag-live?</h2>

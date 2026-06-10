@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Fan-platforme",
+     "item": "https://camstreamguide.com/da/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MYM.fans",
      "item": "https://camstreamguide.com/da/mym-fans/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Trin</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterede guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort fortalt</div>
     <div class="qa-text">Gå live på MYM.fans med SplitCam: installér SplitCam, byg scenen, start en live-udsendelse på MYM, og vælg <em>SplitCam</em> i broadcasterens kameravælger — og gå live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Trin for trin</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download og installér SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke. Det installerer et virtuelt kamera, browseren kan vælge.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Byg scenen</div><p class="step-p">Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst (på fransk hvis dit publikum er FR), et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Start en live-udsendelse på MYM.fans</div><p class="step-p">Log ind på din MYM-creator-konto og åbn live-broadcasteren for at starte en udsendelse til dine abonnenter.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Vælg SplitCam som dit kamera</div><p class="step-p">I MYMs kamera-dropdown vælg <strong>SplitCam</strong> i stedet for dit rå webkamera — din komponerede scene erstatter det flade kamera. (Eller indsæt en stream key i SplitCams custom RTMP-felter, hvis tilgængeligt.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Start udsendelsen — din SplitCam-scene, overlays og filtre når dine MYM-abonnenter.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Frankrigs største creator-platform</h3><p>MYM er fan-platform #1 i Frankrig, med et fransk/europæisk publikum, der er vant til at betale i EUR. En poleret SplitCam-scene + fransksprogede overlays konverterer bedre end et nøgent webkamera.</p></div><div class="tip-card"><h3>Virtuelt kamera virker uden stream key</h3><p>Browser-only live får stadig din fulde SplitCam-scene — ekstra kamera, overlays, beauty-filtre eller AI-baggrund — bare ved at vælge SplitCam som webkamera.</p></div><div class="tip-card"><h3>Krydssælg PPV under live-udsendelsen</h3><p>MYM er bygget op om betalt indhold. Overlays på skærmen, der reklamerer for dit abonnement eller låser PPV-beskeder op, gør live-seere til betalende abonnenter.</p></div><div class="tip-card"><h3>Lav først en privat test</h3><p>Kør en kort testudsendelse for kamera, lyd, framing og overlays, før du åbner rummet for publikum.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit MYM.fans-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under MYM.fans-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til MYM.fans i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på MYM.fans</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>MYM.fans afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, MYM.fans viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på MYM.fans</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hvordan forbinder SplitCam til MYM.fans?</summary><p>MYM live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays og flere kameraer på MYM?</summary><p>Ja — byg scenen i SplitCam (ekstra kamera, overlays, AI-baggrund); MYM ser den færdige scene som ét webkamera.</p></details><details class="faq-item"><summary>Understøtter MYM.fans OBS eller eksterne encodere?</summary><p>Dens live er primært browser-/webkamera-baseret. Hvis dit dashboard tilbyder en stream key-mulighed, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera.</p></details><details class="faq-item"><summary>Er SplitCam gratis til MYM.fans?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på MYM.fans?</summary><p>Indtjeningen på MYM.fans afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger MYM.fanss kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er MYM.fans sikkert for broadcastere?</summary><p>MYM.fans kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på MYM.fans?</summary><p>MYM.fans kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på MYM.fans fra min telefon?</summary><p>MYM.fans tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Kan jeg bruge SplitCam som et virtuelt kamera på MYM.fans?</summary><p>Ja — MYM.fanss live kører i browseren, så SplitCam registreres som et webcam kaldet <strong>"SplitCam Video Driver"</strong>. Åbn MYM.fans-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre platformsguides</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuelt kamera til ImLive — ingen RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam på SkyPrivate</h4><p>Virtuel-kamera-opsætning til SkyPrivates Skype-baserede cam-opkald.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Brug SplitCam som virtuelt kamera i JustForFans&#x27; live-broadcaster.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Brug SplitCam som virtuelt kamera i Fanvues live-broadcaster.</p></a><a class="related-card" href="../chaturbate/"><h4>Udsend Chaturbate</h4><p>Token-baseret opsætning med ekstern encoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Udsend CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Mere</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bliv cam-model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Klar til at gå live?</h2>

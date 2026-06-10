@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sider",
+     "item": "https://camstreamguide.com/da/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "OnlyFans",
      "item": "https://camstreamguide.com/da/onlyfans/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Trin</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterede guides</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort fortalt</div>
     <div class="qa-text">Live på OnlyFans med SplitCam: installér SplitCam, byg scenen, åbn Stream Settings &rarr; Add Channel &rarr; OnlyFans og vælg <em>Autorisation</em> — log ind med OnlyFans-konto, SplitCam henter nøglen automatisk — og tryk Go Live. Med tilknyttet konto kan du ændre OnlyFans stream-parametre i SplitCam, uden at åbne OnlyFans-sitet.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Trin for trin</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download og installér SplitCam</div><p class="step-p">SplitCam er gratis streaming-software til Windows og macOS — uden tilmelding, kort eller vandmærke. Det er encoderen, der sender din video til OnlyFans.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Opsæt kamera og scene</div><p class="step-p">Åbn SplitCam og tilføj webkameraet. Byg scenen, som seerne skal se den — overlays, tekst, et andet kamera, beauty-filtre eller AI-baggrund, alt anvendt live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Forbindelse — Metode 1: Autorisation (anbefalet)</div><p class="step-p">I SplitCam åbn <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> og vælg <strong>Autorisation</strong>. Log ind med OnlyFans email og adgangskode. SplitCam tilknytter kontoen, henter stream key automatisk og holder den synkroniseret — og lader dig administrere OnlyFans live-parametre i SplitCam, ændre dem under eller efter udsendelsen uden at åbne OnlyFans-sitet.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Forbindelse — Metode 2: Stream Key (manuelt)</div><p class="step-p">Foretrækker du ikke at logge ind? Brug nøglen. På OnlyFans gå til <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Other</strong>-sektionen og kopiér <strong>OBS Key</strong>. I SplitCam, Add Channel &rarr; OnlyFans, indsæt i nøglefeltet. Denne nøgle er statisk — for at ændre indstillinger senere går du tilbage til OnlyFans-sitet.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Uanset metode, tryk <strong>Go Live</strong> i SplitCam. Med Metode 1 kan du fortsætte med at justere OnlyFans-parametre fra SplitCam i realtid; med Metode 2 forbliver nøglen præcis, som du har sat den.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Autorisation vs Stream Key</h3><p>To måder at forbinde på: <strong>Autorisation</strong> (log ind én gang, nøglen hentes og synkroniseres — den nemmeste rute) eller <strong>Stream Key</strong> (kopiér OBS Key på OnlyFans → Profile → Settings → Other og indsæt). Autorisation sparer manuel kopi-indsæt.</p></div><div class="tip-card"><h3>Ændr indstillinger uden at forlade SplitCam</h3><p>Med autorisation forbliver kontoen tilknyttet, så du justerer OnlyFans live-parametre fra SplitCam under eller efter udsendelsen — uden at gå via OnlyFans-sitet.</p></div><div class="tip-card"><h3>Beskeden bitrate</h3><p>OnlyFans' RTMP ingest begrænser video-bitrate til omkring 2.500 Kbps — strammere end de fleste cam-sites. Sigt mod 720p–1080p ved ~2.000–2.500.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit OnlyFans-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under OnlyFans-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til OnlyFans i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på OnlyFans</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>OnlyFans afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, OnlyFans viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på OnlyFans</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Hvordan forbinder jeg OnlyFans til SplitCam?</summary><p>På to måder. <strong>Autorisation</strong> — Stream Settings → Add Channel → OnlyFans → log ind med OnlyFans-konto, og SplitCam henter nøglen automatisk. Eller <strong>Stream Key</strong> — kopiér OBS Key på OnlyFans → Profile → Settings → Other og indsæt.</p></details><details class="faq-item"><summary>Kan jeg ændre OnlyFans live-indstillinger uden at åbne sitet?</summary><p>Ja — med Autorisations-metoden forbliver SplitCam tilknyttet din OnlyFans-konto, så nøgle og indstillinger synkroniserer automatisk. Du ændrer alt fra SplitCam under eller efter udsendelsen uden at besøge onlyfans.com.</p></details><details class="faq-item"><summary>Hvilken bitrate til OnlyFans?</summary><p>Beskeden — OnlyFans' RTMP ingest begrænser bitrate til omkring 2.500 Kbps, meget strammere end andre cam-platforme. Sigt mod 720p–1080p omkring 2.000–2.500 Kbps.</p></details><details class="faq-item"><summary>Er SplitCam gratis til OnlyFans live?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning. Ingen omkostninger på encoder-siden.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på OnlyFans?</summary><p>Indtjeningen på OnlyFans afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger OnlyFanss kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er OnlyFans sikkert for broadcastere?</summary><p>OnlyFans kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på OnlyFans?</summary><p>OnlyFans kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på OnlyFans fra min telefon?</summary><p>OnlyFans tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Understøtter OnlyFans OBS eller en ekstern encoder?</summary><p>Ja — OnlyFans leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams <strong>Stream Settings → Custom RTMP</strong>, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik <strong>Go Live</strong>. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiel support — OnlyFans</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@onlyfans.com">support@onlyfans.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://onlyfans.com/help" rel="nofollow noopener" target="_blank">https://onlyfans.com/help</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre platformsguides</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Udsend Chaturbate</h4><p>Token-baseret opsætning med ekstern encoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Udsend CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a><a class="related-card" href="../bongacams/"><h4>Udsend BongaCams</h4><p>External Encoder-opsætning til BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Udsend Stripchat</h4><p>Ekstern software-opsætning til Stripchat-streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuelt kamera til ImLive — ingen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Tilføj MFC Alerts</h4><p>Vis animerede tip alerts i MyFreeCams-streamen.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Mere</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bliv cam-model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Klar til at gå live?</h2>

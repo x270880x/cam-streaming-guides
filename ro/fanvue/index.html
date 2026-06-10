@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Platforme pentru fani",
+     "item": "https://camstreamguide.com/ro/#fan-platforms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "Fanvue",
      "item": "https://camstreamguide.com/ro/fanvue/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Răspuns</a>
+  <a href="#steps">Pași</a>
+  <a href="#tips">Sfaturi</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Ghiduri similare</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Pe scurt</div>
     <div class="qa-text">Intră live pe Fanvue cu SplitCam: instalezi SplitCam, construiești scena, pornești o transmisie live pe Fanvue, iar în selectorul de cameră al broadcasterului alegi <em>SplitCam</em> — apoi intri live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Pas cu pas</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Descarcă și instalează SplitCam</div><p class="step-p">SplitCam e software gratuit de live-streaming pentru Windows și macOS — fără înregistrare, fără card, fără filigran. Instalează o cameră virtuală pe care browserul o poate selecta.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Construiește scena</div><p class="step-p">Deschide SplitCam și adaugă webcam-ul. Pune deasupra overlay-uri, text, o a doua cameră sau telefonul, filtre de beauty sau un fundal AI — totul aplicat live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Pornește o transmisie live pe Fanvue</div><p class="step-p">Loghează-te în contul tău de creator Fanvue și deschide broadcasterul live pentru a porni un stream pentru abonații tăi.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Alege SplitCam ca cameră</div><p class="step-p">În lista de camere a broadcasterului Fanvue, alegi <strong>SplitCam</strong> în loc de webcam-ul tău brut — scena ta compusă înlocuiește camera plată. (Sau, dacă e disponibilă, lipești cheia de external encoder în câmpurile RTMP custom ale SplitCam.)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Apasă Go Live</div><p class="step-p">Pornește transmisia — scena ta SplitCam, overlay-urile și filtrele ajung la abonații tăi de pe Fanvue.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Sfaturi</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Camera virtuală merge peste tot</h3><p>Chiar și când live-ul unei platforme e doar în browser, SplitCam apare ca o webcam selectabilă — așa că scena ta multi-cameră, overlay-urile și filtrele merg pe Fanvue fără nicio stream key.</p></div><div class="tip-card"><h3>Prietenoasă cu creatorii și cu AI-ul</h3><p>Fanvue primește bine creatorii AI și plătește curat. Overlay-urile care fac cross-sell la abonamentul sau PPV-ul tău convertesc bine la o audiență care deja plătește.</p></div><div class="tip-card"><h3>Dă browserului permisiunea de cameră</h3><p>Dacă SplitCam nu apare în lista de camere a Fanvue, asigură-te mai întâi că SplitCam rulează și că browserul are permisiunea de cameră — apoi reîncarcă pagina.</p></div><div class="tip-card"><h3>Fă mai întâi un test privat</h3><p>Rulează o transmisiune scurtă de test pentru cameră, audio, încadrare și overlay-uri înainte să deschizi camera publicului.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe Fanvue are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe Fanvue</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la Fanvue la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe Fanvue</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>Fanvue respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de Fanvue și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe Fanvue</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">Întrebări frecvente</h2>
   <div class="faq-list"><details class="faq-item"><summary>Cum se conectează SplitCam la Fanvue?</summary><p>Live-ul Fanvue e în browser, deci SplitCam se conectează ca o cameră virtuală: alegi SplitCam în selectorul de cameră. Nu e nevoie de stream key.</p></details><details class="faq-item"><summary>Pot folosi overlay-uri și mai multe camere pe Fanvue?</summary><p>Da — construiești scena în SplitCam (a doua cameră, overlay-uri, filtre de beauty sau fundal AI), iar Fanvue vede scena finită ca o singură webcam.</p></details><details class="faq-item"><summary>Fanvue suportă OBS sau encodere externe?</summary><p>Live-ul Fanvue e în primul rând bazat pe browser / webcam. Dacă în dashboard apare o opțiune de external encoder sau stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru Fanvue?</summary><p>Da — SplitCam e gratuit, fără filigran și fără limită de timp.</p></details><details class="faq-item"><summary>Cât pot câștiga modelele pe Fanvue?</summary><p>Câștigurile pe Fanvue depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a Fanvue — verifică acordul de model înainte să intri live.</p></details><details class="faq-item"><summary>Este Fanvue sigur pentru broadcasteri?</summary><p>Fanvue cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real.</p></details><details class="faq-item"><summary>Ce documente îmi trebuie ca să devin model pe Fanvue?</summary><p>Fanvue cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi.</p></details><details class="faq-item"><summary>Pot să dau stream pe Fanvue de pe telefon?</summary><p>Fanvue oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane).</p></details><details class="faq-item"><summary>Pot folosi SplitCam ca o cameră virtuală pe Fanvue?</summary><p>Da — live-ul de pe Fanvue rulează în browser, așa că SplitCam se înregistrează ca o cameră web numită <strong>"SplitCam Video Driver"</strong>. Deschide broadcaster-ul Fanvue, dă click pe selectorul de cameră din browser și alege SplitCam. Scena ta compusă (overlay-uri, a doua cameră, filtre, fundal AI) ajunge la viewer-i ca un singur feed de cameră web.</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
   <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam pe ImLive</h4><p>Setup cameră virtuală pentru ImLive — fără RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam pe SkyPrivate</h4><p>Setup virtual camera pentru apelurile cam prin Skype ale SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live pe JustForFans</h4><p>Folosește SplitCam ca o cameră virtuală în broadcasterul live al JustForFans.</p></a><a class="related-card" href="../loyalfans/"><h4>Live pe LoyalFans</h4><p>Folosește SplitCam ca o cameră virtuală pentru live-ul de pe LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Continuă</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Devino cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Jucării Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Gata să intri live?</h2>

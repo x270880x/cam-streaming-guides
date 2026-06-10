@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "เว็บ Cam",
+     "item": "https://camstreamguide.com/th/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MyFreeCams",
      "item": "https://camstreamguide.com/th/myfreecams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">คำตอบ</a>
+  <a href="#steps">ขั้นตอน</a>
+  <a href="#tips">เคล็ดลับ</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">ไกด์ที่เกี่ยวข้อง</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">คำตอบด่วน</div>
     <div class="qa-text">ถ่ายทอดบน MyFreeCams ด้วย SplitCam: ติดตั้ง SplitCam สร้างฉาก ไปที่ Model Admin → Broadcaster เปลี่ยนจาก Web Broadcaster เป็น External Broadcaster คัดลอก URL เซิร์ฟเวอร์และ stream key วางใน SplitCam Go Live</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">ทีละขั้นตอน</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">ดาวน์โหลดและติดตั้ง SplitCam</div><p class="step-p">SplitCam เป็น encoder ถ่ายทอดสดฟรีสำหรับ Windows และ macOS — ไม่ต้องสมัคร ไม่ต้องใช้บัตร ไม่มีลายน้ำ</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">สร้างฉากของคุณ</div><p class="step-p">ใน SplitCam เพิ่มเว็บแคม ซ้อนโอเวอร์เลย์ ข้อความ กล้องตัวที่สองหรือมือถือ ฟิลเตอร์ความงามหรือพื้นหลัง AI เพิ่ม <strong>mfcalerts.com</strong> เป็นเลเยอร์ Browser บนกล้อง เพื่อให้แอนิเมชันทิปปรากฏในภาพ free chat โดยตรง</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">เปลี่ยนเป็น External Broadcaster ใน Model Admin</div><p class="step-p">เข้าสู่ระบบ MFC เปิด <strong>Model Admin → Broadcaster</strong> แล้วเปลี่ยนจาก Web Broadcaster เป็น <strong>External Broadcaster</strong> คัดลอก URL เซิร์ฟเวอร์ (rtmp://publish.myfreecams.com…) และ stream key ที่แสดงขึ้น</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">วาง URL และ key ใน SplitCam</div><p class="step-p">เปิด <strong>Stream Settings</strong> ใน SplitCam แล้ววาง URL และ stream key ในช่อง RTMP กำหนดเอง ตั้งบิตเรตเป็น 3,500–6,000 Kbps ที่ 1920×1080, 30 fps, keyframe 2 วินาที</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">คลิก Go Live</div><p class="step-p">กด <strong>Go Live</strong> ใน SplitCam ภายในประมาณ 10 วินาทีสัญญาณไปถึง MFC และคุณจะออนไลน์อยู่ในห้อง</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">เคล็ดลับ</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC คือระบบทิป/โทเคนล้วน — ไม่ใช่ระบบสมัครสมาชิก</h3><p>หัวใจของ MFC ไม่ใช่ subscription แต่เป็นทิปใน free chat — สมาชิก Premium ไปเล่น private ได้ แต่รายได้ประจำมาจาก free chat ในชุดปกติ วางแผนฉากให้ทำเงินได้แม้ในโหมดใส่เสื้อผ้าและเป็นกันเอง</p></div><div class="tip-card"><h3>Web Broadcaster vs External Broadcaster</h3><p>Web Broadcaster เริ่มต้นเป็นเครื่องมือสัญญาณเดียว External Broadcaster ปลดล็อกฉากหลายกล้อง โอเวอร์เลย์ และฟิลเตอร์ความงามผ่าน SplitCam/OBS — ช่องว่างระหว่างโมเดลรายได้สูงกับน้องใหม่อยู่ตรงนี้</p></div><div class="tip-card"><h3>ใช้ mfcalerts.com แสดงทิปบนวิดีโอ</h3><p>ใน SplitCam เพิ่ม mfcalerts.com เป็นเลเยอร์ Browser บนกล้อง — แอนิเมชันทิปและชื่อสมาชิกจะปรากฏในภาพโดยตรง ช่วยเพิ่ม conversion ของทิปใน free chat อย่างเห็นได้ชัด</p></div><div class="tip-card"><h3>ใช้การเชื่อมต่อแบบมีสาย</h3><p>อีเทอร์เน็ตชนะ Wi-Fi ในการสตรีมที่ยาว — เฟรมที่หายคือทิปที่หาย ลากสายไปยังพีซีสตรีม</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">การแก้ไขปัญหา</h2><div class="faq-list"><details class="faq-item"><summary>สตรีม MyFreeCams ของคุณกระตุกหรือบัฟเฟอร์</summary><p>เกือบทุกครั้งบิตเรตสูงกว่าที่อัปโหลดของคุณรับไหว รันการทดสอบความเร็วในตัวของ SplitCam แล้วตั้งบิตเรตที่ประมาณ 75% ของอัปโหลดที่วัดได้ — 3,500–6,000&nbsp;Kbps สำหรับ 1080p ต่ำกว่าสำหรับ 720p อาการกระตุกจะหายไปเมื่อ encoder หยุดวิ่งแซงการเชื่อมต่อของคุณ</p></details><details class="faq-item"><summary>เฟรมหลุดระหว่างการถ่ายทอดบน MyFreeCams</summary><p>เฟรมหลุดหมายความว่าแพ็กเก็ตไปไม่ถึง MyFreeCams ทันเวลา — มักเป็น Wi-Fi ไม่เสถียร เปลี่ยนเป็นการเชื่อมต่อ Ethernet แบบมีสาย ปิดแอปที่กินแบนด์วิดท์ และลดบิตเรตลงเล็กน้อย พีคครั้งเดียวไม่เป็นไร แต่การเพิ่มขึ้นต่อเนื่องหมายความว่าการเชื่อมต่อตามไม่ทัน</p></details><details class="faq-item"><summary>จอดำ — ผู้ชมไม่เห็นวิดีโอบน MyFreeCams</summary><p>กล้องของคุณไม่ได้ถูกเลือกเป็นแหล่งที่ใช้งานใน SplitCam หรือมีแอปอื่นยึดไว้ ปิด Zoom, Skype หรือ OBS เลือกเว็บแคมใหม่ในรายการแหล่งของ SplitCam และยืนยันว่าตัวอย่างแสดงภาพของคุณก่อนกด Go Live</p></details><details class="faq-item"><summary>MyFreeCams ปฏิเสธสตรีมคีย์หรือไม่เชื่อมต่อ</summary><p>คัดลอกสตรีมคีย์ใหม่ — ช่องว่างที่ท้ายหรือคีย์เก่าที่หมุนเปลี่ยนแล้วเป็นสาเหตุปกติ ยืนยันว่า URL เซิร์ฟเวอร์ตรงกับที่ MyFreeCams แสดง และเปิดใช้งานการถ่ายทอดผ่าน encoder ภายนอกในบัญชีของคุณแล้ว แถบเลื่อนสีเขียวใน Stream Settings ของ SplitCam ยืนยันว่าคีย์ถูกต้อง</p></details><details class="faq-item"><summary>ไม่มีเสียงหรือเสียงไม่ตรงกับภาพบน MyFreeCams</summary><p>เลือก SplitCam เป็นทั้งกล้องและไมโครโฟน และเลือกไมโครโฟนจริงของคุณในแหล่งเสียงของ SplitCam หากเสียงตามหลังวิดีโอ ลดความละเอียดลงหนึ่งระดับ — encoder ทำงานหนักเกินไปและเสียงกำลังรอเฟรมที่มาช้า</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">คำถามที่พบบ่อย</h2>
   <div class="faq-list"><details class="faq-item"><summary>MFC รองรับ broadcaster ภายนอกอย่าง SplitCam หรือไม่?</summary><p>ใช่ — Model Admin มีตัวเลือก External Broadcaster เป็น RTMP มาตรฐาน OBS, SplitCam, vMix ใช้ได้ทั้งหมด</p></details><details class="faq-item"><summary>stream key ของ MFC อยู่ที่ไหน?</summary><p>Model Admin → Broadcaster → External Broadcaster — URL เซิร์ฟเวอร์และ stream key อยู่หน้าเดียวกัน คัดลอกทั้งคู่ไปวางใน SplitCam</p></details><details class="faq-item"><summary>ใช้บิตเรตเท่าไรสำหรับ MFC?</summary><p>MFC รองรับสูงสุดประมาณ 6,000 Kbps พร้อม keyframe ทุก 2 วินาที ดัน 1920×1080, 30 fps, 3,500–6,000 Kbps คือช่วงปลอดภัย</p></details><details class="faq-item"><summary>SplitCam ใช้กับ MFC ฟรีหรือไม่?</summary><p>ใช่ — SplitCam ฟรี ไม่มีลายน้ำ ไม่จำกัดเวลา</p></details><details class="faq-item"><summary>โมเดลสามารถสร้างรายได้บน MyFreeCams ได้เท่าไหร่?</summary><p>รายได้บน MyFreeCams ขึ้นอยู่กับขนาดของผู้ชม จำนวนชั่วโมงที่สตรีม และพฤติกรรมการให้ทิป ผู้แพร่ภาพที่ออนไลน์สม่ำเสมอมักจะได้รับ $200–$3,000 ต่อเดือน ส่วนผู้ที่อยู่ระดับท็อปทำได้ มากกว่า $10,000 ส่วนแบ่งรายได้ของคุณเป็นไปตามโครงสร้างค่าคอมมิชชันของ MyFreeCams — ตรวจสอบสัญญาโมเดลก่อนเริ่มไลฟ์</p></details><details class="faq-item"><summary>MyFreeCams ปลอดภัยสำหรับผู้แพร่ภาพหรือไม่?</summary><p>MyFreeCams กำหนดให้ยืนยันอายุและบัตรประชาชนก่อนรับเงิน ซึ่งช่วยปกป้องโมเดลจาก การฉ้อโกง ใช้ชื่อบนเวที อย่าเปิดเผยข้อมูลส่วนตัวหน้ากล้อง เปิดใช้งานการบล็อกตามภูมิภาคเพื่อ ซ่อนสตรีมของคุณจากพื้นที่บ้านเกิด และจัดการคำขอของผู้ชมทุกครั้งเป็นเชิงธุรกรรม โอเวอร์เลย์และพื้นหลัง AI ของ SplitCam ยังช่วยซ่อนหรือแทนที่สภาพแวดล้อมจริง ของคุณได้ด้วย</p></details><details class="faq-item"><summary>ต้องใช้เอกสารอะไรบ้างเพื่อเป็นโมเดลบน MyFreeCams?</summary><p>MyFreeCams มักจะต้องใช้บัตรประจำตัวที่มีรูปถ่ายซึ่งออกโดยรัฐ (พาสปอร์ต ใบขับขี่ หรือบัตรประชาชน), เซลฟี่พร้อมถือบัตร และแบบฟอร์มภาษี/การจ่ายเงิน (W-9 สำหรับสหรัฐฯ, W-8BEN สำหรับนอกสหรัฐฯ) การอนุมัติมักใช้เวลา 24–72 ชั่วโมง เมื่อได้รับอนุมัติแล้ว คุณสามารถออนไลน์ได้ในวันเดียวกัน</p></details><details class="faq-item"><summary>ฉันสามารถสตรีมบน MyFreeCams จากโทรศัพท์ได้หรือไม่?</summary><p>โดยปกติ MyFreeCams จะมีแอปผู้แพร่ภาพบนมือถือหรือผู้แพร่ภาพแบบ mobile-web แต่ ประสบการณ์ใช้งานจำกัด — ไม่มีโอเวอร์เลย์ ไม่มีกล้องตัวที่สอง ไม่มีพื้นหลัง AI สำหรับคุณภาพ การผลิตเต็มรูปแบบ ให้แพร่ภาพจากคอมพิวเตอร์ด้วย SplitCam และใช้โทรศัพท์เป็น กล้องตัวที่สอง (SplitCam รองรับอินพุตจาก IP-camera ของโทรศัพท์)</p></details><details class="faq-item"><summary>MyFreeCams รองรับ OBS หรือ encoder ภายนอกหรือไม่?</summary><p>รองรับ — MyFreeCams จะให้ RTMP server URL และ stream key ในแผงผู้แพร่ภาพ วางทั้งสองค่าใน <strong>Stream Settings → Custom RTMP</strong> ของ SplitCam ตั้งค่า 1920×1080 ที่ 30 fps พร้อม bitrate 4,000–5,000 Kbps แล้วคลิก <strong>Go Live</strong> เส้นทาง Custom RTMP จะให้คุณใช้งานการจัดฉากเต็มรูปแบบของ SplitCam (กล้องหลายตัว, โอเวอร์เลย์, ฟิลเตอร์)</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">คู่มือแพลตฟอร์มอื่น</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>ถ่ายทอด Chaturbate</h4><p>การตั้งค่าตาม token ด้วย encoder ภายนอกบน Chaturbate</p></a><a class="related-card" href="../cam4/"><h4>ถ่ายทอด CAM4</h4><p>External Encoder บน CAM4 พร้อมตัวควบคุมตามภูมิภาค</p></a><a class="related-card" href="../bongacams/"><h4>ถ่ายทอด BongaCams</h4><p>การตั้งค่า External Encoder สำหรับ BongaCams</p></a><a class="related-card" href="../stripchat/"><h4>ถ่ายทอด Stripchat</h4><p>การตั้งค่าซอฟต์แวร์ภายนอกสำหรับ Stripchat</p></a><a class="related-card" href="../imlive/"><h4>SplitCam บน ImLive</h4><p>การตั้งค่ากล้องเสมือนสำหรับ ImLive — ไม่มี RTMP</p></a><a class="related-card" href="../mfc-alerts/"><h4>เพิ่ม MFC Alerts</h4><p>แสดงทิปอเลิร์ตเคลื่อนไหวในสตรีม MyFreeCams</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">เรียนรู้เพิ่ม</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>สตรีมหลายที่</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>เป็น cam model</h4></a>
+    <a class="related-card" href="../lovense/"><h4>ของเล่น Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>พร้อมไลฟ์สดหรือยัง?</h2>

@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sivustot",
+     "item": "https://camstreamguide.com/fi/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "SoulCams",
      "item": "https://camstreamguide.com/fi/soulcams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Vastaus</a>
+  <a href="#steps">Vaiheet</a>
+  <a href="#tips">Vinkit</a>
+  <a href="#faq">UKK</a>
+  <a href="#related">Aiheeseen liittyvät</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Lyhyesti</div>
     <div class="qa-text">Lähetys SoulCams:issa SplitCamilla: asenna SplitCam, rakenna näkymä, SoulCams:issa klikkaa Go Online → Settings → OBS, kopioi palvelin ja avain, liitä molemmat SplitCamiin, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Vaihe vaiheelta</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Lataa ja asenna SplitCam</div><p class="step-p">SplitCam on ilmainen suoratoisto-ohjelmisto Windowsille ja macOS:lle. Lataa se ja aja asennusohjelma — ei rekisteröitymistä, ei korttia, ei vesileimaa, ei aikarajaa. SplitCam on enkooderi, joka lähettää videosi alustalle SoulCams.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Aseta kamera ja näkymä</div><p class="step-p">Avaa SplitCam ja lisää webkamera. Rakenna näkymä sellaiseksi, kuin haluat katsojien näkevän — overlayt, teksti, toinen kamera tai puhelin, beauty-suodattimet tai AI-tausta. Kaikki sovelletaan livenä ennen kuin striimi lähtee koneelta.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hanki SoulCams-striimiavain</div><p class="step-p">SoulCams:issa kirjaudu sisään ja klikkaa <strong>Go Online</strong>, sitten avaa <strong>Settings</strong> → <strong>OBS</strong>. OBS-ikkuna näyttää <strong>RTMP-palvelimen</strong> ja <strong>stream keyn</strong> yhdessä — kopioi molemmat SplitCamiin.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Yhdistä SplitCam alustaan SoulCams</div><p class="step-p">Avaa SplitCamissa <strong>Stream Settings</strong>, liitä SoulCams-palvelimen URL ja striimiavain custom RTMP -kenttiin. Bitrate: 3 500–6 000&nbsp;Kbps 1080p:lle, 2 000–4 000&nbsp;Kbps 720p:lle. Aja ensin sisäänrakennettu nopeustesti.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikkaa Go Live</div><p class="step-p">Paina <strong>Go Live</strong> SplitCamissa, käynnistä sitten lähetys alustalla SoulCams. ~10 sekunnissa kamerasi on livenä. Seuraavat striimit lähtevät yhdellä klikkauksella.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Vinkit</h2>
   <div class="tips-grid"><div class="tip-card"><h3>Palvelin ja avain rinnakkain</h3><p>SoulCams näyttää RTMP-palvelimen ja avaimen samassa OBS-ikkunassa — otat molemmat yhdellä kertaa.</p></div><div class="tip-card"><h3>Ensin Go Online</h3><p>OBS-asetukset näkyvät vasta Go Online -klikkauksen jälkeen SoulCams:issa — tee se ennen enkooderitietojen etsimistä.</p></div><div class="tip-card"><h3>Estä ei-toivotut alueet</h3><p>SoulCams sallii geo-eston mallin puolelta — valitse, mitkä maat eivät voi nähdä lähetystä, ennen kuin painat Go Online.</p></div><div class="tip-card"><h3>Käytä kaapeliyhteyttä</h3><p>Ethernet voittaa Wi-Fin pitkässä striimissä — kadonnut frame on menetetty tip. Vedä kaapeli stream-PC:lle.</p></div><div class="tip-card"><h3>Tee ensin yksityinen testi</h3><p>Aja lyhyt testilähetys kameran, äänen, rajauksen ja overlay-yhteyden tarkistamiseksi ennen huoneen avaamista yleisölle.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>SoulCams-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja SoulCams-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle SoulCams ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla SoulCams</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>SoulCams hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan SoulCams näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla SoulCams</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">UKK</h2>
   <div class="faq-list"><details class="faq-item"><summary>Missä SoulCams:in OBS-asetukset ovat?</summary><p>Kirjaudu sisään, klikkaa Go Online, sitten Settings → OBS — RTMP-palvelin ja stream key näytetään yhdessä.</p></details><details class="faq-item"><summary>Tukeeko SoulCams ulkoisia enkoodereita?</summary><p>Kyllä — OBS-asetukset antavat RTMP-palvelimen ja avaimen, joten SplitCam toimii.</p></details><details class="faq-item"><summary>Mikä bitrate SoulCams:ille?</summary><p>SoulCams ei anna virallista numeroa — tähtää 3 500–6 000 Kbps:ään 1080p:ssä ja testaa upload, koska OBS-ikkuna ei näytä bitrate-ohjetta.</p></details><details class="faq-item"><summary>Onko SplitCam ilmainen SoulCams:ille?</summary><p>Kyllä — ilmainen, ilman vesileimaa ja ilman aikarajaa, joten täysi SoulCams-show monikamera-näkymillä ja overlayilla ei maksa mitään enkooderin puolelta.</p></details><details class="faq-item"><summary>Kuinka paljon mallit voivat ansaita alustalla SoulCams?</summary><p>Ansiot alustalla SoulCams riippuvat yleisön koosta, lähetystunneista ja tippauskäyttäytymisestä. Aktiiviset lähettäjät tienaavat tyypillisesti 200–3 000 dollaria kuukaudessa; huippusuorittajat yltävät yli 10 000 dollariin. Tuottosi osuus noudattaa SoulCams-alustan palkkiorakennetta — tarkista mallisopimus ennen suoran lähetyksen aloittamista.</p></details><details class="faq-item"><summary>Onko SoulCams turvallinen lähettäjille?</summary><p>SoulCams edellyttää iän ja henkilöllisyyden varmennusta ennen maksua, mikä suojaa malleja petoksilta. Käytä taiteilijanimeä, älä koskaan jaa henkilötietoja kameralla, ota käyttöön geo-estot piilottaaksesi lähetyksesi kotialueeltasi ja käsittele jokainen katsojan pyyntö kaupallisena. SplitCamin overlayt ja tekoälytausta voivat myös piilottaa tai korvata todellisen ympäristösi.</p></details><details class="faq-item"><summary>Mitä dokumentteja tarvitsen tullakseni malliksi alustalle SoulCams?</summary><p>SoulCams vaatii tyypillisesti viranomaisen myöntämän valokuvallisen henkilöllisyystodistuksen (passi, ajokortti tai henkilökortti), selfien henkilöllisyystodistuksen kanssa sekä vero-/maksulomakkeen (W-9 Yhdysvalloissa, W-8BEN muille). Hyväksyntä kestää yleensä 24–72 tuntia; hyväksynnän jälkeen voit aloittaa suorat lähetykset samana päivänä.</p></details><details class="faq-item"><summary>Voinko lähettää alustalle SoulCams puhelimestani?</summary><p>SoulCams tarjoaa yleensä mobiilisovelluksen lähettäjille tai mobiiliverkkolähettäjän, mutta kokemus on rajallinen — ei overlayta, ei toista kameraa, ei tekoälytaustaa. Täyden tuotantolaadun saavuttamiseksi lähetä tietokoneelta SplitCamilla ja käytä puhelinta toisena kamerana (SplitCam hyväksyy IP-kamerasyötteen puhelimista).</p></details><details class="faq-item"><summary>Tukeeko SoulCams OBS:ää tai ulkoista enkooderia?</summary><p>Kyllä — SoulCams tarjoaa RTMP-palvelimen URL-osoitteen ja stream key -avaimen lähettäjäpaneelissa. Liitä molemmat SplitCamin <strong>Stream Settings → Custom RTMP</strong> -kohtaan, aseta 1920×1080 30 fps:llä ja 4 000–5 000 Kbps bittinopeudella, ja klikkaa <strong>Go Live</strong>. Custom RTMP -reitti antaa täyden SplitCam-näkymäkoostumuksen (monikamera, overlayt, suodattimet).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Virallinen tuki — SoulCams</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://soulcams.com/" rel="nofollow noopener" target="_blank">https://soulcams.com/</a></li></ul><p class="sp-note">Olemme riippumaton opas. Tili-, maksu- tai teknisten ongelmien yhteydessä ota suoraan yhteyttä alustan viralliseen tukeen.</p></section>
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Muut alustaoppaat</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Lähetys Chaturbate</h4><p>Token-pohjainen asetus ulkoisella enkooderilla Chaturbatessa.</p></a><a class="related-card" href="../cam4/"><h4>Lähetys CAM4</h4><p>External Encoder CAM4:ssä geo-hallinnoilla.</p></a><a class="related-card" href="../bongacams/"><h4>Lähetys BongaCams</h4><p>External Encoder -asetus BongaCamsille.</p></a><a class="related-card" href="../stripchat/"><h4>Lähetys Stripchat</h4><p>Ulkoinen ohjelmisto Stripchat-streameille.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam ImLivessä</h4><p>Virtuaalikamera ImLivelle — ei RTMP:tä.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alertsit lisätään</h4><p>Näytä animoidut tip-alertit MyFreeCams-streamissä.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Lue lisää</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-stream</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Cam-malliksi</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense-lelut</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Valmis lähetykseen?</h2>

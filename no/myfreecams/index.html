@@ -80,6 +80,12 @@
     {
      "@type": "ListItem",
      "position": 2,
+     "name": "Cam-sider",
+     "item": "https://camstreamguide.com/no/#cam-sites"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
      "name": "MyFreeCams",
      "item": "https://camstreamguide.com/no/myfreecams/"
     }
@@ -407,6 +413,14 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
+.toc{display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 0;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600}
+.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
+.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
+.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+.cat-section{margin-top:32px}
+.cat-section:first-of-type{margin-top:16px}
+.cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+.cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +544,14 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<div class="section">
+<nav class="toc" aria-label="On this page">
+  <a href="#quick-answer">Svar</a>
+  <a href="#steps">Trinn</a>
+  <a href="#tips">Tips</a>
+  <a href="#faq">FAQ</a>
+  <a href="#related">Relaterte guider</a>
+</nav>
+<div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort</div>
     <div class="qa-text">Sending på MyFreeCams med SplitCam: installer SplitCam, bygg scenen, i <em>Model Admin → Broadcaster</em> bytt fra Web Broadcaster til External Broadcaster, kopier server-URL og stream key, lim inn i SplitCam, Go Live.</div>
@@ -541,19 +562,28 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   <h2 class="sec-h">Steg for steg</h2>
   <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Last ned og installer SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke. Det er enkoderen som sender videoen din til MyFreeCams.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg scenen</div><p class="step-p">Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå. Legg til mfcalerts.com-URL-en som Browser-lag for animerte tip-alerts.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Bytt til External Broadcaster i Model Admin</div><p class="step-p">Logg inn på MyFreeCams. Åpne <strong>Model Admin → Broadcaster</strong>. Bytt fra <em>Web Broadcaster</em> til <strong>External Broadcaster</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopier begge.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Koble SplitCam til MyFreeCams</div><p class="step-p">I SplitCam åpne <strong>Stream Settings</strong>, lim inn MFC server-URL og stream key i custom RTMP-feltene. Sett bitrate til 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe-intervall.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikk Go Live</div><p class="step-p">Trykk <strong>Go Live</strong> i SplitCam. Innen ~10 sekunder når strømmen din MyFreeCams. Neste gang er det ett klikk.</p></div></div></div>
 </section>
-<section class="section">
+<section class="section" id="tips">
   <h2 class="sec-h">Tips</h2>
   <div class="tips-grid"><div class="tip-card"><h3>MFC = tokens, ikke abonnementer</h3><p>MFC er ren tipping- og token-økonomi — Premium-medlemmer kan ta private, men hovedinntekten kommer fra tips i free chat. Planlegg en scene som tjener både påkledd og casual, ikke bare i nakenshowet.</p></div><div class="tip-card"><h3>Web Broadcaster vs. External — velg én gang</h3><p>Standard Web Broadcaster er single-kamera, single-kilde. External Broadcaster åpner for multi-scene, overlays og beauty-filtre via SplitCam/OBS. Bytt i Model Admin → Broadcaster før du går live.</p></div><div class="tip-card"><h3>MFC Alerts-integrasjon</h3><p>Animerte tip-alerts kommer fra mfcalerts.com — legg til alert-URL-en som Browser-lag i SplitCam over kameraet. Fullt overlay-oppsett står i <a href="../mfc-alerts/" class="autolink">MFC Alerts</a>-guiden vår.</p></div><div class="tip-card"><h3>Bruk kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang strøm — en tapt frame er en tapt tip. Trekk en kabel til stream-PC-en.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">Feilsøking</h2><div class="faq-list"><details class="faq-item"><summary>MyFreeCams-strømmen din henger eller bufrer</summary><p>Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000&nbsp;Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din.</p></details><details class="faq-item"><summary>Tapte frames under MyFreeCams-sendingen</summary><p>Tapte frames betyr at pakkene ikke når MyFreeCams i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge.</p></details><details class="faq-item"><summary>Svart skjerm — seerne ser ingen video på MyFreeCams</summary><p>Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live.</p></details><details class="faq-item"><summary>MyFreeCams avviser strømnøkkelen eller kobler ikke til</summary><p>Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den MyFreeCams viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ute av synk på MyFreeCams</summary><p>Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames.</p></details></div></section>
-<section class="section">
+<section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>
   <div class="faq-list"><details class="faq-item"><summary>Støtter MyFreeCams eksterne broadcastere som SplitCam offisielt?</summary><p>Ja — Model Admin har en External Broadcaster-mulighet som gir standard RTMP-server-URL og stream key. OBS, SplitCam, vMix og andre RTMP-enkodere fungerer alle.</p></details><details class="faq-item"><summary>Hvor finner jeg min MFC stream key?</summary><p>Model Admin → Broadcaster → bytt til External Broadcaster. Både server-URL (rtmp://publish.myfreecams.com…) og stream key dukker opp der. Kopier begge inn i SplitCams custom RTMP-felter.</p></details><details class="faq-item"><summary>Hvilken bitrate til MyFreeCams?</summary><p>MFC tar imot opptil ~6 000 Kbps med 2 sekunders keyframe-intervall. Sikt mot 1920×1080 ved 30 fps, 3 500–6 000 Kbps — opplastningen din er den reelle grensen.</p></details><details class="faq-item"><summary>Er SplitCam gratis å bruke med MyFreeCams?</summary><p>Ja — SplitCam er gratis, uten vannmerke og uten tidsgrense. External Broadcaster-muligheten i Model Admin er også gratis. Totale broadcaster-kostnader: null.</p></details><details class="faq-item"><summary>Hvor mye kan modeller tjene på MyFreeCams?</summary><p>Inntektene på MyFreeCams avhenger av publikumsstørrelse, antall timer sendt og tipping-vaner. Aktive kringkastere tjener vanligvis $200–$3 000 i måneden; toppmodeller når $10 000+. Din andel av inntekten følger MyFreeCamss provisjonsstruktur — sjekk modellavtalen før du går live.</p></details><details class="faq-item"><summary>Er MyFreeCams trygt for kringkastere?</summary><p>MyFreeCams krever alders- og ID-verifisering før utbetaling, noe som beskytter modeller mot svindel. Bruk et scenenavn, del aldri personlige data på kamera, aktiver geo-blokkering for å skjule strømmen fra hjemregionen din, og behandle hver seerforespørsel som en transaksjon. SplitCams overlegg og AI-bakgrunn kan også skjule eller erstatte de virkelige omgivelsene dine.</p></details><details class="faq-item"><summary>Hvilke dokumenter trenger jeg for å bli modell på MyFreeCams?</summary><p>MyFreeCams krever vanligvis et offentlig utstedt foto-ID (pass, førerkort eller ID-kort), en selfie med ID-en i hånden, og et skatte-/utbetalingsskjema (W-9 for USA, W-8BEN for ikke-amerikanske). Godkjenning tar vanligvis 24–72 timer; når du er godkjent kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg strømme på MyFreeCams fra mobilen?</summary><p>MyFreeCams tilbyr vanligvis en mobil kringkasterapp eller en mobil-web-kringkaster, men opplevelsen er begrenset — ingen overlegg, ingen andre kamera, ingen AI-bakgrunn. For full produksjonskvalitet, send fra en datamaskin med SplitCam og bruk telefonen som andre kamera (SplitCam aksepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Støtter MyFreeCams OBS eller en ekstern encoder?</summary><p>Ja — MyFreeCams oppgir en RTMP-server-URL og en strømnøkkel i kringkasterpanelet. Lim inn begge i SplitCams <strong>Stream Settings → Custom RTMP</strong>, sett 1920×1080 ved 30 fps med 4 000–5 000 Kbps bitrate, og klikk <strong>Go Live</strong>. Custom RTMP-ruten gir deg full SplitCam-scenekomposisjon (flerkamera, overlegg, filtre).</p></details></div>
 </section>
 
-<div class="section">
+<div class="section" id="related">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre plattformguider</h3>
   <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Sending Chaturbate</h4><p>Token-basert oppsett med ekstern enkoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sending CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a><a class="related-card" href="../bongacams/"><h4>Sending BongaCams</h4><p>External Encoder-oppsett for BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Sending Stripchat</h4><p>Ekstern programvare-oppsett for Stripchat-strømmer.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuelt kamera for ImLive — ingen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Legg til MFC Alerts</h4><p>Vis animerte tip alerts i MyFreeCams-strømmen.</p></a></div>
+</div>
+<div class="section" id="continue-learning">
+  <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Mer</h3>
+  <div class="related-grid">
+    <a class="related-card" href="../multistream-cams/"><h4>Multi-streaming</h4></a>
+    <a class="related-card" href="../obs-alternative/"><h4>SplitCam vs OBS</h4></a>
+    <a class="related-card" href="../become-a-cam-model/"><h4>Bli cam-modell</h4></a>
+    <a class="related-card" href="../lovense/"><h4>Lovense</h4></a>
+  </div>
 </div>
 <section class="cta-block">
   <h2>Klar til å gå live?</h2>
