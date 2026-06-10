@@ -475,6 +475,8 @@ a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
 .toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
 .toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+/* Offset anchor jumps so the section header isn't hidden behind the 60px fixed top nav. */
+section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learning"]{scroll-margin-top:76px}
 .cat-section{margin-top:32px}
 .cat-section:first-of-type{margin-top:16px}
 .cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
