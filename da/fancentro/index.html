@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på FanCentro?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på FanCentro afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger FanCentros kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er FanCentro sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "FanCentro kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på FanCentro?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "FanCentro kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på FanCentro fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "FanCentro tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg bruge SplitCam som et virtuelt kamera på FanCentro?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — FanCentros live kører i browseren, så SplitCam registreres som et webcam kaldet \"SplitCam Video Driver\". Åbn FanCentro-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit FanCentro-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit FanCentro-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under FanCentro-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til FanCentro i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på FanCentro</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>FanCentro afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, FanCentro viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på FanCentro</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Hvordan forbinder SplitCam til FanCentro?</summary><p>FanCentro live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays og flere kameraer på FanCentro?</summary><p>Ja — byg scenen i SplitCam; FanCentro ser den færdige scene som ét webkamera.</p></details><details class="faq-item"><summary>Understøtter FanCentro OBS eller eksterne encodere?</summary><p>Dens live er primært browser-/webkamera-baseret. Hvis en stream key-mulighed dukker op i dit dashboard, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera.</p></details><details class="faq-item"><summary>Er SplitCam gratis til FanCentro?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Hvordan forbinder SplitCam til FanCentro?</summary><p>FanCentro live er browser-baseret, så SplitCam forbinder som virtuelt kamera — vælg SplitCam i kameravælgeren. Ingen stream key nødvendig.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays og flere kameraer på FanCentro?</summary><p>Ja — byg scenen i SplitCam; FanCentro ser den færdige scene som ét webkamera.</p></details><details class="faq-item"><summary>Understøtter FanCentro OBS eller eksterne encodere?</summary><p>Dens live er primært browser-/webkamera-baseret. Hvis en stream key-mulighed dukker op i dit dashboard, indsætter du den i SplitCams custom RTMP-felter; ellers bruger du metoden med virtuelt kamera.</p></details><details class="faq-item"><summary>Er SplitCam gratis til FanCentro?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på FanCentro?</summary><p>Indtjeningen på FanCentro afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger FanCentros kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er FanCentro sikkert for broadcastere?</summary><p>FanCentro kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på FanCentro?</summary><p>FanCentro kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på FanCentro fra min telefon?</summary><p>FanCentro tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Kan jeg bruge SplitCam som et virtuelt kamera på FanCentro?</summary><p>Ja — FanCentros live kører i browseren, så SplitCam registreres som et webcam kaldet <strong>"SplitCam Video Driver"</strong>. Åbn FanCentro-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed.</p></details></div>
 </section>
 
 <div class="section">

@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hoeveel kunnen modellen verdienen op CamSoda?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Inkomsten op CamSoda hangen af van de grootte van het publiek, het aantal streamuren en het foooigedrag. Actieve broadcasters verdienen doorgaans $200–$3.000 per maand; topperformers halen $10.000+. Jouw aandeel volgt de commissiestructuur van CamSoda — bekijk de modelovereenkomst voordat je live gaat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is CamSoda veilig voor broadcasters?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamSoda vereist leeftijds- en ID-verificatie voordat er uitbetaald wordt, wat modellen beschermt tegen fraude. Gebruik een artiestennaam, deel nooit persoonlijke gegevens voor de camera, schakel geo-blokkades in om je stream te verbergen voor je eigen regio, en behandel elk kijkersverzoek als transactie. De overlays en AI-achtergrond van SplitCam kunnen je echte omgeving ook verbergen of vervangen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welke documenten heb ik nodig om model te worden op CamSoda?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamSoda vraagt doorgaans om een door de overheid uitgegeven identiteitsbewijs met foto (paspoort, rijbewijs of ID-kaart), een selfie waarop je het ID vasthoudt, en een belasting-/uitbetalingsformulier (W-9 voor de VS, W-8BEN buiten de VS). Goedkeuring duurt meestal 24–72 uur; zodra je bent goedgekeurd, kun je dezelfde dag live gaan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan ik streamen op CamSoda vanaf mijn telefoon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamSoda biedt meestal een mobiele broadcaster-app of een mobiele webbroadcaster, maar de ervaring is beperkt — geen overlays, geen tweede camera, geen AI-achtergrond. Voor volledige productiekwaliteit kun je beter uitzenden vanaf een computer met SplitCam en je telefoon gebruiken als tweede camera (SplitCam accepteert IP-camera-invoer van telefoons)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ondersteunt CamSoda OBS of een externe encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — CamSoda levert een RTMP-server-URL en een streamsleutel in het broadcasterpaneel. Plak beide in Stream Settings → Custom RTMP van SplitCam, stel 1920×1080 op 30 fps in met een bitrate van 4.000–5.000 Kbps, en klik op Go Live. De Custom RTMP-route geeft je volledige SplitCam-scènesamenstelling (multi-camera, overlays, filters)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Je CamSoda-stream hapert of buffert",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je CamSoda-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de CamSoda-uitzending</summary><p>Dropped frames betekenen dat pakketten CamSoda niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op CamSoda</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>CamSoda weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die CamSoda toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op CamSoda</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Ondersteunt CamSoda OBS / externe encoders?</summary><p>Ja — officieel. Er is een Use OBS Broadcaster-knop op de Go Live-pagina en een OBS-gids op CamSoda's wiki, dus SplitCam werkt.</p></details><details class="faq-item"><summary>Moet ik mij verifiëren op CamSoda?</summary><p>Om te streamen, nee. Om tips te ontvangen, ja — CamSoda vereist eerst hun verificatieproces.</p></details><details class="faq-item"><summary>Welke resolutie ondersteunt CamSoda?</summary><p>Tot 1920×1080 bij 30 fps, ongeveer 6.000 Kbps maximum op RTMP ingest.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor CamSoda?</summary><p>Ja — gratis, geen watermerk en geen tijdslimiet. Werkt met CamSoda's gratis Use OBS Broadcaster-modus, dus de hele chain is kosteloos.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Ondersteunt CamSoda OBS / externe encoders?</summary><p>Ja — officieel. Er is een Use OBS Broadcaster-knop op de Go Live-pagina en een OBS-gids op CamSoda's wiki, dus SplitCam werkt.</p></details><details class="faq-item"><summary>Moet ik mij verifiëren op CamSoda?</summary><p>Om te streamen, nee. Om tips te ontvangen, ja — CamSoda vereist eerst hun verificatieproces.</p></details><details class="faq-item"><summary>Welke resolutie ondersteunt CamSoda?</summary><p>Tot 1920×1080 bij 30 fps, ongeveer 6.000 Kbps maximum op RTMP ingest.</p></details><details class="faq-item"><summary>Is SplitCam gratis voor CamSoda?</summary><p>Ja — gratis, geen watermerk en geen tijdslimiet. Werkt met CamSoda's gratis Use OBS Broadcaster-modus, dus de hele chain is kosteloos.</p></details><details class="faq-item"><summary>Hoeveel kunnen modellen verdienen op CamSoda?</summary><p>Inkomsten op CamSoda hangen af van de grootte van het publiek, het aantal streamuren en het foooigedrag. Actieve broadcasters verdienen doorgaans $200–$3.000 per maand; topperformers halen $10.000+. Jouw aandeel volgt de commissiestructuur van CamSoda — bekijk de modelovereenkomst voordat je live gaat.</p></details><details class="faq-item"><summary>Is CamSoda veilig voor broadcasters?</summary><p>CamSoda vereist leeftijds- en ID-verificatie voordat er uitbetaald wordt, wat modellen beschermt tegen fraude. Gebruik een artiestennaam, deel nooit persoonlijke gegevens voor de camera, schakel geo-blokkades in om je stream te verbergen voor je eigen regio, en behandel elk kijkersverzoek als transactie. De overlays en AI-achtergrond van SplitCam kunnen je echte omgeving ook verbergen of vervangen.</p></details><details class="faq-item"><summary>Welke documenten heb ik nodig om model te worden op CamSoda?</summary><p>CamSoda vraagt doorgaans om een door de overheid uitgegeven identiteitsbewijs met foto (paspoort, rijbewijs of ID-kaart), een selfie waarop je het ID vasthoudt, en een belasting-/uitbetalingsformulier (W-9 voor de VS, W-8BEN buiten de VS). Goedkeuring duurt meestal 24–72 uur; zodra je bent goedgekeurd, kun je dezelfde dag live gaan.</p></details><details class="faq-item"><summary>Kan ik streamen op CamSoda vanaf mijn telefoon?</summary><p>CamSoda biedt meestal een mobiele broadcaster-app of een mobiele webbroadcaster, maar de ervaring is beperkt — geen overlays, geen tweede camera, geen AI-achtergrond. Voor volledige productiekwaliteit kun je beter uitzenden vanaf een computer met SplitCam en je telefoon gebruiken als tweede camera (SplitCam accepteert IP-camera-invoer van telefoons).</p></details><details class="faq-item"><summary>Ondersteunt CamSoda OBS of een externe encoder?</summary><p>Ja — CamSoda levert een RTMP-server-URL en een streamsleutel in het broadcasterpaneel. Plak beide in <strong>Stream Settings → Custom RTMP</strong> van SplitCam, stel 1920×1080 op 30 fps in met een bitrate van 4.000–5.000 Kbps, en klik op <strong>Go Live</strong>. De Custom RTMP-route geeft je volledige SplitCam-scènesamenstelling (multi-camera, overlays, filters).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiële support — CamSoda</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:modelsupport@camsoda.com">modelsupport@camsoda.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.camsoda.com/support" rel="nofollow noopener" target="_blank">https://www.camsoda.com/support</a></li></ul><p class="sp-note">We zijn een onafhankelijke gids. Voor account-, betaal- of technische problemen neem direct contact op met de officiële support van het platform.</p></section>
 <div class="section">

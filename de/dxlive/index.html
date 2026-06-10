@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Wie viel können Modelle auf DXLive verdienen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Einnahmen auf DXLive hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von DXLive — prüfe den Modellvertrag, bevor du live gehst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist DXLive sicher für Broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DXLive verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Dokumente brauche ich, um Modell auf DXLive zu werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DXLive verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich auf DXLive vom Handy aus streamen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DXLive bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Unterstützt DXLive OBS oder einen externen Encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — DXLive stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter Stream-Einstellungen → Custom RTMP ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf Go Live. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dein DXLive-Stream ruckelt oder puffert",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein DXLive-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der DXLive-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete DXLive nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf DXLive</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>DXLive lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von DXLive angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf DXLive</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Unterstützt DXLive externe Encoder wie SplitCam?</summary><p>Ja — der Performer-Bereich bietet einen Standard-External-Encoder- / RTMP-Pfad. Server-URL und Stream Key nach der Verifizierung in SplitCam kopieren.</p></details><details class="faq-item"><summary>Wo bekomme ich meinen DXLive-Stream-Key?</summary><p>In den Broadcast- / External-Encoder-Einstellungen im Performer-Bereich — Server-URL und Stream Key erscheinen dort. Beides in die Custom-RTMP-Felder von SplitCam einfügen.</p></details><details class="faq-item"><summary>Welche Bitrate für DXLive?</summary><p>Anpeilen: 1920×1080 bei 30 fps, 3.500–6.000 Kbps und 2 Sekunden Keyframe-Intervall. Vorher den eingebauten Speedtest von SplitCam laufen lassen.</p></details><details class="faq-item"><summary>Ist SplitCam bei DXLive kostenlos nutzbar?</summary><p>Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Die External-Encoder-Option von DXLive ist im Performer-Bereich kostenlos.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Unterstützt DXLive externe Encoder wie SplitCam?</summary><p>Ja — der Performer-Bereich bietet einen Standard-External-Encoder- / RTMP-Pfad. Server-URL und Stream Key nach der Verifizierung in SplitCam kopieren.</p></details><details class="faq-item"><summary>Wo bekomme ich meinen DXLive-Stream-Key?</summary><p>In den Broadcast- / External-Encoder-Einstellungen im Performer-Bereich — Server-URL und Stream Key erscheinen dort. Beides in die Custom-RTMP-Felder von SplitCam einfügen.</p></details><details class="faq-item"><summary>Welche Bitrate für DXLive?</summary><p>Anpeilen: 1920×1080 bei 30 fps, 3.500–6.000 Kbps und 2 Sekunden Keyframe-Intervall. Vorher den eingebauten Speedtest von SplitCam laufen lassen.</p></details><details class="faq-item"><summary>Ist SplitCam bei DXLive kostenlos nutzbar?</summary><p>Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Die External-Encoder-Option von DXLive ist im Performer-Bereich kostenlos.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf DXLive verdienen?</summary><p>Die Einnahmen auf DXLive hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von DXLive — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist DXLive sicher für Broadcaster?</summary><p>DXLive verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf DXLive zu werden?</summary><p>DXLive verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf DXLive vom Handy aus streamen?</summary><p>DXLive bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Unterstützt DXLive OBS oder einen externen Encoder?</summary><p>Ja — DXLive stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter <strong>Stream-Einstellungen → Custom RTMP</strong> ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf <strong>Go Live</strong>. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter).</p></details></div>
 </section>
 
 <div class="section">

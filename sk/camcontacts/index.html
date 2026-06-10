@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Koľko môžu modelky zarobiť na CamContacts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zárobky na CamContacts závisia od veľkosti publika, odvysielaných hodín a štedrosti divákov v tipoch. Aktívni vysielatelia si bežne odnesú 200 – 3 000 $ mesačne; špička dosahuje 10 000 $ a viac. Tvoj podiel z tržieb sa riadi províznou štruktúrou CamContacts — pred prvým live si prečítaj zmluvu pre modelky."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je CamContacts bezpečná platforma pre vysielateľky?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamContacts pred vyplatením vyžaduje overenie veku a totožnosti, čo modelky chráni pred podvodmi. Používaj umelecké meno, na kamere nikdy nezdieľaj osobné údaje, zapni geo-blokovanie, aby tvoj stream nevideli ľudia z tvojho regiónu, a každú požiadavku diváka ber ako transakciu. Overlaye a AI pozadie v SplitCame navyše dokážu skryť alebo nahradiť skutočné okolie."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Aké doklady potrebujem, aby som sa stala modelkou na CamContacts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamContacts typicky vyžaduje štátom vydaný doklad s fotkou (pas, vodičský preukaz alebo občiansky preukaz), selfie s dokladom v ruke a daňový/výplatný formulár (W-9 pre USA, W-8BEN pre ostatné krajiny). Schválenie zvyčajne trvá 24 – 72 hodín; po schválení môžeš ísť live ešte v ten istý deň."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Môžem vysielať na CamContacts z mobilu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamContacts obvykle ponúka mobilnú aplikáciu pre vysielateľov alebo mobilné webové rozhranie, no zážitok je obmedzený — žiadne overlaye, žiadna druhá kamera, žiadne AI pozadie. Pre plnú produkčnú kvalitu vysielaj z počítača cez SplitCam a telefón využi ako druhú kameru (SplitCam prijíma vstup IP kamery z telefónu)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Podporuje CamContacts OBS alebo externý encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Áno — CamContacts v paneli vysielateľa poskytuje RTMP URL servera a stream key. Vlož ich v SplitCame do Stream Settings → Custom RTMP, nastav 1920×1080 pri 30 fps s bitrate 4 000 – 5 000 Kbps a klikni na Go Live. Cesta cez Custom RTMP ti dáva plnú kompozíciu scén v SplitCame (viac kamier, overlaye, filtre)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Vysielanie CamContacts sa seká alebo bufferuje",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Riešenie problémov</h2><div class="faq-list"><details class="faq-item"><summary>Vysielanie CamContacts sa seká alebo bufferuje</summary><p>Takmer vždy je bitrate nastavený vyššie, než unesie váš upload. Spustite vstavaný test rýchlosti SplitCam, potom nastavte bitrate na zhruba 75 % nameraného uploadu — 3500–6000&nbsp;Kbps pre 1080p, menej pre 720p. Sekanie zmizne, keď kodér prestane prekračovať vašu linku.</p></details><details class="faq-item"><summary>Strata snímok počas vysielania CamContacts</summary><p>Strata snímok znamená, že pakety nedôjdu na CamContacts včas — zvyčajne nestabilné Wi-Fi. Prejdite na drôtový Ethernet, zatvorte aplikácie požierajúce pásmo a mierne znížte bitrate. Jeden výkyv nevadí; trvalý nárast znamená, že linka nestíha.</p></details><details class="faq-item"><summary>Čierna obrazovka — diváci nevidia video na CamContacts</summary><p>Vaša kamera nie je vybraná ako aktívny zdroj v SplitCam, alebo ju drží iná aplikácia. Zatvorte Zoom, Skype alebo OBS, vyberte webkameru znovu v zozname zdrojov SplitCam a uistite sa, že náhľad ukazuje váš obraz, skôr než stlačíte Go Live.</p></details><details class="faq-item"><summary>CamContacts odmieta stream key alebo sa nepripája</summary><p>Skopírujte stream key znovu — medzera na konci alebo starý, resetovaný kľúč sú najčastejšie príčiny. Uistite sa, že URL servera zodpovedá tomu, čo CamContacts zobrazuje, a že vysielanie externým kodérom je na účte zapnuté. Zelený posuvník v Stream Settings SplitCam potvrdzuje platný kľúč.</p></details><details class="faq-item"><summary>Žiadny zvuk alebo zvuk nesynchronný na CamContacts</summary><p>Vyberte SplitCam ako kameru AJ mikrofón a v zdroji zvuku SplitCam vyberte svoj skutočný mikrofón. Ak zvuk zaostáva za videom, znížte rozlíšenie o úroveň — kodér je preťažený a zvuk čaká na oneskorené snímky.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Časté otázky</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Podporuje CamContacts externé enkodéry ako SplitCam?</summary><p>Áno — performerská sekcia ponúka štandardnú cestu External Encoder / RTMP. Po overení skopírujte URL servera a stream key do SplitCam.</p></details><details class="faq-item"><summary>Kde nájdem svoj stream key pre CamContacts?</summary><p>V nastaveniach vysielania / External Encoder v performerskej sekcii — objaví sa tam URL servera aj stream key. Vložte oboje do vlastných RTMP polí v SplitCam.</p></details><details class="faq-item"><summary>Aký bitrate pre CamContacts?</summary><p>Pošlite 1920×1080 pri 30 fps, 3500–6000 Kbps s kľúčovým snímkom každé 2 sekundy. Najskôr spustite test rýchlosti SplitCam.</p></details><details class="faq-item"><summary>Je SplitCam zadarmo pre CamContacts?</summary><p>Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu. Voľba External Encoder na CamContacts je v performerskej sekcii zadarmo.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Podporuje CamContacts externé enkodéry ako SplitCam?</summary><p>Áno — performerská sekcia ponúka štandardnú cestu External Encoder / RTMP. Po overení skopírujte URL servera a stream key do SplitCam.</p></details><details class="faq-item"><summary>Kde nájdem svoj stream key pre CamContacts?</summary><p>V nastaveniach vysielania / External Encoder v performerskej sekcii — objaví sa tam URL servera aj stream key. Vložte oboje do vlastných RTMP polí v SplitCam.</p></details><details class="faq-item"><summary>Aký bitrate pre CamContacts?</summary><p>Pošlite 1920×1080 pri 30 fps, 3500–6000 Kbps s kľúčovým snímkom každé 2 sekundy. Najskôr spustite test rýchlosti SplitCam.</p></details><details class="faq-item"><summary>Je SplitCam zadarmo pre CamContacts?</summary><p>Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu. Voľba External Encoder na CamContacts je v performerskej sekcii zadarmo.</p></details><details class="faq-item"><summary>Koľko môžu modelky zarobiť na CamContacts?</summary><p>Zárobky na CamContacts závisia od veľkosti publika, odvysielaných hodín a štedrosti divákov v tipoch. Aktívni vysielatelia si bežne odnesú 200 – 3 000 $ mesačne; špička dosahuje 10 000 $ a viac. Tvoj podiel z tržieb sa riadi províznou štruktúrou CamContacts — pred prvým live si prečítaj zmluvu pre modelky.</p></details><details class="faq-item"><summary>Je CamContacts bezpečná platforma pre vysielateľky?</summary><p>CamContacts pred vyplatením vyžaduje overenie veku a totožnosti, čo modelky chráni pred podvodmi. Používaj umelecké meno, na kamere nikdy nezdieľaj osobné údaje, zapni geo-blokovanie, aby tvoj stream nevideli ľudia z tvojho regiónu, a každú požiadavku diváka ber ako transakciu. Overlaye a AI pozadie v SplitCame navyše dokážu skryť alebo nahradiť skutočné okolie.</p></details><details class="faq-item"><summary>Aké doklady potrebujem, aby som sa stala modelkou na CamContacts?</summary><p>CamContacts typicky vyžaduje štátom vydaný doklad s fotkou (pas, vodičský preukaz alebo občiansky preukaz), selfie s dokladom v ruke a daňový/výplatný formulár (W-9 pre USA, W-8BEN pre ostatné krajiny). Schválenie zvyčajne trvá 24 – 72 hodín; po schválení môžeš ísť live ešte v ten istý deň.</p></details><details class="faq-item"><summary>Môžem vysielať na CamContacts z mobilu?</summary><p>CamContacts obvykle ponúka mobilnú aplikáciu pre vysielateľov alebo mobilné webové rozhranie, no zážitok je obmedzený — žiadne overlaye, žiadna druhá kamera, žiadne AI pozadie. Pre plnú produkčnú kvalitu vysielaj z počítača cez SplitCam a telefón využi ako druhú kameru (SplitCam prijíma vstup IP kamery z telefónu).</p></details><details class="faq-item"><summary>Podporuje CamContacts OBS alebo externý encoder?</summary><p>Áno — CamContacts v paneli vysielateľa poskytuje RTMP URL servera a stream key. Vlož ich v SplitCame do <strong>Stream Settings → Custom RTMP</strong>, nastav 1920×1080 pri 30 fps s bitrate 4 000 – 5 000 Kbps a klikni na <strong>Go Live</strong>. Cesta cez Custom RTMP ti dáva plnú kompozíciu scén v SplitCame (viac kamier, overlaye, filtre).</p></details></div>
 </section>
 
 <div class="section">

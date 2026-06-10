@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Wie viel können Modelle auf VirtWish verdienen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Einnahmen auf VirtWish hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von VirtWish — prüfe den Modellvertrag, bevor du live gehst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist VirtWish sicher für Broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VirtWish verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Dokumente brauche ich, um Modell auf VirtWish zu werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VirtWish verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich auf VirtWish vom Handy aus streamen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VirtWish bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Unterstützt VirtWish OBS oder einen externen Encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — VirtWish stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter Stream-Einstellungen → Custom RTMP ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf Go Live. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dein VirtWish-Stream ruckelt oder puffert",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein VirtWish-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der VirtWish-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete VirtWish nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf VirtWish</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>VirtWish lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von VirtWish angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf VirtWish</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Wo sind die VirtWish-RTMP-Daten?</summary><p>Icon oben rechts → Profile → Start Broadcast zweimal → der OBS-Bereich zeigt Link und Stream-Key.</p></details><details class="faq-item"><summary>Unterstützt VirtWish externe Encoder?</summary><p>Ja — der OBS-Bereich liefert eine Stream-URL und einen Key, sodass SplitCam funktioniert.</p></details><details class="faq-item"><summary>Welche Bitrate für VirtWish?</summary><p>VirtWish veröffentlicht keinen offiziellen Deckel; 3.500–6.000 Kbps bei 1080p sind ein sicherer Bereich. SplitCams Auflösung an die auf VirtWish gesetzte angleichen, um Rescaling zu vermeiden.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für VirtWish?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit, sodass das URL-und-Key-Setup von VirtWish nur die paar Minuten Einrichtung kostet.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Wo sind die VirtWish-RTMP-Daten?</summary><p>Icon oben rechts → Profile → Start Broadcast zweimal → der OBS-Bereich zeigt Link und Stream-Key.</p></details><details class="faq-item"><summary>Unterstützt VirtWish externe Encoder?</summary><p>Ja — der OBS-Bereich liefert eine Stream-URL und einen Key, sodass SplitCam funktioniert.</p></details><details class="faq-item"><summary>Welche Bitrate für VirtWish?</summary><p>VirtWish veröffentlicht keinen offiziellen Deckel; 3.500–6.000 Kbps bei 1080p sind ein sicherer Bereich. SplitCams Auflösung an die auf VirtWish gesetzte angleichen, um Rescaling zu vermeiden.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für VirtWish?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit, sodass das URL-und-Key-Setup von VirtWish nur die paar Minuten Einrichtung kostet.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf VirtWish verdienen?</summary><p>Die Einnahmen auf VirtWish hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von VirtWish — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist VirtWish sicher für Broadcaster?</summary><p>VirtWish verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf VirtWish zu werden?</summary><p>VirtWish verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf VirtWish vom Handy aus streamen?</summary><p>VirtWish bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Unterstützt VirtWish OBS oder einen externen Encoder?</summary><p>Ja — VirtWish stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter <strong>Stream-Einstellungen → Custom RTMP</strong> ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf <strong>Go Live</strong>. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Offizieller Support — VirtWish</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://t.me/vwsupport" rel="nofollow noopener" target="_blank">https://t.me/vwsupport</a></li></ul><p class="sp-note">Wir sind ein unabhängiger Guide. Bei Konto-, Zahlungs- oder technischen Problemen wende dich direkt an den offiziellen Support der Plattform.</p></section>
 <div class="section">

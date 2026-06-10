@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Koľko môžu modelky zarobiť na MyFans.jp?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zárobky na MyFans.jp závisia od veľkosti publika, odvysielaných hodín a štedrosti divákov v tipoch. Aktívni vysielatelia si bežne odnesú 200 – 3 000 $ mesačne; špička dosahuje 10 000 $ a viac. Tvoj podiel z tržieb sa riadi províznou štruktúrou MyFans.jp — pred prvým live si prečítaj zmluvu pre modelky."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je MyFans.jp bezpečná platforma pre vysielateľky?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MyFans.jp pred vyplatením vyžaduje overenie veku a totožnosti, čo modelky chráni pred podvodmi. Používaj umelecké meno, na kamere nikdy nezdieľaj osobné údaje, zapni geo-blokovanie, aby tvoj stream nevideli ľudia z tvojho regiónu, a každú požiadavku diváka ber ako transakciu. Overlaye a AI pozadie v SplitCame navyše dokážu skryť alebo nahradiť skutočné okolie."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Aké doklady potrebujem, aby som sa stala modelkou na MyFans.jp?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MyFans.jp typicky vyžaduje štátom vydaný doklad s fotkou (pas, vodičský preukaz alebo občiansky preukaz), selfie s dokladom v ruke a daňový/výplatný formulár (W-9 pre USA, W-8BEN pre ostatné krajiny). Schválenie zvyčajne trvá 24 – 72 hodín; po schválení môžeš ísť live ešte v ten istý deň."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Môžem vysielať na MyFans.jp z mobilu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MyFans.jp obvykle ponúka mobilnú aplikáciu pre vysielateľov alebo mobilné webové rozhranie, no zážitok je obmedzený — žiadne overlaye, žiadna druhá kamera, žiadne AI pozadie. Pre plnú produkčnú kvalitu vysielaj z počítača cez SplitCam a telefón využi ako druhú kameru (SplitCam prijíma vstup IP kamery z telefónu)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Môžem použiť SplitCam ako virtuálnu kameru na MyFans.jp?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Áno — live na MyFans.jp beží v prehliadači, takže sa SplitCam zaregistruje ako webkamera s názvom \"SplitCam Video Driver\". Otvor panel vysielateľa na MyFans.jp, klikni v prehliadači na výber kamery a zvoľ SplitCam. Tvoja zložená scéna (overlaye, druhá kamera, filtre, AI pozadie) dorazí divákom ako jeden webcam feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Vysielanie MyFans.jp sa seká alebo bufferuje",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Riešenie problémov</h2><div class="faq-list"><details class="faq-item"><summary>Vysielanie MyFans.jp sa seká alebo bufferuje</summary><p>Takmer vždy je bitrate nastavený vyššie, než unesie váš upload. Spustite vstavaný test rýchlosti SplitCam, potom nastavte bitrate na zhruba 75 % nameraného uploadu — 3500–6000&nbsp;Kbps pre 1080p, menej pre 720p. Sekanie zmizne, keď kodér prestane prekračovať vašu linku.</p></details><details class="faq-item"><summary>Strata snímok počas vysielania MyFans.jp</summary><p>Strata snímok znamená, že pakety nedôjdu na MyFans.jp včas — zvyčajne nestabilné Wi-Fi. Prejdite na drôtový Ethernet, zatvorte aplikácie požierajúce pásmo a mierne znížte bitrate. Jeden výkyv nevadí; trvalý nárast znamená, že linka nestíha.</p></details><details class="faq-item"><summary>Čierna obrazovka — diváci nevidia video na MyFans.jp</summary><p>Vaša kamera nie je vybraná ako aktívny zdroj v SplitCam, alebo ju drží iná aplikácia. Zatvorte Zoom, Skype alebo OBS, vyberte webkameru znovu v zozname zdrojov SplitCam a uistite sa, že náhľad ukazuje váš obraz, skôr než stlačíte Go Live.</p></details><details class="faq-item"><summary>MyFans.jp odmieta stream key alebo sa nepripája</summary><p>Skopírujte stream key znovu — medzera na konci alebo starý, resetovaný kľúč sú najčastejšie príčiny. Uistite sa, že URL servera zodpovedá tomu, čo MyFans.jp zobrazuje, a že vysielanie externým kodérom je na účte zapnuté. Zelený posuvník v Stream Settings SplitCam potvrdzuje platný kľúč.</p></details><details class="faq-item"><summary>Žiadny zvuk alebo zvuk nesynchronný na MyFans.jp</summary><p>Vyberte SplitCam ako kameru AJ mikrofón a v zdroji zvuku SplitCam vyberte svoj skutočný mikrofón. Ak zvuk zaostáva za videom, znížte rozlíšenie o úroveň — kodér je preťažený a zvuk čaká na oneskorené snímky.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Časté otázky</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Ako sa SplitCam pripája k MyFans.jp?</summary><p>Live MyFans je v prehliadači, takže SplitCam sa pripája ako virtuálna kamera — zvoľte SplitCam vo výbere kamery. Stream key nie je potrebný.</p></details><details class="faq-item"><summary>Môžem na MyFans použiť prekrytia a viac kamier?</summary><p>Áno — postavte scénu v SplitCam (druhá kamera, prekrytia, AI pozadie); MyFans vidí hotovú scénu ako jednu webkameru.</p></details><details class="faq-item"><summary>Podporuje MyFans.jp OBS alebo externé kodéry?</summary><p>Live je primárne v prehliadači/cez webkameru. Ak sa vo vašom paneli objaví možnosť stream key, vložte ju do vlastných RTMP polí SplitCam; inak použite metódu virtuálnej kamery.</p></details><details class="faq-item"><summary>Je SplitCam zadarmo pre MyFans.jp?</summary><p>Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Ako sa SplitCam pripája k MyFans.jp?</summary><p>Live MyFans je v prehliadači, takže SplitCam sa pripája ako virtuálna kamera — zvoľte SplitCam vo výbere kamery. Stream key nie je potrebný.</p></details><details class="faq-item"><summary>Môžem na MyFans použiť prekrytia a viac kamier?</summary><p>Áno — postavte scénu v SplitCam (druhá kamera, prekrytia, AI pozadie); MyFans vidí hotovú scénu ako jednu webkameru.</p></details><details class="faq-item"><summary>Podporuje MyFans.jp OBS alebo externé kodéry?</summary><p>Live je primárne v prehliadači/cez webkameru. Ak sa vo vašom paneli objaví možnosť stream key, vložte ju do vlastných RTMP polí SplitCam; inak použite metódu virtuálnej kamery.</p></details><details class="faq-item"><summary>Je SplitCam zadarmo pre MyFans.jp?</summary><p>Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu.</p></details><details class="faq-item"><summary>Koľko môžu modelky zarobiť na MyFans.jp?</summary><p>Zárobky na MyFans.jp závisia od veľkosti publika, odvysielaných hodín a štedrosti divákov v tipoch. Aktívni vysielatelia si bežne odnesú 200 – 3 000 $ mesačne; špička dosahuje 10 000 $ a viac. Tvoj podiel z tržieb sa riadi províznou štruktúrou MyFans.jp — pred prvým live si prečítaj zmluvu pre modelky.</p></details><details class="faq-item"><summary>Je MyFans.jp bezpečná platforma pre vysielateľky?</summary><p>MyFans.jp pred vyplatením vyžaduje overenie veku a totožnosti, čo modelky chráni pred podvodmi. Používaj umelecké meno, na kamere nikdy nezdieľaj osobné údaje, zapni geo-blokovanie, aby tvoj stream nevideli ľudia z tvojho regiónu, a každú požiadavku diváka ber ako transakciu. Overlaye a AI pozadie v SplitCame navyše dokážu skryť alebo nahradiť skutočné okolie.</p></details><details class="faq-item"><summary>Aké doklady potrebujem, aby som sa stala modelkou na MyFans.jp?</summary><p>MyFans.jp typicky vyžaduje štátom vydaný doklad s fotkou (pas, vodičský preukaz alebo občiansky preukaz), selfie s dokladom v ruke a daňový/výplatný formulár (W-9 pre USA, W-8BEN pre ostatné krajiny). Schválenie zvyčajne trvá 24 – 72 hodín; po schválení môžeš ísť live ešte v ten istý deň.</p></details><details class="faq-item"><summary>Môžem vysielať na MyFans.jp z mobilu?</summary><p>MyFans.jp obvykle ponúka mobilnú aplikáciu pre vysielateľov alebo mobilné webové rozhranie, no zážitok je obmedzený — žiadne overlaye, žiadna druhá kamera, žiadne AI pozadie. Pre plnú produkčnú kvalitu vysielaj z počítača cez SplitCam a telefón využi ako druhú kameru (SplitCam prijíma vstup IP kamery z telefónu).</p></details><details class="faq-item"><summary>Môžem použiť SplitCam ako virtuálnu kameru na MyFans.jp?</summary><p>Áno — live na MyFans.jp beží v prehliadači, takže sa SplitCam zaregistruje ako webkamera s názvom <strong>"SplitCam Video Driver"</strong>. Otvor panel vysielateľa na MyFans.jp, klikni v prehliadači na výber kamery a zvoľ SplitCam. Tvoja zložená scéna (overlaye, druhá kamera, filtre, AI pozadie) dorazí divákom ako jeden webcam feed.</p></details></div>
 </section>
 
 <div class="section">

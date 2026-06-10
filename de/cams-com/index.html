@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Wie viel können Modelle auf Cams.com verdienen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Einnahmen auf Cams.com hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von Cams.com — prüfe den Modellvertrag, bevor du live gehst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist Cams.com sicher für Broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cams.com verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Dokumente brauche ich, um Modell auf Cams.com zu werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cams.com verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich auf Cams.com vom Handy aus streamen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cams.com bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Unterstützt Cams.com OBS oder einen externen Encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — Cams.com stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter Stream-Einstellungen → Custom RTMP ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf Go Live. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dein Cams.com-Stream ruckelt oder puffert",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein Cams.com-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der Cams.com-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete Cams.com nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf Cams.com</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>Cams.com lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Cams.com angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf Cams.com</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Ist Cams.com dasselbe wie AdultFriendFinder?</summary><p>Selbes Mutternetzwerk. Cams.com ist die Cam-Broadcasting-Marke; Zuschauer kommen über AFF, AmateurMatch und andere FriendFinder-Sites — das macht einen großen Teil des Traffics aus.</p></details><details class="faq-item"><summary>Wo bekomme ich den Cams.com-Stream-Key?</summary><p>Im Cams.com Model Center den Tab <em>External Encoder</em> oder <em>OBS</em> öffnen — dort erscheinen Server-URL und Stream Key. Beides in SplitCams Custom-RTMP-Felder einfügen.</p></details><details class="faq-item"><summary>Browser-Broadcaster oder RTMP?</summary><p>RTMP (External Encoder) ist vorzuziehen — stabile Bitrate, vollwertige SplitCam-Szenen. Browser-Broadcaster funktioniert als Fallback: einfach SplitCam als Webcam wählen.</p></details><details class="faq-item"><summary>Ist SplitCam für Cams.com kostenlos?</summary><p>Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Ist Cams.com dasselbe wie AdultFriendFinder?</summary><p>Selbes Mutternetzwerk. Cams.com ist die Cam-Broadcasting-Marke; Zuschauer kommen über AFF, AmateurMatch und andere FriendFinder-Sites — das macht einen großen Teil des Traffics aus.</p></details><details class="faq-item"><summary>Wo bekomme ich den Cams.com-Stream-Key?</summary><p>Im Cams.com Model Center den Tab <em>External Encoder</em> oder <em>OBS</em> öffnen — dort erscheinen Server-URL und Stream Key. Beides in SplitCams Custom-RTMP-Felder einfügen.</p></details><details class="faq-item"><summary>Browser-Broadcaster oder RTMP?</summary><p>RTMP (External Encoder) ist vorzuziehen — stabile Bitrate, vollwertige SplitCam-Szenen. Browser-Broadcaster funktioniert als Fallback: einfach SplitCam als Webcam wählen.</p></details><details class="faq-item"><summary>Ist SplitCam für Cams.com kostenlos?</summary><p>Ja — SplitCam ist kostenlos, ohne Wasserzeichen und ohne Zeitlimit.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf Cams.com verdienen?</summary><p>Die Einnahmen auf Cams.com hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von Cams.com — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist Cams.com sicher für Broadcaster?</summary><p>Cams.com verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf Cams.com zu werden?</summary><p>Cams.com verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf Cams.com vom Handy aus streamen?</summary><p>Cams.com bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Unterstützt Cams.com OBS oder einen externen Encoder?</summary><p>Ja — Cams.com stellt im Broadcaster-Panel eine RTMP-Server-URL und einen Stream-Key bereit. Füge beide in SplitCam unter <strong>Stream-Einstellungen → Custom RTMP</strong> ein, stelle 1920×1080 bei 30 fps mit einer Bitrate von 4.000–5.000 Kbps ein und klicke auf <strong>Go Live</strong>. Der Weg über Custom RTMP (externer Encoder) gibt dir die volle Szenenkomposition von SplitCam (Multikamera, Overlays, Filter).</p></details></div>
 </section>
 
 <div class="section">

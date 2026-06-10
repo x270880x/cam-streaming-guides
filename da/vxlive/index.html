@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på VXLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på VXLive afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger VXLives kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er VXLive sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VXLive kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på VXLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VXLive kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på VXLive fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VXLive tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Understøtter VXLive OBS eller en ekstern encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — VXLive leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams Stream Settings → Custom RTMP, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik Go Live. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit VXLive-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit VXLive-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under VXLive-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til VXLive i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på VXLive</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>VXLive afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, VXLive viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på VXLive</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Understøtter VXLive SplitCam officielt?</summary><p>Ja — VXModels (VXLive) opretholder en dedikeret officiel hjælpeartikel til SplitCam-opsætning og lister SplitCam ved siden af OBS og XSplit som understøttet broadcasting-software.</p></details><details class="faq-item"><summary>Hvordan forbinder jeg SplitCam til VXLive?</summary><p>På VXLive vælger du «Stream with third-party software», derefter i SplitCam vælger du VISIT-X preset og indsætter server-URL og stream key fra VXLive.</p></details><details class="faq-item"><summary>Går jeg live i SplitCam eller på VXLive?</summary><p>Begge — først Go Live i SplitCam, derefter GO ONLINE på VXLive.</p></details><details class="faq-item"><summary>Hvorfor anbefaler VXModels SplitCam?</summary><p>VXModels' officielle hjælpeartikel anbefaler SplitCam specifikt til at eliminere webkamera-billedartefakter og pixelering og stabilisere forbindelsen — ikke kun som generisk encoder.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Understøtter VXLive SplitCam officielt?</summary><p>Ja — VXModels (VXLive) opretholder en dedikeret officiel hjælpeartikel til SplitCam-opsætning og lister SplitCam ved siden af OBS og XSplit som understøttet broadcasting-software.</p></details><details class="faq-item"><summary>Hvordan forbinder jeg SplitCam til VXLive?</summary><p>På VXLive vælger du «Stream with third-party software», derefter i SplitCam vælger du VISIT-X preset og indsætter server-URL og stream key fra VXLive.</p></details><details class="faq-item"><summary>Går jeg live i SplitCam eller på VXLive?</summary><p>Begge — først Go Live i SplitCam, derefter GO ONLINE på VXLive.</p></details><details class="faq-item"><summary>Hvorfor anbefaler VXModels SplitCam?</summary><p>VXModels' officielle hjælpeartikel anbefaler SplitCam specifikt til at eliminere webkamera-billedartefakter og pixelering og stabilisere forbindelsen — ikke kun som generisk encoder.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på VXLive?</summary><p>Indtjeningen på VXLive afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger VXLives kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er VXLive sikkert for broadcastere?</summary><p>VXLive kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på VXLive?</summary><p>VXLive kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på VXLive fra min telefon?</summary><p>VXLive tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Understøtter VXLive OBS eller en ekstern encoder?</summary><p>Ja — VXLive leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams <strong>Stream Settings → Custom RTMP</strong>, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik <strong>Go Live</strong>. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiel support — VXLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://helpcenter.vxmodels.com/" rel="nofollow noopener" target="_blank">https://helpcenter.vxmodels.com/</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🎫</span><a href="https://support.vxmodels.com/" rel="nofollow noopener" target="_blank">https://support.vxmodels.com/</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
 <div class="section">

@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Berapa penghasilan model di SkyPrivate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Penghasilan di SkyPrivate bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi SkyPrivate — periksa perjanjian model sebelum mulai siaran."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah SkyPrivate aman untuk broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dokumen apa yang dibutuhkan untuk menjadi model di SkyPrivate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisakah saya siaran di SkyPrivate dari ponsel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisakah saya menggunakan SplitCam sebagai virtual camera di SkyPrivate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ya — live SkyPrivate berjalan di browser, jadi SplitCam terdaftar sebagai webcam bernama \"SplitCam Video Driver\". Buka broadcaster SkyPrivate, klik pemilih kamera di browser, lalu pilih SplitCam. Scene yang sudah Anda susun (overlay, kamera kedua, filter, AI background) sampai ke penonton sebagai satu feed webcam."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Siaran SkyPrivate tersendat atau buffering",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Pemecahan masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran SkyPrivate tersendat atau buffering</summary><p>Hampir selalu bitrate diatur lebih tinggi dari yang mampu ditanggung upload-mu. Jalankan tes kecepatan bawaan SplitCam, lalu setel bitrate ke sekitar 75% dari upload terukur — 3.500–6.000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersendat hilang begitu encoder berhenti melampaui koneksimu.</p></details><details class="faq-item"><summary>Frame hilang saat siaran SkyPrivate</summary><p>Frame hilang berarti paket tidak sampai ke SkyPrivate tepat waktu — biasanya Wi-Fi tidak stabil. Pindah ke Ethernet kabel, tutup aplikasi pemakan bandwidth, dan turunkan bitrate sedikit. Satu lonjakan tidak masalah; kenaikan terus-menerus berarti koneksi tidak mengejar.</p></details><details class="faq-item"><summary>Layar hitam — penonton tidak melihat video di SkyPrivate</summary><p>Kameramu tidak terpilih sebagai sumber aktif di SplitCam, atau aplikasi lain menahannya. Tutup Zoom, Skype, atau OBS, pilih ulang webcam di daftar sumber SplitCam, dan pastikan preview menampilkan gambarmu sebelum tekan Go Live.</p></details><details class="faq-item"><summary>SkyPrivate menolak stream key atau tidak terhubung</summary><p>Salin ulang stream key — spasi di akhir atau kunci lama yang sudah di-reset adalah penyebab paling umum. Pastikan URL server cocok dengan yang ditampilkan SkyPrivate dan bahwa siaran encoder eksternal aktif di akunmu. Slider hijau di Stream Settings SplitCam menandakan kunci valid.</p></details><details class="faq-item"><summary>Tidak ada audio atau audio tidak sinkron di SkyPrivate</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon aslimu di dalam sumber audio SplitCam. Jika audio tertinggal dari video, turunkan resolusi satu tingkat — encoder kelebihan beban dan audio menunggu frame yang terlambat.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Apakah SkyPrivate pakai RTMP atau stream key?</summary><p>Tidak keduanya. SkyPrivate menangani penagihan dan booking; video aslinya jalan di Skype. Kamu tidak butuh URL server RTMP atau stream key — cukup atur SplitCam sebagai kameramu di Skype.</p></details><details class="faq-item"><summary>Bagaimana memilih SplitCam di Skype untuk SkyPrivate?</summary><p>Buka Skype Settings → Audio &amp; Video → Camera, pilih SplitCam dari daftar. Lakukan hal sama untuk Microphone. Panggilan SkyPrivate kemudian masuk sebagai panggilan Skype biasa dengan scene SplitCam-mu sebagai feed kamera.</p></details><details class="faq-item"><summary>Bisakah pakai overlay dan beauty filter dengan SkyPrivate?</summary><p>Bisa — susun di dalam scene SplitCam-mu. Skype hanya menerima hasil komposit sebagai satu feed kamera, jadi apa pun yang disusun SplitCam (overlay, beauty filter, latar AI, scene multi-kamera) terlihat oleh klien SkyPrivate.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk SkyPrivate?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu. Sebagai virtual camera untuk panggilan SkyPrivate berbasis Skype, ia tidak menambah biaya atau branding ke panggilan.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Apakah SkyPrivate pakai RTMP atau stream key?</summary><p>Tidak keduanya. SkyPrivate menangani penagihan dan booking; video aslinya jalan di Skype. Kamu tidak butuh URL server RTMP atau stream key — cukup atur SplitCam sebagai kameramu di Skype.</p></details><details class="faq-item"><summary>Bagaimana memilih SplitCam di Skype untuk SkyPrivate?</summary><p>Buka Skype Settings → Audio &amp; Video → Camera, pilih SplitCam dari daftar. Lakukan hal sama untuk Microphone. Panggilan SkyPrivate kemudian masuk sebagai panggilan Skype biasa dengan scene SplitCam-mu sebagai feed kamera.</p></details><details class="faq-item"><summary>Bisakah pakai overlay dan beauty filter dengan SkyPrivate?</summary><p>Bisa — susun di dalam scene SplitCam-mu. Skype hanya menerima hasil komposit sebagai satu feed kamera, jadi apa pun yang disusun SplitCam (overlay, beauty filter, latar AI, scene multi-kamera) terlihat oleh klien SkyPrivate.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk SkyPrivate?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu. Sebagai virtual camera untuk panggilan SkyPrivate berbasis Skype, ia tidak menambah biaya atau branding ke panggilan.</p></details><details class="faq-item"><summary>Berapa penghasilan model di SkyPrivate?</summary><p>Penghasilan di SkyPrivate bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi SkyPrivate — periksa perjanjian model sebelum mulai siaran.</p></details><details class="faq-item"><summary>Apakah SkyPrivate aman untuk broadcaster?</summary><p>SkyPrivate mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda.</p></details><details class="faq-item"><summary>Dokumen apa yang dibutuhkan untuk menjadi model di SkyPrivate?</summary><p>SkyPrivate biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama.</p></details><details class="faq-item"><summary>Bisakah saya siaran di SkyPrivate dari ponsel?</summary><p>SkyPrivate biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel).</p></details><details class="faq-item"><summary>Bisakah saya menggunakan SplitCam sebagai virtual camera di SkyPrivate?</summary><p>Ya — live SkyPrivate berjalan di browser, jadi SplitCam terdaftar sebagai webcam bernama <strong>"SplitCam Video Driver"</strong>. Buka broadcaster SkyPrivate, klik pemilih kamera di browser, lalu pilih SplitCam. Scene yang sudah Anda susun (overlay, kamera kedua, filter, AI background) sampai ke penonton sebagai satu feed webcam.</p></details></div>
 </section>
 
 <div class="section">

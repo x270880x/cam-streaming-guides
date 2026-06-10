@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "模特在 LoyalFans 上能赚多少钱？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "在 LoyalFans 上的收入取决于观众规模、直播时长和打赏情况。活跃的主播每月通常能拿到 $200–$3,000；顶级主播可达 $10,000 以上。你的分成比例遵循 LoyalFans 的佣金政策——开播前请仔细查看模特协议。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "LoyalFans 对主播来说安全吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "LoyalFans 在结算前会要求年龄和身份验证，这能保护模特免受欺诈。建议使用艺名，绝不在镜头前透露个人信息，开启地区屏蔽以隐藏所在地，并把每一位观众的请求都视为交易行为。SplitCam 的叠加层和 AI 背景也可以遮挡或替换你的真实环境。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "在 LoyalFans 注册模特需要哪些证件？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "LoyalFans 通常需要政府签发的带照片身份证件（护照、驾照或身份证）、手持证件的自拍，以及税务/结算表格（美国用户 W-9，非美国用户 W-8BEN）。审核一般需要 24–72 小时；通过后当天即可开播。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "我可以用手机在 LoyalFans 上直播吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "LoyalFans 通常提供手机主播 App 或移动网页版主播界面，但功能有限——没有叠加层、没有第二路摄像头、没有 AI 背景。如需完整的制作品质，请使用电脑配合 SplitCam 直播，并把手机作为第二路摄像头使用（SplitCam 支持来自手机的 IP 摄像头输入）。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "可以把 SplitCam 当作 LoyalFans 的虚拟摄像头吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以——LoyalFans 的直播在浏览器中运行，因此 SplitCam 会被识别为名为 \"SplitCam Video Driver\" 的网络摄像头。打开 LoyalFans 主播页面，点击浏览器中的摄像头选择器，选择 SplitCam。你合成好的画面（叠加层、第二路摄像头、滤镜、AI 背景）会作为一路网络摄像头信号送达观众。"
+     }
+    },
+    {
+     "@type": "Question",
      "name": "您的 LoyalFans 直播卡顿或缓冲",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 LoyalFans 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>LoyalFans 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 LoyalFans — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 LoyalFans 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>LoyalFans 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 LoyalFans 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>LoyalFans 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">常见问题</h2>
-  <div class="faq-list"><details class="faq-item"><summary>SplitCam 怎么连接到 LoyalFans？</summary><p>LoyalFans 的直播基于浏览器，所以 SplitCam 以虚拟摄像头的方式接入 —— 在摄像头选择框里选 SplitCam。无需 stream key。</p></details><details class="faq-item"><summary>在 LoyalFans 上能用叠加层和多机位吗？</summary><p>能 —— 在 SplitCam 里把场景搭好（第二个摄像头、叠加层、美颜或 AI 背景滤镜），LoyalFans 看到的就是合成完成的单路画面。</p></details><details class="faq-item"><summary>LoyalFans 支持 OBS 或外部编码器吗？</summary><p>它的直播主要基于浏览器 / 网络摄像头。如果后台显示了 stream key 选项，就把它粘贴到 SplitCam 的自定义 RTMP 字段；否则用虚拟摄像头的方式。</p></details><details class="faq-item"><summary>SplitCam 在 LoyalFans 上免费吗？</summary><p>免费 —— 完全免费、无水印、无时间限制。</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>SplitCam 怎么连接到 LoyalFans？</summary><p>LoyalFans 的直播基于浏览器，所以 SplitCam 以虚拟摄像头的方式接入 —— 在摄像头选择框里选 SplitCam。无需 stream key。</p></details><details class="faq-item"><summary>在 LoyalFans 上能用叠加层和多机位吗？</summary><p>能 —— 在 SplitCam 里把场景搭好（第二个摄像头、叠加层、美颜或 AI 背景滤镜），LoyalFans 看到的就是合成完成的单路画面。</p></details><details class="faq-item"><summary>LoyalFans 支持 OBS 或外部编码器吗？</summary><p>它的直播主要基于浏览器 / 网络摄像头。如果后台显示了 stream key 选项，就把它粘贴到 SplitCam 的自定义 RTMP 字段；否则用虚拟摄像头的方式。</p></details><details class="faq-item"><summary>SplitCam 在 LoyalFans 上免费吗？</summary><p>免费 —— 完全免费、无水印、无时间限制。</p></details><details class="faq-item"><summary>模特在 LoyalFans 上能赚多少钱？</summary><p>在 LoyalFans 上的收入取决于观众规模、直播时长和打赏情况。活跃的主播每月通常能拿到 $200–$3,000；顶级主播可达 $10,000 以上。你的分成比例遵循 LoyalFans 的佣金政策——开播前请仔细查看模特协议。</p></details><details class="faq-item"><summary>LoyalFans 对主播来说安全吗？</summary><p>LoyalFans 在结算前会要求年龄和身份验证，这能保护模特免受欺诈。建议使用艺名，绝不在镜头前透露个人信息，开启地区屏蔽以隐藏所在地，并把每一位观众的请求都视为交易行为。SplitCam 的叠加层和 AI 背景也可以遮挡或替换你的真实环境。</p></details><details class="faq-item"><summary>在 LoyalFans 注册模特需要哪些证件？</summary><p>LoyalFans 通常需要政府签发的带照片身份证件（护照、驾照或身份证）、手持证件的自拍，以及税务/结算表格（美国用户 W-9，非美国用户 W-8BEN）。审核一般需要 24–72 小时；通过后当天即可开播。</p></details><details class="faq-item"><summary>我可以用手机在 LoyalFans 上直播吗？</summary><p>LoyalFans 通常提供手机主播 App 或移动网页版主播界面，但功能有限——没有叠加层、没有第二路摄像头、没有 AI 背景。如需完整的制作品质，请使用电脑配合 SplitCam 直播，并把手机作为第二路摄像头使用（SplitCam 支持来自手机的 IP 摄像头输入）。</p></details><details class="faq-item"><summary>可以把 SplitCam 当作 LoyalFans 的虚拟摄像头吗？</summary><p>可以——LoyalFans 的直播在浏览器中运行，因此 SplitCam 会被识别为名为 <strong>"SplitCam Video Driver"</strong> 的网络摄像头。打开 LoyalFans 主播页面，点击浏览器中的摄像头选择器，选择 SplitCam。你合成好的画面（叠加层、第二路摄像头、滤镜、AI 背景）会作为一路网络摄像头信号送达观众。</p></details></div>
 </section>
 
 <div class="section">

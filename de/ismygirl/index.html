@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Wie viel können Modelle auf IsMyGirl verdienen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Einnahmen auf IsMyGirl hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von IsMyGirl — prüfe den Modellvertrag, bevor du live gehst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist IsMyGirl sicher für Broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "IsMyGirl verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Dokumente brauche ich, um Modell auf IsMyGirl zu werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "IsMyGirl verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich auf IsMyGirl vom Handy aus streamen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "IsMyGirl bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich SplitCam als virtuelle Kamera auf IsMyGirl verwenden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — der Live-Modus von IsMyGirl läuft im Browser, daher meldet sich SplitCam als Webcam namens \"SplitCam Video Driver\" an. Öffne den Broadcaster von IsMyGirl, klicke im Browser auf die Kameraauswahl und wähle SplitCam. Deine komponierte Szene (Overlays, Zweitkamera, Filter, KI-Hintergrund, Premium-Inhalte) erreicht die Zuschauer als einzelner Webcam-Feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dein IsMyGirl-Stream ruckelt oder puffert",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein IsMyGirl-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der IsMyGirl-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete IsMyGirl nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf IsMyGirl</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>IsMyGirl lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von IsMyGirl angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf IsMyGirl</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Wie verbindet sich SplitCam mit IsMyGirl?</summary><p>Der IsMyGirl-Live-Modus ist browserbasiert, SplitCam verbindet sich also als virtuelle Kamera — im Kamera-Auswahlmenü SplitCam wählen. Kein Stream-Key nötig.</p></details><details class="faq-item"><summary>Kann ich Overlays und mehrere Kameras auf IsMyGirl nutzen?</summary><p>Ja — komponiere die Szene in SplitCam; IsMyGirl sieht sie als eine Webcam.</p></details><details class="faq-item"><summary>Unterstützt IsMyGirl OBS oder externe Encoder?</summary><p>Der Live-Modus ist primär browser-/webcam-basiert. Erscheint eine Stream-Key-Option, fügst du sie in die Custom-RTMP-Felder von SplitCam ein; sonst die Virtual-Camera-Methode nutzen.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für IsMyGirl?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Wie verbindet sich SplitCam mit IsMyGirl?</summary><p>Der IsMyGirl-Live-Modus ist browserbasiert, SplitCam verbindet sich also als virtuelle Kamera — im Kamera-Auswahlmenü SplitCam wählen. Kein Stream-Key nötig.</p></details><details class="faq-item"><summary>Kann ich Overlays und mehrere Kameras auf IsMyGirl nutzen?</summary><p>Ja — komponiere die Szene in SplitCam; IsMyGirl sieht sie als eine Webcam.</p></details><details class="faq-item"><summary>Unterstützt IsMyGirl OBS oder externe Encoder?</summary><p>Der Live-Modus ist primär browser-/webcam-basiert. Erscheint eine Stream-Key-Option, fügst du sie in die Custom-RTMP-Felder von SplitCam ein; sonst die Virtual-Camera-Methode nutzen.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für IsMyGirl?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf IsMyGirl verdienen?</summary><p>Die Einnahmen auf IsMyGirl hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von IsMyGirl — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist IsMyGirl sicher für Broadcaster?</summary><p>IsMyGirl verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf IsMyGirl zu werden?</summary><p>IsMyGirl verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf IsMyGirl vom Handy aus streamen?</summary><p>IsMyGirl bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Kann ich SplitCam als virtuelle Kamera auf IsMyGirl verwenden?</summary><p>Ja — der Live-Modus von IsMyGirl läuft im Browser, daher meldet sich SplitCam als Webcam namens <strong>"SplitCam Video Driver"</strong> an. Öffne den Broadcaster von IsMyGirl, klicke im Browser auf die Kameraauswahl und wähle SplitCam. Deine komponierte Szene (Overlays, Zweitkamera, Filter, KI-Hintergrund, Premium-Inhalte) erreicht die Zuschauer als einzelner Webcam-Feed.</p></details></div>
 </section>
 
 <div class="section">

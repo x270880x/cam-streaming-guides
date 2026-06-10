@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Колико моделке могу да зараде на CamPlace?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Зарада на CamPlace зависи од величине публике, сати преноса и понашања приликом давања напојница. Активне broadcaster-ке обично узимају $200–$3.000 месечно; топ извођачи достижу $10.000+. Твој удео у приходу прати структуру комисије CamPlace — провери уговор за моделке пре него што кренеш у живи пренос."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Да ли је CamPlace безбедан за broadcaster-ке?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamPlace захтева верификацију година и идентитета пре исплате, што штити моделке од преваре. Користи сценско име, никад не дели личне податке пред камером, активирај гео-блокаде да сакријеш пренос у својој матичној регији, и третирај сваки захтев гледаоца као трансакцију. SplitCam-ови overlay-и и AI позадина такође могу да сакрију или замене твоје право окружење."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Која документа су ми потребна да постанем моделка на CamPlace?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamPlace обично тражи фото-исправу издату од државе (пасош, возачка дозвола или лична карта), селфи са исправом у рукама, и порески/исплатни формулар (W-9 за САД, W-8BEN за остале). Одобрење обично траје 24–72 сата; чим си одобрена, можеш да кренеш у живи пренос истог дана."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Могу ли да преносим на CamPlace са телефона?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamPlace обично нуди мобилну broadcaster апликацију или мобилни веб broadcaster, али искуство је ограничено — без overlay-а, без друге камере, без AI позадине. За пуни продукциони квалитет, преноси са рачунара уз SplitCam и користи телефон као другу камеру (SplitCam прихвата улаз IP камере са телефона)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Да ли CamPlace подржава OBS или спољни енкодер?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — CamPlace даје RTMP server URL и stream key у broadcaster панелу. Налепи оба у Stream Settings → Custom RTMP у SplitCam-у, постави 1920×1080 на 30 fps са битрејтом од 4.000–5.000 Kbps, и кликни Go Live. Custom RTMP рута ти даје потпуну SplitCam композицију сцене (мулти-камера, overlay-и, филтери)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Твој пренос на CamPlace лагује или баферује",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Решавање проблема</h2><div class="faq-list"><details class="faq-item"><summary>Твој пренос на CamPlace лагује или баферује</summary><p>Готово увек је битрејт виши него што твој аплоуд издржава. Покрени уграђени тест брзине SplitCam-а и постави битрејт на око 75% измереног аплоуда — 3500–6000&nbsp;Kbps за 1080p, мање за 720p. Лаг нестаје чим енкодер престане да престиже твоју везу.</p></details><details class="faq-item"><summary>Изгубљени фрејмови током преноса на CamPlace</summary><p>Изгубљени фрејмови значе да пакети не стижу до CamPlace на време — обично нестабилан Wi-Fi. Пређи на кабловску Ethernet везу, затвори апликације које троше проток и мало смањи битрејт. Један скок је у реду; стални пораст значи да веза не може да испрати.</p></details><details class="faq-item"><summary>Црн екран — гледаоци не виде видео на CamPlace</summary><p>Камера није изабрана као активни извор у SplitCam-у, или је друга апликација држи. Затвори Zoom, Skype или OBS, поново изабери веб камеру у листи извора SplitCam-а и потврди да преглед приказује слику пре него притиснеш Go Live.</p></details><details class="faq-item"><summary>CamPlace одбија стрим кључ или се не повезује</summary><p>Поново копирај стрим кључ — сувишан размак или стар, већ ресетован кључ је честа узрок. Потврди да се URL сервера поклапа са оним који приказује CamPlace и да је пренос преко спољног енкодера укључен на налогу. Зелени слајдер у Stream Settings SplitCam-а потврђује важећи кључ.</p></details><details class="faq-item"><summary>Нема звука или звук није синхронизован на CamPlace</summary><p>Изабери SplitCam и као камеру и као микрофон, и постави свој прави микрофон као аудио извор у SplitCam-у. Ако звук касни за видеом, смањи резолуцију за једну степеницу — енкодер је преоптерећен и звук чека закаснеле фрејмове.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Честа питања</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Да ли CamPlace има званичан OBS водич?</summary><p>Нема пронађеног јавног чланка о спољним енкодерима. CamPlace прихвата стандардни RTMP URL и кључ, тако да SplitCam ради — прати видео.</p></details><details class="faq-item"><summary>Подржава ли CamPlace спољне енкодере?</summary><p>Да — прихвата стандардни RTMP stream key, тако да се SplitCam повезује као прилагођена RTMP дестинација.</p></details><details class="faq-item"><summary>Који битрејт за CamPlace?</summary><p>CamPlace не објављује званичан број — користи 3500–6000 Kbps на 1080p као сигуран опсег и пусти SplitCam-ов тест брзине да фиксира твој стварни плафон.</p></details><details class="faq-item"><summary>Је ли SplitCam бесплатан за CamPlace?</summary><p>Да — бесплатан, без воденог жига и без временског ограничења. Како CamPlace не долази са сопственим енкодером, бесплатан RTMP алат ради посао.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Да ли CamPlace има званичан OBS водич?</summary><p>Нема пронађеног јавног чланка о спољним енкодерима. CamPlace прихвата стандардни RTMP URL и кључ, тако да SplitCam ради — прати видео.</p></details><details class="faq-item"><summary>Подржава ли CamPlace спољне енкодере?</summary><p>Да — прихвата стандардни RTMP stream key, тако да се SplitCam повезује као прилагођена RTMP дестинација.</p></details><details class="faq-item"><summary>Који битрејт за CamPlace?</summary><p>CamPlace не објављује званичан број — користи 3500–6000 Kbps на 1080p као сигуран опсег и пусти SplitCam-ов тест брзине да фиксира твој стварни плафон.</p></details><details class="faq-item"><summary>Је ли SplitCam бесплатан за CamPlace?</summary><p>Да — бесплатан, без воденог жига и без временског ограничења. Како CamPlace не долази са сопственим енкодером, бесплатан RTMP алат ради посао.</p></details><details class="faq-item"><summary>Колико моделке могу да зараде на CamPlace?</summary><p>Зарада на CamPlace зависи од величине публике, сати преноса и понашања приликом давања напојница. Активне broadcaster-ке обично узимају $200–$3.000 месечно; топ извођачи достижу $10.000+. Твој удео у приходу прати структуру комисије CamPlace — провери уговор за моделке пре него што кренеш у живи пренос.</p></details><details class="faq-item"><summary>Да ли је CamPlace безбедан за broadcaster-ке?</summary><p>CamPlace захтева верификацију година и идентитета пре исплате, што штити моделке од преваре. Користи сценско име, никад не дели личне податке пред камером, активирај гео-блокаде да сакријеш пренос у својој матичној регији, и третирај сваки захтев гледаоца као трансакцију. SplitCam-ови overlay-и и AI позадина такође могу да сакрију или замене твоје право окружење.</p></details><details class="faq-item"><summary>Која документа су ми потребна да постанем моделка на CamPlace?</summary><p>CamPlace обично тражи фото-исправу издату од државе (пасош, возачка дозвола или лична карта), селфи са исправом у рукама, и порески/исплатни формулар (W-9 за САД, W-8BEN за остале). Одобрење обично траје 24–72 сата; чим си одобрена, можеш да кренеш у живи пренос истог дана.</p></details><details class="faq-item"><summary>Могу ли да преносим на CamPlace са телефона?</summary><p>CamPlace обично нуди мобилну broadcaster апликацију или мобилни веб broadcaster, али искуство је ограничено — без overlay-а, без друге камере, без AI позадине. За пуни продукциони квалитет, преноси са рачунара уз SplitCam и користи телефон као другу камеру (SplitCam прихвата улаз IP камере са телефона).</p></details><details class="faq-item"><summary>Да ли CamPlace подржава OBS или спољни енкодер?</summary><p>Да — CamPlace даје RTMP server URL и stream key у broadcaster панелу. Налепи оба у <strong>Stream Settings → Custom RTMP</strong> у SplitCam-у, постави 1920×1080 на 30 fps са битрејтом од 4.000–5.000 Kbps, и кликни <strong>Go Live</strong>. Custom RTMP рута ти даје потпуну SplitCam композицију сцене (мулти-камера, overlay-и, филтери).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Званична подршка — CamPlace</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.camplace.com/contact" rel="nofollow noopener" target="_blank">https://www.camplace.com/contact</a></li></ul><p class="sp-note">Ми смо независан водич. За питања налога, плаћања или техничке проблеме обратите се директно званичној подршци платформе.</p></section>
 <div class="section">

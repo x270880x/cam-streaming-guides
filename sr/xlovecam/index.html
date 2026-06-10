@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Колико моделке могу да зараде на XLoveCam?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Зарада на XLoveCam зависи од величине публике, сати преноса и понашања приликом давања напојница. Активне broadcaster-ке обично узимају $200–$3.000 месечно; топ извођачи достижу $10.000+. Твој удео у приходу прати структуру комисије XLoveCam — провери уговор за моделке пре него што кренеш у живи пренос."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Да ли је XLoveCam безбедан за broadcaster-ке?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "XLoveCam захтева верификацију година и идентитета пре исплате, што штити моделке од преваре. Користи сценско име, никад не дели личне податке пред камером, активирај гео-блокаде да сакријеш пренос у својој матичној регији, и третирај сваки захтев гледаоца као трансакцију. SplitCam-ови overlay-и и AI позадина такође могу да сакрију или замене твоје право окружење."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Која документа су ми потребна да постанем моделка на XLoveCam?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "XLoveCam обично тражи фото-исправу издату од државе (пасош, возачка дозвола или лична карта), селфи са исправом у рукама, и порески/исплатни формулар (W-9 за САД, W-8BEN за остале). Одобрење обично траје 24–72 сата; чим си одобрена, можеш да кренеш у живи пренос истог дана."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Могу ли да преносим на XLoveCam са телефона?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "XLoveCam обично нуди мобилну broadcaster апликацију или мобилни веб broadcaster, али искуство је ограничено — без overlay-а, без друге камере, без AI позадине. За пуни продукциони квалитет, преноси са рачунара уз SplitCam и користи телефон као другу камеру (SplitCam прихвата улаз IP камере са телефона)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Да ли XLoveCam подржава OBS или спољни енкодер?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — XLoveCam даје RTMP server URL и stream key у broadcaster панелу. Налепи оба у Stream Settings → Custom RTMP у SplitCam-у, постави 1920×1080 на 30 fps са битрејтом од 4.000–5.000 Kbps, и кликни Go Live. Custom RTMP рута ти даје потпуну SplitCam композицију сцене (мулти-камера, overlay-и, филтери)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Твој пренос на XLoveCam лагује или баферује",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Решавање проблема</h2><div class="faq-list"><details class="faq-item"><summary>Твој пренос на XLoveCam лагује или баферује</summary><p>Готово увек је битрејт виши него што твој аплоуд издржава. Покрени уграђени тест брзине SplitCam-а и постави битрејт на око 75% измереног аплоуда — 3500–6000&nbsp;Kbps за 1080p, мање за 720p. Лаг нестаје чим енкодер престане да престиже твоју везу.</p></details><details class="faq-item"><summary>Изгубљени фрејмови током преноса на XLoveCam</summary><p>Изгубљени фрејмови значе да пакети не стижу до XLoveCam на време — обично нестабилан Wi-Fi. Пређи на кабловску Ethernet везу, затвори апликације које троше проток и мало смањи битрејт. Један скок је у реду; стални пораст значи да веза не може да испрати.</p></details><details class="faq-item"><summary>Црн екран — гледаоци не виде видео на XLoveCam</summary><p>Камера није изабрана као активни извор у SplitCam-у, или је друга апликација држи. Затвори Zoom, Skype или OBS, поново изабери веб камеру у листи извора SplitCam-а и потврди да преглед приказује слику пре него притиснеш Go Live.</p></details><details class="faq-item"><summary>XLoveCam одбија стрим кључ или се не повезује</summary><p>Поново копирај стрим кључ — сувишан размак или стар, већ ресетован кључ је честа узрок. Потврди да се URL сервера поклапа са оним који приказује XLoveCam и да је пренос преко спољног енкодера укључен на налогу. Зелени слајдер у Stream Settings SplitCam-а потврђује важећи кључ.</p></details><details class="faq-item"><summary>Нема звука или звук није синхронизован на XLoveCam</summary><p>Изабери SplitCam и као камеру и као микрофон, и постави свој прави микрофон као аудио извор у SplitCam-у. Ако звук касни за видеом, смањи резолуцију за једну степеницу — енкодер је преоптерећен и звук чека закаснеле фрејмове.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Честа питања</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Где су XLoveCam RTMP подаци?</summary><p>My Account → settings — приказује и RTMP линк и кључ.</p></details><details class="faq-item"><summary>Подржава ли XLoveCam спољне енкодере?</summary><p>Да — пружа RTMP линк и кључ, тако да SplitCam ради као енкодер.</p></details><details class="faq-item"><summary>Који битрејт за XLoveCam?</summary><p>XLoveCam не објављује фиксни лимит; 3500–6000 Kbps на 1080p је идеално. Избор најближег регионалног сервера је једнако важан — смањује изгубљене фрејмове.</p></details><details class="faq-item"><summary>Је ли SplitCam бесплатан за XLoveCam?</summary><p>Да — бесплатан, без воденог жига и без временског ограничења. Достизање вишејезичне европске публике XLoveCam-а не кошта софтвер.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Где су XLoveCam RTMP подаци?</summary><p>My Account → settings — приказује и RTMP линк и кључ.</p></details><details class="faq-item"><summary>Подржава ли XLoveCam спољне енкодере?</summary><p>Да — пружа RTMP линк и кључ, тако да SplitCam ради као енкодер.</p></details><details class="faq-item"><summary>Који битрејт за XLoveCam?</summary><p>XLoveCam не објављује фиксни лимит; 3500–6000 Kbps на 1080p је идеално. Избор најближег регионалног сервера је једнако важан — смањује изгубљене фрејмове.</p></details><details class="faq-item"><summary>Је ли SplitCam бесплатан за XLoveCam?</summary><p>Да — бесплатан, без воденог жига и без временског ограничења. Достизање вишејезичне европске публике XLoveCam-а не кошта софтвер.</p></details><details class="faq-item"><summary>Колико моделке могу да зараде на XLoveCam?</summary><p>Зарада на XLoveCam зависи од величине публике, сати преноса и понашања приликом давања напојница. Активне broadcaster-ке обично узимају $200–$3.000 месечно; топ извођачи достижу $10.000+. Твој удео у приходу прати структуру комисије XLoveCam — провери уговор за моделке пре него што кренеш у живи пренос.</p></details><details class="faq-item"><summary>Да ли је XLoveCam безбедан за broadcaster-ке?</summary><p>XLoveCam захтева верификацију година и идентитета пре исплате, што штити моделке од преваре. Користи сценско име, никад не дели личне податке пред камером, активирај гео-блокаде да сакријеш пренос у својој матичној регији, и третирај сваки захтев гледаоца као трансакцију. SplitCam-ови overlay-и и AI позадина такође могу да сакрију или замене твоје право окружење.</p></details><details class="faq-item"><summary>Која документа су ми потребна да постанем моделка на XLoveCam?</summary><p>XLoveCam обично тражи фото-исправу издату од државе (пасош, возачка дозвола или лична карта), селфи са исправом у рукама, и порески/исплатни формулар (W-9 за САД, W-8BEN за остале). Одобрење обично траје 24–72 сата; чим си одобрена, можеш да кренеш у живи пренос истог дана.</p></details><details class="faq-item"><summary>Могу ли да преносим на XLoveCam са телефона?</summary><p>XLoveCam обично нуди мобилну broadcaster апликацију или мобилни веб broadcaster, али искуство је ограничено — без overlay-а, без друге камере, без AI позадине. За пуни продукциони квалитет, преноси са рачунара уз SplitCam и користи телефон као другу камеру (SplitCam прихвата улаз IP камере са телефона).</p></details><details class="faq-item"><summary>Да ли XLoveCam подржава OBS или спољни енкодер?</summary><p>Да — XLoveCam даје RTMP server URL и stream key у broadcaster панелу. Налепи оба у <strong>Stream Settings → Custom RTMP</strong> у SplitCam-у, постави 1920×1080 на 30 fps са битрејтом од 4.000–5.000 Kbps, и кликни <strong>Go Live</strong>. Custom RTMP рута ти даје потпуну SplitCam композицију сцене (мулти-камера, overlay-и, филтери).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Званична подршка — XLoveCam</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.xlovecam.com/en/contact" rel="nofollow noopener" target="_blank">https://www.xlovecam.com/en/contact</a></li></ul><p class="sp-note">Ми смо независан водич. За питања налога, плаћања или техничке проблеме обратите се директно званичној подршци платформе.</p></section>
 <div class="section">

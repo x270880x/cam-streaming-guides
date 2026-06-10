@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på ImLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på ImLive afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger ImLives kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er ImLive sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på ImLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på ImLive fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg bruge SplitCam som et virtuelt kamera på ImLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — ImLives live kører i browseren, så SplitCam registreres som et webcam kaldet \"SplitCam Video Driver\". Åbn ImLive-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit ImLive-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit ImLive-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under ImLive-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til ImLive i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på ImLive</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>ImLive afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, ImLive viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på ImLive</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Bruger ImLive RTMP eller stream key?</summary><p>Nej — ImLive bruger webkameraet direkte gennem browseren. SplitCam forbinder som virtuelt kamera, der er ingen nøgle at kopiere.</p></details><details class="faq-item"><summary>Hvordan vælger jeg SplitCam på ImLive?</summary><p>Start Video Chat → Go To Settings → vælg SplitCam som webkamera og mikrofon.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays på ImLive?</summary><p>Ja — byg dem i SplitCam-scenen; ImLive viser det sammensatte resultat.</p></details><details class="faq-item"><summary>Er SplitCam gratis til ImLive?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning. Som virtuelt kamera til ImLive tilføjer det hverken omkostninger eller branding til din videochat.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Bruger ImLive RTMP eller stream key?</summary><p>Nej — ImLive bruger webkameraet direkte gennem browseren. SplitCam forbinder som virtuelt kamera, der er ingen nøgle at kopiere.</p></details><details class="faq-item"><summary>Hvordan vælger jeg SplitCam på ImLive?</summary><p>Start Video Chat → Go To Settings → vælg SplitCam som webkamera og mikrofon.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays på ImLive?</summary><p>Ja — byg dem i SplitCam-scenen; ImLive viser det sammensatte resultat.</p></details><details class="faq-item"><summary>Er SplitCam gratis til ImLive?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning. Som virtuelt kamera til ImLive tilføjer det hverken omkostninger eller branding til din videochat.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på ImLive?</summary><p>Indtjeningen på ImLive afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger ImLives kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er ImLive sikkert for broadcastere?</summary><p>ImLive kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på ImLive?</summary><p>ImLive kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på ImLive fra min telefon?</summary><p>ImLive tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Kan jeg bruge SplitCam som et virtuelt kamera på ImLive?</summary><p>Ja — ImLives live kører i browseren, så SplitCam registreres som et webcam kaldet <strong>"SplitCam Video Driver"</strong>. Åbn ImLive-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiel support — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
 <div class="section">

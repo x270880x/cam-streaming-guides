@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "How much can models earn on JustForFans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Earnings on JustForFans depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows JustForFans's commission structure — check the model agreement before going live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is JustForFans safe for broadcasters?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JustForFans requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What documents do I need to become a model on JustForFans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JustForFans typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I stream on JustForFans from my phone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JustForFans usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use SplitCam as a virtual camera on JustForFans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — JustForFans's live runs in the browser, so SplitCam registers as a webcam called \"SplitCam Video Driver\". Open the JustForFans broadcaster, click the camera selector in the browser, and pick SplitCam. Your composed scene (overlays, second camera, filters, AI background) reaches viewers as a single webcam feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Your JustForFans stream lags or buffers",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your JustForFans stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the JustForFans broadcast</summary><p>Dropped frames mean packets aren't reaching JustForFans in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on JustForFans</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>JustForFans rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one JustForFans shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on JustForFans</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>How does SplitCam connect to JustForFans?</summary><p>JFF live is browser-based, so SplitCam connects as a virtual camera: pick SplitCam in the JFF broadcaster's camera selector. No stream key needed.</p></details><details class="faq-item"><summary>Can I use overlays and multiple cameras on JFF?</summary><p>Yes — build the scene in SplitCam (second camera, overlays, beauty or AI-background filters) and JFF sees the finished scene as a single webcam.</p></details><details class="faq-item"><summary>Does JustForFans support OBS or external encoders?</summary><p>JFF's live is primarily browser/webcam-based. If your creator dashboard shows an external-encoder or stream-key option, paste it into SplitCam's custom RTMP fields; otherwise use the virtual-camera method.</p></details><details class="faq-item"><summary>Is SplitCam free to use with JustForFans?</summary><p>Yes — SplitCam is free, no watermark and no time limit.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>How does SplitCam connect to JustForFans?</summary><p>JFF live is browser-based, so SplitCam connects as a virtual camera: pick SplitCam in the JFF broadcaster's camera selector. No stream key needed.</p></details><details class="faq-item"><summary>Can I use overlays and multiple cameras on JFF?</summary><p>Yes — build the scene in SplitCam (second camera, overlays, beauty or AI-background filters) and JFF sees the finished scene as a single webcam.</p></details><details class="faq-item"><summary>Does JustForFans support OBS or external encoders?</summary><p>JFF's live is primarily browser/webcam-based. If your creator dashboard shows an external-encoder or stream-key option, paste it into SplitCam's custom RTMP fields; otherwise use the virtual-camera method.</p></details><details class="faq-item"><summary>Is SplitCam free to use with JustForFans?</summary><p>Yes — SplitCam is free, no watermark and no time limit.</p></details><details class="faq-item"><summary>How much can models earn on JustForFans?</summary><p>Earnings on JustForFans depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows JustForFans's commission structure — check the model agreement before going live.</p></details><details class="faq-item"><summary>Is JustForFans safe for broadcasters?</summary><p>JustForFans requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings.</p></details><details class="faq-item"><summary>What documents do I need to become a model on JustForFans?</summary><p>JustForFans typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day.</p></details><details class="faq-item"><summary>Can I stream on JustForFans from my phone?</summary><p>JustForFans usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones).</p></details><details class="faq-item"><summary>Can I use SplitCam as a virtual camera on JustForFans?</summary><p>Yes — JustForFans's live runs in the browser, so SplitCam registers as a webcam called <strong>"SplitCam Video Driver"</strong>. Open the JustForFans broadcaster, click the camera selector in the browser, and pick SplitCam. Your composed scene (overlays, second camera, filters, AI background) reaches viewers as a single webcam feed.</p></details></div>
 </section>
 
 <div class="section">

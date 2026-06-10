@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Magkano ang kita ng mga model sa Flirt4Free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang kita sa Flirt4Free ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng Flirt4Free — tingnan ang model agreement bago mag-live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ligtas ba ang Flirt4Free para sa mga broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nangangailangan ang Flirt4Free ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Anong mga dokumento ang kailangan ko para maging model sa Flirt4Free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Karaniwang nangangailangan ang Flirt4Free ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Maaari ba akong mag-stream sa Flirt4Free mula sa aking telepono?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Karaniwang nag-aalok ang Flirt4Free ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sinusuportahan ba ng Flirt4Free ang OBS o panlabas na encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oo — nagbibigay ang Flirt4Free ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa Stream Settings → Custom RTMP ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang Go Live. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Ang Flirt4Free stream mo ay nag-lalag o nag-bubuffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang Flirt4Free stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa Flirt4Free</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa Flirt4Free sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa Flirt4Free</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng Flirt4Free ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng Flirt4Free at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa Flirt4Free</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng Flirt4Free ang external encoders?</summary><p>Oo — opisyal, sa pamamagitan ng External Broadcast Form, na nagbibigay ng RTMP URL at Stream Name. Gumagana ang SplitCam bilang encoder.</p></details><details class="faq-item"><summary>Saan ako kukuha ng Flirt4Free RTMP data?</summary><p>Mula sa External Broadcast Form sa model area — nagpapakita ng RTMP URL, Stream Name at resolution/bitrate fields.</p></details><details class="faq-item"><summary>Anong bitrate para sa Flirt4Free?</summary><p>3,500–6,000 Kbps sa 1080p — i-set ang parehong halaga sa External Broadcast Form at sa SplitCam.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa Flirt4Free?</summary><p>Oo — libre, walang watermark at walang time limit, na bumabagay sa historikal na platform tulad ng Flirt4Free kung saan ang shows ay maaaring mahaba.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng Flirt4Free ang external encoders?</summary><p>Oo — opisyal, sa pamamagitan ng External Broadcast Form, na nagbibigay ng RTMP URL at Stream Name. Gumagana ang SplitCam bilang encoder.</p></details><details class="faq-item"><summary>Saan ako kukuha ng Flirt4Free RTMP data?</summary><p>Mula sa External Broadcast Form sa model area — nagpapakita ng RTMP URL, Stream Name at resolution/bitrate fields.</p></details><details class="faq-item"><summary>Anong bitrate para sa Flirt4Free?</summary><p>3,500–6,000 Kbps sa 1080p — i-set ang parehong halaga sa External Broadcast Form at sa SplitCam.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa Flirt4Free?</summary><p>Oo — libre, walang watermark at walang time limit, na bumabagay sa historikal na platform tulad ng Flirt4Free kung saan ang shows ay maaaring mahaba.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa Flirt4Free?</summary><p>Ang kita sa Flirt4Free ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng Flirt4Free — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang Flirt4Free para sa mga broadcaster?</summary><p>Nangangailangan ang Flirt4Free ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa Flirt4Free?</summary><p>Karaniwang nangangailangan ang Flirt4Free ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa Flirt4Free mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang Flirt4Free ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details><details class="faq-item"><summary>Sinusuportahan ba ng Flirt4Free ang OBS o panlabas na encoder?</summary><p>Oo — nagbibigay ang Flirt4Free ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa <strong>Stream Settings → Custom RTMP</strong> ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang <strong>Go Live</strong>. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Opisyal na suporta — Flirt4Free</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:customerservice@flirt4free.com">customerservice@flirt4free.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.flirt4free.com/help" rel="nofollow noopener" target="_blank">https://www.flirt4free.com/help</a></li></ul><p class="sp-note">Kami ay isang independyenteng gabay. Para sa mga isyu sa account, bayad o teknikal, direktang kontakin ang opisyal na suporta ng platform.</p></section>
 <div class="section">

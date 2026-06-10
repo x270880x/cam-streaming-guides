@@ -169,6 +169,38 @@
     },
     {
      "@type": "Question",
+     "name": "Berapa penghasilan model di MFC Alerts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Penghasilan di MFC Alerts bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi MFC Alerts — periksa perjanjian model sebelum mulai siaran."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah MFC Alerts aman untuk broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MFC Alerts mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dokumen apa yang dibutuhkan untuk menjadi model di MFC Alerts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MFC Alerts biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisakah saya siaran di MFC Alerts dari ponsel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MFC Alerts biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Siaran MFC Alerts tersendat atau buffering",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +537,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Pemecahan masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran MFC Alerts tersendat atau buffering</summary><p>Hampir selalu bitrate diatur lebih tinggi dari yang mampu ditanggung upload-mu. Jalankan tes kecepatan bawaan SplitCam, lalu setel bitrate ke sekitar 75% dari upload terukur — 3.500–6.000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersendat hilang begitu encoder berhenti melampaui koneksimu.</p></details><details class="faq-item"><summary>Frame hilang saat siaran MFC Alerts</summary><p>Frame hilang berarti paket tidak sampai ke MFC Alerts tepat waktu — biasanya Wi-Fi tidak stabil. Pindah ke Ethernet kabel, tutup aplikasi pemakan bandwidth, dan turunkan bitrate sedikit. Satu lonjakan tidak masalah; kenaikan terus-menerus berarti koneksi tidak mengejar.</p></details><details class="faq-item"><summary>Layar hitam — penonton tidak melihat video di MFC Alerts</summary><p>Kameramu tidak terpilih sebagai sumber aktif di SplitCam, atau aplikasi lain menahannya. Tutup Zoom, Skype, atau OBS, pilih ulang webcam di daftar sumber SplitCam, dan pastikan preview menampilkan gambarmu sebelum tekan Go Live.</p></details><details class="faq-item"><summary>MFC Alerts menolak stream key atau tidak terhubung</summary><p>Salin ulang stream key — spasi di akhir atau kunci lama yang sudah di-reset adalah penyebab paling umum. Pastikan URL server cocok dengan yang ditampilkan MFC Alerts dan bahwa siaran encoder eksternal aktif di akunmu. Slider hijau di Stream Settings SplitCam menandakan kunci valid.</p></details><details class="faq-item"><summary>Tidak ada audio atau audio tidak sinkron di MFC Alerts</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon aslimu di dalam sumber audio SplitCam. Jika audio tertinggal dari video, turunkan resolusi satu tingkat — encoder kelebihan beban dan audio menunggu frame yang terlambat.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Apa itu MFC Alerts?</summary><p>Sistem notifikasi untuk MyFreeCams yang menampilkan efek video di siaranmu saat penonton mengirim tip — ditambahkan sebagai overlay Browser di SplitCam.</p></details><details class="faq-item"><summary>Kenapa MFC Alerts saya tidak muncul?</summary><p>Hampir selalu urutan lapisan — lapisan Browser MFC Alerts harus di atas webcam di daftar sumber SplitCam.</p></details><details class="faq-item"><summary>Apakah perlu akun untuk MFC Alerts?</summary><p>Ya — daftar di mfcalerts.com untuk mendapat URL alert pribadimu.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk ini?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu, dan overlay browser MFC Alerts berjalan di dalamnya tanpa biaya tambahan.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Apa itu MFC Alerts?</summary><p>Sistem notifikasi untuk MyFreeCams yang menampilkan efek video di siaranmu saat penonton mengirim tip — ditambahkan sebagai overlay Browser di SplitCam.</p></details><details class="faq-item"><summary>Kenapa MFC Alerts saya tidak muncul?</summary><p>Hampir selalu urutan lapisan — lapisan Browser MFC Alerts harus di atas webcam di daftar sumber SplitCam.</p></details><details class="faq-item"><summary>Apakah perlu akun untuk MFC Alerts?</summary><p>Ya — daftar di mfcalerts.com untuk mendapat URL alert pribadimu.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk ini?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu, dan overlay browser MFC Alerts berjalan di dalamnya tanpa biaya tambahan.</p></details><details class="faq-item"><summary>Berapa penghasilan model di MFC Alerts?</summary><p>Penghasilan di MFC Alerts bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi MFC Alerts — periksa perjanjian model sebelum mulai siaran.</p></details><details class="faq-item"><summary>Apakah MFC Alerts aman untuk broadcaster?</summary><p>MFC Alerts mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda.</p></details><details class="faq-item"><summary>Dokumen apa yang dibutuhkan untuk menjadi model di MFC Alerts?</summary><p>MFC Alerts biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama.</p></details><details class="faq-item"><summary>Bisakah saya siaran di MFC Alerts dari ponsel?</summary><p>MFC Alerts biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Dukungan resmi — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Kami panduan independen. Untuk masalah akun, pembayaran, atau teknis, hubungi langsung dukungan resmi platform.</p></section>
 <div class="section">

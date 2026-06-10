@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "كم يمكن أن يكسب العارضون على ‏Camversity؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "تعتمد الأرباح على ‏Camversity على حجم الجمهور وعدد ساعات البث وسلوك الإكراميات. يحقق المذيعون النشطون عادةً ما بين 200 و3,000 دولار شهريًا، بينما يصل كبار المؤدين إلى أكثر من 10,000 دولار. تخضع حصتك من الإيرادات لهيكل العمولات الخاص بـ ‏Camversity — راجع اتفاقية العارض قبل بدء البث المباشر."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "هل ‏Camversity آمن للمذيعين؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يشترط ‏Camversity التحقق من العمر والهوية قبل صرف الأرباح، وهو ما يحمي العارضين من الاحتيال. استخدم اسمًا فنيًا، ولا تشارك أبدًا أي بيانات شخصية أمام الكاميرا، وفعّل الحجب الجغرافي لإخفاء بثك عن منطقتك السكنية، وتعامل مع كل طلب من المشاهدين كمعاملة تجارية. كما يمكن لطبقات ‏SplitCam والخلفية الذكية ‏AI إخفاء محيطك الحقيقي أو استبداله."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ما المستندات التي أحتاجها لأصبح عارضًا على ‏Camversity؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يطلب ‏Camversity عادةً وثيقة هوية رسمية تحتوي على صورة (جواز سفر أو رخصة قيادة أو بطاقة هوية)، وصورة سيلفي وأنت تحمل الوثيقة، ونموذجًا ضريبيًا/لصرف الأرباح (‏W-9 للمقيمين في الولايات المتحدة و‏W-8BEN لغيرهم). تستغرق الموافقة عادةً بين 24 و72 ساعة، وبمجرد الموافقة يمكنك البث المباشر في اليوم نفسه."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "هل يمكنني البث على ‏Camversity من هاتفي؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يوفر ‏Camversity عادةً تطبيق بث للهاتف المحمول أو واجهة بث عبر متصفح الجوال، لكن التجربة محدودة — بلا طبقات، ولا كاميرا ثانية، ولا خلفية ذكية ‏AI. للحصول على جودة إنتاج كاملة، ابثّ من جهاز كمبيوتر باستخدام ‏SplitCam، واستخدم هاتفك ككاميرا ثانية (يقبل ‏SplitCam دخل كاميرا ‏IP من الهواتف)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "هل يدعم ‏Camversity ‏OBS أو أي مُرمِّز خارجي؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "نعم — يوفر ‏Camversity عنوان خادم ‏RTMP ومفتاح بث في لوحة المذيع. الصق كليهما في ‏Stream Settings → Custom RTMP داخل ‏SplitCam، واضبط الدقة على 1920×1080 بمعدل 30 إطارًا في الثانية ومعدل بت بين 4,000 و5,000 ‏Kbps، ثم انقر ‏Go Live. يمنحك مسار ‏Custom RTMP تركيبًا كاملاً للمشهد في ‏SplitCam (كاميرات متعددة، طبقات، فلاتر)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "بث Camversity لديك يتقطع أو يخزّن مؤقتاً",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث Camversity لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على Camversity</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى Camversity في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على Camversity</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>Camversity يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه Camversity وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على Camversity</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
-  <div class="faq-list"><details class="faq-item"><summary>هل Camversity يدعم المُشفِّرات الخارجية مثل SplitCam رسمياً؟</summary><p>نعم — Performer Dashboard يتضمن خيار External Encoder تحت Stream Settings. URL خادم RTMP قياسي وstream key؛ OBS وSplitCam وvMix كلها تتصل.</p></details><details class="faq-item"><summary>أين أحصل على stream key الخاص بـ Camversity؟</summary><p>Performer Dashboard → Stream Settings → External Encoder. كلا URL الخادم وstream key يظهران هناك.</p></details><details class="faq-item"><summary>ما معدل البت لـ Camversity؟</summary><p>ادفع 1920×1080 على 30 fps، بمعدل 3500–6000 Kbps مع فاصل keyframe بثانيتين. شغّل اختبار السرعة المدمج في SplitCam أولاً.</p></details><details class="faq-item"><summary>هل SplitCam مجاني للاستخدام مع Camversity؟</summary><p>نعم — SplitCam مجاني، بدون علامة مائية وبدون حد زمني. خيار External Encoder في Camversity مجاني.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>هل Camversity يدعم المُشفِّرات الخارجية مثل SplitCam رسمياً؟</summary><p>نعم — Performer Dashboard يتضمن خيار External Encoder تحت Stream Settings. URL خادم RTMP قياسي وstream key؛ OBS وSplitCam وvMix كلها تتصل.</p></details><details class="faq-item"><summary>أين أحصل على stream key الخاص بـ Camversity؟</summary><p>Performer Dashboard → Stream Settings → External Encoder. كلا URL الخادم وstream key يظهران هناك.</p></details><details class="faq-item"><summary>ما معدل البت لـ Camversity؟</summary><p>ادفع 1920×1080 على 30 fps، بمعدل 3500–6000 Kbps مع فاصل keyframe بثانيتين. شغّل اختبار السرعة المدمج في SplitCam أولاً.</p></details><details class="faq-item"><summary>هل SplitCam مجاني للاستخدام مع Camversity؟</summary><p>نعم — SplitCam مجاني، بدون علامة مائية وبدون حد زمني. خيار External Encoder في Camversity مجاني.</p></details><details class="faq-item"><summary>كم يمكن أن يكسب العارضون على ‏Camversity؟</summary><p>تعتمد الأرباح على ‏Camversity على حجم الجمهور وعدد ساعات البث وسلوك الإكراميات. يحقق المذيعون النشطون عادةً ما بين 200 و3,000 دولار شهريًا، بينما يصل كبار المؤدين إلى أكثر من 10,000 دولار. تخضع حصتك من الإيرادات لهيكل العمولات الخاص بـ ‏Camversity — راجع اتفاقية العارض قبل بدء البث المباشر.</p></details><details class="faq-item"><summary>هل ‏Camversity آمن للمذيعين؟</summary><p>يشترط ‏Camversity التحقق من العمر والهوية قبل صرف الأرباح، وهو ما يحمي العارضين من الاحتيال. استخدم اسمًا فنيًا، ولا تشارك أبدًا أي بيانات شخصية أمام الكاميرا، وفعّل الحجب الجغرافي لإخفاء بثك عن منطقتك السكنية، وتعامل مع كل طلب من المشاهدين كمعاملة تجارية. كما يمكن لطبقات ‏SplitCam والخلفية الذكية ‏AI إخفاء محيطك الحقيقي أو استبداله.</p></details><details class="faq-item"><summary>ما المستندات التي أحتاجها لأصبح عارضًا على ‏Camversity؟</summary><p>يطلب ‏Camversity عادةً وثيقة هوية رسمية تحتوي على صورة (جواز سفر أو رخصة قيادة أو بطاقة هوية)، وصورة سيلفي وأنت تحمل الوثيقة، ونموذجًا ضريبيًا/لصرف الأرباح (‏W-9 للمقيمين في الولايات المتحدة و‏W-8BEN لغيرهم). تستغرق الموافقة عادةً بين 24 و72 ساعة، وبمجرد الموافقة يمكنك البث المباشر في اليوم نفسه.</p></details><details class="faq-item"><summary>هل يمكنني البث على ‏Camversity من هاتفي؟</summary><p>يوفر ‏Camversity عادةً تطبيق بث للهاتف المحمول أو واجهة بث عبر متصفح الجوال، لكن التجربة محدودة — بلا طبقات، ولا كاميرا ثانية، ولا خلفية ذكية ‏AI. للحصول على جودة إنتاج كاملة، ابثّ من جهاز كمبيوتر باستخدام ‏SplitCam، واستخدم هاتفك ككاميرا ثانية (يقبل ‏SplitCam دخل كاميرا ‏IP من الهواتف).</p></details><details class="faq-item"><summary>هل يدعم ‏Camversity ‏OBS أو أي مُرمِّز خارجي؟</summary><p>نعم — يوفر ‏Camversity عنوان خادم ‏RTMP ومفتاح بث في لوحة المذيع. الصق كليهما في <strong>‏Stream Settings → Custom RTMP</strong> داخل ‏SplitCam، واضبط الدقة على 1920×1080 بمعدل 30 إطارًا في الثانية ومعدل بت بين 4,000 و5,000 ‏Kbps، ثم انقر <strong>‏Go Live</strong>. يمنحك مسار ‏Custom RTMP تركيبًا كاملاً للمشهد في ‏SplitCam (كاميرات متعددة، طبقات، فلاتر).</p></details></div>
 </section>
 
 <div class="section">

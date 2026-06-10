@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Mennyit kereshetnek a modellek a(z) Stripchat oldalon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A(z) Stripchat oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) Stripchat jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Biztonságos a(z) Stripchat a műsorszóróknak?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A(z) Stripchat a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) Stripchat oldalon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A(z) Stripchat általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Streamelhetek a(z) Stripchat oldalra a telefonomról?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A(z) Stripchat általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Támogatja a(z) Stripchat az OBS-t vagy külső enkódert?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Igen — a(z) Stripchat a broadcaster panelben megad egy RTMP szerver URL-t és egy stream kulcsot. Illeszd be mindkettőt a SplitCam Stream Settings → Custom RTMP menüjébe, állíts be 1920×1080-at 30 fps-en 4 000–5 000 Kbps bitrátával, majd kattints a Go Live gombra. A Custom RTMP útvonal teljes SplitCam jelenet-kompozíciót ad (több kamera, overlay, szűrők)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "A Stripchat streamed akadozik vagy pufferel",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Hibaelhárítás</h2><div class="faq-list"><details class="faq-item"><summary>A Stripchat streamed akadozik vagy pufferel</summary><p>Szinte mindig a bitráta magasabb, mint amit a feltöltésed elbír. Futtasd le a SplitCam beépített sebességtesztjét, majd állítsd a bitrátát a mért feltöltés kb. 75%-ára — 3500–6000&nbsp;Kbps 1080p-hez, kevesebb 720p-hez. Az akadozás megszűnik, amint az enkóder már nem előzi meg a kapcsolatodat.</p></details><details class="faq-item"><summary>Eldobott képkockák a Stripchat adás közben</summary><p>Az eldobott képkockák azt jelentik, hogy a csomagok nem érnek el időben a Stripchat platformhoz — általában instabil Wi-Fi. Válts vezetékes Ethernet kapcsolatra, zárd be a sávszélesség-zabáló appokat, és csökkentsd kicsit a bitrátát. Egy kiugrás rendben van; az állandó emelkedés azt jelenti, hogy a kapcsolat nem bírja.</p></details><details class="faq-item"><summary>Fekete képernyő — a nézők nem látnak videót a Stripchat platformon</summary><p>A kamerád nincs aktív forrásként kiválasztva a SplitCamben, vagy egy másik app foglalja. Zárd be a Zoomot, Skype-ot vagy OBS-t, válaszd ki újra a webkamerát a SplitCam forráslistájában, és ellenőrizd, hogy az előnézet mutatja a képet, mielőtt megnyomod a Go Live-ot.</p></details><details class="faq-item"><summary>A Stripchat elutasítja a stream kulcsot vagy nem csatlakozik</summary><p>Másold ki újra a stream kulcsot — egy záró szóköz vagy egy régi, már lecserélt kulcs a szokásos ok. Ellenőrizd, hogy a szerver URL megegyezik a Stripchat által mutatottal, és hogy a külső enkóderes adás engedélyezve van a fiókodon. Egy zöld csúszka a SplitCam Stream Settings menüjében érvényes kulcsot jelez.</p></details><details class="faq-item"><summary>Nincs hang vagy a hang nincs szinkronban a Stripchat platformon</summary><p>Válaszd a SplitCamet kameraként ÉS mikrofonként is, és állítsd be a valódi mikrofonodat a SplitCam audioforrásában. Ha a hang lemarad a videótól, csökkentsd a felbontást egy lépéssel — az enkóder túlterhelt, és a hang a késő képkockákra vár.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">GYIK</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Ajánlja a Stripchat az OBS-t / külső szoftvert?</summary><p>Igen — a Stripchat hivatalos FAQ-ja OBS-szerű külső broadcast szoftvert ajánl «a legjobb videó és hang minőség elérésére». A SplitCam ugyanúgy működik.</p></details><details class="faq-item"><summary>Hogyan váltok Stripchatet külső szoftverre?</summary><p>A Broadcast Centerben válaszd Switch to External Broadcast Software (OBS), majd nyisd meg az external software settings-et a stream key (token) felfedéséhez.</p></details><details class="faq-item"><summary>Milyen bitráta a Stripchathez?</summary><p>Az RTMP ingest ~6000 Kbps-ig fogad 2 másodperces keyframe-el. 3500–6000 1080p-n ideális — de jócskán a 2 Mbps minimum fölött kell lenned, főleg OBS streamhez.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a Stripchathez?</summary><p>Igen — nincs licencdíj, nincs vízjel, nincs időkorlát: még hosszú interaktív Stripchat showk sem kerülnek semmibe az enkóder oldaláról.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Ajánlja a Stripchat az OBS-t / külső szoftvert?</summary><p>Igen — a Stripchat hivatalos FAQ-ja OBS-szerű külső broadcast szoftvert ajánl «a legjobb videó és hang minőség elérésére». A SplitCam ugyanúgy működik.</p></details><details class="faq-item"><summary>Hogyan váltok Stripchatet külső szoftverre?</summary><p>A Broadcast Centerben válaszd Switch to External Broadcast Software (OBS), majd nyisd meg az external software settings-et a stream key (token) felfedéséhez.</p></details><details class="faq-item"><summary>Milyen bitráta a Stripchathez?</summary><p>Az RTMP ingest ~6000 Kbps-ig fogad 2 másodperces keyframe-el. 3500–6000 1080p-n ideális — de jócskán a 2 Mbps minimum fölött kell lenned, főleg OBS streamhez.</p></details><details class="faq-item"><summary>Ingyenes a SplitCam a Stripchathez?</summary><p>Igen — nincs licencdíj, nincs vízjel, nincs időkorlát: még hosszú interaktív Stripchat showk sem kerülnek semmibe az enkóder oldaláról.</p></details><details class="faq-item"><summary>Mennyit kereshetnek a modellek a(z) Stripchat oldalon?</summary><p>A(z) Stripchat oldalon a kereset a nézőszámtól, az adásban töltött óráktól és a borravalózási szokásoktól függ. Az aktív műsorszórók általában havi 200–3 000 dollárt visznek haza; a legjobbak elérik a 10 000 dollárt is. A részesedésed a(z) Stripchat jutalékstruktúráját követi — élő adás előtt nézd át a modellszerződést.</p></details><details class="faq-item"><summary>Biztonságos a(z) Stripchat a műsorszóróknak?</summary><p>A(z) Stripchat a kifizetés előtt életkor- és személyazonosság-igazolást kér, ami védi a modelleket a csalástól. Használj művésznevet, soha ne adj meg személyes adatot kamera előtt, kapcsold be a geo-blokkolást, hogy a lakóhelyed régiójában elrejtsd az adást, és minden nézői kérést kezelj tranzakcióként. A SplitCam overlay-jei és AI háttere szintén el tudják fedni vagy lecserélni a valódi környezetedet.</p></details><details class="faq-item"><summary>Milyen dokumentumok kellenek ahhoz, hogy modell legyek a(z) Stripchat oldalon?</summary><p>A(z) Stripchat általában hatósági fényképes igazolványt (útlevél, jogosítvány vagy személyi igazolvány), egy szelfit, amelyen az igazolványt tartod, valamint adó- és kifizetési űrlapot (W-9 az USA-ban, W-8BEN az USA-n kívül) kér. A jóváhagyás általában 24–72 órát vesz igénybe; az engedélyezés után még aznap élőben mehetsz.</p></details><details class="faq-item"><summary>Streamelhetek a(z) Stripchat oldalra a telefonomról?</summary><p>A(z) Stripchat általában kínál mobil broadcaster appot vagy mobil-webes broadcastert, de az élmény korlátozott — nincs overlay, nincs második kamera, nincs AI háttér. A teljes produkciós minőséghez számítógépről közvetíts SplitCammel, és használd a telefonod második kameraként (a SplitCam fogad IP-kamera bemenetet telefonokról).</p></details><details class="faq-item"><summary>Támogatja a(z) Stripchat az OBS-t vagy külső enkódert?</summary><p>Igen — a(z) Stripchat a broadcaster panelben megad egy RTMP szerver URL-t és egy stream kulcsot. Illeszd be mindkettőt a SplitCam <strong>Stream Settings → Custom RTMP</strong> menüjébe, állíts be 1920×1080-at 30 fps-en 4 000–5 000 Kbps bitrátával, majd kattints a <strong>Go Live</strong> gombra. A Custom RTMP útvonal teljes SplitCam jelenet-kompozíciót ad (több kamera, overlay, szűrők).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Hivatalos támogatás — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Független útmutató vagyunk. Fiók-, fizetési vagy technikai problémák esetén lépj kapcsolatba közvetlenül a platform hivatalos támogatásával.</p></section>
 <div class="section">

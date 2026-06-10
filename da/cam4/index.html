@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på CAM4?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på CAM4 afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger CAM4s kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er CAM4 sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CAM4 kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på CAM4?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CAM4 kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på CAM4 fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CAM4 tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Understøtter CAM4 OBS eller en ekstern encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — CAM4 leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams Stream Settings → Custom RTMP, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik Go Live. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit CAM4-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit CAM4-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under CAM4-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til CAM4 i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på CAM4</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>CAM4 afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, CAM4 viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på CAM4</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Understøtter CAM4 OBS / eksterne encodere officielt?</summary><p>Ja — CAM4 har en officiel OBS Guide på support-sitet og anbefaler External Encoder til den bedste oplevelse. SplitCam bruger samme RTMP-rute.</p></details><details class="faq-item"><summary>Kan jeg geo-blokere min CAM4-stream?</summary><p>Ja — CAM4 har indbygget geo-begrænsning til at skjule udsendelsen i visse lande. Indstil på CAM4, ikke i SplitCam.</p></details><details class="faq-item"><summary>Hvor er CAM4&#x27;s stream key?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>Hvilken bitrate til CAM4?</summary><p>Lavere end gennemsnittet — CAM4's ingest begrænser ved ~3.000 Kbps ved 30 fps med 1-sekunds keyframe. Den officielle tabel anbefaler ikke at overskride ~3.000.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Understøtter CAM4 OBS / eksterne encodere officielt?</summary><p>Ja — CAM4 har en officiel OBS Guide på support-sitet og anbefaler External Encoder til den bedste oplevelse. SplitCam bruger samme RTMP-rute.</p></details><details class="faq-item"><summary>Kan jeg geo-blokere min CAM4-stream?</summary><p>Ja — CAM4 har indbygget geo-begrænsning til at skjule udsendelsen i visse lande. Indstil på CAM4, ikke i SplitCam.</p></details><details class="faq-item"><summary>Hvor er CAM4&#x27;s stream key?</summary><p>Broadcast → Broadcast & Earn Money → Start Broadcast → External Encoder → Get Stream Key.</p></details><details class="faq-item"><summary>Hvilken bitrate til CAM4?</summary><p>Lavere end gennemsnittet — CAM4's ingest begrænser ved ~3.000 Kbps ved 30 fps med 1-sekunds keyframe. Den officielle tabel anbefaler ikke at overskride ~3.000.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på CAM4?</summary><p>Indtjeningen på CAM4 afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger CAM4s kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er CAM4 sikkert for broadcastere?</summary><p>CAM4 kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på CAM4?</summary><p>CAM4 kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på CAM4 fra min telefon?</summary><p>CAM4 tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Understøtter CAM4 OBS eller en ekstern encoder?</summary><p>Ja — CAM4 leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams <strong>Stream Settings → Custom RTMP</strong>, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik <strong>Go Live</strong>. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiel support — CAM4</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@cam4.biz">support@cam4.biz</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.cam4support.com/" rel="nofollow noopener" target="_blank">https://www.cam4support.com/</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
 <div class="section">

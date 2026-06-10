@@ -15,6 +15,27 @@ from pathlib import Path
 from obs_content import OBS_VS
 from model_content import MODEL_GUIDE, EARNINGS_FAQ
 
+# Extra FAQ templates per language. Loaded lazily in main(); see faq_<lang>.py.
+FAQ_EXTRA: dict = {}
+
+
+def extra_faqs(name: str, method: str, lang: str):
+    """Return the 4–5 extra (q, a) FAQ tuples for the given platform/method/language.
+
+    The 4 common questions (earnings, safety, signup, mobile) plus one method-specific
+    question — RTMP for `stream` platforms, virtual-camera for `vcam`. Falls back to the
+    English template if a language hasn't been localized yet.
+    """
+    tpl = FAQ_EXTRA.get(lang) or FAQ_EXTRA.get("en") or {}
+    out = []
+    for q, a in tpl.get("common", []):
+        out.append((q.format(name=name), a.format(name=name)))
+    spec = tpl.get(method)
+    if spec:
+        q, a = spec
+        out.append((q.format(name=name), a.format(name=name)))
+    return out
+
 ROOT = Path(__file__).parent
 OBS_SLUG = "obs-alternative"
 MODEL_SLUG = "become-a-cam-model"
@@ -1785,9 +1806,12 @@ def render(p, lang, all_platforms):
         f'<div class="tip-card"><h3>{e(t[0])}</h3><p>{t[1]}</p></div>'
         for t in d["tips"])
 
+    # Original platform-specific FAQ (4 entries) + 5 universal FAQ entries
+    # (earnings / safety / signup / mobile / method-specific) from FAQ_EXTRA.
+    all_faq = list(d["faq"]) + extra_faqs(name, METHOD.get(p["slug"], ""), lang)
     faq_html = "".join(
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
-        for q, a in d["faq"])
+        for q, a in all_faq)
 
     support_html = render_support(p["slug"], name, lang)
     trouble_html = render_trouble(p["slug"], name, lang)
@@ -1816,7 +1840,7 @@ def render(p, lang, all_platforms):
             {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
                 {"@type": "Question", "name": q,
                  "acceptedAnswer": {"@type": "Answer", "text": html.unescape(_strip(a))}}
-                for q, a in d["faq"]] + [
+                for q, a in all_faq] + [
                 {"@type": "Question", "name": prob.replace("{name}", name),
                  "acceptedAnswer": {"@type": "Answer",
                                     "text": html.unescape(_strip(sol.replace("{name}", name)))}}
@@ -3440,7 +3464,7 @@ def render_hub(platforms, lang):
 
 
 def main():
-    global LANGS_AVAIL
+    global LANGS_AVAIL, FAQ_EXTRA
     from platforms_en import PLATFORMS_EN
     langs_data = {"en": PLATFORMS_EN}
     # Walk LANG_POPULARITY (skipping en, already loaded) so the in-memory order
@@ -3454,6 +3478,16 @@ def main():
         except ImportError:
             pass
     LANGS_AVAIL = list(langs_data.keys())
+
+    # Load FAQ_EXTRA templates per language (faq_<lang>.py — same shape as faq_en.py).
+    # Each file exposes FAQ_EXTRA_<LANG> with keys "common" / "stream" / "vcam".
+    # Missing files fall back to English in extra_faqs().
+    for code in LANGS_AVAIL:
+        try:
+            mod = __import__(f"faq_{code}", fromlist=[f"FAQ_EXTRA_{code.upper()}"])
+            FAQ_EXTRA[code] = getattr(mod, f"FAQ_EXTRA_{code.upper()}")
+        except ImportError:
+            pass
 
     # merge into one list of platform dicts keyed by lang
     by_slug = {}

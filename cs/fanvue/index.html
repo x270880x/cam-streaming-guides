@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Kolik si modelky můžou na Fanvue vydělat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Výdělky na Fanvue závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou Fanvue — před prvním vysíláním si projdi model agreement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je Fanvue pro vysílající bezpečná?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Jaké dokumenty potřebuju, abych se na Fanvue stala modelkou?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Můžu na Fanvue vysílat z mobilu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Můžu SplitCam použít jako virtuální kameru na Fanvue?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ano — live na Fanvue běží v prohlížeči, takže SplitCam se zaregistruje jako webkamera s názvem \"SplitCam Video Driver\". Otevři broadcaster Fanvue, klikni v prohlížeči na výběr kamery a zvol SplitCam. Tvoje složená scéna (overlaye, druhá kamera, filtry, AI pozadí) dorazí divákům jako jeden webkamerový stream."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Vysílání Fanvue se seká nebo bufferuje",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Řešení problémů</h2><div class="faq-list"><details class="faq-item"><summary>Vysílání Fanvue se seká nebo bufferuje</summary><p>Téměř vždy je bitrate nastavený výš, než unese váš upload. Spusťte vestavěný test rychlosti SplitCam, poté nastavte bitrate na zhruba 75 % naměřeného uploadu — 3500–6000&nbsp;Kbps pro 1080p, méně pro 720p. Sekání zmizí, jakmile kodér přestane překračovat vaši linku.</p></details><details class="faq-item"><summary>Ztráta snímků během vysílání Fanvue</summary><p>Ztráta snímků znamená, že pakety nedorazí na Fanvue včas — obvykle nestabilní Wi-Fi. Přejděte na drátový Ethernet, zavřete aplikace požírající pásmo a mírně snižte bitrate. Jeden výkyv nevadí; trvalý nárůst znamená, že linka nestíhá.</p></details><details class="faq-item"><summary>Černá obrazovka — diváci nevidí video na Fanvue</summary><p>Vaše kamera není vybraná jako aktivní zdroj ve SplitCam, nebo ji drží jiná aplikace. Zavřete Zoom, Skype nebo OBS, vyberte webkameru znovu v seznamu zdrojů SplitCam a ujistěte se, že náhled ukazuje váš obraz, než stisknete Go Live.</p></details><details class="faq-item"><summary>Fanvue odmítá stream key nebo se nepřipojuje</summary><p>Zkopírujte stream key znovu — mezera na konci nebo starý, resetovaný klíč jsou nejčastější příčiny. Ujistěte se, že URL serveru odpovídá tomu, co Fanvue zobrazuje, a že vysílání externím kodérem je na účtu zapnuté. Zelený posuvník v Stream Settings SplitCam potvrzuje platný klíč.</p></details><details class="faq-item"><summary>Žádný zvuk nebo zvuk nesynchronní na Fanvue</summary><p>Vyberte SplitCam jako kameru I mikrofon a ve zdroji zvuku SplitCam vyberte svůj skutečný mikrofon. Pokud zvuk zaostává za videem, snižte rozlišení o úroveň — kodér je přetížený a zvuk čeká na opožděné snímky.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Časté dotazy</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Jak se SplitCam připojí k Fanvue?</summary><p>Živé vysílání Fanvue běží v prohlížeči, takže se SplitCam připojí jako virtuální kamera: vyberte SplitCam ve výběru kamery. Žádný stream key není potřeba.</p></details><details class="faq-item"><summary>Můžu na Fanvue používat překryvy a více kamer?</summary><p>Ano — sestavte scénu ve SplitCam (druhá kamera, překryvy, beauty filtry nebo AI pozadí) a Fanvue vidí hotovou scénu jako jednu webkameru.</p></details><details class="faq-item"><summary>Podporuje Fanvue OBS nebo externí kodéry?</summary><p>Živé vysílání Fanvue je primárně prohlížečové / přes webkameru. Pokud váš dashboard zobrazuje možnost externího kodéru nebo stream key, vložte ho do vlastních RTMP polí ve SplitCam; jinak použijte metodu virtuální kamery.</p></details><details class="faq-item"><summary>Je SplitCam zdarma pro Fanvue?</summary><p>Ano — SplitCam je zdarma, bez vodoznaku a bez časového limitu.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Jak se SplitCam připojí k Fanvue?</summary><p>Živé vysílání Fanvue běží v prohlížeči, takže se SplitCam připojí jako virtuální kamera: vyberte SplitCam ve výběru kamery. Žádný stream key není potřeba.</p></details><details class="faq-item"><summary>Můžu na Fanvue používat překryvy a více kamer?</summary><p>Ano — sestavte scénu ve SplitCam (druhá kamera, překryvy, beauty filtry nebo AI pozadí) a Fanvue vidí hotovou scénu jako jednu webkameru.</p></details><details class="faq-item"><summary>Podporuje Fanvue OBS nebo externí kodéry?</summary><p>Živé vysílání Fanvue je primárně prohlížečové / přes webkameru. Pokud váš dashboard zobrazuje možnost externího kodéru nebo stream key, vložte ho do vlastních RTMP polí ve SplitCam; jinak použijte metodu virtuální kamery.</p></details><details class="faq-item"><summary>Je SplitCam zdarma pro Fanvue?</summary><p>Ano — SplitCam je zdarma, bez vodoznaku a bez časového limitu.</p></details><details class="faq-item"><summary>Kolik si modelky můžou na Fanvue vydělat?</summary><p>Výdělky na Fanvue závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou Fanvue — před prvním vysíláním si projdi model agreement.</p></details><details class="faq-item"><summary>Je Fanvue pro vysílající bezpečná?</summary><p>Fanvue před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit.</p></details><details class="faq-item"><summary>Jaké dokumenty potřebuju, abych se na Fanvue stala modelkou?</summary><p>Fanvue obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den.</p></details><details class="faq-item"><summary>Můžu na Fanvue vysílat z mobilu?</summary><p>Fanvue většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů).</p></details><details class="faq-item"><summary>Můžu SplitCam použít jako virtuální kameru na Fanvue?</summary><p>Ano — live na Fanvue běží v prohlížeči, takže SplitCam se zaregistruje jako webkamera s názvem <strong>"SplitCam Video Driver"</strong>. Otevři broadcaster Fanvue, klikni v prohlížeči na výběr kamery a zvol SplitCam. Tvoje složená scéna (overlaye, druhá kamera, filtry, AI pozadí) dorazí divákům jako jeden webkamerový stream.</p></details></div>
 </section>
 
 <div class="section">

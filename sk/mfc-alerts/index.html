@@ -169,6 +169,38 @@
     },
     {
      "@type": "Question",
+     "name": "Koľko môžu modelky zarobiť na MFC Alerts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zárobky na MFC Alerts závisia od veľkosti publika, odvysielaných hodín a štedrosti divákov v tipoch. Aktívni vysielatelia si bežne odnesú 200 – 3 000 $ mesačne; špička dosahuje 10 000 $ a viac. Tvoj podiel z tržieb sa riadi províznou štruktúrou MFC Alerts — pred prvým live si prečítaj zmluvu pre modelky."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je MFC Alerts bezpečná platforma pre vysielateľky?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MFC Alerts pred vyplatením vyžaduje overenie veku a totožnosti, čo modelky chráni pred podvodmi. Používaj umelecké meno, na kamere nikdy nezdieľaj osobné údaje, zapni geo-blokovanie, aby tvoj stream nevideli ľudia z tvojho regiónu, a každú požiadavku diváka ber ako transakciu. Overlaye a AI pozadie v SplitCame navyše dokážu skryť alebo nahradiť skutočné okolie."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Aké doklady potrebujem, aby som sa stala modelkou na MFC Alerts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MFC Alerts typicky vyžaduje štátom vydaný doklad s fotkou (pas, vodičský preukaz alebo občiansky preukaz), selfie s dokladom v ruke a daňový/výplatný formulár (W-9 pre USA, W-8BEN pre ostatné krajiny). Schválenie zvyčajne trvá 24 – 72 hodín; po schválení môžeš ísť live ešte v ten istý deň."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Môžem vysielať na MFC Alerts z mobilu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MFC Alerts obvykle ponúka mobilnú aplikáciu pre vysielateľov alebo mobilné webové rozhranie, no zážitok je obmedzený — žiadne overlaye, žiadna druhá kamera, žiadne AI pozadie. Pre plnú produkčnú kvalitu vysielaj z počítača cez SplitCam a telefón využi ako druhú kameru (SplitCam prijíma vstup IP kamery z telefónu)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Vysielanie MFC Alerts sa seká alebo bufferuje",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +537,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Riešenie problémov</h2><div class="faq-list"><details class="faq-item"><summary>Vysielanie MFC Alerts sa seká alebo bufferuje</summary><p>Takmer vždy je bitrate nastavený vyššie, než unesie váš upload. Spustite vstavaný test rýchlosti SplitCam, potom nastavte bitrate na zhruba 75 % nameraného uploadu — 3500–6000&nbsp;Kbps pre 1080p, menej pre 720p. Sekanie zmizne, keď kodér prestane prekračovať vašu linku.</p></details><details class="faq-item"><summary>Strata snímok počas vysielania MFC Alerts</summary><p>Strata snímok znamená, že pakety nedôjdu na MFC Alerts včas — zvyčajne nestabilné Wi-Fi. Prejdite na drôtový Ethernet, zatvorte aplikácie požierajúce pásmo a mierne znížte bitrate. Jeden výkyv nevadí; trvalý nárast znamená, že linka nestíha.</p></details><details class="faq-item"><summary>Čierna obrazovka — diváci nevidia video na MFC Alerts</summary><p>Vaša kamera nie je vybraná ako aktívny zdroj v SplitCam, alebo ju drží iná aplikácia. Zatvorte Zoom, Skype alebo OBS, vyberte webkameru znovu v zozname zdrojov SplitCam a uistite sa, že náhľad ukazuje váš obraz, skôr než stlačíte Go Live.</p></details><details class="faq-item"><summary>MFC Alerts odmieta stream key alebo sa nepripája</summary><p>Skopírujte stream key znovu — medzera na konci alebo starý, resetovaný kľúč sú najčastejšie príčiny. Uistite sa, že URL servera zodpovedá tomu, čo MFC Alerts zobrazuje, a že vysielanie externým kodérom je na účte zapnuté. Zelený posuvník v Stream Settings SplitCam potvrdzuje platný kľúč.</p></details><details class="faq-item"><summary>Žiadny zvuk alebo zvuk nesynchronný na MFC Alerts</summary><p>Vyberte SplitCam ako kameru AJ mikrofón a v zdroji zvuku SplitCam vyberte svoj skutočný mikrofón. Ak zvuk zaostáva za videom, znížte rozlíšenie o úroveň — kodér je preťažený a zvuk čaká na oneskorené snímky.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Časté otázky</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Čo je MFC Alerts?</summary><p>Systém upozornení pre MyFreeCams, ktorý zobrazuje video efekty vo vašom vysielaní, keď diváci posielajú tipy — pridáva sa ako prekrytie Browser v SplitCam.</p></details><details class="faq-item"><summary>Prečo sa moje MFC Alerts nezobrazujú?</summary><p>Takmer vždy je to poradie vrstiev — vrstva Browser MFC Alerts musí byť nad webkamerou v zozname zdrojov SplitCam.</p></details><details class="faq-item"><summary>Potrebujem účet pre MFC Alerts?</summary><p>Áno — zaregistrujte sa na mfcalerts.com, aby ste získali svoju súkromnú URL upozornení.</p></details><details class="faq-item"><summary>Je SplitCam zadarmo pre toto?</summary><p>Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu, a prehliadačové prekrytie MFC Alerts v ňom beží bez ďalších nákladov.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Čo je MFC Alerts?</summary><p>Systém upozornení pre MyFreeCams, ktorý zobrazuje video efekty vo vašom vysielaní, keď diváci posielajú tipy — pridáva sa ako prekrytie Browser v SplitCam.</p></details><details class="faq-item"><summary>Prečo sa moje MFC Alerts nezobrazujú?</summary><p>Takmer vždy je to poradie vrstiev — vrstva Browser MFC Alerts musí byť nad webkamerou v zozname zdrojov SplitCam.</p></details><details class="faq-item"><summary>Potrebujem účet pre MFC Alerts?</summary><p>Áno — zaregistrujte sa na mfcalerts.com, aby ste získali svoju súkromnú URL upozornení.</p></details><details class="faq-item"><summary>Je SplitCam zadarmo pre toto?</summary><p>Áno — SplitCam je zadarmo, bez vodoznaku a bez časového limitu, a prehliadačové prekrytie MFC Alerts v ňom beží bez ďalších nákladov.</p></details><details class="faq-item"><summary>Koľko môžu modelky zarobiť na MFC Alerts?</summary><p>Zárobky na MFC Alerts závisia od veľkosti publika, odvysielaných hodín a štedrosti divákov v tipoch. Aktívni vysielatelia si bežne odnesú 200 – 3 000 $ mesačne; špička dosahuje 10 000 $ a viac. Tvoj podiel z tržieb sa riadi províznou štruktúrou MFC Alerts — pred prvým live si prečítaj zmluvu pre modelky.</p></details><details class="faq-item"><summary>Je MFC Alerts bezpečná platforma pre vysielateľky?</summary><p>MFC Alerts pred vyplatením vyžaduje overenie veku a totožnosti, čo modelky chráni pred podvodmi. Používaj umelecké meno, na kamere nikdy nezdieľaj osobné údaje, zapni geo-blokovanie, aby tvoj stream nevideli ľudia z tvojho regiónu, a každú požiadavku diváka ber ako transakciu. Overlaye a AI pozadie v SplitCame navyše dokážu skryť alebo nahradiť skutočné okolie.</p></details><details class="faq-item"><summary>Aké doklady potrebujem, aby som sa stala modelkou na MFC Alerts?</summary><p>MFC Alerts typicky vyžaduje štátom vydaný doklad s fotkou (pas, vodičský preukaz alebo občiansky preukaz), selfie s dokladom v ruke a daňový/výplatný formulár (W-9 pre USA, W-8BEN pre ostatné krajiny). Schválenie zvyčajne trvá 24 – 72 hodín; po schválení môžeš ísť live ešte v ten istý deň.</p></details><details class="faq-item"><summary>Môžem vysielať na MFC Alerts z mobilu?</summary><p>MFC Alerts obvykle ponúka mobilnú aplikáciu pre vysielateľov alebo mobilné webové rozhranie, no zážitok je obmedzený — žiadne overlaye, žiadna druhá kamera, žiadne AI pozadie. Pre plnú produkčnú kvalitu vysielaj z počítača cez SplitCam a telefón využi ako druhú kameru (SplitCam prijíma vstup IP kamery z telefónu).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Oficiálna podpora — MFC Alerts</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:mfcalerts@myfreecamsmail.com">mfcalerts@myfreecamsmail.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://mfcalerts.com/" rel="nofollow noopener" target="_blank">https://mfcalerts.com/</a></li></ul><p class="sp-note">Sme nezávislý sprievodca. S problémami s účtom, platbami alebo technikou sa obráťte priamo na oficiálnu podporu platformy.</p></section>
 <div class="section">

@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Magkano ang kita ng mga model sa MyFreeCams?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang kita sa MyFreeCams ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng MyFreeCams — tingnan ang model agreement bago mag-live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ligtas ba ang MyFreeCams para sa mga broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nangangailangan ang MyFreeCams ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Anong mga dokumento ang kailangan ko para maging model sa MyFreeCams?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Karaniwang nangangailangan ang MyFreeCams ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Maaari ba akong mag-stream sa MyFreeCams mula sa aking telepono?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Karaniwang nag-aalok ang MyFreeCams ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sinusuportahan ba ng MyFreeCams ang OBS o panlabas na encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oo — nagbibigay ang MyFreeCams ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa Stream Settings → Custom RTMP ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang Go Live. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Ang MyFreeCams stream mo ay nag-lalag o nag-bubuffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Pag-troubleshoot</h2><div class="faq-list"><details class="faq-item"><summary>Ang MyFreeCams stream mo ay nag-lalag o nag-bubuffer</summary><p>Halos palaging mas mataas ang bitrate kaysa kaya ng upload mo. Patakbuhin ang built-in speed test ng SplitCam, tapos i-set ang bitrate sa mga 75% ng nasukat mong upload — 3,500–6,000&nbsp;Kbps para sa 1080p, mas mababa para sa 720p. Nawawala ang lag kapag tumigil na ang encoder sa pag-unahan sa koneksyon mo.</p></details><details class="faq-item"><summary>Dropped frames habang nag-bo-broadcast sa MyFreeCams</summary><p>Ang dropped frames ay nangangahulugang hindi umaabot ang mga packet sa MyFreeCams sa tamang oras — kadalasan ay hindi stable na Wi-Fi. Lumipat sa wired Ethernet connection, isara ang mga app na kumakain ng bandwidth, at bahagyang ibaba ang bitrate. Ok lang ang isang spike; ang tuloy-tuloy na pagtaas ay nangangahulugang hindi kaya ng koneksyon.</p></details><details class="faq-item"><summary>Black screen — walang nakikitang video ang viewers sa MyFreeCams</summary><p>Hindi napili ang camera mo bilang active source sa SplitCam, o may ibang app na humahawak dito. Isara ang Zoom, Skype o OBS, piliin muli ang webcam sa source list ng SplitCam, at tiyakin na ipinapakita ng preview ang feed mo bago pindutin ang Go Live.</p></details><details class="faq-item"><summary>Tinatanggihan ng MyFreeCams ang stream key o ayaw kumonekta</summary><p>Kopyahin muli ang stream key — ang trailing space o luma nang key na na-rotate na ang karaniwang dahilan. Tiyakin na tumutugma ang server URL sa ipinapakita ng MyFreeCams at na naka-enable ang external-encoder broadcasting sa account mo. Isang green slider sa Stream Settings ng SplitCam ang nagkukumpirma ng valid na key.</p></details><details class="faq-item"><summary>Walang audio o hindi sync ang audio sa MyFreeCams</summary><p>Piliin ang SplitCam bilang camera AT microphone, at piliin ang totoong mic mo sa loob ng audio source ng SplitCam. Kung nahuhuli ang audio sa video, ibaba ang resolution ng isang hakbang — overloaded ang encoder at naghihintay ang audio sa mga late frame.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng MFC ang external encoders tulad ng SplitCam?</summary><p>Oo — sa pamamagitan ng External Broadcaster sa Model Admin. Opisyal na gumagana ang standard RTMP broadcast sa OBS, SplitCam, at vMix; piliin lang ang External Broadcaster (sa halip na Web Broadcaster) sa Model Admin → Broadcaster.</p></details><details class="faq-item"><summary>Saan ko kukunin ang MFC stream key ko?</summary><p>Sa loob ng Model Admin → Broadcaster → External Broadcaster. Ipinapakita ng pahina ang server URL na nakaturo sa <strong>publish.myfreecams.com</strong> at stream key na nakatali sa model account — i-paste pareho sa custom RTMP fields ng SplitCam.</p></details><details class="faq-item"><summary>Anong bitrate para sa MFC?</summary><p>Sinusuportahan ng MFC ang hanggang ~6,000 Kbps na may 2-second keyframe push. Itutok sa 1920×1080 sa 30 fps, 3,500–6,000 Kbps — panatilihin ito sa pinakamataas na kayang i-handle ng koneksyon mo; sensitibo sa HD quality ang Premium base.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa MFC?</summary><p>Oo — libre ang SplitCam, walang watermark, walang time limit. Pwede mong ipadala ang multi-camera, beauty filters, at MFC Alerts overlay sa MFC sa pamamagitan ng External Broadcaster path.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Sinusuportahan ba ng MFC ang external encoders tulad ng SplitCam?</summary><p>Oo — sa pamamagitan ng External Broadcaster sa Model Admin. Opisyal na gumagana ang standard RTMP broadcast sa OBS, SplitCam, at vMix; piliin lang ang External Broadcaster (sa halip na Web Broadcaster) sa Model Admin → Broadcaster.</p></details><details class="faq-item"><summary>Saan ko kukunin ang MFC stream key ko?</summary><p>Sa loob ng Model Admin → Broadcaster → External Broadcaster. Ipinapakita ng pahina ang server URL na nakaturo sa <strong>publish.myfreecams.com</strong> at stream key na nakatali sa model account — i-paste pareho sa custom RTMP fields ng SplitCam.</p></details><details class="faq-item"><summary>Anong bitrate para sa MFC?</summary><p>Sinusuportahan ng MFC ang hanggang ~6,000 Kbps na may 2-second keyframe push. Itutok sa 1920×1080 sa 30 fps, 3,500–6,000 Kbps — panatilihin ito sa pinakamataas na kayang i-handle ng koneksyon mo; sensitibo sa HD quality ang Premium base.</p></details><details class="faq-item"><summary>Libre ba ang SplitCam para sa MFC?</summary><p>Oo — libre ang SplitCam, walang watermark, walang time limit. Pwede mong ipadala ang multi-camera, beauty filters, at MFC Alerts overlay sa MFC sa pamamagitan ng External Broadcaster path.</p></details><details class="faq-item"><summary>Magkano ang kita ng mga model sa MyFreeCams?</summary><p>Ang kita sa MyFreeCams ay nakadepende sa laki ng audience, oras ng pag-stream at pag-uugali sa pagbibigay ng tip. Ang aktibong broadcaster ay karaniwang kumikita ng $200–$3,000 kada buwan; ang mga top performer ay umaabot sa $10,000+. Sumusunod ang iyong revenue share sa istruktura ng komisyon ng MyFreeCams — tingnan ang model agreement bago mag-live.</p></details><details class="faq-item"><summary>Ligtas ba ang MyFreeCams para sa mga broadcaster?</summary><p>Nangangailangan ang MyFreeCams ng age at ID verification bago ang payout, na nagpoprotekta sa mga model laban sa fraud. Gumamit ng stage name, huwag kailanman ibahagi ang personal na datos sa camera, i-enable ang geo-blocks para itago ang iyong stream mula sa iyong home region, at ituring na transactional ang bawat kahilingan ng viewer. Maaari ring itago o palitan ng overlays at AI background ng SplitCam ang iyong tunay na paligid.</p></details><details class="faq-item"><summary>Anong mga dokumento ang kailangan ko para maging model sa MyFreeCams?</summary><p>Karaniwang nangangailangan ang MyFreeCams ng government-issued photo ID (pasaporte, lisensya sa pagmamaneho o ID card), selfie habang hawak ang ID, at tax/payout form (W-9 para sa US, W-8BEN para sa hindi US). Karaniwang tumatagal ang approval ng 24–72 oras; kapag naaprubahan ay maaari kang mag-live sa parehong araw.</p></details><details class="faq-item"><summary>Maaari ba akong mag-stream sa MyFreeCams mula sa aking telepono?</summary><p>Karaniwang nag-aalok ang MyFreeCams ng mobile broadcaster app o mobile-web broadcaster, ngunit limitado ang karanasan — walang overlays, walang second camera, walang AI background. Para sa buong production quality, mag-broadcast mula sa computer gamit ang SplitCam at gamitin ang iyong telepono bilang second camera (tinatanggap ng SplitCam ang IP-camera input mula sa mga telepono).</p></details><details class="faq-item"><summary>Sinusuportahan ba ng MyFreeCams ang OBS o panlabas na encoder?</summary><p>Oo — nagbibigay ang MyFreeCams ng RTMP server URL at stream key sa broadcaster panel. I-paste ang dalawa sa <strong>Stream Settings → Custom RTMP</strong> ng SplitCam, itakda sa 1920×1080 sa 30 fps na may 4,000–5,000 Kbps bitrate, at i-click ang <strong>Go Live</strong>. Ang Custom RTMP route ay nagbibigay sa iyo ng buong SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 
 <div class="section">

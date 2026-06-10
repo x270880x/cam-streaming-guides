@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Cât pot câștiga modelele pe JustForFans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Câștigurile pe JustForFans depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a JustForFans — verifică acordul de model înainte să intri live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Este JustForFans sigur pentru broadcasteri?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JustForFans cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ce documente îmi trebuie ca să devin model pe JustForFans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JustForFans cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pot să dau stream pe JustForFans de pe telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JustForFans oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pot folosi SplitCam ca o cameră virtuală pe JustForFans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Da — live-ul de pe JustForFans rulează în browser, așa că SplitCam se înregistrează ca o cameră web numită \"SplitCam Video Driver\". Deschide broadcaster-ul JustForFans, dă click pe selectorul de cameră din browser și alege SplitCam. Scena ta compusă (overlay-uri, a doua cameră, filtre, fundal AI) ajunge la viewer-i ca un singur feed de cameră web."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Stream-ul tău pe JustForFans are lag sau se blochează la buffering",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe JustForFans are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe JustForFans</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la JustForFans la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe JustForFans</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>JustForFans respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de JustForFans și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe JustForFans</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Întrebări frecvente</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Cum se conectează SplitCam la JustForFans?</summary><p>Live-ul JFF e în browser, deci SplitCam se conectează ca o cameră virtuală: alegi SplitCam în selectorul de cameră al broadcasterului JFF. Nu e nevoie de stream key.</p></details><details class="faq-item"><summary>Pot folosi overlay-uri și mai multe camere pe JFF?</summary><p>Da — construiești scena în SplitCam (a doua cameră, overlay-uri, filtre de beauty sau fundal AI), iar JFF vede scena finită ca o singură webcam.</p></details><details class="faq-item"><summary>JustForFans suportă OBS sau encodere externe?</summary><p>Live-ul JFF e în primul rând bazat pe browser / webcam. Dacă în Creator Dashboard apare o opțiune de external encoder sau stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru JustForFans?</summary><p>Da — SplitCam e gratuit, fără filigran și fără limită de timp.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Cum se conectează SplitCam la JustForFans?</summary><p>Live-ul JFF e în browser, deci SplitCam se conectează ca o cameră virtuală: alegi SplitCam în selectorul de cameră al broadcasterului JFF. Nu e nevoie de stream key.</p></details><details class="faq-item"><summary>Pot folosi overlay-uri și mai multe camere pe JFF?</summary><p>Da — construiești scena în SplitCam (a doua cameră, overlay-uri, filtre de beauty sau fundal AI), iar JFF vede scena finită ca o singură webcam.</p></details><details class="faq-item"><summary>JustForFans suportă OBS sau encodere externe?</summary><p>Live-ul JFF e în primul rând bazat pe browser / webcam. Dacă în Creator Dashboard apare o opțiune de external encoder sau stream key, o lipești în câmpurile RTMP custom ale SplitCam; altfel folosești metoda cu camera virtuală.</p></details><details class="faq-item"><summary>SplitCam e gratuit pentru JustForFans?</summary><p>Da — SplitCam e gratuit, fără filigran și fără limită de timp.</p></details><details class="faq-item"><summary>Cât pot câștiga modelele pe JustForFans?</summary><p>Câștigurile pe JustForFans depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a JustForFans — verifică acordul de model înainte să intri live.</p></details><details class="faq-item"><summary>Este JustForFans sigur pentru broadcasteri?</summary><p>JustForFans cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real.</p></details><details class="faq-item"><summary>Ce documente îmi trebuie ca să devin model pe JustForFans?</summary><p>JustForFans cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi.</p></details><details class="faq-item"><summary>Pot să dau stream pe JustForFans de pe telefon?</summary><p>JustForFans oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane).</p></details><details class="faq-item"><summary>Pot folosi SplitCam ca o cameră virtuală pe JustForFans?</summary><p>Da — live-ul de pe JustForFans rulează în browser, așa că SplitCam se înregistrează ca o cameră web numită <strong>"SplitCam Video Driver"</strong>. Deschide broadcaster-ul JustForFans, dă click pe selectorul de cameră din browser și alege SplitCam. Scena ta compusă (overlay-uri, a doua cameră, filtre, fundal AI) ajunge la viewer-i ca un singur feed de cameră web.</p></details></div>
 </section>
 
 <div class="section">

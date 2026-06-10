@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "SkyPrivate üzerinde modeller ne kadar kazanabilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız SkyPrivate komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SkyPrivate yayıncılar için güvenli mi?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SkyPrivate üzerinde model olmak için hangi belgeler gerekli?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SkyPrivate üzerinde telefonumdan yayın yapabilir miyim?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SplitCam'i SkyPrivate üzerinde sanal kamera olarak kullanabilir miyim?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Evet — SkyPrivate'in canlı yayını tarayıcıda çalışır, bu yüzden SplitCam \"SplitCam Video Driver\" adlı bir webcam olarak kaydedilir. SkyPrivate yayıncı arayüzünü açın, tarayıcıdaki kamera seçiciye tıklayın ve SplitCam'i seçin. Oluşturduğunuz sahne (overlay'ler, ikinci kamera, filtreler, yapay zeka arka planı) izleyicilere tek bir webcam akışı olarak ulaşır."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "SkyPrivate yayının takılıyor veya tamponluyor",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Sorun giderme</h2><div class="faq-list"><details class="faq-item"><summary>SkyPrivate yayının takılıyor veya tamponluyor</summary><p>Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer.</p></details><details class="faq-item"><summary>SkyPrivate yayını sırasında kare kaybı</summary><p>Kare kaybı, paketlerin SkyPrivate'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir.</p></details><details class="faq-item"><summary>Siyah ekran — izleyiciler SkyPrivate&#x27;de video görmüyor</summary><p>Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula.</p></details><details class="faq-item"><summary>SkyPrivate yayın anahtarını reddediyor veya bağlanmıyor</summary><p>Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin SkyPrivate'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar.</p></details><details class="faq-item"><summary>SkyPrivate&#x27;de ses yok veya ses senkron dışı</summary><p>SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">SSS</h2>
-  <div class="faq-list"><details class="faq-item"><summary>SkyPrivate RTMP veya yayın anahtarı kullanıyor mu?</summary><p>Hiçbiri. SkyPrivate faturalandırma ve rezervasyonu yönetir; asıl video Skype üzerinden gider. Bir RTMP sunucu URL'sine veya yayın anahtarına ihtiyacın yok — sadece Skype içinde SplitCam'i kamera olarak ayarla.</p></details><details class="faq-item"><summary>Skype&#x27;ta SkyPrivate için SplitCam&#x27;i nasıl seçerim?</summary><p>Skype Ayarları → Ses ve Video → Kamera'yı aç, listeden SplitCam'i seç. Mikrofon için de aynısını yap. SkyPrivate aramaları o zaman normal Skype aramaları olarak gelir ve kamera akışı SplitCam sahnen olur.</p></details><details class="faq-item"><summary>SkyPrivate ile overlay ve beauty filtreleri kullanabilir miyim?</summary><p>Evet — bunları SplitCam sahnenin içinde kur. Skype, oluşan sonucu tek bir kamera akışı olarak alır, yani SplitCam'in oluşturduğu her şey (overlay'ler, beauty filtreleri, AI arka planı, çoklu kamera sahneleri) SkyPrivate müşterisine görünür.</p></details><details class="faq-item"><summary>SplitCam SkyPrivate için ücretsiz mi?</summary><p>Evet — SplitCam ücretsizdir, filigran yok ve süre sınırı yok. Skype tabanlı SkyPrivate aramaları için bir virtual camera olarak hiçbir ek ücret veya marka ekleme getirmez.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>SkyPrivate RTMP veya yayın anahtarı kullanıyor mu?</summary><p>Hiçbiri. SkyPrivate faturalandırma ve rezervasyonu yönetir; asıl video Skype üzerinden gider. Bir RTMP sunucu URL'sine veya yayın anahtarına ihtiyacın yok — sadece Skype içinde SplitCam'i kamera olarak ayarla.</p></details><details class="faq-item"><summary>Skype&#x27;ta SkyPrivate için SplitCam&#x27;i nasıl seçerim?</summary><p>Skype Ayarları → Ses ve Video → Kamera'yı aç, listeden SplitCam'i seç. Mikrofon için de aynısını yap. SkyPrivate aramaları o zaman normal Skype aramaları olarak gelir ve kamera akışı SplitCam sahnen olur.</p></details><details class="faq-item"><summary>SkyPrivate ile overlay ve beauty filtreleri kullanabilir miyim?</summary><p>Evet — bunları SplitCam sahnenin içinde kur. Skype, oluşan sonucu tek bir kamera akışı olarak alır, yani SplitCam'in oluşturduğu her şey (overlay'ler, beauty filtreleri, AI arka planı, çoklu kamera sahneleri) SkyPrivate müşterisine görünür.</p></details><details class="faq-item"><summary>SplitCam SkyPrivate için ücretsiz mi?</summary><p>Evet — SplitCam ücretsizdir, filigran yok ve süre sınırı yok. Skype tabanlı SkyPrivate aramaları için bir virtual camera olarak hiçbir ek ücret veya marka ekleme getirmez.</p></details><details class="faq-item"><summary>SkyPrivate üzerinde modeller ne kadar kazanabilir?</summary><p>SkyPrivate platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız SkyPrivate komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin.</p></details><details class="faq-item"><summary>SkyPrivate yayıncılar için güvenli mi?</summary><p>SkyPrivate ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir.</p></details><details class="faq-item"><summary>SkyPrivate üzerinde model olmak için hangi belgeler gerekli?</summary><p>SkyPrivate genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz.</p></details><details class="faq-item"><summary>SkyPrivate üzerinde telefonumdan yayın yapabilir miyim?</summary><p>SkyPrivate genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder).</p></details><details class="faq-item"><summary>SplitCam&#x27;i SkyPrivate üzerinde sanal kamera olarak kullanabilir miyim?</summary><p>Evet — SkyPrivate'in canlı yayını tarayıcıda çalışır, bu yüzden SplitCam <strong>"SplitCam Video Driver"</strong> adlı bir webcam olarak kaydedilir. SkyPrivate yayıncı arayüzünü açın, tarayıcıdaki kamera seçiciye tıklayın ve SplitCam'i seçin. Oluşturduğunuz sahne (overlay'ler, ikinci kamera, filtreler, yapay zeka arka planı) izleyicilere tek bir webcam akışı olarak ulaşır.</p></details></div>
 </section>
 
 <div class="section">

@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hur mycket kan modeller tjäna på VirtWish?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Inkomsten på VirtWish beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer VirtWish:s provisionsstruktur — läs modellavtalet innan du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Är VirtWish säkert för sändare?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VirtWish kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vilka dokument behöver jag för att bli modell på VirtWish?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VirtWish kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jag sända på VirtWish från min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VirtWish erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stöder VirtWish OBS eller en extern encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — VirtWish tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams Stream Settings → Custom RTMP, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på Go Live. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "VirtWish-sändningen hackar eller buffrar",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>VirtWish-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under VirtWish-sändning</summary><p>Tappade bildrutor betyder att paket inte når VirtWish i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på VirtWish</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>VirtWish avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den VirtWish visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på VirtWish</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Vanliga frågor</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Var finns VirtWishs RTMP-data?</summary><p>Ikonen uppe till höger → Profile → Start Broadcast två gånger → OBS-avsnittet visar länk och streamnyckel.</p></details><details class="faq-item"><summary>Stöder VirtWish extern kodare?</summary><p>Ja — OBS-avsnittet tillhandahåller stream-URL och nyckel, så SplitCam fungerar.</p></details><details class="faq-item"><summary>Vilken bitrate för VirtWish?</summary><p>VirtWish publicerar inget officiellt tak; 3500–6000 Kbps i 1080p är säkert. Matcha SplitCams upplösning med den inställda i VirtWish för att undvika omskalning.</p></details><details class="faq-item"><summary>Är SplitCam gratis för VirtWish?</summary><p>Ja — gratis, ingen vattenstämpel och ingen tidsgräns. VirtWishs URL-och-nyckel-uppsättning tar bara de minuter som behövs.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Var finns VirtWishs RTMP-data?</summary><p>Ikonen uppe till höger → Profile → Start Broadcast två gånger → OBS-avsnittet visar länk och streamnyckel.</p></details><details class="faq-item"><summary>Stöder VirtWish extern kodare?</summary><p>Ja — OBS-avsnittet tillhandahåller stream-URL och nyckel, så SplitCam fungerar.</p></details><details class="faq-item"><summary>Vilken bitrate för VirtWish?</summary><p>VirtWish publicerar inget officiellt tak; 3500–6000 Kbps i 1080p är säkert. Matcha SplitCams upplösning med den inställda i VirtWish för att undvika omskalning.</p></details><details class="faq-item"><summary>Är SplitCam gratis för VirtWish?</summary><p>Ja — gratis, ingen vattenstämpel och ingen tidsgräns. VirtWishs URL-och-nyckel-uppsättning tar bara de minuter som behövs.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på VirtWish?</summary><p>Inkomsten på VirtWish beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer VirtWish:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är VirtWish säkert för sändare?</summary><p>VirtWish kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på VirtWish?</summary><p>VirtWish kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på VirtWish från min telefon?</summary><p>VirtWish erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Stöder VirtWish OBS eller en extern encoder?</summary><p>Ja — VirtWish tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams <strong>Stream Settings → Custom RTMP</strong>, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på <strong>Go Live</strong>. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiell support — VirtWish</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://t.me/vwsupport" rel="nofollow noopener" target="_blank">https://t.me/vwsupport</a></li></ul><p class="sp-note">Vi är en oberoende guide. För konto-, betalnings- eller tekniska problem, kontakta plattformens officiella support direkt.</p></section>
 <div class="section">

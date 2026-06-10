@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hur mycket kan modeller tjäna på iFriends?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Inkomsten på iFriends beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer iFriends:s provisionsstruktur — läs modellavtalet innan du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Är iFriends säkert för sändare?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "iFriends kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vilka dokument behöver jag för att bli modell på iFriends?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "iFriends kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jag sända på iFriends från min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "iFriends erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Stöder iFriends OBS eller en extern encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — iFriends tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams Stream Settings → Custom RTMP, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på Go Live. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "iFriends-sändningen hackar eller buffrar",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>iFriends-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under iFriends-sändning</summary><p>Tappade bildrutor betyder att paket inte når iFriends i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på iFriends</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>iFriends avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den iFriends visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på iFriends</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Vanliga frågor</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Stöder iFriends externa encoders som SplitCam officiellt?</summary><p>Ja — Model Center har en External Encoder-option under Broadcast Settings. Standard-RTMP-server-URL och streamnyckel; OBS, SplitCam och vMix ansluter alla när ditt konto är godkänt.</p></details><details class="faq-item"><summary>Var hittar jag min iFriends-streamnyckel?</summary><p>Model Center → Broadcast Settings → External Encoder. Både server-URL och streamnyckel visas där — kopiera båda till SplitCams anpassade RTMP-fält.</p></details><details class="faq-item"><summary>Vilken bitrate för iFriends?</summary><p>Tryck ut 1920×1080 vid 30 fps, 3500–6000 Kbps med nyckelbildruta varannan sekund. Kör SplitCams inbyggda hastighetstest först.</p></details><details class="faq-item"><summary>Är SplitCam gratis för iFriends?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns. External Encoder-optionen i iFriends Model Center är gratis.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Stöder iFriends externa encoders som SplitCam officiellt?</summary><p>Ja — Model Center har en External Encoder-option under Broadcast Settings. Standard-RTMP-server-URL och streamnyckel; OBS, SplitCam och vMix ansluter alla när ditt konto är godkänt.</p></details><details class="faq-item"><summary>Var hittar jag min iFriends-streamnyckel?</summary><p>Model Center → Broadcast Settings → External Encoder. Både server-URL och streamnyckel visas där — kopiera båda till SplitCams anpassade RTMP-fält.</p></details><details class="faq-item"><summary>Vilken bitrate för iFriends?</summary><p>Tryck ut 1920×1080 vid 30 fps, 3500–6000 Kbps med nyckelbildruta varannan sekund. Kör SplitCams inbyggda hastighetstest först.</p></details><details class="faq-item"><summary>Är SplitCam gratis för iFriends?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns. External Encoder-optionen i iFriends Model Center är gratis.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på iFriends?</summary><p>Inkomsten på iFriends beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer iFriends:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är iFriends säkert för sändare?</summary><p>iFriends kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på iFriends?</summary><p>iFriends kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på iFriends från min telefon?</summary><p>iFriends erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Stöder iFriends OBS eller en extern encoder?</summary><p>Ja — iFriends tillhandahåller en RTMP-server-URL och en stream key i sändarpanelen. Klistra in båda i SplitCams <strong>Stream Settings → Custom RTMP</strong>, ställ in 1920×1080 vid 30 fps med en bitrate på 4 000–5 000 Kbps och klicka på <strong>Go Live</strong>. Custom RTMP-vägen ger dig full scenkomposition i SplitCam (flera kameror, overlays, filter).</p></details></div>
 </section>
 
 <div class="section">

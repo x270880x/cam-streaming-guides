@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Koliko modeli mogu zaraditi na AmateurTV?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zarada na AmateurTV ovisi o veličini publike, satima streamanja i napojnicama. Aktivni broadcasteri obično zarade 200–3.000 USD mjesečno; najbolji izvođači dosežu 10.000+ USD. Vaš udio u prihodu prati strukturu provizije platforme AmateurTV — provjerite ugovor s modelom prije nego što krenete uživo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je li AmateurTV siguran za broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AmateurTV zahtijeva provjeru dobi i identiteta prije isplate, što štiti modele od prijevara. Koristite umjetničko ime, nikada ne dijelite osobne podatke pred kamerom, uključite geo-blokade kako biste sakrili stream od svoje regije i tretirajte svaki zahtjev gledatelja kao transakciju. SplitCam overlayi i AI pozadina također mogu sakriti ili zamijeniti vaše stvarno okruženje."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Koji su mi dokumenti potrebni da postanem model na AmateurTV?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AmateurTV obično zahtijeva državnu osobnu ispravu s fotografijom (putovnica, vozačka dozvola ili osobna iskaznica), selfie s tom ispravom u ruci i porezni/isplatni obrazac (W-9 za SAD, W-8BEN za ostale). Odobrenje obično traje 24–72 sata; nakon odobrenja možete krenuti uživo isti dan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mogu li streamati na AmateurTV s mobitela?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AmateurTV obično nudi mobilnu aplikaciju za broadcastere ili mobile-web broadcaster, ali iskustvo je ograničeno — bez overlaya, bez druge kamere, bez AI pozadine. Za punu produkcijsku kvalitetu emitirajte s računala koristeći SplitCam, a mobitel iskoristite kao drugu kameru (SplitCam prihvaća ulaz IP-kamere s mobitela)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Podržava li AmateurTV OBS ili vanjski enkoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Da — AmateurTV u broadcaster panelu nudi RTMP server URL i stream ključ. Zalijepite oboje u SplitCam Stream Settings → Custom RTMP, postavite 1920×1080 pri 30 fps s bitrateom 4.000–5.000 Kbps i kliknite Go Live. Ruta Custom RTMP daje vam punu kompoziciju scene u SplitCamu (više kamera, overlayi, filteri)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Tvoj prijenos na AmateurTV lagira ili buffera",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na AmateurTV lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na AmateurTV</summary><p>Izgubljeni frameovi znače da paketi ne stižu do AmateurTV na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na AmateurTV</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>AmateurTV odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje AmateurTV i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na AmateurTV</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Česta pitanja</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Podržava li AmateurTV službeno vanjske enkodere poput SplitCama?</summary><p>Da — Model Panel uključuje opciju External Encoder pod Broadcast Settings. AmateurTV daje standardni RTMP server URL i stream key; OBS, SplitCam, vMix i drugi RTMP enkoderi se spajaju.</p></details><details class="faq-item"><summary>Gdje dobivam svoj AmateurTV stream key?</summary><p>Model Panel → Broadcast Settings → External Encoder. I server URL i stream key pojavljuju se tamo. Kopiraj oboje u SplitCamova custom RTMP polja. Ključ je vezan uz račun.</p></details><details class="faq-item"><summary>Koji bitrate koristiti za AmateurTV?</summary><p>Standardne cam postavke — 1920×1080 na 30 fps, 3500–6000 Kbps s razmakom keyframea od 2 sekunde. Pokreni ugrađeni test brzine u SplitCamu prvo.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za AmateurTV?</summary><p>Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja. AmateurTV opciju vanjskog enkodera uključuješ besplatno.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Podržava li AmateurTV službeno vanjske enkodere poput SplitCama?</summary><p>Da — Model Panel uključuje opciju External Encoder pod Broadcast Settings. AmateurTV daje standardni RTMP server URL i stream key; OBS, SplitCam, vMix i drugi RTMP enkoderi se spajaju.</p></details><details class="faq-item"><summary>Gdje dobivam svoj AmateurTV stream key?</summary><p>Model Panel → Broadcast Settings → External Encoder. I server URL i stream key pojavljuju se tamo. Kopiraj oboje u SplitCamova custom RTMP polja. Ključ je vezan uz račun.</p></details><details class="faq-item"><summary>Koji bitrate koristiti za AmateurTV?</summary><p>Standardne cam postavke — 1920×1080 na 30 fps, 3500–6000 Kbps s razmakom keyframea od 2 sekunde. Pokreni ugrađeni test brzine u SplitCamu prvo.</p></details><details class="faq-item"><summary>Je li SplitCam besplatan za AmateurTV?</summary><p>Da — SplitCam je besplatan, bez vodenog žiga i bez vremenskog ograničenja. AmateurTV opciju vanjskog enkodera uključuješ besplatno.</p></details><details class="faq-item"><summary>Koliko modeli mogu zaraditi na AmateurTV?</summary><p>Zarada na AmateurTV ovisi o veličini publike, satima streamanja i napojnicama. Aktivni broadcasteri obično zarade 200–3.000 USD mjesečno; najbolji izvođači dosežu 10.000+ USD. Vaš udio u prihodu prati strukturu provizije platforme AmateurTV — provjerite ugovor s modelom prije nego što krenete uživo.</p></details><details class="faq-item"><summary>Je li AmateurTV siguran za broadcastere?</summary><p>AmateurTV zahtijeva provjeru dobi i identiteta prije isplate, što štiti modele od prijevara. Koristite umjetničko ime, nikada ne dijelite osobne podatke pred kamerom, uključite geo-blokade kako biste sakrili stream od svoje regije i tretirajte svaki zahtjev gledatelja kao transakciju. SplitCam overlayi i AI pozadina također mogu sakriti ili zamijeniti vaše stvarno okruženje.</p></details><details class="faq-item"><summary>Koji su mi dokumenti potrebni da postanem model na AmateurTV?</summary><p>AmateurTV obično zahtijeva državnu osobnu ispravu s fotografijom (putovnica, vozačka dozvola ili osobna iskaznica), selfie s tom ispravom u ruci i porezni/isplatni obrazac (W-9 za SAD, W-8BEN za ostale). Odobrenje obično traje 24–72 sata; nakon odobrenja možete krenuti uživo isti dan.</p></details><details class="faq-item"><summary>Mogu li streamati na AmateurTV s mobitela?</summary><p>AmateurTV obično nudi mobilnu aplikaciju za broadcastere ili mobile-web broadcaster, ali iskustvo je ograničeno — bez overlaya, bez druge kamere, bez AI pozadine. Za punu produkcijsku kvalitetu emitirajte s računala koristeći SplitCam, a mobitel iskoristite kao drugu kameru (SplitCam prihvaća ulaz IP-kamere s mobitela).</p></details><details class="faq-item"><summary>Podržava li AmateurTV OBS ili vanjski enkoder?</summary><p>Da — AmateurTV u broadcaster panelu nudi RTMP server URL i stream ključ. Zalijepite oboje u SplitCam <strong>Stream Settings → Custom RTMP</strong>, postavite 1920×1080 pri 30 fps s bitrateom 4.000–5.000 Kbps i kliknite <strong>Go Live</strong>. Ruta Custom RTMP daje vam punu kompoziciju scene u SplitCamu (više kamera, overlayi, filteri).</p></details></div>
 </section>
 
 <div class="section">

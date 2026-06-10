@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "ImLive üzerinde modeller ne kadar kazanabilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız ImLive komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive yayıncılar için güvenli mi?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive üzerinde model olmak için hangi belgeler gerekli?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive üzerinde telefonumdan yayın yapabilir miyim?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SplitCam'i ImLive üzerinde sanal kamera olarak kullanabilir miyim?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Evet — ImLive'in canlı yayını tarayıcıda çalışır, bu yüzden SplitCam \"SplitCam Video Driver\" adlı bir webcam olarak kaydedilir. ImLive yayıncı arayüzünü açın, tarayıcıdaki kamera seçiciye tıklayın ve SplitCam'i seçin. Oluşturduğunuz sahne (overlay'ler, ikinci kamera, filtreler, yapay zeka arka planı) izleyicilere tek bir webcam akışı olarak ulaşır."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "ImLive yayının takılıyor veya tamponluyor",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Sorun giderme</h2><div class="faq-list"><details class="faq-item"><summary>ImLive yayının takılıyor veya tamponluyor</summary><p>Neredeyse her zaman bitrate yüklemenin kaldırabileceğinden yüksektir. SplitCam'in yerleşik hız testini çalıştır, sonra bitrate'i ölçülen yüklemenin yaklaşık %75'ine ayarla — 1080p için 3.500–6.000&nbsp;Kbps, 720p için daha düşük. Kodlayıcı bağlantını geçmeyi bırakınca takılma geçer.</p></details><details class="faq-item"><summary>ImLive yayını sırasında kare kaybı</summary><p>Kare kaybı, paketlerin ImLive'e zamanında ulaşmadığı anlamına gelir — genelde kararsız Wi-Fi. Kablolu Ethernet bağlantısına geç, bant genişliği yiyen uygulamaları kapat ve bitrate'i biraz düşür. Tek bir sıçrama sorun değil; sürekli artış bağlantının yetişemediğini gösterir.</p></details><details class="faq-item"><summary>Siyah ekran — izleyiciler ImLive&#x27;de video görmüyor</summary><p>Kameran SplitCam'de etkin kaynak olarak seçili değil ya da başka bir uygulama tutuyor. Zoom, Skype veya OBS'i kapat, web kameranı SplitCam kaynak listesinde tekrar seç ve Go Live'a basmadan önce önizlemenin görüntünü gösterdiğini doğrula.</p></details><details class="faq-item"><summary>ImLive yayın anahtarını reddediyor veya bağlanmıyor</summary><p>Yayın anahtarını yeniden kopyala — sondaki boşluk ya da eski, değiştirilmiş anahtar her zamanki nedendir. Sunucu URL'sinin ImLive'in gösterdiğiyle eşleştiğini ve hesabında harici kodlayıcı yayınının açık olduğunu doğrula. SplitCam'in Stream Settings'indeki yeşil kaydırıcı geçerli anahtarı onaylar.</p></details><details class="faq-item"><summary>ImLive&#x27;de ses yok veya ses senkron dışı</summary><p>SplitCam'i hem kamera hem mikrofon olarak seç ve SplitCam'in ses kaynağında gerçek mikrofonunu seç. Ses videonun gerisinde kalıyorsa çözünürlüğü bir kademe düşür — kodlayıcı aşırı yüklenmiş ve ses geç kalan kareleri bekliyor.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">SSS</h2>
-  <div class="faq-list"><details class="faq-item"><summary>ImLive RTMP mi yoksa yayın anahtarı mı kullanır?</summary><p>Hiçbiri — ImLive web kamerasını tarayıcı üzerinden doğrudan kullanır. SplitCam sanal kamera olarak bağlanır, kopyalanacak anahtar yok.</p></details><details class="faq-item"><summary>ImLive&#x27;de SplitCam&#x27;i nasıl seçerim?</summary><p>Start Video Chat → Go To Settings → SplitCam'i web kamerası ve mikrofon olarak seç.</p></details><details class="faq-item"><summary>ImLive&#x27;de katman kullanabilir miyim?</summary><p>Evet — SplitCam sahnesinde oluştur; ImLive birleştirilmiş sonucu gösterir.</p></details><details class="faq-item"><summary>SplitCam ImLive için ücretsiz mi?</summary><p>Evet — ücretsiz, filigransız ve süre sınırı yok. ImLive için sanal kamera olarak görüntülü sohbetine maliyet veya markalama eklemez.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>ImLive RTMP mi yoksa yayın anahtarı mı kullanır?</summary><p>Hiçbiri — ImLive web kamerasını tarayıcı üzerinden doğrudan kullanır. SplitCam sanal kamera olarak bağlanır, kopyalanacak anahtar yok.</p></details><details class="faq-item"><summary>ImLive&#x27;de SplitCam&#x27;i nasıl seçerim?</summary><p>Start Video Chat → Go To Settings → SplitCam'i web kamerası ve mikrofon olarak seç.</p></details><details class="faq-item"><summary>ImLive&#x27;de katman kullanabilir miyim?</summary><p>Evet — SplitCam sahnesinde oluştur; ImLive birleştirilmiş sonucu gösterir.</p></details><details class="faq-item"><summary>SplitCam ImLive için ücretsiz mi?</summary><p>Evet — ücretsiz, filigransız ve süre sınırı yok. ImLive için sanal kamera olarak görüntülü sohbetine maliyet veya markalama eklemez.</p></details><details class="faq-item"><summary>ImLive üzerinde modeller ne kadar kazanabilir?</summary><p>ImLive platformundaki kazançlar izleyici sayısına, yayın saatlerine ve bahşiş davranışına bağlıdır. Aktif yayıncılar genellikle ayda 200–3.000 dolar kazanır; en iyi performans gösterenler 10.000 doların üzerine çıkar. Gelir payınız ImLive komisyon yapısına göre belirlenir — yayına geçmeden önce model sözleşmesini inceleyin.</p></details><details class="faq-item"><summary>ImLive yayıncılar için güvenli mi?</summary><p>ImLive ödemeden önce yaş ve kimlik doğrulaması ister; bu, modelleri dolandırıcılığa karşı korur. Sahne adı kullanın, kamerada asla kişisel bilgi paylaşmayın, yayınınızı kendi bölgenizden gizlemek için coğrafi engelleme aktif edin ve her izleyici talebini ticari bir işlem olarak değerlendirin. SplitCam'in overlay'leri ve yapay zeka arka planı da gerçek ortamınızı gizleyebilir veya değiştirebilir.</p></details><details class="faq-item"><summary>ImLive üzerinde model olmak için hangi belgeler gerekli?</summary><p>ImLive genellikle devlet tarafından verilmiş fotoğraflı bir kimlik (pasaport, ehliyet veya kimlik kartı), kimliği tutarken çekilmiş bir selfie ve bir vergi/ödeme formu (ABD için W-9, ABD dışı için W-8BEN) ister. Onay genellikle 24–72 saat sürer; onaylandıktan sonra aynı gün yayına geçebilirsiniz.</p></details><details class="faq-item"><summary>ImLive üzerinde telefonumdan yayın yapabilir miyim?</summary><p>ImLive genellikle bir mobil yayıncı uygulaması veya mobil-web yayıncı arayüzü sunar, ancak deneyim sınırlıdır — overlay yok, ikinci kamera yok, yapay zeka arka planı yok. Tam prodüksiyon kalitesi için SplitCam ile bir bilgisayardan yayın yapın ve telefonunuzu ikinci kamera olarak kullanın (SplitCam telefonlardan IP-kamera girişini kabul eder).</p></details><details class="faq-item"><summary>SplitCam&#x27;i ImLive üzerinde sanal kamera olarak kullanabilir miyim?</summary><p>Evet — ImLive'in canlı yayını tarayıcıda çalışır, bu yüzden SplitCam <strong>"SplitCam Video Driver"</strong> adlı bir webcam olarak kaydedilir. ImLive yayıncı arayüzünü açın, tarayıcıdaki kamera seçiciye tıklayın ve SplitCam'i seçin. Oluşturduğunuz sahne (overlay'ler, ikinci kamera, filtreler, yapay zeka arka planı) izleyicilere tek bir webcam akışı olarak ulaşır.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Resmi destek — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">Biz bağımsız bir rehberiz. Hesap, ödeme veya teknik sorunlar için doğrudan platformun resmi desteğiyle iletişime geç.</p></section>
 <div class="section">

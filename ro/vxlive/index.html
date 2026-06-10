@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Cât pot câștiga modelele pe VXLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Câștigurile pe VXLive depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a VXLive — verifică acordul de model înainte să intri live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Este VXLive sigur pentru broadcasteri?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VXLive cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ce documente îmi trebuie ca să devin model pe VXLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VXLive cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pot să dau stream pe VXLive de pe telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VXLive oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VXLive suportă OBS sau un encoder extern?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Da — VXLive furnizează un URL de server RTMP și o stream key în panoul de broadcaster. Lipește-le pe ambele în Stream Settings → Custom RTMP din SplitCam, setează 1920×1080 la 30 fps cu un bitrate de 4.000–5.000 Kbps și apasă Go Live. Ruta Custom RTMP îți oferă compoziția completă a scenei din SplitCam (multi-cameră, overlay-uri, filtre)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Stream-ul tău pe VXLive are lag sau se blochează la buffering",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe VXLive are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe VXLive</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la VXLive la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe VXLive</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>VXLive respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de VXLive și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe VXLive</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Întrebări frecvente</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Suportă VXLive SplitCam oficial?</summary><p>Da — VXModels (VXLive) are un articol de ajutor oficial dedicat configurării SplitCam și listează SplitCam alături de OBS și XSplit ca software de broadcasting suportat.</p></details><details class="faq-item"><summary>Cum conectez SplitCam la VXLive?</summary><p>Pe VXLive alegi «Stream with third-party software», apoi în SplitCam selectezi presetul VISIT-X și lipești URL serverului și stream key oferite de VXLive.</p></details><details class="faq-item"><summary>Intru live în SplitCam sau pe VXLive?</summary><p>Ambele — întâi Go Live în SplitCam, apoi GO ONLINE pe VXLive.</p></details><details class="faq-item"><summary>De ce recomandă VXModels SplitCam?</summary><p>Articolul oficial de ajutor VXModels recomandă SplitCam specific pentru a elimina artefactele de imagine și pixelarea webcam-ului și a stabiliza conexiunea — nu doar ca encoder generic.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Suportă VXLive SplitCam oficial?</summary><p>Da — VXModels (VXLive) are un articol de ajutor oficial dedicat configurării SplitCam și listează SplitCam alături de OBS și XSplit ca software de broadcasting suportat.</p></details><details class="faq-item"><summary>Cum conectez SplitCam la VXLive?</summary><p>Pe VXLive alegi «Stream with third-party software», apoi în SplitCam selectezi presetul VISIT-X și lipești URL serverului și stream key oferite de VXLive.</p></details><details class="faq-item"><summary>Intru live în SplitCam sau pe VXLive?</summary><p>Ambele — întâi Go Live în SplitCam, apoi GO ONLINE pe VXLive.</p></details><details class="faq-item"><summary>De ce recomandă VXModels SplitCam?</summary><p>Articolul oficial de ajutor VXModels recomandă SplitCam specific pentru a elimina artefactele de imagine și pixelarea webcam-ului și a stabiliza conexiunea — nu doar ca encoder generic.</p></details><details class="faq-item"><summary>Cât pot câștiga modelele pe VXLive?</summary><p>Câștigurile pe VXLive depind de mărimea audienței, orele de stream și obiceiul de tipping. Broadcasterii activi obțin de obicei între 200 și 3.000 $ pe lună, iar topul ajunge la 10.000 $+. Cota ta din venit urmează structura de comision a VXLive — verifică acordul de model înainte să intri live.</p></details><details class="faq-item"><summary>Este VXLive sigur pentru broadcasteri?</summary><p>VXLive cere verificare de vârstă și ID înainte de plată, ceea ce protejează modelele de fraudă. Folosește un nume de scenă, nu împărtăși niciodată date personale în cameră, activează geo-block-urile ca să ascunzi stream-ul de regiunea ta și tratează fiecare cerere a viewer-ilor ca o tranzacție. Overlay-urile și fundalul AI din SplitCam pot ascunde sau înlocui mediul tău real.</p></details><details class="faq-item"><summary>Ce documente îmi trebuie ca să devin model pe VXLive?</summary><p>VXLive cere de obicei un act de identitate cu poză emis de stat (pașaport, permis de conducere sau carte de identitate), un selfie ținând actul în mână și un formular fiscal/de plată (W-9 pentru SUA, W-8BEN pentru non-SUA). Aprobarea durează de regulă 24–72 de ore; odată aprobat, poți intra live în aceeași zi.</p></details><details class="faq-item"><summary>Pot să dau stream pe VXLive de pe telefon?</summary><p>VXLive oferă de obicei o aplicație mobilă de broadcaster sau un broadcaster mobile-web, dar experiența este limitată — fără overlay-uri, fără a doua cameră, fără fundal AI. Pentru calitate de producție completă, transmite de pe un computer cu SplitCam și folosește telefonul ca a doua cameră (SplitCam acceptă input de tip IP-camera de pe telefoane).</p></details><details class="faq-item"><summary>VXLive suportă OBS sau un encoder extern?</summary><p>Da — VXLive furnizează un URL de server RTMP și o stream key în panoul de broadcaster. Lipește-le pe ambele în <strong>Stream Settings → Custom RTMP</strong> din SplitCam, setează 1920×1080 la 30 fps cu un bitrate de 4.000–5.000 Kbps și apasă <strong>Go Live</strong>. Ruta Custom RTMP îți oferă compoziția completă a scenei din SplitCam (multi-cameră, overlay-uri, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Suport oficial — VXLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://helpcenter.vxmodels.com/" rel="nofollow noopener" target="_blank">https://helpcenter.vxmodels.com/</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🎫</span><a href="https://support.vxmodels.com/" rel="nofollow noopener" target="_blank">https://support.vxmodels.com/</a></li></ul><p class="sp-note">Suntem un ghid independent. Pentru probleme de cont, plată sau tehnice, contactează direct suportul oficial al platformei.</p></section>
 <div class="section">

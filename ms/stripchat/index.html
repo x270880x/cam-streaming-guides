@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Berapakah pendapatan model di Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pendapatan di Stripchat bergantung pada saiz audiens, jumlah jam siaran dan tabiat memberi tip. Penyiar aktif biasanya membawa pulang $200–$3,000 sebulan; pencapai teratas mencecah $10,000+. Bahagian hasil anda mengikut struktur komisen Stripchat — semak perjanjian model sebelum mula siaran langsung."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Adakah Stripchat selamat untuk penyiar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat memerlukan pengesahan umur dan ID sebelum pembayaran, yang melindungi model daripada penipuan. Gunakan nama samaran, jangan sekali-kali kongsi data peribadi di depan kamera, aktifkan sekatan geo untuk menyembunyikan siaran anda daripada wilayah asal, dan anggap setiap permintaan penonton sebagai urus niaga. Tindanan dan latar belakang AI SplitCam juga boleh menyembunyikan atau menggantikan persekitaran sebenar anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah dokumen yang saya perlukan untuk menjadi model di Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat biasanya memerlukan ID foto yang dikeluarkan kerajaan (pasport, lesen memandu atau kad pengenalan), swafoto memegang ID tersebut, dan borang cukai/pembayaran (W-9 untuk AS, W-8BEN untuk bukan AS). Kelulusan biasanya mengambil masa 24–72 jam; setelah diluluskan anda boleh mula siaran langsung pada hari yang sama."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bolehkah saya membuat siaran di Stripchat dari telefon saya?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat biasanya menawarkan aplikasi penyiar mudah alih atau penyiar web mudah alih, tetapi pengalamannya terhad — tiada tindanan, tiada kamera kedua, tiada latar belakang AI. Untuk kualiti produksi penuh, buat siaran dari komputer dengan SplitCam dan gunakan telefon anda sebagai kamera kedua (SplitCam menerima input IP-camera daripada telefon)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Adakah Stripchat menyokong OBS atau pengekod luaran?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ya — Stripchat menyediakan URL pelayan RTMP dan kunci strim di panel penyiar. Tampal kedua-duanya ke dalam Stream Settings → Custom RTMP SplitCam, tetapkan 1920×1080 pada 30 fps dengan kadar bit 4,000–5,000 Kbps, dan klik Go Live. Laluan Custom RTMP memberikan anda komposisi adegan SplitCam yang penuh (berbilang kamera, tindanan, penapis)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Siaran Stripchat tersekat atau menimbal",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Penyelesaian masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran Stripchat tersekat atau menimbal</summary><p>Hampir sentiasa bitrate ditetapkan lebih tinggi daripada yang mampu ditanggung muat naik anda. Jalankan ujian kelajuan terbina SplitCam, kemudian tetapkan bitrate kira-kira 75% daripada muat naik diukur — 3,500–6,000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersekat hilang sebaik pengekod berhenti melebihi talian anda.</p></details><details class="faq-item"><summary>Bingkai hilang semasa siaran Stripchat</summary><p>Bingkai hilang bermakna paket tidak sampai ke Stripchat tepat masa — biasanya Wi-Fi tidak stabil. Beralih ke Ethernet berwayar, tutup apl yang memakan lebar jalur dan turunkan bitrate sedikit. Satu lonjakan tak mengapa; peningkatan berterusan bermakna talian tidak mengejar.</p></details><details class="faq-item"><summary>Skrin hitam — penonton tidak nampak video di Stripchat</summary><p>Kamera anda tidak dipilih sebagai sumber aktif dalam SplitCam, atau apl lain menahannya. Tutup Zoom, Skype atau OBS, pilih semula kamera web dalam senarai sumber SplitCam dan pastikan pratonton menunjukkan imej anda sebelum tekan Go Live.</p></details><details class="faq-item"><summary>Stripchat menolak kunci strim atau tidak menyambung</summary><p>Salin semula kunci strim — ruang di hujung atau kunci lama yang telah diset semula ialah punca paling biasa. Pastikan URL pelayan sepadan dengan yang Stripchat paparkan dan siaran pengekod luaran dihidupkan pada akaun anda. Peluncur hijau dalam Stream Settings SplitCam mengesahkan kunci sah.</p></details><details class="faq-item"><summary>Tiada audio atau audio tak segerak di Stripchat</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon sebenar anda dalam sumber audio SplitCam. Jika audio ketinggalan daripada video, turunkan resolusi satu peringkat — pengekod terlebih beban dan audio menunggu bingkai yang lewat.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Soalan lazim</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Adakah Stripchat mengesyorkan OBS / perisian luaran?</summary><p>Ya — FAQ rasmi Stripchat mengesyorkan perisian siaran luaran seperti OBS «untuk mencapai kualiti video dan audio terbaik». SplitCam berfungsi dengan cara yang sama.</p></details><details class="faq-item"><summary>Bagaimana menukar Stripchat ke perisian luaran?</summary><p>Dalam Broadcast Center pilih Switch to External Broadcast Software (OBS), kemudian buka external software settings untuk memaparkan kunci strim (token).</p></details><details class="faq-item"><summary>Bitrate berapa untuk Stripchat?</summary><p>RTMP ingest menerima sehingga ~6,000 Kbps dengan bingkai kunci 2 saat. 3,500–6,000 pada 1080p ideal — tetapi mesti jauh melebihi minimum 2 Mbps, terutama untuk siaran OBS.</p></details><details class="faq-item"><summary>Adakah SplitCam percuma untuk Stripchat?</summary><p>Ya — tiada yuran lesen, tiada tera air, tiada had masa: walaupun rancangan Stripchat interaktif yang panjang tidak berkos di pihak pengekod.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Adakah Stripchat mengesyorkan OBS / perisian luaran?</summary><p>Ya — FAQ rasmi Stripchat mengesyorkan perisian siaran luaran seperti OBS «untuk mencapai kualiti video dan audio terbaik». SplitCam berfungsi dengan cara yang sama.</p></details><details class="faq-item"><summary>Bagaimana menukar Stripchat ke perisian luaran?</summary><p>Dalam Broadcast Center pilih Switch to External Broadcast Software (OBS), kemudian buka external software settings untuk memaparkan kunci strim (token).</p></details><details class="faq-item"><summary>Bitrate berapa untuk Stripchat?</summary><p>RTMP ingest menerima sehingga ~6,000 Kbps dengan bingkai kunci 2 saat. 3,500–6,000 pada 1080p ideal — tetapi mesti jauh melebihi minimum 2 Mbps, terutama untuk siaran OBS.</p></details><details class="faq-item"><summary>Adakah SplitCam percuma untuk Stripchat?</summary><p>Ya — tiada yuran lesen, tiada tera air, tiada had masa: walaupun rancangan Stripchat interaktif yang panjang tidak berkos di pihak pengekod.</p></details><details class="faq-item"><summary>Berapakah pendapatan model di Stripchat?</summary><p>Pendapatan di Stripchat bergantung pada saiz audiens, jumlah jam siaran dan tabiat memberi tip. Penyiar aktif biasanya membawa pulang $200–$3,000 sebulan; pencapai teratas mencecah $10,000+. Bahagian hasil anda mengikut struktur komisen Stripchat — semak perjanjian model sebelum mula siaran langsung.</p></details><details class="faq-item"><summary>Adakah Stripchat selamat untuk penyiar?</summary><p>Stripchat memerlukan pengesahan umur dan ID sebelum pembayaran, yang melindungi model daripada penipuan. Gunakan nama samaran, jangan sekali-kali kongsi data peribadi di depan kamera, aktifkan sekatan geo untuk menyembunyikan siaran anda daripada wilayah asal, dan anggap setiap permintaan penonton sebagai urus niaga. Tindanan dan latar belakang AI SplitCam juga boleh menyembunyikan atau menggantikan persekitaran sebenar anda.</p></details><details class="faq-item"><summary>Apakah dokumen yang saya perlukan untuk menjadi model di Stripchat?</summary><p>Stripchat biasanya memerlukan ID foto yang dikeluarkan kerajaan (pasport, lesen memandu atau kad pengenalan), swafoto memegang ID tersebut, dan borang cukai/pembayaran (W-9 untuk AS, W-8BEN untuk bukan AS). Kelulusan biasanya mengambil masa 24–72 jam; setelah diluluskan anda boleh mula siaran langsung pada hari yang sama.</p></details><details class="faq-item"><summary>Bolehkah saya membuat siaran di Stripchat dari telefon saya?</summary><p>Stripchat biasanya menawarkan aplikasi penyiar mudah alih atau penyiar web mudah alih, tetapi pengalamannya terhad — tiada tindanan, tiada kamera kedua, tiada latar belakang AI. Untuk kualiti produksi penuh, buat siaran dari komputer dengan SplitCam dan gunakan telefon anda sebagai kamera kedua (SplitCam menerima input IP-camera daripada telefon).</p></details><details class="faq-item"><summary>Adakah Stripchat menyokong OBS atau pengekod luaran?</summary><p>Ya — Stripchat menyediakan URL pelayan RTMP dan kunci strim di panel penyiar. Tampal kedua-duanya ke dalam <strong>Stream Settings → Custom RTMP</strong> SplitCam, tetapkan 1920×1080 pada 30 fps dengan kadar bit 4,000–5,000 Kbps, dan klik <strong>Go Live</strong>. Laluan Custom RTMP memberikan anda komposisi adegan SplitCam yang penuh (berbilang kamera, tindanan, penapis).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Sokongan rasmi — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Kami panduan bebas. Untuk isu akaun, pembayaran atau teknikal, hubungi sokongan rasmi platform secara terus.</p></section>
 <div class="section">

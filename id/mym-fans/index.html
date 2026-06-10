@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Berapa penghasilan model di MYM.fans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Penghasilan di MYM.fans bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi MYM.fans — periksa perjanjian model sebelum mulai siaran."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah MYM.fans aman untuk broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MYM.fans mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dokumen apa yang dibutuhkan untuk menjadi model di MYM.fans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MYM.fans biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisakah saya siaran di MYM.fans dari ponsel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MYM.fans biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisakah saya menggunakan SplitCam sebagai virtual camera di MYM.fans?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ya — live MYM.fans berjalan di browser, jadi SplitCam terdaftar sebagai webcam bernama \"SplitCam Video Driver\". Buka broadcaster MYM.fans, klik pemilih kamera di browser, lalu pilih SplitCam. Scene yang sudah Anda susun (overlay, kamera kedua, filter, AI background) sampai ke penonton sebagai satu feed webcam."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Siaran MYM.fans tersendat atau buffering",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Pemecahan masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran MYM.fans tersendat atau buffering</summary><p>Hampir selalu bitrate diatur lebih tinggi dari yang mampu ditanggung upload-mu. Jalankan tes kecepatan bawaan SplitCam, lalu setel bitrate ke sekitar 75% dari upload terukur — 3.500–6.000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersendat hilang begitu encoder berhenti melampaui koneksimu.</p></details><details class="faq-item"><summary>Frame hilang saat siaran MYM.fans</summary><p>Frame hilang berarti paket tidak sampai ke MYM.fans tepat waktu — biasanya Wi-Fi tidak stabil. Pindah ke Ethernet kabel, tutup aplikasi pemakan bandwidth, dan turunkan bitrate sedikit. Satu lonjakan tidak masalah; kenaikan terus-menerus berarti koneksi tidak mengejar.</p></details><details class="faq-item"><summary>Layar hitam — penonton tidak melihat video di MYM.fans</summary><p>Kameramu tidak terpilih sebagai sumber aktif di SplitCam, atau aplikasi lain menahannya. Tutup Zoom, Skype, atau OBS, pilih ulang webcam di daftar sumber SplitCam, dan pastikan preview menampilkan gambarmu sebelum tekan Go Live.</p></details><details class="faq-item"><summary>MYM.fans menolak stream key atau tidak terhubung</summary><p>Salin ulang stream key — spasi di akhir atau kunci lama yang sudah di-reset adalah penyebab paling umum. Pastikan URL server cocok dengan yang ditampilkan MYM.fans dan bahwa siaran encoder eksternal aktif di akunmu. Slider hijau di Stream Settings SplitCam menandakan kunci valid.</p></details><details class="faq-item"><summary>Tidak ada audio atau audio tidak sinkron di MYM.fans</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon aslimu di dalam sumber audio SplitCam. Jika audio tertinggal dari video, turunkan resolusi satu tingkat — encoder kelebihan beban dan audio menunggu frame yang terlambat.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Bagaimana SplitCam terhubung ke MYM.fans?</summary><p>Live MYM berbasis browser, jadi SplitCam terhubung sebagai kamera virtual — pilih SplitCam di selektor kamera. Tidak butuh stream key.</p></details><details class="faq-item"><summary>Bisakah pakai overlay dan beberapa kamera di MYM?</summary><p>Bisa — susun scene di SplitCam (kamera kedua, overlay, latar AI); MYM melihat scene jadi sebagai satu webcam.</p></details><details class="faq-item"><summary>Apakah MYM.fans mendukung OBS atau encoder eksternal?</summary><p>Live-nya kebanyakan berbasis browser/webcam. Kalau dashboard-mu menawarkan opsi stream-key, tempel ke kolom RTMP kustom SplitCam; kalau tidak pakai metode kamera virtual.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk MYM.fans?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Bagaimana SplitCam terhubung ke MYM.fans?</summary><p>Live MYM berbasis browser, jadi SplitCam terhubung sebagai kamera virtual — pilih SplitCam di selektor kamera. Tidak butuh stream key.</p></details><details class="faq-item"><summary>Bisakah pakai overlay dan beberapa kamera di MYM?</summary><p>Bisa — susun scene di SplitCam (kamera kedua, overlay, latar AI); MYM melihat scene jadi sebagai satu webcam.</p></details><details class="faq-item"><summary>Apakah MYM.fans mendukung OBS atau encoder eksternal?</summary><p>Live-nya kebanyakan berbasis browser/webcam. Kalau dashboard-mu menawarkan opsi stream-key, tempel ke kolom RTMP kustom SplitCam; kalau tidak pakai metode kamera virtual.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk MYM.fans?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu.</p></details><details class="faq-item"><summary>Berapa penghasilan model di MYM.fans?</summary><p>Penghasilan di MYM.fans bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi MYM.fans — periksa perjanjian model sebelum mulai siaran.</p></details><details class="faq-item"><summary>Apakah MYM.fans aman untuk broadcaster?</summary><p>MYM.fans mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda.</p></details><details class="faq-item"><summary>Dokumen apa yang dibutuhkan untuk menjadi model di MYM.fans?</summary><p>MYM.fans biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama.</p></details><details class="faq-item"><summary>Bisakah saya siaran di MYM.fans dari ponsel?</summary><p>MYM.fans biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel).</p></details><details class="faq-item"><summary>Bisakah saya menggunakan SplitCam sebagai virtual camera di MYM.fans?</summary><p>Ya — live MYM.fans berjalan di browser, jadi SplitCam terdaftar sebagai webcam bernama <strong>"SplitCam Video Driver"</strong>. Buka broadcaster MYM.fans, klik pemilih kamera di browser, lalu pilih SplitCam. Scene yang sudah Anda susun (overlay, kamera kedua, filter, AI background) sampai ke penonton sebagai satu feed webcam.</p></details></div>
 </section>
 
 <div class="section">

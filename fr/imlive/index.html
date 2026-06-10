@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Combien peut-on gagner en tant que créateur sur ImLive ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les revenus sur ImLive dépendent de la taille de l'audience, des heures de direct et de la générosité des pourboires. Un créateur actif gagne en général entre 200 et 3 000 $ par mois ; les meilleurs dépassent 10 000 $. Votre part de revenus suit la grille de commissions de ImLive — vérifiez l'accord créateur avant de passer en direct."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ImLive est-il sûr pour les créateurs en direct ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive exige une vérification d'âge et d'identité avant tout versement, ce qui protège les créateurs contre la fraude. Utilisez un pseudonyme, ne partagez jamais de données personnelles à la caméra, activez les blocages géographiques pour cacher votre direct depuis votre région d'origine, et traitez chaque demande de spectateur comme une transaction. Les surimpressions et l'arrière-plan IA de SplitCam permettent aussi de masquer ou de remplacer votre véritable décor."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quels documents faut-il pour devenir créateur sur ImLive ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive demande en général une pièce d'identité officielle avec photo (passeport, permis de conduire ou carte d'identité), un selfie avec le document en main, et un formulaire fiscal pour la cagnotte (W-9 aux États-Unis, W-8BEN hors États-Unis). La validation prend habituellement 24 à 72 heures ; une fois acceptée, vous pouvez passer en direct le jour même."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Puis-je diffuser sur ImLive depuis mon téléphone ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive propose en général une application mobile pour créateur ou un studio mobile via le navigateur, mais l'expérience reste limitée — pas de surimpressions, pas de seconde caméra, pas d'arrière-plan IA. Pour une qualité de production complète, diffusez depuis un ordinateur avec SplitCam et utilisez votre téléphone comme deuxième caméra (SplitCam accepte le flux IP-camera des téléphones)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Puis-je utiliser SplitCam comme caméra virtuelle sur ImLive ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui — le direct de ImLive s'exécute dans le navigateur, donc SplitCam apparaît comme une webcam appelée \"SplitCam Video Driver\". Ouvrez le studio créateur ImLive, cliquez sur le sélecteur de caméra dans le navigateur et choisissez SplitCam. Votre scène composée (surimpressions, seconde caméra, filtres, arrière-plan IA) parvient aux spectateurs comme un flux webcam unique."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Ton stream ImLive rame ou met en mémoire tampon",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Dépannage</h2><div class="faq-list"><details class="faq-item"><summary>Ton stream ImLive rame ou met en mémoire tampon</summary><p>La cause est presque toujours un débit supérieur à ce que ton upload supporte. Lance le test de vitesse intégré de SplitCam, puis règle le débit à environ 75% de ton upload mesuré — 3 500–6 000&nbsp;Kbps en 1080p, moins en 720p. Le lag disparaît dès que l'encodeur cesse de dépasser ta connexion.</p></details><details class="faq-item"><summary>Images perdues pendant la diffusion sur ImLive</summary><p>Les images perdues signifient que les paquets n'atteignent pas ImLive à temps — souvent du Wi-Fi instable. Passe à une connexion Ethernet filaire, ferme les applis gourmandes en bande passante et baisse un peu le débit. Un pic isolé est normal ; une hausse continue veut dire que la connexion ne suit pas.</p></details><details class="faq-item"><summary>Écran noir — les spectateurs ne voient pas de vidéo sur ImLive</summary><p>Ta caméra n'est pas sélectionnée comme source active dans SplitCam, ou une autre appli la retient. Ferme Zoom, Skype ou OBS, resélectionne ta webcam dans la liste des sources de SplitCam et vérifie que l'aperçu affiche ton flux avant d'appuyer sur Go Live.</p></details><details class="faq-item"><summary>ImLive refuse la clé de stream ou ne se connecte pas</summary><p>Recopie la clé de stream — un espace en trop ou une ancienne clé déjà régénérée est la cause habituelle. Vérifie que l'URL du serveur correspond à celle affichée par ImLive et que la diffusion par encodeur externe est activée sur ton compte. Un slider vert dans les Stream Settings de SplitCam confirme une clé valide.</p></details><details class="faq-item"><summary>Pas de son ou son désynchronisé sur ImLive</summary><p>Choisis SplitCam comme caméra ET comme micro, et sélectionne ton vrai micro dans la source audio de SplitCam. Si le son traîne derrière la vidéo, baisse la résolution d'un cran — l'encodeur est surchargé et le son attend des images en retard.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>ImLive utilise-t-il RTMP ou une clé de stream ?</summary><p>Non — ImLive utilise votre webcam directement via le navigateur. SplitCam se branche comme caméra virtuelle, donc rien à copier.</p></details><details class="faq-item"><summary>Comment choisir SplitCam sur ImLive ?</summary><p>Start Video Chat → Go To Settings → choisir SplitCam comme webcam et micro.</p></details><details class="faq-item"><summary>Puis-je utiliser des overlays sur ImLive ?</summary><p>Oui — composez-les dans la scène SplitCam ; ImLive affiche le résultat composé.</p></details><details class="faq-item"><summary>SplitCam est-il gratuit pour ImLive ?</summary><p>Oui — gratuit, sans filigrane et sans limite de temps. Comme caméra virtuelle pour ImLive, il n'ajoute ni coût ni branding à votre chat vidéo.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>ImLive utilise-t-il RTMP ou une clé de stream ?</summary><p>Non — ImLive utilise votre webcam directement via le navigateur. SplitCam se branche comme caméra virtuelle, donc rien à copier.</p></details><details class="faq-item"><summary>Comment choisir SplitCam sur ImLive ?</summary><p>Start Video Chat → Go To Settings → choisir SplitCam comme webcam et micro.</p></details><details class="faq-item"><summary>Puis-je utiliser des overlays sur ImLive ?</summary><p>Oui — composez-les dans la scène SplitCam ; ImLive affiche le résultat composé.</p></details><details class="faq-item"><summary>SplitCam est-il gratuit pour ImLive ?</summary><p>Oui — gratuit, sans filigrane et sans limite de temps. Comme caméra virtuelle pour ImLive, il n'ajoute ni coût ni branding à votre chat vidéo.</p></details><details class="faq-item"><summary>Combien peut-on gagner en tant que créateur sur ImLive ?</summary><p>Les revenus sur ImLive dépendent de la taille de l'audience, des heures de direct et de la générosité des pourboires. Un créateur actif gagne en général entre 200 et 3 000 $ par mois ; les meilleurs dépassent 10 000 $. Votre part de revenus suit la grille de commissions de ImLive — vérifiez l'accord créateur avant de passer en direct.</p></details><details class="faq-item"><summary>ImLive est-il sûr pour les créateurs en direct ?</summary><p>ImLive exige une vérification d'âge et d'identité avant tout versement, ce qui protège les créateurs contre la fraude. Utilisez un pseudonyme, ne partagez jamais de données personnelles à la caméra, activez les blocages géographiques pour cacher votre direct depuis votre région d'origine, et traitez chaque demande de spectateur comme une transaction. Les surimpressions et l'arrière-plan IA de SplitCam permettent aussi de masquer ou de remplacer votre véritable décor.</p></details><details class="faq-item"><summary>Quels documents faut-il pour devenir créateur sur ImLive ?</summary><p>ImLive demande en général une pièce d'identité officielle avec photo (passeport, permis de conduire ou carte d'identité), un selfie avec le document en main, et un formulaire fiscal pour la cagnotte (W-9 aux États-Unis, W-8BEN hors États-Unis). La validation prend habituellement 24 à 72 heures ; une fois acceptée, vous pouvez passer en direct le jour même.</p></details><details class="faq-item"><summary>Puis-je diffuser sur ImLive depuis mon téléphone ?</summary><p>ImLive propose en général une application mobile pour créateur ou un studio mobile via le navigateur, mais l'expérience reste limitée — pas de surimpressions, pas de seconde caméra, pas d'arrière-plan IA. Pour une qualité de production complète, diffusez depuis un ordinateur avec SplitCam et utilisez votre téléphone comme deuxième caméra (SplitCam accepte le flux IP-camera des téléphones).</p></details><details class="faq-item"><summary>Puis-je utiliser SplitCam comme caméra virtuelle sur ImLive ?</summary><p>Oui — le direct de ImLive s'exécute dans le navigateur, donc SplitCam apparaît comme une webcam appelée <strong>"SplitCam Video Driver"</strong>. Ouvrez le studio créateur ImLive, cliquez sur le sélecteur de caméra dans le navigateur et choisissez SplitCam. Votre scène composée (surimpressions, seconde caméra, filtres, arrière-plan IA) parvient aux spectateurs comme un flux webcam unique.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Support officiel — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">Nous sommes un guide indépendant. Pour les problèmes de compte, de paiement ou techniques, contactez directement le support officiel de la plateforme.</p></section>
 <div class="section">

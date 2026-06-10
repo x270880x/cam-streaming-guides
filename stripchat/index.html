@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "How much can models earn on Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Earnings on Stripchat depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows Stripchat's commission structure — check the model agreement before going live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Stripchat safe for broadcasters?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What documents do I need to become a model on Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I stream on Stripchat from my phone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Stripchat support OBS or an external encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — Stripchat provides an RTMP server URL and a stream key in the broadcaster panel. Paste both into SplitCam's Stream Settings → Custom RTMP, set 1920×1080 at 30 fps with a 4,000–5,000 Kbps bitrate, and click Go Live. The Custom RTMP route gives you full SplitCam scene composition (multi-camera, overlays, filters)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Your Stripchat stream lags or buffers",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your Stripchat stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the Stripchat broadcast</summary><p>Dropped frames mean packets aren't reaching Stripchat in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on Stripchat</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>Stripchat rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one Stripchat shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on Stripchat</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Does Stripchat recommend OBS / external software?</summary><p>Yes — Stripchat's own FAQ advises using external broadcast software like OBS "to achieve better video and audio quality." SplitCam works the same way.</p></details><details class="faq-item"><summary>How do I switch Stripchat to external software?</summary><p>In the Broadcast Center choose Switch to External Broadcast Software (OBS), then open the external software settings to reveal the stream key (token).</p></details><details class="faq-item"><summary>What bitrate for Stripchat?</summary><p>Its RTMP ingest accepts up to ~6,000 Kbps with a 2-second keyframe interval. 3,500–6,000 at 1080p is ideal — but you need well above the 2 Mbps minimum, especially with OBS-style streaming.</p></details><details class="faq-item"><summary>Is SplitCam free for Stripchat?</summary><p>Yes — no licence fee, watermark or time limit, so even long interactive Stripchat shows cost nothing on the encoder side.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Does Stripchat recommend OBS / external software?</summary><p>Yes — Stripchat's own FAQ advises using external broadcast software like OBS "to achieve better video and audio quality." SplitCam works the same way.</p></details><details class="faq-item"><summary>How do I switch Stripchat to external software?</summary><p>In the Broadcast Center choose Switch to External Broadcast Software (OBS), then open the external software settings to reveal the stream key (token).</p></details><details class="faq-item"><summary>What bitrate for Stripchat?</summary><p>Its RTMP ingest accepts up to ~6,000 Kbps with a 2-second keyframe interval. 3,500–6,000 at 1080p is ideal — but you need well above the 2 Mbps minimum, especially with OBS-style streaming.</p></details><details class="faq-item"><summary>Is SplitCam free for Stripchat?</summary><p>Yes — no licence fee, watermark or time limit, so even long interactive Stripchat shows cost nothing on the encoder side.</p></details><details class="faq-item"><summary>How much can models earn on Stripchat?</summary><p>Earnings on Stripchat depend on audience size, hours streamed and tipping behaviour. Active broadcasters typically take home $200–$3,000 per month; top performers reach $10,000+. Your revenue share follows Stripchat's commission structure — check the model agreement before going live.</p></details><details class="faq-item"><summary>Is Stripchat safe for broadcasters?</summary><p>Stripchat requires age and ID verification before payout, which protects models from fraud. Use a stage name, never share personal data on camera, enable geo-blocks to hide your stream from your home region, and treat every viewer request as transactional. SplitCam's overlays and AI background can also hide or replace your real surroundings.</p></details><details class="faq-item"><summary>What documents do I need to become a model on Stripchat?</summary><p>Stripchat typically requires a government-issued photo ID (passport, driver's license or ID card), a selfie holding the ID, and a tax/payout form (W-9 for US, W-8BEN for non-US). Approval usually takes 24–72 hours; once approved you can go live the same day.</p></details><details class="faq-item"><summary>Can I stream on Stripchat from my phone?</summary><p>Stripchat usually offers a mobile broadcaster app or a mobile-web broadcaster, but the experience is limited — no overlays, no second camera, no AI background. For full production quality, broadcast from a computer with SplitCam and use your phone as a second camera (SplitCam accepts IP-camera input from phones).</p></details><details class="faq-item"><summary>Does Stripchat support OBS or an external encoder?</summary><p>Yes — Stripchat provides an RTMP server URL and a stream key in the broadcaster panel. Paste both into SplitCam's <strong>Stream Settings → Custom RTMP</strong>, set 1920×1080 at 30 fps with a 4,000–5,000 Kbps bitrate, and click <strong>Go Live</strong>. The Custom RTMP route gives you full SplitCam scene composition (multi-camera, overlays, filters).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Official support — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">We are an independent guide. For account, payment or technical issues contact the platform's official support directly.</p></section>
 <div class="section">

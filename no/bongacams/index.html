@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor mye kan modeller tjene på BongaCams?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Inntektene på BongaCams avhenger av publikumsstørrelse, antall timer sendt og tipping-vaner. Aktive kringkastere tjener vanligvis $200–$3 000 i måneden; toppmodeller når $10 000+. Din andel av inntekten følger BongaCamss provisjonsstruktur — sjekk modellavtalen før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er BongaCams trygt for kringkastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "BongaCams krever alders- og ID-verifisering før utbetaling, noe som beskytter modeller mot svindel. Bruk et scenenavn, del aldri personlige data på kamera, aktiver geo-blokkering for å skjule strømmen fra hjemregionen din, og behandle hver seerforespørsel som en transaksjon. SplitCams overlegg og AI-bakgrunn kan også skjule eller erstatte de virkelige omgivelsene dine."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter trenger jeg for å bli modell på BongaCams?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "BongaCams krever vanligvis et offentlig utstedt foto-ID (pass, førerkort eller ID-kort), en selfie med ID-en i hånden, og et skatte-/utbetalingsskjema (W-9 for USA, W-8BEN for ikke-amerikanske). Godkjenning tar vanligvis 24–72 timer; når du er godkjent kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg strømme på BongaCams fra mobilen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "BongaCams tilbyr vanligvis en mobil kringkasterapp eller en mobil-web-kringkaster, men opplevelsen er begrenset — ingen overlegg, ingen andre kamera, ingen AI-bakgrunn. For full produksjonskvalitet, send fra en datamaskin med SplitCam og bruk telefonen som andre kamera (SplitCam aksepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Støtter BongaCams OBS eller en ekstern encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — BongaCams oppgir en RTMP-server-URL og en strømnøkkel i kringkasterpanelet. Lim inn begge i SplitCams Stream Settings → Custom RTMP, sett 1920×1080 ved 30 fps med 4 000–5 000 Kbps bitrate, og klikk Go Live. Custom RTMP-ruten gir deg full SplitCam-scenekomposisjon (flerkamera, overlegg, filtre)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "BongaCams-strømmen din henger eller bufrer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Feilsøking</h2><div class="faq-list"><details class="faq-item"><summary>BongaCams-strømmen din henger eller bufrer</summary><p>Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000&nbsp;Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din.</p></details><details class="faq-item"><summary>Tapte frames under BongaCams-sendingen</summary><p>Tapte frames betyr at pakkene ikke når BongaCams i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge.</p></details><details class="faq-item"><summary>Svart skjerm — seerne ser ingen video på BongaCams</summary><p>Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live.</p></details><details class="faq-item"><summary>BongaCams avviser strømnøkkelen eller kobler ikke til</summary><p>Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den BongaCams viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ute av synk på BongaCams</summary><p>Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Hvorfor vises ikke External Encoder-knappen på BongaCams?</summary><p>Ekstern koding er ikke aktiv som standard på hver konto — kontakt BongaCams-support for å aktivere den, og knappen vises i Broadcast settings.</p></details><details class="faq-item"><summary>Må jeg verifisere BongaCams-kontoen?</summary><p>Ja — sending krever 18+, offisiell ID for aldersbekreftelse og kontogodkjenning før live.</p></details><details class="faq-item"><summary>Hvilken bitrate til BongaCams?</summary><p>BongaCams' RTMP ingest begrenser video-bitrate til omtrent 6 000 Kbps med 2-sekunds keyframe — 3 500–6 000 ved 1080p er ideell sone; test opplastning først.</p></details><details class="faq-item"><summary>Er SplitCam gratis for BongaCams?</summary><p>Ja — helt gratis, uten vannmerke og uten tidsgrense, så enkoderen reduserer ikke token-inntektene på BongaCams.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Hvorfor vises ikke External Encoder-knappen på BongaCams?</summary><p>Ekstern koding er ikke aktiv som standard på hver konto — kontakt BongaCams-support for å aktivere den, og knappen vises i Broadcast settings.</p></details><details class="faq-item"><summary>Må jeg verifisere BongaCams-kontoen?</summary><p>Ja — sending krever 18+, offisiell ID for aldersbekreftelse og kontogodkjenning før live.</p></details><details class="faq-item"><summary>Hvilken bitrate til BongaCams?</summary><p>BongaCams' RTMP ingest begrenser video-bitrate til omtrent 6 000 Kbps med 2-sekunds keyframe — 3 500–6 000 ved 1080p er ideell sone; test opplastning først.</p></details><details class="faq-item"><summary>Er SplitCam gratis for BongaCams?</summary><p>Ja — helt gratis, uten vannmerke og uten tidsgrense, så enkoderen reduserer ikke token-inntektene på BongaCams.</p></details><details class="faq-item"><summary>Hvor mye kan modeller tjene på BongaCams?</summary><p>Inntektene på BongaCams avhenger av publikumsstørrelse, antall timer sendt og tipping-vaner. Aktive kringkastere tjener vanligvis $200–$3 000 i måneden; toppmodeller når $10 000+. Din andel av inntekten følger BongaCamss provisjonsstruktur — sjekk modellavtalen før du går live.</p></details><details class="faq-item"><summary>Er BongaCams trygt for kringkastere?</summary><p>BongaCams krever alders- og ID-verifisering før utbetaling, noe som beskytter modeller mot svindel. Bruk et scenenavn, del aldri personlige data på kamera, aktiver geo-blokkering for å skjule strømmen fra hjemregionen din, og behandle hver seerforespørsel som en transaksjon. SplitCams overlegg og AI-bakgrunn kan også skjule eller erstatte de virkelige omgivelsene dine.</p></details><details class="faq-item"><summary>Hvilke dokumenter trenger jeg for å bli modell på BongaCams?</summary><p>BongaCams krever vanligvis et offentlig utstedt foto-ID (pass, førerkort eller ID-kort), en selfie med ID-en i hånden, og et skatte-/utbetalingsskjema (W-9 for USA, W-8BEN for ikke-amerikanske). Godkjenning tar vanligvis 24–72 timer; når du er godkjent kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg strømme på BongaCams fra mobilen?</summary><p>BongaCams tilbyr vanligvis en mobil kringkasterapp eller en mobil-web-kringkaster, men opplevelsen er begrenset — ingen overlegg, ingen andre kamera, ingen AI-bakgrunn. For full produksjonskvalitet, send fra en datamaskin med SplitCam og bruk telefonen som andre kamera (SplitCam aksepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Støtter BongaCams OBS eller en ekstern encoder?</summary><p>Ja — BongaCams oppgir en RTMP-server-URL og en strømnøkkel i kringkasterpanelet. Lim inn begge i SplitCams <strong>Stream Settings → Custom RTMP</strong>, sett 1920×1080 ved 30 fps med 4 000–5 000 Kbps bitrate, og klikk <strong>Go Live</strong>. Custom RTMP-ruten gir deg full SplitCam-scenekomposisjon (flerkamera, overlegg, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Offisiell støtte — BongaCams</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@bongacams.com">support@bongacams.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://bongacams.com/contacts" rel="nofollow noopener" target="_blank">https://bongacams.com/contacts</a></li></ul><p class="sp-note">Vi er en uavhengig guide. For konto-, betalings- eller tekniske problemer kontakt plattformens offisielle støtte direkte.</p></section>
 <div class="section">

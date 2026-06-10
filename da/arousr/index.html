@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på Arousr?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på Arousr afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger Arousrs kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er Arousr sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Arousr kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på Arousr?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Arousr kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på Arousr fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Arousr tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg bruge SplitCam som et virtuelt kamera på Arousr?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — Arousrs live kører i browseren, så SplitCam registreres som et webcam kaldet \"SplitCam Video Driver\". Åbn Arousr-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit Arousr-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit Arousr-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under Arousr-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til Arousr i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på Arousr</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>Arousr afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Arousr viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på Arousr</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Hvordan forbindes SplitCam med Arousr?</summary><p>Som virtuelt kamera. Arousr-videochat kører i browseren på desktop — vælg SplitCam i kamera-vælgeren. Ingen stream key påkrævet.</p></details><details class="faq-item"><summary>Understøtter Arousr OBS?</summary><p>Arousr er browser-baseret, så OBS tilsluttes på samme måde som SplitCam — via virtuelt kamera. SplitCam er det gratis valg uden vandmærke.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays på en sexting + video-session?</summary><p>Ja — komponér scenen i SplitCam (lys, overlay, ekstra kamera), og Arousr ser ét webkamera. Hold overlays lette under 1-til-1.</p></details><details class="faq-item"><summary>Er SplitCam gratis til Arousr?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Hvordan forbindes SplitCam med Arousr?</summary><p>Som virtuelt kamera. Arousr-videochat kører i browseren på desktop — vælg SplitCam i kamera-vælgeren. Ingen stream key påkrævet.</p></details><details class="faq-item"><summary>Understøtter Arousr OBS?</summary><p>Arousr er browser-baseret, så OBS tilsluttes på samme måde som SplitCam — via virtuelt kamera. SplitCam er det gratis valg uden vandmærke.</p></details><details class="faq-item"><summary>Kan jeg bruge overlays på en sexting + video-session?</summary><p>Ja — komponér scenen i SplitCam (lys, overlay, ekstra kamera), og Arousr ser ét webkamera. Hold overlays lette under 1-til-1.</p></details><details class="faq-item"><summary>Er SplitCam gratis til Arousr?</summary><p>Ja — gratis, uden vandmærke og uden tidsbegrænsning.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på Arousr?</summary><p>Indtjeningen på Arousr afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger Arousrs kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er Arousr sikkert for broadcastere?</summary><p>Arousr kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på Arousr?</summary><p>Arousr kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på Arousr fra min telefon?</summary><p>Arousr tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Kan jeg bruge SplitCam som et virtuelt kamera på Arousr?</summary><p>Ja — Arousrs live kører i browseren, så SplitCam registreres som et webcam kaldet <strong>"SplitCam Video Driver"</strong>. Åbn Arousr-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed.</p></details></div>
 </section>
 
 <div class="section">

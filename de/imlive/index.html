@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Wie viel können Modelle auf ImLive verdienen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Einnahmen auf ImLive hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von ImLive — prüfe den Modellvertrag, bevor du live gehst."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist ImLive sicher für Broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Dokumente brauche ich, um Modell auf ImLive zu werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich auf ImLive vom Handy aus streamen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich SplitCam als virtuelle Kamera auf ImLive verwenden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — der Live-Modus von ImLive läuft im Browser, daher meldet sich SplitCam als Webcam namens \"SplitCam Video Driver\" an. Öffne den Broadcaster von ImLive, klicke im Browser auf die Kameraauswahl und wähle SplitCam. Deine komponierte Szene (Overlays, Zweitkamera, Filter, KI-Hintergrund, Premium-Inhalte) erreicht die Zuschauer als einzelner Webcam-Feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dein ImLive-Stream ruckelt oder puffert",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein ImLive-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der ImLive-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete ImLive nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf ImLive</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>ImLive lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von ImLive angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf ImLive</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Nutzt ImLive RTMP oder einen Stream-Key?</summary><p>Nein — ImLive nutzt deine Webcam direkt über den Browser. SplitCam verbindet sich als virtuelle Kamera, es gibt keinen Key zu kopieren.</p></details><details class="faq-item"><summary>Wie wähle ich SplitCam auf ImLive?</summary><p>Start Video Chat → Go To Settings → SplitCam als Webcam und Mikrofon wählen.</p></details><details class="faq-item"><summary>Kann ich Overlays auf ImLive nutzen?</summary><p>Ja — sie in die SplitCam-Szene einbauen; ImLive zeigt das komponierte Ergebnis.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für ImLive?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Als virtuelle Kamera für ImLive bringt es weder Kosten noch Branding in deinen Videochat.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Nutzt ImLive RTMP oder einen Stream-Key?</summary><p>Nein — ImLive nutzt deine Webcam direkt über den Browser. SplitCam verbindet sich als virtuelle Kamera, es gibt keinen Key zu kopieren.</p></details><details class="faq-item"><summary>Wie wähle ich SplitCam auf ImLive?</summary><p>Start Video Chat → Go To Settings → SplitCam als Webcam und Mikrofon wählen.</p></details><details class="faq-item"><summary>Kann ich Overlays auf ImLive nutzen?</summary><p>Ja — sie in die SplitCam-Szene einbauen; ImLive zeigt das komponierte Ergebnis.</p></details><details class="faq-item"><summary>Ist SplitCam kostenlos für ImLive?</summary><p>Ja — kostenlos, ohne Wasserzeichen und ohne Zeitlimit. Als virtuelle Kamera für ImLive bringt es weder Kosten noch Branding in deinen Videochat.</p></details><details class="faq-item"><summary>Wie viel können Modelle auf ImLive verdienen?</summary><p>Die Einnahmen auf ImLive hängen von der Zuschauerzahl, den gestreamten Stunden und dem Trinkgeld-Verhalten ab. Aktive Broadcaster verdienen typischerweise 200–3.000 $ pro Monat; Top-Performer erreichen 10.000 $ und mehr. Dein Umsatzanteil richtet sich nach der Provisionsstruktur von ImLive — prüfe den Modellvertrag, bevor du live gehst.</p></details><details class="faq-item"><summary>Ist ImLive sicher für Broadcaster?</summary><p>ImLive verlangt vor der Auszahlung eine Alters- und Ausweisprüfung (Modell-Verifizierung), die Modelle vor Betrug schützt. Verwende einen Künstlernamen, gib niemals persönliche Daten vor der Kamera preis, aktiviere Geo-Sperren, um deinen Stream in deiner Heimatregion auszublenden, und behandle jede Zuschaueranfrage als geschäftlich. Die Overlays und der KI-Hintergrund von SplitCam können deine echte Umgebung zusätzlich verbergen oder ersetzen.</p></details><details class="faq-item"><summary>Welche Dokumente brauche ich, um Modell auf ImLive zu werden?</summary><p>ImLive verlangt in der Regel einen amtlichen Lichtbildausweis (Reisepass, Führerschein oder Personalausweis), ein Selfie mit dem Ausweis in der Hand und ein Steuer-/Auszahlungsformular (W-9 für die USA, W-8BEN für Nicht-US-Modelle). Die Freigabe dauert üblicherweise 24–72 Stunden; nach der Bestätigung kannst du noch am selben Tag live gehen.</p></details><details class="faq-item"><summary>Kann ich auf ImLive vom Handy aus streamen?</summary><p>ImLive bietet meist eine mobile Broadcaster-App oder eine mobile Web-Variante an, doch der Funktionsumfang ist eingeschränkt — keine Overlays, keine zweite Kamera, kein KI-Hintergrund. Für volle Produktionsqualität sendest du vom Computer mit SplitCam und nutzt dein Handy als Zweitkamera (SplitCam akzeptiert IP-Kamera-Eingang vom Handy).</p></details><details class="faq-item"><summary>Kann ich SplitCam als virtuelle Kamera auf ImLive verwenden?</summary><p>Ja — der Live-Modus von ImLive läuft im Browser, daher meldet sich SplitCam als Webcam namens <strong>"SplitCam Video Driver"</strong> an. Öffne den Broadcaster von ImLive, klicke im Browser auf die Kameraauswahl und wähle SplitCam. Deine komponierte Szene (Overlays, Zweitkamera, Filter, KI-Hintergrund, Premium-Inhalte) erreicht die Zuschauer als einzelner Webcam-Feed.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Offizieller Support — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">Wir sind ein unabhängiger Guide. Bei Konto-, Zahlungs- oder technischen Problemen wende dich direkt an den offiziellen Support der Plattform.</p></section>
 <div class="section">

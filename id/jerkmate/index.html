@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Berapa penghasilan model di Jerkmate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Penghasilan di Jerkmate bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi Jerkmate — periksa perjanjian model sebelum mulai siaran."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah Jerkmate aman untuk broadcaster?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Jerkmate mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dokumen apa yang dibutuhkan untuk menjadi model di Jerkmate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Jerkmate biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisakah saya siaran di Jerkmate dari ponsel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Jerkmate biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah Jerkmate mendukung OBS atau encoder eksternal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ya — Jerkmate menyediakan URL server RTMP dan stream key di panel broadcaster. Tempelkan keduanya ke Stream Settings → Custom RTMP SplitCam, atur 1920×1080 pada 30 fps dengan bitrate 4.000–5.000 Kbps, dan klik Go Live. Jalur Custom RTMP memberi Anda komposisi scene SplitCam penuh (multi-kamera, overlay, filter)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Siaran Jerkmate tersendat atau buffering",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Pemecahan masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran Jerkmate tersendat atau buffering</summary><p>Hampir selalu bitrate diatur lebih tinggi dari yang mampu ditanggung upload-mu. Jalankan tes kecepatan bawaan SplitCam, lalu setel bitrate ke sekitar 75% dari upload terukur — 3.500–6.000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersendat hilang begitu encoder berhenti melampaui koneksimu.</p></details><details class="faq-item"><summary>Frame hilang saat siaran Jerkmate</summary><p>Frame hilang berarti paket tidak sampai ke Jerkmate tepat waktu — biasanya Wi-Fi tidak stabil. Pindah ke Ethernet kabel, tutup aplikasi pemakan bandwidth, dan turunkan bitrate sedikit. Satu lonjakan tidak masalah; kenaikan terus-menerus berarti koneksi tidak mengejar.</p></details><details class="faq-item"><summary>Layar hitam — penonton tidak melihat video di Jerkmate</summary><p>Kameramu tidak terpilih sebagai sumber aktif di SplitCam, atau aplikasi lain menahannya. Tutup Zoom, Skype, atau OBS, pilih ulang webcam di daftar sumber SplitCam, dan pastikan preview menampilkan gambarmu sebelum tekan Go Live.</p></details><details class="faq-item"><summary>Jerkmate menolak stream key atau tidak terhubung</summary><p>Salin ulang stream key — spasi di akhir atau kunci lama yang sudah di-reset adalah penyebab paling umum. Pastikan URL server cocok dengan yang ditampilkan Jerkmate dan bahwa siaran encoder eksternal aktif di akunmu. Slider hijau di Stream Settings SplitCam menandakan kunci valid.</p></details><details class="faq-item"><summary>Tidak ada audio atau audio tidak sinkron di Jerkmate</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon aslimu di dalam sumber audio SplitCam. Jika audio tertinggal dari video, turunkan resolusi satu tingkat — encoder kelebihan beban dan audio menunggu frame yang terlambat.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Apakah Jerkmate punya broadcaster atau stream key sendiri?</summary><p>Tidak — Jerkmate mengambil model live dari jaringan Streamate. Kamu siaran sebagai model jaringan Streamate via SM Connect, dan show-mu muncul di Jerkmate otomatis.</p></details><details class="faq-item"><summary>Bagaimana saya mendapatkan stream key Jerkmate?</summary><p>Lewat SM Connect di sisi model jaringan Streamate: setujui ketentuan → Start Show → salin kunci. Tempel ke kanal Streamate terintegrasi SplitCam — tanpa URL RTMP manual.</p></details><details class="faq-item"><summary>Bitrate berapa untuk Jerkmate?</summary><p>Kunci 1080p di 30 fps. Feed jaringan bersifat adaptif, jadi bitrate yang turun saat gambar diam itu normal. Jalankan tes kecepatan SplitCam dan pakai koneksi kabel.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk Jerkmate?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu. Streamate (yang mengaliri Jerkmate) adalah kanal terintegrasi di SplitCam, jadi tidak ada biaya encoder terpisah.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Apakah Jerkmate punya broadcaster atau stream key sendiri?</summary><p>Tidak — Jerkmate mengambil model live dari jaringan Streamate. Kamu siaran sebagai model jaringan Streamate via SM Connect, dan show-mu muncul di Jerkmate otomatis.</p></details><details class="faq-item"><summary>Bagaimana saya mendapatkan stream key Jerkmate?</summary><p>Lewat SM Connect di sisi model jaringan Streamate: setujui ketentuan → Start Show → salin kunci. Tempel ke kanal Streamate terintegrasi SplitCam — tanpa URL RTMP manual.</p></details><details class="faq-item"><summary>Bitrate berapa untuk Jerkmate?</summary><p>Kunci 1080p di 30 fps. Feed jaringan bersifat adaptif, jadi bitrate yang turun saat gambar diam itu normal. Jalankan tes kecepatan SplitCam dan pakai koneksi kabel.</p></details><details class="faq-item"><summary>Apakah SplitCam gratis untuk Jerkmate?</summary><p>Ya — SplitCam gratis, tanpa watermark dan tanpa batas waktu. Streamate (yang mengaliri Jerkmate) adalah kanal terintegrasi di SplitCam, jadi tidak ada biaya encoder terpisah.</p></details><details class="faq-item"><summary>Berapa penghasilan model di Jerkmate?</summary><p>Penghasilan di Jerkmate bergantung pada ukuran audiens, jam siaran, dan kebiasaan memberi tip. Broadcaster aktif biasanya membawa pulang $200–$3.000 per bulan; performer top mencapai $10.000+. Bagian pendapatan Anda mengikuti struktur komisi Jerkmate — periksa perjanjian model sebelum mulai siaran.</p></details><details class="faq-item"><summary>Apakah Jerkmate aman untuk broadcaster?</summary><p>Jerkmate mewajibkan verifikasi usia dan identitas sebelum pembayaran, yang melindungi model dari penipuan. Gunakan nama panggung, jangan pernah membagikan data pribadi di kamera, aktifkan geo-block untuk menyembunyikan siaran dari wilayah asal Anda, dan perlakukan setiap permintaan penonton sebagai transaksi. Overlay dan AI background SplitCam juga dapat menyembunyikan atau mengganti lingkungan asli Anda.</p></details><details class="faq-item"><summary>Dokumen apa yang dibutuhkan untuk menjadi model di Jerkmate?</summary><p>Jerkmate biasanya membutuhkan kartu identitas berfoto yang dikeluarkan pemerintah (paspor, SIM, atau KTP), selfie sambil memegang ID, dan formulir pajak/pembayaran (W-9 untuk AS, W-8BEN untuk non-AS). Persetujuan biasanya memakan waktu 24–72 jam; setelah disetujui Anda bisa langsung siaran di hari yang sama.</p></details><details class="faq-item"><summary>Bisakah saya siaran di Jerkmate dari ponsel?</summary><p>Jerkmate biasanya menawarkan aplikasi broadcaster mobile atau broadcaster mobile-web, tetapi pengalamannya terbatas — tanpa overlay, tanpa kamera kedua, tanpa AI background. Untuk kualitas produksi penuh, siaran dari komputer dengan SplitCam dan gunakan ponsel Anda sebagai kamera kedua (SplitCam menerima input IP-camera dari ponsel).</p></details><details class="faq-item"><summary>Apakah Jerkmate mendukung OBS atau encoder eksternal?</summary><p>Ya — Jerkmate menyediakan URL server RTMP dan stream key di panel broadcaster. Tempelkan keduanya ke <strong>Stream Settings → Custom RTMP</strong> SplitCam, atur 1920×1080 pada 30 fps dengan bitrate 4.000–5.000 Kbps, dan klik <strong>Go Live</strong>. Jalur Custom RTMP memberi Anda komposisi scene SplitCam penuh (multi-kamera, overlay, filter).</p></details></div>
 </section>
 
 <div class="section">

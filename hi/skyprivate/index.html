@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "SkyPrivate पर मॉडल कितनी कमाई कर सकते हैं?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate पर कमाई दर्शकों की संख्या, स्ट्रीमिंग के घंटों और टिप देने के व्यवहार पर निर्भर करती है। सक्रिय ब्रॉडकास्टर आमतौर पर हर महीने $200–$3,000 कमाते हैं; शीर्ष कलाकार $10,000+ तक पहुँचते हैं। आपकी आय का हिस्सा SkyPrivate की कमीशन संरचना के अनुसार होता है — लाइव होने से पहले मॉडल अनुबंध अवश्य देखें।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "क्या SkyPrivate ब्रॉडकास्टरों के लिए सुरक्षित है?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate भुगतान से पहले आयु और पहचान सत्यापन माँगता है, जो मॉडलों को धोखाधड़ी से बचाता है। स्टेज नाम का उपयोग करें, कैमरे पर कभी भी व्यक्तिगत डेटा साझा न करें, अपने घर के क्षेत्र से स्ट्रीम छिपाने के लिए geo-blocks सक्षम करें, और हर दर्शक के अनुरोध को लेन-देन के रूप में मानें। SplitCam के overlays और AI background आपके वास्तविक परिवेश को छिपाने या बदलने में भी मदद कर सकते हैं।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SkyPrivate पर मॉडल बनने के लिए मुझे कौन से दस्तावेज़ चाहिए?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate को आमतौर पर सरकार द्वारा जारी फोटो आईडी (passport, driver's license या ID card), आईडी पकड़े हुए एक selfie, और एक tax/payout फॉर्म (अमेरिका के लिए W-9, गैर-अमेरिकी के लिए W-8BEN) की आवश्यकता होती है। स्वीकृति में आमतौर पर 24–72 घंटे लगते हैं; स्वीकृति मिलते ही आप उसी दिन लाइव हो सकते हैं।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "क्या मैं अपने फोन से SkyPrivate पर स्ट्रीम कर सकता हूँ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate आमतौर पर एक mobile broadcaster app या mobile-web broadcaster प्रदान करता है, लेकिन अनुभव सीमित होता है — कोई overlays नहीं, कोई दूसरा कैमरा नहीं, कोई AI background नहीं। पूर्ण प्रोडक्शन क्वालिटी के लिए, SplitCam वाले कंप्यूटर से ब्रॉडकास्ट करें और अपने फोन को दूसरे कैमरे के रूप में उपयोग करें (SplitCam फोन से IP-camera input स्वीकार करता है)।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "क्या मैं SkyPrivate पर SplitCam को virtual camera के रूप में उपयोग कर सकता हूँ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "हाँ — SkyPrivate का लाइव browser में चलता है, इसलिए SplitCam एक webcam के रूप में पंजीकृत होता है जिसे \"SplitCam Video Driver\" कहा जाता है। SkyPrivate broadcaster खोलें, browser में camera selector पर क्लिक करें, और SplitCam चुनें। आपका composed scene (overlays, दूसरा कैमरा, filters, AI background) एकल webcam feed के रूप में दर्शकों तक पहुँचता है।"
+     }
+    },
+    {
+     "@type": "Question",
      "name": "SkyPrivate स्ट्रीम रुक-रुक रही है या बफ़र हो रही है",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">समस्या निवारण</h2><div class="faq-list"><details class="faq-item"><summary>SkyPrivate स्ट्रीम रुक-रुक रही है या बफ़र हो रही है</summary><p>लगभग हमेशा बिटरेट आपके अपलोड से ज़्यादा सेट होता है। SplitCam का बिल्ट-इन स्पीड टेस्ट चलाएं, फिर बिटरेट मापे गए अपलोड का ~75% सेट करें — 1080p के लिए 3500–6000&nbsp;Kbps। जब एन्कोडर आपकी लाइन से ज़्यादा नहीं जाता तो रुकना बंद हो जाता है।</p></details><details class="faq-item"><summary>SkyPrivate स्ट्रीम के दौरान फ्रेम खो रहे हैं</summary><p>खोए फ्रेम का मतलब है पैकेट समय पर SkyPrivate नहीं पहुंचते — आमतौर पर अस्थिर Wi-Fi। वायर्ड Ethernet पर स्विच करें, बैंडविड्थ खाने वाले ऐप बंद करें और बिटरेट थोड़ा कम करें।</p></details><details class="faq-item"><summary>ब्लैक स्क्रीन — दर्शक SkyPrivate पर वीडियो नहीं देख सकते</summary><p>आपका कैमरा SplitCam में एक्टिव सोर्स नहीं चुना गया, या कोई दूसरा ऐप इसे रोक रहा है। Zoom, Skype या OBS बंद करें, SplitCam में वेबकैम दोबारा चुनें।</p></details><details class="faq-item"><summary>SkyPrivate स्ट्रीम की रिजेक्ट कर रहा है या कनेक्ट नहीं हो रहा</summary><p>स्ट्रीम की दोबारा कॉपी करें — अंत में स्पेस या पुरानी रीसेट की सबसे आम कारण हैं। सुनिश्चित करें सर्वर URL वही है जो SkyPrivate दिखाता है।</p></details><details class="faq-item"><summary>SkyPrivate पर कोई ऑडियो नहीं या ऑडियो सिंक नहीं है</summary><p>SplitCam को कैमरा और माइक्रोफ़ोन दोनों के रूप में चुनें, और SplitCam के ऑडियो सोर्स में अपना असली माइक्रोफ़ोन चुनें। अगर ऑडियो वीडियो से पीछे है, रेज़ॉल्यूशन एक स्तर कम करें।</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">अक्सर पूछे जाने वाले प्रश्न</h2>
-  <div class="faq-list"><details class="faq-item"><summary>क्या SkyPrivate RTMP या stream key इस्तेमाल करता है?</summary><p>दोनों में से कोई नहीं। SkyPrivate बिलिंग और बुकिंग संभालता है; असली वीडियो Skype पर चलती है। आपको RTMP सर्वर URL या stream key की ज़रूरत नहीं — बस Skype के अंदर SplitCam को अपना कैमरा सेट करें।</p></details><details class="faq-item"><summary>SkyPrivate के लिए Skype में SplitCam कैसे चुनें?</summary><p>Skype Settings → Audio &amp; Video → Camera खोलें, लिस्ट से SplitCam चुनें। Microphone के लिए भी यही करें। SkyPrivate कॉल्स फिर सामान्य Skype कॉल के रूप में आती हैं जिनमें SplitCam का सीन कैमरा फ़ीड के तौर पर दिखता है।</p></details><details class="faq-item"><summary>क्या मैं SkyPrivate के साथ ओवरले और ब्यूटी फ़िल्टर इस्तेमाल कर सकता/सकती हूँ?</summary><p>हाँ — उन्हें अपने SplitCam सीन के अंदर बनाएं। Skype सिर्फ़ बनाया गया रिज़ल्ट एक कैमरा फ़ीड के तौर पर लेता है, इसलिए SplitCam जो कुछ भी बनाता है (ओवरले, ब्यूटी फ़िल्टर, AI बैकग्राउंड, मल्टी-कैमरा सीन) SkyPrivate क्लाइंट को दिखता है।</p></details><details class="faq-item"><summary>क्या SkyPrivate के लिए SplitCam मुफ़्त है?</summary><p>हाँ — SplitCam मुफ़्त है, कोई वॉटरमार्क नहीं और कोई समय सीमा नहीं। Skype-आधारित SkyPrivate कॉल्स के लिए वर्चुअल कैमरा के रूप में, यह कॉल पर कोई लागत या ब्रांडिंग नहीं जोड़ता।</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>क्या SkyPrivate RTMP या stream key इस्तेमाल करता है?</summary><p>दोनों में से कोई नहीं। SkyPrivate बिलिंग और बुकिंग संभालता है; असली वीडियो Skype पर चलती है। आपको RTMP सर्वर URL या stream key की ज़रूरत नहीं — बस Skype के अंदर SplitCam को अपना कैमरा सेट करें।</p></details><details class="faq-item"><summary>SkyPrivate के लिए Skype में SplitCam कैसे चुनें?</summary><p>Skype Settings → Audio &amp; Video → Camera खोलें, लिस्ट से SplitCam चुनें। Microphone के लिए भी यही करें। SkyPrivate कॉल्स फिर सामान्य Skype कॉल के रूप में आती हैं जिनमें SplitCam का सीन कैमरा फ़ीड के तौर पर दिखता है।</p></details><details class="faq-item"><summary>क्या मैं SkyPrivate के साथ ओवरले और ब्यूटी फ़िल्टर इस्तेमाल कर सकता/सकती हूँ?</summary><p>हाँ — उन्हें अपने SplitCam सीन के अंदर बनाएं। Skype सिर्फ़ बनाया गया रिज़ल्ट एक कैमरा फ़ीड के तौर पर लेता है, इसलिए SplitCam जो कुछ भी बनाता है (ओवरले, ब्यूटी फ़िल्टर, AI बैकग्राउंड, मल्टी-कैमरा सीन) SkyPrivate क्लाइंट को दिखता है।</p></details><details class="faq-item"><summary>क्या SkyPrivate के लिए SplitCam मुफ़्त है?</summary><p>हाँ — SplitCam मुफ़्त है, कोई वॉटरमार्क नहीं और कोई समय सीमा नहीं। Skype-आधारित SkyPrivate कॉल्स के लिए वर्चुअल कैमरा के रूप में, यह कॉल पर कोई लागत या ब्रांडिंग नहीं जोड़ता।</p></details><details class="faq-item"><summary>SkyPrivate पर मॉडल कितनी कमाई कर सकते हैं?</summary><p>SkyPrivate पर कमाई दर्शकों की संख्या, स्ट्रीमिंग के घंटों और टिप देने के व्यवहार पर निर्भर करती है। सक्रिय ब्रॉडकास्टर आमतौर पर हर महीने $200–$3,000 कमाते हैं; शीर्ष कलाकार $10,000+ तक पहुँचते हैं। आपकी आय का हिस्सा SkyPrivate की कमीशन संरचना के अनुसार होता है — लाइव होने से पहले मॉडल अनुबंध अवश्य देखें।</p></details><details class="faq-item"><summary>क्या SkyPrivate ब्रॉडकास्टरों के लिए सुरक्षित है?</summary><p>SkyPrivate भुगतान से पहले आयु और पहचान सत्यापन माँगता है, जो मॉडलों को धोखाधड़ी से बचाता है। स्टेज नाम का उपयोग करें, कैमरे पर कभी भी व्यक्तिगत डेटा साझा न करें, अपने घर के क्षेत्र से स्ट्रीम छिपाने के लिए geo-blocks सक्षम करें, और हर दर्शक के अनुरोध को लेन-देन के रूप में मानें। SplitCam के overlays और AI background आपके वास्तविक परिवेश को छिपाने या बदलने में भी मदद कर सकते हैं।</p></details><details class="faq-item"><summary>SkyPrivate पर मॉडल बनने के लिए मुझे कौन से दस्तावेज़ चाहिए?</summary><p>SkyPrivate को आमतौर पर सरकार द्वारा जारी फोटो आईडी (passport, driver's license या ID card), आईडी पकड़े हुए एक selfie, और एक tax/payout फॉर्म (अमेरिका के लिए W-9, गैर-अमेरिकी के लिए W-8BEN) की आवश्यकता होती है। स्वीकृति में आमतौर पर 24–72 घंटे लगते हैं; स्वीकृति मिलते ही आप उसी दिन लाइव हो सकते हैं।</p></details><details class="faq-item"><summary>क्या मैं अपने फोन से SkyPrivate पर स्ट्रीम कर सकता हूँ?</summary><p>SkyPrivate आमतौर पर एक mobile broadcaster app या mobile-web broadcaster प्रदान करता है, लेकिन अनुभव सीमित होता है — कोई overlays नहीं, कोई दूसरा कैमरा नहीं, कोई AI background नहीं। पूर्ण प्रोडक्शन क्वालिटी के लिए, SplitCam वाले कंप्यूटर से ब्रॉडकास्ट करें और अपने फोन को दूसरे कैमरे के रूप में उपयोग करें (SplitCam फोन से IP-camera input स्वीकार करता है)।</p></details><details class="faq-item"><summary>क्या मैं SkyPrivate पर SplitCam को virtual camera के रूप में उपयोग कर सकता हूँ?</summary><p>हाँ — SkyPrivate का लाइव browser में चलता है, इसलिए SplitCam एक webcam के रूप में पंजीकृत होता है जिसे <strong>"SplitCam Video Driver"</strong> कहा जाता है। SkyPrivate broadcaster खोलें, browser में camera selector पर क्लिक करें, और SplitCam चुनें। आपका composed scene (overlays, दूसरा कैमरा, filters, AI background) एकल webcam feed के रूप में दर्शकों तक पहुँचता है।</p></details></div>
 </section>
 
 <div class="section">

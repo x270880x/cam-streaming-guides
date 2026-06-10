@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Fanvue पर मॉडल कितनी कमाई कर सकते हैं?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue पर कमाई दर्शकों की संख्या, स्ट्रीमिंग के घंटों और टिप देने के व्यवहार पर निर्भर करती है। सक्रिय ब्रॉडकास्टर आमतौर पर हर महीने $200–$3,000 कमाते हैं; शीर्ष कलाकार $10,000+ तक पहुँचते हैं। आपकी आय का हिस्सा Fanvue की कमीशन संरचना के अनुसार होता है — लाइव होने से पहले मॉडल अनुबंध अवश्य देखें।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "क्या Fanvue ब्रॉडकास्टरों के लिए सुरक्षित है?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue भुगतान से पहले आयु और पहचान सत्यापन माँगता है, जो मॉडलों को धोखाधड़ी से बचाता है। स्टेज नाम का उपयोग करें, कैमरे पर कभी भी व्यक्तिगत डेटा साझा न करें, अपने घर के क्षेत्र से स्ट्रीम छिपाने के लिए geo-blocks सक्षम करें, और हर दर्शक के अनुरोध को लेन-देन के रूप में मानें। SplitCam के overlays और AI background आपके वास्तविक परिवेश को छिपाने या बदलने में भी मदद कर सकते हैं।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fanvue पर मॉडल बनने के लिए मुझे कौन से दस्तावेज़ चाहिए?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue को आमतौर पर सरकार द्वारा जारी फोटो आईडी (passport, driver's license या ID card), आईडी पकड़े हुए एक selfie, और एक tax/payout फॉर्म (अमेरिका के लिए W-9, गैर-अमेरिकी के लिए W-8BEN) की आवश्यकता होती है। स्वीकृति में आमतौर पर 24–72 घंटे लगते हैं; स्वीकृति मिलते ही आप उसी दिन लाइव हो सकते हैं।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "क्या मैं अपने फोन से Fanvue पर स्ट्रीम कर सकता हूँ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fanvue आमतौर पर एक mobile broadcaster app या mobile-web broadcaster प्रदान करता है, लेकिन अनुभव सीमित होता है — कोई overlays नहीं, कोई दूसरा कैमरा नहीं, कोई AI background नहीं। पूर्ण प्रोडक्शन क्वालिटी के लिए, SplitCam वाले कंप्यूटर से ब्रॉडकास्ट करें और अपने फोन को दूसरे कैमरे के रूप में उपयोग करें (SplitCam फोन से IP-camera input स्वीकार करता है)।"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "क्या मैं Fanvue पर SplitCam को virtual camera के रूप में उपयोग कर सकता हूँ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "हाँ — Fanvue का लाइव browser में चलता है, इसलिए SplitCam एक webcam के रूप में पंजीकृत होता है जिसे \"SplitCam Video Driver\" कहा जाता है। Fanvue broadcaster खोलें, browser में camera selector पर क्लिक करें, और SplitCam चुनें। आपका composed scene (overlays, दूसरा कैमरा, filters, AI background) एकल webcam feed के रूप में दर्शकों तक पहुँचता है।"
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Fanvue स्ट्रीम रुक-रुक रही है या बफ़र हो रही है",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">समस्या निवारण</h2><div class="faq-list"><details class="faq-item"><summary>Fanvue स्ट्रीम रुक-रुक रही है या बफ़र हो रही है</summary><p>लगभग हमेशा बिटरेट आपके अपलोड से ज़्यादा सेट होता है। SplitCam का बिल्ट-इन स्पीड टेस्ट चलाएं, फिर बिटरेट मापे गए अपलोड का ~75% सेट करें — 1080p के लिए 3500–6000&nbsp;Kbps। जब एन्कोडर आपकी लाइन से ज़्यादा नहीं जाता तो रुकना बंद हो जाता है।</p></details><details class="faq-item"><summary>Fanvue स्ट्रीम के दौरान फ्रेम खो रहे हैं</summary><p>खोए फ्रेम का मतलब है पैकेट समय पर Fanvue नहीं पहुंचते — आमतौर पर अस्थिर Wi-Fi। वायर्ड Ethernet पर स्विच करें, बैंडविड्थ खाने वाले ऐप बंद करें और बिटरेट थोड़ा कम करें।</p></details><details class="faq-item"><summary>ब्लैक स्क्रीन — दर्शक Fanvue पर वीडियो नहीं देख सकते</summary><p>आपका कैमरा SplitCam में एक्टिव सोर्स नहीं चुना गया, या कोई दूसरा ऐप इसे रोक रहा है। Zoom, Skype या OBS बंद करें, SplitCam में वेबकैम दोबारा चुनें।</p></details><details class="faq-item"><summary>Fanvue स्ट्रीम की रिजेक्ट कर रहा है या कनेक्ट नहीं हो रहा</summary><p>स्ट्रीम की दोबारा कॉपी करें — अंत में स्पेस या पुरानी रीसेट की सबसे आम कारण हैं। सुनिश्चित करें सर्वर URL वही है जो Fanvue दिखाता है।</p></details><details class="faq-item"><summary>Fanvue पर कोई ऑडियो नहीं या ऑडियो सिंक नहीं है</summary><p>SplitCam को कैमरा और माइक्रोफ़ोन दोनों के रूप में चुनें, और SplitCam के ऑडियो सोर्स में अपना असली माइक्रोफ़ोन चुनें। अगर ऑडियो वीडियो से पीछे है, रेज़ॉल्यूशन एक स्तर कम करें।</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">अक्सर पूछे जाने वाले प्रश्न</h2>
-  <div class="faq-list"><details class="faq-item"><summary>SplitCam Fanvue से कैसे कनेक्ट होता है?</summary><p>Fanvue लाइव ब्राउज़र-बेस्ड है, इसलिए SplitCam एक वर्चुअल कैमरा के रूप में कनेक्ट होता है: कैमरा सिलेक्टर में SplitCam चुनें। किसी स्ट्रीम की की ज़रूरत नहीं।</p></details><details class="faq-item"><summary>क्या मैं Fanvue पर ओवरले और कई कैमरे इस्तेमाल कर सकता हूँ?</summary><p>हाँ — SplitCam में सीन बनाएं (दूसरा कैमरा, ओवरले, ब्यूटी या AI-बैकग्राउंड फ़िल्टर) और Fanvue तैयार सीन को एक ही वेबकैम के रूप में देखता है।</p></details><details class="faq-item"><summary>क्या Fanvue OBS या external encoders सपोर्ट करता है?</summary><p>Fanvue लाइव मुख्य रूप से ब्राउज़र/वेबकैम-बेस्ड है। अगर आपका डैशबोर्ड external-encoder या stream-key विकल्प दिखाता है, तो उसे SplitCam के कस्टम RTMP फ़ील्ड्स में पेस्ट करें; वरना वर्चुअल-कैमरा तरीका इस्तेमाल करें।</p></details><details class="faq-item"><summary>क्या Fanvue के साथ SplitCam मुफ़्त है?</summary><p>हाँ — SplitCam मुफ़्त है, कोई वॉटरमार्क नहीं और कोई समय सीमा नहीं।</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>SplitCam Fanvue से कैसे कनेक्ट होता है?</summary><p>Fanvue लाइव ब्राउज़र-बेस्ड है, इसलिए SplitCam एक वर्चुअल कैमरा के रूप में कनेक्ट होता है: कैमरा सिलेक्टर में SplitCam चुनें। किसी स्ट्रीम की की ज़रूरत नहीं।</p></details><details class="faq-item"><summary>क्या मैं Fanvue पर ओवरले और कई कैमरे इस्तेमाल कर सकता हूँ?</summary><p>हाँ — SplitCam में सीन बनाएं (दूसरा कैमरा, ओवरले, ब्यूटी या AI-बैकग्राउंड फ़िल्टर) और Fanvue तैयार सीन को एक ही वेबकैम के रूप में देखता है।</p></details><details class="faq-item"><summary>क्या Fanvue OBS या external encoders सपोर्ट करता है?</summary><p>Fanvue लाइव मुख्य रूप से ब्राउज़र/वेबकैम-बेस्ड है। अगर आपका डैशबोर्ड external-encoder या stream-key विकल्प दिखाता है, तो उसे SplitCam के कस्टम RTMP फ़ील्ड्स में पेस्ट करें; वरना वर्चुअल-कैमरा तरीका इस्तेमाल करें।</p></details><details class="faq-item"><summary>क्या Fanvue के साथ SplitCam मुफ़्त है?</summary><p>हाँ — SplitCam मुफ़्त है, कोई वॉटरमार्क नहीं और कोई समय सीमा नहीं।</p></details><details class="faq-item"><summary>Fanvue पर मॉडल कितनी कमाई कर सकते हैं?</summary><p>Fanvue पर कमाई दर्शकों की संख्या, स्ट्रीमिंग के घंटों और टिप देने के व्यवहार पर निर्भर करती है। सक्रिय ब्रॉडकास्टर आमतौर पर हर महीने $200–$3,000 कमाते हैं; शीर्ष कलाकार $10,000+ तक पहुँचते हैं। आपकी आय का हिस्सा Fanvue की कमीशन संरचना के अनुसार होता है — लाइव होने से पहले मॉडल अनुबंध अवश्य देखें।</p></details><details class="faq-item"><summary>क्या Fanvue ब्रॉडकास्टरों के लिए सुरक्षित है?</summary><p>Fanvue भुगतान से पहले आयु और पहचान सत्यापन माँगता है, जो मॉडलों को धोखाधड़ी से बचाता है। स्टेज नाम का उपयोग करें, कैमरे पर कभी भी व्यक्तिगत डेटा साझा न करें, अपने घर के क्षेत्र से स्ट्रीम छिपाने के लिए geo-blocks सक्षम करें, और हर दर्शक के अनुरोध को लेन-देन के रूप में मानें। SplitCam के overlays और AI background आपके वास्तविक परिवेश को छिपाने या बदलने में भी मदद कर सकते हैं।</p></details><details class="faq-item"><summary>Fanvue पर मॉडल बनने के लिए मुझे कौन से दस्तावेज़ चाहिए?</summary><p>Fanvue को आमतौर पर सरकार द्वारा जारी फोटो आईडी (passport, driver's license या ID card), आईडी पकड़े हुए एक selfie, और एक tax/payout फॉर्म (अमेरिका के लिए W-9, गैर-अमेरिकी के लिए W-8BEN) की आवश्यकता होती है। स्वीकृति में आमतौर पर 24–72 घंटे लगते हैं; स्वीकृति मिलते ही आप उसी दिन लाइव हो सकते हैं।</p></details><details class="faq-item"><summary>क्या मैं अपने फोन से Fanvue पर स्ट्रीम कर सकता हूँ?</summary><p>Fanvue आमतौर पर एक mobile broadcaster app या mobile-web broadcaster प्रदान करता है, लेकिन अनुभव सीमित होता है — कोई overlays नहीं, कोई दूसरा कैमरा नहीं, कोई AI background नहीं। पूर्ण प्रोडक्शन क्वालिटी के लिए, SplitCam वाले कंप्यूटर से ब्रॉडकास्ट करें और अपने फोन को दूसरे कैमरे के रूप में उपयोग करें (SplitCam फोन से IP-camera input स्वीकार करता है)।</p></details><details class="faq-item"><summary>क्या मैं Fanvue पर SplitCam को virtual camera के रूप में उपयोग कर सकता हूँ?</summary><p>हाँ — Fanvue का लाइव browser में चलता है, इसलिए SplitCam एक webcam के रूप में पंजीकृत होता है जिसे <strong>"SplitCam Video Driver"</strong> कहा जाता है। Fanvue broadcaster खोलें, browser में camera selector पर क्लिक करें, और SplitCam चुनें। आपका composed scene (overlays, दूसरा कैमरा, filters, AI background) एकल webcam feed के रूप में दर्शकों तक पहुँचता है।</p></details></div>
 </section>
 
 <div class="section">

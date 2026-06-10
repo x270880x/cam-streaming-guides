@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Quanto as criadoras ganham no iFriends?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os ganhos no iFriends dependem do tamanho do público, das horas ao vivo e do volume de gorjetas. Criadoras ativas costumam levar para casa de R$ 1.000 a R$ 15.000 por mês; as top performers chegam a R$ 50.000+. Sua porcentagem segue a comissão do iFriends — leia o contrato de modelo antes de entrar ao vivo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O iFriends é seguro para quem transmite?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O iFriends exige verificação de idade e documento antes de liberar o pagamento, o que protege a criadora contra fraudes. Use um nome artístico, nunca mostre dados pessoais na câmera, ative bloqueio geográfico para esconder a transmissão da sua região e trate todo pedido de assinante como transacional. Os overlays e o fundo com IA do SplitCam também escondem ou substituem o ambiente real."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quais documentos eu preciso para virar modelo no iFriends?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O iFriends geralmente pede um documento oficial com foto (RG, CNH ou passaporte), uma selfie segurando o documento e o formulário fiscal/de pagamento (W-9 para EUA, W-8BEN fora dos EUA; no Brasil costumam aceitar CPF para receber via PIX por gateway). A aprovação leva de 24 a 72 horas; aprovada, você já entra ao vivo no mesmo dia."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para transmitir no iFriends pelo celular?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O iFriends normalmente oferece um app de transmissão ou um broadcaster mobile pelo navegador, mas a experiência é limitada — sem overlays, sem segunda câmera, sem fundo com IA. Para qualidade de produção completa, transmita pelo computador com o SplitCam e use o celular como segunda câmera (o SplitCam aceita entrada de câmera IP a partir do celular)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O iFriends aceita OBS ou encoder externo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim — o iFriends disponibiliza uma URL de servidor RTMP e uma chave de transmissão no painel da criadora. Cole as duas em Stream Settings → Custom RTMP do SplitCam, configure 1920×1080 a 30 fps com bitrate de 4.000 a 5.000 Kbps e clique em Go Live. A rota Custom RTMP libera a composição de cena completa do SplitCam (multicâmera, overlays, filtros)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Sua transmissão no iFriends trava ou fica em buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Solução de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Sua transmissão no iFriends trava ou fica em buffer</summary><p>Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão.</p></details><details class="faq-item"><summary>Frames perdidos durante a transmissão no iFriends</summary><p>Frames perdidos significam que os pacotes não chegam ao iFriends a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta.</p></details><details class="faq-item"><summary>Tela preta — os espectadores não veem vídeo no iFriends</summary><p>Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live.</p></details><details class="faq-item"><summary>iFriends rejeita a stream key ou não conecta</summary><p>Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo iFriends e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida.</p></details><details class="faq-item"><summary>Sem áudio ou áudio fora de sincronia no iFriends</summary><p>Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>O iFriends suporta oficialmente encoders externos tipo o SplitCam?</summary><p>Suporta — o Model Center tem a opção External Encoder em Broadcast Settings. URL de servidor RTMP padrão e stream key; OBS, SplitCam e vMix conectam assim que sua conta é aprovada.</p></details><details class="faq-item"><summary>Onde pego minha stream key do iFriends?</summary><p>Model Center → Broadcast Settings → External Encoder. A URL do servidor e a stream key aparecem ali — copia as duas pros campos de RTMP personalizado do SplitCam.</p></details><details class="faq-item"><summary>Que bitrate usar no iFriends?</summary><p>Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test embutido do SplitCam.</p></details><details class="faq-item"><summary>O SplitCam é grátis pra usar com o iFriends?</summary><p>É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do iFriends é grátis no Model Center.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>O iFriends suporta oficialmente encoders externos tipo o SplitCam?</summary><p>Suporta — o Model Center tem a opção External Encoder em Broadcast Settings. URL de servidor RTMP padrão e stream key; OBS, SplitCam e vMix conectam assim que sua conta é aprovada.</p></details><details class="faq-item"><summary>Onde pego minha stream key do iFriends?</summary><p>Model Center → Broadcast Settings → External Encoder. A URL do servidor e a stream key aparecem ali — copia as duas pros campos de RTMP personalizado do SplitCam.</p></details><details class="faq-item"><summary>Que bitrate usar no iFriends?</summary><p>Manda 1920×1080 a 30 fps, 3.500–6.000 Kbps com keyframe de 2 segundos. Roda primeiro o speed test embutido do SplitCam.</p></details><details class="faq-item"><summary>O SplitCam é grátis pra usar com o iFriends?</summary><p>É — o SplitCam é grátis, sem marca d'água e sem limite de tempo. A opção de encoder externo do iFriends é grátis no Model Center.</p></details><details class="faq-item"><summary>Quanto as criadoras ganham no iFriends?</summary><p>Os ganhos no iFriends dependem do tamanho do público, das horas ao vivo e do volume de gorjetas. Criadoras ativas costumam levar para casa de R$ 1.000 a R$ 15.000 por mês; as top performers chegam a R$ 50.000+. Sua porcentagem segue a comissão do iFriends — leia o contrato de modelo antes de entrar ao vivo.</p></details><details class="faq-item"><summary>O iFriends é seguro para quem transmite?</summary><p>O iFriends exige verificação de idade e documento antes de liberar o pagamento, o que protege a criadora contra fraudes. Use um nome artístico, nunca mostre dados pessoais na câmera, ative bloqueio geográfico para esconder a transmissão da sua região e trate todo pedido de assinante como transacional. Os overlays e o fundo com IA do SplitCam também escondem ou substituem o ambiente real.</p></details><details class="faq-item"><summary>Quais documentos eu preciso para virar modelo no iFriends?</summary><p>O iFriends geralmente pede um documento oficial com foto (RG, CNH ou passaporte), uma selfie segurando o documento e o formulário fiscal/de pagamento (W-9 para EUA, W-8BEN fora dos EUA; no Brasil costumam aceitar CPF para receber via PIX por gateway). A aprovação leva de 24 a 72 horas; aprovada, você já entra ao vivo no mesmo dia.</p></details><details class="faq-item"><summary>Dá para transmitir no iFriends pelo celular?</summary><p>O iFriends normalmente oferece um app de transmissão ou um broadcaster mobile pelo navegador, mas a experiência é limitada — sem overlays, sem segunda câmera, sem fundo com IA. Para qualidade de produção completa, transmita pelo computador com o SplitCam e use o celular como segunda câmera (o SplitCam aceita entrada de câmera IP a partir do celular).</p></details><details class="faq-item"><summary>O iFriends aceita OBS ou encoder externo?</summary><p>Sim — o iFriends disponibiliza uma URL de servidor RTMP e uma chave de transmissão no painel da criadora. Cole as duas em <strong>Stream Settings → Custom RTMP</strong> do SplitCam, configure 1920×1080 a 30 fps com bitrate de 4.000 a 5.000 Kbps e clique em <strong>Go Live</strong>. A rota Custom RTMP libera a composição de cena completa do SplitCam (multicâmera, overlays, filtros).</p></details></div>
 </section>
 
 <div class="section">

@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Колко могат да изкарват моделите в Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Приходите в Stripchat зависят от размера на аудиторията, часовете на стрийм и активността с типове. Активните излъчващи обикновено прибират $200–$3,000 на месец; топ изпълнителите достигат $10,000+. Делът ти от приходите следва комисионната структура на Stripchat — провери моделния договор, преди да тръгнеш в ефир."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Безопасен ли е Stripchat за излъчващите?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat изисква верификация на възрастта и личната карта преди изплащане, което защитава моделите от измами. Използвай сценично име, никога не споделяй лични данни пред камерата, активирай гео-блокове, за да скриеш стрийма си от родния си регион, и третирай всяка молба на зрител като транзакционна. Овърлеите и AI фонът на SplitCam също могат да скрият или подменят реалната ти обстановка."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Какви документи са ми нужни, за да стана модел в Stripchat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat обикновено изисква държавно издаден документ за самоличност със снимка (паспорт, шофьорска книжка или лична карта), селфи с документа в ръка и данъчен/платежен формуляр (W-9 за САЩ, W-8BEN за извън САЩ). Одобрението обикновено отнема 24–72 часа; след одобрение можеш да излезеш в ефир още същия ден."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Мога ли да стриймвам в Stripchat от телефона си?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Stripchat обикновено предлага мобилно приложение за излъчване или мобилен уеб-броудкастър, но изживяването е ограничено — без овърлеи, без втора камера, без AI фон. За пълно продукционно качество излъчвай от компютър със SplitCam и използвай телефона си като втора камера (SplitCam приема IP-камера вход от телефони)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Поддържа ли Stripchat OBS или външен енкодер?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да — Stripchat предоставя RTMP сървър URL и стрийм ключ в панела на излъчващия. Постави и двете в Stream Settings → Custom RTMP на SplitCam, задай 1920×1080 при 30 fps с битрейт 4,000–5,000 Kbps и кликни Go Live. Custom RTMP маршрутът ти дава пълната композиция на сцената в SplitCam (мулти-камера, овърлеи, филтри)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Излъчването на Stripchat лагва или буферира",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на Stripchat лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на Stripchat</summary><p>Изпуснатите кадри значат, че пакетите не стигат до Stripchat навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на Stripchat</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>Stripchat отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от Stripchat и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на Stripchat</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Често задавани въпроси</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Препоръчва ли Stripchat OBS / външен софтуер?</summary><p>Да — официалното FAQ на Stripchat препоръчва външен броудкаст софтуер като OBS «за постигане на най-добро видео и аудио качество». SplitCam работи по същия начин.</p></details><details class="faq-item"><summary>Как сменям Stripchat на външен софтуер?</summary><p>В Broadcast Center избери Switch to External Broadcast Software (OBS), после отвори external software settings, за да разкриеш stream key (token).</p></details><details class="faq-item"><summary>Какъв битрейт за Stripchat?</summary><p>RTMP ingest приема до ~6000 Kbps с 2-секунден keyframe. 3500–6000 на 1080p е оптимално — но трябва да си доста над минимума от 2 Mbps, особено за OBS стрийминг.</p></details><details class="faq-item"><summary>SplitCam безплатен ли е за Stripchat?</summary><p>Да — без лицензионна такса, без воден знак, без времево ограничение: дори дълги интерактивни шоута в Stripchat не струват нищо от страна на енкодера.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Препоръчва ли Stripchat OBS / външен софтуер?</summary><p>Да — официалното FAQ на Stripchat препоръчва външен броудкаст софтуер като OBS «за постигане на най-добро видео и аудио качество». SplitCam работи по същия начин.</p></details><details class="faq-item"><summary>Как сменям Stripchat на външен софтуер?</summary><p>В Broadcast Center избери Switch to External Broadcast Software (OBS), после отвори external software settings, за да разкриеш stream key (token).</p></details><details class="faq-item"><summary>Какъв битрейт за Stripchat?</summary><p>RTMP ingest приема до ~6000 Kbps с 2-секунден keyframe. 3500–6000 на 1080p е оптимално — но трябва да си доста над минимума от 2 Mbps, особено за OBS стрийминг.</p></details><details class="faq-item"><summary>SplitCam безплатен ли е за Stripchat?</summary><p>Да — без лицензионна такса, без воден знак, без времево ограничение: дори дълги интерактивни шоута в Stripchat не струват нищо от страна на енкодера.</p></details><details class="faq-item"><summary>Колко могат да изкарват моделите в Stripchat?</summary><p>Приходите в Stripchat зависят от размера на аудиторията, часовете на стрийм и активността с типове. Активните излъчващи обикновено прибират $200–$3,000 на месец; топ изпълнителите достигат $10,000+. Делът ти от приходите следва комисионната структура на Stripchat — провери моделния договор, преди да тръгнеш в ефир.</p></details><details class="faq-item"><summary>Безопасен ли е Stripchat за излъчващите?</summary><p>Stripchat изисква верификация на възрастта и личната карта преди изплащане, което защитава моделите от измами. Използвай сценично име, никога не споделяй лични данни пред камерата, активирай гео-блокове, за да скриеш стрийма си от родния си регион, и третирай всяка молба на зрител като транзакционна. Овърлеите и AI фонът на SplitCam също могат да скрият или подменят реалната ти обстановка.</p></details><details class="faq-item"><summary>Какви документи са ми нужни, за да стана модел в Stripchat?</summary><p>Stripchat обикновено изисква държавно издаден документ за самоличност със снимка (паспорт, шофьорска книжка или лична карта), селфи с документа в ръка и данъчен/платежен формуляр (W-9 за САЩ, W-8BEN за извън САЩ). Одобрението обикновено отнема 24–72 часа; след одобрение можеш да излезеш в ефир още същия ден.</p></details><details class="faq-item"><summary>Мога ли да стриймвам в Stripchat от телефона си?</summary><p>Stripchat обикновено предлага мобилно приложение за излъчване или мобилен уеб-броудкастър, но изживяването е ограничено — без овърлеи, без втора камера, без AI фон. За пълно продукционно качество излъчвай от компютър със SplitCam и използвай телефона си като втора камера (SplitCam приема IP-камера вход от телефони).</p></details><details class="faq-item"><summary>Поддържа ли Stripchat OBS или външен енкодер?</summary><p>Да — Stripchat предоставя RTMP сървър URL и стрийм ключ в панела на излъчващия. Постави и двете в <strong>Stream Settings → Custom RTMP</strong> на SplitCam, задай 1920×1080 при 30 fps с битрейт 4,000–5,000 Kbps и кликни <strong>Go Live</strong>. Custom RTMP маршрутът ти дава пълната композиция на сцената в SplitCam (мулти-камера, овърлеи, филтри).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Официална поддръжка — Stripchat</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:help@stripchat.com">help@stripchat.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.stripchat.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.stripchat.com/hc/en-us</a></li></ul><p class="sp-note">Ние сме независим ресурс. За въпроси по акаунт, плащания или технически проблеми се свържи директно с официалната поддръжка на платформата.</p></section>
 <div class="section">

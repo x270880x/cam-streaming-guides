@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "كم يمكن أن يكسب العارضون على ‏OnlyFans؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "تعتمد الأرباح على ‏OnlyFans على حجم الجمهور وعدد ساعات البث وسلوك الإكراميات. يحقق المذيعون النشطون عادةً ما بين 200 و3,000 دولار شهريًا، بينما يصل كبار المؤدين إلى أكثر من 10,000 دولار. تخضع حصتك من الإيرادات لهيكل العمولات الخاص بـ ‏OnlyFans — راجع اتفاقية العارض قبل بدء البث المباشر."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "هل ‏OnlyFans آمن للمذيعين؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يشترط ‏OnlyFans التحقق من العمر والهوية قبل صرف الأرباح، وهو ما يحمي العارضين من الاحتيال. استخدم اسمًا فنيًا، ولا تشارك أبدًا أي بيانات شخصية أمام الكاميرا، وفعّل الحجب الجغرافي لإخفاء بثك عن منطقتك السكنية، وتعامل مع كل طلب من المشاهدين كمعاملة تجارية. كما يمكن لطبقات ‏SplitCam والخلفية الذكية ‏AI إخفاء محيطك الحقيقي أو استبداله."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ما المستندات التي أحتاجها لأصبح عارضًا على ‏OnlyFans؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يطلب ‏OnlyFans عادةً وثيقة هوية رسمية تحتوي على صورة (جواز سفر أو رخصة قيادة أو بطاقة هوية)، وصورة سيلفي وأنت تحمل الوثيقة، ونموذجًا ضريبيًا/لصرف الأرباح (‏W-9 للمقيمين في الولايات المتحدة و‏W-8BEN لغيرهم). تستغرق الموافقة عادةً بين 24 و72 ساعة، وبمجرد الموافقة يمكنك البث المباشر في اليوم نفسه."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "هل يمكنني البث على ‏OnlyFans من هاتفي؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يوفر ‏OnlyFans عادةً تطبيق بث للهاتف المحمول أو واجهة بث عبر متصفح الجوال، لكن التجربة محدودة — بلا طبقات، ولا كاميرا ثانية، ولا خلفية ذكية ‏AI. للحصول على جودة إنتاج كاملة، ابثّ من جهاز كمبيوتر باستخدام ‏SplitCam، واستخدم هاتفك ككاميرا ثانية (يقبل ‏SplitCam دخل كاميرا ‏IP من الهواتف)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "هل يدعم ‏OnlyFans ‏OBS أو أي مُرمِّز خارجي؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "نعم — يوفر ‏OnlyFans عنوان خادم ‏RTMP ومفتاح بث في لوحة المذيع. الصق كليهما في ‏Stream Settings → Custom RTMP داخل ‏SplitCam، واضبط الدقة على 1920×1080 بمعدل 30 إطارًا في الثانية ومعدل بت بين 4,000 و5,000 ‏Kbps، ثم انقر ‏Go Live. يمنحك مسار ‏Custom RTMP تركيبًا كاملاً للمشهد في ‏SplitCam (كاميرات متعددة، طبقات، فلاتر)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "بث OnlyFans لديك يتقطع أو يخزّن مؤقتاً",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث OnlyFans لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على OnlyFans</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى OnlyFans في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على OnlyFans</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>OnlyFans يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه OnlyFans وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على OnlyFans</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">الأسئلة الشائعة</h2>
-  <div class="faq-list"><details class="faq-item"><summary>كيف أربط OnlyFans بـ SplitCam؟</summary><p>بطريقتين. <strong>تفويض</strong> — Stream Settings → Add Channel → OnlyFans → سجل الدخول بحساب OnlyFans وSplitCam يحصل على المفتاح تلقائياً. أو <strong>Stream Key</strong> — انسخ OBS Key على OnlyFans → Profile → Settings → Other والصقه.</p></details><details class="faq-item"><summary>هل يمكنني تغيير إعدادات OnlyFans المباشرة دون فتح الموقع؟</summary><p>نعم — مع طريقة التفويض يبقى SplitCam متصلاً بحساب OnlyFans، لذا يتزامن المفتاح والإعدادات تلقائياً.</p></details><details class="faq-item"><summary>ما معدل البت لـ OnlyFans؟</summary><p>متواضع — OnlyFans RTMP ingest يحد من معدل البت عند حوالي 2500 Kbps، أكثر صرامة من منصات cam الأخرى. استهدف 720p–1080p حوالي 2000–2500 Kbps.</p></details><details class="faq-item"><summary>هل SplitCam مجاني لـ OnlyFans live؟</summary><p>نعم — مجاني، بدون علامة مائية وبدون حد زمني. لا توجد تكاليف على جانب المُشفِّر.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>كيف أربط OnlyFans بـ SplitCam؟</summary><p>بطريقتين. <strong>تفويض</strong> — Stream Settings → Add Channel → OnlyFans → سجل الدخول بحساب OnlyFans وSplitCam يحصل على المفتاح تلقائياً. أو <strong>Stream Key</strong> — انسخ OBS Key على OnlyFans → Profile → Settings → Other والصقه.</p></details><details class="faq-item"><summary>هل يمكنني تغيير إعدادات OnlyFans المباشرة دون فتح الموقع؟</summary><p>نعم — مع طريقة التفويض يبقى SplitCam متصلاً بحساب OnlyFans، لذا يتزامن المفتاح والإعدادات تلقائياً.</p></details><details class="faq-item"><summary>ما معدل البت لـ OnlyFans؟</summary><p>متواضع — OnlyFans RTMP ingest يحد من معدل البت عند حوالي 2500 Kbps، أكثر صرامة من منصات cam الأخرى. استهدف 720p–1080p حوالي 2000–2500 Kbps.</p></details><details class="faq-item"><summary>هل SplitCam مجاني لـ OnlyFans live؟</summary><p>نعم — مجاني، بدون علامة مائية وبدون حد زمني. لا توجد تكاليف على جانب المُشفِّر.</p></details><details class="faq-item"><summary>كم يمكن أن يكسب العارضون على ‏OnlyFans؟</summary><p>تعتمد الأرباح على ‏OnlyFans على حجم الجمهور وعدد ساعات البث وسلوك الإكراميات. يحقق المذيعون النشطون عادةً ما بين 200 و3,000 دولار شهريًا، بينما يصل كبار المؤدين إلى أكثر من 10,000 دولار. تخضع حصتك من الإيرادات لهيكل العمولات الخاص بـ ‏OnlyFans — راجع اتفاقية العارض قبل بدء البث المباشر.</p></details><details class="faq-item"><summary>هل ‏OnlyFans آمن للمذيعين؟</summary><p>يشترط ‏OnlyFans التحقق من العمر والهوية قبل صرف الأرباح، وهو ما يحمي العارضين من الاحتيال. استخدم اسمًا فنيًا، ولا تشارك أبدًا أي بيانات شخصية أمام الكاميرا، وفعّل الحجب الجغرافي لإخفاء بثك عن منطقتك السكنية، وتعامل مع كل طلب من المشاهدين كمعاملة تجارية. كما يمكن لطبقات ‏SplitCam والخلفية الذكية ‏AI إخفاء محيطك الحقيقي أو استبداله.</p></details><details class="faq-item"><summary>ما المستندات التي أحتاجها لأصبح عارضًا على ‏OnlyFans؟</summary><p>يطلب ‏OnlyFans عادةً وثيقة هوية رسمية تحتوي على صورة (جواز سفر أو رخصة قيادة أو بطاقة هوية)، وصورة سيلفي وأنت تحمل الوثيقة، ونموذجًا ضريبيًا/لصرف الأرباح (‏W-9 للمقيمين في الولايات المتحدة و‏W-8BEN لغيرهم). تستغرق الموافقة عادةً بين 24 و72 ساعة، وبمجرد الموافقة يمكنك البث المباشر في اليوم نفسه.</p></details><details class="faq-item"><summary>هل يمكنني البث على ‏OnlyFans من هاتفي؟</summary><p>يوفر ‏OnlyFans عادةً تطبيق بث للهاتف المحمول أو واجهة بث عبر متصفح الجوال، لكن التجربة محدودة — بلا طبقات، ولا كاميرا ثانية، ولا خلفية ذكية ‏AI. للحصول على جودة إنتاج كاملة، ابثّ من جهاز كمبيوتر باستخدام ‏SplitCam، واستخدم هاتفك ككاميرا ثانية (يقبل ‏SplitCam دخل كاميرا ‏IP من الهواتف).</p></details><details class="faq-item"><summary>هل يدعم ‏OnlyFans ‏OBS أو أي مُرمِّز خارجي؟</summary><p>نعم — يوفر ‏OnlyFans عنوان خادم ‏RTMP ومفتاح بث في لوحة المذيع. الصق كليهما في <strong>‏Stream Settings → Custom RTMP</strong> داخل ‏SplitCam، واضبط الدقة على 1920×1080 بمعدل 30 إطارًا في الثانية ومعدل بت بين 4,000 و5,000 ‏Kbps، ثم انقر <strong>‏Go Live</strong>. يمنحك مسار ‏Custom RTMP تركيبًا كاملاً للمشهد في ‏SplitCam (كاميرات متعددة، طبقات، فلاتر).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">الدعم الرسمي — OnlyFans</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@onlyfans.com">support@onlyfans.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://onlyfans.com/help" rel="nofollow noopener" target="_blank">https://onlyfans.com/help</a></li></ul><p class="sp-note">نحن دليل مستقل. لمشاكل الحساب أو الدفع أو الفنية، تواصل مباشرة مع الدعم الرسمي للمنصة.</p></section>
 <div class="section">

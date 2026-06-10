@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på SkyPrivate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på SkyPrivate afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger SkyPrivates kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er SkyPrivate sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på SkyPrivate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på SkyPrivate fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SkyPrivate tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg bruge SplitCam som et virtuelt kamera på SkyPrivate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — SkyPrivates live kører i browseren, så SplitCam registreres som et webcam kaldet \"SplitCam Video Driver\". Åbn SkyPrivate-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit SkyPrivate-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit SkyPrivate-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under SkyPrivate-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til SkyPrivate i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på SkyPrivate</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>SkyPrivate afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, SkyPrivate viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på SkyPrivate</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Bruger SkyPrivate RTMP eller en stream key?</summary><p>Ingen af delene. SkyPrivate håndterer afregning og booking; selve videoopkaldet løber over Skype. Du har ikke brug for RTMP-server-URL eller stream key — du konfigurerer bare SplitCam som kamera inde i Skype.</p></details><details class="faq-item"><summary>Hvordan vælger jeg SplitCam i Skype til SkyPrivate?</summary><p>Åbn Skype-indstillinger → Audio &amp; Video → Kamera, vælg SplitCam fra listen. Gør det samme for mikrofon. SkyPrivate-opkald kommer derefter ind som almindelige Skype-opkald med din SplitCam-scene som kamerafeed.</p></details><details class="faq-item"><summary>Virker overlays og beauty-filtre med SkyPrivate?</summary><p>Ja — du bygger dem i din SplitCam-scene. Skype modtager kun det komponerede resultat som ét kamerafeed, så alt SplitCam komponerer (overlays, beauty-filtre, AI-baggrund, multi-kamera scener) er synligt for SkyPrivate-kunden.</p></details><details class="faq-item"><summary>Er SplitCam gratis til SkyPrivate?</summary><p>Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. Som virtuelt kamera til Skype-baserede SkyPrivate-opkald giver det ingen ekstra omkostninger eller branding på opkaldet.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Bruger SkyPrivate RTMP eller en stream key?</summary><p>Ingen af delene. SkyPrivate håndterer afregning og booking; selve videoopkaldet løber over Skype. Du har ikke brug for RTMP-server-URL eller stream key — du konfigurerer bare SplitCam som kamera inde i Skype.</p></details><details class="faq-item"><summary>Hvordan vælger jeg SplitCam i Skype til SkyPrivate?</summary><p>Åbn Skype-indstillinger → Audio &amp; Video → Kamera, vælg SplitCam fra listen. Gør det samme for mikrofon. SkyPrivate-opkald kommer derefter ind som almindelige Skype-opkald med din SplitCam-scene som kamerafeed.</p></details><details class="faq-item"><summary>Virker overlays og beauty-filtre med SkyPrivate?</summary><p>Ja — du bygger dem i din SplitCam-scene. Skype modtager kun det komponerede resultat som ét kamerafeed, så alt SplitCam komponerer (overlays, beauty-filtre, AI-baggrund, multi-kamera scener) er synligt for SkyPrivate-kunden.</p></details><details class="faq-item"><summary>Er SplitCam gratis til SkyPrivate?</summary><p>Ja — SplitCam er gratis, uden vandmærke og uden tidsbegrænsning. Som virtuelt kamera til Skype-baserede SkyPrivate-opkald giver det ingen ekstra omkostninger eller branding på opkaldet.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på SkyPrivate?</summary><p>Indtjeningen på SkyPrivate afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger SkyPrivates kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er SkyPrivate sikkert for broadcastere?</summary><p>SkyPrivate kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på SkyPrivate?</summary><p>SkyPrivate kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på SkyPrivate fra min telefon?</summary><p>SkyPrivate tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Kan jeg bruge SplitCam som et virtuelt kamera på SkyPrivate?</summary><p>Ja — SkyPrivates live kører i browseren, så SplitCam registreres som et webcam kaldet <strong>"SplitCam Video Driver"</strong>. Åbn SkyPrivate-broadcasteren, klik på kameravælgeren i browseren, og vælg SplitCam. Din komponerede scene (overlays, andet kamera, filtre, AI-baggrund) når seerne som et enkelt webcam-feed.</p></details></div>
 </section>
 
 <div class="section">

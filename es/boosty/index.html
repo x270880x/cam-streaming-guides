@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "¿Cuánto pueden ganar las modelos en Boosty?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Los ingresos en Boosty dependen del tamaño de la audiencia, las horas emitidas y las propinas. Las difusoras activas suelen llevarse entre $200 y $3,000 al mes; las mejores superan los $10,000. Tu porcentaje de ingresos sigue la estructura de comisiones de Boosty: revisa el contrato de modelo antes de salir en directo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Es Boosty segura para las difusoras?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boosty exige verificación de edad y de identidad antes de pagar, lo que protege a las modelos del fraude. Usa un nombre artístico, no compartas nunca datos personales en cámara, activa el bloqueo geográfico para ocultar tu emisión en tu región y trata cada petición del espectador como una transacción. Los overlays y el fondo con IA de SplitCam también te permiten ocultar o reemplazar tu entorno real."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué documentos necesito para hacerme modelo en Boosty?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boosty suele pedir un documento oficial con foto (pasaporte, carné de conducir o DNI), una selfi sosteniendo el documento y un formulario fiscal/de pagos (W-9 para EE. UU., W-8BEN para no residentes en EE. UU.). La aprobación suele tardar de 24 a 72 horas; una vez aprobada, puedes emitir el mismo día."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo emitir en Boosty desde el móvil?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boosty normalmente ofrece una app móvil para difusoras o un panel móvil web, pero la experiencia es limitada: sin overlays, sin segunda cámara y sin fondo con IA. Para una calidad de producción completa, emite desde un ordenador con SplitCam y usa el móvil como segunda cámara (SplitCam admite entrada de cámara IP desde móviles)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo usar SplitCam como cámara virtual en Boosty?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí: el directo de Boosty corre en el navegador, así que SplitCam se registra como una webcam llamada \"SplitCam Video Driver\". Abre el panel de difusora de Boosty, pulsa el selector de cámara del navegador y elige SplitCam. Tu escena compuesta (overlays, segunda cámara, filtros, fondo con IA) llega a los espectadores como una única señal de webcam."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Tu emisión en Boosty va con lag o se entrecorta",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Solución de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Tu emisión en Boosty va con lag o se entrecorta</summary><p>Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000&nbsp;Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión.</p></details><details class="faq-item"><summary>Fotogramas perdidos durante la emisión en Boosty</summary><p>Los fotogramas perdidos significan que los paquetes no llegan a tiempo a Boosty — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto.</p></details><details class="faq-item"><summary>Pantalla negra — los espectadores no ven vídeo en Boosty</summary><p>Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live.</p></details><details class="faq-item"><summary>Boosty rechaza la clave de stream o no conecta</summary><p>Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra Boosty y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida.</p></details><details class="faq-item"><summary>Sin audio o audio desincronizado en Boosty</summary><p>Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Preguntas frecuentes</h2>
-  <div class="faq-list"><details class="faq-item"><summary>¿Cómo se conecta SplitCam a Boosty?</summary><p>El directo de Boosty funciona en el navegador, así que SplitCam se conecta como cámara virtual — elige SplitCam en el selector de cámara. No hace falta stream key.</p></details><details class="faq-item"><summary>¿Puedo usar overlays en un directo de Boosty?</summary><p>Sí — compón la escena en SplitCam (overlays, segunda cámara, fondo IA); Boosty ve una sola webcam. Los suscriptores reciben la escena compuesta completa.</p></details><details class="faq-item"><summary>¿Boosty admite OBS o codificadores externos?</summary><p>El directo de Boosty es principalmente por navegador. Si aparece una opción de stream key en tu panel de creador, pégala en los campos de RTMP personalizado de SplitCam; si no, usa el método de cámara virtual.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para usar con Boosty?</summary><p>Sí — SplitCam es gratis, sin marca de agua y sin límite de tiempo.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>¿Cómo se conecta SplitCam a Boosty?</summary><p>El directo de Boosty funciona en el navegador, así que SplitCam se conecta como cámara virtual — elige SplitCam en el selector de cámara. No hace falta stream key.</p></details><details class="faq-item"><summary>¿Puedo usar overlays en un directo de Boosty?</summary><p>Sí — compón la escena en SplitCam (overlays, segunda cámara, fondo IA); Boosty ve una sola webcam. Los suscriptores reciben la escena compuesta completa.</p></details><details class="faq-item"><summary>¿Boosty admite OBS o codificadores externos?</summary><p>El directo de Boosty es principalmente por navegador. Si aparece una opción de stream key en tu panel de creador, pégala en los campos de RTMP personalizado de SplitCam; si no, usa el método de cámara virtual.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para usar con Boosty?</summary><p>Sí — SplitCam es gratis, sin marca de agua y sin límite de tiempo.</p></details><details class="faq-item"><summary>¿Cuánto pueden ganar las modelos en Boosty?</summary><p>Los ingresos en Boosty dependen del tamaño de la audiencia, las horas emitidas y las propinas. Las difusoras activas suelen llevarse entre $200 y $3,000 al mes; las mejores superan los $10,000. Tu porcentaje de ingresos sigue la estructura de comisiones de Boosty: revisa el contrato de modelo antes de salir en directo.</p></details><details class="faq-item"><summary>¿Es Boosty segura para las difusoras?</summary><p>Boosty exige verificación de edad y de identidad antes de pagar, lo que protege a las modelos del fraude. Usa un nombre artístico, no compartas nunca datos personales en cámara, activa el bloqueo geográfico para ocultar tu emisión en tu región y trata cada petición del espectador como una transacción. Los overlays y el fondo con IA de SplitCam también te permiten ocultar o reemplazar tu entorno real.</p></details><details class="faq-item"><summary>¿Qué documentos necesito para hacerme modelo en Boosty?</summary><p>Boosty suele pedir un documento oficial con foto (pasaporte, carné de conducir o DNI), una selfi sosteniendo el documento y un formulario fiscal/de pagos (W-9 para EE. UU., W-8BEN para no residentes en EE. UU.). La aprobación suele tardar de 24 a 72 horas; una vez aprobada, puedes emitir el mismo día.</p></details><details class="faq-item"><summary>¿Puedo emitir en Boosty desde el móvil?</summary><p>Boosty normalmente ofrece una app móvil para difusoras o un panel móvil web, pero la experiencia es limitada: sin overlays, sin segunda cámara y sin fondo con IA. Para una calidad de producción completa, emite desde un ordenador con SplitCam y usa el móvil como segunda cámara (SplitCam admite entrada de cámara IP desde móviles).</p></details><details class="faq-item"><summary>¿Puedo usar SplitCam como cámara virtual en Boosty?</summary><p>Sí: el directo de Boosty corre en el navegador, así que SplitCam se registra como una webcam llamada <strong>"SplitCam Video Driver"</strong>. Abre el panel de difusora de Boosty, pulsa el selector de cámara del navegador y elige SplitCam. Tu escena compuesta (overlays, segunda cámara, filtros, fondo con IA) llega a los espectadores como una única señal de webcam.</p></details></div>
 </section>
 
 <div class="section">

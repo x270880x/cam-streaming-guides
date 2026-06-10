@@ -177,6 +177,46 @@
     },
     {
      "@type": "Question",
+     "name": "¿Cuánto pueden ganar las modelos en CamSoda?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Los ingresos en CamSoda dependen del tamaño de la audiencia, las horas emitidas y las propinas. Las difusoras activas suelen llevarse entre $200 y $3,000 al mes; las mejores superan los $10,000. Tu porcentaje de ingresos sigue la estructura de comisiones de CamSoda: revisa el contrato de modelo antes de salir en directo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Es CamSoda segura para las difusoras?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamSoda exige verificación de edad y de identidad antes de pagar, lo que protege a las modelos del fraude. Usa un nombre artístico, no compartas nunca datos personales en cámara, activa el bloqueo geográfico para ocultar tu emisión en tu región y trata cada petición del espectador como una transacción. Los overlays y el fondo con IA de SplitCam también te permiten ocultar o reemplazar tu entorno real."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué documentos necesito para hacerme modelo en CamSoda?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamSoda suele pedir un documento oficial con foto (pasaporte, carné de conducir o DNI), una selfi sosteniendo el documento y un formulario fiscal/de pagos (W-9 para EE. UU., W-8BEN para no residentes en EE. UU.). La aprobación suele tardar de 24 a 72 horas; una vez aprobada, puedes emitir el mismo día."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo emitir en CamSoda desde el móvil?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CamSoda normalmente ofrece una app móvil para difusoras o un panel móvil web, pero la experiencia es limitada: sin overlays, sin segunda cámara y sin fondo con IA. Para una calidad de producción completa, emite desde un ordenador con SplitCam y usa el móvil como segunda cámara (SplitCam admite entrada de cámara IP desde móviles)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿CamSoda es compatible con OBS o un codificador externo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí: CamSoda proporciona una URL de servidor RTMP y una clave de emisión en el panel de difusora. Pégalas en Configuración de emisión → RTMP personalizado de SplitCam, ajusta 1920×1080 a 30 fps con un bitrate de 4,000–5,000 Kbps y pulsa Salir en directo. La ruta RTMP personalizado te da toda la composición de escenas de SplitCam (multicámara, overlays, filtros)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Tu emisión en CamSoda va con lag o se entrecorta",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -513,7 +553,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Solución de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Tu emisión en CamSoda va con lag o se entrecorta</summary><p>Casi siempre el bitrate es más alto de lo que aguanta tu subida. Ejecuta el test de velocidad de SplitCam y pon el bitrate en torno al 75% de tu subida medida — 3.500–6.000&nbsp;Kbps para 1080p, menos para 720p. El lag desaparece cuando el codificador deja de ir por delante de tu conexión.</p></details><details class="faq-item"><summary>Fotogramas perdidos durante la emisión en CamSoda</summary><p>Los fotogramas perdidos significan que los paquetes no llegan a tiempo a CamSoda — normalmente Wi-Fi inestable. Cambia a conexión por cable Ethernet, cierra apps que consuman ancho de banda y baja un poco el bitrate. Un pico puntual está bien; un aumento constante indica que la conexión no da abasto.</p></details><details class="faq-item"><summary>Pantalla negra — los espectadores no ven vídeo en CamSoda</summary><p>Tu cámara no está seleccionada como fuente activa en SplitCam, o la retiene otra app. Cierra Zoom, Skype u OBS, vuelve a elegir tu webcam en la lista de fuentes de SplitCam y confirma que la vista previa muestra tu imagen antes de pulsar Go Live.</p></details><details class="faq-item"><summary>CamSoda rechaza la clave de stream o no conecta</summary><p>Vuelve a copiar la clave — un espacio sobrante o una clave antigua ya rotada es la causa habitual. Confirma que la URL del servidor coincide con la que muestra CamSoda y que la emisión por codificador externo está activada en tu cuenta. Un slider verde en los Ajustes de stream de SplitCam confirma una clave válida.</p></details><details class="faq-item"><summary>Sin audio o audio desincronizado en CamSoda</summary><p>Elige SplitCam como cámara y como micrófono, y selecciona tu micro real dentro de la fuente de audio de SplitCam. Si el audio se atrasa respecto al vídeo, baja la resolución un paso — el codificador está sobrecargado y el audio espera fotogramas que llegan tarde.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Preguntas frecuentes</h2>
-  <div class="faq-list"><details class="faq-item"><summary>¿CamSoda admite OBS / codificadores externos?</summary><p>Sí — oficialmente. Hay un botón Use OBS Broadcaster en la página Go Live y una guía OBS en la wiki de CamSoda, así que SplitCam funciona.</p></details><details class="faq-item"><summary>¿Necesito verificarme en CamSoda?</summary><p>Para emitir, no. Para recibir propinas, sí — CamSoda requiere completar antes su solicitud de verificación.</p></details><details class="faq-item"><summary>¿Qué resolución admite CamSoda?</summary><p>Hasta 1920×1080 a 30 fps, unos 6.000 Kbps máximo en su ingest RTMP.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para CamSoda?</summary><p>Sí — gratis, sin marca de agua ni límite de tiempo. Funciona junto al propio modo gratuito Use OBS Broadcaster de CamSoda, así que toda la cadena no cuesta nada.</p></details><details class="faq-item"><summary>¿Qué ajustes de audio y codificador usa CamSoda?</summary><p>El ingest de CamSoda admite audio AAC hasta 160 Kbps y vídeo H.264 con preset tune=zerolatency. CamSoda también es un servicio integrado en OBS, así que en SplitCam funciona como un destino RTMP estándar.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>¿CamSoda admite OBS / codificadores externos?</summary><p>Sí — oficialmente. Hay un botón Use OBS Broadcaster en la página Go Live y una guía OBS en la wiki de CamSoda, así que SplitCam funciona.</p></details><details class="faq-item"><summary>¿Necesito verificarme en CamSoda?</summary><p>Para emitir, no. Para recibir propinas, sí — CamSoda requiere completar antes su solicitud de verificación.</p></details><details class="faq-item"><summary>¿Qué resolución admite CamSoda?</summary><p>Hasta 1920×1080 a 30 fps, unos 6.000 Kbps máximo en su ingest RTMP.</p></details><details class="faq-item"><summary>¿SplitCam es gratis para CamSoda?</summary><p>Sí — gratis, sin marca de agua ni límite de tiempo. Funciona junto al propio modo gratuito Use OBS Broadcaster de CamSoda, así que toda la cadena no cuesta nada.</p></details><details class="faq-item"><summary>¿Qué ajustes de audio y codificador usa CamSoda?</summary><p>El ingest de CamSoda admite audio AAC hasta 160 Kbps y vídeo H.264 con preset tune=zerolatency. CamSoda también es un servicio integrado en OBS, así que en SplitCam funciona como un destino RTMP estándar.</p></details><details class="faq-item"><summary>¿Cuánto pueden ganar las modelos en CamSoda?</summary><p>Los ingresos en CamSoda dependen del tamaño de la audiencia, las horas emitidas y las propinas. Las difusoras activas suelen llevarse entre $200 y $3,000 al mes; las mejores superan los $10,000. Tu porcentaje de ingresos sigue la estructura de comisiones de CamSoda: revisa el contrato de modelo antes de salir en directo.</p></details><details class="faq-item"><summary>¿Es CamSoda segura para las difusoras?</summary><p>CamSoda exige verificación de edad y de identidad antes de pagar, lo que protege a las modelos del fraude. Usa un nombre artístico, no compartas nunca datos personales en cámara, activa el bloqueo geográfico para ocultar tu emisión en tu región y trata cada petición del espectador como una transacción. Los overlays y el fondo con IA de SplitCam también te permiten ocultar o reemplazar tu entorno real.</p></details><details class="faq-item"><summary>¿Qué documentos necesito para hacerme modelo en CamSoda?</summary><p>CamSoda suele pedir un documento oficial con foto (pasaporte, carné de conducir o DNI), una selfi sosteniendo el documento y un formulario fiscal/de pagos (W-9 para EE. UU., W-8BEN para no residentes en EE. UU.). La aprobación suele tardar de 24 a 72 horas; una vez aprobada, puedes emitir el mismo día.</p></details><details class="faq-item"><summary>¿Puedo emitir en CamSoda desde el móvil?</summary><p>CamSoda normalmente ofrece una app móvil para difusoras o un panel móvil web, pero la experiencia es limitada: sin overlays, sin segunda cámara y sin fondo con IA. Para una calidad de producción completa, emite desde un ordenador con SplitCam y usa el móvil como segunda cámara (SplitCam admite entrada de cámara IP desde móviles).</p></details><details class="faq-item"><summary>¿CamSoda es compatible con OBS o un codificador externo?</summary><p>Sí: CamSoda proporciona una URL de servidor RTMP y una clave de emisión en el panel de difusora. Pégalas en <strong>Configuración de emisión → RTMP personalizado</strong> de SplitCam, ajusta 1920×1080 a 30 fps con un bitrate de 4,000–5,000 Kbps y pulsa <strong>Salir en directo</strong>. La ruta RTMP personalizado te da toda la composición de escenas de SplitCam (multicámara, overlays, filtros).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Soporte oficial — CamSoda</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:modelsupport@camsoda.com">modelsupport@camsoda.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://www.camsoda.com/support" rel="nofollow noopener" target="_blank">https://www.camsoda.com/support</a></li></ul><p class="sp-note">Somos una guía independiente. Para problemas de cuenta, pagos o técnicos contacta directamente con el soporte oficial de la plataforma.</p></section>
 <div class="section">

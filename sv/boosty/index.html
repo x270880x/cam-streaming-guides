@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hur mycket kan modeller tjäna på Boosty?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Inkomsten på Boosty beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer Boosty:s provisionsstruktur — läs modellavtalet innan du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Är Boosty säkert för sändare?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boosty kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vilka dokument behöver jag för att bli modell på Boosty?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boosty kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jag sända på Boosty från min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boosty erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jag använda SplitCam som en virtuell kamera på Boosty?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — Boosty:s live körs i webbläsaren, så SplitCam registreras som en webbkamera vid namn \"SplitCam Video Driver\". Öppna Boosty-sändaren, klicka på kameraväljaren i webbläsaren och välj SplitCam. Din komponerade scen (overlays, andra kamera, filter, AI-bakgrund) når tittarna som en enda webbkameraström."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Boosty-sändningen hackar eller buffrar",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>Boosty-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under Boosty-sändning</summary><p>Tappade bildrutor betyder att paket inte når Boosty i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på Boosty</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>Boosty avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den Boosty visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på Boosty</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Vanliga frågor</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Hur kopplas SplitCam till Boosty?</summary><p>Boosty live är webbläsarbaserad, så SplitCam kopplas in som virtuell kamera — välj SplitCam i kameraväljaren. Ingen streamnyckel behövs.</p></details><details class="faq-item"><summary>Kan jag använda overlays på en Boosty-live?</summary><p>Ja — komponera scenen i SplitCam (overlays, andra kamera, AI-bakgrund); Boosty ser en enda webbkamera. Prenumeranter får hela den komponerade scenen.</p></details><details class="faq-item"><summary>Stöder Boosty OBS eller externa kodare?</summary><p>Boosty live är främst webbläsarbaserad. Om en streamnyckel dyker upp i din creator-panel klistrar du in den i SplitCams anpassade RTMP-fält; annars använd metoden med virtuell kamera.</p></details><details class="faq-item"><summary>Är SplitCam gratis för Boosty?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Hur kopplas SplitCam till Boosty?</summary><p>Boosty live är webbläsarbaserad, så SplitCam kopplas in som virtuell kamera — välj SplitCam i kameraväljaren. Ingen streamnyckel behövs.</p></details><details class="faq-item"><summary>Kan jag använda overlays på en Boosty-live?</summary><p>Ja — komponera scenen i SplitCam (overlays, andra kamera, AI-bakgrund); Boosty ser en enda webbkamera. Prenumeranter får hela den komponerade scenen.</p></details><details class="faq-item"><summary>Stöder Boosty OBS eller externa kodare?</summary><p>Boosty live är främst webbläsarbaserad. Om en streamnyckel dyker upp i din creator-panel klistrar du in den i SplitCams anpassade RTMP-fält; annars använd metoden med virtuell kamera.</p></details><details class="faq-item"><summary>Är SplitCam gratis för Boosty?</summary><p>Ja — SplitCam är gratis, ingen vattenstämpel och ingen tidsgräns.</p></details><details class="faq-item"><summary>Hur mycket kan modeller tjäna på Boosty?</summary><p>Inkomsten på Boosty beror på publikstorlek, antal sändningstimmar och tipsbeteende. Aktiva sändare tjänar vanligtvis 200–3 000 USD per månad; toppmodeller når 10 000 USD+. Din intäktsandel följer Boosty:s provisionsstruktur — läs modellavtalet innan du går live.</p></details><details class="faq-item"><summary>Är Boosty säkert för sändare?</summary><p>Boosty kräver ålders- och ID-verifiering före utbetalning, vilket skyddar modeller från bedrägeri. Använd ett artistnamn, dela aldrig personuppgifter framför kameran, aktivera geo-blockering för att dölja din sändning från din hemregion och behandla varje tittarförfrågan som en transaktion. SplitCams overlays och AI-bakgrund kan också dölja eller ersätta din verkliga omgivning.</p></details><details class="faq-item"><summary>Vilka dokument behöver jag för att bli modell på Boosty?</summary><p>Boosty kräver vanligtvis ett statligt utfärdat foto-ID (pass, körkort eller ID-kort), en selfie där du håller upp ID-handlingen och ett skatte-/utbetalningsformulär (W-9 för USA, W-8BEN för icke-USA). Godkännandet tar oftast 24–72 timmar; när du godkänts kan du gå live samma dag.</p></details><details class="faq-item"><summary>Kan jag sända på Boosty från min telefon?</summary><p>Boosty erbjuder vanligtvis en mobil sändarapp eller en mobilwebb-sändare, men upplevelsen är begränsad — inga overlays, ingen andra kamera, ingen AI-bakgrund. För full produktionskvalitet, sänd från en dator med SplitCam och använd telefonen som en andra kamera (SplitCam accepterar IP-kamerainmatning från telefoner).</p></details><details class="faq-item"><summary>Kan jag använda SplitCam som en virtuell kamera på Boosty?</summary><p>Ja — Boosty:s live körs i webbläsaren, så SplitCam registreras som en webbkamera vid namn <strong>"SplitCam Video Driver"</strong>. Öppna Boosty-sändaren, klicka på kameraväljaren i webbläsaren och välj SplitCam. Din komponerade scen (overlays, andra kamera, filter, AI-bakgrund) når tittarna som en enda webbkameraström.</p></details></div>
 </section>
 
 <div class="section">

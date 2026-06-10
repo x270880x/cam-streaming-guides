@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Kolik si modelky můžou na ImLive vydělat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Výdělky na ImLive závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou ImLive — před prvním vysíláním si projdi model agreement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je ImLive pro vysílající bezpečná?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Jaké dokumenty potřebuju, abych se na ImLive stala modelkou?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Můžu na ImLive vysílat z mobilu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ImLive většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Můžu SplitCam použít jako virtuální kameru na ImLive?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ano — live na ImLive běží v prohlížeči, takže SplitCam se zaregistruje jako webkamera s názvem \"SplitCam Video Driver\". Otevři broadcaster ImLive, klikni v prohlížeči na výběr kamery a zvol SplitCam. Tvoje složená scéna (overlaye, druhá kamera, filtry, AI pozadí) dorazí divákům jako jeden webkamerový stream."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Vysílání ImLive se seká nebo bufferuje",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Řešení problémů</h2><div class="faq-list"><details class="faq-item"><summary>Vysílání ImLive se seká nebo bufferuje</summary><p>Téměř vždy je bitrate nastavený výš, než unese váš upload. Spusťte vestavěný test rychlosti SplitCam, poté nastavte bitrate na zhruba 75 % naměřeného uploadu — 3500–6000&nbsp;Kbps pro 1080p, méně pro 720p. Sekání zmizí, jakmile kodér přestane překračovat vaši linku.</p></details><details class="faq-item"><summary>Ztráta snímků během vysílání ImLive</summary><p>Ztráta snímků znamená, že pakety nedorazí na ImLive včas — obvykle nestabilní Wi-Fi. Přejděte na drátový Ethernet, zavřete aplikace požírající pásmo a mírně snižte bitrate. Jeden výkyv nevadí; trvalý nárůst znamená, že linka nestíhá.</p></details><details class="faq-item"><summary>Černá obrazovka — diváci nevidí video na ImLive</summary><p>Vaše kamera není vybraná jako aktivní zdroj ve SplitCam, nebo ji drží jiná aplikace. Zavřete Zoom, Skype nebo OBS, vyberte webkameru znovu v seznamu zdrojů SplitCam a ujistěte se, že náhled ukazuje váš obraz, než stisknete Go Live.</p></details><details class="faq-item"><summary>ImLive odmítá stream key nebo se nepřipojuje</summary><p>Zkopírujte stream key znovu — mezera na konci nebo starý, resetovaný klíč jsou nejčastější příčiny. Ujistěte se, že URL serveru odpovídá tomu, co ImLive zobrazuje, a že vysílání externím kodérem je na účtu zapnuté. Zelený posuvník v Stream Settings SplitCam potvrzuje platný klíč.</p></details><details class="faq-item"><summary>Žádný zvuk nebo zvuk nesynchronní na ImLive</summary><p>Vyberte SplitCam jako kameru I mikrofon a ve zdroji zvuku SplitCam vyberte svůj skutečný mikrofon. Pokud zvuk zaostává za videem, snižte rozlišení o úroveň — kodér je přetížený a zvuk čeká na opožděné snímky.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">Časté dotazy</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Používá ImLive RTMP nebo stream key?</summary><p>Ani jedno — ImLive používá živou webkameru přes prohlížeč. SplitCam se připojuje jako virtuální kamera, žádný klíč ke kopírování.</p></details><details class="faq-item"><summary>Jak vybrat SplitCam na ImLive?</summary><p>Start Video Chat → Go To Settings → vyberte SplitCam jako webkameru a mikrofon.</p></details><details class="faq-item"><summary>Můžu používat překryvy na ImLive?</summary><p>Ano — sestavte je ve scéně SplitCam; ImLive zobrazí složený výsledek.</p></details><details class="faq-item"><summary>Je SplitCam zdarma pro ImLive?</summary><p>Ano — zdarma, bez vodoznaku a bez časového limitu. Jako virtuální kamera pro ImLive nepřidává náklady ani branding do vašeho videochatu.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Používá ImLive RTMP nebo stream key?</summary><p>Ani jedno — ImLive používá živou webkameru přes prohlížeč. SplitCam se připojuje jako virtuální kamera, žádný klíč ke kopírování.</p></details><details class="faq-item"><summary>Jak vybrat SplitCam na ImLive?</summary><p>Start Video Chat → Go To Settings → vyberte SplitCam jako webkameru a mikrofon.</p></details><details class="faq-item"><summary>Můžu používat překryvy na ImLive?</summary><p>Ano — sestavte je ve scéně SplitCam; ImLive zobrazí složený výsledek.</p></details><details class="faq-item"><summary>Je SplitCam zdarma pro ImLive?</summary><p>Ano — zdarma, bez vodoznaku a bez časového limitu. Jako virtuální kamera pro ImLive nepřidává náklady ani branding do vašeho videochatu.</p></details><details class="faq-item"><summary>Kolik si modelky můžou na ImLive vydělat?</summary><p>Výdělky na ImLive závisí na velikosti publika, počtu odvysílaných hodin a chování diváků při tipování. Aktivní vysílající si obvykle odnesou 200–3 000 $ měsíčně; špičkoví performeři dosahují i 10 000 $ a víc. Tvůj podíl na příjmech se řídí provizní strukturou ImLive — před prvním vysíláním si projdi model agreement.</p></details><details class="faq-item"><summary>Je ImLive pro vysílající bezpečná?</summary><p>ImLive před vyplacením vyžaduje ověření věku a totožnosti, což chrání modelky před podvody. Používej umělecké jméno, nikdy na kameře nesděluj osobní údaje, zapni geo-blocky, aby tvůj stream nešel vidět z domovského regionu, a každý požadavek diváka ber jako transakční. Overlaye a AI pozadí ve SplitCamu navíc dokážou skutečné okolí skrýt nebo nahradit.</p></details><details class="faq-item"><summary>Jaké dokumenty potřebuju, abych se na ImLive stala modelkou?</summary><p>ImLive obvykle vyžaduje státem vydaný doklad s fotkou (pas, řidičák nebo občanku), selfie s tímto dokladem v ruce a daňový/výplatní formulář (W-9 pro USA, W-8BEN pro ostatní). Schválení trvá většinou 24–72 hodin; po schválení můžeš jít živě ještě ten samý den.</p></details><details class="faq-item"><summary>Můžu na ImLive vysílat z mobilu?</summary><p>ImLive většinou nabízí mobilní broadcaster aplikaci nebo mobilní web pro vysílání, ale možnosti jsou omezené — žádné overlaye, žádná druhá kamera, žádné AI pozadí. Pro plnou produkční kvalitu vysílej z počítače se SplitCamem a mobil použij jako druhou kameru (SplitCam přijímá IP-camera vstup z telefonů).</p></details><details class="faq-item"><summary>Můžu SplitCam použít jako virtuální kameru na ImLive?</summary><p>Ano — live na ImLive běží v prohlížeči, takže SplitCam se zaregistruje jako webkamera s názvem <strong>"SplitCam Video Driver"</strong>. Otevři broadcaster ImLive, klikni v prohlížeči na výběr kamery a zvol SplitCam. Tvoje složená scéna (overlaye, druhá kamera, filtry, AI pozadí) dorazí divákům jako jeden webkamerový stream.</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Oficiální podpora — ImLive</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://imlive.com/help/CsCenter.aspx" rel="nofollow noopener" target="_blank">https://imlive.com/help/CsCenter.aspx</a></li></ul><p class="sp-note">Jsme nezávislý průvodce. S problémy s účtem, platbami nebo technikou se obraťte přímo na oficiální podporu platformy.</p></section>
 <div class="section">

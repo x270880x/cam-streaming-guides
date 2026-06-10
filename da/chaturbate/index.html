@@ -169,6 +169,46 @@
     },
     {
      "@type": "Question",
+     "name": "Hvor meget kan modeller tjene på Chaturbate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indtjeningen på Chaturbate afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger Chaturbates kommissionsstruktur — tjek modelaftalen, før du går live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er Chaturbate sikkert for broadcastere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chaturbate kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvilke dokumenter har jeg brug for at blive model på Chaturbate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chaturbate kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan jeg streame på Chaturbate fra min telefon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chaturbate tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Understøtter Chaturbate OBS eller en ekstern encoder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja — Chaturbate leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams Stream Settings → Custom RTMP, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik Go Live. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre)."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dit Chaturbate-stream hakker eller buffer",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -505,7 +545,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit Chaturbate-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under Chaturbate-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til Chaturbate i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på Chaturbate</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>Chaturbate afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Chaturbate viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på Chaturbate</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section">
   <h2 class="sec-h">FAQ</h2>
-  <div class="faq-list"><details class="faq-item"><summary>Tillader Chaturbate OBS / eksterne encodere?</summary><p>Ja — Chaturbate understøtter eksterne encodere officielt med sin egen «How do I set up OBS?» artikel. Aktivér med «Use External Encoder to Broadcast» i broadcast-indstillingerne.</p></details><details class="faq-item"><summary>Hvor er min Chaturbate stream key?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Nøglen er din broadcast token.</p></details><details class="faq-item"><summary>Hvilken bitrate til Chaturbate?</summary><p>3.500–6.000 Kbps ved 1080p er rigeligt. Chaturbate's loft er højt — den reelle grænse er dit upload; kør først SplitCam's hastighedstest.</p></details><details class="faq-item"><summary>Er SplitCam gratis til Chaturbate?</summary><p>Ja — helt gratis, uden vandmærke og uden tidsbegrænsning: encoderen spiser ikke dine token-indtægter.</p></details></div>
+  <div class="faq-list"><details class="faq-item"><summary>Tillader Chaturbate OBS / eksterne encodere?</summary><p>Ja — Chaturbate understøtter eksterne encodere officielt med sin egen «How do I set up OBS?» artikel. Aktivér med «Use External Encoder to Broadcast» i broadcast-indstillingerne.</p></details><details class="faq-item"><summary>Hvor er min Chaturbate stream key?</summary><p>Broadcast Yourself → My Broadcast → View RTMP/OBS broadcast information and stream key. Nøglen er din broadcast token.</p></details><details class="faq-item"><summary>Hvilken bitrate til Chaturbate?</summary><p>3.500–6.000 Kbps ved 1080p er rigeligt. Chaturbate's loft er højt — den reelle grænse er dit upload; kør først SplitCam's hastighedstest.</p></details><details class="faq-item"><summary>Er SplitCam gratis til Chaturbate?</summary><p>Ja — helt gratis, uden vandmærke og uden tidsbegrænsning: encoderen spiser ikke dine token-indtægter.</p></details><details class="faq-item"><summary>Hvor meget kan modeller tjene på Chaturbate?</summary><p>Indtjeningen på Chaturbate afhænger af publikumsstørrelse, antal streamede timer og tipping-adfærd. Aktive broadcastere tager typisk $200–$3.000 hjem om måneden; topperformere når $10.000+. Din indtægtsandel følger Chaturbates kommissionsstruktur — tjek modelaftalen, før du går live.</p></details><details class="faq-item"><summary>Er Chaturbate sikkert for broadcastere?</summary><p>Chaturbate kræver alders- og ID-verifikation før udbetaling, hvilket beskytter modeller mod svindel. Brug et kunstnernavn, del aldrig personlige data på kamera, aktivér geo-blokeringer for at skjule din stream fra dit hjemområde, og behandl enhver seerforespørgsel som transaktionel. SplitCams overlays og AI-baggrund kan også skjule eller erstatte dine reelle omgivelser.</p></details><details class="faq-item"><summary>Hvilke dokumenter har jeg brug for at blive model på Chaturbate?</summary><p>Chaturbate kræver typisk et statsudstedt billed-ID (pas, kørekort eller ID-kort), en selfie hvor du holder ID'et, og en skatte-/udbetalingsformular (W-9 for USA, W-8BEN for ikke-USA). Godkendelse tager normalt 24–72 timer; når du er godkendt, kan du gå live samme dag.</p></details><details class="faq-item"><summary>Kan jeg streame på Chaturbate fra min telefon?</summary><p>Chaturbate tilbyder normalt en mobil broadcaster-app eller en mobil-web broadcaster, men oplevelsen er begrænset — ingen overlays, intet andet kamera, ingen AI-baggrund. For fuld produktionskvalitet skal du sende fra en computer med SplitCam og bruge din telefon som et andet kamera (SplitCam accepterer IP-kamera-input fra telefoner).</p></details><details class="faq-item"><summary>Understøtter Chaturbate OBS eller en ekstern encoder?</summary><p>Ja — Chaturbate leverer en RTMP-server-URL og en stream-nøgle i broadcaster-panelet. Indsæt begge i SplitCams <strong>Stream Settings → Custom RTMP</strong>, sæt 1920×1080 ved 30 fps med en bitrate på 4.000–5.000 Kbps, og klik <strong>Go Live</strong>. Custom RTMP-ruten giver dig fuld SplitCam-scenekomposition (multi-kamera, overlays, filtre).</p></details></div>
 </section>
 <section class="section sp-block"><h2 class="sec-h">Officiel support — Chaturbate</h2><ul class="sp-list"><li class="sp-row"><span class="sp-icon" aria-hidden="true">✉️</span><a href="mailto:support@chaturbate.com">support@chaturbate.com</a></li><li class="sp-row"><span class="sp-icon" aria-hidden="true">🌐</span><a href="https://support.chaturbate.com/hc/en-us" rel="nofollow noopener" target="_blank">https://support.chaturbate.com/hc/en-us</a></li></ul><p class="sp-note">Vi er en uafhængig guide. Ved konto-, betalings- eller tekniske problemer kontakt platformens officielle support direkte.</p></section>
 <div class="section">
