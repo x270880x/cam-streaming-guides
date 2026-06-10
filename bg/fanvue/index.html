@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">Fanvue</span>
       <h1 class="h1">Как да си на живо в <span class="accent">Fanvue</span> със SplitCam</h1>
-      <p class="sub">Fanvue е бързо растяща британска абонаментна платформа за creator-и — алтернатива на OnlyFans, известна с това, че е приятелска към creator-ите и към AI, с абонаменти, pay-per-view и live стрийминг. Нейният live broadcaster върви в браузъра, така че ако го насочиш към безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong>, отключваш мулти-камера сцени, наслагвания и филтри. Ако твоят creator dashboard излага опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.</p>
+      <p class="sub">Fanvue е бързо растяща британска абонаментна платформа за creator-и — алтернатива на <a href="../onlyfans/" class="autolink">OnlyFans</a>, известна с това, че е приятелска към creator-ите и към AI, с абонаменти, pay-per-view и live стрийминг. Нейният live broadcaster върви в браузъра, така че ако го насочиш към безплатния <strong style='color:var(--text)'>SplitCam</strong> като <strong>виртуална камера</strong>, отключваш мулти-камера сцени, наслагвания и филтри. Ако твоят creator dashboard излага опция за external encoder / stream key, SplitCam се връзва вместо това през RTMP.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Изтегли SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Други ръководства за платформи</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a><a class="related-card" href="../bongacams/"><h4>Излъчване BongaCams</h4><p>External Encoder настройка за BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam в ImLive</h4><p>Виртуална камера за ImLive — без RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam в SkyPrivate</h4><p>Настройка с виртуална камера за кам обаждания през Skype в SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Използвай SplitCam като виртуална камера в live broadcaster-а на JustForFans.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Използвай SplitCam като виртуална камера за live в LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Излъчване Chaturbate</h4><p>Token-базирано настройване с външен енкодер в Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Излъчване CAM4</h4><p>External Encoder в CAM4 с гео-контроли.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Готов(а) ли си за ефир?</h2>

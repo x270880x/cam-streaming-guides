@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -540,7 +542,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </section>
 <section class="section">
   <h2 class="sec-h">专业提示</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>不只是直播，是创作者经济</h3><p>ManyVids 不是纯 cam 平台 — MV Live 只是其中一条收入线，跟卖片、定制视频、粉丝俱乐部订阅并列。把直播当成给其他变现产品引流的入口。</p></div><div class="tip-card"><h3>MV Live 内部的代币打赏</h3><p>MV Live 直播间里有自己的代币打赏体系。可以参考 Chaturbate / Stripchat 的玩法做目标菜单和奖励触发器 — 在 ManyVids 现有粉丝群里转化率很不错。</p></div><div class="tip-card"><h3>浏览器 vs 外部编码器</h3><p>Creator Studio 自带的浏览器直播工具只能单机位。通过 External Encoder 接入 SplitCam，才能解锁多机位场景、叠加层和滤镜。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>不只是直播，是创作者经济</h3><p>ManyVids 不是纯 cam 平台 — MV Live 只是其中一条收入线，跟卖片、定制视频、粉丝俱乐部订阅并列。把直播当成给其他变现产品引流的入口。</p></div><div class="tip-card"><h3>MV Live 内部的代币打赏</h3><p>MV Live 直播间里有自己的代币打赏体系。可以参考 <a href="../chaturbate/" class="autolink">Chaturbate</a> / <a href="../stripchat/" class="autolink">Stripchat</a> 的玩法做目标菜单和奖励触发器 — 在 ManyVids 现有粉丝群里转化率很不错。</p></div><div class="tip-card"><h3>浏览器 vs 外部编码器</h3><p>Creator Studio 自带的浏览器直播工具只能单机位。通过 External Encoder 接入 SplitCam，才能解锁多机位场景、叠加层和滤镜。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 ManyVids 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>ManyVids 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 ManyVids — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 ManyVids 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>ManyVids 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 ManyVids 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>ManyVids 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section">
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">其他平台指南</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 直播</h4><p>BongaCams 的 External Encoder 设置。</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 直播</h4><p>BongaCams 的 External Encoder 设置。</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat 直播</h4><p>Stripchat 直播的外部软件设置。</p></a><a class="related-card" href="../imlive/"><h4>ImLive 上的 SplitCam</h4><p>ImLive 的虚拟摄像头设置 — 无 RTMP。</p></a><a class="related-card" href="../mfc-alerts/"><h4>添加 MFC Alerts</h4><p>在 MyFreeCams 直播中显示动画小费提醒。</p></a></div>
 </div>
 <section class="cta-block">
   <h2>准备开始直播了吗？</h2>

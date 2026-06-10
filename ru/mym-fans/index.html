@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">MYM.fans</span>
       <h1 class="h1">Как вести прямой эфир на <span class="accent">MYM.fans</span> через SplitCam</h1>
-      <p class="sub">MYM.fans — крупнейшая французская платформа подписки на авторов, ответ Франции на OnlyFans: подписки, pay-per-view, чаевые и встроенный <strong>прямой эфир</strong> для подписчиков. Бродкастер работает прямо в браузере, поэтому бесплатный <strong style='color:var(--text)'>SplitCam</strong>, подключённый к MYM как <strong>виртуальная камера</strong>, добавляет мультикамерные сцены, оверлеи и фильтры поверх обычной веб-камеры. Если в кабинете автора доступен внешний кодер, SplitCam подключится и по RTMP.</p>
+      <p class="sub">MYM.fans — крупнейшая французская платформа подписки на авторов, ответ Франции на <a href="../onlyfans/" class="autolink">OnlyFans</a>: подписки, pay-per-view, чаевые и встроенный <strong>прямой эфир</strong> для подписчиков. Бродкастер работает прямо в браузере, поэтому бесплатный <strong style='color:var(--text)'>SplitCam</strong>, подключённый к MYM как <strong>виртуальная камера</strong>, добавляет мультикамерные сцены, оверлеи и фильтры поверх обычной веб-камеры. Если в кабинете автора доступен внешний кодер, SplitCam подключится и по RTMP.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Скачать SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Гайды по другим платформам</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка через токен и внешний кодировщик Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>External Encoder CAM4 + гео-настройки.</p></a><a class="related-card" href="../bongacams/"><h4>Трансляция на BongaCams</h4><p>External Encoder BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam на ImLive</h4><p>Виртуальная камера для ImLive — RTMP не нужен.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam в SkyPrivate</h4><p>Настройка виртуальной камеры для Skype-звонков SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Эфир на JustForFans</h4><p>Используйте SplitCam как виртуальную камеру в браузерном бродкастере JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Эфир на Fanvue</h4><p>Используйте SplitCam как виртуальную камеру для live на Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Трансляция на Chaturbate</h4><p>Настройка через токен и внешний кодировщик Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Трансляция на CAM4</h4><p>External Encoder CAM4 + гео-настройки.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Готовы выйти в эфир?</h2>

@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">JustForFans</span>
       <h1 class="h1">Paano mag-live sa <span class="accent">JustForFans</span> gamit ang SplitCam</h1>
-      <p class="sub">Ang JustForFans (JFF) ay creator-owned na subscription platform — matagal nang tumatakbo, itinatag ng mga performer, isang OnlyFans alternative na may subscriptions, pay-per-view at browser-based na live feature. Ang live broadcaster nito ay nagpapakita ng iisang flat webcam; ang pag-turo nito sa libreng <strong style='color:var(--text)'>SplitCam</strong> bilang <strong>virtual camera</strong> ay nagbubukas ng multi-camera scenes, overlays at filters. Kung ang creator dashboard mo ay nagbibigay din ng external-encoder / stream-key option, kumokonekta ang SplitCam sa pamamagitan ng RTMP sa halip.</p>
+      <p class="sub">Ang JustForFans (JFF) ay creator-owned na subscription platform — matagal nang tumatakbo, itinatag ng mga performer, isang <a href="../onlyfans/" class="autolink">OnlyFans</a> alternative na may subscriptions, pay-per-view at browser-based na live feature. Ang live broadcaster nito ay nagpapakita ng iisang flat webcam; ang pag-turo nito sa libreng <strong style='color:var(--text)'>SplitCam</strong> bilang <strong>virtual camera</strong> ay nagbubukas ng multi-camera scenes, overlays at filters. Kung ang creator dashboard mo ay nagbibigay din ng external-encoder / stream-key option, kumokonekta ang SplitCam sa pamamagitan ng RTMP sa halip.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ I-download ang SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Iba pang gabay sa platform</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams broadcast</h4><p>External Encoder setup para sa BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam sa ImLive</h4><p>Virtual camera setup para sa ImLive — walang RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam sa SkyPrivate</h4><p>Virtual-camera setup para sa Skype-based na cam calls ng SkyPrivate.</p></a><a class="related-card" href="../fanvue/"><h4>Live sa Fanvue</h4><p>Gamitin ang SplitCam bilang virtual camera para sa live ng Fanvue.</p></a><a class="related-card" href="../loyalfans/"><h4>Live sa LoyalFans</h4><p>Gamitin ang SplitCam bilang virtual camera para sa live ng LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate broadcast</h4><p>Token-based setup na may external encoder sa Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 broadcast</h4><p>External Encoder sa CAM4 na may geo-controls.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Handa nang mag-live?</h2>

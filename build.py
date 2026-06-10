@@ -36,6 +36,63 @@ def extra_faqs(name: str, method: str, lang: str):
         out.append((q.format(name=name), a.format(name=name)))
     return out
 
+
+# Cached compiled patterns for autolink_platforms() — built lazily once per session.
+_AUTOLINK_PATTERNS: dict = {}
+
+
+def _autolink_patterns(all_platforms):
+    """Build (compiled_regex, slug, name) tuples sorted by name-length descending.
+
+    Longest names first so "FC2 Live" wins over "FC2" if both ever existed; case-sensitive
+    so we don't break the word "live" in body text. We match plain brand-name occurrences
+    only — anything already inside an <a>…</a> is skipped at substitution time.
+    """
+    import re
+    if _AUTOLINK_PATTERNS.get("built"):
+        return _AUTOLINK_PATTERNS["list"]
+    items = sorted(all_platforms, key=lambda x: -len(x["name"]))
+    out = []
+    for p in items:
+        name = p["name"]
+        # Word boundaries adapted for names containing dots and digits (Cams.com, FC2 Live).
+        # Allow no leading boundary if preceded by start-of-string or whitespace; trailing
+        # boundary on whitespace, period, comma, semicolon, parenthesis or close-tag.
+        pat = re.compile(r'(?<![A-Za-z0-9>])(' + re.escape(name) + r')(?![A-Za-z0-9])')
+        out.append((pat, p["slug"], name))
+    _AUTOLINK_PATTERNS["list"] = out
+    _AUTOLINK_PATTERNS["built"] = True
+    return out
+
+
+def autolink_platforms(html_str, current_slug, all_platforms):
+    """Wrap the first occurrence of any other platform's name in body text in a link.
+
+    Sibling platform pages share the same depth in every language (.../<lang>/<slug>/
+    or .../<slug>/ for EN), so `../<other_slug>/` is the right relative URL on both.
+
+    Skips:
+    - The current page's own name (no self-link)
+    - Names already inside an <a>…</a> tag (avoid nested anchors)
+    - Names inside HTML attributes (we only edit text-between-tags)
+    Limits each name to one substitution per fragment.
+    """
+    import re
+    if not html_str or not isinstance(html_str, str):
+        return html_str
+    parts = re.split(r'(<a\b[^>]*>.*?</a>)', html_str, flags=re.IGNORECASE | re.DOTALL)
+    for i in range(0, len(parts), 2):  # even indices are outside-of-anchor
+        seg = parts[i]
+        for pat, slug, _name in _autolink_patterns(all_platforms):
+            if slug == current_slug:
+                continue
+            seg = pat.sub(
+                lambda m, s=slug: f'<a href="../{s}/" class="autolink">{m.group(1)}</a>',
+                seg, count=1,
+            )
+        parts[i] = seg
+    return "".join(parts)
+
 ROOT = Path(__file__).parent
 OBS_SLUG = "obs-alternative"
 MODEL_SLUG = "become-a-cam-model"
@@ -296,6 +353,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -1779,8 +1838,19 @@ def render(p, lang, all_platforms):
     home = depth                                # site root for this language section
     name = p["name"]
 
-    # related: 3 other platforms
-    others = [x for x in all_platforms if x["slug"] != p["slug"] and lang in x][:3]
+    # Auto-link other platform names mentioned in body copy. Each name links to its
+    # sibling page once — gives Google natural anchor text and lowers our orphan-page
+    # risk without us having to manually edit 35 × 54 platform files.
+    def L(text):
+        return autolink_platforms(text, p["slug"], all_platforms)
+
+    # related: 6 other platforms, prioritised by same broadcast method (stream/vcam)
+    # — same-method first (familiar workflow), then cross-method for variety.
+    cur_method = METHOD.get(p["slug"], "")
+    candidates = [x for x in all_platforms if x["slug"] != p["slug"] and lang in x]
+    same_method = [x for x in candidates if METHOD.get(x["slug"], "") == cur_method and cur_method]
+    other_method = [x for x in candidates if x not in same_method]
+    others = (same_method[:4] + other_method[:2])[:6]
     related = "".join(
         f'<a class="related-card" href="../{x["slug"]}/"><h4>{e(x[lang]["h1short"])}</h4>'
         f'<p>{e(x[lang]["card"])}</p></a>' for x in others)
@@ -1788,7 +1858,7 @@ def render(p, lang, all_platforms):
     steps = build_steps(p, lang)
     steps_html = "".join(
         f'<div class="step"><div class="step-num">{i+1}</div><div class="step-body">'
-        f'<div class="step-h">{e(s[0])}</div><p class="step-p">{s[1]}</p>'
+        f'<div class="step-h">{e(s[0])}</div><p class="step-p">{L(s[1])}</p>'
         f'{shot_for(p["slug"], i+1, depth, s[0])}</div></div>'
         for i, s in enumerate(steps))
 
@@ -1803,14 +1873,14 @@ def render(p, lang, all_platforms):
             f'allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>')
 
     tips_html = "".join(
-        f'<div class="tip-card"><h3>{e(t[0])}</h3><p>{t[1]}</p></div>'
+        f'<div class="tip-card"><h3>{e(t[0])}</h3><p>{L(t[1])}</p></div>'
         for t in d["tips"])
 
     # Original platform-specific FAQ (4 entries) + 5 universal FAQ entries
     # (earnings / safety / signup / mobile / method-specific) from FAQ_EXTRA.
     all_faq = list(d["faq"]) + extra_faqs(name, METHOD.get(p["slug"], ""), lang)
     faq_html = "".join(
-        f'<details class="faq-item"><summary>{e(q)}</summary><p>{a}</p></details>'
+        f'<details class="faq-item"><summary>{e(q)}</summary><p>{L(a)}</p></details>'
         for q, a in all_faq)
 
     support_html = render_support(p["slug"], name, lang)
@@ -1903,7 +1973,7 @@ def render(p, lang, all_platforms):
     <div class="hero-text">
       <span class="eyebrow">{e(name)}</span>
       <h1 class="h1">{d['h1html']}</h1>
-      <p class="sub">{d['intro']}</p>
+      <p class="sub">{L(d['intro'])}</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ {u['download']} <span class="dl-caret">▾</span></summary>
@@ -1930,7 +2000,7 @@ def render(p, lang, all_platforms):
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">{u['quick']}</div>
-    <div class="qa-text">{d['quick'].split('<ol>')[0]}</div>
+    <div class="qa-text">{L(d['quick'].split('<ol>')[0])}</div>
   </div>
 </div>
 {video_section}

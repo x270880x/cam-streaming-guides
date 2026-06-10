@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">MyFans.jp</span>
       <h1 class="h1">Come andare in diretta su <span class="accent">MyFans.jp</span> con SplitCam</h1>
-      <p class="sub">MyFans.jp è la principale piattaforma di abbonamento per creator del Giappone — la risposta giapponese a OnlyFans, con abbonamenti, pay-per-view, mance (投げ銭) e una funzione di <strong>live stream</strong> integrata per i fan. Il broadcaster gira nel browser, quindi puntare il free <strong style='color:var(--text)'>SplitCam</strong> su MyFans come <strong>camera virtuale</strong> aggiunge scene multi-camera, overlay e filtri che una webcam piatta non può offrire. Se la tua dashboard creator offre un'opzione external-encoder, SplitCam può collegarsi anche via RTMP.</p>
+      <p class="sub">MyFans.jp è la principale piattaforma di abbonamento per creator del Giappone — la risposta giapponese a <a href="../onlyfans/" class="autolink">OnlyFans</a>, con abbonamenti, pay-per-view, mance (投げ銭) e una funzione di <strong>live stream</strong> integrata per i fan. Il broadcaster gira nel browser, quindi puntare il free <strong style='color:var(--text)'>SplitCam</strong> su MyFans come <strong>camera virtuale</strong> aggiunge scene multi-camera, overlay e filtri che una webcam piatta non può offrire. Se la tua dashboard creator offre un'opzione external-encoder, SplitCam può collegarsi anche via RTMP.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Scarica SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Altre guide di piattaforma</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Trasmettere su Chaturbate</h4><p>Configurazione tramite token con encoder esterno per Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Trasmettere su CAM4</h4><p>External Encoder per CAM4 con geo-controlli.</p></a><a class="related-card" href="../bongacams/"><h4>Trasmettere su BongaCams</h4><p>Configurazione External Encoder per BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam su ImLive</h4><p>Setup camera virtuale per ImLive — niente RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam su SkyPrivate</h4><p>Setup camera virtuale per le chiamate cam SkyPrivate basate su Skype.</p></a><a class="related-card" href="../justforfans/"><h4>Diretta su JustForFans</h4><p>Usa SplitCam come camera virtuale nel broadcaster live di JustForFans.</p></a><a class="related-card" href="../fanvue/"><h4>Diretta su Fanvue</h4><p>Usa SplitCam come camera virtuale per le dirette di Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Trasmettere su Chaturbate</h4><p>Configurazione tramite token con encoder esterno per Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Trasmettere su CAM4</h4><p>External Encoder per CAM4 con geo-controlli.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Pronto a trasmettere in diretta?</h2>

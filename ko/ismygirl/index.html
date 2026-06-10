@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">IsMyGirl</span>
       <h1 class="h1">SplitCam으로 <span class="accent">IsMyGirl</span> 라이브 하는 방법</h1>
-      <p class="sub">IsMyGirl은 크리에이터 구독 플랫폼입니다 — 구독, 유료 콘텐츠, 라이브 방송을 제공하는 OnlyFans 대안으로 적극적인 크리에이터 지원으로 알려져 있습니다. 라이브 방송기는 브라우저에서 돌아가므로, 무료 <strong style='color:var(--text)'>SplitCam</strong>을 <strong>가상 카메라</strong>로 연결하면 멀티 카메라 장면, 오버레이, 필터가 풀립니다. 대시보드에 외부 인코더 / 스트림 키 옵션이 있다면 SplitCam이 RTMP로도 접속합니다.</p>
+      <p class="sub">IsMyGirl은 크리에이터 구독 플랫폼입니다 — 구독, 유료 콘텐츠, 라이브 방송을 제공하는 <a href="../onlyfans/" class="autolink">OnlyFans</a> 대안으로 적극적인 크리에이터 지원으로 알려져 있습니다. 라이브 방송기는 브라우저에서 돌아가므로, 무료 <strong style='color:var(--text)'>SplitCam</strong>을 <strong>가상 카메라</strong>로 연결하면 멀티 카메라 장면, 오버레이, 필터가 풀립니다. 대시보드에 외부 인코더 / 스트림 키 옵션이 있다면 SplitCam이 RTMP로도 접속합니다.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ SplitCam 다운로드 <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">다른 플랫폼 가이드</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 방송</h4><p>BongaCams를 위한 External Encoder 설정.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>ImLive의 SplitCam</h4><p>ImLive를 위한 가상 카메라 설정 — RTMP 없음.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam × SkyPrivate</h4><p>SkyPrivate Skype 콜용 가상 카메라 세팅.</p></a><a class="related-card" href="../justforfans/"><h4>JustForFans 라이브</h4><p>JustForFans 라이브 방송기에서 SplitCam을 가상 카메라로 사용.</p></a><a class="related-card" href="../fanvue/"><h4>Fanvue 라이브</h4><p>Fanvue 라이브를 위한 SplitCam 가상 카메라 활용.</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>라이브 방송 준비됐나요?</h2>

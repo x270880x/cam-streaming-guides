@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -530,7 +532,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 <div class="section">
   <div class="qa-box">
     <div class="qa-h">Kort</div>
-    <div class="qa-text">Streamen op RoyalCams met SplitCam: SplitCam installeren, scène opbouwen, in je model-dashboard <em>broadcast settings → external encoder</em> openen, server-URL en stream key kopiëren, in SplitCam plakken, Go Live.</div>
+    <div class="qa-text"><a href="../streamen/" class="autolink">Streamen</a> op RoyalCams met SplitCam: SplitCam installeren, scène opbouwen, in je model-dashboard <em>broadcast settings → external encoder</em> openen, server-URL en stream key kopiëren, in SplitCam plakken, Go Live.</div>
   </div>
 </div>
 
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andere platformgidsen</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Streamen op Chaturbate</h4><p>Token-gebaseerde setup met externe encoder op Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Streamen op CAM4</h4><p>External Encoder op CAM4 met geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Streamen op BongaCams</h4><p>External Encoder-setup voor BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Streamen op Chaturbate</h4><p>Token-gebaseerde setup met externe encoder op Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Streamen op CAM4</h4><p>External Encoder op CAM4 met geo-controles.</p></a><a class="related-card" href="../bongacams/"><h4>Streamen op BongaCams</h4><p>External Encoder-setup voor BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Streamen op Stripchat</h4><p>External software-setup voor Stripchat-streams.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam op ImLive</h4><p>Virtuele camera-setup voor ImLive — geen RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts toevoegen</h4><p>Toon geanimeerde tip-alerts in je MyFreeCams-stream.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Klaar om live te gaan?</h2>

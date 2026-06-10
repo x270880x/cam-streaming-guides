@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">Cherry.tv</span>
       <h1 class="h1">Cum transmiți pe <span class="accent">Cherry.tv</span> cu SplitCam</h1>
-      <p class="sub">Cherry.tv e o platformă cam mai nouă, în creștere rapidă, cu un unghi Web3 — payout-uri prietenoase cu cripto și o barieră de intrare mai joasă decât rețelele vechi precum LiveJasmin. Broadcasterul implicit e bazat pe browser, dar <strong>Streamer Dashboard</strong> expune calea standard de <strong>External Encoder</strong> la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit.</p>
+      <p class="sub">Cherry.tv e o platformă cam mai nouă, în creștere rapidă, cu un unghi Web3 — payout-uri prietenoase cu cripto și o barieră de intrare mai joasă decât rețelele vechi precum <a href="../livejasmin/" class="autolink">LiveJasmin</a>. Broadcasterul implicit e bazat pe browser, dar <strong>Streamer Dashboard</strong> expune calea standard de <strong>External Encoder</strong> la care se conectează <strong style='color:var(--text)'>SplitCam</strong> gratuit.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Descarcă SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Alte ghiduri de platforme</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisie BongaCams</h4><p>Setup External Encoder pentru BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Transmisie Chaturbate</h4><p>Configurare bazată pe token cu encoder extern pe Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Transmisie CAM4</h4><p>External Encoder pe CAM4 cu geo-controale.</p></a><a class="related-card" href="../bongacams/"><h4>Transmisie BongaCams</h4><p>Setup External Encoder pentru BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Transmisie Stripchat</h4><p>Setup software extern pentru transmisii Stripchat.</p></a><a class="related-card" href="../imlive/"><h4>SplitCam pe ImLive</h4><p>Setup cameră virtuală pentru ImLive — fără RTMP.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Adaugă MFC Alerts</h4><p>Afișează tip alerts animate în streamul MyFreeCams.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Gata să intri live?</h2>

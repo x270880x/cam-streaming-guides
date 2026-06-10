@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Other platform guides</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Stream on Chaturbate</h4><p>Token-based external encoder setup for Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Stream on CAM4</h4><p>External Encoder setup for CAM4, with geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>Stream on BongaCams</h4><p>External Encoder setup for BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Stream on Chaturbate</h4><p>Token-based external encoder setup for Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Stream on CAM4</h4><p>External Encoder setup for CAM4, with geo-controls.</p></a><a class="related-card" href="../bongacams/"><h4>Stream on BongaCams</h4><p>External Encoder setup for BongaCams.</p></a><a class="related-card" href="../stripchat/"><h4>Stream on Stripchat</h4><p>External-software setup for Stripchat broadcasts.</p></a><a class="related-card" href="../imlive/"><h4>Use SplitCam on ImLive</h4><p>Virtual-camera setup for ImLive — no RTMP needed.</p></a><a class="related-card" href="../mfc-alerts/"><h4>Add MFC Alerts</h4><p>Show animated tip alerts on your MyFreeCams stream.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Ready to go live?</h2>

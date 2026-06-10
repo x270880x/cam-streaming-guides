@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -540,7 +542,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </section>
 <section class="section">
   <h2 class="sec-h">プロのヒント</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Premium.Chatは分課金、配信ではない</h3><p>Chaturbate型のチップルームと違い、分単位で報酬を得ます。柔らかな照明、明瞭な音声、AI背景は公開camよりプレミアム相談に近い印象を与えます。</p></div><div class="tip-card"><h3>プロフィールではなくリンクを宣伝</h3><p>Premium.Chatは個人リンクを発行 — SNS、OnlyFansのbio、Linktreeに貼ることで顧客が見つけてくれます。</p></div><div class="tip-card"><h3>オーバーレイは必要最小限</h3><p>1対1の通話では重いオーバーレイは邪魔。SplitCamはカメラ画質、照明、背景のために使い、画面の主役は自分に保ちます。</p></div><div class="tip-card"><h3>まず非公開テストを実施</h3><p>観客に部屋を開く前に、カメラ、音声、構図、オーバーレイをチェックする短いテスト配信を実行。</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>Premium.Chatは分課金、配信ではない</h3><p><a href="../chaturbate/" class="autolink">Chaturbate</a>型のチップルームと違い、分単位で報酬を得ます。柔らかな照明、明瞭な音声、AI背景は公開camよりプレミアム相談に近い印象を与えます。</p></div><div class="tip-card"><h3>プロフィールではなくリンクを宣伝</h3><p>Premium.Chatは個人リンクを発行 — SNS、<a href="../onlyfans/" class="autolink">OnlyFans</a>のbio、Linktreeに貼ることで顧客が見つけてくれます。</p></div><div class="tip-card"><h3>オーバーレイは必要最小限</h3><p>1対1の通話では重いオーバーレイは邪魔。SplitCamはカメラ画質、照明、背景のために使い、画面の主役は自分に保ちます。</p></div><div class="tip-card"><h3>まず非公開テストを実施</h3><p>観客に部屋を開く前に、カメラ、音声、構図、オーバーレイをチェックする短いテスト配信を実行。</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">トラブルシューティング</h2><div class="faq-list"><details class="faq-item"><summary>Premium.Chat の配信がカクつく・バッファリングする</summary><p>ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。</p></details><details class="faq-item"><summary>Premium.Chat 配信中のフレーム落ち</summary><p>フレーム落ちはパケットが Premium.Chat に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。</p></details><details class="faq-item"><summary>黒い画面 — Premium.Chat で視聴者に映像が映らない</summary><p>カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。</p></details><details class="faq-item"><summary>Premium.Chat がストリームキーを拒否する・接続しない</summary><p>ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが Premium.Chat の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。</p></details><details class="faq-item"><summary>Premium.Chat で音声がない・音ズレする</summary><p>SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。</p></details></div></section>
 <section class="section">
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">他のプラットフォームガイド</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate配信</h4><p>Chaturbateでの外部エンコーダーによるトークンベース設定。</p></a><a class="related-card" href="../cam4/"><h4>CAM4配信</h4><p>地域コントロール付きCAM4 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams配信</h4><p>BongaCams用External Encoder設定。</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>ImLiveでのSplitCam</h4><p>ImLive用仮想カメラ設定 — RTMPなし。</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam × SkyPrivate</h4><p>SkyPrivate の Skype プライベート通話用 仮想カメラ設定。</p></a><a class="related-card" href="../justforfans/"><h4>JustForFans配信</h4><p>JustForFansのライブブロードキャスターでSplitCamを仮想カメラとして使用。</p></a><a class="related-card" href="../fanvue/"><h4>Fanvue配信</h4><p>FanvueライブでSplitCamを仮想カメラとして使用。</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate配信</h4><p>Chaturbateでの外部エンコーダーによるトークンベース設定。</p></a><a class="related-card" href="../cam4/"><h4>CAM4配信</h4><p>地域コントロール付きCAM4 External Encoder。</p></a></div>
 </div>
 <section class="cta-block">
   <h2>ライブ配信の準備はできましたか？</h2>

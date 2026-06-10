@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">Privacy.com.br</span>
       <h1 class="h1">Så går du live på <span class="accent">Privacy.com.br</span> med SplitCam</h1>
-      <p class="sub">Privacy.com.br är Brasiliens ledande creator-prenumerationsplattform — det brasilianska svaret på OnlyFans, med assinaturas, pay-per-view, gorjetas och en inbyggd <strong>ao vivo</strong>-funktion (livesändning) för fãs. Dess sändare körs i webbläsaren, så att rikta in gratis <strong style='color:var(--text)'>SplitCam</strong> mot Privacy som <strong>virtuell kamera</strong> lägger till flerkamerascener, overlays och filter som en platt webbkamera inte kan leverera. Om din creator-panel erbjuder ett alternativ för extern kodare kan SplitCam även koppla in sig via RTMP.</p>
+      <p class="sub">Privacy.com.br är Brasiliens ledande creator-prenumerationsplattform — det brasilianska svaret på <a href="../onlyfans/" class="autolink">OnlyFans</a>, med assinaturas, pay-per-view, gorjetas och en inbyggd <strong>ao vivo</strong>-funktion (livesändning) för fãs. Dess sändare körs i webbläsaren, så att rikta in gratis <strong style='color:var(--text)'>SplitCam</strong> mot Privacy som <strong>virtuell kamera</strong> lägger till flerkamerascener, overlays och filter som en platt webbkamera inte kan leverera. Om din creator-panel erbjuder ett alternativ för extern kodare kan SplitCam även koppla in sig via RTMP.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Ladda ner SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Guider för andra plattformar</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a><a class="related-card" href="../bongacams/"><h4>Sända BongaCams</h4><p>External Encoder-uppsättning för BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuell kamera-uppsättning för ImLive — ingen RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam på SkyPrivate</h4><p>Virtuell kamera-konfiguration för Skype-baserade cam-samtal på SkyPrivate.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Använd SplitCam som virtuell kamera i JustForFans livesändare.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Använd SplitCam som virtuell kamera för live på Fanvue.</p></a><a class="related-card" href="../chaturbate/"><h4>Sända Chaturbate</h4><p>Token-baserad uppsättning med extern kodare på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Sända CAM4</h4><p>External Encoder på CAM4 med geokontroll.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Redo att gå live?</h2>

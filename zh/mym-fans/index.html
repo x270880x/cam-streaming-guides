@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">MYM.fans</span>
       <h1 class="h1">如何使用 SplitCam 在 <span class="accent">MYM.fans</span> 直播</h1>
-      <p class="sub">MYM.fans 是法国头部的创作者订阅平台 —— 法国版 OnlyFans，提供订阅、PPV 付费内容、打赏，以及面向粉丝的<strong>直播</strong>功能。它的主播器跑在浏览器里，所以把免费 <strong style='color:var(--text)'>SplitCam</strong> 以<strong>虚拟摄像头</strong>身份接到 MYM 上，就能在普通网络摄像头的基础上叠加多机位场景、叠加层和滤镜。如果您的创作者后台开放了外部编码器选项，SplitCam 也能通过 RTMP 接入。</p>
+      <p class="sub">MYM.fans 是法国头部的创作者订阅平台 —— 法国版 <a href="../onlyfans/" class="autolink">OnlyFans</a>，提供订阅、PPV 付费内容、打赏，以及面向粉丝的<strong>直播</strong>功能。它的主播器跑在浏览器里，所以把免费 <strong style='color:var(--text)'>SplitCam</strong> 以<strong>虚拟摄像头</strong>身份接到 MYM 上，就能在普通网络摄像头的基础上叠加多机位场景、叠加层和滤镜。如果您的创作者后台开放了外部编码器选项，SplitCam 也能通过 RTMP 接入。</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ 下载 SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">其他平台指南</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 直播</h4><p>BongaCams 的 External Encoder 设置。</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>ImLive 上的 SplitCam</h4><p>ImLive 的虚拟摄像头设置 — 无 RTMP。</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam × SkyPrivate</h4><p>为 SkyPrivate 的 Skype 视频通话做虚拟摄像头设置。</p></a><a class="related-card" href="../justforfans/"><h4>JustForFans 直播</h4><p>把 SplitCam 作为虚拟摄像头接入 JustForFans 的直播器。</p></a><a class="related-card" href="../fanvue/"><h4>Fanvue 直播</h4><p>把 SplitCam 作为 Fanvue 直播的虚拟摄像头。</p></a><a class="related-card" href="../chaturbate/"><h4>Chaturbate 直播</h4><p>Chaturbate 上基于令牌的外部编码器设置。</p></a><a class="related-card" href="../cam4/"><h4>CAM4 直播</h4><p>CAM4 上带地理控制的 External Encoder。</p></a></div>
 </div>
 <section class="cta-block">
   <h2>准备开始直播了吗？</h2>

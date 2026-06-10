@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">JustForFans</span>
       <h1 class="h1">Cara live di <span class="accent">JustForFans</span> dengan SplitCam</h1>
-      <p class="sub">JustForFans (JFF) adalah platform langganan milik creator — alternatif OnlyFans yang dirintis performer dan sudah lama berjalan, dengan langganan, konten bayar-per-tonton, dan fitur live berbasis browser. Broadcaster live-nya hanya menampilkan satu webcam datar; mengarahkannya ke <strong style='color:var(--text)'>SplitCam</strong> gratis sebagai <strong>kamera virtual</strong> membuka scene multi-kamera, overlay, dan filter. Kalau Creator Dashboard-mu juga menampilkan opsi external-encoder / stream key, SplitCam terhubung lewat RTMP sebagai gantinya.</p>
+      <p class="sub">JustForFans (JFF) adalah platform langganan milik creator — alternatif <a href="../onlyfans/" class="autolink">OnlyFans</a> yang dirintis performer dan sudah lama berjalan, dengan langganan, konten bayar-per-tonton, dan fitur live berbasis browser. Broadcaster live-nya hanya menampilkan satu webcam datar; mengarahkannya ke <strong style='color:var(--text)'>SplitCam</strong> gratis sebagai <strong>kamera virtual</strong> membuka scene multi-kamera, overlay, dan filter. Kalau Creator Dashboard-mu juga menampilkan opsi external-encoder / stream key, SplitCam terhubung lewat RTMP sebagai gantinya.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Unduh SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Panduan platform lain</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Siaran Chaturbate</h4><p>Pengaturan berbasis token dengan encoder eksternal di Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Siaran CAM4</h4><p>External Encoder di CAM4 dengan kontrol geo.</p></a><a class="related-card" href="../bongacams/"><h4>Siaran BongaCams</h4><p>Pengaturan External Encoder untuk BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam di ImLive</h4><p>Pengaturan kamera virtual untuk ImLive — tanpa RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam di SkyPrivate</h4><p>Setup virtual camera untuk panggilan cam berbasis Skype di SkyPrivate.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Pakai SplitCam sebagai kamera virtual untuk live Fanvue.</p></a><a class="related-card" href="../loyalfans/"><h4>Live LoyalFans</h4><p>Pakai SplitCam sebagai kamera virtual untuk live LoyalFans.</p></a><a class="related-card" href="../chaturbate/"><h4>Siaran Chaturbate</h4><p>Pengaturan berbasis token dengan encoder eksternal di Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Siaran CAM4</h4><p>External Encoder di CAM4 dengan kontrol geo.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Siap untuk live?</h2>

@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -503,7 +505,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">IsMyGirl</span>
       <h1 class="h1">Sådan går du live på <span class="accent">IsMyGirl</span> med SplitCam</h1>
-      <p class="sub">IsMyGirl er en creator-abonnementsplatform — et OnlyFans-alternativ med abonnementer, betalt indhold og live-streaming, kendt for sin hands-on creator-support. Live-broadcasteren kører i browseren, så forbinder du gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, får du multi-kamera scener, overlays og filtre. Hvis dit dashboard afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet over RTMP.</p>
+      <p class="sub">IsMyGirl er en creator-abonnementsplatform — et <a href="../onlyfans/" class="autolink">OnlyFans</a>-alternativ med abonnementer, betalt indhold og live-streaming, kendt for sin hands-on creator-support. Live-broadcasteren kører i browseren, så forbinder du gratis <strong style='color:var(--text)'>SplitCam</strong> som <strong>virtuelt kamera</strong>, får du multi-kamera scener, overlays og filtre. Hvis dit dashboard afslører en external-encoder / stream key-mulighed, forbinder SplitCam i stedet over RTMP.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ Hent SplitCam <span class="dl-caret">▾</span></summary>
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">Andre platformsguides</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Udsend Chaturbate</h4><p>Token-baseret opsætning med ekstern encoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Udsend CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a><a class="related-card" href="../bongacams/"><h4>Udsend BongaCams</h4><p>External Encoder-opsætning til BongaCams.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../imlive/"><h4>SplitCam på ImLive</h4><p>Virtuelt kamera til ImLive — ingen RTMP.</p></a><a class="related-card" href="../skyprivate/"><h4>SplitCam på SkyPrivate</h4><p>Virtuel-kamera-opsætning til SkyPrivates Skype-baserede cam-opkald.</p></a><a class="related-card" href="../justforfans/"><h4>Live JustForFans</h4><p>Brug SplitCam som virtuelt kamera i JustForFans&#x27; live-broadcaster.</p></a><a class="related-card" href="../fanvue/"><h4>Live Fanvue</h4><p>Brug SplitCam som virtuelt kamera i Fanvues live-broadcaster.</p></a><a class="related-card" href="../chaturbate/"><h4>Udsend Chaturbate</h4><p>Token-baseret opsætning med ekstern encoder på Chaturbate.</p></a><a class="related-card" href="../cam4/"><h4>Udsend CAM4</h4><p>External Encoder på CAM4 med geo-kontroller.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>Klar til at gå live?</h2>

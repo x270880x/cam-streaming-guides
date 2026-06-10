@@ -404,6 +404,8 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item summary::after{content:"+";font-size:22px;color:var(--text-sub);font-weight:300}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
+a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
+a.autolink:hover{color:var(--blue);border-bottom-style:solid}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -540,7 +542,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </section>
 <section class="section">
   <h2 class="sec-h">프로 팁</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>크리에이터 이코노미, 라이브만이 아닌</h3><p>ManyVids는 순수 cam 사이트가 아닙니다 — MV Live는 클립 판매, 커스텀 비디오, 팬클럽 구독과 나란히 가는 수익 채널 중 하나. 라이브는 다른 수익 상품으로 가는 깔때기로 설계하세요.</p></div><div class="tip-card"><h3>MV Live 안의 토큰 팁</h3><p>MV Live 룸은 자체 토큰 팁 시스템을 갖고 있습니다. Chaturbate / Stripchat과 비슷한 골 메뉴와 리워드 트리거를 설계 — ManyVids 기존 오디언스에서 전환이 잘 됩니다.</p></div><div class="tip-card"><h3>브라우저 vs 외부 인코더</h3><p>Creator Studio 내장 브라우저 방송은 싱글 카메라. SplitCam을 External Encoder로 연결해야 멀티 카메라 장면, 오버레이, 필터가 풀립니다.</p></div><div class="tip-card"><h3>유선 연결을 쓰세요</h3><p>긴 방송에서는 이더넷이 와이파이를 이깁니다 — 프레임이 끊기면 팁도 끊깁니다. 방송 PC에 랜선을 연결하세요.</p></div></div>
+  <div class="tips-grid"><div class="tip-card"><h3>크리에이터 이코노미, 라이브만이 아닌</h3><p>ManyVids는 순수 cam 사이트가 아닙니다 — MV Live는 클립 판매, 커스텀 비디오, 팬클럽 구독과 나란히 가는 수익 채널 중 하나. 라이브는 다른 수익 상품으로 가는 깔때기로 설계하세요.</p></div><div class="tip-card"><h3>MV Live 안의 토큰 팁</h3><p>MV Live 룸은 자체 토큰 팁 시스템을 갖고 있습니다. <a href="../chaturbate/" class="autolink">Chaturbate</a> / <a href="../stripchat/" class="autolink">Stripchat</a>과 비슷한 골 메뉴와 리워드 트리거를 설계 — ManyVids 기존 오디언스에서 전환이 잘 됩니다.</p></div><div class="tip-card"><h3>브라우저 vs 외부 인코더</h3><p>Creator Studio 내장 브라우저 방송은 싱글 카메라. SplitCam을 External Encoder로 연결해야 멀티 카메라 장면, 오버레이, 필터가 풀립니다.</p></div><div class="tip-card"><h3>유선 연결을 쓰세요</h3><p>긴 방송에서는 이더넷이 와이파이를 이깁니다 — 프레임이 끊기면 팁도 끊깁니다. 방송 PC에 랜선을 연결하세요.</p></div></div>
 </section>
 <section class="section"><h2 class="sec-h">문제 해결</h2><div class="faq-list"><details class="faq-item"><summary>ManyVids 방송이 끊기거나 버퍼링됨</summary><p>거의 항상 비트레이트가 업로드가 감당할 수 있는 것보다 높게 설정된 경우입니다. SplitCam 내장 속도 테스트를 돌린 뒤 비트레이트를 측정된 업로드의 약 75%로 설정하세요 — 1080p에 3,500–6,000&nbsp;Kbps, 720p는 더 낮게. 인코더가 회선을 초과하지 않으면 끊김이 사라집니다.</p></details><details class="faq-item"><summary>ManyVids 방송 중 프레임 끊김</summary><p>프레임 끊김은 패킷이 ManyVids에 제때 도착하지 못한다는 뜻입니다 — 보통 불안정한 와이파이. 유선 이더넷으로 바꾸고 대역폭을 먹는 앱을 닫고 비트레이트를 약간 낮추세요. 한 번 튀는 건 괜찮지만 계속 늘면 회선이 못 따라가는 것입니다.</p></details><details class="faq-item"><summary>검은 화면 — 시청자가 ManyVids에서 영상을 못 봄</summary><p>카메라가 SplitCam에서 활성 소스로 선택되지 않았거나 다른 앱이 잡고 있습니다. Zoom, Skype, OBS를 닫고 SplitCam 소스 목록에서 웹캠을 다시 고르고 Go Live 전에 미리보기에 영상이 나오는지 확인하세요.</p></details><details class="faq-item"><summary>ManyVids이 스트림 키를 거부하거나 연결되지 않음</summary><p>스트림 키를 다시 복사하세요 — 끝의 공백이나 재설정된 오래된 키가 가장 흔한 원인입니다. 서버 URL이 ManyVids이 표시한 것과 일치하고 계정에 외부 인코더 방송이 켜져 있는지 확인하세요. SplitCam Stream Settings의 초록 슬라이더가 유효한 키를 확인해 줍니다.</p></details><details class="faq-item"><summary>ManyVids에서 소리가 없거나 음성이 어긋남</summary><p>SplitCam을 카메라 그리고 마이크로 모두 선택하고 SplitCam 오디오 소스 안에서 진짜 마이크를 고르세요. 오디오가 영상보다 뒤처지면 해상도를 한 단계 낮추세요 — 인코더가 과부하라 오디오가 늦은 프레임을 기다리는 것입니다.</p></details></div></section>
 <section class="section">
@@ -550,7 +552,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 
 <div class="section">
   <h3 style="font-size:17px;font-weight:700;margin-bottom:4px">다른 플랫폼 가이드</h3>
-  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 방송</h4><p>BongaCams를 위한 External Encoder 설정.</p></a></div>
+  <div class="related-grid"><a class="related-card" href="../chaturbate/"><h4>Chaturbate 방송</h4><p>외부 인코더를 쓰는 토큰 기반 Chaturbate 설정.</p></a><a class="related-card" href="../cam4/"><h4>CAM4 방송</h4><p>지역 제어가 있는 CAM4 External Encoder.</p></a><a class="related-card" href="../bongacams/"><h4>BongaCams 방송</h4><p>BongaCams를 위한 External Encoder 설정.</p></a><a class="related-card" href="../stripchat/"><h4>Stripchat 방송</h4><p>Stripchat 방송을 위한 외부 소프트웨어 설정.</p></a><a class="related-card" href="../imlive/"><h4>ImLive의 SplitCam</h4><p>ImLive를 위한 가상 카메라 설정 — RTMP 없음.</p></a><a class="related-card" href="../mfc-alerts/"><h4>MFC Alerts 추가</h4><p>MyFreeCams 방송에 애니메이션 팁 알림 표시.</p></a></div>
 </div>
 <section class="cta-block">
   <h2>라이브 방송 준비됐나요?</h2>
