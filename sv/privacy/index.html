@@ -196,10 +196,10 @@ display:flex;justify-content:space-between;gap:16px}
 .faq-item p{margin-top:12px;color:var(--text-sub);font-size:14.5px;line-height:1.65}
 a.autolink{color:inherit;border-bottom:1px dotted var(--blue);text-decoration:none;transition:color .12s,border-color .12s}
 a.autolink:hover{color:var(--blue);border-bottom-style:solid}
-nav.toc{position:static;height:auto;z-index:auto;display:flex;flex-wrap:wrap;gap:8px 4px;padding:14px 22px;margin:24px 40px;max-width:900px;border:1px solid var(--app-border);border-radius:10px;background:var(--app-panel);font-size:13.5px;font-weight:600;justify-content:flex-start}
-.toc a{color:var(--text-sub);padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s}
-.toc a:hover{color:var(--text);background:rgba(40,120,252,.12)}
-.toc a::before{content:"#";margin-right:3px;color:var(--blue);opacity:.7}
+nav.toc{position:static;height:auto;z-index:auto;display:flex;flex-wrap:wrap;gap:8px;padding:0 40px;margin:8px auto 0;max-width:900px;background:transparent;border:none}
+nav.toc a{display:inline-flex;align-items:center;padding:7px 14px;border-radius:999px;border:1px solid var(--app-border);color:var(--text-sub);text-decoration:none;font-size:13px;font-weight:600;background:rgba(255,255,255,.02);transition:all .15s}
+nav.toc a:hover{border-color:var(--blue);color:var(--text);background:rgba(40,120,252,.1)}
+@media (max-width:640px){nav.toc{padding:0 16px}}
 /* Offset anchor jumps so the section header isn't hidden behind the 60px fixed top nav. */
 section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learning"]{scroll-margin-top:76px}
 .cat-section{margin-top:32px}
