@@ -518,6 +518,7 @@ border-radius:11px;transition:all .16s}
 .hf-btn{padding:8px 15px;border-radius:999px;border:1px solid var(--app-border2);background:rgba(255,255,255,.02);color:var(--text-sub);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
 .hf-btn:hover{color:var(--text);border-color:var(--blue)}
 .hf-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.hf-n{opacity:.65;font-weight:600;margin-left:2px}
 .related-card.hf-hide{display:none}
 .cat-section.hf-hide{display:none}
 .hub-hook{margin-top:14px;font-size:16px;line-height:1.6;color:var(--text);max-width:680px;position:relative;z-index:1}
@@ -3675,7 +3676,7 @@ def render_hub(platforms, lang):
         by_cat[cat].append(p)
 
     def _card(p):
-        return (f'<a class="related-card" href="{p["slug"]}/" data-m="{METHOD.get(p["slug"], "")}">'
+        return (f'<a class="related-card" href="{p["slug"]}/" data-m="{METHOD.get(p["slug"]) or "tools"}">'
                 f'<img class="hub-card-icon" src="{hub_depth}logos/round/{p["slug"]}.png" alt="" loading="lazy">'
                 f'<div class="hub-card-body"><h4>{e(p[lang]["h1short"])}</h4>'
                 f'<p>{e(p[lang]["card"])}</p></div></a>')
@@ -3702,13 +3703,16 @@ def render_hub(platforms, lang):
         f'<span class="usp-chip">✓ {e(c.replace("{n}", f"{len(avail)}+"))}</span>'
         for c in usp["chips"])
 
-    # Flat ungrouped fallback for the filter buttons (.hub-grid in cat-sections still
-    # works since data-m attribute is preserved; we just hide non-matching cards).
+    # Filter bar: All / Stream sites / Virtual camera / Tools — each with a live count.
     hf = HUB_FILTER.get(lang, HUB_FILTER["en"])
+    n_stream = sum(1 for p in avail if METHOD.get(p["slug"], "") == "stream")
+    n_vcam = sum(1 for p in avail if METHOD.get(p["slug"], "") == "vcam")
+    n_tools = len(avail) - n_stream - n_vcam
     filter_bar = (f'<div class="hub-filter">'
-                  f'<button class="hf-btn active" data-f="all">{e(hf[0])}</button>'
-                  f'<button class="hf-btn" data-f="stream">{e(hf[1])}</button>'
-                  f'<button class="hf-btn" data-f="vcam">{e(hf[2])}</button></div>')
+                  f'<button class="hf-btn active" data-f="all">{e(hf[0])} <span class="hf-n">{len(avail)}</span></button>'
+                  f'<button class="hf-btn" data-f="stream">{e(hf[1])} <span class="hf-n">{n_stream}</span></button>'
+                  f'<button class="hf-btn" data-f="vcam">{e(hf[2])} <span class="hf-n">{n_vcam}</span></button>'
+                  f'<button class="hf-btn" data-f="tools">{e(cat_labels["extras"])} <span class="hf-n">{n_tools}</span></button></div>')
     canon = f'{SITE}/{u["path"]}'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
     # Keywords: localized lead phrase (from H1) + universal brand/tech terms.
