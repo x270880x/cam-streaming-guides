@@ -519,6 +519,7 @@ border-radius:11px;transition:all .16s}
 .hf-btn:hover{color:var(--text);border-color:var(--blue)}
 .hf-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
 .related-card.hf-hide{display:none}
+.cat-section.hf-hide{display:none}
 .cta-block{padding:52px 40px;background:linear-gradient(135deg,var(--app-panel),var(--app-surface));
 border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border);
 text-align:center;margin-top:44px}
@@ -3562,7 +3563,12 @@ HUB_FILTER = {
 HUB_FILTER_JS = """<script>
 (function(){var b=document.querySelectorAll(".hf-btn");if(!b.length)return;
 var c=document.querySelectorAll(".hub-grid .related-card");
-function ap(f){for(var i=0;i<c.length;i++){var m=" "+(c[i].getAttribute("data-m")||"")+" ";c[i].classList.toggle("hf-hide",!(f==="all"||m.indexOf(" "+f+" ")>=0));}}
+var s=document.querySelectorAll(".cat-section");
+function ap(f){
+for(var i=0;i<c.length;i++){var m=" "+(c[i].getAttribute("data-m")||"")+" ";c[i].classList.toggle("hf-hide",!(f==="all"||m.indexOf(" "+f+" ")>=0));}
+// Hide whole category sections (heading + count) that end up with zero visible cards.
+for(var j=0;j<s.length;j++){var vis=s[j].querySelectorAll(".related-card:not(.hf-hide)").length;s[j].classList.toggle("hf-hide",vis===0);}
+}
 for(var j=0;j<b.length;j++){b[j].onclick=function(){for(var k=0;k<b.length;k++)b[k].classList.remove("active");this.classList.add("active");ap(this.getAttribute("data-f"));};}
 })();
 </script>"""
