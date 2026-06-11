@@ -520,6 +520,9 @@ border-radius:11px;transition:all .16s}
 .hf-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
 .related-card.hf-hide{display:none}
 .cat-section.hf-hide{display:none}
+.hub-hook{margin-top:14px;font-size:16px;line-height:1.6;color:var(--text);max-width:680px;position:relative;z-index:1}
+.usp-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;position:relative;z-index:1}
+.usp-chip{display:inline-flex;align-items:center;padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--green);background:rgba(94,229,114,.08);border:1px solid rgba(94,229,114,.25)}
 .cta-block{padding:52px 40px;background:linear-gradient(135deg,var(--app-panel),var(--app-surface));
 border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border);
 text-align:center;margin-top:44px}
@@ -2202,6 +2205,81 @@ def _strip(s):
     return re.sub(r"<[^>]+>", "", s)
 
 
+# Conversion copy under the hub hero: one benefit "hook" sentence + three USP chips.
+# {n} in chips is replaced with the live platform count at build time.
+HUB_USP = {
+    "en": {"hook": "Set up once, go live tonight — a polished scene keeps viewers watching longer and tipping more.",
+           "chips": ["{n} platforms covered", "5-minute setup", "Free — no watermark"]},
+    "ru": {"hook": "Настройте один раз — и в эфир уже сегодня: продуманная сцена удерживает зрителей и приносит больше донатов.",
+           "chips": ["{n} платформ", "Настройка за 5 минут", "Бесплатно — без водяного знака"]},
+    "es": {"hook": "Configúralo una vez y sal en directo hoy mismo: una escena cuidada retiene a los espectadores y aumenta las propinas.",
+           "chips": ["{n} plataformas", "Listo en 5 minutos", "Gratis — sin marca de agua"]},
+    "de": {"hook": "Einmal einrichten, heute noch live gehen — eine durchdachte Szene hält Zuschauer länger und bringt mehr Trinkgeld.",
+           "chips": ["{n} Plattformen", "In 5 Minuten startklar", "Kostenlos — ohne Wasserzeichen"]},
+    "fr": {"hook": "Configurez une fois, passez en live ce soir — une scène soignée retient les spectateurs et fait grimper les pourboires.",
+           "chips": ["{n} plateformes", "Prêt en 5 minutes", "Gratuit — sans filigrane"]},
+    "it": {"hook": "Configura una volta e vai in diretta stasera: una scena curata trattiene gli spettatori e aumenta le mance.",
+           "chips": ["{n} piattaforme", "Pronto in 5 minuti", "Gratis — senza filigrana"]},
+    "pt": {"hook": "Configure uma vez e entre ao vivo hoje: uma cena caprichada segura o público e aumenta as gorjetas.",
+           "chips": ["{n} plataformas", "Pronto em 5 minutos", "Grátis — sem marca d'água"]},
+    "nl": {"hook": "Eén keer instellen, vanavond al live — een verzorgde scène houdt kijkers langer vast en levert meer fooien op.",
+           "chips": ["{n} platforms", "In 5 minuten klaar", "Gratis — zonder watermerk"]},
+    "ro": {"hook": "Configurezi o dată și intri live diseară — o scenă îngrijită ține spectatorii mai mult și crește bacșișurile.",
+           "chips": ["{n} platforme", "Gata în 5 minute", "Gratuit — fără filigran"]},
+    "bg": {"hook": "Настрой веднъж и излез на живо още днес — изпипаната сцена задържа зрителите и вдига бакшишите.",
+           "chips": ["{n} платформи", "Готово за 5 минути", "Безплатно — без воден знак"]},
+    "hu": {"hook": "Állítsd be egyszer, és már ma élőben mehetsz — az igényes jelenet tovább tartja a nézőket és növeli a borravalót.",
+           "chips": ["{n} platform", "5 perc alatt kész", "Ingyenes — vízjel nélkül"]},
+    "el": {"hook": "Ρύθμισέ το μία φορά και βγες live απόψε — μια προσεγμένη σκηνή κρατά τους θεατές και αυξάνει τα tips.",
+           "chips": ["{n} πλατφόρμες", "Έτοιμο σε 5 λεπτά", "Δωρεάν — χωρίς υδατογράφημα"]},
+    "fi": {"hook": "Määritä kerran ja mene liveen jo tänään — viimeistelty näkymä pitää katsojat pidempään ja kasvattaa tippejä.",
+           "chips": ["{n} alustaa", "Valmis 5 minuutissa", "Ilmainen — ei vesileimaa"]},
+    "da": {"hook": "Sæt op én gang og gå live i aften — en gennemført scene holder på seerne og øger drikkepengene.",
+           "chips": ["{n} platforme", "Klar på 5 minutter", "Gratis — uden vandmærke"]},
+    "no": {"hook": "Sett opp én gang og gå live i kveld — en gjennomført scene holder på seerne og øker tipsene.",
+           "chips": ["{n} plattformer", "Klar på 5 minutter", "Gratis — uten vannmerke"]},
+    "sr": {"hook": "Подеси једном и иди уживо већ вечерас — дотерана сцена задржава гледаоце и доноси веће бакшише.",
+           "chips": ["{n} платформи", "Спремно за 5 минута", "Бесплатно — без воденог жига"]},
+    "hr": {"hook": "Postavi jednom i kreni uživo večeras — dotjerana scena zadržava gledatelje i povećava napojnice.",
+           "chips": ["{n} platformi", "Spremno za 5 minuta", "Besplatno — bez vodenog žiga"]},
+    "zh": {"hook": "一次配置，今晚开播——精致的画面留住观众，打赏更多。",
+           "chips": ["覆盖 {n} 个平台", "5 分钟搞定", "免费 · 无水印"]},
+    "ja": {"hook": "設定は一度だけ、今夜から配信開始 — 作り込んだ画面が視聴者を引き留め、投げ銭も伸びる。",
+           "chips": ["{n}プラットフォーム対応", "5分でセットアップ", "無料・透かしなし"]},
+    "ar": {"hook": "جهّز مرة واحدة وابدأ البث الليلة — المشهد المتقن يُبقي المشاهدين ويزيد الإكراميات.",
+           "chips": ["{n} منصة", "إعداد في 5 دقائق", "مجاني — بدون علامة مائية"]},
+    "th": {"hook": "ตั้งค่าครั้งเดียว ออกไลฟ์ได้คืนนี้ — ฉากที่จัดเต็มช่วยให้คนดูอยู่นานและทิปมากขึ้น",
+           "chips": ["ครอบคลุม {n} แพลตฟอร์ม", "ตั้งค่าใน 5 นาที", "ฟรี — ไม่มีลายน้ำ"]},
+    "fil": {"hook": "Isang setup lang, live ka na ngayong gabi — mas matagal manood at mas malaki ang tips kapag maayos ang scene mo.",
+            "chips": ["{n} platform", "5 minutong setup", "Libre — walang watermark"]},
+    "tr": {"hook": "Bir kez kur, bu akşam yayına gir — özenli bir sahne izleyiciyi tutar, bahşişi artırır.",
+           "chips": ["{n} platform", "5 dakikada kurulum", "Ücretsiz — filigran yok"]},
+    "id": {"hook": "Atur sekali, langsung live malam ini — scene yang rapi bikin penonton betah dan tip makin besar.",
+           "chips": ["{n} platform", "Siap dalam 5 menit", "Gratis — tanpa watermark"]},
+    "vi": {"hook": "Cài một lần, lên sóng ngay tối nay — khung hình chỉn chu giữ chân người xem và tăng tiền tip.",
+           "chips": ["{n} nền tảng", "Cài đặt trong 5 phút", "Miễn phí — không watermark"]},
+    "pl": {"hook": "Skonfiguruj raz i wejdź na żywo jeszcze dziś — dopracowana scena zatrzymuje widzów i podbija napiwki.",
+           "chips": ["{n} platform", "Gotowe w 5 minut", "Za darmo — bez znaku wodnego"]},
+    "ko": {"hook": "한 번 설정하고 오늘 밤 바로 방송 — 완성도 높은 화면이 시청자를 붙잡고 팁을 올립니다.",
+           "chips": ["{n}개 플랫폼", "5분 설정", "무료 — 워터마크 없음"]},
+    "uk": {"hook": "Налаштуй один раз — і в ефір уже сьогодні: продумана сцена утримує глядачів і збільшує донати.",
+           "chips": ["{n} платформ", "Налаштування за 5 хвилин", "Безкоштовно — без водяного знака"]},
+    "cs": {"hook": "Nastav jednou a jdi živě ještě dnes — propracovaná scéna udrží diváky déle a zvedne spropitné.",
+           "chips": ["{n} platforem", "Hotovo za 5 minut", "Zdarma — bez vodoznaku"]},
+    "sk": {"hook": "Nastav raz a vysielaj ešte dnes — prepracovaná scéna udrží divákov dlhšie a zvýši prepitné.",
+           "chips": ["{n} platforiem", "Hotové za 5 minút", "Zadarmo — bez vodoznaku"]},
+    "sv": {"hook": "Ställ in en gång och gå live ikväll — en genomarbetad scen håller kvar tittarna och höjer dricksen.",
+           "chips": ["{n} plattformar", "Klart på 5 minuter", "Gratis — utan vattenstämpel"]},
+    "ms": {"hook": "Sediakan sekali, terus live malam ini — scene yang kemas buat penonton kekal dan tip lebih besar.",
+           "chips": ["{n} platform", "Siap dalam 5 minit", "Percuma — tiada tera air"]},
+    "he": {"hook": "‏הגדרה אחת ואתם בשידור חי כבר הערב — סצנה מוקפדת מחזיקה צופים ומגדילה טיפים.",
+           "chips": ["{n} פלטפורמות", "התקנה ב-5 דקות", "חינם — ללא סימן מים"]},
+    "fa": {"hook": "‏یک‌بار تنظیم کنید و همین امشب پخش زنده بروید — صحنه‌ی حرفه‌ای بیننده را نگه می‌دارد و انعام را بالا می‌برد.",
+           "chips": ["{n} پلتفرم", "راه‌اندازی در ۵ دقیقه", "رایگان — بدون واترمارک"]},
+    "hi": {"hook": "एक बार सेट करें और आज रात ही लाइव जाएं — सजी-संवरी सीन दर्शकों को रोकती है और टिप्स बढ़ाती है।",
+           "chips": ["{n} प्लेटफ़ॉर्म", "5 मिनट में सेटअप", "मुफ़्त — बिना वॉटरमार्क"]},
+}
+
 HUB = {
     "en": {"title": "Streaming Guides — Free Cam Broadcasting Setup Guides",
            "desc": "Free step-by-step guides to broadcast on any cam platform with SplitCam.",
@@ -3613,6 +3691,14 @@ def render_hub(platforms, lang):
         )
     cards = "".join(cat_sections)
 
+    # Hero conversion copy: hook sentence + USP chips ({n} = live platform count).
+    usp = HUB_USP.get(lang, HUB_USP["en"])
+    # "{n}+" sidesteps Slavic numeral declension (54 платформы vs 55 платформ) and
+    # stays true as the catalogue grows.
+    usp_chips = "".join(
+        f'<span class="usp-chip">✓ {e(c.replace("{n}", f"{len(avail)}+"))}</span>'
+        for c in usp["chips"])
+
     # Flat ungrouped fallback for the filter buttons (.hub-grid in cat-sections still
     # works since data-m attribute is preserved; we just hide non-matching cards).
     hf = HUB_FILTER.get(lang, HUB_FILTER["en"])
@@ -3695,6 +3781,8 @@ def render_hub(platforms, lang):
   <div class="hero-glow"></div>
   <h1 class="h1">{hb['h1']}</h1>
   <p class="sub">{e(hb['sub'])}</p>
+  <p class="hub-hook">{e(usp['hook'])}</p>
+  <div class="usp-row">{usp_chips}</div>
 </section>
 <section class="section">
   <h2 class="sec-h">{e(hb['pick'])}</h2>
