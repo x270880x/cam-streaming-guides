@@ -3208,8 +3208,9 @@ LEGAL = {
 def render_legal(slug, lang):
     u = UI[lang]
     title, h1, crumb, body = LEGAL[slug][lang]
-    depth = "../" if u["path"] else ""
-    home = depth or "./"
+    root = "../../" if u["path"] else "../"  # to site root — favicon, lang switcher
+    depth = "../"                            # to language root — footer links, home
+    home = depth
     canon = f'{SITE}/{u["path"]}{slug}/'
     hreflang_html = "\n".join(
         f'<link rel="alternate" hreflang="{L}" href="{SITE}/{LANG_PATH[L]}{slug}/">'
@@ -3226,9 +3227,9 @@ def render_legal(slug, lang):
 <link rel="canonical" href="{canon}">
 {hreflang_html}
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
-<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
-<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="{root}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{root}favicon.ico">
+<link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(title)}">
@@ -3244,7 +3245,7 @@ def render_legal(slug, lang):
 {AHREFS_JS}
 </head>
 <body>
-{nav_html(home, u['home'], lang_switch(lang, depth))}
+{nav_html(home, u['home'], lang_switch(lang, root, slug))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(crumb)}</span>
 </div>
@@ -3279,8 +3280,9 @@ def render_model_guide(lang):
     faq = list(c["faq"])
     if lang in EARNINGS_FAQ:
         faq.append(EARNINGS_FAQ[lang])
-    depth = "../" if u["path"] else ""
-    home = depth or "./"
+    root = "../../" if u["path"] else "../"  # to site root — favicon, lang switcher
+    depth = "../"                            # to language root — footer links, home
+    home = depth
     canon = f'{SITE}/{u["path"]}{MODEL_SLUG}/'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
     kw = (f"{c['h1short']}, cam model, webcam model, camgirl, "
@@ -3327,9 +3329,9 @@ def render_model_guide(lang):
 <meta name="keywords" content="{e(kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
-<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
-<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
-<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="{root}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{root}favicon.ico">
+<link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(c['title'])}">
@@ -3350,7 +3352,7 @@ def render_model_guide(lang):
 {AHREFS_JS}
 </head>
 <body>
-{nav_html(home, u['home'], lang_switch(lang, depth))}
+{nav_html(home, u['home'], lang_switch(lang, root, MODEL_SLUG))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(c['h1short'])}</span>
 </div>
@@ -3401,8 +3403,9 @@ def render_obs_vs(lang):
     """Render the SplitCam-vs-OBS / OBS-alternative comparison page (indexable, SEO target)."""
     u = UI[lang]
     c = OBS_VS.get(lang) or OBS_VS["en"]
-    depth = "../" if u["path"] else ""
-    home = depth or "./"
+    root = "../../" if u["path"] else "../"  # to site root — favicon, lang switcher
+    depth = "../"                            # to language root — footer links, home
+    home = depth
     canon = f'{SITE}/{u["path"]}{OBS_SLUG}/'
     og_image = f'{SITE}/assets/og/hub-{lang}.png'
     # Keywords grounded in Ahrefs data: "obs alternative" (2300 global) + brand cluster.
@@ -3447,9 +3450,9 @@ def render_obs_vs(lang):
 <meta name="keywords" content="{e(obs_kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
-<link rel="icon" type="image/svg+xml" href="{depth}favicon.svg">
-<link rel="icon" type="image/x-icon" href="{depth}favicon.ico">
-<link rel="apple-touch-icon" href="{depth}apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="{root}favicon.svg">
+<link rel="icon" type="image/x-icon" href="{root}favicon.ico">
+<link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{e(c['title'])}">
@@ -3470,7 +3473,7 @@ def render_obs_vs(lang):
 {AHREFS_JS}
 </head>
 <body>
-{nav_html(home, u['home'], lang_switch(lang, depth))}
+{nav_html(home, u['home'], lang_switch(lang, root, OBS_SLUG))}
 <div class="breadcrumbs">
   <a href="{home}">{u['crumb_home']}</a><span class="sep">/</span><span>{e(c['h1short'])}</span>
 </div>
