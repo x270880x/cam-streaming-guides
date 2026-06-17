@@ -3330,6 +3330,7 @@ def render_model_guide(lang):
 <meta name="keywords" content="{e(kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="{root}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{root}favicon.ico">
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
@@ -3451,6 +3452,7 @@ def render_obs_vs(lang):
 <meta name="keywords" content="{e(obs_kw)}">
 <link rel="canonical" href="{canon}">
 {hreflang_html}
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="{root}favicon.svg">
 <link rel="icon" type="image/x-icon" href="{root}favicon.ico">
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
