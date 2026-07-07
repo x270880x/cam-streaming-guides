@@ -23,12 +23,21 @@ FAQ_EXTRA: dict = {}
 # 490MB > GitHub Pages' 100MB cap; Lovense apps live in the app/Chrome stores) — so every
 # button points at the official source. name/role are fixed tech labels; the section
 # heading is localized via DL_HEADING.
+# Each component → one or more platform buttons. type "file" = curl-verified direct
+# download (click starts the download); type "store" = App Store / Google Play (no direct
+# file exists for those — mobile apps and the Mac App Store build can't be linked to a file).
 LOVENSE_DOWNLOADS = [
-    ("SplitCam", "Encoder", "https://splitcam.com/download"),
-    ("Lovense Connect", "Bluetooth bridge (desktop)", "https://www.lovense.com/sextoys/download"),
-    ("Lovense Remote", "Mobile app (iOS / Android)", "https://www.lovense.com/apps"),
-    ("Lovense Cam Extension", "Chrome / Edge extension", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip"),
-    ("Lovense SplitCam Toolset", "SplitCam plugin", "https://splitcam.com/products"),
+    ("SplitCam", "Encoder", [
+        ("Windows", "https://splitcam.com/win-download/SplitCamSetup_x64.msi", "file"),
+        ("Mac", "https://apps.apple.com/us/app/splitcam-live-streaming/id6479984191", "store"),
+    ]),
+    ("Lovense Remote", "Bluetooth bridge to the toy", [
+        ("Windows", "https://cdn.lovense.com/files/apps/remote/remote.exe", "file"),
+        ("Mac", "https://cdn.lovense.com/files/apps/remote/remote.dmg", "file"),
+    ]),
+    ("Lovense Cam Extension", "Chrome / Edge — reads tips, drives overlay", [
+        ("ZIP", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip", "file"),
+    ]),
 ]
 # "What to install" heading + "official site" trust caption, per language.
 DL_HEADING = {
@@ -54,16 +63,21 @@ DL_HEADING = {
 
 
 def downloads_section(lang, u):
-    """Render the /lovense/ 'What to install' block — official download buttons."""
-    heading, official = DL_HEADING.get(lang, DL_HEADING["en"])
-    rows = "".join(
-        f'<div class="dl-row"><div class="dl-meta"><span class="dl-name">{e(name)}</span>'
-        f'<span class="dl-role">{e(role)}</span></div>'
-        f'<a class="dl-btn" href="{url}" target="_blank" rel="nofollow noopener">'
-        f'⬇ {u["download"].split()[0]} <span class="dl-src">{e(official)}</span></a></div>'
-        for name, role, url in LOVENSE_DOWNLOADS)
+    """Render the /lovense/ 'What to install' block — direct-download / store buttons."""
+    heading, _official = DL_HEADING.get(lang, DL_HEADING["en"])
+    rows = []
+    for name, role, links in LOVENSE_DOWNLOADS:
+        btns = "".join(
+            f'<a class="dl-btn{" dl-store" if kind == "store" else ""}" href="{url}" '
+            f'target="_blank" rel="nofollow noopener">'
+            f'{"⬇ " if kind == "file" else ""}{e(label)}</a>'
+            for label, url, kind in links)
+        rows.append(
+            f'<div class="dl-row"><div class="dl-meta"><span class="dl-name">{e(name)}</span>'
+            f'<span class="dl-role">{e(role)}</span></div>'
+            f'<div class="dl-btns">{btns}</div></div>')
     return (f'<section class="section" id="downloads"><h2 class="sec-h">{e(heading)}</h2>'
-            f'<div class="dl-list">{rows}</div></section>')
+            f'<div class="dl-list">{"".join(rows)}</div></section>')
 
 
 def extra_faqs(name: str, method: str, lang: str):
@@ -533,10 +547,11 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-meta{display:flex;flex-direction:column;gap:2px;min-width:0}
 .dl-name{font-size:15.5px;font-weight:700;color:var(--text)}
 .dl-role{font-size:13px;color:var(--text-sub)}
-.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.dl-btns{display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0}
+.dl-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;background:var(--blue);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .15s}
 .dl-btn:hover{background:var(--blue-hover)}
-.dl-src{font-size:11px;font-weight:600;opacity:.8}
-[dir="rtl"] .dl-btn{flex-direction:row-reverse}
+.dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
+.dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
