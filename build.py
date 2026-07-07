@@ -62,6 +62,39 @@ DL_HEADING = {
 }
 
 
+# Brand terms → download URL, for auto-linking mentions inside the Lovense guide's body
+# text. Longest-first so "Lovense Cam Extension" wins over "Lovense". Brand names are kept
+# verbatim in every language, so one list auto-links all 35 locales.
+LOVENSE_TEXT_LINKS = [
+    ("Lovense SplitCam Toolset", "https://splitcam.com/more-plugins"),
+    ("Lovense Cam Extension", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip"),
+    ("Cam Extension", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip"),
+    ("Lovense Connect", "https://cdn.lovense.com/files/apps/remote/remote.exe"),
+    ("Lovense Remote", "https://cdn.lovense.com/files/apps/remote/remote.exe"),
+]
+
+
+def autolink_lovense(html_str):
+    """Wrap the first mention of each Lovense tool in a download link (Lovense page only).
+
+    Skips text already inside an <a>…</a>. Each term is linked once. Case-sensitive so we
+    don't touch unrelated words. Used on top of the normal platform auto-linker.
+    """
+    import re
+    if not html_str or not isinstance(html_str, str):
+        return html_str
+    parts = re.split(r'(<a\b[^>]*>.*?</a>)', html_str, flags=re.IGNORECASE | re.DOTALL)
+    for i in range(0, len(parts), 2):
+        seg = parts[i]
+        for term, url in LOVENSE_TEXT_LINKS:
+            pat = re.compile(r'(?<![A-Za-z0-9>])(' + re.escape(term) + r')(?![A-Za-z0-9])')
+            seg = pat.sub(
+                lambda m, u=url: f'<a href="{u}" target="_blank" rel="nofollow noopener" class="autolink">{m.group(1)}</a>',
+                seg, count=1)
+        parts[i] = seg
+    return "".join(parts)
+
+
 def downloads_section(lang, u):
     """Render the /lovense/ 'What to install' block — direct-download / store buttons."""
     heading, _official = DL_HEADING.get(lang, DL_HEADING["en"])
@@ -2042,9 +2075,13 @@ def render(p, lang, all_platforms):
 
     # Auto-link other platform names mentioned in body copy. Each name links to its
     # sibling page once — gives Google natural anchor text and lowers our orphan-page
-    # risk without us having to manually edit 35 × 54 platform files.
+    # risk without us having to manually edit 35 × 54 platform files. On the Lovense
+    # page, also turn each Lovense-tool mention into a direct download link.
     def L(text):
-        return autolink_platforms(text, p["slug"], all_platforms)
+        out = autolink_platforms(text, p["slug"], all_platforms)
+        if p["slug"] == "lovense":
+            out = autolink_lovense(out)
+        return out
 
     # related: 6 other platforms, prioritised by same broadcast method (stream/vcam)
     # — same-method first (familiar workflow), then cross-method for variety.
