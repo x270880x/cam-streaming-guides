@@ -463,42 +463,43 @@ PLATFORMS_HR = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Kako dodati Lovense igračku u stream sa SplitCamom",
-     "desc": "Dodaj Lovense igračku u SplitCam stream — aplikacija Lovense Connect, Cam Extension i službeni SplitCam Toolset, s napojnicama i alertima na zaslonu.",
+     "desc": "Dodaj Lovense igračku u SplitCam stream — Lovense Remote + Cam Extension (ugrađena SplitCam podrška), s alertima na zaslonu. Bez zasebnog dodatka.",
      "kw": "kako dodati lovense u stream, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense interaktivna igračka, lovense overlay",
      "h1html": 'Kako dodaš <span class="accent">Lovense igračku</span> na stream',
      "h1short": "Dodaj Lovense igračku",
      "card": "Poveži interaktivnu Lovense igračku s cam streamom.",
-     "intro": "Pokrećeš cam stream preko besplatnog <strong style='color:var(--text)'>SplitCama</strong> i upariš <strong style='color:var(--text)'>Lovense</strong> interaktivnu igračku tako da reagira na napojnice. Instaliraš tri stvari: <strong>SplitCam</strong> (enkoder), aplikaciju <strong>Lovense Connect</strong> (Bluetooth most do igračke) i <strong>Lovense Cam Extension</strong> za Chrome/Edge (čita napojnice i puni overlay na zaslonu). Lovense objavljuje i službeni <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> na SplitCamovoj stranici s pluginovima — integracija je podržana s obje strane.",
-     "quick": "Za dodavanje Lovense igračke na stream: instaliraj SplitCam, aplikaciju Lovense Connect i Lovense Cam Extension, upari igračku, poveži proširenje s cam stranicom, dodaj Lovense overlay kao Browser sloj u SplitCam, zatim prenosi normalno."
+     "intro": "Pokrećeš cam stream preko besplatnog <strong style='color:var(--text)'>SplitCama</strong> i upariš <strong style='color:var(--text)'>Lovense</strong> interaktivnu igračku tako da reagira na napojnice. Instaliraš tri stvari: <strong>SplitCam</strong> (enkoder), aplikaciju <strong>Lovense Remote</strong> (Bluetooth most do igračke) i <strong>Lovense Cam Extension</strong> za Chrome/Edge (čita napojnice i puni overlay na zaslonu). Podrška za SplitCam ugrađena je u Cam Extension (verzija 30.1.4 ili novija) — SplitCam se nalazi na popisu Video Feedback tog proširenja, pa nema zasebnog dodatka za preuzimanje.",
+     "quick": "Za dodavanje Lovense igračke na stream: instaliraj SplitCam, aplikaciju Lovense Remote i Lovense Cam Extension, upari igračku, poveži proširenje s cam stranicom, dodaj Lovense overlay kao Browser sloj u SplitCam, zatim prenosi normalno."
               "<ol><li>Instaliraj SplitCam.</li>"
-              "<li>Instaliraj Lovense Connect i upari igračku.</li>"
+              "<li>Instaliraj Lovense Remote i upari igračku.</li>"
               "<li>Instaliraj Lovense Cam Extension (Chrome/Edge).</li>"
               "<li>Poveži proširenje s cam stranicom + dodaj overlay u SplitCam.</li>"
               "<li>Pritisni Go Live.</li></ol>",
-     "key_how": "Igračka nikad ne komunicira izravno sa SplitCamom. Lanac je: gledatelj pošalje napojnicu na tvojoj cam stranici &rarr; <strong>Lovense Cam Extension</strong> u pregledniku to prepozna &rarr; šalje naredbu aplikaciji <strong>Lovense Connect</strong> na localhostu &rarr; Connect pokreće igračku preko Bluetootha. SplitCamov jedini posao je prikazati <strong>Lovense overlay</strong> (status igračke + nedavne napojnice) kao Browser sloj i prenositi tvoju kameru. Ne postoji zaseban «Lovense Browser» — to je proširenje (<em>extension</em>) za Chrome ili Edge.",
+     "key_how": "Igračka nikad ne komunicira izravno sa SplitCamom. Lanac je: gledatelj pošalje napojnicu na tvojoj cam stranici &rarr; <strong>Lovense Cam Extension</strong> u pregledniku to prepozna &rarr; šalje naredbu aplikaciji <strong>Lovense Remote</strong> na localhostu &rarr; Remote pokreće igračku preko Bluetootha. SplitCamov jedini posao je prikazati <strong>Lovense overlay</strong> (status igračke + nedavne napojnice) kao Browser sloj i prenositi tvoju kameru. Ne postoji zaseban «Lovense Browser» — to je proširenje (<em>extension</em>) za Chrome ili Edge.",
      "steps": [
          ("Instaliraj SplitCam",
           "SplitCam je besplatan streaming softver za Windows i macOS — enkoder koji šalje tvoj video na cam platformu. Instaliraj ga; bez vodenog žiga, bez registracije."),
-         ("Instaliraj Lovense Connect i upari igračku",
-          "Instaliraj aplikaciju <strong>Lovense Connect</strong> (desktop, s lovense.com/connect) — ili koristi <strong>Lovense Remote</strong> na mobitelu. To je most koji komunicira s igračkom preko Bluetootha. Uključi igračku i upari je dok aplikacija ne prikaže povezano."),
+         ("Instaliraj Lovense Remote i upari igračku",
+          "Instaliraj aplikaciju <strong>Lovense Remote</strong> — desktop (Windows / Mac) ili mobilnu aplikaciju na telefonu. To je most koji komunicira s igračkom preko Bluetootha. Uključi igračku i upari je dok aplikacija ne prikaže povezano."),
          ("Instaliraj Lovense Cam Extension",
-          "Dodaj <strong>Lovense Cam Extension</strong> u Chrome ili Edge (verzija 30.1.4 ili novija) i prijavi se svojim Lovense računom. Ne postoji zaseban «Lovense Browser» — upravo to proširenje čita napojnice i pokreće overlay. Za SplitCam-specifične widgete dohvati i službeni <strong>Lovense SplitCam Toolset</strong> sa SplitCamove stranice s pluginovima (splitcam.com/more-plugins)."),
+          "Dodaj <strong>Lovense Cam Extension</strong> u Chrome ili Edge (verzija 30.1.4 ili novija) i prijavi se svojim Lovense računom. Ne postoji zaseban «Lovense Browser» — upravo to proširenje čita napojnice i pokreće overlay. <strong>Podrška za SplitCam ugrađena je</strong>: nalazi se na kartici Video Feedback tog proširenja, pa ti ne treba nikakav zaseban SplitCam dodatak."),
          ("Poveži proširenje s cam stranicom i dodaj overlay u SplitCam",
           "U Cam Extensionu klikni <strong>+</strong> da dodaš svoju cam stranicu (Chaturbate, Stripchat itd.), postavi razine napojnica, zatim otvori karticu <strong>Video Feedback</strong> i odaberi <strong>SplitCam</strong>. Kopiraj overlay URL koji ti da i dodaj ga kao <strong>Browser</strong> sloj u SplitCam scenu tako da gledatelji vide status igračke i nedavne napojnice."),
          ("Izgradi scenu i Go Live",
           "Dodaj kameru i ostala preklapanja, zalijepi RTMP ključ cam platforme u SplitCam i klikni <strong>Go Live</strong>. Igračka sada reagira na napojnice u realnom vremenu."),
      ],
      "tips": [
-         ("Tri instalacije, redom", "SplitCam (enkoder) + Lovense Connect (Bluetooth most) + Lovense Cam Extension (čitač napojnica / overlay). Preskočiš li i jedno, igračka neće reagirati na streamu."),
-         ("Proširenje, ne preglednik", "Ne postoji zaseban «Lovense Browser» za preuzimanje — Lovense Cam Extension se instalira u Chrome ili Edge. Drži ga ažuriranim (30.1.4 ili novije) ili se SplitCam overlay možda neće učitati."),
+         ("Tri instalacije, redom", "SplitCam (enkoder) + Lovense Remote (Bluetooth most) + Lovense Cam Extension (čitač napojnica / overlay). Preskočiš li i jedno, igračka neće reagirati na streamu."),
+         ("Proširenje, ne preglednik", "Ne postoji zaseban «Lovense Browser» za preuzimanje — Lovense Cam Extension se instalira u Chrome ili Edge. Drži ga ažuriranim (30.1.4 ili novije) ili se SplitCam možda neće pojaviti na popisu Video Feedback."),
          ("Drži igračku napunjenu", "Prazna baterija usred showa ubija interaktivni dio — napuni je potpuno prije livea."),
          ("Testiraj reakciju na napojnice", "Pošalji malu test napojnicu da potvrdiš da igračka reagira prije nego soba postane javna."),
-         ("Pripazi na zahtjeve verzije", "Lovense SplitCam Toolset zahtijeva SplitCam 10.4.5 ili noviji. Cam Extension službeno pokriva Chaturbate, Stripchat, BongaCams, MyFreeCams i CamSoda — za bilo koju drugu stranicu koristi Lovense Generic URL integraciju."),
+         ("Koje cam stranice su pokrivene", "Cam Extension službeno pokriva Chaturbate, Stripchat, BongaCams, MyFreeCams i CamSoda — za bilo koju drugu stranicu koristi Lovense Generic URL integraciju. SplitCam radi sa svima kao overlay sloj."),
      ],
      "faq": [
-         ("Što moram instalirati za Lovense na SplitCamu?", "Tri stvari: <strong>SplitCam</strong> (enkoder), aplikaciju <strong>Lovense Connect</strong> (povezuje igračku preko Bluetootha) i <strong>Lovense Cam Extension</strong> za Chrome/Edge (čita napojnice i puni overlay). Po želji dodaj i službeni Lovense SplitCam Toolset sa splitcam.com/more-plugins."),
-         ("Postoji li «Lovense Browser» koji moram preuzeti?", "Ne. Nema zasebnog Lovense preglednika — to je <strong>Lovense Cam Extension</strong>, koji se instalira u Chrome ili Edge. Uparivanje igračke obavlja zasebna aplikacija Lovense Connect (desktop) ili Lovense Remote (mobitel)."),
-         ("Povezuje li se igračka izravno sa SplitCamom?", "Ne — igračka se upari s aplikacijom Lovense Connect preko Bluetootha; Cam Extension čita napojnice, a SplitCam samo prikazuje overlay i prenosi tvoju kameru."),
+         ("Što moram instalirati za Lovense na SplitCamu?", "Tri stvari: <strong>SplitCam</strong> (enkoder), aplikaciju <strong>Lovense Remote</strong> (povezuje igračku preko Bluetootha) i <strong>Lovense Cam Extension</strong> za Chrome/Edge (čita napojnice i puni overlay). Nema zasebnog SplitCam dodatka — podrška za SplitCam ugrađena je u Cam Extension."),
+         ("Radi li Cam Extension 30.1.4+ sa SplitCamom odmah?", "Da — podrška za SplitCam ugrađena je. Otvori karticu <strong>Video Feedback</strong> proširenja, odaberi <strong>SplitCam</strong>, kopiraj overlay URL i dodaj ga kao Browser sloj u SplitCam. Bez dodatnog dodatka, samo to jednokratno povezivanje."),
+         ("Postoji li «Lovense Browser» koji moram preuzeti?", "Ne. Nema zasebnog Lovense preglednika — to je <strong>Lovense Cam Extension</strong>, koji se instalira u Chrome ili Edge. Uparivanje igračke obavlja zasebna aplikacija Lovense Remote (desktop ili mobitel)."),
+         ("Povezuje li se igračka izravno sa SplitCamom?", "Ne — igračka se upari s aplikacijom Lovense Remote preko Bluetootha; Cam Extension čita napojnice, a SplitCam samo prikazuje overlay i prenosi tvoju kameru."),
          ("Koje cam stranice podržavaju Lovense?", "Lovense Cam Extension službeno podržava Chaturbate, Stripchat, BongaCams, MyFreeCams i CamSoda, uz promjenjivu podršku za druge — provjeri trenutnu listu u Lovense aplikaciji."),
          ("Mogu li prikazati nedavne napojnice na zaslonu?", "Da — Cam Extension ti daje overlay URL; dodaj ga kao Browser sloj u SplitCam i gledatelji vide status igračke i nedavne napojnice."),
      ]},

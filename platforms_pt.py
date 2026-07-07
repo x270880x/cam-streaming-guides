@@ -499,42 +499,43 @@ PLATFORMS_PT = [
     {
         "slug": "lovense", "name": "Lovense",
         "title": "Adicionar um toy Lovense ao stream com SplitCam",
-        "desc": "Adiciona um toy Lovense ao stream no SplitCam grátis — app Lovense Connect, Cam Extension e o Toolset oficial, com alertas de tips na tela.",
+        "desc": "Adiciona um toy Lovense ao stream no SplitCam grátis — app Lovense Remote + Cam Extension (suporte SplitCam integrado), com alertas de tips na tela.",
         "kw": "como adicionar lovense ao stream, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense toy interativo streaming, lovense toy overlay",
         "h1html": 'Como adicionar um <span class="accent">toy Lovense</span> ao seu stream',
         "h1short": "Adicionar toy Lovense",
         "card": "Conectar um toy Lovense interativo ao seu stream cam.",
-        "intro": "Roda seu stream cam pelo <strong style='color:var(--text)'>SplitCam</strong> grátis e pareia um toy <strong style='color:var(--text)'>Lovense</strong> interativo pra ele reagir aos tips. Você instala três coisas: o <strong>SplitCam</strong> (o encoder), o app <strong>Lovense Connect</strong> (a ponte Bluetooth pro brinquedo) e a <strong>Lovense Cam Extension</strong> pro Chrome/Edge (ela lê os tips e alimenta o overlay na tela). A Lovense ainda publica um <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> oficial na página de plugins do SplitCam — a integração é suportada dos dois lados.",
-        "quick": "Pra adicionar um toy Lovense ao stream: instala o SplitCam, o app Lovense Connect e a Lovense Cam Extension, pareia o toy, liga a extensão ao seu site cam, adiciona o overlay Lovense como camada Browser no SplitCam e transmite normal."
+        "intro": "Roda seu stream cam pelo <strong style='color:var(--text)'>SplitCam</strong> grátis e pareia um toy <strong style='color:var(--text)'>Lovense</strong> interativo pra ele reagir aos tips. Você instala três coisas: o <strong>SplitCam</strong> (o encoder), o app <strong>Lovense Remote</strong> (a ponte Bluetooth pro brinquedo) e a <strong>Lovense Cam Extension</strong> pro Chrome/Edge (ela lê os tips e alimenta o overlay na tela). O suporte ao SplitCam é integrado à Cam Extension (versão 30.1.4 ou mais nova) — o SplitCam fica direto na aba Video Feedback da extensão, sem plugin separado pra baixar.",
+        "quick": "Pra adicionar um toy Lovense ao stream: instala o SplitCam, o app Lovense Remote e a Lovense Cam Extension, pareia o toy, liga a extensão ao seu site cam, adiciona o overlay Lovense como camada Browser no SplitCam e transmite normal."
                  "<ol><li>Instala o SplitCam.</li>"
-                 "<li>Instala o Lovense Connect &amp; pareia o toy.</li>"
+                 "<li>Instala o Lovense Remote &amp; pareia o toy.</li>"
                  "<li>Instala a Lovense Cam Extension (Chrome/Edge).</li>"
                  "<li>Liga a extensão ao site cam + adiciona o overlay no SplitCam.</li>"
                  "<li>Go Live.</li></ol>",
-        "key_how": "O toy nunca fala direto com o SplitCam. A cadeia é: um espectador manda um tip no seu site cam &rarr; a <strong>Lovense Cam Extension</strong> no navegador detecta &rarr; ela envia um comando pro app <strong>Lovense Connect</strong> no localhost &rarr; o Connect aciona o toy por Bluetooth. A única função do SplitCam é mostrar o <strong>overlay Lovense</strong> (status do toy + tips recentes) como camada Browser e transmitir sua câmera. Não existe um app «Lovense Browser» separado — é uma <em>extensão</em> de navegador pro Chrome ou Edge.",
+        "key_how": "O toy nunca fala direto com o SplitCam. A cadeia é: um espectador manda um tip no seu site cam &rarr; a <strong>Lovense Cam Extension</strong> no navegador detecta &rarr; ela envia um comando pro app <strong>Lovense Remote</strong> no localhost &rarr; o Remote aciona o toy por Bluetooth. A única função do SplitCam é mostrar o <strong>overlay Lovense</strong> (status do toy + tips recentes) como camada Browser e transmitir sua câmera. Não existe um app «Lovense Browser» separado — é uma <em>extensão</em> de navegador pro Chrome ou Edge.",
         "steps": [
             ("Instala o SplitCam",
              "O SplitCam é um software de streaming grátis pra Windows e macOS — o encoder que envia seu vídeo pra sua plataforma cam. Instala; sem marca d'água, sem cadastro."),
-            ("Instala o Lovense Connect e pareia o toy",
-             "Instala o app <strong>Lovense Connect</strong> (desktop, em lovense.com/connect) — ou usa o <strong>Lovense Remote</strong> no celular. É a ponte que fala com o toy por Bluetooth. Liga o toy e pareia até o app mostrar conectado."),
+            ("Instala o Lovense Remote e pareia o toy",
+             "Instala o app <strong>Lovense Remote</strong> — desktop (Windows / Mac) ou o app no celular. É a ponte que fala com o toy por Bluetooth. Liga o toy e pareia até o app mostrar conectado."),
             ("Instala a Lovense Cam Extension",
-             "Adiciona a <strong>Lovense Cam Extension</strong> ao Chrome ou Edge (versão 30.1.4 ou mais nova) e faz login com sua conta Lovense. Não existe um «Lovense Browser» avulso — é essa extensão que lê os tips e alimenta o overlay. Pra widgets específicos do SplitCam, pega também o <strong>Lovense SplitCam Toolset</strong> oficial na página de plugins do SplitCam (splitcam.com/more-plugins)."),
+             "Adiciona a <strong>Lovense Cam Extension</strong> ao Chrome ou Edge (versão 30.1.4 ou mais nova) e faz login com sua conta Lovense. Não existe um «Lovense Browser» avulso — é essa extensão que lê os tips e alimenta o overlay. <strong>O suporte ao SplitCam é integrado</strong>: ele aparece na aba <strong>Video Feedback</strong> da extensão, então não precisa de nenhum plugin do SplitCam à parte."),
             ("Liga a extensão ao site cam e adiciona o overlay no SplitCam",
              "Na Cam Extension, clica em <strong>+</strong> pra adicionar seu site cam (Chaturbate, Stripchat, etc.), define os níveis de tip, depois abre a aba <strong>Video Feedback</strong> e escolhe <strong>SplitCam</strong>. Copia a URL de overlay que ela te dá e adiciona como camada <strong>Browser</strong> na cena do SplitCam pros espectadores verem o status do toy e os tips recentes."),
             ("Monta a cena e Go Live",
              "Adiciona a câmera e os outros overlays, cola a chave RTMP da sua plataforma cam no SplitCam e clica <strong>Go Live</strong>. Agora o toy reage aos tips em tempo real."),
         ],
         "tips": [
-            ("Três instalações, nesta ordem", "SplitCam (encoder) + Lovense Connect (ponte Bluetooth) + Lovense Cam Extension (leitor de tips / overlay). Falta uma e o toy não reage no stream."),
-            ("É uma extensão, não um navegador", "Não tem um «Lovense Browser» separado pra baixar — a Lovense Cam Extension instala no Chrome ou Edge. Mantém atualizada (30.1.4 ou mais nova) ou o overlay do SplitCam pode não carregar."),
+            ("Três instalações, nesta ordem", "SplitCam (encoder) + Lovense Remote (ponte Bluetooth) + Lovense Cam Extension (leitor de tips / overlay). Falta uma e o toy não reage no stream."),
+            ("É uma extensão, não um navegador", "Não tem um «Lovense Browser» separado pra baixar — a Lovense Cam Extension instala no Chrome ou Edge. Mantém atualizada (30.1.4 ou mais nova) ou o SplitCam pode não aparecer na lista Video Feedback."),
             ("Mantém o toy carregado", "Bateria acabando no meio do show mata a parte interativa — carrega total antes de entrar ao vivo."),
             ("Testa a reação a tips", "Manda um pequeno tip de teste pra confirmar que o toy reage antes de a sala ficar pública."),
-            ("Confira os requisitos de versão", "O Lovense SplitCam Toolset precisa do SplitCam 10.4.5 ou mais novo. A Cam Extension cobre oficialmente Chaturbate, Stripchat, BongaCams, MyFreeCams e CamSoda — pra qualquer outro site, usa a integração Generic URL da Lovense."),
+            ("Quais sites cam são cobertos", "A Cam Extension cobre oficialmente Chaturbate, Stripchat, BongaCams, MyFreeCams e CamSoda — pra qualquer outro site, usa a integração Generic URL da Lovense. O SplitCam funciona com todos eles como camada de overlay."),
         ],
         "faq": [
-            ("O que preciso instalar pra usar Lovense no SplitCam?", "Três coisas: o <strong>SplitCam</strong> (o encoder), o app <strong>Lovense Connect</strong> (faz a ponte com o toy por Bluetooth) e a <strong>Lovense Cam Extension</strong> pro Chrome/Edge (lê os tips e alimenta o overlay). Opcionalmente adiciona o Lovense SplitCam Toolset oficial em splitcam.com/more-plugins."),
-            ("Existe um «Lovense Browser» que eu preciso baixar?", "Não. Não tem um navegador Lovense avulso — é a <strong>Lovense Cam Extension</strong>, que instala no Chrome ou Edge. O pareamento do toy fica com o app Lovense Connect (desktop) ou Lovense Remote (celular), à parte."),
-            ("O toy conecta direto no SplitCam?", "Não — o toy pareia com o app Lovense Connect por Bluetooth; a Cam Extension lê os tips e o SplitCam só mostra o overlay e transmite sua câmera."),
+            ("O que preciso instalar pra usar Lovense no SplitCam?", "Três coisas: o <strong>SplitCam</strong> (o encoder), o app <strong>Lovense Remote</strong> (faz a ponte com o toy por Bluetooth) e a <strong>Lovense Cam Extension</strong> pro Chrome/Edge (lê os tips e alimenta o overlay). Sem plugin do SplitCam à parte — o suporte ao SplitCam é integrado à Cam Extension."),
+            ("A Cam Extension 30.1.4+ funciona com o SplitCam de cara?", "Sim — o suporte ao SplitCam é integrado. Abre a aba <strong>Video Feedback</strong> da extensão, escolhe <strong>SplitCam</strong>, copia a URL do overlay e coloca como camada Browser no SplitCam. Sem plugin extra, só esse link único."),
+            ("Existe um «Lovense Browser» que eu preciso baixar?", "Não. Não tem um navegador Lovense avulso — é a <strong>Lovense Cam Extension</strong>, que instala no Chrome ou Edge. O pareamento do toy fica com o app Lovense Remote (desktop ou celular), à parte."),
+            ("O toy conecta direto no SplitCam?", "Não — o toy pareia com o app Lovense Remote por Bluetooth; a Cam Extension lê os tips e o SplitCam só mostra o overlay e transmite sua câmera."),
             ("Quais sites cam suportam Lovense?", "A Cam Extension da Lovense suporta oficialmente Chaturbate, Stripchat, BongaCams, MyFreeCams e CamSoda, com suporte variável pra outros — confere a lista atual no app Lovense."),
             ("Posso mostrar os tips recentes na tela?", "Sim — a Cam Extension te dá uma URL de overlay; adiciona como camada Browser no SplitCam e os espectadores veem o status do toy e os tips recentes."),
         ],
