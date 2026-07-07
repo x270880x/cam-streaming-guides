@@ -31,7 +31,12 @@ LOVENSE_DOWNLOADS = [
         ("Windows", "https://splitcam.com/win-download/SplitCamSetup_x64.msi", "file"),
         ("Mac", "https://splitcam.com/mac-download/SplitCam.dmg", "file"),
     ]),
-    ("Lovense Remote", "Bluetooth bridge to the toy", [
+    ("Lovense Stream Master", "All-in-one: toy + cam sites + tip menu + chat translation", [
+        ("Windows", "https://cdn.lovense.com/files/apps/streamMaster/Stream_Master.exe", "file"),
+        ("Mac (Intel)", "https://cdn.lovense.com/files/apps/streamMaster/Stream_Master.dmg", "file"),
+        ("Mac (Apple Silicon)", "https://cdn.lovense.com/files/apps/streamMaster/Stream_Master_arm.dmg", "file"),
+    ]),
+    ("Lovense Remote", "Bluetooth bridge to the toy (if not using Stream Master)", [
         ("Windows", "https://cdn.lovense.com/files/apps/remote/remote.exe", "file"),
         ("Mac", "https://cdn.lovense.com/files/apps/remote/remote.dmg", "file"),
     ]),
