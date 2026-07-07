@@ -355,30 +355,83 @@ PLATFORMS_ID = [
        ]),
     _p("lovense", "Lovense",
        "Tambah mainan Lovense ke siaran dengan SplitCam",
-       "Hubungkan mainan Lovense interaktif ke siaran cam dengan SplitCam gratis — Lovense SplitCam Toolset, tip alert di layar, reaksi.",
-       "cara menambah lovense ke siaran, lovense, lovense splitcam toolset, lovense cam, lovense interactive toy, lovense tip alert, mainan interaktif lovense",
+       "Tambah mainan Lovense ke siaran SplitCam gratis — aplikasi Lovense Connect, Cam Extension, dan SplitCam Toolset resmi, plus tip alert di layar.",
+       "cara menambah lovense ke siaran, lovense, lovense cam extension, lovense splitcam toolset, lovense connect, lovense tip alert, mainan interaktif lovense, overlay mainan lovense",
        'Cara menambah <span class="accent">mainan Lovense</span> ke siaranmu',
        "Tambah mainan Lovense",
        "Hubungkan mainan Lovense interaktif ke siaran cam-mu.",
-       "Kamu menjalankan siaran cam lewat <strong style='color:var(--text)'>SplitCam</strong> gratis dan memasangkan mainan <strong style='color:var(--text)'>Lovense</strong> yang bereaksi pada token. Lovense mendokumentasikan <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> resmi, dan SplitCam menyediakan plugin Lovense resmi — integrasi didukung dari kedua sisi.",
-       "Untuk menambah mainan Lovense ke siaran: pasang SplitCam dan software Lovense, pasangkan mainan, hubungkan Lovense ke platform cam-mu, tambahkan status Lovense sebagai lapisan Browser di SplitCam, lalu siaran normal."
-       "<ol><li>Pasang SplitCam.</li><li>Pasang software Lovense dan pasangkan mainan.</li><li>Hubungkan Lovense ke situs cam-mu.</li><li>Tambah overlay Lovense di SplitCam.</li><li>Tekan Go Live.</li></ol>",
-       "Pasang Lovense Connect / Lovense Stream (aplikasi desktop resmi). Nyalakan mainan dan pasangkan via Bluetooth agar aplikasi menampilkan terhubung. Di aplikasi Lovense hubungkan akun cam-mu agar mainan bereaksi pada token / tip penonton. Lovense menyediakan URL overlay / widget — tambahkan sebagai lapisan <strong>Browser</strong> di scene SplitCam.",
-       [("Pakai Lovense SplitCam Toolset resmi", "Lovense menerbitkan toolset khusus SplitCam dengan panduan pemasangan sendiri — menambahkan overlay aktivitas mainan dan tip alert yang dibuat untuk SplitCam."),
-        ("Perbarui Lovense Cam Extension", "Toolset butuh Lovense Cam Extension terbaru (30.1.4 atau lebih baru) — perbarui sebelum live."),
-        ("Jaga mainan tetap terisi", "Baterai hampir habis di tengah show mematikan sisi interaktif — isi penuh sebelum live."),
-        ("Uji reaksi token", "Kirim tip tes kecil untuk memastikan mainan bereaksi sebelum membuka room."),
-        ("Cek persyaratan versi", "Lovense SplitCam Toolset butuh SplitCam 10.4.5 atau lebih baru. Lovense Cam Extension secara resmi mencakup Chaturbate, Stripchat, BongaCams, MyFreeCams, dan CamSoda — untuk situs lain, pakai integrasi Generic URL Lovense.")],
-       [("Apakah Lovense mendukung SplitCam secara resmi?", "Ya — Lovense mendokumentasikan «Lovense SplitCam Toolset» resmi dengan panduan pemasangan sendiri, dan SplitCam menyediakan plugin Lovense resmi. Integrasi didukung dari kedua sisi."),
-        ("Apakah mainan terhubung langsung ke SplitCam?", "Tidak — mainan dipasangkan dengan aplikasi Lovense; SplitCam menampilkan overlay Lovense dan menyiarkan kamera."),
-        ("Situs cam mana yang mendukung Lovense?", "Lovense Cam Extension secara resmi mendukung Chaturbate, Stripchat, BongaCams, MyFreeCams, dan CamSoda, dengan dukungan bervariasi untuk lainnya — cek daftar terkini di aplikasi Lovense."),
-        ("Bisakah menampilkan tip terbaru di layar?", "Ya — tambahkan URL widget Lovense sebagai lapisan Browser di SplitCam.")],
+       "Jalankan siaran cam-mu lewat <strong style='color:var(--text)'>SplitCam</strong> gratis dan "
+       "pasangkan mainan interaktif <strong style='color:var(--text)'>Lovense</strong> agar bereaksi "
+       "pada tip. Kamu memasang tiga hal: <strong>SplitCam</strong> (encoder-nya), aplikasi "
+       "<strong>Lovense Connect</strong> (jembatan Bluetooth ke mainan) dan <strong>Lovense Cam "
+       "Extension</strong> untuk Chrome/Edge (membaca tip dan memberi overlay di layar). Lovense juga "
+       "menerbitkan <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> resmi di "
+       "halaman plugin SplitCam — integrasi didukung dari kedua sisi.",
+       "Untuk menambah mainan Lovense ke siaran: pasang SplitCam, aplikasi Lovense Connect, dan Lovense "
+       "Cam Extension, pasangkan mainan, hubungkan ekstensi ke situs cam-mu, tambahkan overlay Lovense "
+       "sebagai lapisan Browser di SplitCam, lalu siaran seperti biasa."
+       "<ol><li>Pasang SplitCam.</li>"
+       "<li>Pasang Lovense Connect &amp; pasangkan mainan.</li>"
+       "<li>Pasang Lovense Cam Extension (Chrome/Edge).</li>"
+       "<li>Hubungkan ekstensi ke situs cam + tambah overlay di SplitCam.</li>"
+       "<li>Tekan Go Live.</li></ol>",
+       "Mainan tidak pernah terhubung langsung ke SplitCam. Rantainya: penonton mengirim tip di situs "
+       "cam-mu &rarr; <strong>Lovense Cam Extension</strong> di browser-mu mendeteksinya &rarr; ekstensi "
+       "mengirim perintah ke aplikasi <strong>Lovense Connect</strong> di localhost &rarr; Connect "
+       "menggerakkan mainan lewat Bluetooth hingga bergetar. Tugas SplitCam hanya menampilkan "
+       "<strong>overlay Lovense</strong> (status mainan + tip terbaru) sebagai lapisan Browser dan "
+       "menyiarkan kameramu. Tidak ada aplikasi \"Lovense Browser\" terpisah — ini <em>ekstensi</em> "
+       "browser untuk Chrome atau Edge.",
+       [("Tiga pemasangan, berurutan", "SplitCam (encoder) + Lovense Connect (jembatan Bluetooth) + "
+         "Lovense Cam Extension (pembaca tip / overlay). Lewatkan satu saja dan mainan tak akan bereaksi "
+         "di siaran."),
+        ("Ini ekstensi, bukan browser", "Tidak ada \"Lovense Browser\" terpisah untuk diunduh — Lovense "
+         "Cam Extension terpasang di Chrome atau Edge. Jaga tetap terbarui (30.1.4 atau lebih baru) atau "
+         "overlay SplitCam bisa gagal dimuat."),
+        ("Jaga mainan tetap terisi", "Baterai habis di tengah show mematikan sisi interaktif — isi penuh "
+         "sebelum live."),
+        ("Uji reaksi tip", "Kirim tip tes kecil untuk memastikan mainan bereaksi sebelum room dibuka "
+         "untuk umum."),
+        ("Cek persyaratan versi", "Lovense SplitCam Toolset butuh SplitCam 10.4.5 atau lebih baru. Cam "
+         "Extension secara resmi mencakup Chaturbate, Stripchat, BongaCams, MyFreeCams, dan CamSoda — "
+         "untuk situs lain, pakai integrasi Generic URL Lovense.")],
+       [("Apa yang perlu saya pasang untuk Lovense di SplitCam?", "Tiga hal: <strong>SplitCam</strong> "
+         "(encoder), aplikasi <strong>Lovense Connect</strong> (menjembatani mainan lewat Bluetooth), dan "
+         "<strong>Lovense Cam Extension</strong> untuk Chrome/Edge (membaca tip dan memberi overlay). "
+         "Opsional, tambahkan Lovense SplitCam Toolset resmi dari splitcam.com/more-plugins."),
+        ("Apakah ada \"Lovense Browser\" yang harus saya unduh?", "Tidak. Tidak ada browser Lovense "
+         "tersendiri — yang ada adalah <strong>Lovense Cam Extension</strong>, yang terpasang di Chrome "
+         "atau Edge. Pemasangan mainan ditangani aplikasi terpisah Lovense Connect (desktop) atau Lovense "
+         "Remote (mobile)."),
+        ("Apakah mainan terhubung langsung ke SplitCam?", "Tidak — mainan dipasangkan dengan aplikasi "
+         "Lovense Connect lewat Bluetooth; Cam Extension membaca tip dan SplitCam hanya menampilkan "
+         "overlay dan menyiarkan kameramu."),
+        ("Situs cam mana yang mendukung Lovense?", "Lovense Cam Extension secara resmi mendukung "
+         "Chaturbate, Stripchat, BongaCams, MyFreeCams, dan CamSoda, dengan dukungan bervariasi untuk "
+         "lainnya — cek daftar terkini di aplikasi Lovense."),
+        ("Bisakah menampilkan tip terbaru di layar?", "Ya — Cam Extension memberimu URL overlay; "
+         "tambahkan sebagai lapisan Browser di SplitCam dan penonton melihat status mainan dan tip "
+         "terbaru.")],
        steps=[
-           ("Pasang SplitCam", "SplitCam adalah software live-streaming gratis untuk Windows dan macOS — encoder yang mengirim videomu ke platform cam. Pasang; tanpa watermark."),
-           ("Pasang software Lovense dan pasangkan mainan", "Pasang Lovense Connect / Lovense Stream (aplikasi desktop resmi). Nyalakan mainan dan pasangkan via Bluetooth agar aplikasi menampilkan terhubung."),
-           ("Hubungkan Lovense ke platform cam", "Di aplikasi Lovense hubungkan akun cam-mu agar mainan bereaksi pada token / tip penonton. Sebagian besar platform cam besar didukung."),
-           ("Tambah overlay Lovense di SplitCam", "Lovense menyediakan URL overlay / widget. Tambahkan sebagai lapisan <strong>Browser</strong> di scene SplitCam agar penonton melihat status mainan dan tip terbaru di layar."),
-           ("Susun scene dan Go Live", "Tambah kamera dan overlay lain, tempel kunci RTMP platform cam ke SplitCam dan klik <strong>Go Live</strong>. Mainan bereaksi pada tip secara real time."),
+           ("Pasang SplitCam", "SplitCam adalah software live-streaming gratis untuk Windows dan macOS — "
+            "encoder yang mengirim videomu ke platform cam. Pasang; tanpa watermark, tanpa daftar."),
+           ("Pasang Lovense Connect dan pasangkan mainan", "Pasang aplikasi <strong>Lovense "
+            "Connect</strong> (desktop, dari lovense.com/connect) — atau pakai <strong>Lovense "
+            "Remote</strong> di HP-mu. Inilah jembatan yang berkomunikasi dengan mainan lewat Bluetooth. "
+            "Nyalakan mainan dan pasangkan sampai aplikasi menampilkan terhubung."),
+           ("Pasang Lovense Cam Extension", "Tambahkan <strong>Lovense Cam Extension</strong> ke Chrome "
+            "atau Edge (versi 30.1.4 atau lebih baru) dan masuk dengan akun Lovense-mu. Tidak ada "
+            "\"Lovense Browser\" tersendiri — ekstensi inilah yang membaca tip dan menjalankan overlay. "
+            "Untuk widget khusus SplitCam, ambil juga <strong>Lovense SplitCam Toolset</strong> resmi "
+            "dari halaman plugin SplitCam (splitcam.com/more-plugins)."),
+           ("Hubungkan ekstensi ke situs cam dan tambah overlay di SplitCam", "Di Cam Extension, klik "
+            "<strong>+</strong> untuk menambahkan situs cam-mu (Chaturbate, Stripchat, dll.), atur level "
+            "tip, lalu buka tab <strong>Video Feedback</strong> dan pilih <strong>SplitCam</strong>. "
+            "Salin URL overlay yang diberikan dan tambahkan sebagai lapisan <strong>Browser</strong> di "
+            "scene SplitCam agar penonton melihat status mainan dan tip terbaru."),
+           ("Susun scene dan Go Live", "Tambah kamera dan overlay lain, tempel kunci RTMP platform "
+            "cam-mu ke SplitCam, dan klik <strong>Go Live</strong>. Mainan kini bereaksi pada tip secara "
+            "real time."),
        ]),
     _p("multistream-cams", "Beberapa situs cam",
        "Siaran ke beberapa situs cam sekaligus dengan SplitCam",
