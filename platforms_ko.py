@@ -359,8 +359,8 @@ PLATFORMS_KO = [
        "방송에 lovense 추가, lovense, lovense cam stream, lovense splitcam, lovense splitcam toolset, lovense cam extension, lovense connect, lovense interactive toy, lovense tip alerts",
        '방송에 <span class="accent">Lovense 토이</span> 추가하는 방법',
        "Lovense 토이 추가",
-       "상호작용 Lovense 토이를 캠 방송에 연결.",
-       "무료 <strong style='color:var(--text)'>SplitCam</strong>으로 캠 방송을 하면서 팁에 반응하는 <strong style='color:var(--text)'>Lovense</strong> 상호작용 토이를 페어링합니다. 세 가지를 설치합니다: <strong>SplitCam</strong>(인코더), <strong>Lovense Connect</strong> 앱(토이를 블루투스로 연결하는 브리지 — 모바일은 Lovense Remote), 그리고 <strong>Lovense Cam Extension</strong>(Chrome/Edge 확장 프로그램으로 팁을 읽고 화면 오버레이를 제공). Lovense는 SplitCam 플러그인 페이지에 공식 <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>도 게시합니다 — 통합이 양쪽에서 지원됩니다.",
+       "인터랙티브 Lovense 토이를 캠 방송에 연결.",
+       "무료 <strong style='color:var(--text)'>SplitCam</strong>으로 캠 방송을 하면서 팁에 반응하는 <strong style='color:var(--text)'>Lovense</strong> 인터랙티브 토이를 페어링합니다. 세 가지를 설치합니다: <strong>SplitCam</strong>(인코더), <strong>Lovense Connect</strong> 앱(토이를 블루투스로 연결하는 브리지 — 모바일은 Lovense Remote), 그리고 <strong>Lovense Cam Extension</strong>(Chrome/Edge 확장 프로그램으로 팁을 읽고 화면 오버레이를 제공). Lovense는 SplitCam 플러그인 페이지에 공식 <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>도 게시합니다 — 통합이 양쪽에서 지원됩니다.",
        "방송에 Lovense 토이 추가: SplitCam, Lovense Connect 앱, Lovense Cam Extension을 설치하고, 토이를 페어링하고, 확장 프로그램을 캠 사이트에 연결하고, Lovense 오버레이를 SplitCam에 Browser 레이어로 추가한 뒤 평소처럼 방송하세요."
        "<ol><li>SplitCam 설치.</li><li>Lovense Connect 설치 및 토이 페어링.</li><li>Lovense Cam Extension(Chrome/Edge) 설치.</li><li>확장 프로그램을 캠 사이트에 연결 + SplitCam에 오버레이 추가.</li><li>Go Live 누르기.</li></ol>",
        "토이는 SplitCam에 직접 연결되지 않습니다. 흐름은 이렇습니다: 시청자가 캠 사이트에서 팁을 보내면 &rarr; 브라우저의 <strong>Lovense Cam Extension</strong>이 이를 감지하고 &rarr; localhost의 <strong>Lovense Connect</strong> 앱에 명령을 보내고 &rarr; Connect가 블루투스로 토이를 진동시킵니다. SplitCam이 하는 일은 <strong>Lovense 오버레이</strong>(토이 상태 + 최근 팁)를 Browser 레이어로 표시하고 카메라를 방송하는 것뿐입니다. 별도의 «Lovense Browser» 앱은 없습니다 — Chrome이나 Edge용 브라우저 <em>확장 프로그램</em>입니다.",

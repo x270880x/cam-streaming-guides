@@ -1110,7 +1110,7 @@ PLATFORMS_ES = [
                  "juguete) y la <strong>Lovense Cam Extension</strong> para Chrome/Edge (lee las "
                  "propinas y alimenta el overlay en pantalla). Lovense también publica un "
                  "<strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> oficial en la "
-                 "página de plugins de SplitCam — la integración está soportada por ambos lados.",
+                 "página de plugins de SplitCam — la integración cuenta con soporte oficial por ambas partes.",
         "quick": "Para añadir un juguete Lovense a tu emisión: instala SplitCam, la app Lovense "
                  "Connect y la Lovense Cam Extension, vincula el juguete, conecta la extensión a tu "
                  "sitio cam, añade el overlay de Lovense como capa Browser en SplitCam y emite "
@@ -1177,7 +1177,7 @@ PLATFORMS_ES = [
              "Opcionalmente, añade el Lovense SplitCam Toolset oficial desde splitcam.com/more-plugins."),
             ("¿Hay un \"Lovense Browser\" que deba descargar?", "No. No existe un navegador Lovense "
              "aparte — es la <strong>Lovense Cam Extension</strong>, que se instala en Chrome o "
-             "Edge. La vinculación del juguete la gestiona la app aparte Lovense Connect (escritorio) "
+             "Edge. La vinculación del juguete la gestiona una app aparte: Lovense Connect (escritorio) "
              "o Lovense Remote (móvil)."),
             ("¿El juguete se conecta directo a SplitCam?", "No — el juguete se vincula con la app "
              "Lovense Connect por Bluetooth; la Cam Extension lee las propinas y SplitCam solo "

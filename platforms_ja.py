@@ -357,7 +357,7 @@ PLATFORMS_JA = [
        '<span class="accent">Lovenseおもちゃ</span>をストリームに追加する方法',
        "Lovenseおもちゃ追加",
        "インタラクティブなLovenseおもちゃをcamストリームに接続。",
-       "無料の<strong style='color:var(--text)'>SplitCam</strong>でcam配信を実行し、<strong style='color:var(--text)'>Lovense</strong>インタラクティブおもちゃをペアリングしてチップに反応させます。インストールするのは3つ：<strong>SplitCam</strong>（エンコーダー）、<strong>Lovense Connect</strong>アプリ（おもちゃをBluetoothでつなぐ橋渡し）、そしてChrome/Edge用の<strong>Lovense Cam Extension</strong>（チップを読み取り、画面のオーバーレイに反映）。Lovenseは公式の<strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>もSplitCamのプラグインページで配布 — 統合は両側からサポート。",
+       "無料の<strong style='color:var(--text)'>SplitCam</strong>でcam配信を行い、<strong style='color:var(--text)'>Lovense</strong>のインタラクティブおもちゃをペアリングしてチップに反応させます。インストールするのは3つ：<strong>SplitCam</strong>（エンコーダー）、<strong>Lovense Connect</strong>アプリ（おもちゃをBluetoothでつなぐ橋渡し）、そしてChrome/Edge用の<strong>Lovense Cam Extension</strong>（チップを読み取り、画面のオーバーレイに反映）。Lovenseは公式の<strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>もSplitCamのプラグインページで配布 — 統合は両社が公式にサポート。",
        "Lovenseおもちゃを配信に追加するには：SplitCam、Lovense Connectアプリ、Lovense Cam Extensionをインストール、おもちゃをペアリング、拡張機能をcamサイトにリンク、SplitCamにLovenseオーバーレイをBrowserレイヤーとして追加、その後通常通り配信。"
        "<ol><li>SplitCamをインストール。</li>"
        "<li>Lovense Connectをインストールしておもちゃをペアリング。</li>"
@@ -365,9 +365,9 @@ PLATFORMS_JA = [
        "<li>拡張機能をcamサイトにリンク＋SplitCamにオーバーレイを追加。</li>"
        "<li>Go Liveを押す。</li></ol>",
        "おもちゃがSplitCamに直接つながることはありません。流れはこうです：視聴者がcamサイトで投げ銭する &rarr; ブラウザの<strong>Lovense Cam Extension</strong>がそれを検知 &rarr; localhost上の<strong>Lovense Connect</strong>アプリにコマンドを送信 &rarr; ConnectがBluetoothでおもちゃを振動させる。SplitCamの役割は、<strong>Lovenseオーバーレイ</strong>（おもちゃのステータス＋最近のチップ）をBrowserレイヤーとして表示し、カメラを配信することだけ。独立した「Lovense Browser」というアプリは存在しません — これはChromeまたはEdge用のブラウザ<em>拡張機能</em>です。",
-       [("3つのインストール、順番に", "SplitCam（エンコーダー）＋Lovense Connect（Bluetoothの橋渡し）＋Lovense Cam Extension（チップの読み取り／オーバーレイ）。どれか1つ欠けても、おもちゃは配信で反応しません。"),
+       [("3つのインストール、順番に", "SplitCam（エンコーダー）＋Lovense Connect（Bluetoothの橋渡し）＋Lovense Cam Extension（チップの読み取り／オーバーレイ）。1つでも欠けると、おもちゃは配信で反応しません。"),
         ("ブラウザではなく拡張機能", "ダウンロードすべき独立した「Lovense Browser」は存在しません — Lovense Cam ExtensionはChromeまたはEdgeにインストールされます。最新（30.1.4以降）に保たないと、SplitCamのオーバーレイが読み込まれないことがあります。"),
-        ("おもちゃを充電しておく", "ショーの途中でバッテリーが切れるとインタラクティブな部分が死にます — ライブ前にフル充電を。"),
+        ("おもちゃを充電しておく", "ショーの途中でバッテリーが切れるとインタラクティブな要素が使えなくなります — ライブ前にフル充電を。"),
         ("チップへの反応をテスト", "ルームを公開する前に、小さなテストチップを送っておもちゃが反応することを確認。"),
         ("バージョン要件を確認", "Lovense SplitCam ToolsetはSplitCam 10.4.5以降が必要。Cam Extensionは公式にChaturbate、Stripchat、BongaCams、MyFreeCams、CamSodaをカバー — その他のサイトにはLovenseのGeneric URL統合を使用。")],
        [("SplitCamでLovenseを使うには何をインストールする？", "3つです：<strong>SplitCam</strong>（エンコーダー）、<strong>Lovense Connect</strong>アプリ（おもちゃをBluetoothでつなぐ橋渡し）、Chrome/Edge用の<strong>Lovense Cam Extension</strong>（チップを読み取りオーバーレイに反映）。任意で公式Lovense SplitCam Toolset（splitcam.com/more-plugins）も追加。"),

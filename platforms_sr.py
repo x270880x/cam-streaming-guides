@@ -463,7 +463,7 @@ PLATFORMS_SR = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Додај Lovense играчку у стрим са SplitCam-ом",
-     "desc": "Додај Lovense играчку у SplitCam стрим — Lovense Connect апликација, Cam Extension и званични SplitCam Toolset, са tip alerts на екрану.",
+     "desc": "Додај Lovense играчку у SplitCam стрим — Lovense Connect апликација, Cam Extension и званични SplitCam Toolset, са tip-овима на екрану.",
      "kw": "како додати Lovense у стрим, Lovense, Lovense cam, Lovense SplitCam, Lovense SplitCam Toolset, Lovense Cam Extension, Lovense Connect, Lovense tip alerts, Lovense interactive toy",
      "h1html": 'Како додаш <span class="accent">Lovense играчку</span> на стрим',
      "h1short": "Додај Lovense играчку",

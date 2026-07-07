@@ -511,7 +511,7 @@ PLATFORMS_FR = [
                  "(le pont Bluetooth vers le toy) et la <strong>Lovense Cam Extension</strong> pour "
                  "Chrome/Edge (elle lit les tips et alimente l'overlay à l'écran). Lovense publie "
                  "aussi un <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> "
-                 "officiel sur la page plugins de SplitCam — l'intégration est supportée des deux côtés.",
+                 "officiel sur la page plugins de SplitCam — l'intégration est prise en charge des deux côtés.",
         "quick": "Pour ajouter un toy Lovense à votre stream : installez SplitCam, l'appli Lovense "
                  "Connect et la Lovense Cam Extension, appairez le toy, liez l'extension à votre site "
                  "cam, ajoutez l'overlay Lovense comme couche Browser dans SplitCam, puis diffusez "
@@ -536,7 +536,7 @@ PLATFORMS_FR = [
             ("Installez Lovense Connect et appairez votre toy",
              "Installez l'appli <strong>Lovense Connect</strong> (desktop, depuis lovense.com/connect) "
              "— ou utilisez <strong>Lovense Remote</strong> sur votre téléphone. C'est le pont qui "
-             "parle au toy en Bluetooth. Allumez le toy et appairez-le jusqu'à ce que l'app l'affiche "
+             "parle au toy en Bluetooth. Allumez le toy et appairez-le jusqu'à ce que l'appli l'affiche "
              "comme connecté."),
             ("Installez la Lovense Cam Extension",
              "Ajoutez la <strong>Lovense Cam Extension</strong> à Chrome ou Edge (version 30.1.4 ou "

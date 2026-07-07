@@ -363,7 +363,7 @@ PLATFORMS_ID = [
        "Jalankan siaran cam-mu lewat <strong style='color:var(--text)'>SplitCam</strong> gratis dan "
        "pasangkan mainan interaktif <strong style='color:var(--text)'>Lovense</strong> agar bereaksi "
        "pada tip. Kamu memasang tiga hal: <strong>SplitCam</strong> (encoder-nya), aplikasi "
-       "<strong>Lovense Connect</strong> (jembatan Bluetooth ke mainan) dan <strong>Lovense Cam "
+       "<strong>Lovense Connect</strong> (jembatan Bluetooth ke mainan), dan <strong>Lovense Cam "
        "Extension</strong> untuk Chrome/Edge (membaca tip dan memberi overlay di layar). Lovense juga "
        "menerbitkan <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> resmi di "
        "halaman plugin SplitCam — integrasi didukung dari kedua sisi.",
@@ -418,7 +418,7 @@ PLATFORMS_ID = [
            ("Pasang Lovense Connect dan pasangkan mainan", "Pasang aplikasi <strong>Lovense "
             "Connect</strong> (desktop, dari lovense.com/connect) — atau pakai <strong>Lovense "
             "Remote</strong> di HP-mu. Inilah jembatan yang berkomunikasi dengan mainan lewat Bluetooth. "
-            "Nyalakan mainan dan pasangkan sampai aplikasi menampilkan terhubung."),
+            "Nyalakan mainan dan pasangkan sampai aplikasi menunjukkan status terhubung."),
            ("Pasang Lovense Cam Extension", "Tambahkan <strong>Lovense Cam Extension</strong> ke Chrome "
             "atau Edge (versi 30.1.4 atau lebih baru) dan masuk dengan akun Lovense-mu. Tidak ada "
             "\"Lovense Browser\" tersendiri — ekstensi inilah yang membaca tip dan menjalankan overlay. "

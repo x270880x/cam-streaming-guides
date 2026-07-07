@@ -469,7 +469,7 @@ PLATFORMS_BG = [
      "h1short": "Добави Lovense играчка",
      "card": "Свържи интерактивна Lovense играчка към кам стрийма.",
      "intro": "Пускаш кам стрийма през безплатния <strong style='color:var(--text)'>SplitCam</strong> и сдвояваш "
-              "<strong style='color:var(--text)'>Lovense</strong> интерактивна играчка, така че тя да реагира на "
+              "интерактивна <strong style='color:var(--text)'>Lovense</strong> играчка, така че тя да реагира на "
               "бакшишите. Инсталираш три неща: <strong>SplitCam</strong> (енкодерът), приложението "
               "<strong>Lovense Connect</strong> (Bluetooth мостът до играчката) и "
               "<strong>Lovense Cam Extension</strong> за Chrome/Edge (то чете бакшишите и захранва overlay-а на екрана). "
@@ -495,7 +495,7 @@ PLATFORMS_BG = [
          ("Инсталирай Lovense Connect и сдвой играчката",
           "Инсталирай приложението <strong>Lovense Connect</strong> (desktop, от lovense.com/connect) — или използвай <strong>Lovense Remote</strong> на телефона. Това е мостът, който говори с играчката по Bluetooth. Включи играчката и я сдвой, докато приложението покаже свързано."),
          ("Инсталирай Lovense Cam Extension",
-          "Добави <strong>Lovense Cam Extension</strong> към Chrome или Edge (версия 30.1.4 или по-нова) и влез с Lovense акаунта си. Няма самостоятелен „Lovense Browser“ — това разширение е, което чете бакшишите и захранва overlay-а. За SplitCam-специфични уиджети вземи и официалния <strong>Lovense SplitCam Toolset</strong> от страницата с плъгини на SplitCam (splitcam.com/more-plugins)."),
+          "Добави <strong>Lovense Cam Extension</strong> към Chrome или Edge (версия 30.1.4 или по-нова) и влез с Lovense акаунта си. Няма самостоятелен „Lovense Browser“ — това е разширение, което чете бакшишите и захранва overlay-а. За SplitCam-специфични уиджети вземи и официалния <strong>Lovense SplitCam Toolset</strong> от страницата с плъгини на SplitCam (splitcam.com/more-plugins)."),
          ("Свържи разширението към кам сайта и добави overlay-а в SplitCam",
           "В Cam Extension кликни <strong>+</strong>, за да добавиш кам сайта си (Chaturbate, Stripchat и т.н.), задай нивата на бакшишите, после отвори раздела <strong>Video Feedback</strong> и избери <strong>SplitCam</strong>. Копирай overlay URL-а, който ти дава, и го добави като <strong>Browser</strong> слой в SplitCam сцената, за да виждат зрителите статуса на играчката и скорошните бакшиши."),
          ("Изгради сцена и Go Live",

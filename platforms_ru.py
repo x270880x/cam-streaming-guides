@@ -1083,7 +1083,7 @@ PLATFORMS_RU = [
                  "<strong style='color:var(--text)'>Lovense</strong>, чтобы она реагировала на "
                  "чаевые. Нужно установить три вещи: <strong>SplitCam</strong> (кодировщик), "
                  "приложение <strong>Lovense Connect</strong> (мост к игрушке по Bluetooth) и "
-                 "<strong>Lovense Cam Extension</strong> для Chrome/Edge (читает чаевые и питает "
+                 "<strong>Lovense Cam Extension</strong> для Chrome/Edge (читает чаевые и обновляет "
                  "оверлей на экране). У Lovense также есть официальный "
                  "<strong style='color:var(--text)'>Lovense SplitCam Toolset</strong> на "
                  "странице плагинов SplitCam — интеграция поддержана с обеих сторон.",
@@ -1117,7 +1117,7 @@ PLATFORMS_RU = [
             ("Установите Lovense Cam Extension",
              "Добавьте <strong>Lovense Cam Extension</strong> в Chrome или Edge (версия 30.1.4 "
              "или новее) и войдите в аккаунт Lovense. Отдельного «Lovense Browser» нет — именно "
-             "это расширение читает чаевые и питает оверлей. Для виджетов под SplitCam также "
+             "это расширение читает чаевые и обновляет оверлей. Для виджетов под SplitCam также "
              "возьмите официальный <strong>Lovense SplitCam Toolset</strong> со страницы "
              "плагинов SplitCam (splitcam.com/more-plugins)."),
             ("Привяжите расширение к кам-сайту и добавьте оверлей в SplitCam",
@@ -1151,7 +1151,7 @@ PLATFORMS_RU = [
             ("Что нужно установить для Lovense в SplitCam?", "Три вещи: <strong>SplitCam</strong> "
              "(кодировщик), приложение <strong>Lovense Connect</strong> (мост к игрушке по "
              "Bluetooth) и <strong>Lovense Cam Extension</strong> для Chrome/Edge (читает чаевые "
-             "и питает оверлей). Дополнительно возьмите официальный Lovense SplitCam Toolset на "
+             "и обновляет оверлей). Дополнительно возьмите официальный Lovense SplitCam Toolset на "
              "splitcam.com/more-plugins."),
             ("Нужно ли скачивать «Lovense Browser»?", "Нет. Отдельного браузера Lovense не "
              "существует — это <strong>Lovense Cam Extension</strong>, которое ставится в Chrome "

@@ -423,6 +423,15 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .cat-section:first-of-type{margin-top:16px}
 .cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
+.dl-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dl-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid var(--app-border);border-radius:12px;background:var(--app-panel);flex-wrap:wrap}
+.dl-meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dl-name{font-size:15.5px;font-weight:700;color:var(--text)}
+.dl-role{font-size:13px;color:var(--text-sub)}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.dl-btn:hover{background:var(--blue-hover)}
+.dl-src{font-size:11px;font-weight:600;opacity:.8}
+[dir="rtl"] .dl-btn{flex-direction:row-reverse}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -564,6 +573,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="qa-text">Live di Boosty dengan SplitCam: pasang SplitCam, susun scene, mulai live di Boosty, dan pilih <em>SplitCam</em> di dropdown kamera broadcaster — lalu go live.</div>
   </div>
 </div>
+
 
 <section class="section" id="steps">
   <h2 class="sec-h">Langkah demi langkah</h2>

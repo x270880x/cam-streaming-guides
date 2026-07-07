@@ -463,7 +463,7 @@ PLATFORMS_RO = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Cum adaugi un toy Lovense în stream cu SplitCam",
-     "desc": "Adaugă un toy Lovense în streamul SplitCam — aplicația Lovense Connect, Cam Extension și SplitCam Toolset oficial, cu alerts de tip pe ecran.",
+     "desc": "Adaugă un toy Lovense în streamul SplitCam — aplicația Lovense Connect, Cam Extension și SplitCam Toolset oficial, cu alerte de tip pe ecran.",
      "kw": "cum adaugi lovense în stream, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense toy interactiv",
      "h1html": 'Cum adaugi un <span class="accent">toy Lovense</span> la streamul tău',
      "h1short": "Adaugă toy Lovense",

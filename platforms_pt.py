@@ -499,7 +499,7 @@ PLATFORMS_PT = [
     {
         "slug": "lovense", "name": "Lovense",
         "title": "Adicionar um toy Lovense ao stream com SplitCam",
-        "desc": "Adiciona um toy Lovense ao stream no SplitCam grátis — app Lovense Connect, Cam Extension e o Toolset oficial, com alerts de tips na tela.",
+        "desc": "Adiciona um toy Lovense ao stream no SplitCam grátis — app Lovense Connect, Cam Extension e o Toolset oficial, com alertas de tips na tela.",
         "kw": "como adicionar lovense ao stream, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense toy interativo streaming, lovense toy overlay",
         "h1html": 'Como adicionar um <span class="accent">toy Lovense</span> ao seu stream',
         "h1short": "Adicionar toy Lovense",

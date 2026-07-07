@@ -423,6 +423,15 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .cat-section:first-of-type{margin-top:16px}
 .cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
+.dl-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dl-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid var(--app-border);border-radius:12px;background:var(--app-panel);flex-wrap:wrap}
+.dl-meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dl-name{font-size:15.5px;font-weight:700;color:var(--text)}
+.dl-role{font-size:13px;color:var(--text-sub)}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.dl-btn:hover{background:var(--blue-hover)}
+.dl-src{font-size:11px;font-weight:600;opacity:.8}
+[dir="rtl"] .dl-btn{flex-direction:row-reverse}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -527,7 +536,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="hero-text">
       <span class="eyebrow">Lovense</span>
       <h1 class="h1">방송에 <span class="accent">Lovense 토이</span> 추가하는 방법</h1>
-      <p class="sub">무료 <strong style='color:var(--text)'>SplitCam</strong>으로 캠 방송을 하면서 팁에 반응하는 <strong style='color:var(--text)'>Lovense</strong> 상호작용 토이를 페어링합니다. 세 가지를 설치합니다: <strong>SplitCam</strong>(인코더), <strong>Lovense Connect</strong> 앱(토이를 블루투스로 연결하는 브리지 — 모바일은 Lovense Remote), 그리고 <strong>Lovense Cam Extension</strong>(Chrome/Edge 확장 프로그램으로 팁을 읽고 화면 오버레이를 제공). Lovense는 SplitCam 플러그인 페이지에 공식 <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>도 게시합니다 — 통합이 양쪽에서 지원됩니다.</p>
+      <p class="sub">무료 <strong style='color:var(--text)'>SplitCam</strong>으로 캠 방송을 하면서 팁에 반응하는 <strong style='color:var(--text)'>Lovense</strong> 인터랙티브 토이를 페어링합니다. 세 가지를 설치합니다: <strong>SplitCam</strong>(인코더), <strong>Lovense Connect</strong> 앱(토이를 블루투스로 연결하는 브리지 — 모바일은 Lovense Remote), 그리고 <strong>Lovense Cam Extension</strong>(Chrome/Edge 확장 프로그램으로 팁을 읽고 화면 오버레이를 제공). Lovense는 SplitCam 플러그인 페이지에 공식 <strong style='color:var(--text)'>Lovense SplitCam Toolset</strong>도 게시합니다 — 통합이 양쪽에서 지원됩니다.</p>
       <div class="hero-cta">
         <details class="dl">
           <summary class="btn-primary btn-lg">⬇ SplitCam 다운로드 <span class="dl-caret">▾</span></summary>
@@ -564,6 +573,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     <div class="qa-text">방송에 Lovense 토이 추가: SplitCam, Lovense Connect 앱, Lovense Cam Extension을 설치하고, 토이를 페어링하고, 확장 프로그램을 캠 사이트에 연결하고, Lovense 오버레이를 SplitCam에 Browser 레이어로 추가한 뒤 평소처럼 방송하세요.</div>
   </div>
 </div>
+<section class="section" id="downloads"><h2 class="sec-h">설치할 항목</h2><div class="dl-list"><div class="dl-row"><div class="dl-meta"><span class="dl-name">SplitCam</span><span class="dl-role">Encoder</span></div><a class="dl-btn" href="https://splitcam.com/download" target="_blank" rel="nofollow noopener">⬇ SplitCam <span class="dl-src">공식 사이트</span></a></div><div class="dl-row"><div class="dl-meta"><span class="dl-name">Lovense Connect</span><span class="dl-role">Bluetooth bridge (desktop)</span></div><a class="dl-btn" href="https://www.lovense.com/connect" target="_blank" rel="nofollow noopener">⬇ SplitCam <span class="dl-src">공식 사이트</span></a></div><div class="dl-row"><div class="dl-meta"><span class="dl-name">Lovense Remote</span><span class="dl-role">Mobile app (iOS / Android)</span></div><a class="dl-btn" href="https://www.lovense.com/app" target="_blank" rel="nofollow noopener">⬇ SplitCam <span class="dl-src">공식 사이트</span></a></div><div class="dl-row"><div class="dl-meta"><span class="dl-name">Lovense Cam Extension</span><span class="dl-role">Chrome / Edge extension</span></div><a class="dl-btn" href="https://cdn.hytto.com/files/apps/cam/lovense_cam.zip" target="_blank" rel="nofollow noopener">⬇ SplitCam <span class="dl-src">공식 사이트</span></a></div><div class="dl-row"><div class="dl-meta"><span class="dl-name">Lovense SplitCam Toolset</span><span class="dl-role">SplitCam plugin</span></div><a class="dl-btn" href="https://splitcam.com/more-plugins" target="_blank" rel="nofollow noopener">⬇ SplitCam <span class="dl-src">공식 사이트</span></a></div></div></section>
 <section class="section"><h2 class="sec-h">영상 가이드</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/JK7xSVCqjsA" title="방송에 Lovense 토이 추가하는 방법" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
 <section class="section" id="steps">
   <h2 class="sec-h">단계별 안내</h2>

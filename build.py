@@ -19,6 +19,53 @@ from model_content import MODEL_GUIDE, EARNINGS_FAQ
 FAQ_EXTRA: dict = {}
 
 
+# Downloads shown on the /lovense/ page. Files that CAN'T be hosted here (SplitCam is
+# 490MB > GitHub Pages' 100MB cap; Lovense apps live in the app/Chrome stores) — so every
+# button points at the official source. name/role are fixed tech labels; the section
+# heading is localized via DL_HEADING.
+LOVENSE_DOWNLOADS = [
+    ("SplitCam", "Encoder", "https://splitcam.com/download"),
+    ("Lovense Connect", "Bluetooth bridge (desktop)", "https://www.lovense.com/connect"),
+    ("Lovense Remote", "Mobile app (iOS / Android)", "https://www.lovense.com/app"),
+    ("Lovense Cam Extension", "Chrome / Edge extension", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip"),
+    ("Lovense SplitCam Toolset", "SplitCam plugin", "https://splitcam.com/more-plugins"),
+]
+# "What to install" heading + "official site" trust caption, per language.
+DL_HEADING = {
+    "en": ("What to install", "official site"), "ru": ("Что установить", "офиц. сайт"),
+    "es": ("Qué instalar", "sitio oficial"), "de": ("Was installieren", "offizielle Seite"),
+    "fr": ("Que faut-il installer", "site officiel"), "it": ("Cosa installare", "sito ufficiale"),
+    "pt": ("O que instalar", "site oficial"), "nl": ("Wat te installeren", "officiële site"),
+    "ro": ("Ce trebuie instalat", "site oficial"), "bg": ("Какво да инсталирате", "офиц. сайт"),
+    "hu": ("Mit kell telepíteni", "hivatalos oldal"), "el": ("Τι να εγκαταστήσετε", "επίσημος ιστότοπος"),
+    "fi": ("Mitä asentaa", "virallinen sivusto"), "da": ("Hvad skal installeres", "officiel side"),
+    "no": ("Hva du skal installere", "offisiell side"), "sr": ("Шта инсталирати", "званични сајт"),
+    "hr": ("Što instalirati", "službena stranica"), "zh": ("需要安装什么", "官方网站"),
+    "ja": ("インストールするもの", "公式サイト"), "ar": ("ما الذي يجب تثبيته", "الموقع الرسمي"),
+    "th": ("ต้องติดตั้งอะไรบ้าง", "เว็บไซต์ทางการ"), "fil": ("Ano ang i-install", "opisyal na site"),
+    "tr": ("Ne kurmalı", "resmi site"), "id": ("Yang perlu diinstal", "situs resmi"),
+    "vi": ("Cần cài đặt gì", "trang chính thức"), "pl": ("Co zainstalować", "oficjalna strona"),
+    "ko": ("설치할 항목", "공식 사이트"), "uk": ("Що встановити", "офіц. сайт"),
+    "cs": ("Co nainstalovat", "oficiální web"), "sk": ("Čo nainštalovať", "oficiálna stránka"),
+    "sv": ("Vad du ska installera", "officiell sida"), "ms": ("Apa yang perlu dipasang", "laman rasmi"),
+    "he": ("מה להתקין", "אתר רשמי"), "fa": ("چه چیزی نصب کنید", "سایت رسمی"),
+    "hi": ("क्या इंस्टॉल करें", "आधिकारिक साइट"),
+}
+
+
+def downloads_section(lang, u):
+    """Render the /lovense/ 'What to install' block — official download buttons."""
+    heading, official = DL_HEADING.get(lang, DL_HEADING["en"])
+    rows = "".join(
+        f'<div class="dl-row"><div class="dl-meta"><span class="dl-name">{e(name)}</span>'
+        f'<span class="dl-role">{e(role)}</span></div>'
+        f'<a class="dl-btn" href="{url}" target="_blank" rel="nofollow noopener">'
+        f'⬇ {u["download"].split()[0]} <span class="dl-src">{e(official)}</span></a></div>'
+        for name, role, url in LOVENSE_DOWNLOADS)
+    return (f'<section class="section" id="downloads"><h2 class="sec-h">{e(heading)}</h2>'
+            f'<div class="dl-list">{rows}</div></section>')
+
+
 def extra_faqs(name: str, method: str, lang: str):
     """Return the 4–5 extra (q, a) FAQ tuples for the given platform/method/language.
 
@@ -481,6 +528,15 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .cat-section:first-of-type{margin-top:16px}
 .cat-h{font-size:21px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .cat-count{font-size:13px;font-weight:600;color:var(--text-sub);background:var(--app-panel);padding:3px 10px;border-radius:999px;border:1px solid var(--app-border)}
+.dl-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dl-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid var(--app-border);border-radius:12px;background:var(--app-panel);flex-wrap:wrap}
+.dl-meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dl-name{font-size:15.5px;font-weight:700;color:var(--text)}
+.dl-role{font-size:13px;color:var(--text-sub)}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--blue);color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.dl-btn:hover{background:var(--blue-hover)}
+.dl-src{font-size:11px;font-weight:600;opacity:.8}
+[dir="rtl"] .dl-btn{flex-direction:row-reverse}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -2014,6 +2070,10 @@ def render(p, lang, all_platforms):
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{L(a)}</p></details>'
         for q, a in all_faq)
 
+    # 'What to install' downloads block — only on the Lovense page (it's the one guide
+    # whose flow needs several separate apps installed up front).
+    dl_html = downloads_section(lang, u) if p["slug"] == "lovense" else ""
+
     support_html = render_support(p["slug"], name, lang)
     trouble_html = render_trouble(p["slug"], name, lang)
     trouble_rows = TROUBLE_TMPL.get(lang) or TROUBLE_TMPL["en"]
@@ -2146,6 +2206,7 @@ def render(p, lang, all_platforms):
     <div class="qa-text">{L(d['quick'].split('<ol>')[0])}</div>
   </div>
 </div>
+{dl_html}
 {video_section}
 <section class="section" id="steps">
   <h2 class="sec-h">{u['steps_h']}</h2>

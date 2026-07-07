@@ -511,12 +511,12 @@ PLATFORMS_NL = [
                  "<li>Lovense Cam Extension installeren (Chrome/Edge).</li>"
                  "<li>Extensie aan je cam-site linken + overlay in SplitCam toevoegen.</li>"
                  "<li>Go Live drukken.</li></ol>",
-        "key_how": "De toy praat nooit rechtstreeks met SplitCam. De keten is: een kijker geeft een fooi op je cam-site &rarr; de <strong>Lovense Cam Extension</strong> in je browser detecteert het &rarr; die stuurt een commando naar de <strong>Lovense Connect</strong>-app op localhost &rarr; Connect laat de toy trillen via Bluetooth. SplitCam heeft maar één taak: de <strong>Lovense-overlay</strong> (toy-status + recente fooien) als Browser-laag tonen en je camera streamen. Er is geen aparte \"Lovense Browser\"-app — het is een browser-<em>extensie</em> voor Chrome of Edge.",
+        "key_how": "De toy praat nooit rechtstreeks met SplitCam. De keten is: een kijker geeft een fooi op je cam-site &rarr; de <strong>Lovense Cam Extension</strong> in je browser detecteert dit &rarr; die stuurt een commando naar de <strong>Lovense Connect</strong>-app op localhost &rarr; Connect laat de toy trillen via Bluetooth. SplitCam heeft maar één taak: de <strong>Lovense-overlay</strong> (toy-status + recente fooien) als Browser-laag tonen en je camera streamen. Er is geen aparte \"Lovense Browser\"-app — het is een browser-<em>extensie</em> voor Chrome of Edge.",
         "steps": [
             ("SplitCam installeren",
              "SplitCam is gratis live-streaming-software voor Windows en macOS — de encoder die je video naar je cam-platform stuurt. Installeren; geen watermerk, geen registratie."),
             ("Lovense Connect installeren en je toy koppelen",
-             "Installeer de <strong>Lovense Connect</strong>-app (desktop, via lovense.com/connect) — of gebruik <strong>Lovense Remote</strong> op je telefoon. Dit is de brug die via Bluetooth met de toy praat. Zet de toy aan en koppel tot de app hem verbonden toont."),
+             "Installeer de <strong>Lovense Connect</strong>-app (desktop, via lovense.com/connect) — of gebruik <strong>Lovense Remote</strong> op je telefoon. Dit is de brug die via Bluetooth met de toy praat. Zet de toy aan en koppel totdat de app hem als verbonden weergeeft."),
             ("Lovense Cam Extension installeren",
              "Voeg de <strong>Lovense Cam Extension</strong> toe aan Chrome of Edge (versie 30.1.4 of nieuwer) en log in met je Lovense-account. Er is geen aparte \"Lovense Browser\" — deze extensie leest de fooien en voedt de overlay. Voor SplitCam-specifieke widgets pak je ook de officiële <strong>Lovense SplitCam Toolset</strong> van de plugins-pagina van SplitCam (splitcam.com/more-plugins)."),
             ("Extensie aan je cam-site linken en overlay in SplitCam toevoegen",

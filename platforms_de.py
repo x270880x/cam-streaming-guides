@@ -504,7 +504,7 @@ PLATFORMS_DE = [
         "h1html": 'So fügst du ein <span class="accent">Lovense-Toy</span> zu deinem Stream hinzu',
         "h1short": "Lovense-Toy hinzufügen",
         "card": "Interaktives Lovense-Spielzeug an deinen Cam-Stream koppeln.",
-        "intro": "Führe deinen Cam-Stream über kostenloses <strong style='color:var(--text)'>SplitCam</strong> "
+        "intro": "Sende deinen Cam-Stream über kostenloses <strong style='color:var(--text)'>SplitCam</strong> "
                  "und koppele ein interaktives <strong style='color:var(--text)'>Lovense</strong>-Spielzeug, "
                  "das auf Tipps reagiert. Du installierst drei Dinge: <strong>SplitCam</strong> (den Encoder), "
                  "die <strong>Lovense Connect</strong> App (die Bluetooth-Brücke zum Toy) und die "
