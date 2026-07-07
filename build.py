@@ -43,7 +43,8 @@ LOVENSE_DOWNLOADS = [
     ("Lovense Cam Extension", "Chrome / Edge — reads tips, drives the overlay", [
         ("ZIP", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip", "file"),
     ]),
-    ("Lovense SplitCam Toolset", "extra SplitCam overlay widgets — Mac only (on Windows the Cam Extension above covers this)", [
+    ("Lovense SplitCam Toolset", "extra SplitCam overlay widgets (needs Cam Extension 30.1.4+)", [
+        ("Windows", "https://www.lovense.com/files/apps/cam/obs/lovense_splitcam_toolset.exe?v=1.0.30", "file"),
         ("Mac", "https://www.lovense.com/files/apps/cam/obs/Lovense_splitcam_toolset.dmg?v=1.0.22", "file"),
     ]),
 ]
