@@ -29,7 +29,7 @@ FAQ_EXTRA: dict = {}
 LOVENSE_DOWNLOADS = [
     ("SplitCam", "Encoder", [
         ("Windows", "https://splitcam.com/win-download/SplitCamSetup_x64.msi", "file"),
-        ("Mac", "https://apps.apple.com/us/app/splitcam-live-streaming/id6479984191", "store"),
+        ("Mac", "https://splitcam.com/mac-download/SplitCam.dmg", "file"),
     ]),
     ("Lovense Remote", "Bluetooth bridge to the toy", [
         ("Windows", "https://cdn.lovense.com/files/apps/remote/remote.exe", "file"),
