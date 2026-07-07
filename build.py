@@ -25,10 +25,10 @@ FAQ_EXTRA: dict = {}
 # heading is localized via DL_HEADING.
 LOVENSE_DOWNLOADS = [
     ("SplitCam", "Encoder", "https://splitcam.com/download"),
-    ("Lovense Connect", "Bluetooth bridge (desktop)", "https://www.lovense.com/connect"),
-    ("Lovense Remote", "Mobile app (iOS / Android)", "https://www.lovense.com/app"),
+    ("Lovense Connect", "Bluetooth bridge (desktop)", "https://www.lovense.com/sextoys/download"),
+    ("Lovense Remote", "Mobile app (iOS / Android)", "https://www.lovense.com/apps"),
     ("Lovense Cam Extension", "Chrome / Edge extension", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip"),
-    ("Lovense SplitCam Toolset", "SplitCam plugin", "https://splitcam.com/more-plugins"),
+    ("Lovense SplitCam Toolset", "SplitCam plugin", "https://splitcam.com/products"),
 ]
 # "What to install" heading + "official site" trust caption, per language.
 DL_HEADING = {
