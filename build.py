@@ -35,8 +35,11 @@ LOVENSE_DOWNLOADS = [
         ("Windows", "https://cdn.lovense.com/files/apps/remote/remote.exe", "file"),
         ("Mac", "https://cdn.lovense.com/files/apps/remote/remote.dmg", "file"),
     ]),
-    ("Lovense Cam Extension", "the Lovense↔SplitCam plugin (overlay + tips) for Chrome / Edge", [
+    ("Lovense Cam Extension", "Chrome / Edge — reads tips, drives the overlay", [
         ("ZIP", "https://cdn.hytto.com/files/apps/cam/lovense_cam.zip", "file"),
+    ]),
+    ("Lovense SplitCam Toolset", "SplitCam overlay plugin — extra widgets (needs Cam Extension 30.1.4+)", [
+        ("Mac", "https://www.lovense.com/files/apps/cam/obs/Lovense_splitcam_toolset.dmg?v=1.0.22", "file"),
     ]),
 ]
 # "What to install" heading + "official site" trust caption, per language.
