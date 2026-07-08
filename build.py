@@ -104,6 +104,135 @@ def autolink_lovense(html_str):
     return "".join(parts)
 
 
+# Downloadable apps referenced in the steps: (display name, Windows URL, Mac URL).
+# The step text uses {tokens}; methods_section() swaps each for an OS-aware download link,
+# and LOVENSE_OS_JS rewrites its href to the visitor's platform (Mac → .dmg, Windows → .exe/.msi).
+# Cam Extension is a single cross-platform .zip, so both URLs are the same.
+# All URLs curl-verified 200 from Lovense's official cam-model/extension page + splitcam.com.
+LOVENSE_COMPONENTS = {
+    "splitcam": ("SplitCam",
+                 "https://splitcam.com/win-download/SplitCamSetup_x64.msi",
+                 "https://splitcam.com/mac-download/SplitCam.dmg"),
+    "camext": ("Lovense Cam Extension",
+               "https://www.lovense.com/files/apps/cam/lovense_cam.zip",
+               "https://www.lovense.com/files/apps/cam/lovense_cam.zip"),
+    "connect": ("Lovense Connect",
+                "https://www.lovense.com/files/apps/connect/Lovense_Connect.exe",
+                "https://www.lovense.com/files/apps/connect/Lovense_Connect.dmg"),
+    "toolset": ("Lovense SplitCam Toolset",
+                "https://www.lovense.com/files/apps/cam/obs/lovense_splitcam_toolset.exe",
+                "https://www.lovense.com/files/apps/cam/obs/Lovense_splitcam_toolset.dmg"),
+}
+
+# Client-side: point every in-step download link at the visitor's OS build, and tag it.
+LOVENSE_OS_JS = """<script>
+(function(){var ua=navigator.userAgent||"";var mac=/Mac|iPhone|iPad|iPod/i.test(ua);
+var os=mac?"Mac":"Windows";
+document.querySelectorAll("a.os-dl").forEach(function(a){
+var u=mac?a.getAttribute("data-mac"):a.getAttribute("data-win");
+if(u)a.href=u;var t=a.querySelector(".os-dl-os");if(t)t.textContent=os;});})();
+</script>"""
+
+
+def os_link(token):
+    """Inline OS-aware download link for a component token used inside step text."""
+    name, win, mac = LOVENSE_COMPONENTS[token]
+    return (f'<a class="os-dl" data-win="{win}" data-mac="{mac}" href="{win}" '
+            f'target="_blank" rel="nofollow noopener">{e(name)} '
+            f'<span class="os-dl-ic">⬇ <span class="os-dl-os">Windows</span></span></a>')
+
+
+def _inject_links(step):
+    """Replace {token} placeholders in a step with OS-aware download links."""
+    for tok in LOVENSE_COMPONENTS:
+        step = step.replace("{" + tok + "}", os_link(tok))
+    return step
+
+
+# The /lovense/ body follows Lovense's own 3-stage cam-model layout: 1) Cam Extension,
+# 2) Lovense Connect, 3) SplitCam + Toolset. Each stage = what to download (OS-aware
+# {token} links) + the exact clicks. Localized per language; EN is the reference/fallback.
+LOVENSE_METHODS = {
+    "en": {
+        "heading": "Set up Lovense on SplitCam — 3 steps",
+        "lead": "This mirrors Lovense's own three-step setup. The <strong>Cam Extension</strong> reads "
+                "tips from your cam site, <strong>Lovense Connect</strong> is the Bluetooth bridge to "
+                "your toy, and the <strong>SplitCam Toolset</strong> puts the Lovense overlay inside "
+                "SplitCam, which broadcasts over RTMP. Everything is free; the download buttons match "
+                "your system automatically.",
+        "stage_word": "Step",
+        "get_label": "Download",
+        "do_label": "Then",
+        "stages": [
+            {
+                "title": "Lovense Cam Extension",
+                "role": "Reads the tips from your cam site — installs into Chrome or Edge.",
+                "get": ["camext"],
+                "steps": [
+                    "Download the Cam Extension and unzip it.",
+                    "Open <strong>chrome://extensions</strong> (or <strong>edge://extensions</strong>), "
+                    "turn on <strong>Developer mode</strong> top-right, click <strong>Load unpacked</strong> "
+                    "and select the unzipped <em>lovense_cam</em> folder.",
+                    "Click the Lovense icon in the toolbar and log in with your Lovense account.",
+                ],
+            },
+            {
+                "title": "Lovense Connect",
+                "role": "The bridge that talks to your toy over Bluetooth.",
+                "get": ["connect"],
+                "steps": [
+                    "On a computer: install Lovense Connect (a Lovense USB Bluetooth adapter is "
+                    "recommended). On a phone: get the Lovense Connect app from Google Play or the App Store.",
+                    "Turn your toy on and pair it in Connect until it shows connected. On the phone app, "
+                    "scan the QR code shown on your computer to link them.",
+                ],
+            },
+            {
+                "title": "SplitCam + Toolset",
+                "role": "Shows the Lovense overlay in SplitCam and broadcasts your stream.",
+                "get": ["splitcam", "toolset"],
+                "steps": [
+                    "Install SplitCam, then install the Lovense SplitCam Toolset — the plugin that adds "
+                    "the Lovense overlay to SplitCam.",
+                    "In the Cam Extension, click <strong>+</strong> to add your cam site (Chaturbate, "
+                    "Stripchat, …) and set your tip menu, then open the <strong>Video Feedback</strong> "
+                    "tab and choose <strong>SplitCam</strong> from the list (OBS / SplitCam / Streamster).",
+                    "In SplitCam, add the <strong>Lovense</strong> source the Toolset registered — the "
+                    "tip-menu / toy-status overlay appears on your scene. Keep it above your other layers.",
+                    "Add your camera, paste your cam site's RTMP key in SplitCam's <strong>Stream "
+                    "Settings</strong>, and click <strong>Go Live</strong> — the overlay and toy react to tips.",
+                ],
+            },
+        ],
+    },
+}
+
+
+def methods_section(lang):
+    """Render the /lovense/ body: lead + Lovense's 3 setup stages (downloads + clicks each)."""
+    m = LOVENSE_METHODS.get(lang) or LOVENSE_METHODS["en"]
+    cards = []
+    for i, st in enumerate(m["stages"], 1):
+        gets = "".join(
+            (lambda name, win, mac: (
+                f'<a class="os-dl" data-win="{win}" data-mac="{mac}" href="{win}" '
+                f'target="_blank" rel="nofollow noopener">{e(name)} '
+                f'<span class="os-dl-ic">⬇ <span class="os-dl-os">Windows</span></span></a>'))(*LOVENSE_COMPONENTS[tok])
+            for tok in st["get"])
+        steps = "".join(f'<li>{_inject_links(s)}</li>' for s in st["steps"])
+        cards.append(
+            f'<div class="stg-card"><div class="stg-head"><span class="stg-num">{e(m["stage_word"])} {i}</span>'
+            f'<h3 class="stg-title">{e(st["title"])}</h3></div>'
+            f'<p class="stg-role">{e(st["role"])}</p>'
+            f'<div class="stg-get"><span class="stg-lbl">{e(m["get_label"])}</span>'
+            f'<div class="stg-btns">{gets}</div></div>'
+            f'<div class="stg-do"><span class="stg-lbl">{e(m["do_label"])}</span>'
+            f'<ol class="mth-steps">{steps}</ol></div></div>')
+    return (f'<section class="section" id="how-to-connect"><h2 class="sec-h">{e(m["heading"])}</h2>'
+            f'<p class="mth-lead">{m["lead"]}</p>'
+            f'<div class="stg-list">{"".join(cards)}</div></section>{LOVENSE_OS_JS}')
+
+
 def downloads_section(lang, u):
     """Render the /lovense/ 'What to install' block — direct-download / store buttons."""
     heading, _official = DL_HEADING.get(lang, DL_HEADING["en"])
@@ -594,6 +723,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -2131,9 +2279,40 @@ def render(p, lang, all_platforms):
         f'<details class="faq-item"><summary>{e(q)}</summary><p>{L(a)}</p></details>'
         for q, a in all_faq)
 
-    # 'What to install' downloads block — only on the Lovense page (it's the one guide
-    # whose flow needs several separate apps installed up front).
-    dl_html = downloads_section(lang, u) if p["slug"] == "lovense" else ""
+    # Lovense gets the redesigned two-path methods block (each path carries its own
+    # downloads + steps). That single block replaces the old separate downloads wall,
+    # the generic step list AND the tips grid — everything install-related lives in one
+    # clean place, so the page stops feeling cluttered.
+    is_lovense = p["slug"] == "lovense"
+    methods_html = methods_section(lang) if is_lovense else ""
+    dl_html = ""  # downloads now live inside each method path, not as a separate wall
+    steps_section_html = "" if is_lovense else (
+        f'<section class="section" id="steps">'
+        f'<h2 class="sec-h">{u["steps_h"]}</h2>'
+        f'<div class="steps">{steps_html}</div></section>')
+    # Tips grid is dropped on Lovense — the two paths already carry the actionable detail.
+    tips_section_html = "" if is_lovense else (
+        f'<section class="section" id="tips">'
+        f'<h2 class="sec-h">{u["tips_h"]}</h2>'
+        f'<div class="tips-grid">{tips_html}</div></section>')
+
+    # TOC: on Lovense the page only has quick-answer / how-to-connect / faq, so point the
+    # jump-links there instead of the removed #steps and #tips.
+    _tl = TOC_LABELS.get(lang, TOC_LABELS["en"])
+    if is_lovense:
+        toc_html = (
+            '<nav class="toc" aria-label="On this page">'
+            f'<a href="#quick-answer">{_tl["quick"]}</a>'
+            f'<a href="#how-to-connect">{_tl["steps"]}</a>'
+            f'<a href="#faq">{_tl["faq"]}</a></nav>')
+    else:
+        toc_html = (
+            '<nav class="toc" aria-label="On this page">'
+            f'<a href="#quick-answer">{_tl["quick"]}</a>'
+            f'<a href="#steps">{_tl["steps"]}</a>'
+            f'<a href="#tips">{_tl["tips"]}</a>'
+            f'<a href="#faq">{_tl["faq"]}</a>'
+            f'<a href="#related">{_tl["related"]}</a></nav>')
 
     support_html = render_support(p["slug"], name, lang)
     trouble_html = render_trouble(p["slug"], name, lang)
@@ -2254,13 +2433,7 @@ def render(p, lang, all_platforms):
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">{TOC_LABELS.get(lang, TOC_LABELS['en'])['quick']}</a>
-  <a href="#steps">{TOC_LABELS.get(lang, TOC_LABELS['en'])['steps']}</a>
-  <a href="#tips">{TOC_LABELS.get(lang, TOC_LABELS['en'])['tips']}</a>
-  <a href="#faq">{TOC_LABELS.get(lang, TOC_LABELS['en'])['faq']}</a>
-  <a href="#related">{TOC_LABELS.get(lang, TOC_LABELS['en'])['related']}</a>
-</nav>
+{toc_html}
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">{u['quick']}</div>
@@ -2268,15 +2441,10 @@ def render(p, lang, all_platforms):
   </div>
 </div>
 {dl_html}
+{methods_html}
 {video_section}
-<section class="section" id="steps">
-  <h2 class="sec-h">{u['steps_h']}</h2>
-  <div class="steps">{steps_html}</div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">{u['tips_h']}</h2>
-  <div class="tips-grid">{tips_html}</div>
-</section>
+{steps_section_html}
+{tips_section_html}
 {trouble_html}
 <section class="section" id="faq">
   <h2 class="sec-h">{u['faq_h']}</h2>
@@ -3970,6 +4138,17 @@ def main():
         try:
             mod = __import__(f"faq_{code}", fromlist=[f"FAQ_EXTRA_{code.upper()}"])
             FAQ_EXTRA[code] = getattr(mod, f"FAQ_EXTRA_{code.upper()}")
+        except ImportError:
+            pass
+
+    # Load the localized Lovense 3-step guide (lovense_methods_<lang>.py → LOVENSE_METHODS_<LANG>).
+    # Missing files fall back to English in methods_section().
+    for code in LANGS_AVAIL:
+        if code == "en":
+            continue
+        try:
+            mod = __import__(f"lovense_methods_{code}", fromlist=[f"LOVENSE_METHODS_{code.upper()}"])
+            LOVENSE_METHODS[code] = getattr(mod, f"LOVENSE_METHODS_{code.upper()}")
         except ImportError:
             pass
 

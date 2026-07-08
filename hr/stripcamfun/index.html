@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Odgovor</a>
-  <a href="#steps">Koraci</a>
-  <a href="#tips">Savjeti</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Slični vodiči</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Odgovor</a><a href="#steps">Koraci</a><a href="#tips">Savjeti</a><a href="#faq">FAQ</a><a href="#related">Slični vodiči</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Ukratko</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Korak po korak</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Preuzmi i instaliraj SplitCam</div><p class="step-p">SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Izgradi svoju scenu</div><p class="step-p">Otvori SplitCam i dodaj webkameru. Naslagaj preklapanja, tip meni, drugu kameru ili mobitel, beauty filtere ili AI pozadinu — sve uživo.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Uzmi svoj StripCamFun URL i stream key</div><p class="step-p">Prijavi se u StripCamFun model dashboard, otvori <strong>External Encoder / OBS</strong> i kopiraj <strong>server URL</strong> i <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Spoji SplitCam na StripCamFun</div><p class="step-p">U SplitCamu → <strong>Stream Settings → Custom RTMP</strong>, zalijepi URL i ključ. Postavi 3500–5000 Kbps na 1920×1080, 30 fps, 2-sekundni keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikni Go Live</div><p class="step-p">Pritisni <strong>Go Live</strong> u SplitCamu, zatim se prebaci online u StripCamFun dashboardu. Tvoj stream stiže na javnu listu unutar ~10 sekundi.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Savjeti</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Manji bazen, lakša vidljivost</h3><p>Na Tier-1 stranici si jedan od tisuća online; na StripCamFunu je broadcaster lista kratka — polirana SplitCam scena se brže ističe na naslovnoj.</p></div><div class="tip-card"><h3>Cross-broadcast za doseg</h3><p>Indie cam stranice se dobro slažu s multi-streamingom. Koristi SplitCam za istovremeni prijenos na StripCamFun i veću stranicu da zadržiš tippere iz oba bazena.</p></div><div class="tip-card"><h3>Oslonji se na niše tagove</h3><p>Indie publika pretražuje po niši više nego po slavnim imenima. Specifični tagovi + preklapanje koje imenuje nišu izvlači gledatelje s liste.</p></div><div class="tip-card"><h3>Prvo napravi privatni test</h3><p>Pokreni kratak test prijenos za kameru, zvuk, kadriranje i preklapanja prije nego otvoriš sobu publici.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Korak po korak</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Preuzmi i instaliraj SplitCam</div><p class="step-p">SplitCam je besplatan softver za live streaming za Windows i macOS — bez registracije, bez kartice, bez vodenog žiga.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Izgradi svoju scenu</div><p class="step-p">Otvori SplitCam i dodaj webkameru. Naslagaj preklapanja, tip meni, drugu kameru ili mobitel, beauty filtere ili AI pozadinu — sve uživo.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Uzmi svoj StripCamFun URL i stream key</div><p class="step-p">Prijavi se u StripCamFun model dashboard, otvori <strong>External Encoder / OBS</strong> i kopiraj <strong>server URL</strong> i <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Spoji SplitCam na StripCamFun</div><p class="step-p">U SplitCamu → <strong>Stream Settings → Custom RTMP</strong>, zalijepi URL i ključ. Postavi 3500–5000 Kbps na 1920×1080, 30 fps, 2-sekundni keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikni Go Live</div><p class="step-p">Pritisni <strong>Go Live</strong> u SplitCamu, zatim se prebaci online u StripCamFun dashboardu. Tvoj stream stiže na javnu listu unutar ~10 sekundi.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Savjeti</h2><div class="tips-grid"><div class="tip-card"><h3>Manji bazen, lakša vidljivost</h3><p>Na Tier-1 stranici si jedan od tisuća online; na StripCamFunu je broadcaster lista kratka — polirana SplitCam scena se brže ističe na naslovnoj.</p></div><div class="tip-card"><h3>Cross-broadcast za doseg</h3><p>Indie cam stranice se dobro slažu s multi-streamingom. Koristi SplitCam za istovremeni prijenos na StripCamFun i veću stranicu da zadržiš tippere iz oba bazena.</p></div><div class="tip-card"><h3>Oslonji se na niše tagove</h3><p>Indie publika pretražuje po niši više nego po slavnim imenima. Specifični tagovi + preklapanje koje imenuje nišu izvlači gledatelje s liste.</p></div><div class="tip-card"><h3>Prvo napravi privatni test</h3><p>Pokreni kratak test prijenos za kameru, zvuk, kadriranje i preklapanja prije nego otvoriš sobu publici.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Rješavanje problema</h2><div class="faq-list"><details class="faq-item"><summary>Tvoj prijenos na StripCamFun lagira ili buffera</summary><p>Gotovo uvijek je bitrate viši nego što tvoj upload izdrži. Pokreni ugrađeni test brzine SplitCama i postavi bitrate na oko 75% izmjerenog uploada — 3.500–6.000&nbsp;Kbps za 1080p, manje za 720p. Lag nestaje čim enkoder prestane prestizati tvoju vezu.</p></details><details class="faq-item"><summary>Izgubljeni frameovi tijekom prijenosa na StripCamFun</summary><p>Izgubljeni frameovi znače da paketi ne stižu do StripCamFun na vrijeme — obično nestabilan Wi-Fi. Prijeđi na kabelsku Ethernet vezu, zatvori aplikacije koje troše propusnost i malo smanji bitrate. Jedan skok je u redu; stalni porast znači da veza ne može pratiti.</p></details><details class="faq-item"><summary>Crni ekran — gledatelji ne vide video na StripCamFun</summary><p>Kamera nije odabrana kao aktivni izvor u SplitCamu, ili je druga aplikacija drži. Zatvori Zoom, Skype ili OBS, ponovno odaberi web kameru u listi izvora SplitCama i potvrdi da pregled prikazuje sliku prije nego pritisneš Go Live.</p></details><details class="faq-item"><summary>StripCamFun odbija stream ključ ili se ne povezuje</summary><p>Ponovno kopiraj stream ključ — suvišan razmak ili stari, već resetiran ključ je čest uzrok. Potvrdi da se URL servera podudara s onim koji prikazuje StripCamFun i da je prijenos preko vanjskog enkodera uključen na tvom računu. Zeleni slider u Stream Settings SplitCama potvrđuje valjan ključ.</p></details><details class="faq-item"><summary>Nema zvuka ili zvuk nije sinkroniziran na StripCamFun</summary><p>Odaberi SplitCam i kao kameru i kao mikrofon, i postavi svoj pravi mikrofon kao audio izvor u SplitCamu. Ako zvuk kasni za videom, smanji rezoluciju za jednu razinu — enkoder je preopterećen i zvuk čeka zakašnjele frameove.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Česta pitanja</h2>

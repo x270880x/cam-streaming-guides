@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Svar</a>
-  <a href="#steps">Steg</a>
-  <a href="#tips">Tips</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Relaterade guider</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Svar</a><a href="#steps">Steg</a><a href="#tips">Tips</a><a href="#faq">FAQ</a><a href="#related">Relaterade guider</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Snabbt svar</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Steg för steg</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Ladda ner och installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg din scen</div><p class="step-p">Öppna SplitCam och lägg till webbkameran. Lägg till overlays, text, en andra kamera eller mobil, beauty-filter eller AI-bakgrund — en stark scen konverterar Jerkmates matchade tittare.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Registrera dig som modell och hämta nyckeln</div><p class="step-p">Registrera dig via Jerkmates modellprogram eller direkt i <strong>Streamate-nätverket</strong> som matar det. Öppna <strong>SM Connect</strong>, godkänn villkoren, klicka <strong>Start Show</strong> och kopiera streamnyckeln.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Lägg till Streamate som kanal i SplitCam</div><p class="step-p">Öppna <strong>Stream Settings → Add Channel</strong>, välj <strong>Streamate</strong> i den integrerade listan och klistra in nyckeln — ingen manuell RTMP-URL. Lås upplösningen till 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klicka Go Live</div><p class="step-p">Tryck <strong>Go Live</strong> i SplitCam — ett grönt reglage bekräftar anslutningen. Din show går ut över <a href="../streamate/" class="autolink">Streamate</a>-nätverket och dyker upp på Jerkmate.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Proffstips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Det är Streamate-nätverket under ytan</h3><p>Leta inte efter en Jerkmate-specifik sändare — du sänder på <a href="../streamate/" class="autolink">Streamate</a> och Jerkmate vidaresänder det. Allt som fungerar för Streamate (SM Connect, SplitCams integrerade kanal) fungerar för Jerkmate.</p></div><div class="tip-card"><h3>Konvertera den AI-matchade trafiken</h3><p>Jerkmates matchmaker slussar tittare till modeller som passar deras val — en polerad SplitCam-scen med overlays och bra bildkomposition konverterar de matchade tittarna långt bättre än en platt webbkamera.</p></div><div class="tip-card"><h3>En feed, många sajter</h3><p>Att sända till <a href="../streamate/" class="autolink">Streamate</a>-nätverket lägger dig på Jerkmate plus dess partnersajter samtidigt — bredare räckvidd från en enda SplitCam-stream, ingen extra uppsättning.</p></div><div class="tip-card"><h3>Använd kabelanslutning</h3><p>Ethernet slår Wi-Fi vid långa sändningar — tappade bildrutor betyder tappade tips. Koppla en kabel till datorn som sänder.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Steg för steg</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Ladda ner och installera SplitCam</div><p class="step-p">SplitCam är gratis livesändningsmjukvara för Windows och macOS — ingen registrering, inget kort, ingen vattenstämpel.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg din scen</div><p class="step-p">Öppna SplitCam och lägg till webbkameran. Lägg till overlays, text, en andra kamera eller mobil, beauty-filter eller AI-bakgrund — en stark scen konverterar Jerkmates matchade tittare.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Registrera dig som modell och hämta nyckeln</div><p class="step-p">Registrera dig via Jerkmates modellprogram eller direkt i <strong>Streamate-nätverket</strong> som matar det. Öppna <strong>SM Connect</strong>, godkänn villkoren, klicka <strong>Start Show</strong> och kopiera streamnyckeln.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Lägg till Streamate som kanal i SplitCam</div><p class="step-p">Öppna <strong>Stream Settings → Add Channel</strong>, välj <strong>Streamate</strong> i den integrerade listan och klistra in nyckeln — ingen manuell RTMP-URL. Lås upplösningen till 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klicka Go Live</div><p class="step-p">Tryck <strong>Go Live</strong> i SplitCam — ett grönt reglage bekräftar anslutningen. Din show går ut över <a href="../streamate/" class="autolink">Streamate</a>-nätverket och dyker upp på Jerkmate.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Proffstips</h2><div class="tips-grid"><div class="tip-card"><h3>Det är Streamate-nätverket under ytan</h3><p>Leta inte efter en Jerkmate-specifik sändare — du sänder på <a href="../streamate/" class="autolink">Streamate</a> och Jerkmate vidaresänder det. Allt som fungerar för Streamate (SM Connect, SplitCams integrerade kanal) fungerar för Jerkmate.</p></div><div class="tip-card"><h3>Konvertera den AI-matchade trafiken</h3><p>Jerkmates matchmaker slussar tittare till modeller som passar deras val — en polerad SplitCam-scen med overlays och bra bildkomposition konverterar de matchade tittarna långt bättre än en platt webbkamera.</p></div><div class="tip-card"><h3>En feed, många sajter</h3><p>Att sända till <a href="../streamate/" class="autolink">Streamate</a>-nätverket lägger dig på Jerkmate plus dess partnersajter samtidigt — bredare räckvidd från en enda SplitCam-stream, ingen extra uppsättning.</p></div><div class="tip-card"><h3>Använd kabelanslutning</h3><p>Ethernet slår Wi-Fi vid långa sändningar — tappade bildrutor betyder tappade tips. Koppla en kabel till datorn som sänder.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Felsökning</h2><div class="faq-list"><details class="faq-item"><summary>Jerkmate-sändningen hackar eller buffrar</summary><p>Nästan alltid är bitraten satt högre än din uppladdning klarar. Kör SplitCams inbyggda hastighetstest, ställ sedan in bitrate på runt 75 % av uppmätt uppladdning — 3500–6000&nbsp;Kbps för 1080p, lägre för 720p. Hackandet försvinner när kodaren slutar överstiga din linje.</p></details><details class="faq-item"><summary>Tappade bildrutor under Jerkmate-sändning</summary><p>Tappade bildrutor betyder att paket inte når Jerkmate i tid — oftast ostabilt Wi-Fi. Byt till kabelansluten Ethernet, stäng appar som äter bandbredd och sänk bitraten något. En enstaka topp gör inget; en stadig ökning betyder att linjen inte hänger med.</p></details><details class="faq-item"><summary>Svart skärm — tittarna ser ingen video på Jerkmate</summary><p>Din kamera är inte vald som aktiv källa i SplitCam, eller så håller en annan app den. Stäng Zoom, Skype eller OBS, välj webbkameran igen i SplitCams källista och säkerställ att förhandsvisningen visar din bild innan du trycker Go Live.</p></details><details class="faq-item"><summary>Jerkmate avvisar streamnyckeln eller ansluter inte</summary><p>Kopiera streamnyckeln igen — ett blanksteg i slutet eller en gammal, återställd nyckel är de vanligaste orsakerna. Säkerställ att server-URL:en matchar den Jerkmate visar och att extern kodare-sändning är påslagen på kontot. Det gröna reglaget i SplitCams Stream Settings bekräftar en giltig nyckel.</p></details><details class="faq-item"><summary>Inget ljud eller osynkat ljud på Jerkmate</summary><p>Välj SplitCam som både kamera OCH mikrofon, och välj din riktiga mikrofon inuti SplitCams ljudkälla. Om ljudet släpar efter videon, sänk upplösningen ett steg — kodaren är överbelastad och ljudet väntar på sena bildrutor.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Vanliga frågor</h2>

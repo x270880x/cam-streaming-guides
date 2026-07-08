@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">速答</a>
-  <a href="#steps">步骤</a>
-  <a href="#tips">技巧</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">相关指南</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">速答</a><a href="#steps">步骤</a><a href="#tips">技巧</a><a href="#faq">FAQ</a><a href="#related">相关指南</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">快速回答</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">分步指南</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">下载并安装 SplitCam</div><p class="step-p">SplitCam 是适用于 Windows 和 macOS 的免费直播软件 —— 无需注册、无需信用卡、无水印。它会安装一个浏览器可以选用的虚拟摄像头。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">搭好场景</div><p class="step-p">打开 SplitCam 添加摄像头。叠加叠加层（用日语，比如「投げ銭」「PPV解放」对应您的受众）、第二个摄像头或手机、美颜滤镜或 AI 背景。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">在 MyFans.jp 开启直播</div><p class="step-p">登录 MyFans 创作者账号，打开直播主播器（配信）面向订阅者开播。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">把 SplitCam 选为摄像头</div><p class="step-p">在 MyFans 的摄像头下拉里选 <strong>SplitCam</strong>，替换原始网络摄像头 —— 您合成好的场景就会取代平面摄像头画面。（或者如果后台给了 stream key，就粘到 SplitCam 的自定义 RTMP 字段里。）</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">点击 Go Live</div><p class="step-p">开播 —— 您的 SplitCam 场景、叠加层和滤镜会直达 MyFans 订阅者。</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">专业提示</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>日本最大的粉丝平台</h3><p>MyFans 是日本订阅平台里的 No.1，受众是讲日语、用日元（円）付费的本土粉丝。日语叠加层加上精致的 SplitCam 场景，转化率比平面网络摄像头高得多。</p></div><div class="tip-card"><h3>虚拟摄像头无需 stream key</h3><p>纯浏览器直播一样能跑完整的 SplitCam 场景 —— 第二机位、叠加层、美颜滤镜或 AI 背景 —— 只要把 SplitCam 选为摄像头即可。</p></div><div class="tip-card"><h3>直播中交叉推 PPV</h3><p>MyFans 的核心是投げ銭（打赏）和付费贴文。在画面上叠一层注明 PPV 套餐或打赏目标，直播期间的收入会明显上一个台阶。</p></div><div class="tip-card"><h3>先做个私密测试</h3><p>正式开播前运行一个简短的测试直播，检查摄像头、音频、构图和叠加层。</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">分步指南</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">下载并安装 SplitCam</div><p class="step-p">SplitCam 是适用于 Windows 和 macOS 的免费直播软件 —— 无需注册、无需信用卡、无水印。它会安装一个浏览器可以选用的虚拟摄像头。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">搭好场景</div><p class="step-p">打开 SplitCam 添加摄像头。叠加叠加层（用日语，比如「投げ銭」「PPV解放」对应您的受众）、第二个摄像头或手机、美颜滤镜或 AI 背景。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">在 MyFans.jp 开启直播</div><p class="step-p">登录 MyFans 创作者账号，打开直播主播器（配信）面向订阅者开播。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">把 SplitCam 选为摄像头</div><p class="step-p">在 MyFans 的摄像头下拉里选 <strong>SplitCam</strong>，替换原始网络摄像头 —— 您合成好的场景就会取代平面摄像头画面。（或者如果后台给了 stream key，就粘到 SplitCam 的自定义 RTMP 字段里。）</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">点击 Go Live</div><p class="step-p">开播 —— 您的 SplitCam 场景、叠加层和滤镜会直达 MyFans 订阅者。</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">专业提示</h2><div class="tips-grid"><div class="tip-card"><h3>日本最大的粉丝平台</h3><p>MyFans 是日本订阅平台里的 No.1，受众是讲日语、用日元（円）付费的本土粉丝。日语叠加层加上精致的 SplitCam 场景，转化率比平面网络摄像头高得多。</p></div><div class="tip-card"><h3>虚拟摄像头无需 stream key</h3><p>纯浏览器直播一样能跑完整的 SplitCam 场景 —— 第二机位、叠加层、美颜滤镜或 AI 背景 —— 只要把 SplitCam 选为摄像头即可。</p></div><div class="tip-card"><h3>直播中交叉推 PPV</h3><p>MyFans 的核心是投げ銭（打赏）和付费贴文。在画面上叠一层注明 PPV 套餐或打赏目标，直播期间的收入会明显上一个台阶。</p></div><div class="tip-card"><h3>先做个私密测试</h3><p>正式开播前运行一个简短的测试直播，检查摄像头、音频、构图和叠加层。</p></div></div></section>
 <section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 MyFans.jp 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>MyFans.jp 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 MyFans.jp — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 MyFans.jp 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>MyFans.jp 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 MyFans.jp 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>MyFans.jp 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">常见问题</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Antwort</a>
-  <a href="#steps">Schritte</a>
-  <a href="#tips">Tipps</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Verwandte Guides</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Antwort</a><a href="#steps">Schritte</a><a href="#tips">Tipps</a><a href="#faq">FAQ</a><a href="#related">Verwandte Guides</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kurzantwort</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Video-Anleitung</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/MWLSQKDQCY0" title="So sendest du auf mehrere Cam-Seiten gleichzeitig" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Schritt für Schritt</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam installieren</div><p class="step-p">SplitCam ist kostenlose Streaming-Software für Windows und macOS mit eingebautem Multistreaming. Installieren — kein Wasserzeichen, keine Anmeldung.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Kamera und Szene einrichten</div><p class="step-p">SplitCam öffnen, Webcam hinzufügen und Szene mit Overlays und Filtern bauen. Eine Szene speist alle Ziele.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">RTMP-Key von jeder Cam-Seite holen</div><p class="step-p">Auf jeder Cam-Plattform externes / RTMP-Streaming aktivieren und ihre <strong>Server-URL</strong> und <strong>Stream-Key</strong> kopieren. Für jede Seite wiederholen — siehe die einzelnen Plattform-Guides für genaue Pfade.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Jedes Ziel in SplitCam hinzufügen</div><p class="step-p"><strong>Stream Settings</strong> öffnen und jede Cam-Seite als Custom-RTMP-Ziel hinzufügen — Server-URL und Key einfügen. Alle gewünschten aktivieren.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Einmal Go Live klicken</div><p class="step-p"><strong>Go Live</strong> drücken. SplitCam sendet deinen Stream gleichzeitig peer-to-peer aus einer Codierung an jede ausgewählte Cam-Seite — ohne Zusatzgebühr.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Profi-Tipps</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Auf deinen Upload achten</h3><p>Multistreaming verdielfältigt die Upload-Last. Jedes Ziel braucht seine eigene Bitrate — stell sicher, dass deine Verbindung die Summe trägt.</p></div><div class="tip-card"><h3>Regeln jeder Plattform prüfen</h3><p>Manche Cam-Seiten verbieten gleichzeitiges Senden anderswo — vor dem Multistreaming klären.</p></div><div class="tip-card"><h3>Kabel — Aussetzer kannst du dir hier nicht leisten</h3><p>Multistreaming vervielfacht die Upload-Last, sodass ein einzelner Wi-Fi-Einbruch alle Ziele gleichzeitig zum Stillstand bringen kann. Kabel ist hier nicht optional.</p></div><div class="tip-card"><h3>Health-Monitor beobachten</h3><p>SplitCam zeigt den Status pro Ziel — eine Seite abschalten, wenn dein Upload nicht mithält.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Schritt für Schritt</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam installieren</div><p class="step-p">SplitCam ist kostenlose Streaming-Software für Windows und macOS mit eingebautem Multistreaming. Installieren — kein Wasserzeichen, keine Anmeldung.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Kamera und Szene einrichten</div><p class="step-p">SplitCam öffnen, Webcam hinzufügen und Szene mit Overlays und Filtern bauen. Eine Szene speist alle Ziele.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">RTMP-Key von jeder Cam-Seite holen</div><p class="step-p">Auf jeder Cam-Plattform externes / RTMP-Streaming aktivieren und ihre <strong>Server-URL</strong> und <strong>Stream-Key</strong> kopieren. Für jede Seite wiederholen — siehe die einzelnen Plattform-Guides für genaue Pfade.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Jedes Ziel in SplitCam hinzufügen</div><p class="step-p"><strong>Stream Settings</strong> öffnen und jede Cam-Seite als Custom-RTMP-Ziel hinzufügen — Server-URL und Key einfügen. Alle gewünschten aktivieren.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Einmal Go Live klicken</div><p class="step-p"><strong>Go Live</strong> drücken. SplitCam sendet deinen Stream gleichzeitig peer-to-peer aus einer Codierung an jede ausgewählte Cam-Seite — ohne Zusatzgebühr.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Profi-Tipps</h2><div class="tips-grid"><div class="tip-card"><h3>Auf deinen Upload achten</h3><p>Multistreaming verdielfältigt die Upload-Last. Jedes Ziel braucht seine eigene Bitrate — stell sicher, dass deine Verbindung die Summe trägt.</p></div><div class="tip-card"><h3>Regeln jeder Plattform prüfen</h3><p>Manche Cam-Seiten verbieten gleichzeitiges Senden anderswo — vor dem Multistreaming klären.</p></div><div class="tip-card"><h3>Kabel — Aussetzer kannst du dir hier nicht leisten</h3><p>Multistreaming vervielfacht die Upload-Last, sodass ein einzelner Wi-Fi-Einbruch alle Ziele gleichzeitig zum Stillstand bringen kann. Kabel ist hier nicht optional.</p></div><div class="tip-card"><h3>Health-Monitor beobachten</h3><p>SplitCam zeigt den Status pro Ziel — eine Seite abschalten, wenn dein Upload nicht mithält.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein Multiple Cam Sites-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der Multiple Cam Sites-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete Multiple Cam Sites nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf Multiple Cam Sites</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>Multiple Cam Sites lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von Multiple Cam Sites angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf Multiple Cam Sites</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

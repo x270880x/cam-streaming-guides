@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Jawapan</a>
-  <a href="#steps">Langkah</a>
-  <a href="#tips">Petua</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Panduan berkaitan</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Jawapan</a><a href="#steps">Langkah</a><a href="#tips">Petua</a><a href="#faq">FAQ</a><a href="#related">Panduan berkaitan</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Jawapan ringkas</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Panduan video</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/myrur7zCHak" title="Cara siar di XLoveCam dengan SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Langkah demi langkah</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Muat turun dan pasang SplitCam</div><p class="step-p">SplitCam ialah perisian penstriman langsung percuma untuk Windows dan macOS. Muat turun dan jalankan pemasang — tiada pendaftaran, tiada kad, tiada tera air, tiada had masa. Ia pengekod yang menghantar video anda ke XLoveCam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Tetapkan kamera dan adegan</div><p class="step-p">Buka SplitCam dan tambah kamera web. Bina adegan seperti yang anda mahu penonton lihat — tindihan, teks, kamera kedua atau telefon, penapis kecantikan atau latar AI. Semua dikenakan secara langsung sebelum strim meninggalkan PC anda.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Dapatkan kunci strim XLoveCam</div><p class="step-p">Di XLoveCam buka <strong>My Account</strong> → <strong>settings</strong>. Tetapan memaparkan kedua-dua <strong>pautan RTMP</strong> dan <strong>kunci strim</strong> — salin kedua-duanya ke medan URL pelayan dan kunci SplitCam, kemudian <strong>Start your show</strong> di XLoveCam.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Sambung SplitCam ke XLoveCam</div><p class="step-p">Dalam SplitCam buka <strong>Stream Settings</strong>, tampal URL pelayan dan kunci strim XLoveCam ke medan RTMP tersuai. Tetapkan bitrate ke 3,500–6,000&nbsp;Kbps untuk 1080p, 2,000–4,000&nbsp;Kbps untuk 720p, dan jalankan ujian kelajuan terbina dahulu.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tekan <strong>Go Live</strong> dalam SplitCam, kemudian mula siaran di XLoveCam. Dalam ~10 saat suapan kamera anda live. Siaran seterusnya hanya satu klik — buka SplitCam, Go Live.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Petua pro</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Salin pautan DAN kunci</h3><p>XLoveCam memberi pautan RTMP DAN kunci strim berasingan — anda perlukan kedua-duanya dalam SplitCam, bukan satu sahaja.</p></div><div class="tip-card"><h3>Penonton berbilang bahasa</h3><p>XLoveCam Eropah dan berbilang bahasa — tindihan teks jelas dalam bahasa anda membantu penonton menemui anda.</p></div><div class="tip-card"><h3>Pilih pelayan terdekat</h3><p>XLoveCam menawarkan pelayan RTMP serantau — Eropah, Amerika Utara, Amerika Selatan dan Asia. Terdekat mengurangkan kelewatan dan bingkai hilang.</p></div><div class="tip-card"><h3>Guna sambungan berwayar</h3><p>Ethernet mengatasi Wi-Fi semasa siaran panjang — bingkai yang hilang bermakna tip yang hilang. Sambungkan kabel ke PC yang menyiar.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Langkah demi langkah</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Muat turun dan pasang SplitCam</div><p class="step-p">SplitCam ialah perisian penstriman langsung percuma untuk Windows dan macOS. Muat turun dan jalankan pemasang — tiada pendaftaran, tiada kad, tiada tera air, tiada had masa. Ia pengekod yang menghantar video anda ke XLoveCam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Tetapkan kamera dan adegan</div><p class="step-p">Buka SplitCam dan tambah kamera web. Bina adegan seperti yang anda mahu penonton lihat — tindihan, teks, kamera kedua atau telefon, penapis kecantikan atau latar AI. Semua dikenakan secara langsung sebelum strim meninggalkan PC anda.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Dapatkan kunci strim XLoveCam</div><p class="step-p">Di XLoveCam buka <strong>My Account</strong> → <strong>settings</strong>. Tetapan memaparkan kedua-dua <strong>pautan RTMP</strong> dan <strong>kunci strim</strong> — salin kedua-duanya ke medan URL pelayan dan kunci SplitCam, kemudian <strong>Start your show</strong> di XLoveCam.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Sambung SplitCam ke XLoveCam</div><p class="step-p">Dalam SplitCam buka <strong>Stream Settings</strong>, tampal URL pelayan dan kunci strim XLoveCam ke medan RTMP tersuai. Tetapkan bitrate ke 3,500–6,000&nbsp;Kbps untuk 1080p, 2,000–4,000&nbsp;Kbps untuk 720p, dan jalankan ujian kelajuan terbina dahulu.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tekan <strong>Go Live</strong> dalam SplitCam, kemudian mula siaran di XLoveCam. Dalam ~10 saat suapan kamera anda live. Siaran seterusnya hanya satu klik — buka SplitCam, Go Live.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Petua pro</h2><div class="tips-grid"><div class="tip-card"><h3>Salin pautan DAN kunci</h3><p>XLoveCam memberi pautan RTMP DAN kunci strim berasingan — anda perlukan kedua-duanya dalam SplitCam, bukan satu sahaja.</p></div><div class="tip-card"><h3>Penonton berbilang bahasa</h3><p>XLoveCam Eropah dan berbilang bahasa — tindihan teks jelas dalam bahasa anda membantu penonton menemui anda.</p></div><div class="tip-card"><h3>Pilih pelayan terdekat</h3><p>XLoveCam menawarkan pelayan RTMP serantau — Eropah, Amerika Utara, Amerika Selatan dan Asia. Terdekat mengurangkan kelewatan dan bingkai hilang.</p></div><div class="tip-card"><h3>Guna sambungan berwayar</h3><p>Ethernet mengatasi Wi-Fi semasa siaran panjang — bingkai yang hilang bermakna tip yang hilang. Sambungkan kabel ke PC yang menyiar.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Penyelesaian masalah</h2><div class="faq-list"><details class="faq-item"><summary>Siaran XLoveCam tersekat atau menimbal</summary><p>Hampir sentiasa bitrate ditetapkan lebih tinggi daripada yang mampu ditanggung muat naik anda. Jalankan ujian kelajuan terbina SplitCam, kemudian tetapkan bitrate kira-kira 75% daripada muat naik diukur — 3,500–6,000&nbsp;Kbps untuk 1080p, lebih rendah untuk 720p. Tersekat hilang sebaik pengekod berhenti melebihi talian anda.</p></details><details class="faq-item"><summary>Bingkai hilang semasa siaran XLoveCam</summary><p>Bingkai hilang bermakna paket tidak sampai ke XLoveCam tepat masa — biasanya Wi-Fi tidak stabil. Beralih ke Ethernet berwayar, tutup apl yang memakan lebar jalur dan turunkan bitrate sedikit. Satu lonjakan tak mengapa; peningkatan berterusan bermakna talian tidak mengejar.</p></details><details class="faq-item"><summary>Skrin hitam — penonton tidak nampak video di XLoveCam</summary><p>Kamera anda tidak dipilih sebagai sumber aktif dalam SplitCam, atau apl lain menahannya. Tutup Zoom, Skype atau OBS, pilih semula kamera web dalam senarai sumber SplitCam dan pastikan pratonton menunjukkan imej anda sebelum tekan Go Live.</p></details><details class="faq-item"><summary>XLoveCam menolak kunci strim atau tidak menyambung</summary><p>Salin semula kunci strim — ruang di hujung atau kunci lama yang telah diset semula ialah punca paling biasa. Pastikan URL pelayan sepadan dengan yang XLoveCam paparkan dan siaran pengekod luaran dihidupkan pada akaun anda. Peluncur hijau dalam Stream Settings SplitCam mengesahkan kunci sah.</p></details><details class="faq-item"><summary>Tiada audio atau audio tak segerak di XLoveCam</summary><p>Pilih SplitCam sebagai kamera DAN mikrofon, dan pilih mikrofon sebenar anda dalam sumber audio SplitCam. Jika audio ketinggalan daripada video, turunkan resolusi satu peringkat — pengekod terlebih beban dan audio menunggu bingkai yang lewat.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Soalan lazim</h2>

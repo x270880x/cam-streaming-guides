@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">پاسخ</a>
-  <a href="#steps">مراحل</a>
-  <a href="#tips">نکات</a>
-  <a href="#faq">سوالات</a>
-  <a href="#related">راهنماهای مرتبط</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">پاسخ</a><a href="#steps">مراحل</a><a href="#tips">نکات</a><a href="#faq">سوالات</a><a href="#related">راهنماهای مرتبط</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">پاسخ سریع</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">مرحله به مرحله</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">‏SplitCam را دانلود و نصب کنید</div><p class="step-p">‏SplitCam نرم‌افزار پخش زنده رایگان برای Windows و macOS است — بدون ثبت‌نام، بدون کارت، بدون واترمارک.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">صحنه‌تان را بسازید</div><p class="step-p">‏SplitCam را باز کنید و وب‌کم را اضافه کنید. پوشش‌ها (به آلمانی — «Trinkgeld» / «PPV freischalten»)، دوربین دوم یا گوشی، فیلترهای زیبایی یا پس‌زمینه AI را لایه‌بندی کنید — همه به‌صورت زنده.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">‏URL و stream key مربوط به AmateurCommunity را بگیرید</div><p class="step-p">وارد پنل مدل AC شوید، <strong>External Encoder / OBS</strong> را باز کنید و <strong>URL سرور</strong> و <strong>stream key</strong> را کپی کنید.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">‏SplitCam را به AmateurCommunity متصل کنید</div><p class="step-p">در SplitCam → <strong>Stream Settings → Custom RTMP</strong>، URL و کلید را جای‌گذاری کنید. bitrate را روی ۳۵۰۰ تا ۵۰۰۰ کیلوبیت بر ثانیه در ۱۹۲۰×۱۰۸۰، ۳۰ fps، با keyframe دو ثانیه‌ای تنظیم کنید.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">‏Go Live را کلیک کنید</div><p class="step-p"><strong>Go Live</strong> را در SplitCam بزنید، سپس خود را در پنل مدل AC آنلاین کنید. پخش شما در حدود ۱۰ ثانیه در فهرست عمومی ظاهر می‌شود.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">نکات حرفه‌ای</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>مخاطب آلمانی‌زبان، پرداخت‌کننده به یورو</h3><p>مخاطب AmateurCommunity به‌طور قاطع از منطقه DACH (DE/AT/CH) است و به EUR پرداخت می‌کند — پوشش‌ها، منوی انعام و چت روی پخش به آلمانی به‌طور محسوس بهتر از انگلیسی تبدیل می‌گیرد.</p></div><div class="tip-card"><h3>ترکیب PPV پریمیوم + پخش زنده</h3><p>‏AC به شما اجازه می‌دهد محتوای PPV را در کنار پخش زنده بفروشید. یک نمایش زنده که PPV را تیزر کند (با یک پوشش روی صفحه) تمایل دارد فروش PPV را در حین و پس از پخش بالا ببرد.</p></div><div class="tip-card"><h3>اِنکودر خارجی برای کیفیت پایدار</h3><p>مخاطب AC انتظار تولید بالا را دارد؛ RTMP با ۴ مگابیت بر ثانیه پایدار از SplitCam از bitrate متغیر پخش‌کننده مرورگری بهتر است.</p></div><div class="tip-card"><h3>ابتدا تست خصوصی انجام دهید</h3><p>یک پخش آزمایشی کوتاه برای بررسی دوربین، صدا، کادربندی و پوشش‌ها قبل از باز کردن اتاق برای بینندگان انجام دهید.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">مرحله به مرحله</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">‏SplitCam را دانلود و نصب کنید</div><p class="step-p">‏SplitCam نرم‌افزار پخش زنده رایگان برای Windows و macOS است — بدون ثبت‌نام، بدون کارت، بدون واترمارک.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">صحنه‌تان را بسازید</div><p class="step-p">‏SplitCam را باز کنید و وب‌کم را اضافه کنید. پوشش‌ها (به آلمانی — «Trinkgeld» / «PPV freischalten»)، دوربین دوم یا گوشی، فیلترهای زیبایی یا پس‌زمینه AI را لایه‌بندی کنید — همه به‌صورت زنده.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">‏URL و stream key مربوط به AmateurCommunity را بگیرید</div><p class="step-p">وارد پنل مدل AC شوید، <strong>External Encoder / OBS</strong> را باز کنید و <strong>URL سرور</strong> و <strong>stream key</strong> را کپی کنید.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">‏SplitCam را به AmateurCommunity متصل کنید</div><p class="step-p">در SplitCam → <strong>Stream Settings → Custom RTMP</strong>، URL و کلید را جای‌گذاری کنید. bitrate را روی ۳۵۰۰ تا ۵۰۰۰ کیلوبیت بر ثانیه در ۱۹۲۰×۱۰۸۰، ۳۰ fps، با keyframe دو ثانیه‌ای تنظیم کنید.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">‏Go Live را کلیک کنید</div><p class="step-p"><strong>Go Live</strong> را در SplitCam بزنید، سپس خود را در پنل مدل AC آنلاین کنید. پخش شما در حدود ۱۰ ثانیه در فهرست عمومی ظاهر می‌شود.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">نکات حرفه‌ای</h2><div class="tips-grid"><div class="tip-card"><h3>مخاطب آلمانی‌زبان، پرداخت‌کننده به یورو</h3><p>مخاطب AmateurCommunity به‌طور قاطع از منطقه DACH (DE/AT/CH) است و به EUR پرداخت می‌کند — پوشش‌ها، منوی انعام و چت روی پخش به آلمانی به‌طور محسوس بهتر از انگلیسی تبدیل می‌گیرد.</p></div><div class="tip-card"><h3>ترکیب PPV پریمیوم + پخش زنده</h3><p>‏AC به شما اجازه می‌دهد محتوای PPV را در کنار پخش زنده بفروشید. یک نمایش زنده که PPV را تیزر کند (با یک پوشش روی صفحه) تمایل دارد فروش PPV را در حین و پس از پخش بالا ببرد.</p></div><div class="tip-card"><h3>اِنکودر خارجی برای کیفیت پایدار</h3><p>مخاطب AC انتظار تولید بالا را دارد؛ RTMP با ۴ مگابیت بر ثانیه پایدار از SplitCam از bitrate متغیر پخش‌کننده مرورگری بهتر است.</p></div><div class="tip-card"><h3>ابتدا تست خصوصی انجام دهید</h3><p>یک پخش آزمایشی کوتاه برای بررسی دوربین، صدا، کادربندی و پوشش‌ها قبل از باز کردن اتاق برای بینندگان انجام دهید.</p></div></div></section>
 <section class="section"><h2 class="sec-h">عیب‌یابی</h2><div class="faq-list"><details class="faq-item"><summary>پخش AmateurCommunity متوقف می‌شود یا بافر می‌کند</summary><p>تقریباً همیشه بیت‌ریت بالاتر از آن تنظیم شده که آپلود شما تحمل کند. تست سرعت داخلی SplitCam را اجرا کنید، سپس بیت‌ریت را به حدود ۷۵٪ آپلود اندازه‌گیری شده تنظیم کنید — ۳۵۰۰–۶۰۰۰&nbsp;Kbps برای ۱۰۸۰p.</p></details><details class="faq-item"><summary>فریم‌های از دست رفته حین پخش AmateurCommunity</summary><p>فریم‌های از دست رفته به این معناست که بسته‌ها به AmateurCommunity به موقع نمی‌رسند — معمولاً Wi-Fi ناپایدار. به Ethernet سیمی تغییر دهید، برنامه‌هایی که پهنای باند می‌خورند را ببندید و بیت‌ریت را کمی کاهش دهید.</p></details><details class="faq-item"><summary>صفحه سیاه — بینندگان ویدیو را در AmateurCommunity نمی‌بینند</summary><p>دوربین شما به عنوان منبع فعال در SplitCam انتخاب نشده، یا برنامه دیگری آن را نگه داشته. Zoom، Skype یا OBS را ببندید، وب‌کم را دوباره در لیست منابع SplitCam انتخاب کنید.</p></details><details class="faq-item"><summary>AmateurCommunity کلید جریان را رد می‌کند یا متصل نمی‌شود</summary><p>کلید جریان را دوباره کپی کنید — فاصله در انتها یا کلید قدیمی بازنشانی شده رایج‌ترین دلایل هستند. مطمئن شوید URL سرور با آنچه AmateurCommunity نشان می‌دهد مطابقت دارد.</p></details><details class="faq-item"><summary>صدا وجود ندارد یا صدا در AmateurCommunity ناهمزمان است</summary><p>SplitCam را هم به عنوان دوربین و هم میکروفون انتخاب کنید، و میکروفون واقعی خود را در منبع صدای SplitCam انتخاب کنید. اگر صدا از ویدیو عقب می‌ماند، رزولوشن را یک سطح پایین بیاورید.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">سؤالات متداول</h2>

@@ -463,24 +463,24 @@ PLATFORMS_HU = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Lovense játékszer hozzáadása a streamhez SplitCammel",
-     "desc": "Adj Lovense játékszert a SplitCam streamedhez — Lovense Remote app + Cam Extension beépített SplitCam-támogatással, borravaló-értesítéssel a képernyőn.",
+     "desc": "Adj Lovense játékszert a SplitCam streamedhez — Lovense Connect app + Cam Extension beépített SplitCam-támogatással, borravaló-értesítéssel a képernyőn.",
      "kw": "lovense hozzáadása a streamhez, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense interaktív játékszer streaming, lovense játékszer overlay",
      "h1html": 'Hogyan adj <span class="accent">Lovense játékszert</span> a streamhez',
      "h1short": "Lovense játékszer hozzáadása",
      "card": "Csatlakoztass interaktív Lovense játékszert a cam streamhez.",
-     "intro": "Futtasd a cam streamedet az ingyenes <strong style='color:var(--text)'>SplitCamen</strong>, és párosíts egy <strong style='color:var(--text)'>Lovense</strong> interaktív játékszert, ami a borravalókra reagál. Három dolgot telepítesz: a <strong>SplitCamet</strong> (az enkóder), a <strong>Lovense Remote</strong> appot (a Bluetooth híd a játékszerhez) és a <strong>Lovense Cam Extension</strong>-t Chrome/Edge-hez (ez olvassa a borravalókat és táplálja a képernyős overlayt). A SplitCam-támogatás be van építve a Cam Extensionbe (30.1.4-es vagy újabb verzió) — a SplitCam ott van a bővítmény Video Feedback listájában, így nincs külön letöltendő plugin.",
-     "quick": "Lovense játékszer hozzáadásához a streamhez: telepítsd a SplitCamet, a Lovense Remote appot és a Lovense Cam Extension-t, párosítsd a játékszert, kösd az extensiont a cam site-odhoz, add hozzá a Lovense overlayt Browser rétegként a SplitCamben, majd streamelj a szokásos módon."
+     "intro": "Futtasd a cam streamedet az ingyenes <strong style='color:var(--text)'>SplitCamen</strong>, és párosíts egy <strong style='color:var(--text)'>Lovense</strong> interaktív játékszert, ami a borravalókra reagál. Három dolgot telepítesz: a <strong>SplitCamet</strong> (az enkóder), a <strong>Lovense Connect</strong> appot (a Bluetooth híd a játékszerhez) és a <strong>Lovense Cam Extension</strong>-t Chrome/Edge-hez (ez olvassa a borravalókat és táplálja a képernyős overlayt). A SplitCam-támogatás be van építve a Cam Extensionbe (30.1.4-es vagy újabb verzió) — a SplitCam ott van a bővítmény Video Feedback listájában, így nincs külön letöltendő plugin.",
+     "quick": "Lovense játékszer hozzáadásához a streamhez: telepítsd a SplitCamet, a Lovense Connect appot és a Lovense Cam Extension-t, párosítsd a játékszert, kösd az extensiont a cam site-odhoz, add hozzá a Lovense overlayt Browser rétegként a SplitCamben, majd streamelj a szokásos módon."
               "<ol><li>Telepítsd a SplitCamet.</li>"
-              "<li>Telepítsd a Lovense Remote-ot és párosítsd a játékszert.</li>"
+              "<li>Telepítsd a Lovense Connect-ot és párosítsd a játékszert.</li>"
               "<li>Telepítsd a Lovense Cam Extension-t (Chrome/Edge).</li>"
               "<li>Kösd az extensiont a cam site-odhoz + add hozzá az overlayt a SplitCamben.</li>"
               "<li>Nyomd meg a Go Live-ot.</li></ol>",
-     "key_how": "A játékszer soha nem kommunikál közvetlenül a SplitCammel. A lánc: egy néző borravalót ad a cam site-odon → a böngésződben futó <strong>Lovense Cam Extension</strong> ezt észleli → parancsot küld a localhoston futó <strong>Lovense Remote</strong> appnak → a Remote Bluetooth-on át vezérli a játékszert. A SplitCam egyetlen dolga, hogy megjelenítse a <strong>Lovense overlayt</strong> (játékszer státusz + legutóbbi borravalók) Browser rétegként, és streamelje a kamerádat. Nincs külön «Lovense Browser» app — ez egy Chrome-hoz vagy Edge-hez való böngésző<em>bővítmény</em>.",
+     "key_how": "A játékszer soha nem kommunikál közvetlenül a SplitCammel. A lánc: egy néző borravalót ad a cam site-odon → a böngésződben futó <strong>Lovense Cam Extension</strong> ezt észleli → parancsot küld a localhoston futó <strong>Lovense Connect</strong> appnak → a Remote Bluetooth-on át vezérli a játékszert. A SplitCam egyetlen dolga, hogy megjelenítse a <strong>Lovense overlayt</strong> (játékszer státusz + legutóbbi borravalók) Browser rétegként, és streamelje a kamerádat. Nincs külön «Lovense Browser» app — ez egy Chrome-hoz vagy Edge-hez való böngésző<em>bővítmény</em>.",
      "steps": [
          ("Telepítsd a SplitCamet",
           "A SplitCam ingyenes live-streaming szoftver Windowsra és macOS-re — az enkóder, ami a videódat a cam platformra küldi. Telepítsd; nincs vízjel, nincs regisztráció."),
-         ("Telepítsd a Lovense Remote-ot és párosítsd a játékszert",
-          "Telepítsd a <strong>Lovense Remote</strong> appot — desktop (Windows / Mac) vagy a mobil appot a telefonodon. Ez a híd, ami Bluetooth-on át kommunikál a játékszerrel. Kapcsold be a játékszert és párosítsd, amíg az app «csatlakozva» állapotot nem mutat."),
+         ("Telepítsd a Lovense Connect-ot és párosítsd a játékszert",
+          "Telepítsd a <strong>Lovense Connect</strong> appot — desktop (Windows / Mac) vagy a mobil appot a telefonodon. Ez a híd, ami Bluetooth-on át kommunikál a játékszerrel. Kapcsold be a játékszert és párosítsd, amíg az app «csatlakozva» állapotot nem mutat."),
          ("Telepítsd a Lovense Cam Extension-t",
           "Add a <strong>Lovense Cam Extension</strong>-t a Chrome-hoz vagy Edge-hez (30.1.4-es vagy újabb verzió), és jelentkezz be a Lovense fiókoddal. Nincs önálló «Lovense Browser» — ez a bővítmény olvassa a borravalókat és működteti az overlayt. A <strong>SplitCam-támogatás be van építve</strong>: ott szerepel a bővítmény Video Feedback fülén, így nincs szükséged külön SplitCam pluginra."),
          ("Kösd az extensiont a cam site-odhoz és add hozzá az overlayt a SplitCamben",
@@ -489,17 +489,17 @@ PLATFORMS_HU = [
           "Add hozzá a kamerádat és a többi overlayt, illeszd be a cam platform RTMP kulcsát a SplitCambe, és kattints <strong>Go Live</strong>-ra. A játékszer mostantól valós időben reagál a borravalókra."),
      ],
      "tips": [
-         ("Három telepítés, sorrendben", "SplitCam (enkóder) + Lovense Remote (Bluetooth híd) + Lovense Cam Extension (borravaló-olvasó / overlay). Ha bármelyik hiányzik, a játékszer nem reagál a streamen."),
+         ("Három telepítés, sorrendben", "SplitCam (enkóder) + Lovense Connect (Bluetooth híd) + Lovense Cam Extension (borravaló-olvasó / overlay). Ha bármelyik hiányzik, a játékszer nem reagál a streamen."),
          ("Bővítmény, nem böngésző", "Nincs külön «Lovense Browser», amit le kell tölteni — a Lovense Cam Extension a Chrome-ba vagy Edge-be települ. Tartsd frissítve (30.1.4 vagy újabb), különben a SplitCam overlay nem biztos, hogy betölt."),
          ("Tartsd a játékszert töltve", "A show közepén lemerülő akku megöli az interaktív részt — tölts fel teljesen, mielőtt élőben mész."),
          ("Teszteld a borravaló-reakciót", "Küldj egy kis teszt borravalót, hogy megerősítsd, a játékszer reagál, mielőtt a szoba nyilvános lesz."),
          ("Mely cam site-ok támogatottak", "A Cam Extension hivatalosan lefedi a Chaturbate-et, Stripchat-et, BongaCams-t, MyFreeCams-t és CamSoda-t — bármely más site-hoz használd a Lovense Generic URL integrációját. A SplitCam mindegyikkel működik overlay rétegként."),
      ],
      "faq": [
-         ("Mit kell telepítenem a Lovense-hez SplitCamen?", "Három dolgot: a <strong>SplitCamet</strong> (az enkóder), a <strong>Lovense Remote</strong> appot (Bluetooth-on át hidalja a játékszert) és a <strong>Lovense Cam Extension</strong>-t Chrome/Edge-hez (olvassa a borravalókat és táplálja az overlayt). Nincs külön SplitCam plugin — a SplitCam-támogatás be van építve a Cam Extensionbe."),
+         ("Mit kell telepítenem a Lovense-hez SplitCamen?", "Három dolgot: a <strong>SplitCamet</strong> (az enkóder), a <strong>Lovense Connect</strong> appot (Bluetooth-on át hidalja a játékszert) és a <strong>Lovense Cam Extension</strong>-t Chrome/Edge-hez (olvassa a borravalókat és táplálja az overlayt). Nincs külön SplitCam plugin — a SplitCam-támogatás be van építve a Cam Extensionbe."),
          ("A Cam Extension 30.1.4+ azonnal működik a SplitCammel?", "Igen — a SplitCam-támogatás be van építve. Nyisd meg a bővítmény <strong>Video Feedback</strong> fülét, válaszd a <strong>SplitCamet</strong>, másold ki az overlay URL-t, és tedd be Browser rétegként a SplitCambe. Nincs külön plugin, csak ez az egyszeri összekötés."),
-         ("Kell letöltenem egy «Lovense Browser»-t?", "Nem. Nincs önálló Lovense böngésző — ez a <strong>Lovense Cam Extension</strong>, ami a Chrome-ba vagy Edge-be települ. A játékszer párosítását a külön <strong>Lovense Remote</strong> app (desktop vagy mobil) végzi."),
-         ("A játékszer közvetlenül csatlakozik a SplitCamhez?", "Nem — a játékszer a Lovense Remote appal párosul Bluetooth-on át; a Cam Extension olvassa a borravalókat, a SplitCam pedig csak megjeleníti az overlayt és streameli a kamerádat."),
+         ("Kell letöltenem egy «Lovense Browser»-t?", "Nem. Nincs önálló Lovense böngésző — ez a <strong>Lovense Cam Extension</strong>, ami a Chrome-ba vagy Edge-be települ. A játékszer párosítását a külön <strong>Lovense Connect</strong> app (desktop vagy mobil) végzi."),
+         ("A játékszer közvetlenül csatlakozik a SplitCamhez?", "Nem — a játékszer a Lovense Connect appal párosul Bluetooth-on át; a Cam Extension olvassa a borravalókat, a SplitCam pedig csak megjeleníti az overlayt és streameli a kamerádat."),
          ("Mely cam site-ok támogatják a Lovense-t?", "A Lovense Cam Extension hivatalosan támogatja a Chaturbate-et, Stripchat-et, BongaCams-t, MyFreeCams-t és CamSoda-t, változó támogatással más site-okhoz — ellenőrizd az aktuális listát a Lovense appban."),
          ("Megjeleníthetem a legutóbbi borravalókat a képernyőn?", "Igen — a Cam Extension ad egy overlay URL-t; add hozzá Browser rétegként a SplitCamben, és a nézők látják a játékszer státuszát és a legutóbbi borravalókat."),
      ]},

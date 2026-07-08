@@ -463,24 +463,24 @@ PLATFORMS_FI = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Lovense-lelun lisääminen striimiin SplitCamilla",
-     "desc": "Lisää Lovense-lelu SplitCam-striimiin — Lovense Remote -sovellus + Cam Extension (sisäänrakennettu SplitCam-tuki), näytön tip-alertit. Ei liitännäistä.",
+     "desc": "Lisää Lovense-lelu SplitCam-striimiin — Lovense Connect -sovellus + Cam Extension (sisäänrakennettu SplitCam-tuki), näytön tip-alertit. Ei liitännäistä.",
      "kw": "lovense-lelun lisääminen striimiin, lovense, lovense splitcam, lovense splitcam toolset, lovense cam stream, lovense interactive toy, lovense tip alerts",
      "h1html": 'Miten lisäät <span class="accent">Lovense-lelun</span> streamiisi',
      "h1short": "Lovense-lelun lisääminen",
      "card": "Yhdistä interaktiivinen Lovense-lelu cam-streamiisi.",
-     "intro": "Pyörität cam-streamia ilmaisen <strong style='color:var(--text)'>SplitCamin</strong> kautta ja paritat interaktiivisen <strong style='color:var(--text)'>Lovense</strong>-lelun, joka reagoi tippeihin. Asennat kolme asiaa: <strong>SplitCam</strong> (enkooderi), <strong>Lovense Remote</strong> -sovellus (Bluetooth-silta leluun) ja <strong>Lovense Cam Extension</strong> Chromelle/Edgelle (lukee tipit ja syöttää näytön overlayn). SplitCam-tuki on sisäänrakennettu Cam Extensioniin (versio 30.1.4 tai uudempi) — SplitCam on laajennuksen \"Video Feedback\" -listalla, joten erillistä liitännäistä ei tarvitse ladata.",
-     "quick": "Lovense-lelun lisäämiseksi streamiin: asenna SplitCam, Lovense Remote -sovellus ja Lovense Cam Extension, parita lelu, linkitä laajennus cam-sivullesi, lisää Lovense-overlay Browser-kerroksena SplitCamiin ja lähetä normaalisti."
+     "intro": "Pyörität cam-streamia ilmaisen <strong style='color:var(--text)'>SplitCamin</strong> kautta ja paritat interaktiivisen <strong style='color:var(--text)'>Lovense</strong>-lelun, joka reagoi tippeihin. Asennat kolme asiaa: <strong>SplitCam</strong> (enkooderi), <strong>Lovense Connect</strong> -sovellus (Bluetooth-silta leluun) ja <strong>Lovense Cam Extension</strong> Chromelle/Edgelle (lukee tipit ja syöttää näytön overlayn). SplitCam-tuki on sisäänrakennettu Cam Extensioniin (versio 30.1.4 tai uudempi) — SplitCam on laajennuksen \"Video Feedback\" -listalla, joten erillistä liitännäistä ei tarvitse ladata.",
+     "quick": "Lovense-lelun lisäämiseksi streamiin: asenna SplitCam, Lovense Connect -sovellus ja Lovense Cam Extension, parita lelu, linkitä laajennus cam-sivullesi, lisää Lovense-overlay Browser-kerroksena SplitCamiin ja lähetä normaalisti."
               "<ol><li>Asenna SplitCam.</li>"
-              "<li>Asenna Lovense Remote &amp; parita lelu.</li>"
+              "<li>Asenna Lovense Connect &amp; parita lelu.</li>"
               "<li>Asenna Lovense Cam Extension (Chrome/Edge).</li>"
               "<li>Linkitä laajennus cam-sivullesi + lisää overlay SplitCamiin.</li>"
               "<li>Paina Go Live.</li></ol>",
-     "key_how": "Lelu ei koskaan keskustele SplitCamin kanssa suoraan. Ketju menee näin: katsoja antaa tipin cam-sivullasi &rarr; selaimesi <strong>Lovense Cam Extension</strong> havaitsee sen &rarr; se lähettää komennon <strong>Lovense Remote</strong> -sovellukselle localhostissa &rarr; Remote ohjaa lelua Bluetoothin yli. SplitCamin ainoa tehtävä on näyttää <strong>Lovense-overlay</strong> (lelun status + viimeisimmät tipit) Browser-kerroksena ja lähettää kamerasi. Erillistä «Lovense Browser» -sovellusta ei ole — kyseessä on selaimen <em>laajennus</em> Chromelle tai Edgelle.",
+     "key_how": "Lelu ei koskaan keskustele SplitCamin kanssa suoraan. Ketju menee näin: katsoja antaa tipin cam-sivullasi &rarr; selaimesi <strong>Lovense Cam Extension</strong> havaitsee sen &rarr; se lähettää komennon <strong>Lovense Connect</strong> -sovellukselle localhostissa &rarr; Remote ohjaa lelua Bluetoothin yli. SplitCamin ainoa tehtävä on näyttää <strong>Lovense-overlay</strong> (lelun status + viimeisimmät tipit) Browser-kerroksena ja lähettää kamerasi. Erillistä «Lovense Browser» -sovellusta ei ole — kyseessä on selaimen <em>laajennus</em> Chromelle tai Edgelle.",
      "steps": [
          ("Asenna SplitCam",
           "SplitCam on ilmainen striimausohjelmisto Windowsille ja macOS:lle — enkooderi, joka lähettää videosi cam-alustalle. Asenna; ei vesileimaa, ei rekisteröintiä."),
-         ("Asenna Lovense Remote ja parita lelu",
-          "Asenna <strong>Lovense Remote</strong> -sovellus — pöytäkone (Windows / Mac) tai mobiilisovellus puhelimessasi. Tämä on silta, joka keskustelee lelun kanssa Bluetoothin yli. Käynnistä lelu ja parita se, kunnes sovellus näyttää sen yhdistetyksi."),
+         ("Asenna Lovense Connect ja parita lelu",
+          "Asenna <strong>Lovense Connect</strong> -sovellus — pöytäkone (Windows / Mac) tai mobiilisovellus puhelimessasi. Tämä on silta, joka keskustelee lelun kanssa Bluetoothin yli. Käynnistä lelu ja parita se, kunnes sovellus näyttää sen yhdistetyksi."),
          ("Asenna Lovense Cam Extension",
           "Lisää <strong>Lovense Cam Extension</strong> Chromeen tai Edgeen (versio 30.1.4 tai uudempi) ja kirjaudu Lovense-tililläsi. Erillistä «Lovense Browser» -selainta ei ole — juuri tämä laajennus lukee tipit ja pyörittää overlayta. <strong>SplitCam-tuki on sisäänrakennettu</strong>: se löytyy laajennuksen <strong>Video Feedback</strong> -välilehdeltä, joten erillistä SplitCam-liitännäistä ei tarvita."),
          ("Linkitä laajennus cam-sivullesi ja lisää overlay SplitCamiin",
@@ -489,17 +489,17 @@ PLATFORMS_FI = [
           "Lisää kamera ja muut overlayt, liitä cam-alustasi RTMP-avain SplitCamiin ja klikkaa <strong>Go Live</strong>. Lelu reagoi nyt tippeihin reaaliajassa."),
      ],
      "tips": [
-         ("Kolme asennusta, oikeassa järjestyksessä", "SplitCam (enkooderi) + Lovense Remote (Bluetooth-silta) + Lovense Cam Extension (tippien lukija / overlay). Jos yksikin puuttuu, lelu ei reagoi striimissä."),
+         ("Kolme asennusta, oikeassa järjestyksessä", "SplitCam (enkooderi) + Lovense Connect (Bluetooth-silta) + Lovense Cam Extension (tippien lukija / overlay). Jos yksikin puuttuu, lelu ei reagoi striimissä."),
          ("Laajennus, ei selain", "Ladattavaa erillistä «Lovense Browser» -selainta ei ole — Lovense Cam Extension asentuu Chromeen tai Edgeen. Pidä se päivitettynä (30.1.4 tai uudempi), tai SplitCam-overlay ei ehkä lataudu."),
          ("Pidä lelu ladattuna", "Akun loppuminen kesken show'n tappaa interaktiivisen puolen — lataa täyteen ennen liveä."),
          ("Testaa reaktio tippeihin", "Lähetä pieni testi-tip vahvistaaksesi, että lelu reagoi, ennen kuin huone on julkinen."),
          ("Mitkä cam-sivut on katettu", "Cam Extension kattaa virallisesti Chaturbaten, Stripchatin, BongaCamsin, MyFreeCamsin ja CamSoda:n — muiden sivustojen kohdalla käytä Lovensen Generic URL -integraatiota. SplitCam toimii niiden kaikkien kanssa overlay-kerroksena."),
      ],
      "faq": [
-         ("Mitä minun täytyy asentaa Lovenselle SplitCamissa?", "Kolme asiaa: <strong>SplitCam</strong> (enkooderi), <strong>Lovense Remote</strong> -sovellus (siltaa lelun Bluetoothin yli) ja <strong>Lovense Cam Extension</strong> Chromelle/Edgelle (lukee tipit ja syöttää overlayn). Ei erillistä SplitCam-liitännäistä — SplitCam-tuki on sisäänrakennettu Cam Extensioniin."),
+         ("Mitä minun täytyy asentaa Lovenselle SplitCamissa?", "Kolme asiaa: <strong>SplitCam</strong> (enkooderi), <strong>Lovense Connect</strong> -sovellus (siltaa lelun Bluetoothin yli) ja <strong>Lovense Cam Extension</strong> Chromelle/Edgelle (lukee tipit ja syöttää overlayn). Ei erillistä SplitCam-liitännäistä — SplitCam-tuki on sisäänrakennettu Cam Extensioniin."),
          ("Toimiiko Cam Extension 30.1.4+ SplitCamin kanssa suoraan?", "Kyllä — SplitCam-tuki on sisäänrakennettu. Avaa laajennuksen <strong>Video Feedback</strong> -välilehti, valitse <strong>SplitCam</strong>, kopioi overlay-URL ja lisää se Browser-kerroksena SplitCamiin. Ei erillistä liitännäistä, vain tämä kertalinkitys."),
-         ("Pitääkö minun ladata «Lovense Browser»?", "Ei. Erillistä Lovense-selainta ei ole — kyseessä on <strong>Lovense Cam Extension</strong>, joka asentuu Chromeen tai Edgeen. Lelun parituksesta huolehtii erillinen Lovense Remote -sovellus (pöytäkone tai mobiili)."),
-         ("Yhdistyykö lelu suoraan SplitCamiin?", "Ei — lelu paritetaan Lovense Remote -sovelluksen kanssa Bluetoothin yli; Cam Extension lukee tipit ja SplitCam vain näyttää overlayn ja lähettää kamerasi."),
+         ("Pitääkö minun ladata «Lovense Browser»?", "Ei. Erillistä Lovense-selainta ei ole — kyseessä on <strong>Lovense Cam Extension</strong>, joka asentuu Chromeen tai Edgeen. Lelun parituksesta huolehtii erillinen Lovense Connect -sovellus (pöytäkone tai mobiili)."),
+         ("Yhdistyykö lelu suoraan SplitCamiin?", "Ei — lelu paritetaan Lovense Connect -sovelluksen kanssa Bluetoothin yli; Cam Extension lukee tipit ja SplitCam vain näyttää overlayn ja lähettää kamerasi."),
          ("Mitkä cam-sivut tukevat Lovenseä?", "Lovensen Cam Extension tukee virallisesti Chaturbatea, Stripchatia, BongaCamsia, MyFreeCamsia ja CamSoda:ta, vaihtelevalla tuella muille — tarkista nykyinen lista Lovense-sovelluksesta."),
          ("Voinko näyttää viimeisimmät tipit ruudulla?", "Kyllä — Cam Extension antaa sinulle overlay-URL:n; lisää se Browser-kerroksena SplitCamiin, niin katsojat näkevät lelun statuksen ja viimeisimmät tipit."),
      ]},

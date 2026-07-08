@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Odpowiedź</a>
-  <a href="#steps">Kroki</a>
-  <a href="#tips">Wskazówki</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Powiązane poradniki</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Odpowiedź</a><a href="#steps">Kroki</a><a href="#tips">Wskazówki</a><a href="#faq">FAQ</a><a href="#related">Powiązane poradniki</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Szybka odpowiedź</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Krok po kroku</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Pobierz i zainstaluj SplitCam</div><p class="step-p">SplitCam to darmowe oprogramowanie do transmisji na żywo dla Windows i macOS — bez rejestracji, bez karty, bez znaku wodnego.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Zbuduj scenę</div><p class="step-p">Otwórz SplitCam i dodaj kamerę. Dorzuć nakładki, tekst, drugą kamerę albo telefon, filtry beauty albo tło AI — mocna scena konwertuje dobranych widzów Jerkmate.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Zarejestruj się jako model i pobierz klucz</div><p class="step-p">Zarejestruj się przez program dla modeli Jerkmate albo bezpośrednio w <strong>sieci <a href="../streamate/" class="autolink">Streamate</a></strong>, która go zasila. Otwórz <strong>SM Connect</strong>, zaakceptuj warunki, kliknij <strong>Start Show</strong> i skopiuj klucz streamingu.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Dodaj Streamate jako kanał w SplitCam</div><p class="step-p">Otwórz <strong>Stream Settings → Add Channel</strong>, wybierz <strong>Streamate</strong> z wbudowanej listy i wklej klucz — bez ręcznego URL RTMP. Zablokuj rozdzielczość na 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kliknij Go Live</div><p class="step-p">Naciśnij <strong>Go Live</strong> w SplitCam — zielony suwak potwierdza połączenie. Twoje show idzie w sieć <a href="../streamate/" class="autolink">Streamate</a> i pojawia się na Jerkmate.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Wskazówki dla profesjonalistów</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Pod spodem działa sieć Streamate</h3><p>Nie szukaj nadajnika specyficznego dla Jerkmate — nadajesz na <a href="../streamate/" class="autolink">Streamate</a>, a Jerkmate redystrybuuje sygnał. Co działa dla Streamate (SM Connect, zintegrowany kanał SplitCam), działa też dla Jerkmate.</p></div><div class="tip-card"><h3>Konwertuj ruch dobrany przez AI</h3><p>Matchmaker Jerkmate kieruje do modeli widzów pasujących do ich wyborów — dopracowana scena SplitCam z nakładkami i dobrym kadrem konwertuje tych dobranych widzów znacznie lepiej niż płaska kamerka.</p></div><div class="tip-card"><h3>Jeden sygnał, wiele serwisów</h3><p>Nadawanie do sieci <a href="../streamate/" class="autolink">Streamate</a> umieszcza cię na Jerkmate oraz serwisach partnerskich jednocześnie — szerszy zasięg z jednej transmisji SplitCam, bez dodatkowej konfiguracji.</p></div><div class="tip-card"><h3>Użyj połączenia przewodowego</h3><p>Ethernet bije Wi-Fi przy długich transmisjach — zgubione klatki to zgubione napiwki. Podłącz kabel do komputera nadającego.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Krok po kroku</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Pobierz i zainstaluj SplitCam</div><p class="step-p">SplitCam to darmowe oprogramowanie do transmisji na żywo dla Windows i macOS — bez rejestracji, bez karty, bez znaku wodnego.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Zbuduj scenę</div><p class="step-p">Otwórz SplitCam i dodaj kamerę. Dorzuć nakładki, tekst, drugą kamerę albo telefon, filtry beauty albo tło AI — mocna scena konwertuje dobranych widzów Jerkmate.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Zarejestruj się jako model i pobierz klucz</div><p class="step-p">Zarejestruj się przez program dla modeli Jerkmate albo bezpośrednio w <strong>sieci <a href="../streamate/" class="autolink">Streamate</a></strong>, która go zasila. Otwórz <strong>SM Connect</strong>, zaakceptuj warunki, kliknij <strong>Start Show</strong> i skopiuj klucz streamingu.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Dodaj Streamate jako kanał w SplitCam</div><p class="step-p">Otwórz <strong>Stream Settings → Add Channel</strong>, wybierz <strong>Streamate</strong> z wbudowanej listy i wklej klucz — bez ręcznego URL RTMP. Zablokuj rozdzielczość na 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kliknij Go Live</div><p class="step-p">Naciśnij <strong>Go Live</strong> w SplitCam — zielony suwak potwierdza połączenie. Twoje show idzie w sieć <a href="../streamate/" class="autolink">Streamate</a> i pojawia się na Jerkmate.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Wskazówki dla profesjonalistów</h2><div class="tips-grid"><div class="tip-card"><h3>Pod spodem działa sieć Streamate</h3><p>Nie szukaj nadajnika specyficznego dla Jerkmate — nadajesz na <a href="../streamate/" class="autolink">Streamate</a>, a Jerkmate redystrybuuje sygnał. Co działa dla Streamate (SM Connect, zintegrowany kanał SplitCam), działa też dla Jerkmate.</p></div><div class="tip-card"><h3>Konwertuj ruch dobrany przez AI</h3><p>Matchmaker Jerkmate kieruje do modeli widzów pasujących do ich wyborów — dopracowana scena SplitCam z nakładkami i dobrym kadrem konwertuje tych dobranych widzów znacznie lepiej niż płaska kamerka.</p></div><div class="tip-card"><h3>Jeden sygnał, wiele serwisów</h3><p>Nadawanie do sieci <a href="../streamate/" class="autolink">Streamate</a> umieszcza cię na Jerkmate oraz serwisach partnerskich jednocześnie — szerszy zasięg z jednej transmisji SplitCam, bez dodatkowej konfiguracji.</p></div><div class="tip-card"><h3>Użyj połączenia przewodowego</h3><p>Ethernet bije Wi-Fi przy długich transmisjach — zgubione klatki to zgubione napiwki. Podłącz kabel do komputera nadającego.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Rozwiązywanie problemów</h2><div class="faq-list"><details class="faq-item"><summary>Transmisja Jerkmate się tnie lub buforuje</summary><p>Niemal zawsze bitrate jest ustawiony wyżej, niż udźwignie twój upload. Uruchom wbudowany test prędkości SplitCam, potem ustaw bitrate na około 75% zmierzonego uploadu — 3500–6000&nbsp;Kbps dla 1080p, niżej dla 720p. Cięcia znikają, gdy enkoder przestaje przekraczać twoje łącze.</p></details><details class="faq-item"><summary>Zgubione klatki podczas transmisji Jerkmate</summary><p>Zgubione klatki oznaczają, że pakiety nie docierają do Jerkmate na czas — zwykle niestabilne Wi-Fi. Przejdź na przewodowy Ethernet, zamknij aplikacje pożerające pasmo i nieco obniż bitrate. Pojedynczy skok to nic; ciągły wzrost oznacza, że łącze nie nadąża.</p></details><details class="faq-item"><summary>Czarny ekran — widzowie nie widzą wideo na Jerkmate</summary><p>Twoja kamera nie jest wybrana jako aktywne źródło w SplitCam albo trzyma ją inna aplikacja. Zamknij Zoom, Skype lub OBS, wybierz ponownie kamerę na liście źródeł SplitCam i upewnij się, że podgląd pokazuje twój obraz, zanim naciśniesz Go Live.</p></details><details class="faq-item"><summary>Jerkmate odrzuca klucz streamu lub się nie łączy</summary><p>Skopiuj klucz streamu ponownie — spacja na końcu albo stary, zresetowany klucz to najczęstsze przyczyny. Upewnij się, że URL serwera zgadza się z tym, co pokazuje Jerkmate, a transmisja enkoderem zewnętrznym jest włączona na koncie. Zielony suwak w Stream Settings SplitCam potwierdza ważny klucz.</p></details><details class="faq-item"><summary>Brak dźwięku lub dźwięk niezsynchronizowany na Jerkmate</summary><p>Wybierz SplitCam jako kamerę I mikrofon, a w źródle dźwięku SplitCam wybierz swój prawdziwy mikrofon. Jeśli dźwięk opóźnia się względem wideo, obniż rozdzielczość o jeden poziom — enkoder jest przeciążony i dźwięk czeka na spóźnione klatki.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

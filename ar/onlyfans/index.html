@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">إجابة</a>
-  <a href="#steps">خطوات</a>
-  <a href="#tips">نصائح</a>
-  <a href="#faq">أسئلة</a>
-  <a href="#related">أدلة ذات صلة</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">إجابة</a><a href="#steps">خطوات</a><a href="#tips">نصائح</a><a href="#faq">أسئلة</a><a href="#related">أدلة ذات صلة</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">إجابة سريعة</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">دليل الفيديو</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/pNw0yJ-bGXQ" title="كيف تبث مباشراً على OnlyFans باستخدام SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">خطوة بخطوة</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">قم بتنزيل وتثبيت SplitCam</div><p class="step-p">SplitCam هو برنامج بث مباشر مجاني لـ Windows وmacOS — بدون تسجيل، بدون بطاقة، بدون علامة مائية. إنه المُشفِّر الذي يرسل الفيديو الخاص بك إلى OnlyFans.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">إعداد الكاميرا والمشهد</div><p class="step-p">افتح SplitCam وأضف كاميرا الويب. أنشئ المشهد بالطريقة التي تريد أن يراه بها المشاهدون — تراكبات، نصوص، كاميرا ثانية، مرشحات الجمال أو خلفية AI، كل شيء مطبق مباشراً.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">الاتصال — الطريقة 1: التفويض (موصى به)</div><p class="step-p">في SplitCam افتح <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> واختر <strong>تفويض</strong>. سجل الدخول بـ Email وكلمة مرور OnlyFans. SplitCam يربط حسابك، يحصل على stream key تلقائياً ويبقيه متزامناً — ويتيح لك إدارة معلمات OnlyFans live داخل SplitCam، تغييرها أثناء البث أو بعده دون فتح موقع OnlyFans.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">الاتصال — الطريقة 2: Stream Key (يدوياً)</div><p class="step-p">تفضل عدم تسجيل الدخول؟ استخدم المفتاح. على OnlyFans اذهب إلى <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; قسم <strong>Other</strong> وانسخ <strong>OBS Key</strong>. في SplitCam، Add Channel &rarr; OnlyFans، الصق في حقل المفتاح. هذا المفتاح ثابت — لتغيير الإعدادات لاحقاً ترجع إلى موقع OnlyFans.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">أياً كانت الطريقة، اضغط <strong>Go Live</strong> في SplitCam. مع الطريقة 1 يمكنك الاستمرار في ضبط معلمات OnlyFans من SplitCam في الوقت الفعلي؛ مع الطريقة 2 يبقى المفتاح كما ضبطته.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">نصائح احترافية</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>التفويض vs Stream Key</h3><p>طريقتان للاتصال: <strong>التفويض</strong> (تسجيل دخول مرة واحدة، يتم الحصول على المفتاح ومزامنته — أسهل طريق) أو <strong>Stream Key</strong> (انسخ OBS Key على OnlyFans → Profile → Settings → Other والصقه).</p></div><div class="tip-card"><h3>غيّر الإعدادات دون مغادرة SplitCam</h3><p>مع التفويض يبقى الحساب متصلاً، لذا تضبط معلمات OnlyFans المباشرة من SplitCam أثناء البث أو بعده — دون المرور عبر موقع OnlyFans.</p></div><div class="tip-card"><h3>معدل بت متواضع</h3><p>OnlyFans RTMP ingest يحد من معدل بت الفيديو عند حوالي 2500 Kbps — أكثر صرامة من معظم مواقع cam. استهدف 720p–1080p عند ~2000–2500.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">خطوة بخطوة</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">قم بتنزيل وتثبيت SplitCam</div><p class="step-p">SplitCam هو برنامج بث مباشر مجاني لـ Windows وmacOS — بدون تسجيل، بدون بطاقة، بدون علامة مائية. إنه المُشفِّر الذي يرسل الفيديو الخاص بك إلى OnlyFans.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">إعداد الكاميرا والمشهد</div><p class="step-p">افتح SplitCam وأضف كاميرا الويب. أنشئ المشهد بالطريقة التي تريد أن يراه بها المشاهدون — تراكبات، نصوص، كاميرا ثانية، مرشحات الجمال أو خلفية AI، كل شيء مطبق مباشراً.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">الاتصال — الطريقة 1: التفويض (موصى به)</div><p class="step-p">في SplitCam افتح <strong>Stream Settings</strong> &rarr; <strong>Add Channel</strong> &rarr; <strong>OnlyFans</strong> واختر <strong>تفويض</strong>. سجل الدخول بـ Email وكلمة مرور OnlyFans. SplitCam يربط حسابك، يحصل على stream key تلقائياً ويبقيه متزامناً — ويتيح لك إدارة معلمات OnlyFans live داخل SplitCam، تغييرها أثناء البث أو بعده دون فتح موقع OnlyFans.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">الاتصال — الطريقة 2: Stream Key (يدوياً)</div><p class="step-p">تفضل عدم تسجيل الدخول؟ استخدم المفتاح. على OnlyFans اذهب إلى <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; قسم <strong>Other</strong> وانسخ <strong>OBS Key</strong>. في SplitCam، Add Channel &rarr; OnlyFans، الصق في حقل المفتاح. هذا المفتاح ثابت — لتغيير الإعدادات لاحقاً ترجع إلى موقع OnlyFans.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">أياً كانت الطريقة، اضغط <strong>Go Live</strong> في SplitCam. مع الطريقة 1 يمكنك الاستمرار في ضبط معلمات OnlyFans من SplitCam في الوقت الفعلي؛ مع الطريقة 2 يبقى المفتاح كما ضبطته.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">نصائح احترافية</h2><div class="tips-grid"><div class="tip-card"><h3>التفويض vs Stream Key</h3><p>طريقتان للاتصال: <strong>التفويض</strong> (تسجيل دخول مرة واحدة، يتم الحصول على المفتاح ومزامنته — أسهل طريق) أو <strong>Stream Key</strong> (انسخ OBS Key على OnlyFans → Profile → Settings → Other والصقه).</p></div><div class="tip-card"><h3>غيّر الإعدادات دون مغادرة SplitCam</h3><p>مع التفويض يبقى الحساب متصلاً، لذا تضبط معلمات OnlyFans المباشرة من SplitCam أثناء البث أو بعده — دون المرور عبر موقع OnlyFans.</p></div><div class="tip-card"><h3>معدل بت متواضع</h3><p>OnlyFans RTMP ingest يحد من معدل بت الفيديو عند حوالي 2500 Kbps — أكثر صرامة من معظم مواقع cam. استهدف 720p–1080p عند ~2000–2500.</p></div><div class="tip-card"><h3>استخدم اتصال سلكي</h3><p>الإيثرنت يتفوق على Wi-Fi في البث الطويل — إطار مفقود يعني إكرامية مفقودة. مدّ كابلاً إلى كمبيوتر البث.</p></div></div></section>
 <section class="section"><h2 class="sec-h">استكشاف الأخطاء وإصلاحها</h2><div class="faq-list"><details class="faq-item"><summary>بث OnlyFans لديك يتقطع أو يخزّن مؤقتاً</summary><p>في معظم الأحيان يكون معدل البت أعلى مما يتحمله الرفع لديك. شغّل اختبار السرعة المدمج في SplitCam، ثم اضبط معدل البت على نحو 75% من الرفع المقاس — 3,500–6,000&nbsp;Kbps لـ 1080p، أقل لـ 720p. يختفي التقطع بمجرد أن يتوقف المُشفِّر عن تجاوز اتصالك.</p></details><details class="faq-item"><summary>إطارات مفقودة أثناء البث على OnlyFans</summary><p>الإطارات المفقودة تعني أن الحزم لا تصل إلى OnlyFans في الوقت المناسب — عادةً Wi-Fi غير مستقر. انتقل إلى اتصال Ethernet سلكي، أغلق التطبيقات التي تستهلك النطاق الترددي، وخفّض معدل البت قليلاً. ارتفاع واحد عادي؛ الارتفاع المستمر يعني أن الاتصال لا يواكب.</p></details><details class="faq-item"><summary>شاشة سوداء — المشاهدون لا يرون فيديو على OnlyFans</summary><p>الكاميرا غير محددة كمصدر نشط في SplitCam، أو يحتجزها تطبيق آخر. أغلق Zoom أو Skype أو OBS، اختر كاميرا الويب مرة أخرى في قائمة مصادر SplitCam، وتأكد من أن المعاينة تعرض صورتك قبل الضغط على Go Live.</p></details><details class="faq-item"><summary>OnlyFans يرفض مفتاح البث أو لا يتصل</summary><p>انسخ مفتاح البث من جديد — مسافة زائدة في النهاية أو مفتاح قديم تم تدويره هو السبب المعتاد. تأكد من أن عنوان URL للخادم يطابق ما يعرضه OnlyFans وأن البث عبر مُشفِّر خارجي مفعّل على حسابك. شريط أخضر في Stream Settings لـ SplitCam يؤكد مفتاحاً صالحاً.</p></details><details class="faq-item"><summary>لا يوجد صوت أو الصوت غير متزامن على OnlyFans</summary><p>اختر SplitCam ككاميرا وميكروفون معاً، واختر ميكروفونك الحقيقي داخل مصدر الصوت في SplitCam. إذا تأخر الصوت عن الفيديو، خفّض الدقة درجة واحدة — المُشفِّر محمّل بشكل زائد والصوت ينتظر الإطارات المتأخرة.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">الأسئلة الشائعة</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Antwoord</a>
-  <a href="#steps">Stappen</a>
-  <a href="#tips">Tips</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Vergelijkbare gidsen</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Antwoord</a><a href="#steps">Stappen</a><a href="#tips">Tips</a><a href="#faq">FAQ</a><a href="#related">Vergelijkbare gidsen</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Stap voor stap</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam downloaden en installeren</div><p class="step-p">SplitCam is gratis live-stream-software voor Windows en macOS — geen registratie, geen creditcard, geen watermerk.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Scène opbouwen</div><p class="step-p">Open SplitCam en voeg je webcam toe. Leg er overlays, tekst, een tweede camera of je telefoon overheen, beauty-filters of een AI-achtergrond — gepolijste scènes passen bij de premium-verwachting van betalend publiek.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Fansly-URL en stream key ophalen</div><p class="step-p">Log in op je Fansly-creatoraccount, open <strong>Creator Dashboard</strong>, navigeer naar <strong>Live → Broadcast Settings → External Encoder</strong>. De pagina toont een <strong>server-URL</strong> en een unieke <strong>stream key</strong>. Kopieer beide.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam koppelen aan Fansly</div><p class="step-p">Open in SplitCam <strong>Stream Settings</strong>, plak de Fansly server-URL en stream key in de custom RTMP-velden. Zet bitrate op 3.500–6.000 Kbps bij 1920×1080, 30 fps en 2 seconden keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Druk in SplitCam op <strong>Go Live</strong>, start dan de Fansly Live-broadcast vanuit Creator Dashboard. Binnen ~10 seconden bereikt je stream je Fansly-abonnees.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Tips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Abonnee-eerst publiek</h3><p>Het publiek van Fansly is abonnement-gebaseerd — je live-stream bereikt mensen die je al maandelijks betalen. Plan content die loyaliteit beloont (exclusieve Q&amp;A, behind-the-scenes, custom tip goals) in plaats van te jagen op public-room metrics.</p></div><div class="tip-card"><h3>Tips náást abonnementen</h3><p>Fansly Live ondersteunt in-stream tipping bovenop de basis-abonnementen. Voor gevestigde creators kan de gecombineerde omzet hoger uitvallen dan pure cam-platform-tipping.</p></div><div class="tip-card"><h3>Browser-broadcaster vs. external</h3><p>De standaard browser-broadcaster is single-source. SplitCam via External Encoder ontgrendelt multi-camera, overlays, beauty-filters en AI-achtergrond — passend bij de premium-verwachting van betalend publiek.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Stap voor stap</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam downloaden en installeren</div><p class="step-p">SplitCam is gratis live-stream-software voor Windows en macOS — geen registratie, geen creditcard, geen watermerk.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Scène opbouwen</div><p class="step-p">Open SplitCam en voeg je webcam toe. Leg er overlays, tekst, een tweede camera of je telefoon overheen, beauty-filters of een AI-achtergrond — gepolijste scènes passen bij de premium-verwachting van betalend publiek.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Fansly-URL en stream key ophalen</div><p class="step-p">Log in op je Fansly-creatoraccount, open <strong>Creator Dashboard</strong>, navigeer naar <strong>Live → Broadcast Settings → External Encoder</strong>. De pagina toont een <strong>server-URL</strong> en een unieke <strong>stream key</strong>. Kopieer beide.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam koppelen aan Fansly</div><p class="step-p">Open in SplitCam <strong>Stream Settings</strong>, plak de Fansly server-URL en stream key in de custom RTMP-velden. Zet bitrate op 3.500–6.000 Kbps bij 1920×1080, 30 fps en 2 seconden keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Druk in SplitCam op <strong>Go Live</strong>, start dan de Fansly Live-broadcast vanuit Creator Dashboard. Binnen ~10 seconden bereikt je stream je Fansly-abonnees.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Tips</h2><div class="tips-grid"><div class="tip-card"><h3>Abonnee-eerst publiek</h3><p>Het publiek van Fansly is abonnement-gebaseerd — je live-stream bereikt mensen die je al maandelijks betalen. Plan content die loyaliteit beloont (exclusieve Q&amp;A, behind-the-scenes, custom tip goals) in plaats van te jagen op public-room metrics.</p></div><div class="tip-card"><h3>Tips náást abonnementen</h3><p>Fansly Live ondersteunt in-stream tipping bovenop de basis-abonnementen. Voor gevestigde creators kan de gecombineerde omzet hoger uitvallen dan pure cam-platform-tipping.</p></div><div class="tip-card"><h3>Browser-broadcaster vs. external</h3><p>De standaard browser-broadcaster is single-source. SplitCam via External Encoder ontgrendelt multi-camera, overlays, beauty-filters en AI-achtergrond — passend bij de premium-verwachting van betalend publiek.</p></div><div class="tip-card"><h3>Gebruik een bekabelde verbinding</h3><p>Ethernet verslaat wifi tijdens een lange stream — een verloren frame is een gemiste tip. Trek een kabel naar je stream-pc.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Problemen oplossen</h2><div class="faq-list"><details class="faq-item"><summary>Je Fansly-stream hapert of buffert</summary><p>Bijna altijd is de bitrate hoger dan je upload aankan. Draai de ingebouwde snelheidstest van SplitCam en zet de bitrate op ongeveer 75% van je gemeten upload — 3.500–6.000&nbsp;Kbps voor 1080p, lager voor 720p. De hapering verdwijnt zodra de encoder je verbinding niet meer voorbijstreeft.</p></details><details class="faq-item"><summary>Dropped frames tijdens de Fansly-uitzending</summary><p>Dropped frames betekenen dat pakketten Fansly niet op tijd bereiken — meestal instabiele wifi. Schakel over op een bekabelde Ethernet-verbinding, sluit bandbreedte-vretende apps en verlaag de bitrate iets. Eén piek is prima; een gestage stijging betekent dat de verbinding het niet bijhoudt.</p></details><details class="faq-item"><summary>Zwart scherm — kijkers zien geen video op Fansly</summary><p>Je camera is niet als actieve bron in SplitCam gekozen, of een andere app houdt hem vast. Sluit Zoom, Skype of OBS, kies je webcam opnieuw in SplitCam's bronnenlijst en controleer dat de preview je beeld toont voor je op Go Live drukt.</p></details><details class="faq-item"><summary>Fansly weigert de stream key of maakt geen verbinding</summary><p>Kopieer de stream key opnieuw — een spatie aan het eind of een oude, al vernieuwde key is de gebruikelijke oorzaak. Controleer dat de server-URL overeenkomt met die Fansly toont en dat externe-encoder-uitzending op je account is ingeschakeld. Een groene slider in SplitCam's Stream Settings bevestigt een geldige key.</p></details><details class="faq-item"><summary>Geen geluid of geluid loopt niet synchroon op Fansly</summary><p>Kies SplitCam als camera én als microfoon, en selecteer je echte mic binnen SplitCam's audiobron. Als het geluid achterloopt op de video, verlaag de resolutie een stap — de encoder is overbelast en het geluid wacht op te late frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

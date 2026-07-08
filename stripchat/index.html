@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Quick answer</a>
-  <a href="#steps">Step-by-step</a>
-  <a href="#tips">Tips</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Related guides</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Quick answer</a><a href="#steps">Step-by-step</a><a href="#tips">Tips</a><a href="#faq">FAQ</a><a href="#related">Related guides</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Quick answer</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Video guide</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/i_Nbv2wAKTg" title="How to stream on Stripchat with SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Step-by-step</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download and install SplitCam</div><p class="step-p">SplitCam is free live-streaming software for Windows and macOS. Download it and run the installer — no signup, no card, no watermark, no time limit. It is the encoder that sends your video to Stripchat.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Build your scene at the site resolution</div><p class="step-p">Add your webcam, overlays and filters in SplitCam. Set SplitCam's resolution to exactly match the one chosen on Stripchat, or the video pixelates.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Get your Stripchat stream key</div><p class="step-p">On Stripchat, choose <strong>Switch to external software</strong>, then open <strong>Show external software settings for the stream</strong>. Copy the stream key — Stripchat shows it as a token. Keep it private.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Paste the Stripchat token</div><p class="step-p">Paste the token-based stream key into SplitCam's RTMP key field. Stay well above Stripchat's 2 Mbps minimum — aim for 3,500–6,000 Kbps at 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Press Go Live in SplitCam, then click Start Show on Stripchat — switching to external software alone doesn't make you public.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Pro tips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Match the site resolution exactly</h3><p>Stripchat's FAQ warns that the resolution in your software must exactly match the resolution set on the site, or the video pixelates. Set both the same.</p></div><div class="tip-card"><h3>Mind the 2 Mbps floor</h3><p>Stripchat states 2 Mbps upload is the minimum — and is explicitly not enough for OBS-style streaming or simultaneous multi-platform streaming. Aim well above it.</p></div><div class="tip-card"><h3>The key is a token</h3><p>Stripchat's stream key is a token — copy it exactly and never share it; reset it if it leaks.</p></div><div class="tip-card"><h3>Wired, and well above 2 Mbps</h3><p>Stripchat's 2 Mbps floor isn't enough for encoder streaming — a wired link plus real headroom above that minimum keeps the show smooth.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Step-by-step</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download and install SplitCam</div><p class="step-p">SplitCam is free live-streaming software for Windows and macOS. Download it and run the installer — no signup, no card, no watermark, no time limit. It is the encoder that sends your video to Stripchat.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Build your scene at the site resolution</div><p class="step-p">Add your webcam, overlays and filters in SplitCam. Set SplitCam's resolution to exactly match the one chosen on Stripchat, or the video pixelates.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Get your Stripchat stream key</div><p class="step-p">On Stripchat, choose <strong>Switch to external software</strong>, then open <strong>Show external software settings for the stream</strong>. Copy the stream key — Stripchat shows it as a token. Keep it private.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Paste the Stripchat token</div><p class="step-p">Paste the token-based stream key into SplitCam's RTMP key field. Stay well above Stripchat's 2 Mbps minimum — aim for 3,500–6,000 Kbps at 1080p.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live</div><p class="step-p">Press Go Live in SplitCam, then click Start Show on Stripchat — switching to external software alone doesn't make you public.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Pro tips</h2><div class="tips-grid"><div class="tip-card"><h3>Match the site resolution exactly</h3><p>Stripchat's FAQ warns that the resolution in your software must exactly match the resolution set on the site, or the video pixelates. Set both the same.</p></div><div class="tip-card"><h3>Mind the 2 Mbps floor</h3><p>Stripchat states 2 Mbps upload is the minimum — and is explicitly not enough for OBS-style streaming or simultaneous multi-platform streaming. Aim well above it.</p></div><div class="tip-card"><h3>The key is a token</h3><p>Stripchat's stream key is a token — copy it exactly and never share it; reset it if it leaks.</p></div><div class="tip-card"><h3>Wired, and well above 2 Mbps</h3><p>Stripchat's 2 Mbps floor isn't enough for encoder streaming — a wired link plus real headroom above that minimum keeps the show smooth.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Troubleshooting</h2><div class="faq-list"><details class="faq-item"><summary>Your Stripchat stream lags or buffers</summary><p>Almost always the bitrate is higher than your upload can sustain. Run SplitCam's built-in speed test, then set the bitrate to about 75% of your measured upload — 3,500–6,000&nbsp;Kbps for 1080p, lower for 720p. The lag clears once the encoder stops outrunning your connection.</p></details><details class="faq-item"><summary>Dropped frames during the Stripchat broadcast</summary><p>Dropped frames mean packets aren't reaching Stripchat in time — usually unstable Wi-Fi. Switch to a wired Ethernet connection, close bandwidth-heavy apps, and lower the bitrate a notch. One spike is fine; a steady climb means the connection can't keep up.</p></details><details class="faq-item"><summary>Black screen — viewers see no video on Stripchat</summary><p>Your camera isn't selected as the active source in SplitCam, or another app is holding it. Close Zoom, Skype or OBS, pick your webcam again in SplitCam's source list, and confirm the preview shows your feed before you press Go Live.</p></details><details class="faq-item"><summary>Stripchat rejects the stream key or won&#x27;t connect</summary><p>Re-copy the stream key — a trailing space or an old, rotated key is the usual cause. Confirm the server URL matches the one Stripchat shows and that external-encoder broadcasting is enabled on your account. A green slider in SplitCam's Stream Settings confirms a valid key.</p></details><details class="faq-item"><summary>No audio or audio is out of sync on Stripchat</summary><p>Pick SplitCam as both the camera and the microphone, and select your real mic inside SplitCam's audio source. If audio drifts behind the video, lower the resolution one step — the encoder is overloaded and the audio is waiting on late frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

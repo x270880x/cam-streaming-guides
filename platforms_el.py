@@ -463,24 +463,24 @@ PLATFORMS_EL = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Προσθήκη Lovense στη μετάδοση με SplitCam",
-     "desc": "Σύνδεσε Lovense παιχνίδι στο SplitCam — Lovense Remote + Cam Extension με ενσωματωμένη υποστήριξη SplitCam, με tip alerts στην οθόνη. Χωρίς extra plugin.",
+     "desc": "Σύνδεσε Lovense παιχνίδι στο SplitCam — Lovense Connect + Cam Extension με ενσωματωμένη υποστήριξη SplitCam, με tip alerts στην οθόνη. Χωρίς extra plugin.",
      "kw": "πώς να προσθέσετε lovense στη μετάδοση, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense interactive toy, lovense overlay",
      "h1html": 'Πώς προσθέτεις ένα <span class="accent">Lovense παιχνίδι</span> στο stream',
      "h1short": "Προσθήκη Lovense",
      "card": "Σύνδεσε διαδραστικό Lovense παιχνίδι στο cam stream.",
-     "intro": "Τρέχεις το cam stream μέσω του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> και ζευγαρώνεις ένα διαδραστικό παιχνίδι <strong style='color:var(--text)'>Lovense</strong> ώστε να αντιδρά σε tips. Εγκαθιστάς τρία πράγματα: <strong>SplitCam</strong> (τον encoder), την εφαρμογή <strong>Lovense Remote</strong> (τη γέφυρα Bluetooth προς το παιχνίδι) και το <strong>Lovense Cam Extension</strong> για Chrome/Edge (διαβάζει τα φιλοδωρήματα και τροφοδοτεί το overlay στην οθόνη). Η υποστήριξη SplitCam είναι <strong>ενσωματωμένη</strong> στο Cam Extension (έκδοση 30.1.4 ή νεότερη) — το SplitCam βρίσκεται στην καρτέλα «Video Feedback» της επέκτασης, χωρίς ξεχωριστό plugin για κατέβασμα.",
-     "quick": "Για να προσθέσεις Lovense παιχνίδι στο stream: εγκατάστησε SplitCam, την εφαρμογή Lovense Remote και το Lovense Cam Extension, ζευγάρωσε το παιχνίδι, σύνδεσε το extension στην cam πλατφόρμα, πρόσθεσε το Lovense overlay ως Browser στρώμα στο SplitCam, μετά μετέδωσε κανονικά."
+     "intro": "Τρέχεις το cam stream μέσω του δωρεάν <strong style='color:var(--text)'>SplitCam</strong> και ζευγαρώνεις ένα διαδραστικό παιχνίδι <strong style='color:var(--text)'>Lovense</strong> ώστε να αντιδρά σε tips. Εγκαθιστάς τρία πράγματα: <strong>SplitCam</strong> (τον encoder), την εφαρμογή <strong>Lovense Connect</strong> (τη γέφυρα Bluetooth προς το παιχνίδι) και το <strong>Lovense Cam Extension</strong> για Chrome/Edge (διαβάζει τα φιλοδωρήματα και τροφοδοτεί το overlay στην οθόνη). Η υποστήριξη SplitCam είναι <strong>ενσωματωμένη</strong> στο Cam Extension (έκδοση 30.1.4 ή νεότερη) — το SplitCam βρίσκεται στην καρτέλα «Video Feedback» της επέκτασης, χωρίς ξεχωριστό plugin για κατέβασμα.",
+     "quick": "Για να προσθέσεις Lovense παιχνίδι στο stream: εγκατάστησε SplitCam, την εφαρμογή Lovense Connect και το Lovense Cam Extension, ζευγάρωσε το παιχνίδι, σύνδεσε το extension στην cam πλατφόρμα, πρόσθεσε το Lovense overlay ως Browser στρώμα στο SplitCam, μετά μετέδωσε κανονικά."
               "<ol><li>Εγκατάστησε SplitCam.</li>"
-              "<li>Εγκατάστησε το Lovense Remote &amp; ζευγάρωσε το παιχνίδι.</li>"
+              "<li>Εγκατάστησε το Lovense Connect &amp; ζευγάρωσε το παιχνίδι.</li>"
               "<li>Εγκατάστησε το Lovense Cam Extension (Chrome/Edge).</li>"
               "<li>Σύνδεσε το extension στην cam πλατφόρμα + πρόσθεσε το overlay στο SplitCam.</li>"
               "<li>Πάτα Go Live.</li></ol>",
-     "key_how": "Το παιχνίδι δεν επικοινωνεί ποτέ απευθείας με το SplitCam. Η αλυσίδα είναι: ένας θεατής δίνει φιλοδώρημα στην cam πλατφόρμα σου &rarr; το <strong>Lovense Cam Extension</strong> στον browser το εντοπίζει &rarr; στέλνει εντολή στην εφαρμογή <strong>Lovense Remote</strong> στο localhost &rarr; το Remote δονεί το παιχνίδι μέσω Bluetooth. Η μόνη δουλειά του SplitCam είναι να δείχνει το <strong>Lovense overlay</strong> (status παιχνιδιού + πρόσφατα tips) ως Browser στρώμα και να μεταδίδει την κάμερά σου. Δεν υπάρχει ξεχωριστή εφαρμογή «Lovense Browser» — είναι μια επέκταση browser για Chrome ή Edge.",
+     "key_how": "Το παιχνίδι δεν επικοινωνεί ποτέ απευθείας με το SplitCam. Η αλυσίδα είναι: ένας θεατής δίνει φιλοδώρημα στην cam πλατφόρμα σου &rarr; το <strong>Lovense Cam Extension</strong> στον browser το εντοπίζει &rarr; στέλνει εντολή στην εφαρμογή <strong>Lovense Connect</strong> στο localhost &rarr; το Remote δονεί το παιχνίδι μέσω Bluetooth. Η μόνη δουλειά του SplitCam είναι να δείχνει το <strong>Lovense overlay</strong> (status παιχνιδιού + πρόσφατα tips) ως Browser στρώμα και να μεταδίδει την κάμερά σου. Δεν υπάρχει ξεχωριστή εφαρμογή «Lovense Browser» — είναι μια επέκταση browser για Chrome ή Edge.",
      "steps": [
          ("Εγκατάστησε SplitCam",
           "Το SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — ο encoder που στέλνει το βίντεό σου στην cam πλατφόρμα. Εγκατάστησέ το· χωρίς υδατογράφημα, χωρίς εγγραφή."),
-         ("Εγκατάστησε το Lovense Remote και ζευγάρωσε το παιχνίδι",
-          "Εγκατάστησε την εφαρμογή <strong>Lovense Remote</strong> — desktop (Windows / Mac) ή την mobile εφαρμογή στο κινητό. Αυτή είναι η γέφυρα που μιλά στο παιχνίδι μέσω Bluetooth. Άναψε το παιχνίδι και ζευγάρωσέ το μέχρι η εφαρμογή να το δείχνει συνδεδεμένο."),
+         ("Εγκατάστησε το Lovense Connect και ζευγάρωσε το παιχνίδι",
+          "Εγκατάστησε την εφαρμογή <strong>Lovense Connect</strong> — desktop (Windows / Mac) ή την mobile εφαρμογή στο κινητό. Αυτή είναι η γέφυρα που μιλά στο παιχνίδι μέσω Bluetooth. Άναψε το παιχνίδι και ζευγάρωσέ το μέχρι η εφαρμογή να το δείχνει συνδεδεμένο."),
          ("Εγκατάστησε το Lovense Cam Extension",
           "Πρόσθεσε το <strong>Lovense Cam Extension</strong> στον Chrome ή Edge (έκδοση 30.1.4 ή νεότερη) και συνδέσου με τον λογαριασμό Lovense. Δεν υπάρχει αυτόνομος «Lovense Browser» — αυτή η επέκταση διαβάζει τα φιλοδωρήματα και τροφοδοτεί το overlay. <strong>Η υποστήριξη SplitCam είναι ενσωματωμένη</strong>: εμφανίζεται στην καρτέλα Video Feedback της επέκτασης, οπότε δεν χρειάζεσαι ξεχωριστό SplitCam plugin."),
          ("Σύνδεσε το extension στην cam πλατφόρμα και πρόσθεσε το overlay στο SplitCam",
@@ -489,17 +489,17 @@ PLATFORMS_EL = [
           "Πρόσθεσε την κάμερα και τυχόν άλλα overlays, επικόλλησε το RTMP κλειδί της cam πλατφόρμας στο SplitCam και κλικ <strong>Go Live</strong>. Το παιχνίδι αντιδρά τώρα σε tips σε πραγματικό χρόνο."),
      ],
      "tips": [
-         ("Τρεις εγκαταστάσεις, με τη σειρά", "SplitCam (encoder) + Lovense Remote (γέφυρα Bluetooth) + Lovense Cam Extension (ανάγνωση tips / overlay). Αν λείψει έστω μία, το παιχνίδι δεν θα αντιδρά στο stream."),
+         ("Τρεις εγκαταστάσεις, με τη σειρά", "SplitCam (encoder) + Lovense Connect (γέφυρα Bluetooth) + Lovense Cam Extension (ανάγνωση tips / overlay). Αν λείψει έστω μία, το παιχνίδι δεν θα αντιδρά στο stream."),
          ("Είναι επέκταση, όχι browser", "Δεν υπάρχει ξεχωριστός «Lovense Browser» για κατέβασμα — το Lovense Cam Extension εγκαθίσταται στον Chrome ή Edge. Κράτα το ενημερωμένο (30.1.4 ή νεότερο) αλλιώς το SplitCam overlay μπορεί να μη φορτώσει."),
          ("Κράτα το παιχνίδι φορτισμένο", "Άδεια μπαταρία στη μέση του show σκοτώνει τη διαδραστική πλευρά — φόρτισε πλήρως πριν το live."),
          ("Δοκίμασε την αντίδραση σε tips", "Στείλε μικρό δοκιμαστικό tip για να επιβεβαιώσεις ότι το παιχνίδι αντιδρά πριν ανοίξει η room στο κοινό."),
          ("Ποια cam sites καλύπτονται", "Το Cam Extension καλύπτει επίσημα Chaturbate, Stripchat, BongaCams, MyFreeCams και CamSoda — για οποιοδήποτε άλλο site, χρησιμοποίησε την ενσωμάτωση Generic URL της Lovense. Το SplitCam λειτουργεί με όλα ως στρώμα overlay."),
      ],
      "faq": [
-         ("Τι πρέπει να εγκαταστήσω για το Lovense στο SplitCam;", "Τρία πράγματα: <strong>SplitCam</strong> (τον encoder), την εφαρμογή <strong>Lovense Remote</strong> (γεφυρώνει το παιχνίδι μέσω Bluetooth) και το <strong>Lovense Cam Extension</strong> για Chrome/Edge (διαβάζει τα φιλοδωρήματα και τροφοδοτεί το overlay). Χωρίς ξεχωριστό SplitCam plugin — η υποστήριξη SplitCam είναι ενσωματωμένη στο Cam Extension."),
+         ("Τι πρέπει να εγκαταστήσω για το Lovense στο SplitCam;", "Τρία πράγματα: <strong>SplitCam</strong> (τον encoder), την εφαρμογή <strong>Lovense Connect</strong> (γεφυρώνει το παιχνίδι μέσω Bluetooth) και το <strong>Lovense Cam Extension</strong> για Chrome/Edge (διαβάζει τα φιλοδωρήματα και τροφοδοτεί το overlay). Χωρίς ξεχωριστό SplitCam plugin — η υποστήριξη SplitCam είναι ενσωματωμένη στο Cam Extension."),
          ("Λειτουργεί το Cam Extension 30.1.4+ κατευθείαν με το SplitCam;", "Ναι — η υποστήριξη SplitCam είναι ενσωματωμένη. Άνοιξε την καρτέλα <strong>Video Feedback</strong> της επέκτασης, διάλεξε <strong>SplitCam</strong>, αντίγραψε το URL overlay και βάλ' το ως Browser στρώμα στο SplitCam. Χωρίς extra plugin, μόνο αυτός ο σύνδεσμος μία φορά."),
-         ("Υπάρχει «Lovense Browser» που πρέπει να κατεβάσω;", "Όχι. Δεν υπάρχει αυτόνομος Lovense browser — είναι το <strong>Lovense Cam Extension</strong>, που εγκαθίσταται στον Chrome ή Edge. Το ζευγάρωμα του παιχνιδιού το κάνει η ξεχωριστή εφαρμογή Lovense Remote (desktop ή κινητό)."),
-         ("Συνδέεται το παιχνίδι απευθείας με το SplitCam;", "Όχι — το παιχνίδι ζευγαρώνει με την εφαρμογή Lovense Remote μέσω Bluetooth· το Cam Extension διαβάζει τα tips και το SplitCam απλώς δείχνει το overlay και μεταδίδει την κάμερα."),
+         ("Υπάρχει «Lovense Browser» που πρέπει να κατεβάσω;", "Όχι. Δεν υπάρχει αυτόνομος Lovense browser — είναι το <strong>Lovense Cam Extension</strong>, που εγκαθίσταται στον Chrome ή Edge. Το ζευγάρωμα του παιχνιδιού το κάνει η ξεχωριστή εφαρμογή Lovense Connect (desktop ή κινητό)."),
+         ("Συνδέεται το παιχνίδι απευθείας με το SplitCam;", "Όχι — το παιχνίδι ζευγαρώνει με την εφαρμογή Lovense Connect μέσω Bluetooth· το Cam Extension διαβάζει τα tips και το SplitCam απλώς δείχνει το overlay και μεταδίδει την κάμερα."),
          ("Ποια cam sites υποστηρίζουν Lovense;", "Το Lovense Cam Extension υποστηρίζει επίσημα Chaturbate, Stripchat, BongaCams, MyFreeCams και CamSoda, με μεταβλητή υποστήριξη για άλλα — έλεγξε την τρέχουσα λίστα στην εφαρμογή Lovense."),
          ("Μπορώ να εμφανίσω πρόσφατα tips στην οθόνη;", "Ναι — το Cam Extension σου δίνει ένα URL overlay· πρόσθεσέ το ως Browser στρώμα στο SplitCam και οι θεατές βλέπουν το status του παιχνιδιού και τα πρόσφατα tips."),
      ]},

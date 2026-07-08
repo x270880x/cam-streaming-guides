@@ -1073,7 +1073,7 @@ PLATFORMS_RU = [
     {
         "slug": "lovense", "name": "Lovense",
         "title": "Как подключить игрушку Lovense к трансляции через SplitCam",
-        "desc": "Подключите игрушку Lovense к трансляции SplitCam — приложение Lovense Remote и Cam Extension со встроенной поддержкой SplitCam, алерты о чаевых на экране.",
+        "desc": "Подключите игрушку Lovense к трансляции SplitCam — приложение Lovense Connect и Cam Extension со встроенной поддержкой SplitCam, алерты о чаевых на экране.",
         "kw": "как подключить lovense к трансляции, lovense, lovense connect, lovense cam extension, lovense splitcam toolset, lovense tip alerts, lovense кам, lovense интерактивная игрушка стрим, оверлей lovense",
         "h1html": 'Как подключить <span class="accent">игрушку Lovense</span> к трансляции',
         "h1short": "Игрушка Lovense",
@@ -1082,24 +1082,24 @@ PLATFORMS_RU = [
                  "SplitCam</strong> и подключите интерактивную игрушку "
                  "<strong style='color:var(--text)'>Lovense</strong>, чтобы она реагировала на "
                  "чаевые. Нужно установить три вещи: <strong>SplitCam</strong> (кодировщик), "
-                 "приложение <strong>Lovense Remote</strong> (мост к игрушке по Bluetooth) и "
+                 "приложение <strong>Lovense Connect</strong> (мост к игрушке по Bluetooth) и "
                  "<strong>Lovense Cam Extension</strong> для Chrome/Edge (читает чаевые и обновляет "
                  "оверлей на экране). Поддержка SplitCam встроена в Cam Extension (версия 30.1.4 "
                  "или новее) — SplitCam есть прямо в списке Video Feedback расширения, так что "
                  "отдельный плагин скачивать не нужно.",
         "quick": "Чтобы подключить игрушку Lovense к трансляции: установите SplitCam, приложение "
-                 "Lovense Remote и Lovense Cam Extension, подключите игрушку, привяжите "
+                 "Lovense Connect и Lovense Cam Extension, подключите игрушку, привяжите "
                  "расширение к кам-сайту, добавьте оверлей Lovense слоем Browser в SplitCam и "
                  "вещайте как обычно."
                  "<ol><li>Установите SplitCam.</li>"
-                 "<li>Установите Lovense Remote и подключите игрушку.</li>"
+                 "<li>Установите Lovense Connect и подключите игрушку.</li>"
                  "<li>Установите Lovense Cam Extension (Chrome/Edge).</li>"
                  "<li>Привяжите расширение к кам-сайту и добавьте оверлей в SplitCam.</li>"
                  "<li>Нажмите Go Live.</li></ol>",
         "key_how": "Игрушка никогда не общается со SplitCam напрямую. Цепочка такая: зритель "
                    "отправляет чаевые на кам-сайте &rarr; <strong>Lovense Cam Extension</strong> "
                    "в браузере это ловит &rarr; отправляет команду в приложение "
-                   "<strong>Lovense Remote</strong> на localhost &rarr; Remote управляет "
+                   "<strong>Lovense Connect</strong> на localhost &rarr; Remote управляет "
                    "игрушкой по Bluetooth. Задача SplitCam — только показать "
                    "<strong>оверлей Lovense</strong> (статус игрушки и недавние чаевые) слоем "
                    "Browser и вещать вашу камеру. Отдельного приложения «Lovense Browser» нет — "
@@ -1109,8 +1109,8 @@ PLATFORMS_RU = [
              "SplitCam — бесплатная программа для трансляций на Windows и macOS, кодировщик, "
              "который отправляет видео на кам-платформу. Установите её; без водяного знака и "
              "регистрации."),
-            ("Установите Lovense Remote и подключите игрушку",
-             "Установите приложение <strong>Lovense Remote</strong> — десктоп (Windows / Mac) "
+            ("Установите Lovense Connect и подключите игрушку",
+             "Установите приложение <strong>Lovense Connect</strong> — десктоп (Windows / Mac) "
              "или мобильное приложение на телефоне. Это мост, который общается с игрушкой по "
              "Bluetooth. Включите игрушку и подключайте, пока приложение не покажет её "
              "подключённой."),
@@ -1132,7 +1132,7 @@ PLATFORMS_RU = [
              "времени."),
         ],
         "tips": [
-            ("Три установки, по порядку", "SplitCam (кодировщик) + Lovense Remote (мост по "
+            ("Три установки, по порядку", "SplitCam (кодировщик) + Lovense Connect (мост по "
              "Bluetooth) + Lovense Cam Extension (читалка чаевых / оверлей). Пропустите хоть "
              "одно — и игрушка не отреагирует в эфире."),
             ("Это расширение, а не браузер", "Отдельного «Lovense Browser» для скачивания нет — "
@@ -1149,7 +1149,7 @@ PLATFORMS_RU = [
         ],
         "faq": [
             ("Что нужно установить для Lovense в SplitCam?", "Три вещи: <strong>SplitCam</strong> "
-             "(кодировщик), приложение <strong>Lovense Remote</strong> (мост к игрушке по "
+             "(кодировщик), приложение <strong>Lovense Connect</strong> (мост к игрушке по "
              "Bluetooth) и <strong>Lovense Cam Extension</strong> для Chrome/Edge (читает чаевые "
              "и обновляет оверлей). Отдельный плагин SplitCam не нужен — поддержка SplitCam "
              "встроена в Cam Extension."),
@@ -1159,10 +1159,10 @@ PLATFORMS_RU = [
              "SplitCam. Никаких отдельных плагинов — только эта разовая привязка."),
             ("Нужно ли скачивать «Lovense Browser»?", "Нет. Отдельного браузера Lovense не "
              "существует — это <strong>Lovense Cam Extension</strong>, которое ставится в Chrome "
-             "или Edge. Подключение игрушки берёт на себя отдельное приложение Lovense Remote "
+             "или Edge. Подключение игрушки берёт на себя отдельное приложение Lovense Connect "
              "(десктоп или мобильное)."),
             ("Игрушка подключается прямо к SplitCam?", "Нет — игрушка соединяется с приложением "
-             "Lovense Remote по Bluetooth; Cam Extension читает чаевые, а SplitCam лишь "
+             "Lovense Connect по Bluetooth; Cam Extension читает чаевые, а SplitCam лишь "
              "показывает оверлей и вещает вашу камеру."),
             ("Какие кам-сайты поддерживают Lovense?", "Cam Extension Lovense официально "
              "поддерживает Chaturbate, Stripchat, BongaCams, MyFreeCams и CamSoda, с разной "

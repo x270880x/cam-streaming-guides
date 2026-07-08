@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">תשובה</a>
-  <a href="#steps">שלבים</a>
-  <a href="#tips">טיפים</a>
-  <a href="#faq">שאלות</a>
-  <a href="#related">מדריכים קשורים</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">תשובה</a><a href="#steps">שלבים</a><a href="#tips">טיפים</a><a href="#faq">שאלות</a><a href="#related">מדריכים קשורים</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">תשובה מהירה</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">שלב אחר שלב</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">הורידו והתקינו SplitCam</div><p class="step-p">‏SplitCam היא תוכנת שידור חי חינמית ל-Windows ול-macOS — ללא הרשמה, ללא כרטיס, ללא סימן מים. היא מתקינה מצלמה וירטואלית שהדפדפן יכול להשתמש בה.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">הגדירו את הסצנה לשיחות</div><p class="step-p">פתחו SplitCam, הוסיפו את המצלמה, הגדירו את האור, אופציונלית הוסיפו רקע AI או שכבה עדינה. שמרו על מסגור נקי — זו שיחה בתשלום, לא במה.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">קבעו את התעריף שלכם ב-Premium.Chat</div><p class="step-p">התחברו ל-Premium.Chat, קבעו את התעריף לדקה לשיחות וידאו והעתיקו את הקישור האישי שלכם. שתפו אותו ברשתות או בביו.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">קבלו את שיחת הווידאו הנכנסת</div><p class="step-p">כשלקוח משלם על זמן, בקשת השיחה מגיעה. קבלו אותה בלוח הבקרה של Premium.Chat.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">בחרו ב-SplitCam כמצלמה</div><p class="step-p">בתפריט סמל המצלמה של חלון השיחה, החליפו מהוובקאם המובנה ל-<strong>SplitCam</strong>. הסצנה הערוכה שלכם מגיעה כעת למתקשר.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">טיפים מקצועיים</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>‏Premium.Chat היא לפי דקה, לא שידור</h3><p>בניגוד לחדרי טיפים בסגנון <a href="../chaturbate/" class="autolink">Chaturbate</a>, אתם מקבלים תשלום לפי דקה. תאורה רכה, אודיו ברור ורקע AI נראים יותר כמו ייעוץ פרימיום מאשר קאם ציבורי.</p></div><div class="tip-card"><h3>קדמו את הקישור שלכם, לא פרופיל</h3><p>‏Premium.Chat נותנת לכם קישור אישי שאפשר להפיל ברשתות חברתיות, בביו של <a href="../onlyfans/" class="autolink">OnlyFans</a> או ב-Linktree — ככה מתקשרים מוצאים אתכם.</p></div><div class="tip-card"><h3>שכבות רק אם שימושיות</h3><p>לשיחות 1-על-1, שכבות כבדות מסיחות את הדעת. השתמשו ב-SplitCam לאיכות המצלמה, התאורה והרקע — שמרו על המסך בעיקר עליכם.</p></div><div class="tip-card"><h3>עשו בדיקה פרטית קודם</h3><p>הריצו שידור בדיקה קצר כדי לבדוק מצלמה, אודיו, מסגור ושכבות לפני שאתם פותחים את החדר לצופים.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">שלב אחר שלב</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">הורידו והתקינו SplitCam</div><p class="step-p">‏SplitCam היא תוכנת שידור חי חינמית ל-Windows ול-macOS — ללא הרשמה, ללא כרטיס, ללא סימן מים. היא מתקינה מצלמה וירטואלית שהדפדפן יכול להשתמש בה.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">הגדירו את הסצנה לשיחות</div><p class="step-p">פתחו SplitCam, הוסיפו את המצלמה, הגדירו את האור, אופציונלית הוסיפו רקע AI או שכבה עדינה. שמרו על מסגור נקי — זו שיחה בתשלום, לא במה.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">קבעו את התעריף שלכם ב-Premium.Chat</div><p class="step-p">התחברו ל-Premium.Chat, קבעו את התעריף לדקה לשיחות וידאו והעתיקו את הקישור האישי שלכם. שתפו אותו ברשתות או בביו.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">קבלו את שיחת הווידאו הנכנסת</div><p class="step-p">כשלקוח משלם על זמן, בקשת השיחה מגיעה. קבלו אותה בלוח הבקרה של Premium.Chat.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">בחרו ב-SplitCam כמצלמה</div><p class="step-p">בתפריט סמל המצלמה של חלון השיחה, החליפו מהוובקאם המובנה ל-<strong>SplitCam</strong>. הסצנה הערוכה שלכם מגיעה כעת למתקשר.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">טיפים מקצועיים</h2><div class="tips-grid"><div class="tip-card"><h3>‏Premium.Chat היא לפי דקה, לא שידור</h3><p>בניגוד לחדרי טיפים בסגנון <a href="../chaturbate/" class="autolink">Chaturbate</a>, אתם מקבלים תשלום לפי דקה. תאורה רכה, אודיו ברור ורקע AI נראים יותר כמו ייעוץ פרימיום מאשר קאם ציבורי.</p></div><div class="tip-card"><h3>קדמו את הקישור שלכם, לא פרופיל</h3><p>‏Premium.Chat נותנת לכם קישור אישי שאפשר להפיל ברשתות חברתיות, בביו של <a href="../onlyfans/" class="autolink">OnlyFans</a> או ב-Linktree — ככה מתקשרים מוצאים אתכם.</p></div><div class="tip-card"><h3>שכבות רק אם שימושיות</h3><p>לשיחות 1-על-1, שכבות כבדות מסיחות את הדעת. השתמשו ב-SplitCam לאיכות המצלמה, התאורה והרקע — שמרו על המסך בעיקר עליכם.</p></div><div class="tip-card"><h3>עשו בדיקה פרטית קודם</h3><p>הריצו שידור בדיקה קצר כדי לבדוק מצלמה, אודיו, מסגור ושכבות לפני שאתם פותחים את החדר לצופים.</p></div></div></section>
 <section class="section"><h2 class="sec-h">פתרון בעיות</h2><div class="faq-list"><details class="faq-item"><summary>השידור ב-Premium.Chat נתקע או באפרינג</summary><p>כמעט תמיד הביטרייט מוגדר גבוה ממה שההעלאה שלכם נושאת. הריצו את בדיקת המהירות המובנית של SplitCam, ואז הגדירו ביטרייט לכ-75% מההעלאה הנמדדת — 3,500–6,000&nbsp;Kbps ל-1080p, נמוך יותר ל-720p. התקיעות נעלמת ברגע שהמקודד מפסיק לחרוג מהקו שלכם.</p></details><details class="faq-item"><summary>פריימים שאבדו במהלך שידור Premium.Chat</summary><p>פריימים שאבדו פירושם שחבילות לא מגיעות ל-Premium.Chat בזמן — בדרך כלל Wi-Fi לא יציב. עברו ל-Ethernet קווי, סגרו אפליקציות שאוכלות רוחב פס והורידו מעט את הביטרייט. קפיצה בודדת לא נורא; עלייה מתמשכת פירושה שהקו לא עומד בקצב.</p></details><details class="faq-item"><summary>מסך שחור — הצופים לא רואים וידאו ב-Premium.Chat</summary><p>המצלמה שלכם לא נבחרה כמקור פעיל ב-SplitCam, או שאפליקציה אחרת מחזיקה אותה. סגרו Zoom, Skype או OBS, בחרו שוב את המצלמה ברשימת המקורות של SplitCam וודאו שהתצוגה המקדימה מציגה את התמונה לפני לחיצה על Go Live.</p></details><details class="faq-item"><summary>Premium.Chat דוחה את מפתח השידור או לא מתחבר</summary><p>העתיקו שוב את מפתח השידור — רווח בסוף או מפתח ישן שאופס הם הסיבות הנפוצות. ודאו ש-URL השרת תואם למה ש-Premium.Chat מציג וששידור במקודד חיצוני מופעל בחשבון. המחוון הירוק ב-Stream Settings של SplitCam מאשר מפתח תקף.</p></details><details class="faq-item"><summary>אין אודיו או אודיו לא מסונכרן ב-Premium.Chat</summary><p>בחרו SplitCam גם כמצלמה וגם כמיקרופון, ובחרו את המיקרופון האמיתי שלכם בתוך מקור האודיו של SplitCam. אם האודיו מפגר אחרי הווידאו, הורידו את הרזולוציה ברמה אחת — המקודד עמוס מדי והאודיו מחכה לפריימים מאוחרים.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">שאלות נפוצות</h2>

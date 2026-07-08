@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Отговор</a>
-  <a href="#steps">Стъпки</a>
-  <a href="#tips">Съвети</a>
-  <a href="#faq">ЧЗВ</a>
-  <a href="#related">Подобни ръководства</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Отговор</a><a href="#steps">Стъпки</a><a href="#tips">Съвети</a><a href="#faq">ЧЗВ</a><a href="#related">Подобни ръководства</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Накратко</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Видео ръководство</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/i0CN1q-yLK4" title="Как да излъчваш в StreamRay със SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Стъпка по стъпка</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Изтегли и инсталирай SplitCam</div><p class="step-p">SplitCam е безплатен софтуер за стрийминг за Windows и macOS. Изтегли го и пусни инсталатора — без регистрация, без карта, без воден знак, без времево ограничение. SplitCam е енкодерът, който изпраща видеото ти към StreamRay.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настрой камера и сцена</div><p class="step-p">Отвори SplitCam и добави уебкамерата. Изгради сцената така, както искаш зрителите да я видят — наслагвания, текст, втора камера или телефонът, бюти филтри или AI фон. Всичко се прилага на живо, преди потокът да напусне компютъра.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Вземи стрийм ключа на StreamRay</div><p class="step-p">В StreamRay двойно кликни <strong>Broadcast Now</strong>, отвори менюто <strong>Other</strong>, избери <strong>OBS Broadcaster</strong> и <strong>Save and Close</strong>. StreamRay тогава публикува <strong>URL на стрийма в прозореца на чата</strong> — копирай оттам. Остави полето за stream key на SplitCam <strong>празно</strong>; StreamRay удостоверява само чрез URL.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Свържи SplitCam към StreamRay</div><p class="step-p">В SplitCam отвори <strong>Stream Settings</strong>, постави URL-а на сървъра и стрийм ключа на StreamRay в полетата за custom RTMP. Битрейт: 3500–6000&nbsp;Kbps за 1080p, 2000–4000&nbsp;Kbps за 720p. Първо пусни вградения тест за скорост.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Натисни Go Live</div><p class="step-p">Натисни <strong>Go Live</strong> в SplitCam, после стартирай излъчването на StreamRay. След ~10 секунди камерата е в ефир. Следващите трансляции тръгват с един клик — отваряш SplitCam, Go Live.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Съвети</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>URL е в чата</h3><p>StreamRay не показва URL на стрийма в кутийка за настройки — публикува го в прозореца на чата на излъчването. Копирай оттам.</p></div><div class="tip-card"><h3>Остави полето за ключ празно</h3><p>StreamRay не използва отделен ключ — само URL. Не поставяй нищо в полето за ключ на SplitCam.</p></div><div class="tip-card"><h3>Използвай кабелна връзка</h3><p>Ethernet бие Wi-Fi в дълъг стрийм — загубен кадър е загубен тип. Прокарай кабел до стрийм компютъра.</p></div><div class="tip-card"><h3>Първо направи частен тест</h3><p>Пусни кратко тестово предаване за камера, звук, кадриране и наслагвания, преди да отвориш стаята за публика.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Стъпка по стъпка</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Изтегли и инсталирай SplitCam</div><p class="step-p">SplitCam е безплатен софтуер за стрийминг за Windows и macOS. Изтегли го и пусни инсталатора — без регистрация, без карта, без воден знак, без времево ограничение. SplitCam е енкодерът, който изпраща видеото ти към StreamRay.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Настрой камера и сцена</div><p class="step-p">Отвори SplitCam и добави уебкамерата. Изгради сцената така, както искаш зрителите да я видят — наслагвания, текст, втора камера или телефонът, бюти филтри или AI фон. Всичко се прилага на живо, преди потокът да напусне компютъра.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Вземи стрийм ключа на StreamRay</div><p class="step-p">В StreamRay двойно кликни <strong>Broadcast Now</strong>, отвори менюто <strong>Other</strong>, избери <strong>OBS Broadcaster</strong> и <strong>Save and Close</strong>. StreamRay тогава публикува <strong>URL на стрийма в прозореца на чата</strong> — копирай оттам. Остави полето за stream key на SplitCam <strong>празно</strong>; StreamRay удостоверява само чрез URL.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Свържи SplitCam към StreamRay</div><p class="step-p">В SplitCam отвори <strong>Stream Settings</strong>, постави URL-а на сървъра и стрийм ключа на StreamRay в полетата за custom RTMP. Битрейт: 3500–6000&nbsp;Kbps за 1080p, 2000–4000&nbsp;Kbps за 720p. Първо пусни вградения тест за скорост.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Натисни Go Live</div><p class="step-p">Натисни <strong>Go Live</strong> в SplitCam, после стартирай излъчването на StreamRay. След ~10 секунди камерата е в ефир. Следващите трансляции тръгват с един клик — отваряш SplitCam, Go Live.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Съвети</h2><div class="tips-grid"><div class="tip-card"><h3>URL е в чата</h3><p>StreamRay не показва URL на стрийма в кутийка за настройки — публикува го в прозореца на чата на излъчването. Копирай оттам.</p></div><div class="tip-card"><h3>Остави полето за ключ празно</h3><p>StreamRay не използва отделен ключ — само URL. Не поставяй нищо в полето за ключ на SplitCam.</p></div><div class="tip-card"><h3>Използвай кабелна връзка</h3><p>Ethernet бие Wi-Fi в дълъг стрийм — загубен кадър е загубен тип. Прокарай кабел до стрийм компютъра.</p></div><div class="tip-card"><h3>Първо направи частен тест</h3><p>Пусни кратко тестово предаване за камера, звук, кадриране и наслагвания, преди да отвориш стаята за публика.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Решаване на проблеми</h2><div class="faq-list"><details class="faq-item"><summary>Излъчването на StreamRay лагва или буферира</summary><p>Почти винаги битрейтът е по-висок, отколкото издържа аплоудът ти. Пусни вградения тест за скорост на SplitCam и задай битрейта на около 75% от измерения аплоуд — 3500–6000&nbsp;Kbps за 1080p, по-малко за 720p. Лагът изчезва, щом енкодерът спре да изпреварва връзката.</p></details><details class="faq-item"><summary>Изпуснати кадри по време на излъчване на StreamRay</summary><p>Изпуснатите кадри значат, че пакетите не стигат до StreamRay навреме — обикновено нестабилен Wi-Fi. Премини на кабелна Ethernet връзка, затвори приложения, които ядат трафик, и намали малко битрейта. Единичен скок е нормален; постоянно покачване значи, че връзката не смогва.</p></details><details class="faq-item"><summary>Черен екран — зрителите не виждат видео на StreamRay</summary><p>Камерата не е избрана като активен източник в SplitCam, или друго приложение я държи. Затвори Zoom, Skype или OBS, избери уебкамерата отново в списъка с източници на SplitCam и потвърди, че прегледът показва картина, преди да натиснеш Go Live.</p></details><details class="faq-item"><summary>StreamRay отхвърля стрийм ключа или не се свързва</summary><p>Копирай стрийм ключа отново — излишен интервал или стар, вече нулиран ключ е честата причина. Потвърди, че URL-ът на сървъра съвпада с показания от StreamRay и че излъчването през външен енкодер е активирано на акаунта ти. Зелен слайдер в Stream Settings на SplitCam потвърждава валиден ключ.</p></details><details class="faq-item"><summary>Няма звук или звукът е разсинхронизиран на StreamRay</summary><p>Избери SplitCam и като камера, и като микрофон, и задай реалния си микрофон като аудио източник в SplitCam. Ако звукът изостава от видеото, намали резолюцията с едно ниво — енкодерът е претоварен и звукът чака закъснели кадри.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Често задавани въпроси</h2>

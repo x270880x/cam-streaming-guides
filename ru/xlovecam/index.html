@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Кратко</a>
-  <a href="#steps">Пошагово</a>
-  <a href="#tips">Советы</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Похожие гайды</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Кратко</a><a href="#steps">Пошагово</a><a href="#tips">Советы</a><a href="#faq">FAQ</a><a href="#related">Похожие гайды</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Коротко</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Видео-гайд</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/myrur7zCHak" title="Как вести трансляцию на XLoveCam через SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Пошагово</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на XLoveCam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Соберите сцену</div><p class="step-p">Добавьте веб-камеру, накладки и понятную текстовую накладку на вашем языке — аудитория XLoveCam европейская и многоязычная.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции XLoveCam</div><p class="step-p">На XLoveCam откройте <strong>My Account</strong> → <strong>settings</strong>. В настройках есть и <strong>RTMP-ссылка</strong>, и <strong>ключ трансляции</strong> — скопируйте оба в поля URL сервера и ключа SplitCam, затем нажмите <strong>Start your show</strong> на XLoveCam.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Вставьте ссылку и ключ XLoveCam</div><p class="step-p">Скопируйте RTMP-ссылку и отдельный ключ из My Account → settings в SplitCam. Выберите ближайший региональный сервер, чтобы снизить задержку.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите Go Live в SplitCam, затем используйте Start your show на XLoveCam.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Советы</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Копируйте и ссылку, и ключ</h3><p>XLoveCam даёт RTMP-ссылку И отдельный ключ — нужны оба в SplitCam, не только что-то одно.</p></div><div class="tip-card"><h3>Берите ближайший сервер</h3><p>XLoveCam даёт региональные серверы приёма — Европа (Нидерланды, Румыния), Северная и Южная Америка, Азия. Ближайший снижает задержку.</p></div><div class="tip-card"><h3>Многоязычная аудитория</h3><p>XLoveCam европейская и многоязычная — понятная текстовая накладка на вашем языке помогает зрителям вас найти.</p></div><div class="tip-card"><h3>Провод лучше Wi-Fi</h3><p>Выбрав ближайший сервер XLoveCam, вторую половину стабильного потока обеспечивает проводное подключение — оно не даёт кадрам теряться на долгом шоу.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Пошагово</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Скачайте и установите SplitCam</div><p class="step-p">SplitCam — бесплатная программа для трансляций на Windows и macOS. Скачайте и запустите установщик — без регистрации, без водяного знака, без ограничения по времени. Именно SplitCam отправляет видео на XLoveCam.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Соберите сцену</div><p class="step-p">Добавьте веб-камеру, накладки и понятную текстовую накладку на вашем языке — аудитория XLoveCam европейская и многоязычная.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Получите ключ трансляции XLoveCam</div><p class="step-p">На XLoveCam откройте <strong>My Account</strong> → <strong>settings</strong>. В настройках есть и <strong>RTMP-ссылка</strong>, и <strong>ключ трансляции</strong> — скопируйте оба в поля URL сервера и ключа SplitCam, затем нажмите <strong>Start your show</strong> на XLoveCam.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Вставьте ссылку и ключ XLoveCam</div><p class="step-p">Скопируйте RTMP-ссылку и отдельный ключ из My Account → settings в SplitCam. Выберите ближайший региональный сервер, чтобы снизить задержку.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Нажмите Go Live</div><p class="step-p">Нажмите Go Live в SplitCam, затем используйте Start your show на XLoveCam.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Советы</h2><div class="tips-grid"><div class="tip-card"><h3>Копируйте и ссылку, и ключ</h3><p>XLoveCam даёт RTMP-ссылку И отдельный ключ — нужны оба в SplitCam, не только что-то одно.</p></div><div class="tip-card"><h3>Берите ближайший сервер</h3><p>XLoveCam даёт региональные серверы приёма — Европа (Нидерланды, Румыния), Северная и Южная Америка, Азия. Ближайший снижает задержку.</p></div><div class="tip-card"><h3>Многоязычная аудитория</h3><p>XLoveCam европейская и многоязычная — понятная текстовая накладка на вашем языке помогает зрителям вас найти.</p></div><div class="tip-card"><h3>Провод лучше Wi-Fi</h3><p>Выбрав ближайший сервер XLoveCam, вторую половину стабильного потока обеспечивает проводное подключение — оно не даёт кадрам теряться на долгом шоу.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Решение проблем</h2><div class="faq-list"><details class="faq-item"><summary>Трансляция на XLoveCam лагает или буферизует</summary><p>Почти всегда битрейт выше, чем тянет ваш аплоад. Запустите встроенный тест скорости SplitCam и выставьте битрейт примерно на 75% от измеренного аплоада — 3500–6000&nbsp;Кбит/с для 1080p, ниже для 720p. Лаги уходят, как только энкодер перестаёт обгонять соединение.</p></details><details class="faq-item"><summary>Потеря кадров во время эфира на XLoveCam</summary><p>Потеря кадров значит, что пакеты не доходят до XLoveCam вовремя — обычно нестабильный Wi-Fi. Перейдите на проводной Ethernet, закройте программы, жрущие канал, и чуть снизьте битрейт. Единичный скачок — норма; устойчивый рост значит, что соединение не справляется.</p></details><details class="faq-item"><summary>Чёрный экран — зрители не видят видео на XLoveCam</summary><p>Камера не выбрана активным источником в SplitCam, или её держит другая программа. Закройте Zoom, Skype или OBS, выберите веб-камеру заново в списке источников SplitCam и убедитесь, что превью показывает картинку до нажатия Go Live.</p></details><details class="faq-item"><summary>XLoveCam не принимает ключ трансляции или не подключается</summary><p>Скопируйте ключ заново — обычно причина в лишнем пробеле или старом, уже сброшенном ключе. Проверьте, что URL сервера совпадает с показанным в XLoveCam и что вещание через внешний энкодер включено на аккаунте. Зелёный слайдер в Настройках трансляции SplitCam подтверждает валидный ключ.</p></details><details class="faq-item"><summary>Нет звука или звук рассинхронизирован на XLoveCam</summary><p>Выберите SplitCam и как камеру, и как микрофон, а внутри SplitCam укажите ваш реальный микрофон источником звука. Если звук отстаёт от видео, снизьте разрешение на ступень — энкодер перегружен и звук ждёт опаздывающие кадры.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Вопросы и ответы</h2>

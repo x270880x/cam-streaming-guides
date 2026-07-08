@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Одговор</a>
-  <a href="#steps">Кораци</a>
-  <a href="#tips">Савети</a>
-  <a href="#faq">ЧПП</a>
-  <a href="#related">Слични водичи</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Одговор</a><a href="#steps">Кораци</a><a href="#tips">Савети</a><a href="#faq">ЧПП</a><a href="#related">Слични водичи</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Укратко</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Видео водич</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/QJPwJHVbYio" title="Како преносиш на BongaCams-у са SplitCam-ом" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Корак по корак</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Преузми и инсталирај SplitCam</div><p class="step-p">SplitCam је бесплатан софтвер за стриминг за Windows и macOS. Преузми га и покрени инсталер — без регистрације, без картице, без воденог жига, без временског ограничења. SplitCam је енкодер који шаље твој видео ка BongaCams.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Подеси камеру и сцену</div><p class="step-p">Отвори SplitCam и додај веб камеру. Изгради сцену онако како желиш да је гледаоци виде — преклапања, текст, друга камера или телефон, бјути филтери или AI позадина. Све се примењује уживо пре него што стрим оде са рачунара.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Узми свој BongaCams стрим кључ</div><p class="step-p">На BongaCams-у отвори <strong>Options</strong> → <strong>Broadcast settings</strong> → <strong>Select Encoder</strong> → <strong>External Encoder</strong> и копирај приказани сервер URL и stream key. <strong>Ако дугме External Encoder недостаје</strong>, контактирај BongaCams подршку и тражи активирање спољног кодирања на налогу.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Повежи SplitCam са BongaCams</div><p class="step-p">У SplitCam-у отвори <strong>Stream Settings</strong>, налепи URL сервера и стрим кључ платформе BongaCams у custom RTMP поља. Bitrate: 3.500–6.000&nbsp;Kbps за 1080p, 2.000–4.000&nbsp;Kbps за 720p. Прво покрени уграђени тест брзине.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Кликни Go Live</div><p class="step-p">Притисни <strong>Go Live</strong> у SplitCam-у, затим покрени пренос на BongaCams. За ~10 секунди камера је уживо. Наредни стримови крећу једним кликом — отвориш SplitCam, Go Live.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Савети</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Нема External Encoder дугмета? Подршка</h3><p>BongaCams активира спољно кодирање по налогу — ако опција недостаје у Broadcast settings, подршка га активира.</p></div><div class="tip-card"><h3>Усклади резолуцију</h3><p>BongaCams препоручује да резолуција веб камере и преноса се поклапају — нпр. обе 1280×720.</p></div><div class="tip-card"><h3>Користи каблену везу</h3><p>Етернет туче Wi-Fi у дугом стриму — изгубљени фрејм је изгубљен тип. Провуци кабл до стрим рачунара.</p></div><div class="tip-card"><h3>Прво уради приватни тест</h3><p>Покрени кратак тест пренос за камеру, звук, кадрирање и преклапања пре него отвориш собу публици.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Корак по корак</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Преузми и инсталирај SplitCam</div><p class="step-p">SplitCam је бесплатан софтвер за стриминг за Windows и macOS. Преузми га и покрени инсталер — без регистрације, без картице, без воденог жига, без временског ограничења. SplitCam је енкодер који шаље твој видео ка BongaCams.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Подеси камеру и сцену</div><p class="step-p">Отвори SplitCam и додај веб камеру. Изгради сцену онако како желиш да је гледаоци виде — преклапања, текст, друга камера или телефон, бјути филтери или AI позадина. Све се примењује уживо пре него што стрим оде са рачунара.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Узми свој BongaCams стрим кључ</div><p class="step-p">На BongaCams-у отвори <strong>Options</strong> → <strong>Broadcast settings</strong> → <strong>Select Encoder</strong> → <strong>External Encoder</strong> и копирај приказани сервер URL и stream key. <strong>Ако дугме External Encoder недостаје</strong>, контактирај BongaCams подршку и тражи активирање спољног кодирања на налогу.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Повежи SplitCam са BongaCams</div><p class="step-p">У SplitCam-у отвори <strong>Stream Settings</strong>, налепи URL сервера и стрим кључ платформе BongaCams у custom RTMP поља. Bitrate: 3.500–6.000&nbsp;Kbps за 1080p, 2.000–4.000&nbsp;Kbps за 720p. Прво покрени уграђени тест брзине.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Кликни Go Live</div><p class="step-p">Притисни <strong>Go Live</strong> у SplitCam-у, затим покрени пренос на BongaCams. За ~10 секунди камера је уживо. Наредни стримови крећу једним кликом — отвориш SplitCam, Go Live.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Савети</h2><div class="tips-grid"><div class="tip-card"><h3>Нема External Encoder дугмета? Подршка</h3><p>BongaCams активира спољно кодирање по налогу — ако опција недостаје у Broadcast settings, подршка га активира.</p></div><div class="tip-card"><h3>Усклади резолуцију</h3><p>BongaCams препоручује да резолуција веб камере и преноса се поклапају — нпр. обе 1280×720.</p></div><div class="tip-card"><h3>Користи каблену везу</h3><p>Етернет туче Wi-Fi у дугом стриму — изгубљени фрејм је изгубљен тип. Провуци кабл до стрим рачунара.</p></div><div class="tip-card"><h3>Прво уради приватни тест</h3><p>Покрени кратак тест пренос за камеру, звук, кадрирање и преклапања пре него отвориш собу публици.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Решавање проблема</h2><div class="faq-list"><details class="faq-item"><summary>Твој пренос на BongaCams лагује или баферује</summary><p>Готово увек је битрејт виши него што твој аплоуд издржава. Покрени уграђени тест брзине SplitCam-а и постави битрејт на око 75% измереног аплоуда — 3500–6000&nbsp;Kbps за 1080p, мање за 720p. Лаг нестаје чим енкодер престане да престиже твоју везу.</p></details><details class="faq-item"><summary>Изгубљени фрејмови током преноса на BongaCams</summary><p>Изгубљени фрејмови значе да пакети не стижу до BongaCams на време — обично нестабилан Wi-Fi. Пређи на кабловску Ethernet везу, затвори апликације које троше проток и мало смањи битрејт. Један скок је у реду; стални пораст значи да веза не може да испрати.</p></details><details class="faq-item"><summary>Црн екран — гледаоци не виде видео на BongaCams</summary><p>Камера није изабрана као активни извор у SplitCam-у, или је друга апликација држи. Затвори Zoom, Skype или OBS, поново изабери веб камеру у листи извора SplitCam-а и потврди да преглед приказује слику пре него притиснеш Go Live.</p></details><details class="faq-item"><summary>BongaCams одбија стрим кључ или се не повезује</summary><p>Поново копирај стрим кључ — сувишан размак или стар, већ ресетован кључ је честа узрок. Потврди да се URL сервера поклапа са оним који приказује BongaCams и да је пренос преко спољног енкодера укључен на налогу. Зелени слајдер у Stream Settings SplitCam-а потврђује важећи кључ.</p></details><details class="faq-item"><summary>Нема звука или звук није синхронизован на BongaCams</summary><p>Изабери SplitCam и као камеру и као микрофон, и постави свој прави микрофон као аудио извор у SplitCam-у. Ако звук касни за видеом, смањи резолуцију за једну степеницу — енкодер је преоптерећен и звук чека закаснеле фрејмове.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Честа питања</h2>

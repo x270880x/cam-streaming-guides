@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">คำตอบ</a>
-  <a href="#steps">ขั้นตอน</a>
-  <a href="#tips">เคล็ดลับ</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">ไกด์ที่เกี่ยวข้อง</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">คำตอบ</a><a href="#steps">ขั้นตอน</a><a href="#tips">เคล็ดลับ</a><a href="#faq">FAQ</a><a href="#related">ไกด์ที่เกี่ยวข้อง</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">คำตอบด่วน</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">ทีละขั้นตอน</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">ดาวน์โหลดและติดตั้ง SplitCam</div><p class="step-p">SplitCam เป็นซอฟต์แวร์ถ่ายทอดสดฟรีสำหรับ Windows และ macOS — ไม่ต้องสมัคร ไม่ต้องใช้บัตร ไม่มีลายน้ำ ติดตั้ง virtual camera ที่เบราว์เซอร์เลือกได้</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">สร้างฉาก</div><p class="step-p">เปิด SplitCam และเพิ่มเว็บแคม ทับโอเวอร์เลย์ (เป็นภาษาญี่ปุ่น — 「投げ銭」「PPV解放」 สำหรับผู้ชม) กล้องที่สองหรือมือถือ ฟิลเตอร์ความงาม หรือพื้นหลัง AI</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">เริ่มไลฟ์บน MyFans.jp</div><p class="step-p">ล็อกอินบัญชีครีเอเตอร์ MyFans และเปิดเครื่องมือถ่ายทอดไลฟ์ (配信) เพื่อเริ่มสตรีมให้สมาชิก</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">เลือก SplitCam เป็นกล้อง</div><p class="step-p">ในเมนูกล้องของ MyFans เลือก <strong>SplitCam</strong> แทนเว็บแคมดิบ — ฉากที่ประกอบแล้วแทนที่กล้องแบบเรียบ (หรือวางคีย์สตรีมในช่อง RTMP กำหนดเองของ SplitCam หากมี)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">กด Go Live</div><p class="step-p">เริ่มถ่ายทอด — ฉาก SplitCam โอเวอร์เลย์ และฟิลเตอร์ส่งถึงสมาชิก MyFans</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">เคล็ดลับ</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>แพลตฟอร์มแฟนคลับที่ใหญ่ที่สุดของญี่ปุ่น</h3><p>MyFans เป็นแพลตฟอร์มสมัครสมาชิกครีเอเตอร์อันดับ 1 ของญี่ปุ่น ผู้ชมเป็นคนญี่ปุ่นโดยเฉพาะและจ่ายเป็น 円 (JPY) โอเวอร์เลย์ภาษาญี่ปุ่นและฉาก SplitCam ที่ขัดเกลาแปลงผู้ชมได้ดีกว่าเว็บแคมเปล่ามาก</p></div><div class="tip-card"><h3>Virtual camera ไม่ต้องใช้คีย์สตรีม</h3><p>ไลฟ์ในเบราว์เซอร์ยังได้ฉาก SplitCam เต็มรูปแบบ — กล้องที่สอง โอเวอร์เลย์ ฟิลเตอร์ความงาม หรือพื้นหลัง AI — โดยเลือก SplitCam เป็นเว็บแคม</p></div><div class="tip-card"><h3>ขายต่อ PPV ระหว่างไลฟ์</h3><p>MyFans สร้างขึ้นรอบ 投げ銭 (ทิป) และโพสต์แบบจ่ายเงิน โอเวอร์เลย์บนหน้าจอที่ระบุชื่อแพ็ก PPV หรือเป้าหมายทิปช่วยเพิ่มรายได้อย่างเห็นได้ชัดระหว่างไลฟ์</p></div><div class="tip-card"><h3>ทำการทดสอบส่วนตัวก่อน</h3><p>รันการถ่ายทอดทดสอบสั้นๆ เพื่อตรวจสอบกล้อง เสียง การจัดเฟรม และโอเวอร์เลย์ก่อนเปิดห้องให้ผู้ชม</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">ทีละขั้นตอน</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">ดาวน์โหลดและติดตั้ง SplitCam</div><p class="step-p">SplitCam เป็นซอฟต์แวร์ถ่ายทอดสดฟรีสำหรับ Windows และ macOS — ไม่ต้องสมัคร ไม่ต้องใช้บัตร ไม่มีลายน้ำ ติดตั้ง virtual camera ที่เบราว์เซอร์เลือกได้</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">สร้างฉาก</div><p class="step-p">เปิด SplitCam และเพิ่มเว็บแคม ทับโอเวอร์เลย์ (เป็นภาษาญี่ปุ่น — 「投げ銭」「PPV解放」 สำหรับผู้ชม) กล้องที่สองหรือมือถือ ฟิลเตอร์ความงาม หรือพื้นหลัง AI</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">เริ่มไลฟ์บน MyFans.jp</div><p class="step-p">ล็อกอินบัญชีครีเอเตอร์ MyFans และเปิดเครื่องมือถ่ายทอดไลฟ์ (配信) เพื่อเริ่มสตรีมให้สมาชิก</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">เลือก SplitCam เป็นกล้อง</div><p class="step-p">ในเมนูกล้องของ MyFans เลือก <strong>SplitCam</strong> แทนเว็บแคมดิบ — ฉากที่ประกอบแล้วแทนที่กล้องแบบเรียบ (หรือวางคีย์สตรีมในช่อง RTMP กำหนดเองของ SplitCam หากมี)</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">กด Go Live</div><p class="step-p">เริ่มถ่ายทอด — ฉาก SplitCam โอเวอร์เลย์ และฟิลเตอร์ส่งถึงสมาชิก MyFans</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">เคล็ดลับ</h2><div class="tips-grid"><div class="tip-card"><h3>แพลตฟอร์มแฟนคลับที่ใหญ่ที่สุดของญี่ปุ่น</h3><p>MyFans เป็นแพลตฟอร์มสมัครสมาชิกครีเอเตอร์อันดับ 1 ของญี่ปุ่น ผู้ชมเป็นคนญี่ปุ่นโดยเฉพาะและจ่ายเป็น 円 (JPY) โอเวอร์เลย์ภาษาญี่ปุ่นและฉาก SplitCam ที่ขัดเกลาแปลงผู้ชมได้ดีกว่าเว็บแคมเปล่ามาก</p></div><div class="tip-card"><h3>Virtual camera ไม่ต้องใช้คีย์สตรีม</h3><p>ไลฟ์ในเบราว์เซอร์ยังได้ฉาก SplitCam เต็มรูปแบบ — กล้องที่สอง โอเวอร์เลย์ ฟิลเตอร์ความงาม หรือพื้นหลัง AI — โดยเลือก SplitCam เป็นเว็บแคม</p></div><div class="tip-card"><h3>ขายต่อ PPV ระหว่างไลฟ์</h3><p>MyFans สร้างขึ้นรอบ 投げ銭 (ทิป) และโพสต์แบบจ่ายเงิน โอเวอร์เลย์บนหน้าจอที่ระบุชื่อแพ็ก PPV หรือเป้าหมายทิปช่วยเพิ่มรายได้อย่างเห็นได้ชัดระหว่างไลฟ์</p></div><div class="tip-card"><h3>ทำการทดสอบส่วนตัวก่อน</h3><p>รันการถ่ายทอดทดสอบสั้นๆ เพื่อตรวจสอบกล้อง เสียง การจัดเฟรม และโอเวอร์เลย์ก่อนเปิดห้องให้ผู้ชม</p></div></div></section>
 <section class="section"><h2 class="sec-h">การแก้ไขปัญหา</h2><div class="faq-list"><details class="faq-item"><summary>สตรีม MyFans.jp ของคุณกระตุกหรือบัฟเฟอร์</summary><p>เกือบทุกครั้งบิตเรตสูงกว่าที่อัปโหลดของคุณรับไหว รันการทดสอบความเร็วในตัวของ SplitCam แล้วตั้งบิตเรตที่ประมาณ 75% ของอัปโหลดที่วัดได้ — 3,500–6,000&nbsp;Kbps สำหรับ 1080p ต่ำกว่าสำหรับ 720p อาการกระตุกจะหายไปเมื่อ encoder หยุดวิ่งแซงการเชื่อมต่อของคุณ</p></details><details class="faq-item"><summary>เฟรมหลุดระหว่างการถ่ายทอดบน MyFans.jp</summary><p>เฟรมหลุดหมายความว่าแพ็กเก็ตไปไม่ถึง MyFans.jp ทันเวลา — มักเป็น Wi-Fi ไม่เสถียร เปลี่ยนเป็นการเชื่อมต่อ Ethernet แบบมีสาย ปิดแอปที่กินแบนด์วิดท์ และลดบิตเรตลงเล็กน้อย พีคครั้งเดียวไม่เป็นไร แต่การเพิ่มขึ้นต่อเนื่องหมายความว่าการเชื่อมต่อตามไม่ทัน</p></details><details class="faq-item"><summary>จอดำ — ผู้ชมไม่เห็นวิดีโอบน MyFans.jp</summary><p>กล้องของคุณไม่ได้ถูกเลือกเป็นแหล่งที่ใช้งานใน SplitCam หรือมีแอปอื่นยึดไว้ ปิด Zoom, Skype หรือ OBS เลือกเว็บแคมใหม่ในรายการแหล่งของ SplitCam และยืนยันว่าตัวอย่างแสดงภาพของคุณก่อนกด Go Live</p></details><details class="faq-item"><summary>MyFans.jp ปฏิเสธสตรีมคีย์หรือไม่เชื่อมต่อ</summary><p>คัดลอกสตรีมคีย์ใหม่ — ช่องว่างที่ท้ายหรือคีย์เก่าที่หมุนเปลี่ยนแล้วเป็นสาเหตุปกติ ยืนยันว่า URL เซิร์ฟเวอร์ตรงกับที่ MyFans.jp แสดง และเปิดใช้งานการถ่ายทอดผ่าน encoder ภายนอกในบัญชีของคุณแล้ว แถบเลื่อนสีเขียวใน Stream Settings ของ SplitCam ยืนยันว่าคีย์ถูกต้อง</p></details><details class="faq-item"><summary>ไม่มีเสียงหรือเสียงไม่ตรงกับภาพบน MyFans.jp</summary><p>เลือก SplitCam เป็นทั้งกล้องและไมโครโฟน และเลือกไมโครโฟนจริงของคุณในแหล่งเสียงของ SplitCam หากเสียงตามหลังวิดีโอ ลดความละเอียดลงหนึ่งระดับ — encoder ทำงานหนักเกินไปและเสียงกำลังรอเฟรมที่มาช้า</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">คำถามที่พบบ่อย</h2>

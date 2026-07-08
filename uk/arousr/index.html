@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Відповідь</a>
-  <a href="#steps">Кроки</a>
-  <a href="#tips">Поради</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Схожі гайди</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Відповідь</a><a href="#steps">Кроки</a><a href="#tips">Поради</a><a href="#faq">FAQ</a><a href="#related">Схожі гайди</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Швидка відповідь</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Покроково</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Завантажте та встановіть SplitCam</div><p class="step-p">SplitCam — безкоштовне ПЗ для прямих трансляцій для Windows і macOS — без реєстрації, без картки, без водяного знака. Він встановлює віртуальну камеру, яку бачить браузер.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Зберіть сцену</div><p class="step-p">Відкрийте SplitCam, додайте вебку, виставте світло, опційно додайте AI-фон чи beauty-фільтр. Тримайте інтимно — це платна сесія 1-на-1, а не публічна сцена.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Виставте тарифи на Arousr</div><p class="step-p">Увійдіть в Arousr, виставте тариф за повідомлення й за хвилину відео, переконайтеся, що профіль схвалено й запити можуть надходити.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Прийміть вхідний відеозапит</div><p class="step-p">Коли клієнт ініціює відеосесію із секстингу чи напряму, прийміть її в дашборді Arousr.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Оберіть SplitCam як камеру</div><p class="step-p">У списку камер вікна сесії перемкніться з вбудованої вебки на <strong>SplitCam</strong>. Ваша зібрана сцена тепер доходить до клієнта.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Поради для профі</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Сесії оплачуються за час</h3><p>Клієнти купують кредити поминутно (або за повідомлення для тексту). Якісне відео — добре світло, AI-фон, beauty-фільтр — окупає себе довшими сесіями.</p></div><div class="tip-card"><h3>Спочатку секстинг, потім апсейл на відео</h3><p>Більшість виторгу Arousr — це текст. Коротке відеопрев'ю під час секст-чату апсейлить клієнта до повноцінної відеосесії — там і вмикається поминутний тариф.</p></div><div class="tip-card"><h3>Сесії в мобільному ≠ десктоп</h3><p>Віртуальні камери працюють у браузерному відео на десктопі. Мобільний застосунок Arousr використовує камеру телефона напряму — той самий воркфлоу, інший інструмент.</p></div><div class="tip-card"><h3>Спершу зробіть приватний тест</h3><p>Проведіть коротку тестову трансляцію, щоб перевірити камеру, звук, кадрування та оверлеї, перш ніж відкривати кімнату для глядачів.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Покроково</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Завантажте та встановіть SplitCam</div><p class="step-p">SplitCam — безкоштовне ПЗ для прямих трансляцій для Windows і macOS — без реєстрації, без картки, без водяного знака. Він встановлює віртуальну камеру, яку бачить браузер.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Зберіть сцену</div><p class="step-p">Відкрийте SplitCam, додайте вебку, виставте світло, опційно додайте AI-фон чи beauty-фільтр. Тримайте інтимно — це платна сесія 1-на-1, а не публічна сцена.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Виставте тарифи на Arousr</div><p class="step-p">Увійдіть в Arousr, виставте тариф за повідомлення й за хвилину відео, переконайтеся, що профіль схвалено й запити можуть надходити.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Прийміть вхідний відеозапит</div><p class="step-p">Коли клієнт ініціює відеосесію із секстингу чи напряму, прийміть її в дашборді Arousr.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Оберіть SplitCam як камеру</div><p class="step-p">У списку камер вікна сесії перемкніться з вбудованої вебки на <strong>SplitCam</strong>. Ваша зібрана сцена тепер доходить до клієнта.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Поради для профі</h2><div class="tips-grid"><div class="tip-card"><h3>Сесії оплачуються за час</h3><p>Клієнти купують кредити поминутно (або за повідомлення для тексту). Якісне відео — добре світло, AI-фон, beauty-фільтр — окупає себе довшими сесіями.</p></div><div class="tip-card"><h3>Спочатку секстинг, потім апсейл на відео</h3><p>Більшість виторгу Arousr — це текст. Коротке відеопрев'ю під час секст-чату апсейлить клієнта до повноцінної відеосесії — там і вмикається поминутний тариф.</p></div><div class="tip-card"><h3>Сесії в мобільному ≠ десктоп</h3><p>Віртуальні камери працюють у браузерному відео на десктопі. Мобільний застосунок Arousr використовує камеру телефона напряму — той самий воркфлоу, інший інструмент.</p></div><div class="tip-card"><h3>Спершу зробіть приватний тест</h3><p>Проведіть коротку тестову трансляцію, щоб перевірити камеру, звук, кадрування та оверлеї, перш ніж відкривати кімнату для глядачів.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Усунення несправностей</h2><div class="faq-list"><details class="faq-item"><summary>Трансляція Arousr гальмує або буферизується</summary><p>Майже завжди бітрейт заданий вище, ніж витримає ваш аплоуд. Запустіть вбудований тест швидкості SplitCam, далі задайте бітрейт приблизно 75% від виміряного аплоуду — 3500–6000&nbsp;Кбіт/с для 1080p, нижче для 720p. Гальмування зникає, коли кодувальник перестає перевищувати ваш канал.</p></details><details class="faq-item"><summary>Втрата кадрів під час трансляції Arousr</summary><p>Втрата кадрів означає, що пакети не доходять до Arousr вчасно — зазвичай нестабільний Wi-Fi. Перейдіть на дротовий Ethernet, закрийте застосунки, що з'їдають канал, і трохи знизьте бітрейт. Один стрибок — це нічого; постійне зростання означає, що канал не встигає.</p></details><details class="faq-item"><summary>Чорний екран — глядачі не бачать відео на Arousr</summary><p>Ваша камера не вибрана як активне джерело у SplitCam, або її тримає інший застосунок. Закрийте Zoom, Skype чи OBS, виберіть вебкамеру знову у списку джерел SplitCam і переконайтеся, що попередній перегляд показує ваше зображення, перш ніж натиснути Go Live.</p></details><details class="faq-item"><summary>Arousr відхиляє ключ трансляції або не під&#x27;єднується</summary><p>Скопіюйте ключ трансляції знову — пробіл у кінці чи старий, скинутий ключ — найчастіші причини. Переконайтеся, що URL сервера збігається з тим, що показує Arousr, і що трансляція зовнішнім кодувальником увімкнена на акаунті. Зелений повзунок у Stream Settings SplitCam підтверджує дійсний ключ.</p></details><details class="faq-item"><summary>Немає звуку або звук розсинхронізований на Arousr</summary><p>Виберіть SplitCam камерою І мікрофоном, а в джерелі звуку SplitCam виберіть свій справжній мікрофон. Якщо звук відстає від відео, знизьте роздільну здатність на один рівень — кодувальник перевантажений, і звук чекає на запізнілі кадри.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Часті питання</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Vastaus</a>
-  <a href="#steps">Vaiheet</a>
-  <a href="#tips">Vinkit</a>
-  <a href="#faq">UKK</a>
-  <a href="#related">Aiheeseen liittyvät</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Vastaus</a><a href="#steps">Vaiheet</a><a href="#tips">Vinkit</a><a href="#faq">UKK</a><a href="#related">Aiheeseen liittyvät</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Lyhyesti</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Vaihe vaiheelta</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Lataa ja asenna SplitCam</div><p class="step-p">SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Rakenna näkymäsi</div><p class="step-p">Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, tip-valikko, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — kaikki livenä.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hae StripCamFunin URL + stream key</div><p class="step-p">Kirjaudu StripCamFunin malliDashboardiin, avaa <strong>External Encoder / OBS</strong> ja kopioi <strong>server URL</strong> ja <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Yhdistä SplitCam StripCamFuniin</div><p class="step-p">Avaa SplitCamissa <strong>Stream Settings → Custom RTMP</strong>, liitä URL ja stream key. Aseta 3 500–5 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikkaa Go Live</div><p class="step-p">Paina SplitCamissa <strong>Go Live</strong>, sitten käännä itsesi onlineksi StripCamFunin dashboardissa. Striimi laskeutuu julkiselle listalle noin 10 sekunnissa.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Vinkit</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Pienempi joukko, helpompi näkyvyys</h3><p>Tier-1-sivulla olet yksi tuhansista onlinena; StripCamFunissa lähettäjälista on lyhyt — viimeistelty SplitCam-näkymä erottuu etusivulla nopeammin.</p></div><div class="tip-card"><h3>Ristiinlähetä tavoittavuuden vuoksi</h3><p>Indie-cam-sivut sopivat hyvin yhteen multi-streamingin kanssa. Käytä SplitCamia lähettääksesi samanaikaisesti StripCamFuniin ja isompaan sivuun pitääksesi tippaajat molemmista pooleista.</p></div><div class="tip-card"><h3>Nojaa niche-tageihin</h3><p>Indie-yleisöt etsivät nichen mukaan enemmän kuin tähden mukaan. Spesifit tagit + nichen nimeävä näkymäoverlay vetää katsojia listalta.</p></div><div class="tip-card"><h3>Tee ensin yksityinen testi</h3><p>Aja lyhyt testilähetys kameran, äänen, rajauksen ja overlay-yhteyden tarkistamiseksi ennen huoneen avaamista yleisölle.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Vaihe vaiheelta</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Lataa ja asenna SplitCam</div><p class="step-p">SplitCam on ilmainen live-streaming-ohjelma Windowsille ja macOS:lle — ei rekisteröitymistä, ei korttia, ei vesileimaa.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Rakenna näkymäsi</div><p class="step-p">Avaa SplitCam ja lisää webkamera. Kerro päälle overlayt, tip-valikko, toinen kamera tai puhelin, kauneussuotimet tai AI-tausta — kaikki livenä.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hae StripCamFunin URL + stream key</div><p class="step-p">Kirjaudu StripCamFunin malliDashboardiin, avaa <strong>External Encoder / OBS</strong> ja kopioi <strong>server URL</strong> ja <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Yhdistä SplitCam StripCamFuniin</div><p class="step-p">Avaa SplitCamissa <strong>Stream Settings → Custom RTMP</strong>, liitä URL ja stream key. Aseta 3 500–5 000 Kbps, 1920×1080, 30 fps, 2 sekunnin keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikkaa Go Live</div><p class="step-p">Paina SplitCamissa <strong>Go Live</strong>, sitten käännä itsesi onlineksi StripCamFunin dashboardissa. Striimi laskeutuu julkiselle listalle noin 10 sekunnissa.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Vinkit</h2><div class="tips-grid"><div class="tip-card"><h3>Pienempi joukko, helpompi näkyvyys</h3><p>Tier-1-sivulla olet yksi tuhansista onlinena; StripCamFunissa lähettäjälista on lyhyt — viimeistelty SplitCam-näkymä erottuu etusivulla nopeammin.</p></div><div class="tip-card"><h3>Ristiinlähetä tavoittavuuden vuoksi</h3><p>Indie-cam-sivut sopivat hyvin yhteen multi-streamingin kanssa. Käytä SplitCamia lähettääksesi samanaikaisesti StripCamFuniin ja isompaan sivuun pitääksesi tippaajat molemmista pooleista.</p></div><div class="tip-card"><h3>Nojaa niche-tageihin</h3><p>Indie-yleisöt etsivät nichen mukaan enemmän kuin tähden mukaan. Spesifit tagit + nichen nimeävä näkymäoverlay vetää katsojia listalta.</p></div><div class="tip-card"><h3>Tee ensin yksityinen testi</h3><p>Aja lyhyt testilähetys kameran, äänen, rajauksen ja overlay-yhteyden tarkistamiseksi ennen huoneen avaamista yleisölle.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Vianmääritys</h2><div class="faq-list"><details class="faq-item"><summary>StripCamFun-striimisi pätkii tai puskuroi</summary><p>Lähes aina bitrate on korkeampi kuin uploadisi kestää. Aja SplitCamin sisäänrakennettu nopeustesti ja aseta bitrate noin 75 %:iin mitatusta uploadista — 3 500–6 000&nbsp;Kbps 1080p:lle, vähemmän 720p:lle. Pätkiminen loppuu, kun enkooderi lakkaa ohittamasta yhteyttäsi.</p></details><details class="faq-item"><summary>Pudonneita ruutuja StripCamFun-lähetyksen aikana</summary><p>Pudonneet ruudut tarkoittavat, etteivät paketit ehdi alustalle StripCamFun ajoissa — yleensä epävakaa Wi-Fi. Vaihda langalliseen Ethernet-yhteyteen, sulje kaistaa syövät sovellukset ja laske bitrateä hieman. Yksittäinen piikki on ok; tasainen nousu tarkoittaa, ettei yhteys pysy perässä.</p></details><details class="faq-item"><summary>Musta ruutu — katsojat eivät näe videota alustalla StripCamFun</summary><p>Kameraasi ei ole valittu aktiiviseksi lähteeksi SplitCamissa, tai toinen sovellus pitää sitä. Sulje Zoom, Skype tai OBS, valitse webkamera uudelleen SplitCamin lähdelistasta ja varmista, että esikatselu näyttää kuvasi ennen kuin painat Go Live.</p></details><details class="faq-item"><summary>StripCamFun hylkää striimiavaimen tai ei yhdistä</summary><p>Kopioi striimiavain uudelleen — loppuun jäänyt välilyönti tai vanha, jo vaihdettu avain on tavallinen syy. Varmista, että palvelimen URL vastaa alustan StripCamFun näyttämää ja että ulkoisen enkooderin lähetys on käytössä tililläsi. Vihreä liukusäädin SplitCamin Stream Settingsissä vahvistaa kelvollisen avaimen.</p></details><details class="faq-item"><summary>Ei ääntä tai ääni ei ole synkassa alustalla StripCamFun</summary><p>Valitse SplitCam sekä kameraksi että mikrofoniksi, ja valitse oikea mikrofonisi SplitCamin äänilähteeksi. Jos ääni jää videosta jälkeen, laske resoluutiota yksi pykälä — enkooderi on ylikuormittunut ja ääni odottaa myöhässä olevia ruutuja.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">UKK</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Svar</a>
-  <a href="#steps">Trinn</a>
-  <a href="#tips">Tips</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Relaterte guider</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Svar</a><a href="#steps">Trinn</a><a href="#tips">Tips</a><a href="#faq">FAQ</a><a href="#related">Relaterte guider</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Steg for steg</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Last ned og installer SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg scenen</div><p class="step-p">Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hent XCams-URL og stream key</div><p class="step-p">Logg inn på XCams-modellkontoen din, åpne <strong>broadcast / external encoder</strong>, og kopier <strong>server-URL</strong> og <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Koble SplitCam til XCams</div><p class="step-p">I SplitCam åpne <strong>Stream Settings</strong>, lim inn XCams-server-URL og stream key i custom RTMP-feltene. Sett 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikk Go Live</div><p class="step-p">Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra modell-området. Innen ~10 sekunder når strømmen ut til XCams' publikum.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Tips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Europeisk prime time</h3><p>XCams-trafikken topper seg på EU-kvelder (CET). Å sende i de timene slår off-peak betydelig på dette fellesskapet.</p></div><div class="tip-card"><h3>Private show belønner kvalitet</h3><p>XCams kjører på private/spy-show — en polert SplitCam-scene med overlays konverterer kikkere til betalte privatshow.</p></div><div class="tip-card"><h3>Ekstern enkoder låser opp scener</h3><p>Å rute gjennom SplitCams RTMP i stedet for nettleserkameraet muliggjør multi-kamera layouts, overlays og filtre.</p></div><div class="tip-card"><h3>Bruk kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang strøm — en tapt frame er en tapt tip. Trekk en kabel til stream-PC-en.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Steg for steg</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Last ned og installer SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-programvare for Windows og macOS — ingen registrering, ingen kort, intet vannmerke.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Bygg scenen</div><p class="step-p">Åpne SplitCam og legg til webkameraet. Legg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-bakgrunn oppå.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hent XCams-URL og stream key</div><p class="step-p">Logg inn på XCams-modellkontoen din, åpne <strong>broadcast / external encoder</strong>, og kopier <strong>server-URL</strong> og <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Koble SplitCam til XCams</div><p class="step-p">I SplitCam åpne <strong>Stream Settings</strong>, lim inn XCams-server-URL og stream key i custom RTMP-feltene. Sett 3 500–6 000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klikk Go Live</div><p class="step-p">Trykk <strong>Go Live</strong> i SplitCam, og gå deretter online fra modell-området. Innen ~10 sekunder når strømmen ut til XCams' publikum.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Tips</h2><div class="tips-grid"><div class="tip-card"><h3>Europeisk prime time</h3><p>XCams-trafikken topper seg på EU-kvelder (CET). Å sende i de timene slår off-peak betydelig på dette fellesskapet.</p></div><div class="tip-card"><h3>Private show belønner kvalitet</h3><p>XCams kjører på private/spy-show — en polert SplitCam-scene med overlays konverterer kikkere til betalte privatshow.</p></div><div class="tip-card"><h3>Ekstern enkoder låser opp scener</h3><p>Å rute gjennom SplitCams RTMP i stedet for nettleserkameraet muliggjør multi-kamera layouts, overlays og filtre.</p></div><div class="tip-card"><h3>Bruk kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang strøm — en tapt frame er en tapt tip. Trekk en kabel til stream-PC-en.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Feilsøking</h2><div class="faq-list"><details class="faq-item"><summary>XCams-strømmen din henger eller bufrer</summary><p>Nesten alltid er bitraten høyere enn opplastningen din takler. Kjør SplitCams innebygde hastighetstest og sett bitraten til omtrent 75% av målt opplastning — 3 500–6 000&nbsp;Kbps for 1080p, lavere for 720p. Hakkingen forsvinner så snart enkoderen slutter å overgå forbindelsen din.</p></details><details class="faq-item"><summary>Tapte frames under XCams-sendingen</summary><p>Tapte frames betyr at pakkene ikke når XCams i tide — som regel ustabilt Wi-Fi. Bytt til kablet Ethernet-tilkobling, lukk båndbredde-tunge apper og senk bitraten litt. Ett enkelt utslag er greit; en jevn økning betyr at forbindelsen ikke holder følge.</p></details><details class="faq-item"><summary>Svart skjerm — seerne ser ingen video på XCams</summary><p>Kameraet ditt er ikke valgt som aktiv kilde i SplitCam, eller en annen app holder på det. Lukk Zoom, Skype eller OBS, velg webkameraet på nytt i SplitCams kildeliste, og bekreft at forhåndsvisningen viser bildet ditt før du trykker Go Live.</p></details><details class="faq-item"><summary>XCams avviser strømnøkkelen eller kobler ikke til</summary><p>Kopier strømnøkkelen på nytt — et mellomrom til slutt eller en gammel, allerede byttet nøkkel er den vanlige årsaken. Bekreft at server-URL-en matcher den XCams viser, og at ekstern-enkoder-sending er aktivert på kontoen din. En grønn slider i SplitCams Stream Settings bekrefter en gyldig nøkkel.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ute av synk på XCams</summary><p>Velg SplitCam som både kamera og mikrofon, og velg den ekte mikrofonen din inne i SplitCams lydkilde. Hvis lyden henger etter videoen, senk oppløsningen ett hakk — enkoderen er overbelastet og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

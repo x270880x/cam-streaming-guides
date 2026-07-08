@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">速答</a>
-  <a href="#steps">步骤</a>
-  <a href="#tips">技巧</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">相关指南</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">速答</a><a href="#steps">步骤</a><a href="#tips">技巧</a><a href="#faq">FAQ</a><a href="#related">相关指南</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">快速回答</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">视频指南</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/mCUrXWoTYXM" title="如何使用 SplitCam 在 CamSoda 直播" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">分步指南</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">下载并安装 SplitCam</div><p class="step-p">SplitCam 是适用于 Windows 和 macOS 的免费直播软件。下载并运行安装程序——无需注册、无需信用卡、无水印、无时间限制。SplitCam 是将您的视频发送到 CamSoda 的编码器。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">设置摄像头和场景</div><p class="step-p">打开 SplitCam 并添加网络摄像头。按照您希望观众看到的方式构建场景——叠加层、文本、第二个摄像头或手机、美颜滤镜或 AI 背景。所有内容都在直播流离开 PC 之前实时应用。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">获取您的 CamSoda 直播密钥</div><p class="step-p">在 CamSoda 的 <strong>Go Live</strong> 页面点击 <strong>Use OBS Broadcaster</strong>。CamSoda 显示 RTMP 服务器 URL 和直播密钥 — 复制两者。选择离您最近的区域服务器（北美、欧洲、亚洲等）。CamSoda wiki 有完整的 OBS 指南供详细参考。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">将 SplitCam 连接到 CamSoda</div><p class="step-p">在 SplitCam 中打开 <strong>Stream Settings</strong>，将 CamSoda 服务器 URL 和直播密钥粘贴到自定义 RTMP 字段中。比特率：1080p 为 3,500–6,000&nbsp;Kbps，720p 为 2,000–4,000&nbsp;Kbps。先运行内置的速度测试。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">点击 Go Live</div><p class="step-p">在 SplitCam 中按 <strong>Go Live</strong>，然后在 CamSoda 上开始直播。约 10 秒内您的摄像头就会上线。后续直播只需一键——打开 SplitCam，点击 Go Live。</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">专业提示</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>验证以接收小费</h3><p>在 CamSoda，任何人都可以直播，但要接收小费您必须完成 CamSoda 的验证过程。</p></div><div class="tip-card"><h3>选择最近的区域服务器</h3><p>CamSoda 提供区域摄取服务器 — 最近的（NA / 欧洲 / 亚洲 / 南美 / 大洋洲）减少延迟和丢帧。</p></div><div class="tip-card"><h3>1080p / 30 fps 的上限</h3><p>CamSoda 的摄取最高约 1080p、30 fps 和约 6,000 Kbps — 不要强推更高。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">分步指南</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">下载并安装 SplitCam</div><p class="step-p">SplitCam 是适用于 Windows 和 macOS 的免费直播软件。下载并运行安装程序——无需注册、无需信用卡、无水印、无时间限制。SplitCam 是将您的视频发送到 CamSoda 的编码器。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">设置摄像头和场景</div><p class="step-p">打开 SplitCam 并添加网络摄像头。按照您希望观众看到的方式构建场景——叠加层、文本、第二个摄像头或手机、美颜滤镜或 AI 背景。所有内容都在直播流离开 PC 之前实时应用。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">获取您的 CamSoda 直播密钥</div><p class="step-p">在 CamSoda 的 <strong>Go Live</strong> 页面点击 <strong>Use OBS Broadcaster</strong>。CamSoda 显示 RTMP 服务器 URL 和直播密钥 — 复制两者。选择离您最近的区域服务器（北美、欧洲、亚洲等）。CamSoda wiki 有完整的 OBS 指南供详细参考。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">将 SplitCam 连接到 CamSoda</div><p class="step-p">在 SplitCam 中打开 <strong>Stream Settings</strong>，将 CamSoda 服务器 URL 和直播密钥粘贴到自定义 RTMP 字段中。比特率：1080p 为 3,500–6,000&nbsp;Kbps，720p 为 2,000–4,000&nbsp;Kbps。先运行内置的速度测试。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">点击 Go Live</div><p class="step-p">在 SplitCam 中按 <strong>Go Live</strong>，然后在 CamSoda 上开始直播。约 10 秒内您的摄像头就会上线。后续直播只需一键——打开 SplitCam，点击 Go Live。</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">专业提示</h2><div class="tips-grid"><div class="tip-card"><h3>验证以接收小费</h3><p>在 CamSoda，任何人都可以直播，但要接收小费您必须完成 CamSoda 的验证过程。</p></div><div class="tip-card"><h3>选择最近的区域服务器</h3><p>CamSoda 提供区域摄取服务器 — 最近的（NA / 欧洲 / 亚洲 / 南美 / 大洋洲）减少延迟和丢帧。</p></div><div class="tip-card"><h3>1080p / 30 fps 的上限</h3><p>CamSoda 的摄取最高约 1080p、30 fps 和约 6,000 Kbps — 不要强推更高。</p></div><div class="tip-card"><h3>使用有线连接</h3><p>长时间直播时以太网比 Wi-Fi 更稳定 — 丢失的帧就是丢失的小费。把网线拉到直播电脑。</p></div></div></section>
 <section class="section"><h2 class="sec-h">故障排除</h2><div class="faq-list"><details class="faq-item"><summary>您的 CamSoda 直播卡顿或缓冲</summary><p>几乎总是比特率高于您的上传所能承受的。运行 SplitCam 内置的速度测试，然后将比特率设为测得上传的约 75% — 1080p 为 3,500–6,000&nbsp;Kbps，720p 更低。一旦编码器不再超出您的连接，卡顿就会消失。</p></details><details class="faq-item"><summary>CamSoda 直播期间丢帧</summary><p>丢帧意味着数据包未能及时到达 CamSoda — 通常是 Wi-Fi 不稳定。改用有线以太网连接，关闭占用带宽的应用，并稍微降低比特率。单次峰值没问题；持续上升说明连接跟不上。</p></details><details class="faq-item"><summary>黑屏 — 观众在 CamSoda 上看不到视频</summary><p>您的摄像头未在 SplitCam 中被选为活动源，或被另一个应用占用。关闭 Zoom、Skype 或 OBS，在 SplitCam 的源列表中重新选择摄像头，并在按 Go Live 前确认预览显示您的画面。</p></details><details class="faq-item"><summary>CamSoda 拒绝直播密钥或无法连接</summary><p>重新复制直播密钥 — 末尾多余的空格或旧的、已轮换的密钥是常见原因。确认服务器 URL 与 CamSoda 显示的一致，并且您的账户已启用外部编码器直播。SplitCam Stream Settings 中的绿色滑块确认密钥有效。</p></details><details class="faq-item"><summary>CamSoda 上没有声音或声音不同步</summary><p>将 SplitCam 同时选为摄像头和麦克风，并在 SplitCam 的音频源中选择您的真实麦克风。如果音频落后于视频，将分辨率降低一档 — 编码器过载，音频在等待迟到的帧。</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">常见问题</h2>

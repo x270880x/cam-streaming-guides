@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Svar</a>
-  <a href="#steps">Trin</a>
-  <a href="#tips">Tips</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Relaterede guides</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Svar</a><a href="#steps">Trin</a><a href="#tips">Tips</a><a href="#faq">FAQ</a><a href="#related">Relaterede guides</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort fortalt</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Trin for trin</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download og installér SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Byg scenen</div><p class="step-p">Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hent Camversity-URL og stream key</div><p class="step-p">Log ind på din Camversity-performer-konto, åbn <strong>Performer Dashboard</strong>, naviger til <strong>Stream Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopiér begge.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Forbind SplitCam med Camversity</div><p class="step-p">I SplitCam åbn <strong>Stream Settings</strong>, indsæt Camversity-server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Performer Dashboard. Inden for ~10 sekunder når strømmen Camversity.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Tips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Performer-venlig split</h3><p>Camversitys revenue split er mere fordelagtig for performere end legacy-netværkenes — værd at sammenligne med din nuværende hovedplatform, hvis du er tidligt i din cam-karriere.</p></div><div class="tip-card"><h3>Lettere onboarding end Docler</h3><p>Verifikationen hos Camversity går hurtigere end LiveJasmins 48–72-timers godkendelse og er stadig seriøs (ingen tilfældige / uverificerede modeller). God mellemvej.</p></div><div class="tip-card"><h3>Byg en scene, ikke bare et webkamera</h3><p>Standardbroadcasteren i Performer Dashboard er single-kilde. SplitCam via External Encoder åbner for multi-kamera, overlays og beauty-filtre.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Trin for trin</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download og installér SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Byg scenen</div><p class="step-p">Åbn SplitCam og tilføj webkameraet. Læg overlays, tekst, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hent Camversity-URL og stream key</div><p class="step-p">Log ind på din Camversity-performer-konto, åbn <strong>Performer Dashboard</strong>, naviger til <strong>Stream Settings → External Encoder</strong>. Siden viser en <strong>server-URL</strong> og en unik <strong>stream key</strong>. Kopiér begge.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Forbind SplitCam med Camversity</div><p class="step-p">I SplitCam åbn <strong>Stream Settings</strong>, indsæt Camversity-server-URL og stream key i custom RTMP-felterne. Sæt bitrate til 3.500–6.000 Kbps ved 1920×1080, 30 fps, med 2 sekunders keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Performer Dashboard. Inden for ~10 sekunder når strømmen Camversity.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Tips</h2><div class="tips-grid"><div class="tip-card"><h3>Performer-venlig split</h3><p>Camversitys revenue split er mere fordelagtig for performere end legacy-netværkenes — værd at sammenligne med din nuværende hovedplatform, hvis du er tidligt i din cam-karriere.</p></div><div class="tip-card"><h3>Lettere onboarding end Docler</h3><p>Verifikationen hos Camversity går hurtigere end LiveJasmins 48–72-timers godkendelse og er stadig seriøs (ingen tilfældige / uverificerede modeller). God mellemvej.</p></div><div class="tip-card"><h3>Byg en scene, ikke bare et webkamera</h3><p>Standardbroadcasteren i Performer Dashboard er single-kilde. SplitCam via External Encoder åbner for multi-kamera, overlays og beauty-filtre.</p></div><div class="tip-card"><h3>Brug kabelforbindelse</h3><p>Ethernet slår Wi-Fi i en lang stream — en mistet frame er en mistet tip. Træk et kabel til stream-pc'en.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit Camversity-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under Camversity-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til Camversity i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på Camversity</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>Camversity afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Camversity viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på Camversity</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

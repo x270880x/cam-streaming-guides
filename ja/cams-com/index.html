@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">回答</a>
-  <a href="#steps">手順</a>
-  <a href="#tips">コツ</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">関連ガイド</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">回答</a><a href="#steps">手順</a><a href="#tips">コツ</a><a href="#faq">FAQ</a><a href="#related">関連ガイド</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">簡単な答え</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">ステップバイステップ</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCamをダウンロード・インストール</div><p class="step-p">SplitCamはWindowsとmacOS向けの無料配信ソフト — 登録なし、カードなし、透かしなし。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">シーンを構築</div><p class="step-p">SplitCamでウェブカメラを追加、オーバーレイ、チップメニュー、サブカメラやスマホ、美肌フィルター、AI背景をライブで重ねます。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Cams.comのURL+stream keyを取得</div><p class="step-p">Cams.com Model Centerにログインし、<strong>External Encoder ／ OBS</strong>タブを開いて<strong>サーバーURL</strong>と<strong>stream key</strong>をコピー。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCamをCams.comへ接続</div><p class="step-p">SplitCam → <strong>Stream Settings → カスタムRTMP</strong>でURLとkeyを貼り付け。1920×1080、30 fps、キーフレーム2秒で3,500〜5,000 Kbpsに設定。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Liveをクリック</div><p class="step-p">SplitCamで<strong>Go Live</strong>を押し、Model Centerからオンラインに切り替え。約10秒以内にCams.com／AFFネットワークの公開リストに表示されます。</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">プロのヒント</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>AFFクロストラフィック ＝ 支払い済み会員</h3><p>Cams.comはAdultFriendFinderアカウント（すでにカード登録済み）から視聴者を引きます — 新規登録層とは違い、プライベートやチップへの転換率が高めに出ます。</p></div><div class="tip-card"><h3>ブラウザよりも外部エンコーダー</h3><p>SplitCamからのRTMPはクリーンなビットレートとオーバーレイ込みのマルチカメラシーン構成を可能に — ブラウザブロードキャスターも動きますが演出は限られます。</p></div><div class="tip-card"><h3>プライベートショーの導線を活用</h3><p>Cams.comはプライベート／専用セッションが収益の核。チップメニューとオーバーレイ内のプライベート誘導が視聴者あたりの売上を大きく押し上げます。</p></div><div class="tip-card"><h3>まず非公開テストを実施</h3><p>観客に部屋を開く前に、カメラ、音声、構図、オーバーレイをチェックする短いテスト配信を実行。</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">ステップバイステップ</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCamをダウンロード・インストール</div><p class="step-p">SplitCamはWindowsとmacOS向けの無料配信ソフト — 登録なし、カードなし、透かしなし。</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">シーンを構築</div><p class="step-p">SplitCamでウェブカメラを追加、オーバーレイ、チップメニュー、サブカメラやスマホ、美肌フィルター、AI背景をライブで重ねます。</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Cams.comのURL+stream keyを取得</div><p class="step-p">Cams.com Model Centerにログインし、<strong>External Encoder ／ OBS</strong>タブを開いて<strong>サーバーURL</strong>と<strong>stream key</strong>をコピー。</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCamをCams.comへ接続</div><p class="step-p">SplitCam → <strong>Stream Settings → カスタムRTMP</strong>でURLとkeyを貼り付け。1920×1080、30 fps、キーフレーム2秒で3,500〜5,000 Kbpsに設定。</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Liveをクリック</div><p class="step-p">SplitCamで<strong>Go Live</strong>を押し、Model Centerからオンラインに切り替え。約10秒以内にCams.com／AFFネットワークの公開リストに表示されます。</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">プロのヒント</h2><div class="tips-grid"><div class="tip-card"><h3>AFFクロストラフィック ＝ 支払い済み会員</h3><p>Cams.comはAdultFriendFinderアカウント（すでにカード登録済み）から視聴者を引きます — 新規登録層とは違い、プライベートやチップへの転換率が高めに出ます。</p></div><div class="tip-card"><h3>ブラウザよりも外部エンコーダー</h3><p>SplitCamからのRTMPはクリーンなビットレートとオーバーレイ込みのマルチカメラシーン構成を可能に — ブラウザブロードキャスターも動きますが演出は限られます。</p></div><div class="tip-card"><h3>プライベートショーの導線を活用</h3><p>Cams.comはプライベート／専用セッションが収益の核。チップメニューとオーバーレイ内のプライベート誘導が視聴者あたりの売上を大きく押し上げます。</p></div><div class="tip-card"><h3>まず非公開テストを実施</h3><p>観客に部屋を開く前に、カメラ、音声、構図、オーバーレイをチェックする短いテスト配信を実行。</p></div></div></section>
 <section class="section"><h2 class="sec-h">トラブルシューティング</h2><div class="faq-list"><details class="faq-item"><summary>Cams.com の配信がカクつく・バッファリングする</summary><p>ほぼ常にビットレートがアップロードの限界を超えています。SplitCam の内蔵速度テストを実行し、ビットレートを測定したアップロードの約75%に設定してください — 1080pで3,500–6,000&nbsp;Kbps、720pはそれ以下。エンコーダーが接続を追い越さなくなればカクつきは消えます。</p></details><details class="faq-item"><summary>Cams.com 配信中のフレーム落ち</summary><p>フレーム落ちはパケットが Cams.com に間に合っていないこと — 通常は不安定なWi-Fiが原因です。有線Ethernet接続に切り替え、帯域を食うアプリを閉じ、ビットレートを少し下げてください。単発のスパイクは問題なし；継続的な増加は接続が追いつかないサインです。</p></details><details class="faq-item"><summary>黒い画面 — Cams.com で視聴者に映像が映らない</summary><p>カメラが SplitCam でアクティブソースとして選択されていないか、別のアプリが使用中です。Zoom、Skype、OBS を閉じ、SplitCam のソースリストでウェブカメラを選び直し、Go Live を押す前にプレビューに映像が表示されることを確認してください。</p></details><details class="faq-item"><summary>Cams.com がストリームキーを拒否する・接続しない</summary><p>ストリームキーをコピーし直してください — 末尾のスペースや古い、すでにローテートされたキーが通常の原因です。サーバーURLが Cams.com の表示と一致し、アカウントで外部エンコーダー配信が有効か確認してください。SplitCam の Stream Settings の緑のスライダーが有効なキーを確認します。</p></details><details class="faq-item"><summary>Cams.com で音声がない・音ズレする</summary><p>SplitCam をカメラとマイクの両方に選び、SplitCam の音声ソースで実際のマイクを選択してください。音声が映像から遅れる場合は解像度を1段下げてください — エンコーダーが過負荷で、音声が遅れたフレームを待っています。</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">よくある質問</h2>

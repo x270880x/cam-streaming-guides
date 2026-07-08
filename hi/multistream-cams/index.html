@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">उत्तर</a>
-  <a href="#steps">चरण</a>
-  <a href="#tips">टिप्स</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">संबंधित गाइड</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">उत्तर</a><a href="#steps">चरण</a><a href="#tips">टिप्स</a><a href="#faq">FAQ</a><a href="#related">संबंधित गाइड</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">त्वरित उत्तर</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">वीडियो गाइड</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/MWLSQKDQCY0" title="एक साथ कई कैम साइट्स पर स्ट्रीम कैसे करें" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">चरण दर चरण</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam इंस्टॉल करें</div><p class="step-p">SplitCam Windows और macOS के लिए मुफ़्त लाइव स्ट्रीमिंग सॉफ़्टवेयर है जिसमें multistream बिल्ट-इन है।</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">कैमरा और सीन सेट करें</div><p class="step-p">SplitCam खोलें, वेबकैम जोड़ें और ओवरले और फ़िल्टर के साथ सीन बनाएं।</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">हर कैम साइट से RTMP की प्राप्त करें</div><p class="step-p">हर कैम प्लेटफ़ॉर्म पर <strong>सर्वर URL</strong> और <strong>स्ट्रीम की</strong> कॉपी करें।</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam में हर डेस्टिनेशन जोड़ें</div><p class="step-p"><strong>Stream Settings</strong> खोलें और हर कैम साइट को कस्टम RTMP डेस्टिनेशन के रूप में जोड़ें।</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">एक बार Go Live क्लिक करें</div><p class="step-p"><strong>Go Live</strong> दबाएं। SplitCam एक एन्कोडिंग से हर चुनी हुई कैम साइट पर एक साथ स्ट्रीम भेजता है।</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">प्रो टिप्स</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>अपना अपलोड देखें</h3><p>Multistream अपलोड लोड को गुणा करता है। हर डेस्टिनेशन अपना बिटरेट उपयोग करता है।</p></div><div class="tip-card"><h3>प्लेटफ़ॉर्म नियम जांचें</h3><p>कुछ कैम साइट्स दूसरी जगह एक साथ स्ट्रीमिंग प्रतिबंधित करती हैं।</p></div><div class="tip-card"><h3>केबल — यहाँ गिरना नहीं चाहिए</h3><p>Multistream अपलोड लोड गुणा करता है, इसलिए एक Wi-Fi कट सभी डेस्टिनेशन एक साथ गिरा सकता है।</p></div><div class="tip-card"><h3>हेल्थ मॉनिटर देखें</h3><p>SplitCam हर डेस्टिनेशन का स्टेटस दिखाता है।</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">चरण दर चरण</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam इंस्टॉल करें</div><p class="step-p">SplitCam Windows और macOS के लिए मुफ़्त लाइव स्ट्रीमिंग सॉफ़्टवेयर है जिसमें multistream बिल्ट-इन है।</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">कैमरा और सीन सेट करें</div><p class="step-p">SplitCam खोलें, वेबकैम जोड़ें और ओवरले और फ़िल्टर के साथ सीन बनाएं।</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">हर कैम साइट से RTMP की प्राप्त करें</div><p class="step-p">हर कैम प्लेटफ़ॉर्म पर <strong>सर्वर URL</strong> और <strong>स्ट्रीम की</strong> कॉपी करें।</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam में हर डेस्टिनेशन जोड़ें</div><p class="step-p"><strong>Stream Settings</strong> खोलें और हर कैम साइट को कस्टम RTMP डेस्टिनेशन के रूप में जोड़ें।</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">एक बार Go Live क्लिक करें</div><p class="step-p"><strong>Go Live</strong> दबाएं। SplitCam एक एन्कोडिंग से हर चुनी हुई कैम साइट पर एक साथ स्ट्रीम भेजता है।</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">प्रो टिप्स</h2><div class="tips-grid"><div class="tip-card"><h3>अपना अपलोड देखें</h3><p>Multistream अपलोड लोड को गुणा करता है। हर डेस्टिनेशन अपना बिटरेट उपयोग करता है।</p></div><div class="tip-card"><h3>प्लेटफ़ॉर्म नियम जांचें</h3><p>कुछ कैम साइट्स दूसरी जगह एक साथ स्ट्रीमिंग प्रतिबंधित करती हैं।</p></div><div class="tip-card"><h3>केबल — यहाँ गिरना नहीं चाहिए</h3><p>Multistream अपलोड लोड गुणा करता है, इसलिए एक Wi-Fi कट सभी डेस्टिनेशन एक साथ गिरा सकता है।</p></div><div class="tip-card"><h3>हेल्थ मॉनिटर देखें</h3><p>SplitCam हर डेस्टिनेशन का स्टेटस दिखाता है।</p></div></div></section>
 <section class="section"><h2 class="sec-h">समस्या निवारण</h2><div class="faq-list"><details class="faq-item"><summary>Multiple Cam Sites स्ट्रीम रुक-रुक रही है या बफ़र हो रही है</summary><p>लगभग हमेशा बिटरेट आपके अपलोड से ज़्यादा सेट होता है। SplitCam का बिल्ट-इन स्पीड टेस्ट चलाएं, फिर बिटरेट मापे गए अपलोड का ~75% सेट करें — 1080p के लिए 3500–6000&nbsp;Kbps। जब एन्कोडर आपकी लाइन से ज़्यादा नहीं जाता तो रुकना बंद हो जाता है।</p></details><details class="faq-item"><summary>Multiple Cam Sites स्ट्रीम के दौरान फ्रेम खो रहे हैं</summary><p>खोए फ्रेम का मतलब है पैकेट समय पर Multiple Cam Sites नहीं पहुंचते — आमतौर पर अस्थिर Wi-Fi। वायर्ड Ethernet पर स्विच करें, बैंडविड्थ खाने वाले ऐप बंद करें और बिटरेट थोड़ा कम करें।</p></details><details class="faq-item"><summary>ब्लैक स्क्रीन — दर्शक Multiple Cam Sites पर वीडियो नहीं देख सकते</summary><p>आपका कैमरा SplitCam में एक्टिव सोर्स नहीं चुना गया, या कोई दूसरा ऐप इसे रोक रहा है। Zoom, Skype या OBS बंद करें, SplitCam में वेबकैम दोबारा चुनें।</p></details><details class="faq-item"><summary>Multiple Cam Sites स्ट्रीम की रिजेक्ट कर रहा है या कनेक्ट नहीं हो रहा</summary><p>स्ट्रीम की दोबारा कॉपी करें — अंत में स्पेस या पुरानी रीसेट की सबसे आम कारण हैं। सुनिश्चित करें सर्वर URL वही है जो Multiple Cam Sites दिखाता है।</p></details><details class="faq-item"><summary>Multiple Cam Sites पर कोई ऑडियो नहीं या ऑडियो सिंक नहीं है</summary><p>SplitCam को कैमरा और माइक्रोफ़ोन दोनों के रूप में चुनें, और SplitCam के ऑडियो सोर्स में अपना असली माइक्रोफ़ोन चुनें। अगर ऑडियो वीडियो से पीछे है, रेज़ॉल्यूशन एक स्तर कम करें।</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">अक्सर पूछे जाने वाले प्रश्न</h2>

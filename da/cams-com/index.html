@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Svar</a>
-  <a href="#steps">Trin</a>
-  <a href="#tips">Tips</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Relaterede guides</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Svar</a><a href="#steps">Trin</a><a href="#tips">Tips</a><a href="#faq">FAQ</a><a href="#related">Relaterede guides</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kort fortalt</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Trin for trin</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download og installér SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Byg scenen</div><p class="step-p">Åbn SplitCam og tilføj webkameraet. Læg overlays, en tip-menu, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå — alt live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hent din Cams.com-URL + stream key</div><p class="step-p">Log ind på Cams.com Model Center, åbn fanen <strong>External Encoder / OBS</strong>, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Forbind SplitCam med Cams.com</div><p class="step-p">I SplitCam → <strong>Stream Settings → Custom RTMP</strong>, indsæt URL og key. Sæt 3.500–5.000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Model Center. Din stream lander i Cams.com / AFF-netværket inden for ~10 sekunder.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Tips</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>AFF-krydstrafik = betalende medlemmer</h3><p>Cams.com trækker seere fra AdultFriendFinder-konti, der allerede har en betalingsmetode på fil — anderledes end et helt nyt tilmeldingspublikum. Konvertering til private shows og tips har en tendens til at være højere.</p></div><div class="tip-card"><h3>Ekstern encoder slår browseren</h3><p>RTMP fra SplitCam giver en ren bitrate og lader dig komponere multi-kamera scener med overlays; browser-broadcasteren fungerer, men begrænser produktionen.</p></div><div class="tip-card"><h3>Brug værktøjerne til private shows</h3><p>Cams.com læner sig op ad private/eksklusive sessioner. En tip-menu og en tydelig vej til private (i overlay) løfter omsætningen pr. seer mærkbart.</p></div><div class="tip-card"><h3>Lav først en privat test</h3><p>Kør en kort testudsendelse for kamera, lyd, framing og overlays, før du åbner rummet for publikum.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Trin for trin</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Download og installér SplitCam</div><p class="step-p">SplitCam er gratis live-streaming-software til Windows og macOS — ingen tilmelding, intet kort, intet vandmærke.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Byg scenen</div><p class="step-p">Åbn SplitCam og tilføj webkameraet. Læg overlays, en tip-menu, et ekstra kamera eller telefonen, beauty-filtre eller en AI-baggrund ovenpå — alt live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Hent din Cams.com-URL + stream key</div><p class="step-p">Log ind på Cams.com Model Center, åbn fanen <strong>External Encoder / OBS</strong>, og kopiér <strong>server-URL</strong> og <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Forbind SplitCam med Cams.com</div><p class="step-p">I SplitCam → <strong>Stream Settings → Custom RTMP</strong>, indsæt URL og key. Sæt 3.500–5.000 Kbps ved 1920×1080, 30 fps, 2-sekunders keyframe.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Klik Go Live</div><p class="step-p">Tryk <strong>Go Live</strong> i SplitCam, og gå derefter online fra Model Center. Din stream lander i Cams.com / AFF-netværket inden for ~10 sekunder.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Tips</h2><div class="tips-grid"><div class="tip-card"><h3>AFF-krydstrafik = betalende medlemmer</h3><p>Cams.com trækker seere fra AdultFriendFinder-konti, der allerede har en betalingsmetode på fil — anderledes end et helt nyt tilmeldingspublikum. Konvertering til private shows og tips har en tendens til at være højere.</p></div><div class="tip-card"><h3>Ekstern encoder slår browseren</h3><p>RTMP fra SplitCam giver en ren bitrate og lader dig komponere multi-kamera scener med overlays; browser-broadcasteren fungerer, men begrænser produktionen.</p></div><div class="tip-card"><h3>Brug værktøjerne til private shows</h3><p>Cams.com læner sig op ad private/eksklusive sessioner. En tip-menu og en tydelig vej til private (i overlay) løfter omsætningen pr. seer mærkbart.</p></div><div class="tip-card"><h3>Lav først en privat test</h3><p>Kør en kort testudsendelse for kamera, lyd, framing og overlays, før du åbner rummet for publikum.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Fejlfinding</h2><div class="faq-list"><details class="faq-item"><summary>Dit Cams.com-stream hakker eller buffer</summary><p>Næsten altid er bitraten højere, end dit upload kan klare. Kør SplitCams indbyggede hastighedstest og sæt bitraten til omkring 75% af dit målte upload — 3.500–6.000&nbsp;Kbps til 1080p, lavere til 720p. Hakket forsvinder, så snart encoderen holder op med at overhale din forbindelse.</p></details><details class="faq-item"><summary>Tabte frames under Cams.com-udsendelsen</summary><p>Tabte frames betyder, at pakkerne ikke når frem til Cams.com i tide — som regel ustabilt Wi-Fi. Skift til en kabelforbundet Ethernet-forbindelse, luk båndbredde-tunge apps og sænk bitraten en smule. Et enkelt udsving er fint; en jævn stigning betyder, at forbindelsen ikke kan følge med.</p></details><details class="faq-item"><summary>Sort skærm — seerne ser ingen video på Cams.com</summary><p>Dit kamera er ikke valgt som aktiv kilde i SplitCam, eller en anden app holder på det. Luk Zoom, Skype eller OBS, vælg dit webcam igen i SplitCams kildeliste, og bekræft at forhåndsvisningen viser dit billede, før du trykker Go Live.</p></details><details class="faq-item"><summary>Cams.com afviser stream key eller vil ikke forbinde</summary><p>Kopiér stream key igen — et mellemrum til sidst eller en gammel, allerede skiftet nøgle er den sædvanlige årsag. Bekræft at server-URL matcher den, Cams.com viser, og at ekstern-encoder-udsendelse er aktiveret på din konto. En grøn slider i SplitCams Stream Settings bekræfter en gyldig nøgle.</p></details><details class="faq-item"><summary>Ingen lyd eller lyd ude af sync på Cams.com</summary><p>Vælg SplitCam som både kamera og mikrofon, og vælg din rigtige mikrofon inde i SplitCams lydkilde. Hvis lyden halter efter videoen, sænk opløsningen et trin — encoderen er overbelastet, og lyden venter på forsinkede frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Răspuns</a>
-  <a href="#steps">Pași</a>
-  <a href="#tips">Sfaturi</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Ghiduri similare</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Răspuns</a><a href="#steps">Pași</a><a href="#tips">Sfaturi</a><a href="#faq">FAQ</a><a href="#related">Ghiduri similare</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Pe scurt</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Ghid video</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/MWLSQKDQCY0" title="Cum transmiți pe mai multe cam-site-uri simultan" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Pas cu pas</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Instalează SplitCam</div><p class="step-p">SplitCam e software de streaming gratuit pentru Windows și macOS cu multistreaming integrat. Instalează — fără filigran, fără cont.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Setează cameră și scenă</div><p class="step-p">Deschide SplitCam, adaugă webcam-ul și construiește scena cu overlay-uri și filtre. O singură scenă alimentează fiecare destinație.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Ia o cheie RTMP de la fiecare cam-site</div><p class="step-p">Pe fiecare platformă cam activezi broadcasting extern / RTMP și copiezi <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>. Repetă pentru fiecare site pe care vrei să transmiți — vezi ghidurile individuale ale platformelor pentru rutele exacte.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Adaugă fiecare destinație în SplitCam</div><p class="step-p">Deschide <strong>Stream Settings</strong> și adaugă fiecare cam-site ca destinație RTMP personalizată — lipește URL serverului și cheia. Bifează tot ce vrei să fie live.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Clic Go Live o singură dată</div><p class="step-p">Apasă <strong>Go Live</strong>. SplitCam trimite streamul către fiecare cam-site selectat simultan, peer-to-peer, dintr-o singură codare — fără taxă suplimentară.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Sfaturi</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Urmărește uploadul</h3><p>Multistreaming-ul multiplică încărcarea de upload. Fiecare destinație consumă bitrate-ul propriu — asigură-te că conexiunea ta poate susține suma.</p></div><div class="tip-card"><h3>Verifică regulile platformei</h3><p>Unele cam-site-uri interzic transmisia simultană în altă parte — confirmă înainte de multistreaming.</p></div><div class="tip-card"><h3>Cablu — drops nu îți permiți aici</h3><p>Multistreaming-ul multiplică încărcarea de upload, deci o singură întrerupere wi-fi poate dărâma toate destinațiile simultan. Cablu nu e opțional aici.</p></div><div class="tip-card"><h3>Urmărește monitorul de sănătate</h3><p>SplitCam arată statusul per destinație — renunță la un site dacă uploadul nu îl susține.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Pas cu pas</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Instalează SplitCam</div><p class="step-p">SplitCam e software de streaming gratuit pentru Windows și macOS cu multistreaming integrat. Instalează — fără filigran, fără cont.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Setează cameră și scenă</div><p class="step-p">Deschide SplitCam, adaugă webcam-ul și construiește scena cu overlay-uri și filtre. O singură scenă alimentează fiecare destinație.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Ia o cheie RTMP de la fiecare cam-site</div><p class="step-p">Pe fiecare platformă cam activezi broadcasting extern / RTMP și copiezi <strong>URL-ul serverului</strong> și <strong>stream key-ul</strong>. Repetă pentru fiecare site pe care vrei să transmiți — vezi ghidurile individuale ale platformelor pentru rutele exacte.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Adaugă fiecare destinație în SplitCam</div><p class="step-p">Deschide <strong>Stream Settings</strong> și adaugă fiecare cam-site ca destinație RTMP personalizată — lipește URL serverului și cheia. Bifează tot ce vrei să fie live.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Clic Go Live o singură dată</div><p class="step-p">Apasă <strong>Go Live</strong>. SplitCam trimite streamul către fiecare cam-site selectat simultan, peer-to-peer, dintr-o singură codare — fără taxă suplimentară.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Sfaturi</h2><div class="tips-grid"><div class="tip-card"><h3>Urmărește uploadul</h3><p>Multistreaming-ul multiplică încărcarea de upload. Fiecare destinație consumă bitrate-ul propriu — asigură-te că conexiunea ta poate susține suma.</p></div><div class="tip-card"><h3>Verifică regulile platformei</h3><p>Unele cam-site-uri interzic transmisia simultană în altă parte — confirmă înainte de multistreaming.</p></div><div class="tip-card"><h3>Cablu — drops nu îți permiți aici</h3><p>Multistreaming-ul multiplică încărcarea de upload, deci o singură întrerupere wi-fi poate dărâma toate destinațiile simultan. Cablu nu e opțional aici.</p></div><div class="tip-card"><h3>Urmărește monitorul de sănătate</h3><p>SplitCam arată statusul per destinație — renunță la un site dacă uploadul nu îl susține.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Depanare</h2><div class="faq-list"><details class="faq-item"><summary>Stream-ul tău pe Multiple Cam Sites are lag sau se blochează la buffering</summary><p>Aproape întotdeauna bitrate-ul e mai mare decât suportă uploadul tău. Rulează testul de viteză integrat din SplitCam și setează bitrate-ul la circa 75% din uploadul măsurat — 3.500–6.000&nbsp;Kbps la 1080p, mai puțin la 720p. Lagul dispare odată ce encoderul nu mai depășește conexiunea.</p></details><details class="faq-item"><summary>Frame-uri pierdute în timpul transmisiunii pe Multiple Cam Sites</summary><p>Frame-urile pierdute înseamnă că pachetele nu ajung la Multiple Cam Sites la timp — de obicei Wi-Fi instabil. Treci pe conexiune Ethernet prin cablu, închide aplicațiile care consumă lățime de bandă și scade puțin bitrate-ul. Un vârf izolat e ok; o creștere constantă înseamnă că conexiunea nu face față.</p></details><details class="faq-item"><summary>Ecran negru — spectatorii nu văd video pe Multiple Cam Sites</summary><p>Camera nu e selectată ca sursă activă în SplitCam, sau o ține altă aplicație. Închide Zoom, Skype sau OBS, reselectează webcamul în lista de surse SplitCam și confirmă că previzualizarea îți arată imaginea înainte să apeși Go Live.</p></details><details class="faq-item"><summary>Multiple Cam Sites respinge cheia de stream sau nu se conectează</summary><p>Recopiază cheia de stream — un spațiu la final sau o cheie veche, deja resetată, e cauza obișnuită. Confirmă că URL-ul serverului se potrivește cu cel afișat de Multiple Cam Sites și că transmisiunea prin encoder extern e activată pe contul tău. Un slider verde în Stream Settings SplitCam confirmă o cheie validă.</p></details><details class="faq-item"><summary>Fără audio sau audio desincronizat pe Multiple Cam Sites</summary><p>Alege SplitCam și ca cameră, și ca microfon, și selectează microfonul real în sursa audio SplitCam. Dacă audio rămâne în urma video-ului, scade rezoluția cu o treaptă — encoderul e supraîncărcat și audio așteaptă frame-uri întârziate.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Întrebări frecvente</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Odpoveď</a>
-  <a href="#steps">Kroky</a>
-  <a href="#tips">Tipy</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Súvisiace návody</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Odpoveď</a><a href="#steps">Kroky</a><a href="#tips">Tipy</a><a href="#faq">FAQ</a><a href="#related">Súvisiace návody</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Rýchla odpoveď</div>
@@ -575,15 +588,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Videonávod</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/1smUXVUzyAo" title="Ako vysielať na CamPlace so SplitCam" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Krok za krokom</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Stiahnite a nainštalujte SplitCam</div><p class="step-p">SplitCam je bezplatný softvér na živé vysielanie pre Windows a macOS. Stiahnite ho a spustite inštalátor — bez registrácie, bez karty, bez vodoznaku, bez časového limitu. Je to kodér, ktorý posiela vaše video na CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Nastavte kameru a scénu</div><p class="step-p">Otvorte SplitCam a pridajte webkameru. Zostavte scénu tak, ako chcete, aby ju diváci videli — prekrytia, text, druhá kamera alebo telefón, beauty filtre alebo AI pozadie. Všetko sa aplikuje naživo, skôr než stream opustí váš PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Získajte stream key CamPlace</div><p class="step-p">Prihláste sa na CamPlace a otvorte nastavenia vysielania. Prepnite na možnosť externého kodéra / RTMP / OBS, aby sa zobrazila <strong>URL servera</strong> a <strong>stream key</strong>, skopírujte oboje. CamPlace nepublikuje oficiálnu dokumentáciu OBS — <strong>video vyššie</strong> je najspoľahlivejšia cesta krok za krokom cez aktuálne rozhranie.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Pripojte SplitCam k CamPlace</div><p class="step-p">V SplitCam otvorte <strong>Stream Settings</strong>, vložte URL servera a stream key CamPlace do polí vlastného RTMP. Nastavte bitrate na 3500–6000&nbsp;Kbps pre 1080p, 2000–4000&nbsp;Kbps pre 720p a najprv spustite vstavaný test rýchlosti.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kliknite na Go Live</div><p class="step-p">Stlačte <strong>Go Live</strong> v SplitCam, potom spustite vysielanie na CamPlace. Za ~10 sekúnd je vaša kamera naživo. Ďalšie vysielania sú na jedno kliknutie — otvorte SplitCam, Go Live.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Profi tipy</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Žiadny oficiálny návod OBS — použite video</h3><p>CamPlace nemá verejný článok o externom kodéri; video vyššie je vodidlom pre aktuálnu cestu.</p></div><div class="tip-card"><h3>Štandardný RTMP funguje</h3><p>Aj keď to nie je zdokumentované, CamPlace prijíma štandardnú URL servera RTMP a kľúč — SplitCam sa pripája ako vlastný cieľ RTMP.</p></div><div class="tip-card"><h3>Skladajte prekrytia v SplitCam</h3><p>Ciele tipov, meno a odkazy na sociálne siete pridajte ako vrstvy scény — základná kamera CamPlace ich nepridá.</p></div><div class="tip-card"><h3>Použite káblové pripojenie</h3><p>Ethernet poráža Wi-Fi pri dlhom vysielaní — stratené snímky znamenajú stratené tipy. Zapojte kábel do počítača, ktorý vysiela.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Krok za krokom</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Stiahnite a nainštalujte SplitCam</div><p class="step-p">SplitCam je bezplatný softvér na živé vysielanie pre Windows a macOS. Stiahnite ho a spustite inštalátor — bez registrácie, bez karty, bez vodoznaku, bez časového limitu. Je to kodér, ktorý posiela vaše video na CamPlace.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Nastavte kameru a scénu</div><p class="step-p">Otvorte SplitCam a pridajte webkameru. Zostavte scénu tak, ako chcete, aby ju diváci videli — prekrytia, text, druhá kamera alebo telefón, beauty filtre alebo AI pozadie. Všetko sa aplikuje naživo, skôr než stream opustí váš PC.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Získajte stream key CamPlace</div><p class="step-p">Prihláste sa na CamPlace a otvorte nastavenia vysielania. Prepnite na možnosť externého kodéra / RTMP / OBS, aby sa zobrazila <strong>URL servera</strong> a <strong>stream key</strong>, skopírujte oboje. CamPlace nepublikuje oficiálnu dokumentáciu OBS — <strong>video vyššie</strong> je najspoľahlivejšia cesta krok za krokom cez aktuálne rozhranie.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Pripojte SplitCam k CamPlace</div><p class="step-p">V SplitCam otvorte <strong>Stream Settings</strong>, vložte URL servera a stream key CamPlace do polí vlastného RTMP. Nastavte bitrate na 3500–6000&nbsp;Kbps pre 1080p, 2000–4000&nbsp;Kbps pre 720p a najprv spustite vstavaný test rýchlosti.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Kliknite na Go Live</div><p class="step-p">Stlačte <strong>Go Live</strong> v SplitCam, potom spustite vysielanie na CamPlace. Za ~10 sekúnd je vaša kamera naživo. Ďalšie vysielania sú na jedno kliknutie — otvorte SplitCam, Go Live.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Profi tipy</h2><div class="tips-grid"><div class="tip-card"><h3>Žiadny oficiálny návod OBS — použite video</h3><p>CamPlace nemá verejný článok o externom kodéri; video vyššie je vodidlom pre aktuálnu cestu.</p></div><div class="tip-card"><h3>Štandardný RTMP funguje</h3><p>Aj keď to nie je zdokumentované, CamPlace prijíma štandardnú URL servera RTMP a kľúč — SplitCam sa pripája ako vlastný cieľ RTMP.</p></div><div class="tip-card"><h3>Skladajte prekrytia v SplitCam</h3><p>Ciele tipov, meno a odkazy na sociálne siete pridajte ako vrstvy scény — základná kamera CamPlace ich nepridá.</p></div><div class="tip-card"><h3>Použite káblové pripojenie</h3><p>Ethernet poráža Wi-Fi pri dlhom vysielaní — stratené snímky znamenajú stratené tipy. Zapojte kábel do počítača, ktorý vysiela.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Riešenie problémov</h2><div class="faq-list"><details class="faq-item"><summary>Vysielanie CamPlace sa seká alebo bufferuje</summary><p>Takmer vždy je bitrate nastavený vyššie, než unesie váš upload. Spustite vstavaný test rýchlosti SplitCam, potom nastavte bitrate na zhruba 75 % nameraného uploadu — 3500–6000&nbsp;Kbps pre 1080p, menej pre 720p. Sekanie zmizne, keď kodér prestane prekračovať vašu linku.</p></details><details class="faq-item"><summary>Strata snímok počas vysielania CamPlace</summary><p>Strata snímok znamená, že pakety nedôjdu na CamPlace včas — zvyčajne nestabilné Wi-Fi. Prejdite na drôtový Ethernet, zatvorte aplikácie požierajúce pásmo a mierne znížte bitrate. Jeden výkyv nevadí; trvalý nárast znamená, že linka nestíha.</p></details><details class="faq-item"><summary>Čierna obrazovka — diváci nevidia video na CamPlace</summary><p>Vaša kamera nie je vybraná ako aktívny zdroj v SplitCam, alebo ju drží iná aplikácia. Zatvorte Zoom, Skype alebo OBS, vyberte webkameru znovu v zozname zdrojov SplitCam a uistite sa, že náhľad ukazuje váš obraz, skôr než stlačíte Go Live.</p></details><details class="faq-item"><summary>CamPlace odmieta stream key alebo sa nepripája</summary><p>Skopírujte stream key znovu — medzera na konci alebo starý, resetovaný kľúč sú najčastejšie príčiny. Uistite sa, že URL servera zodpovedá tomu, čo CamPlace zobrazuje, a že vysielanie externým kodérom je na účte zapnuté. Zelený posuvník v Stream Settings SplitCam potvrdzuje platný kľúč.</p></details><details class="faq-item"><summary>Žiadny zvuk alebo zvuk nesynchronný na CamPlace</summary><p>Vyberte SplitCam ako kameru AJ mikrofón a v zdroji zvuku SplitCam vyberte svoj skutočný mikrofón. Ak zvuk zaostáva za videom, znížte rozlíšenie o úroveň — kodér je preťažený a zvuk čaká na oneskorené snímky.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Časté otázky</h2>

@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Antwort</a>
-  <a href="#steps">Schritte</a>
-  <a href="#tips">Tipps</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Verwandte Guides</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Antwort</a><a href="#steps">Schritte</a><a href="#tips">Tipps</a><a href="#faq">FAQ</a><a href="#related">Verwandte Guides</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Kurzantwort</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Schritt für Schritt</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam herunterladen und installieren</div><p class="step-p">SplitCam ist kostenlose Live-Streaming-Software für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Szene aufbauen</div><p class="step-p">SplitCam öffnen und die Webcam hinzufügen. Overlays (auf Deutsch — "Trinkgeld" / "PPV freischalten"), eine zweite Kamera oder das Smartphone, Beauty-Filter oder einen KI-Hintergrund einbauen — alles live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">AmateurCommunity-URL und Stream Key holen</div><p class="step-p">Beim AC-Model-Panel anmelden, <strong>External Encoder / OBS</strong> öffnen und <strong>Server-URL</strong> und <strong>Stream Key</strong> kopieren.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam mit AmateurCommunity verbinden</div><p class="step-p">In SplitCam <strong>Stream Settings → Custom RTMP</strong> öffnen, URL und Key einfügen. 3.500–5.000 Kbps bei 1920×1080, 30 fps und 2 Sekunden Keyframe einstellen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live drücken</div><p class="step-p">In SplitCam auf <strong>Go Live</strong> klicken, dann im AC-Model-Panel online schalten. Dein Stream landet innerhalb von ~10 Sekunden in der öffentlichen Liste.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Profi-Tipps</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Deutschsprachiges, zahlungsbereites Publikum</h3><p>AmateurCommunitys Publikum stammt überwiegend aus dem DACH-Raum (DE/AT/CH) und zahlt in EUR — Overlays, Tip-Menü und On-Stream-Chat auf Deutsch konvertieren deutlich besser als Englisch.</p></div><div class="tip-card"><h3>Premium-PPV plus Live-Kombi</h3><p>AC erlaubt den Verkauf von PPV-Inhalten zusätzlich zum Live. Eine Live-Show, die das PPV anteasert (mit einem Bildschirm-Overlay), hebt die PPV-Verkäufe während und nach der Sendung.</p></div><div class="tip-card"><h3>Externer Encoder für stabile Qualität</h3><p>ACs Publikum erwartet hohe Produktionsqualität; RTMP mit konstanten 4 Mbps aus SplitCam schlägt die schwankende Bitrate des Browser-Broadcasters.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Schritt für Schritt</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">SplitCam herunterladen und installieren</div><p class="step-p">SplitCam ist kostenlose Live-Streaming-Software für Windows und macOS — ohne Registrierung, ohne Kreditkarte, ohne Wasserzeichen.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Szene aufbauen</div><p class="step-p">SplitCam öffnen und die Webcam hinzufügen. Overlays (auf Deutsch — "Trinkgeld" / "PPV freischalten"), eine zweite Kamera oder das Smartphone, Beauty-Filter oder einen KI-Hintergrund einbauen — alles live.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">AmateurCommunity-URL und Stream Key holen</div><p class="step-p">Beim AC-Model-Panel anmelden, <strong>External Encoder / OBS</strong> öffnen und <strong>Server-URL</strong> und <strong>Stream Key</strong> kopieren.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">SplitCam mit AmateurCommunity verbinden</div><p class="step-p">In SplitCam <strong>Stream Settings → Custom RTMP</strong> öffnen, URL und Key einfügen. 3.500–5.000 Kbps bei 1920×1080, 30 fps und 2 Sekunden Keyframe einstellen.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Go Live drücken</div><p class="step-p">In SplitCam auf <strong>Go Live</strong> klicken, dann im AC-Model-Panel online schalten. Dein Stream landet innerhalb von ~10 Sekunden in der öffentlichen Liste.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Profi-Tipps</h2><div class="tips-grid"><div class="tip-card"><h3>Deutschsprachiges, zahlungsbereites Publikum</h3><p>AmateurCommunitys Publikum stammt überwiegend aus dem DACH-Raum (DE/AT/CH) und zahlt in EUR — Overlays, Tip-Menü und On-Stream-Chat auf Deutsch konvertieren deutlich besser als Englisch.</p></div><div class="tip-card"><h3>Premium-PPV plus Live-Kombi</h3><p>AC erlaubt den Verkauf von PPV-Inhalten zusätzlich zum Live. Eine Live-Show, die das PPV anteasert (mit einem Bildschirm-Overlay), hebt die PPV-Verkäufe während und nach der Sendung.</p></div><div class="tip-card"><h3>Externer Encoder für stabile Qualität</h3><p>ACs Publikum erwartet hohe Produktionsqualität; RTMP mit konstanten 4 Mbps aus SplitCam schlägt die schwankende Bitrate des Browser-Broadcasters.</p></div><div class="tip-card"><h3>Erst privat testen</h3><p>Mach einen kurzen Test-Stream, um Kamera, Ton, Bildausschnitt und Overlays zu prüfen, bevor du den Raum öffentlich machst.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Fehlerbehebung</h2><div class="faq-list"><details class="faq-item"><summary>Dein AmateurCommunity-Stream ruckelt oder puffert</summary><p>Fast immer ist die Bitrate höher, als dein Upload verkraftet. Führe den eingebauten Speedtest von SplitCam aus und stell die Bitrate auf etwa 75% deines gemessenen Uploads — 3.500–6.000&nbsp;Kbps für 1080p, weniger für 720p. Das Ruckeln verschwindet, sobald der Encoder deine Verbindung nicht mehr überholt.</p></details><details class="faq-item"><summary>Dropped Frames während der AmateurCommunity-Übertragung</summary><p>Dropped Frames bedeuten, dass Pakete AmateurCommunity nicht rechtzeitig erreichen — meist instabiles WLAN. Wechsle zu einer kabelgebundenen Ethernet-Verbindung, schließe bandbreitenhungrige Apps und senke die Bitrate etwas. Ein einzelner Ausschlag ist okay; ein stetiger Anstieg heißt, die Verbindung kommt nicht mit.</p></details><details class="faq-item"><summary>Schwarzer Bildschirm — Zuschauer sehen kein Video auf AmateurCommunity</summary><p>Deine Kamera ist nicht als aktive Quelle in SplitCam gewählt, oder eine andere App belegt sie. Schließe Zoom, Skype oder OBS, wähle deine Webcam erneut in der Quellenliste von SplitCam und prüfe, dass die Vorschau dein Bild zeigt, bevor du Go Live drückst.</p></details><details class="faq-item"><summary>AmateurCommunity lehnt den Stream-Key ab oder verbindet nicht</summary><p>Kopiere den Stream-Key erneut — ein Leerzeichen am Ende oder ein alter, bereits zurückgesetzter Key ist die übliche Ursache. Prüfe, dass die Server-URL mit der von AmateurCommunity angezeigten übereinstimmt und dass External-Encoder-Übertragung in deinem Konto aktiviert ist. Ein grüner Slider in den Stream Settings von SplitCam bestätigt einen gültigen Key.</p></details><details class="faq-item"><summary>Kein Ton oder Ton asynchron auf AmateurCommunity</summary><p>Wähle SplitCam sowohl als Kamera als auch als Mikrofon, und stell dein echtes Mikro innerhalb der Audioquelle von SplitCam ein. Wenn der Ton hinter dem Video herhinkt, senke die Auflösung um eine Stufe — der Encoder ist überlastet und der Ton wartet auf verspätete Frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

@@ -463,24 +463,24 @@ PLATFORMS_DA = [
      ]},
     {"slug": "lovense", "name": "Lovense",
      "title": "Tilføj et Lovense-legetøj til streamen med SplitCam",
-     "desc": "Forbind et Lovense-legetøj til SplitCam — Lovense Remote-app + Cam Extension med indbygget SplitCam-support og tip-alerts på skærmen. Intet ekstra plugin.",
+     "desc": "Forbind et Lovense-legetøj til SplitCam — Lovense Connect-app + Cam Extension med indbygget SplitCam-support og tip-alerts på skærmen. Intet ekstra plugin.",
      "kw": "sådan tilføjer du lovense til streamen, lovense, lovense cam stream, lovense splitcam toolset, lovense cam extension, lovense connect, lovense tip alerts, lovense interactive toy streaming, lovense legetøj overlay",
      "h1html": 'Sådan tilføjer du et <span class="accent">Lovense-legetøj</span> til din stream',
      "h1short": "Tilføj Lovense-legetøj",
      "card": "Forbind et interaktivt Lovense-legetøj til cam-streamen.",
-     "intro": "Du kører cam-streamen via gratis <strong style='color:var(--text)'>SplitCam</strong> og parrer et <strong style='color:var(--text)'>Lovense</strong>-legetøj, så det reagerer på tips. Du installerer tre ting: <strong>SplitCam</strong> (encoderen), <strong>Lovense Remote</strong>-appen (Bluetooth-broen til legetøjet) og <strong>Lovense Cam Extension</strong> til Chrome/Edge (den læser drikkepenge og fodrer overlayet på skærmen). SplitCam-understøttelse er indbygget i Cam Extension (version 30.1.4 eller nyere) — SplitCam ligger direkte i udvidelsens Video Feedback-liste, så der er intet separat plugin at hente.",
-     "quick": "For at tilføje et Lovense-legetøj til streamen: installér SplitCam, Lovense Remote-appen og Lovense Cam Extension, par legetøjet, link udvidelsen til cam-sitet, tilføj Lovense-overlayet som Browser-lag i SplitCam, og udsend derefter normalt."
+     "intro": "Du kører cam-streamen via gratis <strong style='color:var(--text)'>SplitCam</strong> og parrer et <strong style='color:var(--text)'>Lovense</strong>-legetøj, så det reagerer på tips. Du installerer tre ting: <strong>SplitCam</strong> (encoderen), <strong>Lovense Connect</strong>-appen (Bluetooth-broen til legetøjet) og <strong>Lovense Cam Extension</strong> til Chrome/Edge (den læser drikkepenge og fodrer overlayet på skærmen). SplitCam-understøttelse er indbygget i Cam Extension (version 30.1.4 eller nyere) — SplitCam ligger direkte i udvidelsens Video Feedback-liste, så der er intet separat plugin at hente.",
+     "quick": "For at tilføje et Lovense-legetøj til streamen: installér SplitCam, Lovense Connect-appen og Lovense Cam Extension, par legetøjet, link udvidelsen til cam-sitet, tilføj Lovense-overlayet som Browser-lag i SplitCam, og udsend derefter normalt."
               "<ol><li>Installér SplitCam.</li>"
-              "<li>Installér Lovense Remote &amp; par legetøjet.</li>"
+              "<li>Installér Lovense Connect &amp; par legetøjet.</li>"
               "<li>Installér Lovense Cam Extension (Chrome/Edge).</li>"
               "<li>Link udvidelsen til cam-sitet + tilføj overlayet i SplitCam.</li>"
               "<li>Tryk Go Live.</li></ol>",
-     "key_how": "Legetøjet taler aldrig direkte med SplitCam. Kæden er: en seer sender drikkepenge på dit cam-site &rarr; <strong>Lovense Cam Extension</strong> i din browser opfanger det &rarr; den sender en kommando til <strong>Lovense Remote</strong>-appen på localhost &rarr; Remote styrer legetøjet over Bluetooth. SplitCams eneste opgave er at vise <strong>Lovense-overlayet</strong> (legetøjs-status + seneste tips) som Browser-lag og udsende dit kamera. Der findes ingen separat «Lovense Browser»-app — det er en browser-<em>udvidelse</em> til Chrome eller Edge.",
+     "key_how": "Legetøjet taler aldrig direkte med SplitCam. Kæden er: en seer sender drikkepenge på dit cam-site &rarr; <strong>Lovense Cam Extension</strong> i din browser opfanger det &rarr; den sender en kommando til <strong>Lovense Connect</strong>-appen på localhost &rarr; Remote styrer legetøjet over Bluetooth. SplitCams eneste opgave er at vise <strong>Lovense-overlayet</strong> (legetøjs-status + seneste tips) som Browser-lag og udsende dit kamera. Der findes ingen separat «Lovense Browser»-app — det er en browser-<em>udvidelse</em> til Chrome eller Edge.",
      "steps": [
          ("Installér SplitCam",
           "SplitCam er gratis streaming-software til Windows og macOS — encoderen, der sender din video til cam-platformen. Installér; uden vandmærke, uden tilmelding."),
-         ("Installér Lovense Remote og par legetøjet",
-          "Installér <strong>Lovense Remote</strong>-appen — desktop (Windows / Mac) eller mobil-appen på telefonen. Det er broen, der taler med legetøjet over Bluetooth. Tænd legetøjet og par, til appen viser det forbundet."),
+         ("Installér Lovense Connect og par legetøjet",
+          "Installér <strong>Lovense Connect</strong>-appen — desktop (Windows / Mac) eller mobil-appen på telefonen. Det er broen, der taler med legetøjet over Bluetooth. Tænd legetøjet og par, til appen viser det forbundet."),
          ("Installér Lovense Cam Extension",
           "Tilføj <strong>Lovense Cam Extension</strong> til Chrome eller Edge (version 30.1.4 eller nyere) og log ind med din Lovense-konto. Der findes ingen separat «Lovense Browser» — det er denne udvidelse, der læser tips og driver overlayet. <strong>SplitCam-understøttelse er indbygget</strong>: den ligger i udvidelsens Video Feedback-fane, så du behøver ikke noget separat SplitCam-plugin."),
          ("Link udvidelsen til cam-sitet og tilføj overlayet i SplitCam",
@@ -489,17 +489,17 @@ PLATFORMS_DA = [
           "Tilføj kameraet og andre overlays, indsæt cam-platformens RTMP-nøgle i SplitCam og klik <strong>Go Live</strong>. Legetøjet reagerer nu på tips i realtid."),
      ],
      "tips": [
-         ("Tre installationer, i rækkefølge", "SplitCam (encoder) + Lovense Remote (Bluetooth-bro) + Lovense Cam Extension (tip-læser / overlay). Mangler bare én, reagerer legetøjet ikke på streamen."),
+         ("Tre installationer, i rækkefølge", "SplitCam (encoder) + Lovense Connect (Bluetooth-bro) + Lovense Cam Extension (tip-læser / overlay). Mangler bare én, reagerer legetøjet ikke på streamen."),
          ("Det er en udvidelse, ikke en browser", "Der er ingen separat «Lovense Browser» at hente — Lovense Cam Extension installeres i Chrome eller Edge. Hold den opdateret (30.1.4 eller nyere), ellers dukker SplitCam måske ikke op i Video Feedback-listen."),
          ("Hold legetøjet opladet", "Et fladt batteri midt i showet dræber den interaktive side — oplad fuldt før live."),
          ("Test tip-reaktionen", "Send et lille test-tip for at bekræfte, at legetøjet reagerer, før rummet bliver offentligt."),
          ("Hvilke cam-sites er dækket", "Cam Extension dækker officielt Chaturbate, Stripchat, BongaCams, MyFreeCams og CamSoda — for andre sites brug Lovenses Generic URL-integration i stedet. SplitCam fungerer med dem alle som overlay-lag."),
      ],
      "faq": [
-         ("Hvad skal jeg installere for Lovense på SplitCam?", "Tre ting: <strong>SplitCam</strong> (encoderen), <strong>Lovense Remote</strong>-appen (forbinder legetøjet over Bluetooth) og <strong>Lovense Cam Extension</strong> til Chrome/Edge (læser tips og fodrer overlayet). Intet separat SplitCam-plugin — SplitCam-understøttelse er indbygget i Cam Extension."),
+         ("Hvad skal jeg installere for Lovense på SplitCam?", "Tre ting: <strong>SplitCam</strong> (encoderen), <strong>Lovense Connect</strong>-appen (forbinder legetøjet over Bluetooth) og <strong>Lovense Cam Extension</strong> til Chrome/Edge (læser tips og fodrer overlayet). Intet separat SplitCam-plugin — SplitCam-understøttelse er indbygget i Cam Extension."),
          ("Virker Cam Extension 30.1.4+ med SplitCam med det samme?", "Ja — SplitCam-understøttelse er indbygget. Åbn udvidelsens <strong>Video Feedback</strong>-fane, vælg <strong>SplitCam</strong>, kopiér overlay-URL'en, og læg den ind som Browser-lag i SplitCam. Intet ekstra plugin, kun den engangs-linkning."),
-         ("Findes der en «Lovense Browser», jeg skal hente?", "Nej. Der er ingen separat Lovense-browser — det er <strong>Lovense Cam Extension</strong>, som installeres i Chrome eller Edge. Parring af legetøjet klares af den separate Lovense Remote-app (desktop eller mobil)."),
-         ("Forbinder legetøjet direkte til SplitCam?", "Nej — legetøjet parres med Lovense Remote-appen over Bluetooth; Cam Extension læser tips, og SplitCam viser blot overlayet og udsender dit kamera."),
+         ("Findes der en «Lovense Browser», jeg skal hente?", "Nej. Der er ingen separat Lovense-browser — det er <strong>Lovense Cam Extension</strong>, som installeres i Chrome eller Edge. Parring af legetøjet klares af den separate Lovense Connect-app (desktop eller mobil)."),
+         ("Forbinder legetøjet direkte til SplitCam?", "Nej — legetøjet parres med Lovense Connect-appen over Bluetooth; Cam Extension læser tips, og SplitCam viser blot overlayet og udsender dit kamera."),
          ("Hvilke cam-sites understøtter Lovense?", "Lovense Cam Extension understøtter officielt Chaturbate, Stripchat, BongaCams, MyFreeCams og CamSoda, med varierende understøttelse for andre — tjek den aktuelle liste i Lovense-appen."),
          ("Kan jeg vise seneste tips på skærmen?", "Ja — Cam Extension giver dig en overlay-URL; tilføj den som Browser-lag i SplitCam, så seerne ser legetøjs-status og seneste tips."),
      ]},

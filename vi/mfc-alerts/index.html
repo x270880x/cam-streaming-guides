@@ -425,6 +425,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -553,13 +572,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Trả lời</a>
-  <a href="#steps">Các bước</a>
-  <a href="#tips">Mẹo</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Hướng dẫn liên quan</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Trả lời</a><a href="#steps">Các bước</a><a href="#tips">Mẹo</a><a href="#faq">FAQ</a><a href="#related">Hướng dẫn liên quan</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Trả lời nhanh</div>
@@ -567,15 +580,10 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
   </div>
 </div>
 
+
 <section class="section"><h2 class="sec-h">Video hướng dẫn</h2><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/Ps5--obPRvw" title="Cách thêm MFC Alerts vào buổi phát của bạn" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
-<section class="section" id="steps">
-  <h2 class="sec-h">Từng bước</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Cài SplitCam và thêm webcam</div><p class="step-p">Cài SplitCam miễn phí cho Windows hoặc macOS, rồi thêm <strong>webcam</strong> làm nguồn. MFC Alerts nằm như một lớp trên camera này.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Mở tab Browser và vào mfcalerts.com</div><p class="step-p">Trong SplitCam mở tab <strong>Browser</strong> và vào <strong>www.mfcalerts.com</strong>. Đăng nhập, hoặc đăng ký nếu chưa có tài khoản mfcalerts.com.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Sao chép URL alert của bạn</div><p class="step-p">Tại mfcalerts.com dùng <strong>Copy to clipboard</strong> để sao chép URL alert riêng — đây là trang render hoạt ảnh tip.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Thêm URL làm lớp Browser — trên webcam</div><p class="step-p">Dán URL vào cửa sổ Browser của SplitCam và nhấn <strong>Add</strong>. Rồi sắp xếp lại danh sách nguồn để <strong>MFC Alerts ở trên webcam</strong> (menu 3 chấm → Move Up). Nếu ở dưới, hiệu ứng bị ẩn.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Thử với tip test</div><p class="step-p">Mở <strong>Settings → Send test tip</strong> và chắc chắn hiệu ứng alert hiện trên camera. Rồi phát bình thường trên <a href="../myfreecams/" class="autolink">MyFreeCams</a> — tip thật giờ kích hoạt hoạt ảnh.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Mẹo chuyên nghiệp</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>MFC Alerts phải ở trên webcam</h3><p>Lỗi phổ biến nhất: nếu lớp MFC Alerts nằm dưới webcam trong danh sách nguồn, hiệu ứng bị ẩn. Đưa nó lên trên.</p></div><div class="tip-card"><h3>Cần tài khoản mfcalerts.com</h3><p>URL alert là riêng tư — đăng ký tại mfcalerts.com trước nếu bạn chưa có tài khoản.</p></div><div class="tip-card"><h3>Gửi tip test trước khi live</h3><p>Dùng Settings → Send test tip để chắc overlay hoạt động — đừng phát hiện lỗi giữa show.</p></div><div class="tip-card"><h3>Dùng kết nối có dây</h3><p>Ethernet luôn thắng Wi-Fi khi phát sóng dài — frame rơi nghĩa là tip rơi. Cắm dây mạng vào máy phát sóng.</p></div></div>
-</section>
+<section class="section" id="steps"><h2 class="sec-h">Từng bước</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Cài SplitCam và thêm webcam</div><p class="step-p">Cài SplitCam miễn phí cho Windows hoặc macOS, rồi thêm <strong>webcam</strong> làm nguồn. MFC Alerts nằm như một lớp trên camera này.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Mở tab Browser và vào mfcalerts.com</div><p class="step-p">Trong SplitCam mở tab <strong>Browser</strong> và vào <strong>www.mfcalerts.com</strong>. Đăng nhập, hoặc đăng ký nếu chưa có tài khoản mfcalerts.com.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Sao chép URL alert của bạn</div><p class="step-p">Tại mfcalerts.com dùng <strong>Copy to clipboard</strong> để sao chép URL alert riêng — đây là trang render hoạt ảnh tip.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Thêm URL làm lớp Browser — trên webcam</div><p class="step-p">Dán URL vào cửa sổ Browser của SplitCam và nhấn <strong>Add</strong>. Rồi sắp xếp lại danh sách nguồn để <strong>MFC Alerts ở trên webcam</strong> (menu 3 chấm → Move Up). Nếu ở dưới, hiệu ứng bị ẩn.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Thử với tip test</div><p class="step-p">Mở <strong>Settings → Send test tip</strong> và chắc chắn hiệu ứng alert hiện trên camera. Rồi phát bình thường trên <a href="../myfreecams/" class="autolink">MyFreeCams</a> — tip thật giờ kích hoạt hoạt ảnh.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Mẹo chuyên nghiệp</h2><div class="tips-grid"><div class="tip-card"><h3>MFC Alerts phải ở trên webcam</h3><p>Lỗi phổ biến nhất: nếu lớp MFC Alerts nằm dưới webcam trong danh sách nguồn, hiệu ứng bị ẩn. Đưa nó lên trên.</p></div><div class="tip-card"><h3>Cần tài khoản mfcalerts.com</h3><p>URL alert là riêng tư — đăng ký tại mfcalerts.com trước nếu bạn chưa có tài khoản.</p></div><div class="tip-card"><h3>Gửi tip test trước khi live</h3><p>Dùng Settings → Send test tip để chắc overlay hoạt động — đừng phát hiện lỗi giữa show.</p></div><div class="tip-card"><h3>Dùng kết nối có dây</h3><p>Ethernet luôn thắng Wi-Fi khi phát sóng dài — frame rơi nghĩa là tip rơi. Cắm dây mạng vào máy phát sóng.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Khắc phục sự cố</h2><div class="faq-list"><details class="faq-item"><summary>Buổi phát MFC Alerts giật hoặc buffering</summary><p>Hầu như luôn do bitrate đặt cao hơn mức đường upload gánh được. Chạy bài test tốc độ tích hợp của SplitCam, rồi đặt bitrate khoảng 75% upload đo được — 3.500–6.000&nbsp;Kbps cho 1080p, thấp hơn cho 720p. Giật sẽ hết khi bộ mã hóa thôi vượt quá kết nối của bạn.</p></details><details class="faq-item"><summary>Frame rơi khi phát MFC Alerts</summary><p>Frame rơi nghĩa là gói tin không tới MFC Alerts đúng lúc — thường là Wi-Fi không ổn định. Chuyển sang Ethernet có dây, đóng các ứng dụng ngốn băng thông và hạ bitrate một chút. Một lần nhảy thì không sao; tăng liên tục nghĩa là kết nối không theo kịp.</p></details><details class="faq-item"><summary>Màn hình đen — người xem không thấy video trên MFC Alerts</summary><p>Camera của bạn không được chọn làm nguồn hoạt động trong SplitCam, hoặc ứng dụng khác đang giữ nó. Đóng Zoom, Skype hoặc OBS, chọn lại webcam trong danh sách nguồn của SplitCam, và chắc chắn preview hiện hình bạn trước khi nhấn Go Live.</p></details><details class="faq-item"><summary>MFC Alerts từ chối stream key hoặc không kết nối</summary><p>Sao chép lại stream key — khoảng trắng ở cuối hoặc khóa cũ đã reset là nguyên nhân phổ biến nhất. Chắc chắn URL máy chủ khớp với cái MFC Alerts hiển thị và phát sóng bộ mã hóa ngoài đã bật trên tài khoản. Thanh trượt xanh trong Stream Settings của SplitCam xác nhận khóa hợp lệ.</p></details><details class="faq-item"><summary>Không có âm thanh hoặc âm thanh lệch trên MFC Alerts</summary><p>Chọn SplitCam làm cả camera VÀ micro, và chọn micro thật của bạn bên trong nguồn âm thanh của SplitCam. Nếu âm thanh trễ so với video, hạ độ phân giải một mức — bộ mã hóa quá tải và âm thanh đang chờ các frame trễ.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Câu hỏi thường gặp</h2>

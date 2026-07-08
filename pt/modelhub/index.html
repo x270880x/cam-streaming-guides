@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Resposta</a>
-  <a href="#steps">Passos</a>
-  <a href="#tips">Dicas</a>
-  <a href="#faq">FAQ</a>
-  <a href="#related">Guias relacionados</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Resposta</a><a href="#steps">Passos</a><a href="#tips">Dicas</a><a href="#faq">FAQ</a><a href="#related">Guias relacionados</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Em resumo</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Passo a passo</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Baixa e instala o SplitCam</div><p class="step-p">O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Monta sua cena</div><p class="step-p">Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Pega a URL e a stream key do Modelhub</div><p class="step-p">Entra na sua conta de modelo do Modelhub, abre <strong>Live → broadcast / external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conecta o SplitCam ao Modelhub</div><p class="step-p">No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do Modelhub e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Clica Go Live</div><p class="step-p">Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel. Em uns 10 segundos seu stream chega ao público do Modelhub.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Dicas</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Tráfego enorme no topo do funil</h3><p>O Modelhub puxa espectadores da rede Pornhub — uma cena caprichada no SplitCam converte esse público grande e casual em espectadores ao vivo pagantes e assinantes.</p></div><div class="tip-card"><h3>Faz venda cruzada dos seus vídeos</h3><p>Usa overlays pra direcionar quem assiste ao vivo pros seus vídeos e assinatura do Modelhub — a plataforma é feita pra esse funil.</p></div><div class="tip-card"><h3>O encoder externo libera as cenas</h3><p>Passar pelo RTMP do SplitCam, e não pela cam básica, habilita layouts multicâmera, overlays e filtros.</p></div><div class="tip-card"><h3>Use conexão por cabo</h3><p>Ethernet bate Wi-Fi numa live longa — um frame perdido é um tip perdido. Puxa um cabo até o PC do stream.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Passo a passo</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Baixa e instala o SplitCam</div><p class="step-p">O SplitCam é um software de live streaming grátis pra Windows e macOS — sem cadastro, sem cartão, sem marca d'água.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Monta sua cena</div><p class="step-p">Abre o SplitCam e adiciona sua webcam. Encaixa overlays, texto, uma segunda câmera ou o celular, filtros de beleza ou fundo IA.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Pega a URL e a stream key do Modelhub</div><p class="step-p">Entra na sua conta de modelo do Modelhub, abre <strong>Live → broadcast / external encoder</strong> e copia a <strong>URL do servidor</strong> e a <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Conecta o SplitCam ao Modelhub</div><p class="step-p">No SplitCam abre <strong>Stream Settings</strong>, cola a URL do servidor do Modelhub e a stream key nos campos de RTMP personalizado. Põe o bitrate em 3.500–6.000 Kbps a 1920×1080, 30 fps, com keyframe de 2 segundos.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Clica Go Live</div><p class="step-p">Aperta <strong>Go Live</strong> no SplitCam e depois fica online pelo painel. Em uns 10 segundos seu stream chega ao público do Modelhub.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Dicas</h2><div class="tips-grid"><div class="tip-card"><h3>Tráfego enorme no topo do funil</h3><p>O Modelhub puxa espectadores da rede Pornhub — uma cena caprichada no SplitCam converte esse público grande e casual em espectadores ao vivo pagantes e assinantes.</p></div><div class="tip-card"><h3>Faz venda cruzada dos seus vídeos</h3><p>Usa overlays pra direcionar quem assiste ao vivo pros seus vídeos e assinatura do Modelhub — a plataforma é feita pra esse funil.</p></div><div class="tip-card"><h3>O encoder externo libera as cenas</h3><p>Passar pelo RTMP do SplitCam, e não pela cam básica, habilita layouts multicâmera, overlays e filtros.</p></div><div class="tip-card"><h3>Use conexão por cabo</h3><p>Ethernet bate Wi-Fi numa live longa — um frame perdido é um tip perdido. Puxa um cabo até o PC do stream.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Solução de problemas</h2><div class="faq-list"><details class="faq-item"><summary>Sua transmissão no Modelhub trava ou fica em buffer</summary><p>Quase sempre o bitrate está mais alto do que seu upload aguenta. Rode o teste de velocidade embutido do SplitCam e ajuste o bitrate pra cerca de 75% do upload medido — 3.500–6.000&nbsp;Kbps em 1080p, menos em 720p. O lag some assim que o encoder para de ultrapassar sua conexão.</p></details><details class="faq-item"><summary>Frames perdidos durante a transmissão no Modelhub</summary><p>Frames perdidos significam que os pacotes não chegam ao Modelhub a tempo — geralmente Wi-Fi instável. Mude pra conexão Ethernet com cabo, feche apps que consomem banda e baixe um pouco o bitrate. Um pico isolado é normal; uma subida constante quer dizer que a conexão não dá conta.</p></details><details class="faq-item"><summary>Tela preta — os espectadores não veem vídeo no Modelhub</summary><p>Sua câmera não está selecionada como fonte ativa no SplitCam, ou outro app está usando ela. Feche Zoom, Skype ou OBS, escolha a webcam de novo na lista de fontes do SplitCam e confirme que o preview mostra sua imagem antes de apertar Go Live.</p></details><details class="faq-item"><summary>Modelhub rejeita a stream key ou não conecta</summary><p>Copie a stream key de novo — um espaço sobrando ou uma chave antiga já resetada é a causa comum. Confirme que a URL do servidor bate com a mostrada pelo Modelhub e que a transmissão por encoder externo está ativada na sua conta. Um slider verde nas Stream Settings do SplitCam confirma uma chave válida.</p></details><details class="faq-item"><summary>Sem áudio ou áudio fora de sincronia no Modelhub</summary><p>Escolha o SplitCam como câmera e como microfone, e selecione seu microfone real dentro da fonte de áudio do SplitCam. Se o áudio atrasa em relação ao vídeo, baixe a resolução um nível — o encoder está sobrecarregado e o áudio espera frames atrasados.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">FAQ</h2>

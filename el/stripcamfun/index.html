@@ -433,6 +433,25 @@ section[id], div[id="quick-answer"], div[id="related"], div[id="continue-learnin
 .dl-btn:hover{background:var(--blue-hover)}
 .dl-btn.dl-store{background:transparent;color:var(--text-sub);border:1px solid var(--app-border2)}
 .dl-btn.dl-store:hover{color:var(--text);border-color:var(--blue)}
+.mth-lead{font-size:15.5px;line-height:1.65;color:var(--text-sub);max-width:820px;margin:6px 0 24px}
+.stg-list{display:flex;flex-direction:column;gap:16px}
+.stg-card{padding:24px 28px;border:1px solid var(--app-border);border-radius:16px;background:var(--app-panel)}
+.stg-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.stg-num{flex-shrink:0;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--blue);padding:5px 12px;border-radius:999px}
+.stg-title{font-size:19px;font-weight:800;color:var(--text)}
+.stg-role{font-size:14px;color:var(--text-sub);line-height:1.55;margin-bottom:18px}
+.stg-get{margin-bottom:18px}
+.stg-lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
+.stg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mth-steps{list-style:none;counter-reset:mth;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+a.os-dl{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-hover);text-decoration:none;border-bottom:1px solid rgba(40,120,252,.4);transition:color .12s,border-color .12s}
+a.os-dl:hover{color:var(--text);border-color:var(--blue)}
+.os-dl-ic{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#fff;background:var(--blue);padding:2px 8px;border-radius:999px}
+a.os-dl:hover .os-dl-ic{background:var(--blue-hover)}
+.mth-steps li{counter-increment:mth;position:relative;padding-inline-start:38px;font-size:14.5px;line-height:1.6;color:var(--text-sub)}
+.mth-steps li::before{content:counter(mth);position:absolute;inset-inline-start:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.mth-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--app-border);font-size:13.5px;line-height:1.6;color:var(--text-dim)}
+@media (max-width:640px){.mth-single{padding:20px 18px}}
 .sp-block{padding:24px 26px;background:linear-gradient(135deg,rgba(40,120,252,.06),rgba(156,91,255,.04));border:1px solid var(--app-border2);border-radius:14px}
 .sp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
 .sp-row{display:flex;align-items:center;gap:12px;font-size:14.5px}
@@ -561,13 +580,7 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
     </div>
   </div>
 </section>
-<nav class="toc" aria-label="On this page">
-  <a href="#quick-answer">Απάντηση</a>
-  <a href="#steps">Βήματα</a>
-  <a href="#tips">Συμβουλές</a>
-  <a href="#faq">Συχνές</a>
-  <a href="#related">Σχετικοί οδηγοί</a>
-</nav>
+<nav class="toc" aria-label="On this page"><a href="#quick-answer">Απάντηση</a><a href="#steps">Βήματα</a><a href="#tips">Συμβουλές</a><a href="#faq">Συχνές</a><a href="#related">Σχετικοί οδηγοί</a></nav>
 <div class="section" id="quick-answer">
   <div class="qa-box">
     <div class="qa-h">Σύντομη απάντηση</div>
@@ -576,14 +589,9 @@ if(document.addEventListener){document.addEventListener("click",function(e){var 
 </div>
 
 
-<section class="section" id="steps">
-  <h2 class="sec-h">Βήμα προς βήμα</h2>
-  <div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Κατέβασε και εγκατάστησε τον SplitCam</div><p class="step-p">Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Χτίσε τη σκηνή σου</div><p class="step-p">Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, ένα tip menu, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — όλα ζωντανά.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Πάρε το URL + stream key του StripCamFun</div><p class="step-p">Συνδέσου στο model dashboard του StripCamFun, άνοιξε το <strong>External Encoder / OBS</strong> και αντίγραψε το <strong>server URL</strong> και το <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Σύνδεσε τον SplitCam με το StripCamFun</div><p class="step-p">Στον SplitCam → <strong>Stream Settings → Custom RTMP</strong>, επικόλλησε URL και κλειδί. Όρισε 3.500–5.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Πάτα Go Live</div><p class="step-p">Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγάλε τον εαυτό σου online στο dashboard του StripCamFun. Το stream σου φτάνει στη δημόσια λίστα μέσα σε ~10 δευτερόλεπτα.</p></div></div></div>
-</section>
-<section class="section" id="tips">
-  <h2 class="sec-h">Συμβουλές</h2>
-  <div class="tips-grid"><div class="tip-card"><h3>Μικρότερη δεξαμενή, ευκολότερη ορατότητα</h3><p>Σε ένα Tier-1 site είσαι ένας από χιλιάδες online· στο StripCamFun η λίστα broadcasters είναι σύντομη — μια προσεγμένη σκηνή SplitCam ξεχωρίζει στην αρχική πιο γρήγορα.</p></div><div class="tip-card"><h3>Cross-broadcast για εμβέλεια</h3><p>Τα indie cam sites ταιριάζουν με multi-streaming. Χρησιμοποίησε τον SplitCam για να μεταδίδεις ταυτόχρονα σε StripCamFun και σε ένα μεγαλύτερο site και να κρατάς tippers από δύο δεξαμενές.</p></div><div class="tip-card"><h3>Πάτα σε niche tagging</h3><p>Τα indie κοινά ψάχνουν με niche περισσότερο από star power. Συγκεκριμένα tags + ένα scene overlay που ονομάζει το niche τραβά θεατές από τη λίστα.</p></div><div class="tip-card"><h3>Κάνε πρώτα ιδιωτικό τεστ</h3><p>Τρέξε μια σύντομη δοκιμαστική μετάδοση για κάμερα, ήχο, καδράρισμα και overlays πριν ανοίξεις τη room στο κοινό.</p></div></div>
-</section>
+
+<section class="section" id="steps"><h2 class="sec-h">Βήμα προς βήμα</h2><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-h">Κατέβασε και εγκατάστησε τον SplitCam</div><p class="step-p">Ο SplitCam είναι δωρεάν λογισμικό live-streaming για Windows και macOS — χωρίς εγγραφή, χωρίς κάρτα, χωρίς υδατογράφημα.</p></div></div><div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-h">Χτίσε τη σκηνή σου</div><p class="step-p">Άνοιξε τον SplitCam και πρόσθεσε την webcam σου. Πρόσθεσε στρώματα overlays, ένα tip menu, μια δεύτερη κάμερα ή το κινητό σου, beauty filters ή AI background — όλα ζωντανά.</p></div></div><div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-h">Πάρε το URL + stream key του StripCamFun</div><p class="step-p">Συνδέσου στο model dashboard του StripCamFun, άνοιξε το <strong>External Encoder / OBS</strong> και αντίγραψε το <strong>server URL</strong> και το <strong>stream key</strong>.</p></div></div><div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-h">Σύνδεσε τον SplitCam με το StripCamFun</div><p class="step-p">Στον SplitCam → <strong>Stream Settings → Custom RTMP</strong>, επικόλλησε URL και κλειδί. Όρισε 3.500–5.000 Kbps στα 1920×1080, 30 fps, με keyframe 2 δευτερολέπτων.</p></div></div><div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-h">Πάτα Go Live</div><p class="step-p">Πάτα <strong>Go Live</strong> στον SplitCam, μετά βγάλε τον εαυτό σου online στο dashboard του StripCamFun. Το stream σου φτάνει στη δημόσια λίστα μέσα σε ~10 δευτερόλεπτα.</p></div></div></div></section>
+<section class="section" id="tips"><h2 class="sec-h">Συμβουλές</h2><div class="tips-grid"><div class="tip-card"><h3>Μικρότερη δεξαμενή, ευκολότερη ορατότητα</h3><p>Σε ένα Tier-1 site είσαι ένας από χιλιάδες online· στο StripCamFun η λίστα broadcasters είναι σύντομη — μια προσεγμένη σκηνή SplitCam ξεχωρίζει στην αρχική πιο γρήγορα.</p></div><div class="tip-card"><h3>Cross-broadcast για εμβέλεια</h3><p>Τα indie cam sites ταιριάζουν με multi-streaming. Χρησιμοποίησε τον SplitCam για να μεταδίδεις ταυτόχρονα σε StripCamFun και σε ένα μεγαλύτερο site και να κρατάς tippers από δύο δεξαμενές.</p></div><div class="tip-card"><h3>Πάτα σε niche tagging</h3><p>Τα indie κοινά ψάχνουν με niche περισσότερο από star power. Συγκεκριμένα tags + ένα scene overlay που ονομάζει το niche τραβά θεατές από τη λίστα.</p></div><div class="tip-card"><h3>Κάνε πρώτα ιδιωτικό τεστ</h3><p>Τρέξε μια σύντομη δοκιμαστική μετάδοση για κάμερα, ήχο, καδράρισμα και overlays πριν ανοίξεις τη room στο κοινό.</p></div></div></section>
 <section class="section"><h2 class="sec-h">Αντιμετώπιση προβλημάτων</h2><div class="faq-list"><details class="faq-item"><summary>Το stream σου στο StripCamFun κολλάει ή κάνει buffering</summary><p>Σχεδόν πάντα το bitrate είναι υψηλότερο απ' ό,τι αντέχει το upload σου. Τρέξε το ενσωματωμένο speed test του SplitCam και βάλε το bitrate στο περίπου 75% του μετρημένου upload — 3.500–6.000&nbsp;Kbps για 1080p, λιγότερο για 720p. Το lag φεύγει μόλις ο encoder σταματήσει να ξεπερνά τη σύνδεσή σου.</p></details><details class="faq-item"><summary>Χαμένα frames κατά τη μετάδοση στο StripCamFun</summary><p>Τα χαμένα frames σημαίνουν ότι τα πακέτα δεν φτάνουν στο StripCamFun εγκαίρως — συνήθως ασταθές Wi-Fi. Πέρνα σε ενσύρματη σύνδεση Ethernet, κλείσε εφαρμογές που τρώνε bandwidth και χαμήλωσε λίγο το bitrate. Μια μεμονωμένη κορύφωση είναι ok· μια σταθερή άνοδος σημαίνει ότι η σύνδεση δεν προλαβαίνει.</p></details><details class="faq-item"><summary>Μαύρη οθόνη — οι θεατές δεν βλέπουν βίντεο στο StripCamFun</summary><p>Η κάμερά σου δεν είναι επιλεγμένη ως ενεργή πηγή στο SplitCam, ή την κρατά άλλη εφαρμογή. Κλείσε Zoom, Skype ή OBS, ξαναεπίλεξε την webcam στη λίστα πηγών του SplitCam και βεβαιώσου ότι η προεπισκόπηση δείχνει την εικόνα σου πριν πατήσεις Go Live.</p></details><details class="faq-item"><summary>Το StripCamFun απορρίπτει το stream key ή δεν συνδέεται</summary><p>Ξαναντίγραψε το stream key — ένα κενό στο τέλος ή ένα παλιό, ήδη ανανεωμένο key είναι η συνηθισμένη αιτία. Επιβεβαίωσε ότι το server URL ταιριάζει με αυτό που δείχνει το StripCamFun και ότι η μετάδοση μέσω εξωτερικού encoder είναι ενεργή στον λογαριασμό σου. Ένα πράσινο slider στις Stream Settings του SplitCam επιβεβαιώνει έγκυρο key.</p></details><details class="faq-item"><summary>Χωρίς ήχο ή ήχος εκτός συγχρονισμού στο StripCamFun</summary><p>Επίλεξε το SplitCam ως κάμερα ΚΑΙ ως μικρόφωνο, και διάλεξε το πραγματικό σου μικρόφωνο μέσα στην πηγή ήχου του SplitCam. Αν ο ήχος καθυστερεί σε σχέση με το βίντεο, χαμήλωσε την ανάλυση ένα σκαλί — ο encoder είναι υπερφορτωμένος και ο ήχος περιμένει καθυστερημένα frames.</p></details></div></section>
 <section class="section" id="faq">
   <h2 class="sec-h">Συχνές ερωτήσεις</h2>
