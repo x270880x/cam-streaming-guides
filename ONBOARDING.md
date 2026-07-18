@@ -182,3 +182,43 @@ to draw on splitcam.com, ~106 000 were navigational (`cam4`, `бонга кам�
 people wanting the platform itself, who converted at 0.2 % even from position 6. A guide site
 will not convert them either. The winnable slice is informational, and there this site already
 ranks where it is indexed: `how to go live on stripchat` sits at 6.5 with 5.1 % CTR.
+
+### Two theories tested and rejected — 2026-07-19
+
+**1. "The spammy backlinks are poisoning the domain." — NO.** `INVENTORY.md` records 1008
+refdomains on the streamray page, characterised there as *"mostly spammy adult links"*, and
+the obvious move looked like cutting that redirect so the profile doesn't reach a young
+domain. Checked it against **Google's own Links report for splitcam.com** first: 3 333
+external links, top donors **reddit.com 487, microsoft.com 153, begindot.com 146,
+google.com 110, ambercutie.com 88**, anchors all brand ("splitcam", "www splitcamera com").
+No spam cluster, and the streamray page is not even among the top linked pages. The 1008
+figure is a May Ahrefs snapshot, and Ahrefs API is at 0 units so it cannot be re-checked.
+**Do not break the streamray redirect** — it would discard real equity on an unverified
+hunch.
+
+**2. "The money pages are too templated to index." — NO.** `build_steps()` lets a platform
+pass `None` for a step and inherit `STEP_TMPL`. Measured: 28 of 270 EN steps are inherited
+(10 %), and they sit on exactly the 14 platforms that carry the demand — chaturbate,
+bongacams, cam4, stripchat, camsoda, streamate, xlovecam, streamray, flirt4free, camplace,
+soulcams, vxlive, virtwish, xmodels — always steps **1 and 3**. Those 14 average **385
+characters** of unique step text against **825** for the other 40. So the money pages really
+are the thinnest on the site.
+
+But that does not explain the indexing, and the arithmetic says so: **40 of 54 EN platforms
+have fully custom steps, and only 16 pages are indexed site-wide.** If templating were the
+blocker, those 40 would be in. The ~0.7 % index rate is uniform regardless of page quality.
+Rewriting steps 1 and 3 is worth doing on its own merits — they are the pages with demand —
+but **do not expect it to move indexing.**
+
+### IndexNow — wired all along, first actually used 2026-07-19
+
+Key `1dce1f527c611c22daebaf1b00b0649a` is served at
+`https://camstreamguide.com/1dce1f527c611c22daebaf1b00b0649a.txt` (verified 200, content
+matches filename), and Bing (`msvalidate.01`) + Yandex verification meta tags are live on
+every page. None of it had ever been submitted — `site:camstreamguide.com` on Bing returns
+essentially nothing.
+
+Submitted 21 money pages on 2026-07-19: api.indexnow.org **200**, bing.com/indexnow **200**,
+yandex.com/indexnow **202**. Bing and Yandex index young domains far more readily than
+Google, and this route costs nothing and has no daily quota — unlike GSC's ~10-12 requests
+shared across the whole account. **Re-ping IndexNow after every rebuild.**
