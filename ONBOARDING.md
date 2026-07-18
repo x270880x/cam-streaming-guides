@@ -218,7 +218,13 @@ matches filename), and Bing (`msvalidate.01`) + Yandex verification meta tags ar
 every page. None of it had ever been submitted — `site:camstreamguide.com` on Bing returns
 essentially nothing.
 
-Submitted 21 money pages on 2026-07-19: api.indexnow.org **200**, bing.com/indexnow **200**,
-yandex.com/indexnow **202**. Bing and Yandex index young domains far more readily than
-Google, and this route costs nothing and has no daily quota — unlike GSC's ~10-12 requests
-shared across the whole account. **Re-ping IndexNow after every rebuild.**
+**Submit the WHOLE sitemap, not a hand-picked subset.** IndexNow takes up to 10 000 URLs per
+request and has **no daily quota** — the GSC habit of rationing does not apply here and
+picking "money pages" only leaves the rest undiscovered for no reason. On 2026-07-19 all
+**2 135** URLs went out in 5 chunks of 500: api.indexnow.org 200×5, bing.com/indexnow 200×5,
+yandex.com/indexnow 202×5. (An earlier attempt the same day sent only 21 pages — that was
+Google-thinking applied where it does not belong.)
+
+Bing and Yandex index young domains far more readily than Google, so this is the one route
+that can produce traffic here without waiting on Google's trust. **Re-ping the full sitemap
+after every `build.py` run.**
