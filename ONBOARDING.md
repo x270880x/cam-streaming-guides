@@ -132,3 +132,53 @@ python3 build.py
 git add . && git commit -m "..." && git push origin main
 ```
 GitHub Pages auto-deploys in 30–90 sec. Hard-refresh the browser (`Cmd+Shift+R`) — it caches.
+
+## Indexing reality check — 2026-07-19 (first direct GSC read)
+
+**The redirects are not the problem — they are perfect.** All 75 rules in splitcam.com's
+`.htaccess` were tested live end-to-end: every one lands on its correct thematic page here,
+**in a single hop, HTTP 200**. The map in `REDIRECTS.md` is implemented with zero drift
+(diffed: 0 missing, 0 extra). Do not re-audit this; check something else first.
+
+**The problem is that Google will not index this site.** As of 2026-07-19:
+
+| | |
+|---|---|
+| Indexed | **16 pages** |
+| Not indexed | 211 — of which **156 "crawled — currently not indexed"** |
+| Clicks, 10–17 July | **0** (6 impressions) |
+| Clicks, 3 months | 30 (2 520 impressions) |
+| Sitemap | 2 135 URLs, submitted 2026-06-10, processed 2026-07-15, **Успешно** |
+
+**Everything technical checks out** — verified, so don't go looking for a bug: self-canonical
+per locale, 36 hreflang entries, `index, follow`, robots.txt open, 1 160–1 280 words per page,
+all 60 EN platform pages linked from the homepage (relative `href="slug/"`, resolves correctly),
+no orphans, **no manual actions**, redirect targets all 200.
+
+`/cam4/` was crawled on 2026-07-18 at 19:47 and still not indexed. That is the whole story:
+Google sees the pages and declines them. This is a **domain-trust** problem on a 5.5-week-old
+site with **zero external links** — splitcam.com sends only 301s, not a single ordinary link
+(checked: 0 files in the splitcam repo link here).
+
+⚠️ **Request Indexing quota is per Google ACCOUNT, not per property.** Spending it on
+splitcam.com uses up camstreamguide's allowance the same day. On 2026-07-19 only
+`/bongacams/` got through before the quota hit; `/cam4/` was refused. Plan the day's ~10-12
+requests across both properties.
+
+**Owner decisions (2026-07-19), do not relitigate without asking:**
+- **No direct links from splitcam.com.** The whole point of the split was to get adult
+  content away from the brand; a link partially undoes that. 301s only.
+- **Sitemap stays at all 2 135 URLs.** Not narrowed to EN + top languages.
+
+What that leaves as the working lever: **make the top platform pages genuinely
+differentiated.** Sampled pages share ~30 % of their 8-word phrases and every one of the 44
+platforms runs the identical 5-step skeleton. For a new domain in this niche that reads as a
+template farm, which is exactly the profile behind "crawled — currently not indexed".
+Real bitrate limits, RTMP quirks, actual dashboard steps and payout specifics per platform
+are what earn the index slot.
+
+**Worth being honest about the ceiling:** of the 131 758 weekly impressions this cluster used
+to draw on splitcam.com, ~106 000 were navigational (`cam4`, `бонга камс`, `bongacams`) —
+people wanting the platform itself, who converted at 0.2 % even from position 6. A guide site
+will not convert them either. The winnable slice is informational, and there this site already
+ranks where it is indexed: `how to go live on stripchat` sits at 6.5 with 5.1 % CTR.
