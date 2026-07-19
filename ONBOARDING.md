@@ -1,6 +1,9 @@
 # cam-streaming-guides — Project Onboarding
 
-*Last updated: 2026-06-09. Open this at the start of any new chat about this project.*
+*Last updated: 2026-07-19. Open this at the start of any new chat about this project.*
+*Note: sections dated 2026-07 near the bottom (indexing / GSC / IndexNow) are the freshest
+and were verified accurate; the counts and status flags up here were re-verified against
+disk on 2026-07-19.*
 
 ## What this is
 Adult-cam how-to guides — "how to stream on &lt;platform&gt; with SplitCam". Built to move the
@@ -10,12 +13,23 @@ adult = revenue, so it gets its own domain + 301 redirects, not deletion).
 - **Local folder:** `/Users/splitcam/Documents/Дизайны/SplitCam/SPLITCAM DEV./cam-streaming-guides/`
 - **GitHub repo:** `x270880x/cam-streaming-guides`
 - **Live (staging):** https://x270880x.github.io/cam-streaming-guides/
-- **Production domain:** `camstreamguide.com` (registered; not yet connected to hosting).
+- **Production domain:** `camstreamguide.com` — **connected and live** (GitHub Pages via
+  `CNAME`). The old "registered; not yet connected" note was stale and contradicted the
+  Current state section right below it.
+- **Local preview:** repo-local `.claude/launch.json`, profile `static`, port **8731**.
+  ⚠️ Unlike the global `~/.claude/launch.json` entries (splitcam-site/buhta/kherson/
+  kadastr-nr), this one runs `python3 -m http.server` **without a docroot argument** —
+  it serves the current working directory, so start it from the repo root. There is no
+  entry for this project in the global launch.json.
 - Sister project: the main SplitCam site (`../splitcam/`).
 
 ## Current state
-- **44 platforms × 35 languages** (≈ 1 800+ pages) + per-language hubs, legal,
-  OBS-alternative, become-a-cam-model and the new SEO-grouped category hub.
+- **54 platforms × 35 languages** (**2 135 pages** on disk = 2 135 `<loc>` in
+  `sitemap.xml`, verified 2026-07-19) + per-language hubs, legal, OBS-alternative,
+  become-a-cam-model, Lovense and the SEO-grouped category hub.
+  (Earlier figures of "44 platforms" / "≈1 800+ pages" were stale; the file also carried
+  "40 of 54" and "all 60 EN platform pages" elsewhere — 54 is the real platform count in
+  `PLATFORMS_EN`, 60 counts content directories per locale.)
 - Production domain **`camstreamguide.com` is connected** — `noindex` has been
   removed from all content pages; Google can index. Bing + Yandex webmaster
   verification slots wired in `build.py`; GSC verification meta tag in place.
@@ -77,8 +91,10 @@ full meta (OG + Twitter cards).
 ## Pending before launch
 1. ~~Register a neutral domain~~ — **done: `camstreamguide.com`**.
 2. ~~Connect domain + remove `noindex`~~ — **done.** Live, indexable.
-3. Apply the `.htaccess` 301 block from `REDIRECTS.md` on splitcam.com **after** the new
-   site is live on `camstreamguide.com` — never 301 to URLs that 404. **← still pending.**
+3. ~~Apply the `.htaccess` 301 block from `REDIRECTS.md` on splitcam.com~~ — **done.**
+   All **75** redirect directives are live in `../splitcam/seo/redirects.htaccess`
+   (0 missing, 0 extra — verified on disk 2026-07-19). The "still pending" flag here was
+   stale and contradicted the verification section further down this same file.
 4. Optional: official platform logos → `logos/`, screenshots → `shots/`, Android SplitCam
    Remote link.
 
@@ -108,6 +124,22 @@ Still pending: `.htaccess` 301 block on splitcam.com (item 3 above).
 
 ## Recent commits — main cam-streaming-guides repo (most recent first)
 ```
+c0f7fc81e 2026-07-19 docs: submit the whole sitemap to IndexNow, not a curated subset
+dbb266e3c 2026-07-19 docs: kill two plausible theories with data, and start using IndexNow
+6149b066b 2026-07-19 docs: record why the traffic never arrived — it is indexing, not redirects
+f96e0c0c2 2026-07-08 lovense: rebuild page as Lovense's official 3-step setup, localized ×35
+f265dc36a 2026-07-08 lovense: rebuild HTML with Windows Toolset button
+c43c07d8e 2026-07-08 lovense downloads: add Windows Toolset (.exe v1.0.30), drop 'Mac only'
+54ef72a8d 2026-07-08 lovense downloads: add Lovense Stream Master
+58382df09 2026-07-08 lovense downloads: add Lovense SplitCam Toolset (Mac .dmg direct)
+8648e8154 2026-07-07 lovense downloads: Mac SplitCam → direct .dmg from splitcam.com
+1a48ff078 2026-07-07 lovense: correct install facts across all 35 languages
+2af8335f7 2026-07-07 lovense: auto-link tool mentions in body text (35 langs)
+1295163e0 2026-07-07 lovense downloads: clarify Cam Extension IS the plugin
+9bd289461 2026-07-07 lovense downloads: fix 3 dead links
+9d45391d6 2026-07-07 lovense: add 'What to install' downloads section (35 langs)
+61a6c1ca1 2026-07-07 lovense: rewrite guide with accurate 2026 Lovense setup, 35 langs
+--- (everything below predates 2026-06-10) ---
 ebb02ed68 SEO topology: category-grouped hub + anchor TOC + cross-refs + 3-level breadcrumbs
 6959caa22 verify: enable Bing + Yandex webmaster tools
 997d1e114 internal linking: method-aware related-cards + autolinked brand mentions
