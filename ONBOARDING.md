@@ -10,7 +10,7 @@ Adult-cam how-to guides — "how to stream on &lt;platform&gt; with SplitCam". B
 adult-cam content **off** splitcam.com onto a separate neutral domain (brand-cleanup decision:
 adult = revenue, so it gets its own domain + 301 redirects, not deletion).
 
-- **Local folder:** `/Users/splitcam/Documents/Дизайны/SplitCam/SPLITCAM DEV./cam-streaming-guides/`
+- **Local folder:** `/Users/splitcam/Documents/Дизайны/SplitCam/SplitCam сайт/cam-streaming-guides/`
 - **GitHub repo:** `x270880x/cam-streaming-guides`
 - **Live (staging):** https://x270880x.github.io/cam-streaming-guides/
 - **Production domain:** `camstreamguide.com` — **connected and live** (GitHub Pages via
@@ -159,7 +159,7 @@ d13326d3f Brand polish: camera-lens logo, white wordmark with colored 'Stream', 
 
 ## Deploy
 ```bash
-cd "/Users/splitcam/Documents/Дизайны/SplitCam/SPLITCAM DEV./cam-streaming-guides"
+cd "/Users/splitcam/Documents/Дизайны/SplitCam/SplitCam сайт/cam-streaming-guides"
 python3 build.py
 git add . && git commit -m "..." && git push origin main
 ```
